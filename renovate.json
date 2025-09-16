@@ -1,0 +1,4 @@
+{
+  "baseBranches": ["dev"],
+  "extends": ["github>asklina/renovate-config"]
+}
