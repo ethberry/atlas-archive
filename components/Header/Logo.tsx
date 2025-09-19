@@ -1,10 +1,10 @@
-import React from "react";
+import { FC } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-const Logo: React.FC = () => {
+export const Logo: FC = () => {
   return (
-    <Link href="/">
+    <Link href="/public">
       <Image
         width={128}
         height={20}
@@ -15,5 +15,3 @@ const Logo: React.FC = () => {
     </Link>
   );
 };
-
-export default Logo;

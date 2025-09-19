@@ -14,21 +14,27 @@ export type Database = {
   }
   public: {
     Tables: {
-      whitelist: {
+      users: {
         Row: {
           created_at: string
           email: string
           id: number
+          stage: Database["public"]["Enums"]["UserStage"]
+          updated_at: string
         }
         Insert: {
           created_at?: string
           email: string
           id?: number
+          stage?: Database["public"]["Enums"]["UserStage"]
+          updated_at?: string
         }
         Update: {
           created_at?: string
           email?: string
           id?: number
+          stage?: Database["public"]["Enums"]["UserStage"]
+          updated_at?: string
         }
         Relationships: []
       }
@@ -40,7 +46,7 @@ export type Database = {
       [_ in never]: never
     }
     Enums: {
-      [_ in never]: never
+      UserStage: "NEW" | "PAID" | "FOLLOWUP" | "UPSALE"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -167,6 +173,8 @@ export type CompositeTypes<
 
 export const Constants = {
   public: {
-    Enums: {},
+    Enums: {
+      UserStage: ["NEW", "PAID", "FOLLOWUP", "UPSALE"],
+    },
   },
 } as const

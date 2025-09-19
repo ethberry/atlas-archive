@@ -2,8 +2,8 @@ import { NextResponse } from "next/server";
 // import {PostgrestError} from "@supabase/supabase-js";
 import { ZodError } from "zod";
 
-import { createWhitelist } from "../../../lib/db/models/whitelist";
-import { validationSchema } from "../../(home)/validation";
+import { createUser } from "../../../lib/db/models/users";
+import { validationSchema } from "../../saft/validation";
 
 export async function POST(req: Request) {
   const json = await req.json();
@@ -11,7 +11,7 @@ export async function POST(req: Request) {
   try {
     const body = validationSchema.parse(json);
 
-    const data = await createWhitelist(body);
+    const data = await createUser(body);
     return NextResponse.json(data);
   } catch (error) {
     // @ts-ignore
