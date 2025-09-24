@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export const Logo: FC = () => {
   return (
-    <Link href="/public">
+    <Link href="/">
       <Image
         width={128}
         height={20}

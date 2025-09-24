@@ -74,7 +74,7 @@ export const Saft: FC = () => {
   return (
     <main className="font-mont">
       <h2>
-        <FormattedMessage id="SLOGAN" />
+        <FormattedMessage id="pages.saft.title" />
       </h2>
 
       <EmailForm

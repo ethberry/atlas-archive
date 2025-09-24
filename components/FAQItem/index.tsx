@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 
 const FAQItem = ({
   question,
@@ -27,23 +26,11 @@ const FAQItem = ({
           +
         </span>
       </button>
-      <AnimatePresence initial={false}>
-        {isOpen && (
-          <motion.div
-            initial="collapsed"
-            animate="open"
-            exit="collapsed"
-            variants={{
-              open: { opacity: 1, height: "auto", marginTop: "12px" },
-              collapsed: { opacity: 0, height: 0, marginTop: "0px" },
-            }}
-            transition={{ duration: 0.4, ease: "easeInOut" }}
-            className="overflow-hidden text-gray-200 text-base leading-relaxed"
-          >
-            {answer}
-          </motion.div>
-        )}
-      </AnimatePresence>
+      {isOpen && (
+        <div className="overflow-hidden text-gray-200 text-base leading-relaxed">
+          {answer}
+        </div>
+      )}
     </div>
   );
 };

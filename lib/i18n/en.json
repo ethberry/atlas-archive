@@ -1,5 +1,12 @@
 {
-  "SLOGAN": "Crack the egg",
+  "pages": {
+    "landing": {
+      "title": "Crack the egg"
+    },
+    "saft": {
+      "title": "SAFT contract"
+    }
+  },
   "LOGO": "CoArt Logo",
   "BUTTON.SEND_QUESTION": "Send Message",
   "INPUT.EMAIL_TYPE": "This field must be of type email!",
