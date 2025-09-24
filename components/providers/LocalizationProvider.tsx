@@ -1,7 +1,7 @@
 import { PropsWithChildren, ReactElement } from "react";
 import { IntlProvider } from "react-intl";
 
-import { useAppStore } from "@/components/providers/store";
+import { useAppStore } from "@/components/providers/AppStoreProvider";
 import { EnabledLanguages } from "@/lib/i18n";
 
 import { flattenMessages } from "./utils";

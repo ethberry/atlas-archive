@@ -1,4 +1,9 @@
 {
+  "components": {
+    "header": {
+      "logo": "Fractown"
+    }
+  },
   "pages": {
     "landing": {
       "title": "Crack the egg"
@@ -7,7 +12,20 @@
       "title": "SAFT contract"
     }
   },
-  "LOGO": "CoArt Logo",
+  "form": {
+    "label": {
+      "firstName": "First name",
+      "lastName": "Last name",
+      "email": "Email",
+      "address": "Address"
+    },
+    "placeholder": {
+      "firstName": "Gordon",
+      "lastName": "Freeman",
+      "email": "me@gmail.com",
+      "address": "123 very long street, Paris, France, 0000"
+    }
+  },
   "BUTTON.SEND_QUESTION": "Send Message",
   "INPUT.EMAIL_TYPE": "This field must be of type email!",
   "INPUT.EMAIL_REQUIRED": "Email is a required field!",

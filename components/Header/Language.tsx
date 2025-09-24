@@ -8,8 +8,8 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { useAppStore } from "@/components/providers/store";
 import { EnabledLanguages } from "@/lib/i18n";
+import { useAppStore } from "@/components/providers/AppStoreProvider";
 
 export const Language: FC = () => {
   const { language, setLanguage } = useAppStore((state) => state);
@@ -19,10 +19,10 @@ export const Language: FC = () => {
       <DropdownMenuTrigger>Language ({language})</DropdownMenuTrigger>
       <DropdownMenuContent>
         <DropdownMenuItem onClick={() => setLanguage(EnabledLanguages.RU)}>
-          RU
+          🇷🇺RU
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setLanguage(EnabledLanguages.EN)}>
-          EN
+          🇬🇧EN
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

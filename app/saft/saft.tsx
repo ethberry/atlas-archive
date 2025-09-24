@@ -8,15 +8,19 @@ import { useMutation } from "@tanstack/react-query";
 import { FormattedMessage } from "react-intl";
 
 import { createUser } from "@/lib/db/models/users";
+import type { IEmailSubscription } from "@/app/saft/interfaces";
+import { EmailForm } from "@/app/saft/EmailForm";
 
-import EmailForm, { IEmailSubscription } from "../../components/EmailForm";
 import { validationSchema } from "./validation";
 
 export const Saft: FC = () => {
   const useFormReturn = useForm<IEmailSubscription>({
     resolver: zodResolver(validationSchema),
     defaultValues: {
+      firstName: "",
+      lastName: "",
       email: "",
+      address: "",
     },
   });
 
@@ -45,7 +49,10 @@ export const Saft: FC = () => {
         },
       );
       useFormReturn.reset({
+        firstName: "",
+        lastName: "",
         email: "",
+        address: "",
       });
     },
     onError: (error) => {
@@ -65,7 +72,10 @@ export const Saft: FC = () => {
   const submitEmailFormHandler = useCallback(
     (formData: IEmailSubscription) => {
       sendEmailSubscription({
+        firstName: formData.firstName,
+        lastName: formData.lastName,
         email: formData.email,
+        address: formData.address,
       });
     },
     [sendEmailSubscription],

@@ -4,7 +4,7 @@ import { FC } from "react";
 import Image from "next/image";
 import { FormattedMessage } from "react-intl";
 
-import { LearnMore } from "@/app/(home)/More";
+import { LearnMore } from "@/app/(home)/LearnMore";
 import { Fomo } from "@/app/(home)/Fomo";
 import { Egg } from "@/app/(home)/Egg";
 

@@ -4,10 +4,9 @@ import { PropsWithChildren } from "react";
 import { SnackbarProvider } from "notistack";
 
 import { EnabledLanguages, i18n } from "@/lib/i18n";
-import { AppStoreProvider } from "@/components/providers/store";
-
-import { LocalizationProvider } from "./localization";
-import { ReactQueryClientProvider } from "./ReactQueryClientProvider";
+import { AppStoreProvider } from "@/components/providers/AppStoreProvider";
+import { LocalizationProvider } from "@/components/providers/LocalizationProvider";
+import { ReactQueryClientProvider } from "@/components/providers/ReactQueryClientProvider";
 
 export const Providers = ({ children }: PropsWithChildren) => {
   return (
