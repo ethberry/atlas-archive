@@ -16,23 +16,32 @@ export type Database = {
     Tables: {
       users: {
         Row: {
+          address: string
           created_at: string
           email: string
+          first_name: string
           id: number
+          last_name: string
           stage: Database["public"]["Enums"]["UserStage"]
           updated_at: string
         }
         Insert: {
+          address: string
           created_at?: string
           email: string
+          first_name: string
           id?: number
+          last_name: string
           stage?: Database["public"]["Enums"]["UserStage"]
           updated_at?: string
         }
         Update: {
+          address?: string
           created_at?: string
           email?: string
+          first_name?: string
           id?: number
+          last_name?: string
           stage?: Database["public"]["Enums"]["UserStage"]
           updated_at?: string
         }

@@ -2,16 +2,18 @@
 
 import { captureException } from "@sentry/nextjs";
 
-import { supabase } from "../supabase.server";
+import { IUserData } from "@/app/saft/interfaces";
+import { supabase } from "@/lib/db/supabase.server";
 
-export interface IUserCreateDto {
-  email: string;
-}
-
-export const createUser = async (user: IUserCreateDto) => {
+export const createUser = async (user: IUserData) => {
   const { data, error } = await supabase
     .from("users")
-    .insert(user)
+    .insert({
+      email: user.email,
+      first_name: user.firstName,
+      last_name: user.lastName,
+      address: user.address,
+    })
     .select()
     .single();
 

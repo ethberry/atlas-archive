@@ -2,13 +2,13 @@ import { FC, useState, FocusEvent } from "react";
 import { Controller, UseFormReturn } from "react-hook-form";
 
 import { PdfPreview } from "@/app/saft/PdfPreview";
-import type { IEmailSubscription } from "@/app/saft/interfaces";
+import type { IUserData } from "@/app/saft/interfaces";
 import { Input } from "@/components/Form/Input";
 import { Button } from "@/components/Form/Button";
 
 interface IEmailFormProps {
-  useFormInstance: UseFormReturn<IEmailSubscription>;
-  submitEmailForm: (formData: IEmailSubscription) => void;
+  useFormInstance: UseFormReturn<IUserData>;
+  submitEmailForm: (formData: IUserData) => void;
 }
 
 export const EmailForm: FC<IEmailFormProps> = ({
@@ -22,7 +22,7 @@ export const EmailForm: FC<IEmailFormProps> = ({
     control,
   } = useFormInstance;
 
-  const [formData, setFormData] = useState<IEmailSubscription>(getValues());
+  const [formData, setFormData] = useState<IUserData>(getValues());
 
   const handleBlur = (e: FocusEvent<HTMLInputElement>) => {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
@@ -45,8 +45,6 @@ export const EmailForm: FC<IEmailFormProps> = ({
               value={value}
               onChange={onChange}
               maxLength={40}
-              className="w-full bg-white/10 backdrop-blur-sm border-2 border-yellow-400/50 focus:border-yellow-400 transition-all duration-300 text-white placeholder-gray-300"
-              wrapperClassName="text-center"
               error={Boolean(errors.firstName?.message)}
               helperText={errors.firstName?.message}
               onBlur={handleBlur}
@@ -62,8 +60,6 @@ export const EmailForm: FC<IEmailFormProps> = ({
               value={value}
               onChange={onChange}
               maxLength={40}
-              className="w-full bg-white/10 backdrop-blur-sm border-2 border-yellow-400/50 focus:border-yellow-400 transition-all duration-300 text-white placeholder-gray-300"
-              wrapperClassName="text-center"
               error={Boolean(errors.lastName?.message)}
               helperText={errors.lastName?.message}
               onBlur={handleBlur}
@@ -79,8 +75,6 @@ export const EmailForm: FC<IEmailFormProps> = ({
               value={value}
               onChange={onChange}
               maxLength={40}
-              className="w-full bg-white/10 backdrop-blur-sm border-2 border-yellow-400/50 focus:border-yellow-400 transition-all duration-300 text-white placeholder-gray-300"
-              wrapperClassName="text-center"
               error={Boolean(errors.email?.message)}
               helperText={errors.email?.message}
               onBlur={handleBlur}
@@ -96,8 +90,6 @@ export const EmailForm: FC<IEmailFormProps> = ({
               value={value}
               onChange={onChange}
               maxLength={40}
-              className="w-full bg-white/10 backdrop-blur-sm border-2 border-yellow-400/50 focus:border-yellow-400 transition-all duration-300 text-white placeholder-gray-300"
-              wrapperClassName="text-center"
               error={Boolean(errors.address?.message)}
               helperText={errors.address?.message}
               onBlur={handleBlur}

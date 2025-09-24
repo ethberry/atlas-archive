@@ -9,6 +9,7 @@ export interface ISendTemplateDto {
   template: number;
   to: Array<string>;
   data: Record<string, string>;
+  attachments?: Array<Record<string, string>>;
 }
 
 export function sendTemplate(dto: ISendTemplateDto) {
@@ -29,6 +30,7 @@ export function sendTemplate(dto: ISendTemplateDto) {
           Name: "TrejGun",
         },
         Variables: dto.data,
+        Attachments: dto.attachments,
       },
     ],
   });

@@ -7,14 +7,14 @@ import { enqueueSnackbar } from "notistack";
 import { useMutation } from "@tanstack/react-query";
 import { FormattedMessage } from "react-intl";
 
-import { createUser } from "@/lib/db/models/users";
-import type { IEmailSubscription } from "@/app/saft/interfaces";
+import { createSaftContract } from "@/lib/actions/saft";
+import type { IUserData } from "@/app/saft/interfaces";
 import { EmailForm } from "@/app/saft/EmailForm";
 
 import { validationSchema } from "./validation";
 
 export const Saft: FC = () => {
-  const useFormReturn = useForm<IEmailSubscription>({
+  const useFormReturn = useForm<IUserData>({
     resolver: zodResolver(validationSchema),
     defaultValues: {
       firstName: "",
@@ -24,9 +24,9 @@ export const Saft: FC = () => {
     },
   });
 
-  const { mutate: sendEmailSubscription } = useMutation({
-    mutationFn: (data: IEmailSubscription) => {
-      return createUser(data);
+  const { mutate: sendUserDataSubscription } = useMutation({
+    mutationFn: (data: IUserData) => {
+      return createSaftContract(data);
     },
     // mutationFn: async (data: IEmailSubscription) => {
     //   const res = await fetch("/api/whitelist", {
@@ -70,15 +70,15 @@ export const Saft: FC = () => {
   });
 
   const submitEmailFormHandler = useCallback(
-    (formData: IEmailSubscription) => {
-      sendEmailSubscription({
+    (formData: IUserData) => {
+      sendUserDataSubscription({
         firstName: formData.firstName,
         lastName: formData.lastName,
         email: formData.email,
         address: formData.address,
       });
     },
-    [sendEmailSubscription],
+    [sendUserDataSubscription],
   );
 
   return (
