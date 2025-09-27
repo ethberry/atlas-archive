@@ -12,6 +12,11 @@ declare global {
       MAILJET_PUBLIC_KEY: string;
       MAILJET_PRIVATE_KEY: string;
       MAILJET_FROM: string;
+
+      PAYKILLA_API_PUBLIC: string;
+      PAYKILLA_API_PRIVATE: string;
+      PAYKILLA_WEBHOOK_PUBLIC: string;
+      PAYKILLA_WEBHOOK_PRIVATE: string;
     }
   }
 }
