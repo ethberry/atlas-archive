@@ -9,14 +9,15 @@ import {
 } from "@sentry/nextjs";
 
 init({
-  dsn: process.env.NEXT_PUBLIC_SENTRY_DSN,
-  allowUrls: [/https:\/\/ask\.heylina\.ai/],
+  dsn: "https://b9acec0fd8362ba70c40adf6df988a74@o4509219733307392.ingest.de.sentry.io/4510091901075536",
 
   // Add optional integrations for additional features
   integrations: [replayIntegration()],
 
   // Define how likely traces are sampled. Adjust this value in production, or use tracesSampler for greater control.
   tracesSampleRate: 1,
+  // Enable logs to be sent to Sentry
+  enableLogs: true,
 
   // Define how likely Replay events are sampled.
   // This sets the sample rate to be 10%. You may want this to be 100% while
