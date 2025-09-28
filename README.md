@@ -12,3 +12,4 @@ npx cloudflared tunnel --url http://localhost:3000
 2025-03-11T15:05:25Z INF |  https://ghz-acceptance-wild-subjects.trycloudflare.com                                    |
 2025-03-11T15:05:25Z INF +--------------------------------------------------------------------------------------------+
 ```
+
