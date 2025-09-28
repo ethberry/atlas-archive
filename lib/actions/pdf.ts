@@ -31,5 +31,7 @@ export const generatePdf = async (formData: IUserData) => {
   // makes PDF read-only
   form.flatten();
 
+  console.info("process.env", JSON.stringify(process.env, null, 2));
+
   return pdfDoc;
 };
