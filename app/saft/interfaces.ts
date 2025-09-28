@@ -3,4 +3,5 @@ export interface IUserData {
   lastName: string;
   email: string;
   address: string;
+  consent: boolean;
 }

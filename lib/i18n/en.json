@@ -17,7 +17,8 @@
       "firstName": "First name",
       "lastName": "Last name",
       "email": "Email",
-      "address": "Address"
+      "address": "Address",
+      "consent": "I agree to the terms and conditions"
     },
     "placeholder": {
       "firstName": "Gordon",

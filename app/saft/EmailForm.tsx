@@ -1,5 +1,6 @@
 import { FC, useState, FocusEvent } from "react";
 import { Controller, UseFormReturn } from "react-hook-form";
+import { FormattedMessage } from "react-intl";
 
 import { PdfPreview } from "@/app/saft/PdfPreview";
 import type { IUserData } from "@/app/saft/interfaces";
@@ -20,10 +21,12 @@ export const EmailForm: FC<IEmailFormProps> = ({
     formState: { errors },
     getValues,
     control,
+    trigger,
   } = useFormInstance;
 
   const [formData, setFormData] = useState<IUserData>(getValues());
   const [hasScrolledToEnd, setHasScrolledToEnd] = useState<boolean>(false);
+  const [consentChecked, setConsentChecked] = useState<boolean>(false);
 
   const handleBlur = (e: FocusEvent<HTMLInputElement>) => {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
@@ -33,18 +36,63 @@ export const EmailForm: FC<IEmailFormProps> = ({
     setHasScrolledToEnd(true);
   };
 
+  const handleFormSubmit = async (data: IUserData) => {
+    // Trigger validation for all fields including consent
+    const isValid = await trigger();
+    if (isValid) {
+      submitEmailForm(data);
+    }
+  };
+
   return (
     <form
       className="font-mont space-y-[16px] text-center w-full"
-      onSubmit={handleSubmit(submitEmailForm)}
+      onSubmit={handleSubmit(handleFormSubmit)}
     >
       <PdfPreview formData={formData} onScrollToEnd={handleScrollToEnd} />
 
-      {hasScrolledToEnd && (
-        <div className="text-green-600 text-sm font-medium animate-pulse">
-          ✓ PDF viewed completely
-        </div>
-      )}
+      <div className="flex items-center space-x-2 text-sm">
+        <Controller
+          name="consent"
+          control={control}
+          render={({ field: { onChange, value } }) => (
+            <input
+              type="checkbox"
+              id="consent"
+              checked={value}
+              onChange={(e) => {
+                onChange(e.target.checked);
+                setConsentChecked(e.target.checked);
+              }}
+              disabled={!hasScrolledToEnd}
+              className={`w-4 h-4 rounded border-2 ${
+                !hasScrolledToEnd
+                  ? "border-gray-300 text-gray-400 cursor-not-allowed"
+                  : errors.consent?.message
+                    ? "border-red-500 text-red-600 focus:ring-red-500"
+                    : "border-green-500 text-green-600 focus:ring-green-500"
+              }`}
+            />
+          )}
+        />
+        <label
+          htmlFor="consent"
+          className={`text-sm ${
+            !hasScrolledToEnd
+              ? "text-gray-400"
+              : errors.consent?.message
+                ? "text-red-600"
+                : "text-gray-700"
+          }`}
+        >
+          <FormattedMessage id="form.label.consent" />
+        </label>
+        {Boolean(errors.consent?.message) && (
+          <span className="text-red-500 text-xs mt-1">
+            {errors.consent?.message}
+          </span>
+        )}
+      </div>
 
       <div className="relative group">
         <Controller
@@ -113,12 +161,12 @@ export const EmailForm: FC<IEmailFormProps> = ({
 
       <Button
         className={`w-full text-white border-2 border-yellow-400/50 shadow-lg transition-all duration-300 font-bold text-lg py-3 px-8 ${
-          hasScrolledToEnd
+          hasScrolledToEnd && consentChecked
             ? "bg-gradient-to-r from-yellow-500 to-yellow-600 hover:from-yellow-400 hover:to-yellow-500 hover:shadow-yellow-400/25"
             : "bg-gray-400 cursor-not-allowed"
         }`}
         type="submit"
-        disabled={!hasScrolledToEnd}
+        disabled={!hasScrolledToEnd || !consentChecked}
       >
         Get early access and a gift
       </Button>

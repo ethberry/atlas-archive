@@ -16,11 +16,14 @@ import { validationSchema } from "./validation";
 export const Saft: FC = () => {
   const useFormReturn = useForm<IUserData>({
     resolver: zodResolver(validationSchema),
+    mode: "onSubmit",
+    reValidateMode: "onChange",
     defaultValues: {
       firstName: "",
       lastName: "",
       email: "",
       address: "",
+      consent: false,
     },
   });
 
@@ -53,6 +56,7 @@ export const Saft: FC = () => {
         lastName: "",
         email: "",
         address: "",
+        consent: false,
       });
     },
     onError: (error) => {
@@ -76,6 +80,7 @@ export const Saft: FC = () => {
         lastName: formData.lastName,
         email: formData.email,
         address: formData.address,
+        consent: formData.consent,
       });
     },
     [sendUserDataSubscription],
