@@ -23,9 +23,14 @@ export const EmailForm: FC<IEmailFormProps> = ({
   } = useFormInstance;
 
   const [formData, setFormData] = useState<IUserData>(getValues());
+  const [hasScrolledToEnd, setHasScrolledToEnd] = useState<boolean>(false);
 
   const handleBlur = (e: FocusEvent<HTMLInputElement>) => {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  const handleScrollToEnd = () => {
+    setHasScrolledToEnd(true);
   };
 
   return (
@@ -33,7 +38,13 @@ export const EmailForm: FC<IEmailFormProps> = ({
       className="font-mont space-y-[16px] text-center w-full"
       onSubmit={handleSubmit(submitEmailForm)}
     >
-      <PdfPreview formData={formData} />
+      <PdfPreview formData={formData} onScrollToEnd={handleScrollToEnd} />
+
+      {hasScrolledToEnd && (
+        <div className="text-green-600 text-sm font-medium animate-pulse">
+          ✓ PDF viewed completely
+        </div>
+      )}
 
       <div className="relative group">
         <Controller
@@ -101,8 +112,13 @@ export const EmailForm: FC<IEmailFormProps> = ({
       </div>
 
       <Button
-        className="w-full text-white bg-gradient-to-r from-yellow-500 to-yellow-600 hover:from-yellow-400 hover:to-yellow-500 border-2 border-yellow-400/50 shadow-lg hover:shadow-yellow-400/25 transition-all duration-300 font-bold text-lg py-3 px-8"
+        className={`w-full text-white border-2 border-yellow-400/50 shadow-lg transition-all duration-300 font-bold text-lg py-3 px-8 ${
+          hasScrolledToEnd
+            ? "bg-gradient-to-r from-yellow-500 to-yellow-600 hover:from-yellow-400 hover:to-yellow-500 hover:shadow-yellow-400/25"
+            : "bg-gray-400 cursor-not-allowed"
+        }`}
         type="submit"
+        disabled={!hasScrolledToEnd}
       >
         Get early access and a gift
       </Button>

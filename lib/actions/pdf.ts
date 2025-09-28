@@ -4,7 +4,7 @@ import { IUserData } from "@/app/saft/interfaces";
 
 export const generatePdf = async (formData: IUserData) => {
   const existingPdfBytes = await fetch(
-    "http://localhost:3000/pdf/template.pdf",
+    "http://localhost:3000/pdf/saft1.pdf",
   ).then((res) => res.arrayBuffer());
   const pdfDoc = await PDFDocument.load(existingPdfBytes);
 
