@@ -2,9 +2,10 @@ import { PDFDocument } from "pdf-lib";
 
 import { IUserData } from "@/app/saft/interfaces";
 
-const baseUrl = process.env.NEXT_PUBLIC_VERCEL_URL
-  ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`
-  : "http://localhost:3000";
+const baseUrl =
+  process.env.VERCEL_URL || process.env.NEXT_PUBLIC_VERCEL_URL
+    ? "https://fractown-ten.vercel.app"
+    : "http://localhost:3000";
 
 export const generatePdf = async (formData: IUserData) => {
   const existingPdfBytes = await fetch(`${baseUrl}/pdf/saft1.pdf`).then((res) =>
