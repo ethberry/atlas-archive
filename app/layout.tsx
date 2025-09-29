@@ -31,7 +31,22 @@ export default function RootLayout(props: PropsWithChildren) {
 
   return (
     <html lang="en" className={"dark"}>
-      <head></head>
+      <head>
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-5BVJ2PSD9D"
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){window.dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-5BVJ2PSD9D');
+          `,
+          }}
+        />
+      </head>
       <body className={`${plusJakartaSans.variable}`}>
         <Providers>
           <Header />
