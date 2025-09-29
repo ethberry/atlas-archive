@@ -7,6 +7,10 @@ import { getUsersForFallowUp } from "../../../../lib/db/models/users";
 export async function GET() {
   const users = await getUsersForFallowUp();
 
+  if (!users.length) {
+    return NextResponse.json({ success: true });
+  }
+
   await sendTemplate({
     to: users.map((user) => user.email),
     template: 7318139,
