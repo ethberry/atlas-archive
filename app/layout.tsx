@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     title: "Инвестируй в будущее, владея прошлым",
     description:
       "Стань совладельцем Яйца Фаберже — легенды искусства и символа роскоши. Fractown открывает доступ к уникальным артефактам через цифровые доли.",
-    images: "https://fractown.com/assets/fractown-logo.png",
+    images: "https://fractown.com/assets/fractown-og-img.png",
     type: "website",
     url: "https://fractown.com/",
   },
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     title: "Инвестируй в будущее, владея прошлым",
     description:
       "Стань совладельцем Яйца Фаберже — легенды искусства и символа роскоши. Fractown открывает доступ к уникальным артефактам через цифровые доли.",
-    images: "https://fractown.com/assets/fractown-logo.png",
+    images: "https://fractown.com/assets/fractown-og-img.png",
   },
 };
 
