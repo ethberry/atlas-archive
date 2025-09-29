@@ -26,6 +26,21 @@ export const createUser = async (user: IUserData) => {
   return data;
 };
 
+export const getUserByEmail = async (email: string) => {
+  const { data, error } = await supabase
+    .from("users")
+    .select()
+    .eq("email", email)
+    .maybeSingle();
+
+  if (error) {
+    captureException(error);
+    throw error;
+  }
+
+  return data;
+};
+
 export const getUsersForFallowUp = async () => {
   const { data, error } = await supabase
     .from("users")

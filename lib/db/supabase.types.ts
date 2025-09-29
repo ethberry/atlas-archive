@@ -14,33 +14,68 @@ export type Database = {
   }
   public: {
     Tables: {
+      invoices: {
+        Row: {
+          created_at: string
+          id: string
+          status: Database["public"]["Enums"]["InvoiceStatus"]
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          status?: Database["public"]["Enums"]["InvoiceStatus"]
+          updated_at?: string
+          user_id?: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          status?: Database["public"]["Enums"]["InvoiceStatus"]
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "invoices_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "users"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       users: {
         Row: {
           address: string
+          consent: boolean
           created_at: string
           email: string
           first_name: string
-          id: number
+          id: string
           last_name: string
           stage: Database["public"]["Enums"]["UserStage"]
           updated_at: string
         }
         Insert: {
           address: string
+          consent?: boolean
           created_at?: string
           email: string
           first_name: string
-          id?: number
+          id?: string
           last_name: string
           stage?: Database["public"]["Enums"]["UserStage"]
           updated_at?: string
         }
         Update: {
           address?: string
+          consent?: boolean
           created_at?: string
           email?: string
           first_name?: string
-          id?: number
+          id?: string
           last_name?: string
           stage?: Database["public"]["Enums"]["UserStage"]
           updated_at?: string
@@ -55,6 +90,7 @@ export type Database = {
       [_ in never]: never
     }
     Enums: {
+      InvoiceStatus: "NEW" | "CREATED" | "EXPIRED" | "PAID"
       UserStage: "NEW" | "PAID" | "FOLLOWUP" | "UPSALE"
     }
     CompositeTypes: {
@@ -183,6 +219,7 @@ export type CompositeTypes<
 export const Constants = {
   public: {
     Enums: {
+      InvoiceStatus: ["NEW", "CREATED", "EXPIRED", "PAID"],
       UserStage: ["NEW", "PAID", "FOLLOWUP", "UPSALE"],
     },
   },

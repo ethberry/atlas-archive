@@ -7,7 +7,6 @@ import { enqueueSnackbar } from "notistack";
 import { useMutation } from "@tanstack/react-query";
 import { FormattedMessage } from "react-intl";
 
-import { createSaftContract } from "@/lib/actions/saft";
 import type { IUserData } from "@/app/saft/interfaces";
 import { EmailForm } from "@/app/saft/EmailForm";
 
@@ -28,22 +27,21 @@ export const Saft: FC = () => {
   });
 
   const { mutate: sendUserDataSubscription } = useMutation({
-    mutationFn: (data: IUserData) => {
-      return createSaftContract(data);
+    mutationFn: async (data: IUserData) => {
+      const res = await fetch("/api/users", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      const json = await res.json();
+
+      if (!res.ok) {
+        throw json.error;
+      }
+
+      window.location.href = `https://pay.paykilla.com/pay?widgetKey=${json.idempotencyKey}`;
     },
-    // mutationFn: async (data: IEmailSubscription) => {
-    //   const res = await fetch("/api/whitelist", {
-    //     method: "POST",
-    //     headers: { "Content-Type": "application/json" },
-    //     body: JSON.stringify(data),
-    //   });
-    //
-    //   const json = await res.json();
-    //   if (!res.ok) {
-    //     throw json.error;
-    //   }
-    //   return json.data;
-    // },
     onSuccess: () => {
       enqueueSnackbar(
         `Thank you for subscribing! Check your email for confirmation.`,
