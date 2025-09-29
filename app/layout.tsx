@@ -15,13 +15,24 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Fractown",
+  title: "Fractown — Инвестируй в будущее, владея прошлым",
   description:
-    "Explore the world of Web3 and the possibilities of land share ownership. Connect to our blockchain platform to acquire and manage digital assets. Join us today!",
+    "Стань совладельцем Яйца Фаберже — легенды искусства и символа роскоши. Fractown открывает доступ к уникальным артефактам через цифровые доли.",
   openGraph: {
-    title: "Fractown",
+    locale: "ru_RU",
+    siteName: "Fractown",
+    title: "Инвестируй в будущее, владея прошлым",
     description:
-      "Explore the world of Web3 and the possibilities of land share ownership. Connect to our blockchain platform to acquire and manage digital assets. Join us today!",
+      "Стань совладельцем Яйца Фаберже — легенды искусства и символа роскоши. Fractown открывает доступ к уникальным артефактам через цифровые доли.",
+    images: "https://fractown.com/assets/fractown-logo.png",
+    type: "website",
+    url: "https://fractown.com/",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Инвестируй в будущее, владея прошлым",
+    description:
+      "Стань совладельцем Яйца Фаберже — легенды искусства и символа роскоши. Fractown открывает доступ к уникальным артефактам через цифровые доли.",
     images: "https://fractown.com/assets/fractown-logo.png",
   },
 };
