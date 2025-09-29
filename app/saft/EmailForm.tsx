@@ -46,7 +46,7 @@ export const EmailForm: FC<IEmailFormProps> = ({
 
   return (
     <form
-      className="font-mont space-y-[16px] text-center w-full"
+      className="space-y-[16px] text-center w-full"
       onSubmit={handleSubmit(handleFormSubmit)}
     >
       <PdfPreview formData={formData} onScrollToEnd={handleScrollToEnd} />

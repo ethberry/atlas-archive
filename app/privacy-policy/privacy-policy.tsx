@@ -6,10 +6,10 @@ import { FormattedMessage } from "react-intl";
 export const PrivacyPolicy: FC = () => {
   return (
     <main className="flex-row justify-center text-center max-w-[800px] mx-[30px] mobile:mx-auto space-y-8">
-      <h1 className="text-white text-[24px] tablet:text-[32px] mobile:text-[26px] text-center font-mont-bold">
+      <h1 className="text-white text-[24px] tablet:text-[32px] mobile:text-[26px] text-center ">
         <FormattedMessage id="PRIVACY_POLICY" />
       </h1>
-      <p className="font-[900] text-justify font-mont-bold text-[16px] tablet:text-[18px] text-white space-y-5">
+      <p className="font-[900] text-justify text-[16px] tablet:text-[18px] text-white space-y-5">
         1. General Provisions
         <br />
         <br /> 1.1 The controller of your personal data is CoArt UAB, Company

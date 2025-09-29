@@ -87,7 +87,7 @@ export const Saft: FC = () => {
   );
 
   return (
-    <main className="font-mont">
+    <main>
       <h2>
         <FormattedMessage id="pages.saft.title" />
       </h2>

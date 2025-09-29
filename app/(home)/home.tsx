@@ -12,7 +12,7 @@ import FAQItem from "../../components/FAQItem";
 
 export const Home: FC = () => {
   return (
-    <main className="font-mont">
+    <main>
       <h2 className="w-full text-center text-2xl font-bold">
         <FormattedMessage id="pages.landing.title" />
       </h2>
@@ -53,7 +53,7 @@ export const Home: FC = () => {
       <section className="relative w-full h-screen flex flex-col items-center justify-center snap-start px-4 md:px-8 bg-transparent">
         <div className="relative z-10 flex flex-col items-center justify-center text-center text-white space-y-8 max-w-4xl mx-auto">
           <div className="space-y-6">
-            <h2 className="text-4xl md:text-6xl font-mont-bold text-yellow-400 drop-shadow-[0_0_8px_rgba(255,255,100,0.5)]">
+            <h2 className="text-4xl md:text-6xl text-yellow-400 drop-shadow-[0_0_8px_rgba(255,255,100,0.5)]">
               Join our Discord
             </h2>
             <p className="text-xl md:text-2xl text-gray-200 leading-relaxed">
@@ -88,7 +88,7 @@ export const Home: FC = () => {
       <section className="relative w-full h-screen flex flex-col items-center justify-center snap-start px-4 md:px-8 bg-transparent">
         <div className="relative z-10 flex flex-col items-center justify-center text-center text-white space-y-8 max-w-4xl mx-auto">
           <div className="space-y-6">
-            <h2 className="text-4xl md:text-6xl font-mont-bold text-yellow-400 drop-shadow-[0_0_8px_rgba(255,255,100,0.5)]">
+            <h2 className="text-4xl md:text-6xl text-yellow-400 drop-shadow-[0_0_8px_rgba(255,255,100,0.5)]">
               CoArt & FracTown Roadmap
             </h2>
             <p className="text-xl md:text-2xl text-gray-200 leading-relaxed">
@@ -142,7 +142,7 @@ export const Home: FC = () => {
 
       <section className="relative w-full h-screen flex flex-col items-center justify-center snap-start px-4 md:px-8 bg-transparent">
         <div className="relative z-10 flex flex-col items-start max-w-screen-md mx-auto text-white space-y-4">
-          <h2 className="text-3xl md:text-4xl font-mont-bold text-yellow-400 mb-4 drop-shadow-[0_0_8px_rgba(255,255,100,0.5)]">
+          <h2 className="text-3xl md:text-4xl text-yellow-400 mb-4 drop-shadow-[0_0_8px_rgba(255,255,100,0.5)]">
             FAQ
           </h2>
 

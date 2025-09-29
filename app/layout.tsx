@@ -1,13 +1,13 @@
 import { PropsWithChildren } from "react";
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans } from "next/font/google";
+import { Inter } from "next/font/google";
 
 import { Providers } from "../components/providers/providers";
 import { Header } from "../components/Header";
 import Footer from "../components/Footer";
 import "./globals.css";
 
-const plusJakartaSans = Plus_Jakarta_Sans({
+const font = Inter({
   weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
   display: "swap",
@@ -58,7 +58,7 @@ export default function RootLayout(props: PropsWithChildren) {
           }}
         />
       </head>
-      <body className={`${plusJakartaSans.variable}`}>
+      <body className={`${font.variable}`}>
         <Providers>
           <Header />
           {children}

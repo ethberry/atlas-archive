@@ -6,10 +6,10 @@ import { FormattedMessage } from "react-intl";
 export const TermsAndConditions: FC = () => {
   return (
     <main className="flex-row justify-center text-center max-w-[800px] mx-[30px] mobile:mx-auto space-y-8">
-      <h1 className="text-white text-[24px] tablet:text-[32px] mobile:text-[26px] text-center font-mont-bold">
+      <h1 className="text-white text-[24px] tablet:text-[32px] mobile:text-[26px] text-center ">
         <FormattedMessage id="TERMS_OF_USE" />
       </h1>
-      <div className="font-[900] text-justify font-mont-bold text-[16px] tablet:text-[18px] text-white space-y-5">
+      <div className="font-[900] text-justify text-[16px] tablet:text-[18px] text-white space-y-5">
         <p>
           General Conditions
           <br /> Browse and purchase our IT services conveniently online. Get
