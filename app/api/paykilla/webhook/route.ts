@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { captureException } from "@sentry/nextjs";
 
 import { createSignature } from "@/app/api/paykilla/utils";
 import { PaykillaEventTypes } from "@/app/api/paykilla/interfaces";
@@ -30,55 +31,60 @@ export async function POST(req: Request) {
 
   const json = JSON.parse(text);
 
-  switch (json.eventType) {
-    case PaykillaEventTypes.INVOICE_CREATE_INVOICE: {
-      const { idempotencyKey } = json.data;
+  try {
+    switch (json.eventType) {
+      case PaykillaEventTypes.INVOICE_CREATE_INVOICE: {
+        const { idempotencyKey } = json.data;
 
-      await updateInvoiceStatus(idempotencyKey, "CREATED");
+        await updateInvoiceStatus(idempotencyKey, "CREATED");
 
-      return;
+        break;
+      }
+      case PaykillaEventTypes.INVOICE_EXPIRED: {
+        const { idempotencyKey } = json.data;
+
+        await updateInvoiceStatus(idempotencyKey, "EXPIRED");
+
+        break;
+      }
+      case PaykillaEventTypes.INVOICE_PAID: {
+        const { idempotencyKey } = json.data;
+        await updateInvoiceStatus(idempotencyKey, "PAID");
+
+        const invoice = await getInvoiceById(idempotencyKey);
+
+        const pdfDoc = await generatePdf({
+          firstName: invoice.user.first_name,
+          lastName: invoice.user.last_name,
+          email: invoice.user.email,
+          address: invoice.user.address,
+          consent: invoice.user.consent,
+        });
+
+        await sendTemplate({
+          to: [invoice.user.email],
+          template: 7318139,
+          data: {},
+          attachments: [
+            {
+              ContentType: "application/pdf",
+              Filename: "saft.pdf",
+              Base64Content: await pdfDoc.saveAsBase64(),
+            },
+          ],
+        });
+
+        break;
+      }
+      default:
+        return NextResponse.json(
+          { error: "Internal server error" },
+          { status: 400 },
+        );
     }
-    case PaykillaEventTypes.INVOICE_EXPIRED: {
-      const { idempotencyKey } = json.data;
-
-      await updateInvoiceStatus(idempotencyKey, "EXPIRED");
-
-      return;
-    }
-    case PaykillaEventTypes.INVOICE_PAID: {
-      const { idempotencyKey } = json.data;
-      await updateInvoiceStatus(idempotencyKey, "PAID");
-
-      const invoice = await getInvoiceById(idempotencyKey);
-
-      const pdfDoc = await generatePdf({
-        firstName: invoice.user.first_name,
-        lastName: invoice.user.last_name,
-        email: invoice.user.email,
-        address: invoice.user.address,
-        consent: invoice.user.consent,
-      });
-
-      await sendTemplate({
-        to: [invoice.user.email],
-        template: 7318139,
-        data: {},
-        attachments: [
-          {
-            ContentType: "application/pdf",
-            Filename: "saft.pdf",
-            Base64Content: await pdfDoc.saveAsBase64(),
-          },
-        ],
-      });
-
-      return;
-    }
-    default:
-      return NextResponse.json(
-        { error: "Internal server error" },
-        { status: 400 },
-      );
+  } catch (error) {
+    console.error(error);
+    captureException(error);
   }
 
   return NextResponse.json({ status: "OK" });
