@@ -242,13 +242,13 @@ const Footer: FC = () => {
       </div>
       <div className="flex flex-wrap text-white space-x-[32px] mt-[48px] justify-center">
         <Link href={"/privacy-policy"}>
-          <FormattedMessage id="PRIVACY_POLICY" />
+          <FormattedMessage id="components.footer.privacyPolicy" />
         </Link>
         <Link href={"/terms-and-conditions"}>
-          <FormattedMessage id="TERMS_OF_USE" />
+          <FormattedMessage id="components.footer.termsOfUse" />
         </Link>
         <Link href={"/refund-policy"}>
-          <FormattedMessage id="REFUND_POLICY" />
+          <FormattedMessage id="components.footer.refundPolicy" />
         </Link>
       </div>
     </footer>

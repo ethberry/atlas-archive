@@ -19,7 +19,7 @@ export const EmailForm: FC<IEmailFormProps> = ({
   const { formatMessage } = useIntl();
   const {
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isSubmitting, isValid },
     getValues,
     control,
     trigger,
@@ -27,7 +27,8 @@ export const EmailForm: FC<IEmailFormProps> = ({
 
   const [formData, setFormData] = useState<IUserData>(getValues());
   const [hasScrolledToEnd, setHasScrolledToEnd] = useState<boolean>(false);
-  const [consentChecked, setConsentChecked] = useState<boolean>(false);
+
+  const disabled = isSubmitting || !isValid;
 
   const handleBlur = (e: FocusEvent<HTMLInputElement>) => {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
@@ -65,10 +66,7 @@ export const EmailForm: FC<IEmailFormProps> = ({
               type="checkbox"
               id="consent"
               checked={value}
-              onChange={(e) => {
-                onChange(e.target.checked);
-                setConsentChecked(e.target.checked);
-              }}
+              onChange={onChange}
               disabled={!hasScrolledToEnd}
               className={`w-4 h-4 rounded border-2 ${
                 !hasScrolledToEnd
@@ -95,6 +93,39 @@ export const EmailForm: FC<IEmailFormProps> = ({
         {Boolean(errors.consent?.message) && (
           <span className="text-red-500 text-xs mt-1">
             {formatMessage({ id: errors.consent?.message })}
+          </span>
+        )}
+      </div>
+
+      <div className="flex items-center space-x-2 text-sm">
+        <Controller
+          name="nonUsPerson"
+          control={control}
+          render={({ field: { onChange, value } }) => (
+            <input
+              type="checkbox"
+              id="nonUsPerson"
+              checked={value}
+              onChange={onChange}
+              className={`w-4 h-4 rounded border-2 ${
+                errors.nonUsPerson?.message
+                  ? "border-red-500 text-red-600 focus:ring-red-500"
+                  : "border-green-500 text-green-600 focus:ring-green-500"
+              }`}
+            />
+          )}
+        />
+        <label
+          htmlFor="nonUsPerson"
+          className={`text-sm ${
+            errors.nonUsPerson?.message ? "text-red-600" : "text-gray-700"
+          }`}
+        >
+          <FormattedMessage id="form.label.nonUsPerson" />
+        </label>
+        {Boolean(errors.nonUsPerson?.message) && (
+          <span className="text-red-500 text-xs mt-1">
+            {formatMessage({ id: errors.nonUsPerson?.message })}
           </span>
         )}
       </div>
@@ -182,12 +213,12 @@ export const EmailForm: FC<IEmailFormProps> = ({
 
       <Button
         className={`w-full text-white border-2 border-yellow-400/50 shadow-lg transition-all duration-300 font-bold text-lg py-3 px-8 ${
-          hasScrolledToEnd && consentChecked
+          !disabled
             ? "bg-gradient-to-r from-yellow-500 to-yellow-600 hover:from-yellow-400 hover:to-yellow-500 hover:shadow-yellow-400/25"
             : "bg-gray-400 cursor-not-allowed"
         }`}
         type="submit"
-        disabled={!hasScrolledToEnd || !consentChecked}
+        disabled={disabled}
       >
         Get early access and a gift
       </Button>

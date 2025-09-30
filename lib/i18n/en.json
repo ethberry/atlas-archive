@@ -2,6 +2,11 @@
   "components": {
     "header": {
       "logo": "Fractown"
+    },
+    "footer": {
+      "privacyPolicy": "Privacy Policy",
+      "termsOfUse": "Terms & Conditions",
+      "refundPolicy": "Refund Policy"
     }
   },
   "pages": {
@@ -18,7 +23,8 @@
       "lastName": "Last name",
       "email": "Email",
       "address": "Address",
-      "consent": "I agree to the terms and conditions"
+      "consent": "I agree to the terms and conditions",
+      "nonUsPerson": "I'm not a US person"
     },
     "placeholder": {
       "firstName": "Gordon",
@@ -50,32 +56,10 @@
       },
       "consent": {
         "required": "You must agree to the terms and conditions"
+      },
+      "nonUsPerson": {
+        "required": "You are not an US person"
       }
     }
-  },
-  "BUTTON.SEND_QUESTION": "Send Message",
-  "INPUT.EMAIL_TYPE": "This field must be of type email!",
-  "INPUT.EMAIL_REQUIRED": "Email is a required field!",
-  "INPUT.QUESTION_REQUIRED": "Question is a required field!",
-  "INPUT.QUESTION_PLACEHOLDER": "Tell us or ask us something",
-  "CONTACT_US": "Contact us if you'd like to: ",
-  "OUR_PRODUCTS": "Our Products",
-  "COART_PLATFORM": "CoArt Platform",
-  "PODCAST_APPEARANCES": "Podcast Appearances",
-  "HOME.MAIN_TEXT": "The CoArt - where reality is co-owned and shared. Join us in creating a new, collaborative Metaverse!",
-  "MORE": "MORE",
-  "DATA_ROOM": "Data Room",
-  "HOT_OFFER": "Join the White List to win 300 cubic feet of the new Metaverse!",
-  "WEB3_PLATFORM": "Blockchain Authentication",
-  "WEB3_PLATFORM.SUBTITLE": "Once a unique crypto-certificate is created...",
-  "MARKETPLACE": "Fast and Secure Resales",
-  "MARKETPLACE.SUBTITLE": "Selling physical collectibles is now...",
-  "METAVERSE": "AI-Assisted Valuation",
-  "METAVERSE.SUBTITLE": "Our AI system can assess the market value of newly...",
-  "PRIVACY_POLICY": "Privacy Policy",
-  "TERMS_OF_USE": "Terms & Conditions",
-  "REFUND_POLICY": "Refund Policy",
-  "BLOCKCHAIN.DESCRIPTION": "Experience true ownership in the Web3 era with CoArt. Own your internet space, digital assets, and embrace the immersive world of VR. Revolutionize ownership with our blockchain platform and join us on a transformative journey in the emerging era of Web3.",
-  "METAVERSE.TITLE": "Let's explore the structure of the First Cluster in our Metaverse!",
-  "MARKETPLACE.DESCRIPTION": "Secure co-ownership of unique assets on CoArt. Fractional Crypto Certificates protect against counterfeiting, enabling easy trading on the secondary market. Experience a market-ready state, empowering all participants as active sellers. Connect globally in personalized VR showrooms for seamless transactions. CoArt Fractional Marketplace democratizes access to valuable assets, redefining ownership and trade in the Web3 era."
+  }
 }

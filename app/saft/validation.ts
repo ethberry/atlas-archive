@@ -29,4 +29,7 @@ export const validationSchema = z.object({
   consent: z.boolean().refine((val) => val === true, {
     message: "form.error.consent.required",
   }),
+  nonUsPerson: z.boolean().refine((val) => val === true, {
+    message: "form.error.nonUsPerson.required",
+  }),
 });
