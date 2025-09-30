@@ -40,15 +40,9 @@ export const Saft: FC = () => {
         throw json.error;
       }
 
-      window.location.href = `https://pay.paykilla.com/pay?widgetKey=${json.idempotencyKey}`;
+      return json;
     },
-    onSuccess: () => {
-      enqueueSnackbar(
-        `Thank you for subscribing! Check your email for confirmation.`,
-        {
-          variant: "success",
-        },
-      );
+    onSuccess: (json) => {
       useFormReturn.reset({
         firstName: "",
         lastName: "",
@@ -56,18 +50,14 @@ export const Saft: FC = () => {
         address: "",
         consent: false,
       });
+
+      window.location.href = `https://pay.paykilla.com/pay?widgetKey=${json.idempotencyKey}`;
     },
     onError: (error) => {
       console.error(error);
-      if (error.message.includes("23505")) {
-        enqueueSnackbar(`Already in the list!`, {
-          variant: "warning",
-        });
-      } else {
-        enqueueSnackbar(`Something went wrong!`, {
-          variant: "error",
-        });
-      }
+      enqueueSnackbar(`Something went wrong!`, {
+        variant: "error",
+      });
     },
   });
 

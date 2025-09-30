@@ -1,6 +1,6 @@
 import { FC, useState, FocusEvent } from "react";
 import { Controller, UseFormReturn } from "react-hook-form";
-import { FormattedMessage } from "react-intl";
+import { FormattedMessage, useIntl } from "react-intl";
 
 import { PdfPreview } from "@/app/saft/PdfPreview";
 import type { IUserData } from "@/app/saft/interfaces";
@@ -16,6 +16,7 @@ export const EmailForm: FC<IEmailFormProps> = ({
   useFormInstance,
   submitEmailForm,
 }) => {
+  const { formatMessage } = useIntl();
   const {
     handleSubmit,
     formState: { errors },
@@ -47,7 +48,11 @@ export const EmailForm: FC<IEmailFormProps> = ({
   return (
     <form
       className="space-y-[16px] text-center w-full"
-      onSubmit={handleSubmit(handleFormSubmit)}
+      onSubmit={(e) => {
+        void handleSubmit((data) => {
+          void handleFormSubmit(data);
+        })(e);
+      }}
     >
       <PdfPreview formData={formData} onScrollToEnd={handleScrollToEnd} />
 
@@ -89,7 +94,7 @@ export const EmailForm: FC<IEmailFormProps> = ({
         </label>
         {Boolean(errors.consent?.message) && (
           <span className="text-red-500 text-xs mt-1">
-            {errors.consent?.message}
+            {formatMessage({ id: errors.consent?.message })}
           </span>
         )}
       </div>
@@ -105,7 +110,11 @@ export const EmailForm: FC<IEmailFormProps> = ({
               onChange={onChange}
               maxLength={40}
               error={Boolean(errors.firstName?.message)}
-              helperText={errors.firstName?.message}
+              helperText={
+                errors.firstName?.message
+                  ? formatMessage({ id: errors.firstName.message })
+                  : undefined
+              }
               onBlur={handleBlur}
             />
           )}
@@ -120,7 +129,11 @@ export const EmailForm: FC<IEmailFormProps> = ({
               onChange={onChange}
               maxLength={40}
               error={Boolean(errors.lastName?.message)}
-              helperText={errors.lastName?.message}
+              helperText={
+                errors.lastName?.message
+                  ? formatMessage({ id: errors.lastName.message })
+                  : undefined
+              }
               onBlur={handleBlur}
             />
           )}
@@ -135,7 +148,11 @@ export const EmailForm: FC<IEmailFormProps> = ({
               onChange={onChange}
               maxLength={40}
               error={Boolean(errors.email?.message)}
-              helperText={errors.email?.message}
+              helperText={
+                errors.email?.message
+                  ? formatMessage({ id: errors.email.message })
+                  : undefined
+              }
               onBlur={handleBlur}
             />
           )}
@@ -150,7 +167,11 @@ export const EmailForm: FC<IEmailFormProps> = ({
               onChange={onChange}
               maxLength={40}
               error={Boolean(errors.address?.message)}
-              helperText={errors.address?.message}
+              helperText={
+                errors.address?.message
+                  ? formatMessage({ id: errors.address.message })
+                  : undefined
+              }
               onBlur={handleBlur}
             />
           )}

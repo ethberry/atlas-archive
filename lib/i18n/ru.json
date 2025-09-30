@@ -2,7 +2,43 @@
   "SLOGAN": "Схвати судьбу за яйцо",
   "form": {
     "label": {
-      "consent": "Я согласен с условиями и положениями"
+      "consent": "Я согласен с условиями и положениями",
+      "firstName": "Имя",
+      "lastName": "Фамилия",
+      "email": "Email",
+      "address": "Адрес"
+    },
+    "placeholder": {
+      "firstName": "Гордон",
+      "lastName": "Фримен",
+      "email": "me@gmail.com",
+      "address": "123 длинная улица, Париж, Франция, 0000"
+    },
+    "error": {
+      "firstName": {
+        "required": "Имя обязательно",
+        "tooShort": "Имя слишком короткое",
+        "tooLong": "Имя слишком длинное"
+      },
+      "lastName": {
+        "required": "Фамилия обязательна",
+        "tooShort": "Фамилия слишком короткая",
+        "tooLong": "Фамилия слишком длинная"
+      },
+      "email": {
+        "required": "Email обязателен",
+        "invalid": "Некорректный формат email",
+        "tooShort": "Email слишком короткий",
+        "tooLong": "Email слишком длинный"
+      },
+      "address": {
+        "required": "Адрес обязателен",
+        "tooShort": "Адрес слишком короткий",
+        "tooLong": "Адрес слишком длинный"
+      },
+      "consent": {
+        "required": "Необходимо согласиться с условиями и положениями"
+      }
     }
   }
 }

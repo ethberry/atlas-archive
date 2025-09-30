@@ -1,11 +1,11 @@
-import { FC, InputHTMLAttributes } from "react";
+import { FC, InputHTMLAttributes, ReactNode } from "react";
 import clsx from "clsx";
 import { useIntl } from "react-intl";
 
 interface IInputProps extends InputHTMLAttributes<HTMLInputElement> {
   name: string;
   error?: boolean;
-  helperText?: string;
+  helperText?: ReactNode;
 }
 
 export const Input: FC<IInputProps> = (props) => {

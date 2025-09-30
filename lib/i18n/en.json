@@ -25,6 +25,32 @@
       "lastName": "Freeman",
       "email": "me@gmail.com",
       "address": "123 very long street, Paris, France, 0000"
+    },
+    "error": {
+      "firstName": {
+        "required": "First name is required",
+        "tooShort": "First name is too short",
+        "tooLong": "First name is too long"
+      },
+      "lastName": {
+        "required": "Last name is required",
+        "tooShort": "Last name is too short",
+        "tooLong": "Last name is too long"
+      },
+      "email": {
+        "required": "Email is required",
+        "tooShort": "Email is too short",
+        "invalid": "Invalid email format",
+        "tooLong": "Email is too long"
+      },
+      "address": {
+        "required": "Address is required",
+        "tooShort": "Address is too short",
+        "tooLong": "Address is too long"
+      },
+      "consent": {
+        "required": "You must agree to the terms and conditions"
+      }
     }
   },
   "BUTTON.SEND_QUESTION": "Send Message",
