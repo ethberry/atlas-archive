@@ -14,6 +14,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Button as ShadButton } from "@/components/ui/button";
+import { SAFT_PACKAGES } from "@/app/saft/constants";
 
 interface IEmailFormProps {
   useFormInstance: UseFormReturn<IUserData>;
@@ -27,7 +28,7 @@ export const EmailForm: FC<IEmailFormProps> = ({
   const { formatMessage } = useIntl();
   const {
     handleSubmit,
-    formState: { errors, isSubmitting, isValid },
+    formState: { errors, isSubmitting },
     getValues,
     control,
     trigger,
@@ -36,7 +37,7 @@ export const EmailForm: FC<IEmailFormProps> = ({
   const [formData, setFormData] = useState<IUserData>(getValues());
   const [hasScrolledToEnd, setHasScrolledToEnd] = useState<boolean>(false);
 
-  const disabled = isSubmitting || !isValid;
+  const disabled = isSubmitting || !hasScrolledToEnd;
 
   const handleBlur = (e: FocusEvent<HTMLInputElement>) => {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
@@ -47,7 +48,6 @@ export const EmailForm: FC<IEmailFormProps> = ({
   };
 
   const handleFormSubmit = async (data: IUserData) => {
-    // Trigger validation for all fields including consent
     const isValid = await trigger();
     if (isValid) {
       submitEmailForm(data);
@@ -165,15 +165,11 @@ export const EmailForm: FC<IEmailFormProps> = ({
                       setFormData((prev) => ({ ...prev, package: amount }));
                     }}
                   >
-                    <DropdownMenuRadioItem value="10">
-                      $10
-                    </DropdownMenuRadioItem>
-                    <DropdownMenuRadioItem value="30">
-                      $30
-                    </DropdownMenuRadioItem>
-                    <DropdownMenuRadioItem value="100">
-                      $100
-                    </DropdownMenuRadioItem>
+                    {SAFT_PACKAGES.map((e) => (
+                      <DropdownMenuRadioItem value={e.toString()} key={e}>
+                        ${e}
+                      </DropdownMenuRadioItem>
+                    ))}
                   </DropdownMenuRadioGroup>
                 </DropdownMenuContent>
               </DropdownMenu>

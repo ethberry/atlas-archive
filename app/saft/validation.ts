@@ -35,6 +35,6 @@ export const validationSchema = z.object({
     message: "form.error.nonUsPerson.required",
   }),
   package: z.number().refine((val) => SAFT_PACKAGES.includes(val), {
-    message: `Must be one of ${SAFT_PACKAGES.join(",")}`,
+    message: `Must be one of ${SAFT_PACKAGES.join(", ")}`,
   }),
 });
