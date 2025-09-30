@@ -6,6 +6,14 @@ import { PdfPreview } from "@/app/saft/PdfPreview";
 import type { IUserData } from "@/app/saft/interfaces";
 import { Input } from "@/components/Form/Input";
 import { Button } from "@/components/Form/Button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuRadioGroup,
+  DropdownMenuRadioItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { Button as ShadButton } from "@/components/ui/button";
 
 interface IEmailFormProps {
   useFormInstance: UseFormReturn<IUserData>;
@@ -128,6 +136,55 @@ export const EmailForm: FC<IEmailFormProps> = ({
             {formatMessage({ id: errors.nonUsPerson?.message })}
           </span>
         )}
+      </div>
+
+      <div className="flex items-center space-x-2 text-sm">
+        <Controller
+          name="package"
+          control={control}
+          render={({ field: { onChange, value } }) => (
+            <div className="w-full text-left">
+              <label className="flex flex-col text-white text-sm mb-1">
+                <FormattedMessage id="form.label.package" />
+              </label>
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <ShadButton
+                    variant="outline"
+                    className="w-full justify-between"
+                  >
+                    ${value}
+                  </ShadButton>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent className="w-full min-w-[12rem]">
+                  <DropdownMenuRadioGroup
+                    value={String(value)}
+                    onValueChange={(val) => {
+                      const numeric = Number(val) as 10 | 30 | 100;
+                      onChange(numeric);
+                      setFormData((prev) => ({ ...prev, package: numeric }));
+                    }}
+                  >
+                    <DropdownMenuRadioItem value="10">
+                      $10
+                    </DropdownMenuRadioItem>
+                    <DropdownMenuRadioItem value="30">
+                      $30
+                    </DropdownMenuRadioItem>
+                    <DropdownMenuRadioItem value="100">
+                      $100
+                    </DropdownMenuRadioItem>
+                  </DropdownMenuRadioGroup>
+                </DropdownMenuContent>
+              </DropdownMenu>
+              {Boolean(errors.package?.message) && (
+                <span className="text-red-500 text-xs mt-1">
+                  {formatMessage({ id: errors.package?.message as any })}
+                </span>
+              )}
+            </div>
+          )}
+        />
       </div>
 
       <div className="relative group">

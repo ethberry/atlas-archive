@@ -1,12 +1,58 @@
 {
   "components": {
-    "header": {
-      "logo": "Fractown"
-    },
     "footer": {
       "privacyPolicy": "Privacy Policy",
-      "termsOfUse": "Terms & Conditions",
-      "refundPolicy": "Refund Policy"
+      "refundPolicy": "Refund Policy",
+      "termsOfUse": "Terms & Conditions"
+    },
+    "header": {
+      "logo": "Fractown"
+    }
+  },
+  "form": {
+    "error": {
+      "address": {
+        "required": "Address is required",
+        "tooLong": "Address is too long",
+        "tooShort": "Address is too short"
+      },
+      "consent": {
+        "required": "You must agree to the terms and conditions"
+      },
+      "email": {
+        "invalid": "Invalid email format",
+        "required": "Email is required",
+        "tooLong": "Email is too long",
+        "tooShort": "Email is too short"
+      },
+      "firstName": {
+        "required": "First name is required",
+        "tooLong": "First name is too long",
+        "tooShort": "First name is too short"
+      },
+      "lastName": {
+        "required": "Last name is required",
+        "tooLong": "Last name is too long",
+        "tooShort": "Last name is too short"
+      },
+      "nonUsPerson": {
+        "required": "You are not an US person"
+      }
+    },
+    "label": {
+      "address": "Address",
+      "consent": "I agree to the terms and conditions",
+      "email": "Email",
+      "firstName": "First name",
+      "lastName": "Last name",
+      "nonUsPerson": "I'm not a US person",
+      "package": "Package"
+    },
+    "placeholder": {
+      "address": "123 very long street, Paris, France, 0000",
+      "email": "me@gmail.com",
+      "firstName": "Gordon",
+      "lastName": "Freeman"
     }
   },
   "pages": {
@@ -15,51 +61,6 @@
     },
     "saft": {
       "title": "SAFT contract"
-    }
-  },
-  "form": {
-    "label": {
-      "firstName": "First name",
-      "lastName": "Last name",
-      "email": "Email",
-      "address": "Address",
-      "consent": "I agree to the terms and conditions",
-      "nonUsPerson": "I'm not a US person"
-    },
-    "placeholder": {
-      "firstName": "Gordon",
-      "lastName": "Freeman",
-      "email": "me@gmail.com",
-      "address": "123 very long street, Paris, France, 0000"
-    },
-    "error": {
-      "firstName": {
-        "required": "First name is required",
-        "tooShort": "First name is too short",
-        "tooLong": "First name is too long"
-      },
-      "lastName": {
-        "required": "Last name is required",
-        "tooShort": "Last name is too short",
-        "tooLong": "Last name is too long"
-      },
-      "email": {
-        "required": "Email is required",
-        "tooShort": "Email is too short",
-        "invalid": "Invalid email format",
-        "tooLong": "Email is too long"
-      },
-      "address": {
-        "required": "Address is required",
-        "tooShort": "Address is too short",
-        "tooLong": "Address is too long"
-      },
-      "consent": {
-        "required": "You must agree to the terms and conditions"
-      },
-      "nonUsPerson": {
-        "required": "You are not an US person"
-      }
     }
   }
 }

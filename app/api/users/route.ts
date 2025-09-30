@@ -19,20 +19,19 @@ export async function POST(req: Request) {
       user = await createUser(body);
     }
 
-    const invoice = await createInvoice(user);
+    const invoice = await createInvoice(user.id, body.package);
 
     const baseUrl =
       process.env.VERCEL_URL || process.env.NEXT_PUBLIC_VERCEL_URL
         ? "https://fractown-ten.vercel.app"
         : "http://localhost:3000";
 
-    // TODO updated package data
     const data = {
       timestamp: Date.now(),
       account: "0x7292075804bd92bebc7f9a64e6909c223dc36749",
       payload: {
-        description: "Single Fiat Payment Widget example",
-        fiatAmount: 100,
+        description: `Payment for package: $${body.package}`,
+        fiatAmount: body.package,
         fiatCurrency: "USD",
         cryptoCurrencies: ["BTC", "ETH", "USDT", "USDC"],
         idempotencyKey: invoice.id,

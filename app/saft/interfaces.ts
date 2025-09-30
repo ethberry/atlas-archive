@@ -5,4 +5,5 @@ export interface IUserData {
   address: string;
   consent: boolean;
   nonUsPerson: boolean;
+  package: 10 | 30 | 100;
 }

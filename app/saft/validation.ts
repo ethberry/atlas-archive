@@ -32,4 +32,5 @@ export const validationSchema = z.object({
   nonUsPerson: z.boolean().refine((val) => val === true, {
     message: "form.error.nonUsPerson.required",
   }),
+  package: z.union([z.literal(10), z.literal(30), z.literal(100)]),
 });

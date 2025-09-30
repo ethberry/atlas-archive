@@ -24,6 +24,7 @@ export const Saft: FC = () => {
       address: "",
       consent: false,
       nonUsPerson: false,
+      package: 10,
     },
   });
 
@@ -51,6 +52,7 @@ export const Saft: FC = () => {
         address: "",
         consent: false,
         nonUsPerson: false,
+        package: 10,
       });
 
       window.location.href = `https://pay.paykilla.com/pay?widgetKey=${json.idempotencyKey}`;
@@ -72,6 +74,7 @@ export const Saft: FC = () => {
         address: formData.address,
         consent: formData.consent,
         nonUsPerson: formData.nonUsPerson,
+        package: formData.package,
       });
     },
     [sendUserDataSubscription],

@@ -3,13 +3,14 @@
 import { captureException } from "@sentry/nextjs";
 
 import { supabase } from "@/lib/db/supabase.server";
-import { Enums, Tables } from "@/lib/db/supabase.types";
+import { Enums } from "@/lib/db/supabase.types";
 
-export const createInvoice = async (user: Tables<"users">) => {
+export const createInvoice = async (user_id: string, amount: number) => {
   const { data, error } = await supabase
     .from("invoices")
     .insert({
-      user_id: user.id,
+      user_id,
+      amount,
     })
     .select()
     .single();

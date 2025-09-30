@@ -16,6 +16,7 @@ export type Database = {
     Tables: {
       invoices: {
         Row: {
+          amount: number
           created_at: string
           id: string
           status: Database["public"]["Enums"]["InvoiceStatus"]
@@ -23,6 +24,7 @@ export type Database = {
           user_id: string
         }
         Insert: {
+          amount: number
           created_at?: string
           id?: string
           status?: Database["public"]["Enums"]["InvoiceStatus"]
@@ -30,6 +32,7 @@ export type Database = {
           user_id?: string
         }
         Update: {
+          amount?: number
           created_at?: string
           id?: string
           status?: Database["public"]["Enums"]["InvoiceStatus"]
@@ -55,6 +58,7 @@ export type Database = {
           first_name: string
           id: string
           last_name: string
+          non_us_person: boolean
           stage: Database["public"]["Enums"]["UserStage"]
           updated_at: string
         }
@@ -66,6 +70,7 @@ export type Database = {
           first_name: string
           id?: string
           last_name: string
+          non_us_person?: boolean
           stage?: Database["public"]["Enums"]["UserStage"]
           updated_at?: string
         }
@@ -77,6 +82,7 @@ export type Database = {
           first_name?: string
           id?: string
           last_name?: string
+          non_us_person?: boolean
           stage?: Database["public"]["Enums"]["UserStage"]
           updated_at?: string
         }
