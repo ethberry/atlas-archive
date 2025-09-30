@@ -160,9 +160,9 @@ export const EmailForm: FC<IEmailFormProps> = ({
                   <DropdownMenuRadioGroup
                     value={String(value)}
                     onValueChange={(val) => {
-                      const numeric = Number(val) as 10 | 30 | 100;
-                      onChange(numeric);
-                      setFormData((prev) => ({ ...prev, package: numeric }));
+                      const amount = Number(val);
+                      onChange(amount);
+                      setFormData((prev) => ({ ...prev, package: amount }));
                     }}
                   >
                     <DropdownMenuRadioItem value="10">

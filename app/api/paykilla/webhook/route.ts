@@ -59,6 +59,8 @@ export async function POST(req: Request) {
           email: invoice.user.email,
           address: invoice.user.address,
           consent: invoice.user.consent,
+          nonUsPerson: invoice.user.non_us_person,
+          package: invoice.amount,
         });
 
         await sendTemplate({
