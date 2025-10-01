@@ -6,6 +6,7 @@ import { createInvoice } from "@/lib/db/models/invoices";
 import { createUser, getUserByEmail } from "@/lib/db/models/users";
 import { validationSchema } from "@/app/saft/validation";
 import { createSignature } from "@/app/api/paykilla/utils";
+import { getVerificationCodeByEmail } from "@/lib/db/models/verification";
 
 export async function POST(req: Request) {
   const json = await req.json();
@@ -17,6 +18,15 @@ export async function POST(req: Request) {
 
     if (!user) {
       user = await createUser(body);
+    }
+
+    const verification = await getVerificationCodeByEmail(user.email);
+
+    if (!verification || verification.code !== body.verificationCode) {
+      return NextResponse.json(
+        { error: "Incorrect verification code" },
+        { status: 400 },
+      );
     }
 
     const invoice = await createInvoice(user.id, body.package);

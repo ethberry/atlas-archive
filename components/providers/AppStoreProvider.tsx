@@ -21,7 +21,8 @@ export const AppStoreContext = createContext<AppStoreApi | undefined>(
   undefined,
 );
 
-export const AppStoreProvider: FC<PropsWithChildren> = ({ children }) => {
+export const AppStoreProvider: FC<PropsWithChildren> = (props) => {
+  const { children } = props;
   const storeRef = useRef<AppStoreApi | null>(null);
   if (storeRef.current === null) {
     storeRef.current = createAppStore(initAppStore());

@@ -16,10 +16,8 @@ pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   import.meta.url,
 ).toString();
 
-export const PdfRenderer: FC<IPdfRendererProps> = ({
-  fileUrl,
-  onScrollToEnd,
-}) => {
+export const PdfRenderer: FC<IPdfRendererProps> = (props) => {
+  const { fileUrl, onScrollToEnd } = props;
   const [numPages, setNumPages] = useState<number>(0);
   const [hasScrolledToEnd, setHasScrolledToEnd] = useState<boolean>(false);
   const [isScrollDetectionEnabled, setIsScrollDetectionEnabled] =

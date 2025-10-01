@@ -27,6 +27,10 @@
       },
       "nonUsPerson": {
         "required": "Вы не гражданин США"
+      },
+      "verificationCode": {
+        "pattern": "Код должен быть ровно 6 цифр",
+        "required": "Код обязателен"
       }
     },
     "label": {
@@ -35,13 +39,16 @@
       "email": "Email",
       "firstName": "Имя",
       "lastName": "Фамилия",
-      "package": "Пакет"
+      "nonUsPerson": "Я не гражданин США",
+      "package": "Пакет",
+      "verificationCode": "Код"
     },
     "placeholder": {
       "address": "123 длинная улица, Париж, Франция, 0000",
       "email": "me@gmail.com",
       "firstName": "Гордон",
-      "lastName": "Фримен"
+      "lastName": "Фримен",
+      "verificationCode": "000000"
     }
   }
 }

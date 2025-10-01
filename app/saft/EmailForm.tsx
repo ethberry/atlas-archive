@@ -1,11 +1,12 @@
-import { FC, useState, FocusEvent } from "react";
+import { FC, useState, FocusEvent, useEffect } from "react";
 import { Controller, UseFormReturn } from "react-hook-form";
 import { FormattedMessage, useIntl } from "react-intl";
+import { enqueueSnackbar } from "notistack";
+import { useMutation } from "@tanstack/react-query";
 
 import { PdfPreview } from "@/app/saft/PdfPreview";
-import type { IUserData } from "@/app/saft/interfaces";
+import type { IUserData, IUserEmail } from "@/app/saft/interfaces";
 import { Input } from "@/components/Form/Input";
-import { Button } from "@/components/Form/Button";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -13,18 +14,17 @@ import {
   DropdownMenuRadioItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Button as ShadButton } from "@/components/ui/button";
-import { SAFT_PACKAGES } from "@/app/saft/constants";
+import { Button } from "@/components/ui/button";
+import { CODE_TIMEOUT, SAFT_PACKAGES } from "@/app/saft/constants";
+import { emailSchema } from "@/app/saft/validation";
 
 interface IEmailFormProps {
   useFormInstance: UseFormReturn<IUserData>;
   submitEmailForm: (formData: IUserData) => void;
 }
 
-export const EmailForm: FC<IEmailFormProps> = ({
-  useFormInstance,
-  submitEmailForm,
-}) => {
+export const EmailForm: FC<IEmailFormProps> = (props) => {
+  const { useFormInstance, submitEmailForm } = props;
   const { formatMessage } = useIntl();
   const {
     handleSubmit,
@@ -32,12 +32,51 @@ export const EmailForm: FC<IEmailFormProps> = ({
     getValues,
     control,
     trigger,
+    watch,
   } = useFormInstance;
 
   const [formData, setFormData] = useState<IUserData>(getValues());
   const [hasScrolledToEnd, setHasScrolledToEnd] = useState<boolean>(false);
+  const [verificationCodeSent, setVerificationCodeSent] =
+    useState<boolean>(false);
+  const [millisecondsLeft, setMillisecondsLeft] = useState(0);
 
+  const formDateRT = watch();
   const disabled = isSubmitting || !hasScrolledToEnd;
+
+  const { mutate: sendVerificationCode } = useMutation({
+    mutationFn: async (data: IUserEmail) => {
+      const res = await fetch("/api/verification", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      const json = await res.json();
+
+      if (!res.ok) {
+        throw json.error;
+      }
+
+      return json;
+    },
+    onSuccess: () => {
+      setVerificationCodeSent(true);
+      setMillisecondsLeft(CODE_TIMEOUT);
+      enqueueSnackbar(
+        formatMessage({ id: "components.messages.verificationCode" }),
+        {
+          variant: "success",
+        },
+      );
+    },
+    onError: (error) => {
+      console.error(error);
+      enqueueSnackbar(error as unknown as string, {
+        variant: "error",
+      });
+    },
+  });
 
   const handleBlur = (e: FocusEvent<HTMLInputElement>) => {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
@@ -47,12 +86,28 @@ export const EmailForm: FC<IEmailFormProps> = ({
     setHasScrolledToEnd(true);
   };
 
+  const handleSendVerificationCode = () => {
+    sendVerificationCode(formData);
+  };
+
   const handleFormSubmit = async (data: IUserData) => {
     const isValid = await trigger();
     if (isValid) {
       submitEmailForm(data);
     }
   };
+
+  useEffect(() => {
+    if (!verificationCodeSent) {
+      return;
+    }
+
+    const intervalId = setInterval(() => {
+      setMillisecondsLeft((prev) => Math.max(prev - 1000, 0));
+    }, 1000);
+
+    return () => clearInterval(intervalId); // cleanup on unmount
+  }, [verificationCodeSent]);
 
   return (
     <form
@@ -149,12 +204,9 @@ export const EmailForm: FC<IEmailFormProps> = ({
               </label>
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                  <ShadButton
-                    variant="outline"
-                    className="w-full justify-between"
-                  >
+                  <Button variant="outline" className="w-full justify-between">
                     ${value}
-                  </ShadButton>
+                  </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent className="w-full min-w-[12rem]">
                   <DropdownMenuRadioGroup
@@ -183,7 +235,7 @@ export const EmailForm: FC<IEmailFormProps> = ({
         />
       </div>
 
-      <div className="relative group">
+      <div className="flex items-center space-x-2 text-sm">
         <Controller
           name="firstName"
           control={control}
@@ -203,6 +255,9 @@ export const EmailForm: FC<IEmailFormProps> = ({
             />
           )}
         />
+      </div>
+
+      <div className="flex items-center space-x-2 text-sm">
         <Controller
           name="lastName"
           control={control}
@@ -222,6 +277,9 @@ export const EmailForm: FC<IEmailFormProps> = ({
             />
           )}
         />
+      </div>
+
+      <div className="flex items-center space-x-2 text-sm">
         <Controller
           name="email"
           control={control}
@@ -241,6 +299,51 @@ export const EmailForm: FC<IEmailFormProps> = ({
             />
           )}
         />
+        <Button
+          className={`text-white border-2 border-yellow-400/50 shadow-lg transition-all duration-300 font-bold text-lg py-3 px-8`}
+          type="button"
+          onClick={handleSendVerificationCode}
+          disabled={
+            !emailSchema.shape.email.safeParse(formDateRT.email).success
+          }
+        >
+          {verificationCodeSent ? (
+            millisecondsLeft ? (
+              <FormattedMessage
+                id="form.button.retryIn"
+                values={{ seconds: Math.floor(millisecondsLeft / 1000) }}
+              />
+            ) : (
+              <FormattedMessage id="form.button.retry" />
+            )
+          ) : (
+            <FormattedMessage id="form.button.verify" />
+          )}
+        </Button>
+        {verificationCodeSent && (
+          <Controller
+            name="verificationCode"
+            control={control}
+            render={({ field: { onChange, value } }) => (
+              <Input
+                name="verificationCode"
+                value={value}
+                onChange={onChange}
+                maxLength={6}
+                error={Boolean(errors.verificationCode?.message)}
+                helperText={
+                  errors.verificationCode?.message
+                    ? formatMessage({ id: errors.verificationCode.message })
+                    : undefined
+                }
+                onBlur={handleBlur}
+              />
+            )}
+          />
+        )}
+      </div>
+
+      <div className="flex items-center space-x-2 text-sm">
         <Controller
           name="address"
           control={control}
@@ -273,7 +376,7 @@ export const EmailForm: FC<IEmailFormProps> = ({
         type="submit"
         disabled={disabled}
       >
-        Get early access and a gift
+        <FormattedMessage id="form.button.saft" />
       </Button>
       {/* Button glow effect */}
       <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-yellow-400/30 via-pink-400/30 to-yellow-400/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-md -z-10"></div>

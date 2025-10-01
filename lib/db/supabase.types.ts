@@ -14,6 +14,27 @@ export type Database = {
   }
   public: {
     Tables: {
+      email_verification: {
+        Row: {
+          code: string
+          created_at: string
+          email: string
+          id: string
+        }
+        Insert: {
+          code?: string
+          created_at?: string
+          email: string
+          id?: string
+        }
+        Update: {
+          code?: string
+          created_at?: string
+          email?: string
+          id?: string
+        }
+        Relationships: []
+      }
       invoices: {
         Row: {
           amount: number

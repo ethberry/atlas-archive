@@ -7,6 +7,9 @@
     },
     "header": {
       "logo": "Fractown"
+    },
+    "messages": {
+      "verificationCode": "Verification code sent!"
     }
   },
   "form": {
@@ -37,6 +40,10 @@
       },
       "nonUsPerson": {
         "required": "You are not an US person"
+      },
+      "verificationCode": {
+        "pattern": "Code must be exactly 6 digits",
+        "required": "Verification code is required"
       }
     },
     "label": {
@@ -46,13 +53,21 @@
       "firstName": "First name",
       "lastName": "Last name",
       "nonUsPerson": "I'm not a US person",
-      "package": "Package"
+      "package": "Package",
+      "verificationCode": "Verification code"
     },
     "placeholder": {
       "address": "123 very long street, Paris, France, 0000",
       "email": "me@gmail.com",
       "firstName": "Gordon",
-      "lastName": "Freeman"
+      "lastName": "Freeman",
+      "verificationCode": "000000"
+    },
+    "button": {
+      "saft": "Submit",
+      "verify": "Get verification code",
+      "retry": "Retry",
+      "retryIn": "Retry in {seconds}"
     }
   },
   "pages": {

@@ -25,6 +25,7 @@ export const Saft: FC = () => {
       consent: false,
       nonUsPerson: false,
       package: 10,
+      verificationCode: "",
     },
   });
 
@@ -53,13 +54,14 @@ export const Saft: FC = () => {
         consent: false,
         nonUsPerson: false,
         package: 10,
+        verificationCode: "",
       });
 
       window.location.href = `https://pay.paykilla.com/pay?widgetKey=${json.idempotencyKey}`;
     },
     onError: (error) => {
       console.error(error);
-      enqueueSnackbar(`Something went wrong!`, {
+      enqueueSnackbar(error as unknown as string, {
         variant: "error",
       });
     },
@@ -75,6 +77,7 @@ export const Saft: FC = () => {
         consent: formData.consent,
         nonUsPerson: formData.nonUsPerson,
         package: formData.package,
+        verificationCode: formData.verificationCode,
       });
     },
     [sendUserDataSubscription],

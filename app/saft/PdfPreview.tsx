@@ -16,10 +16,8 @@ interface IPdfPreviewProps {
   onScrollToEnd?: () => void;
 }
 
-export const PdfPreview: FC<IPdfPreviewProps> = ({
-  formData,
-  onScrollToEnd,
-}) => {
+export const PdfPreview: FC<IPdfPreviewProps> = (props) => {
+  const { formData, onScrollToEnd } = props;
   const [pdfUrl, setPdfUrl] = useState<string>("");
 
   useEffect(() => {

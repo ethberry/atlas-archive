@@ -1,8 +1,9 @@
 import { NextResponse } from "next/server";
 import { captureException } from "@sentry/nextjs";
 
+import { getUsersForFallowUp } from "@/lib/db/models/users";
+
 import { sendTemplate } from "../utils";
-import { getUsersForFallowUp } from "../../../../lib/db/models/users";
 
 export async function GET() {
   const users = await getUsersForFallowUp();

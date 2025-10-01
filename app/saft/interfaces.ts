@@ -1,8 +1,12 @@
-export interface IUserData {
+export interface IUserEmail {
+  email: string;
+}
+
+export interface IUserData extends IUserEmail {
   firstName: string;
   lastName: string;
-  email: string;
   address: string;
+  verificationCode: string;
   consent: boolean;
   nonUsPerson: boolean;
   package: number;

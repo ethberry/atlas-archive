@@ -61,11 +61,12 @@ export async function POST(req: Request) {
           consent: invoice.user.consent,
           nonUsPerson: invoice.user.non_us_person,
           package: invoice.amount,
+          verificationCode: "",
         });
 
         await sendTemplate({
           to: [invoice.user.email],
-          template: 7318139,
+          template: 7358969,
           data: {},
           attachments: [
             {
