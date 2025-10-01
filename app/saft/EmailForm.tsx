@@ -230,7 +230,7 @@ export const EmailForm: FC<IEmailFormProps> = ({
               name="email"
               value={value}
               onChange={onChange}
-              maxLength={40}
+              maxLength={255}
               error={Boolean(errors.email?.message)}
               helperText={
                 errors.email?.message
@@ -249,7 +249,7 @@ export const EmailForm: FC<IEmailFormProps> = ({
               name="address"
               value={value}
               onChange={onChange}
-              maxLength={40}
+              maxLength={255}
               error={Boolean(errors.address?.message)}
               helperText={
                 errors.address?.message

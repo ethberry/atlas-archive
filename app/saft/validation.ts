@@ -27,7 +27,7 @@ export const validationSchema = z.object({
     .trim()
     .min(1, "form.error.address.required")
     .min(5, "form.error.address.tooShort")
-    .max(40, "form.error.address.tooLong"),
+    .max(254, "form.error.address.tooLong"),
   consent: z.boolean().refine((val) => val === true, {
     message: "form.error.consent.required",
   }),
