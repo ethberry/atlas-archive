@@ -15,6 +15,7 @@ export const createUser = async (user: IUserData) => {
       address: user.address,
       consent: user.consent,
       non_us_person: user.nonUsPerson,
+      language: user.language,
     })
     .select()
     .single();

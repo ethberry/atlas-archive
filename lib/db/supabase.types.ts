@@ -78,6 +78,7 @@ export type Database = {
           email: string
           first_name: string
           id: string
+          language: Database["public"]["Enums"]["UserLanguage"]
           last_name: string
           non_us_person: boolean
           stage: Database["public"]["Enums"]["UserStage"]
@@ -90,6 +91,7 @@ export type Database = {
           email: string
           first_name: string
           id?: string
+          language?: Database["public"]["Enums"]["UserLanguage"]
           last_name: string
           non_us_person?: boolean
           stage?: Database["public"]["Enums"]["UserStage"]
@@ -102,6 +104,7 @@ export type Database = {
           email?: string
           first_name?: string
           id?: string
+          language?: Database["public"]["Enums"]["UserLanguage"]
           last_name?: string
           non_us_person?: boolean
           stage?: Database["public"]["Enums"]["UserStage"]
@@ -118,6 +121,7 @@ export type Database = {
     }
     Enums: {
       InvoiceStatus: "NEW" | "CREATED" | "EXPIRED" | "PAID"
+      UserLanguage: "EN" | "RU"
       UserStage: "NEW" | "PAID" | "FOLLOWUP" | "UPSALE"
     }
     CompositeTypes: {
@@ -247,6 +251,7 @@ export const Constants = {
   public: {
     Enums: {
       InvoiceStatus: ["NEW", "CREATED", "EXPIRED", "PAID"],
+      UserLanguage: ["EN", "RU"],
       UserStage: ["NEW", "PAID", "FOLLOWUP", "UPSALE"],
     },
   },

@@ -1,11 +1,16 @@
 import { NextResponse } from "next/server";
 import { captureException } from "@sentry/nextjs";
 
-import { createSignature } from "@/app/api/paykilla/utils";
+import {
+  createSignature,
+  EmailType,
+  templateMapping,
+} from "@/app/api/paykilla/utils";
 import { PaykillaEventTypes } from "@/app/api/paykilla/interfaces";
 import { generatePdf } from "@/lib/actions/pdf";
 import { sendTemplate } from "@/app/api/email/utils";
 import { getInvoiceById, updateInvoiceStatus } from "@/lib/db/models/invoices";
+import { EnabledLanguages } from "@/lib/i18n";
 
 export async function POST(req: Request) {
   const text = await req.text();
@@ -60,13 +65,15 @@ export async function POST(req: Request) {
           address: invoice.user.address,
           consent: invoice.user.consent,
           nonUsPerson: invoice.user.non_us_person,
+          language: invoice.user.language as EnabledLanguages,
           package: invoice.amount,
           verificationCode: "",
         });
 
         await sendTemplate({
           to: [invoice.user.email],
-          template: 7358969,
+          template:
+            templateMapping[invoice.user.language][EmailType.SAFT_CONTRACT],
           data: {},
           attachments: [
             {

@@ -1,18 +1,19 @@
 import { NextResponse } from "next/server";
 import { ZodError } from "zod";
 
-import { emailSchema } from "@/app/saft/validation";
+import { verificationSchema } from "@/app/saft/validation";
 import {
   createVerificationCode,
   getVerificationCodeByEmail,
 } from "@/lib/db/models/verification";
 import { sendTemplate } from "@/app/api/email/utils";
+import { EmailType, templateMapping } from "@/app/api/paykilla/utils";
 
 export async function POST(req: Request) {
   const json = await req.json();
 
   try {
-    const body = emailSchema.parse(json);
+    const body = verificationSchema.parse(json);
 
     let verification = await getVerificationCodeByEmail(body.email);
 
@@ -28,7 +29,7 @@ export async function POST(req: Request) {
     await sendTemplate({
       data: verification,
       to: [verification.email],
-      template: 7358617,
+      template: templateMapping[body.language][EmailType.SAFT_CONTRACT],
     });
 
     return NextResponse.json({ status: "OK" });

@@ -1,8 +1,11 @@
-export interface IUserEmail {
+import type { EnabledLanguages } from "@/lib/i18n";
+
+export interface IVerificationData {
   email: string;
+  language: EnabledLanguages;
 }
 
-export interface IUserData extends IUserEmail {
+export interface IUserData extends IVerificationData {
   firstName: string;
   lastName: string;
   address: string;

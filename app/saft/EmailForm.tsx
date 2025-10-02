@@ -5,7 +5,7 @@ import { enqueueSnackbar } from "notistack";
 import { useMutation } from "@tanstack/react-query";
 
 import { PdfPreview } from "@/app/saft/PdfPreview";
-import type { IUserData, IUserEmail } from "@/app/saft/interfaces";
+import type { IUserData } from "@/app/saft/interfaces";
 import { Input } from "@/components/Form/Input";
 import {
   DropdownMenu,
@@ -16,7 +16,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
 import { CODE_TIMEOUT, SAFT_PACKAGES } from "@/app/saft/constants";
-import { emailSchema } from "@/app/saft/validation";
+import { verificationSchema } from "@/app/saft/validation";
 
 interface IEmailFormProps {
   useFormInstance: UseFormReturn<IUserData>;
@@ -45,11 +45,12 @@ export const EmailForm: FC<IEmailFormProps> = (props) => {
   const disabled = isSubmitting || !hasScrolledToEnd;
 
   const { mutate: sendVerificationCode } = useMutation({
-    mutationFn: async (data: IUserEmail) => {
+    mutationFn: async (data: IUserData) => {
+      const { email, language } = data;
       const res = await fetch("/api/verification", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
+        body: JSON.stringify({ email, language }),
       });
 
       const json = await res.json();
@@ -249,7 +250,7 @@ export const EmailForm: FC<IEmailFormProps> = (props) => {
               helperText={
                 errors.firstName?.message
                   ? formatMessage({ id: errors.firstName.message })
-                  : undefined
+                  : void 0
               }
               onBlur={handleBlur}
             />
@@ -271,7 +272,7 @@ export const EmailForm: FC<IEmailFormProps> = (props) => {
               helperText={
                 errors.lastName?.message
                   ? formatMessage({ id: errors.lastName.message })
-                  : undefined
+                  : void 0
               }
               onBlur={handleBlur}
             />
@@ -293,7 +294,7 @@ export const EmailForm: FC<IEmailFormProps> = (props) => {
               helperText={
                 errors.email?.message
                   ? formatMessage({ id: errors.email.message })
-                  : undefined
+                  : void 0
               }
               onBlur={handleBlur}
             />
@@ -304,7 +305,7 @@ export const EmailForm: FC<IEmailFormProps> = (props) => {
           type="button"
           onClick={handleSendVerificationCode}
           disabled={
-            !emailSchema.shape.email.safeParse(formDateRT.email).success
+            !verificationSchema.shape.email.safeParse(formDateRT.email).success
           }
         >
           {verificationCodeSent ? (
@@ -334,7 +335,7 @@ export const EmailForm: FC<IEmailFormProps> = (props) => {
                 helperText={
                   errors.verificationCode?.message
                     ? formatMessage({ id: errors.verificationCode.message })
-                    : undefined
+                    : void 0
                 }
                 onBlur={handleBlur}
               />
@@ -357,7 +358,7 @@ export const EmailForm: FC<IEmailFormProps> = (props) => {
               helperText={
                 errors.address?.message
                   ? formatMessage({ id: errors.address.message })
-                  : undefined
+                  : void 0
               }
               onBlur={handleBlur}
             />

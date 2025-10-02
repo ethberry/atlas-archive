@@ -9,10 +9,13 @@ import { FormattedMessage } from "react-intl";
 
 import type { IUserData } from "@/app/saft/interfaces";
 import { EmailForm } from "@/app/saft/EmailForm";
+import { useAppStore } from "@/components/providers/AppStoreProvider";
 
 import { validationSchema } from "./validation";
 
 export const Saft: FC = () => {
+  const { language } = useAppStore((state) => state);
+
   const useFormReturn = useForm<IUserData>({
     resolver: zodResolver(validationSchema),
     mode: "onSubmit",
@@ -26,6 +29,7 @@ export const Saft: FC = () => {
       nonUsPerson: false,
       package: 10,
       verificationCode: "",
+      language,
     },
   });
 
@@ -55,6 +59,7 @@ export const Saft: FC = () => {
         nonUsPerson: false,
         package: 10,
         verificationCode: "",
+        language,
       });
 
       window.location.href = `https://pay.paykilla.com/pay?widgetKey=${json.idempotencyKey}`;
@@ -69,16 +74,7 @@ export const Saft: FC = () => {
 
   const submitEmailFormHandler = useCallback(
     (formData: IUserData) => {
-      sendUserDataSubscription({
-        firstName: formData.firstName,
-        lastName: formData.lastName,
-        email: formData.email,
-        address: formData.address,
-        consent: formData.consent,
-        nonUsPerson: formData.nonUsPerson,
-        package: formData.package,
-        verificationCode: formData.verificationCode,
-      });
+      sendUserDataSubscription(formData);
     },
     [sendUserDataSubscription],
   );
