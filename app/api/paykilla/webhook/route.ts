@@ -1,5 +1,4 @@
 import { NextResponse } from "next/server";
-import { captureException } from "@sentry/nextjs";
 
 import {
   createSignature,
@@ -37,26 +36,29 @@ export async function POST(req: Request) {
   const json = JSON.parse(text);
 
   try {
+    const { externalId } = json.data;
+    const invoice = await getInvoiceById(externalId);
+
+    if (!invoice) {
+      return NextResponse.json(
+        { status: "Internal server error" },
+        { status: 500 },
+      );
+    }
+
     switch (json.eventType) {
       case PaykillaEventTypes.INVOICE_CREATE_INVOICE: {
-        const { idempotencyKey } = json.data;
-
-        await updateInvoiceStatus(idempotencyKey, "CREATED");
+        await updateInvoiceStatus(externalId, "CREATED");
 
         break;
       }
       case PaykillaEventTypes.INVOICE_EXPIRED: {
-        const { idempotencyKey } = json.data;
-
-        await updateInvoiceStatus(idempotencyKey, "EXPIRED");
+        await updateInvoiceStatus(externalId, "EXPIRED");
 
         break;
       }
       case PaykillaEventTypes.INVOICE_PAID: {
-        const { idempotencyKey } = json.data;
-        await updateInvoiceStatus(idempotencyKey, "PAID");
-
-        const invoice = await getInvoiceById(idempotencyKey);
+        await updateInvoiceStatus(externalId, "PAID");
 
         const pdfDoc = await generatePdf({
           firstName: invoice.user.first_name,
@@ -87,14 +89,15 @@ export async function POST(req: Request) {
         break;
       }
       default:
-        return NextResponse.json(
-          { error: "Internal server error" },
-          { status: 400 },
-        );
+        // we do not care about other events
+        break;
     }
   } catch (error) {
-    console.error(error);
-    captureException(error);
+    void error; // error is already processed
+    return NextResponse.json(
+      { status: "Internal server error" },
+      { status: 500 },
+    );
   }
 
   return NextResponse.json({ status: "OK" });

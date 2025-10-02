@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { ZodError } from "zod";
 import { captureException } from "@sentry/nextjs";
+import { v4 } from "uuid";
 
 import { createInvoice } from "@/lib/db/models/invoices";
 import { createUser, getUserByEmail } from "@/lib/db/models/users";
@@ -44,23 +45,18 @@ export async function POST(req: Request) {
         fiatAmount: body.package,
         fiatCurrency: "USD",
         cryptoCurrencies: [
-          "BNB",
-          "BTC",
-          "DAI",
-          "ETH",
-          "FRAX",
-          "MATIC",
-          "TRX",
           "USDC",
           "USDT",
-          "USDT_MATIC",
           "USDT_TRX",
-          "USDC_TRX",
-          "XDG",
           "USDT_BSC",
+          "BNB",
+          "TRX",
+          "DAI",
+          "ETH",
+          "BTC",
         ],
-        idempotencyKey: invoice.id,
-        externalId: user.id,
+        idempotencyKey: v4(),
+        externalId: invoice.id,
       },
       return_url: `${baseUrl}/thank-you`,
     };

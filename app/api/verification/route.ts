@@ -29,7 +29,7 @@ export async function POST(req: Request) {
     await sendTemplate({
       data: verification,
       to: [verification.email],
-      template: templateMapping[body.language][EmailType.SAFT_CONTRACT],
+      template: templateMapping[body.language][EmailType.EMAIL_VERIFICATION],
     });
 
     return NextResponse.json({ status: "OK" });

@@ -16,6 +16,7 @@ export const createInvoice = async (user_id: string, amount: number) => {
     .single();
 
   if (error) {
+    console.error(error);
     captureException(error);
     throw error;
   }
@@ -28,9 +29,10 @@ export const getInvoiceById = async (id: string) => {
     .from("invoices")
     .select("*, user:users(*)")
     .eq("id", id)
-    .single();
+    .maybeSingle();
 
   if (error) {
+    console.error(error);
     captureException(error);
     throw error;
   }
@@ -49,7 +51,7 @@ export const updateInvoiceStatus = async (
     })
     .eq("id", id)
     .select()
-    .single();
+    .maybeSingle();
 
   if (error) {
     captureException(error);

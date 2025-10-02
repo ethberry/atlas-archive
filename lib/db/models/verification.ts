@@ -13,6 +13,7 @@ export const createVerificationCode = async (email: string) => {
     .single();
 
   if (error) {
+    console.error(error);
     captureException(error);
     throw error;
   }
@@ -31,6 +32,7 @@ export const getVerificationCodeByEmail = async (email: string) => {
     .maybeSingle();
 
   if (error) {
+    console.error(error);
     captureException(error);
     throw error;
   }

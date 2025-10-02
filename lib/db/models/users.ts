@@ -21,6 +21,7 @@ export const createUser = async (user: IUserData) => {
     .single();
 
   if (error) {
+    console.error(error);
     captureException(error);
     throw error;
   }
@@ -36,6 +37,7 @@ export const getUserByEmail = async (email: string) => {
     .maybeSingle();
 
   if (error) {
+    console.error(error);
     captureException(error);
     throw error;
   }
@@ -50,6 +52,7 @@ export const getUsersForFallowUp = async () => {
     .eq("stage", "PAID");
 
   if (error) {
+    console.error(error);
     captureException(error);
     throw error;
   }
