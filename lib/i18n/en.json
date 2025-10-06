@@ -1,12 +1,16 @@
 {
   "components": {
     "footer": {
+      "home": "Home",
+      "saft": "SAFT",
       "privacyPolicy": "Privacy Policy",
       "refundPolicy": "Refund Policy",
       "termsOfUse": "Terms & Conditions"
     },
     "header": {
-      "logo": "Fractown"
+      "logo": "Fractown",
+      "language": "Language",
+      "discord": "Discord"
     },
     "messages": {
       "verificationCode": "Verification code sent!"
@@ -49,33 +53,129 @@
     "label": {
       "address": "Address",
       "consent": "I agree to the terms and conditions",
-      "email": "Email",
-      "firstName": "First name",
-      "lastName": "Last name",
+      "email": "Email for contract",
+      "firstName": "First name on contract",
+      "lastName": "Last name on contract",
       "nonUsPerson": "I'm not a US person",
-      "package": "Package",
-      "verificationCode": "Verification code"
+      "package": "Select number of fractions",
+      "verificationCode": "Enter verification code from email"
     },
     "placeholder": {
-      "address": "123 very long street, Paris, France, 0000",
-      "email": "me@gmail.com",
-      "firstName": "Gordon",
-      "lastName": "Freeman",
+      "address": "90210, USA, San Francisco, Builder Street, 223A",
+      "email": "@Andrey",
+      "firstName": "First Name",
+      "lastName": "Last Name",
       "verificationCode": "000000"
     },
     "button": {
       "saft": "Submit",
-      "verify": "Get verification code",
-      "retry": "Retry",
-      "retryIn": "Retry in {seconds}"
+      "verify": "Send Code",
+      "retry": "Resend",
+      "retryIn": "Retry in {seconds}",
+      "learnMore": "Learn More"
+    },
+    "pdf": {
+      "preparing": "Preparing document...",
+      "loading": "Loading document...",
+      "loadingPage": "Loading page...",
+      "error": "Error loading document",
+      "scrollToEnd": "Scroll to the end",
+      "pleaseWait": "Please wait",
+      "pageIndicator": "{current} / {total}"
     }
   },
   "pages": {
+    "privacyPolicy": {
+      "title": "Privacy Policy"
+    },
+    "refundPolicy": {
+      "title": "Refund Policy"
+    },
+    "termsAndConditions": {
+      "title": "Terms of Sale — SAFT Offering",
+      "intro": "Congratulations! You have become the owner of a share of ownership rights to a unique Fabergé egg and have joined the community of select collectors.",
+      "contract": "We will soon send a SAFT contract confirming your acquisition to your specified email.{br}Increase your package right now and get additional privileges for the first owners of a unique asset!",
+      "congratulations": "Congratulations!{br}You now own a share of a unique Fabergé egg. Welcome to the circle of first collectors. Your SAFT contract will be sent to your email shortly.{br}Add more shares today - and enjoy exclusive early-holder benefits!",
+      "generalTitle": "General Conditions",
+      "generalText": "Browse and purchase our IT services conveniently online. Get all the information you need on our website, and our customer support is available to assist you. We strive to provide a user-friendly website and competitive pricing.",
+      "termsTitle": "Terms and Conditions",
+      "termsText": "These terms and conditions apply to all our services, whether accessed through our website, mobile device, email, mail, or phone. By accessing, browsing, or using our website, and/or placing an order, you acknowledge and agree to these terms and conditions (including our Privacy Policy). Our website, content, infrastructure, and goods sold online by CoArt UAB (including payment services) are owned and managed by CoArt UAB, a company operating under the laws of the Republic of Lithuania. CoArt UAB is responsible for the quality and provision of our services.",
+      "paymentsTitle": "Payments",
+      "paymentsText": "We offer secure online payment options processed through third-party intermediaries. Payments can be made using credit/debit cards or bank accounts. CoArt UAB is responsible for payment processing and will issue refunds for any unauthorized withdrawals.",
+      "definitionsTitle": "Definitions",
+      "definitionsText": "\"CoArt UAB,\" \"us,\" \"we,\" or \"our\" refers to CoArt UAB, a company operating under the laws of the Republic of Lithuania. \"IT services\" refers to the information technology services we offer, including online store creation and social network administration. Details about our IT services and contact information can be found on our website. \"Order\" refers to any online purchase, payment, or service ordering process for the products and services offered by CoArt UAB on our website.",
+      "scopeTitle": "Scope and Nature of Our Services",
+      "scopeText": "CoArt UAB sells and/or offers products and services through our website. Visitors can search, compare, choose, purchase, reserve, order, and pay for our offerings. By placing an order, you enter into a direct and legally binding contract with CoArt UAB. We are responsible for fulfilling your order and will provide an order confirmation with relevant information. We update the information on our platform, including prices and descriptions, and ensure its accuracy.",
+      "useRestrictions": "Our services are for personal and commercial use only. You may not resell, link to, use, copy, monitor, display, download, or reproduce any content, information, software, products, or services on our website for commercial or competitive purposes.",
+      "privacyTitle": "Privacy and Cookies",
+      "privacyText": "We respect your privacy. Please review our privacy and cookies policy for more information.",
+      "paymentPolicyTitle": "Payment, Cancellation, and Important Information",
+      "paymentPolicyText": "By placing an order with CoArt UAB, you agree to our cancellation and refund policies, which will be provided at the time of order. Carefully review these terms and conditions before placing your order, as there are deadlines for cancellations, returns, or changes."
+    },
     "landing": {
-      "title": "Crack the egg"
+      "title": "Crack the egg...!",
+      "hero": {
+        "mainTitle": "For the first time, a Fabergé egg {br} is offered for fractional ownership!",
+        "description1": "The first three million ownership shares are already available with a 66% discount. Grab your share while it's still available!",
+        "description2": "Fabergé collectible eggs increase in value every year and sell for tens of millions.",
+        "description3": "We were lucky to find one of these eggs in a private collection.",
+        "description4": "Ownership rights to this egg are divided into 100 million parts - fractions.",
+        "learnMore": "Learn More"
+      },
+      "features": {
+        "item1": "Opportunity to resell fractions at market price after all 100 million shares are sold at the global Christmas auction!",
+        "item2": "The egg was created by a master craftsman of the House of Fabergé at the end of the 19th century. Expertise confirms authenticity!",
+        "item3": "After transitioning to shared ownership, the artwork will be stored in a specialized freeport facility."
+      },
+      "discord": {
+        "title": "Join our Discord",
+        "subtitle": "Unlock exclusive updates and {br} opportunities!",
+        "button": "Join Discord Community",
+        "description": "Get early access to auctions, exclusive content, and connect with fellow art enthusiasts"
+      },
+      "roadmap": {
+        "title": "Roadmap",
+        "sep2025": {
+          "period": "OCTOBER 2025",
+          "description": "Fabergé Egg, as the first Blue Chip Artwork level asset, reveals the potential of our Real-World Assets Tokenization platform."
+        },
+        "octNov2025": {
+          "period": "Q4 2025",
+          "description": "Launch of the first MVP marketplace (CoArt Marketplace, Lithuania, EU) based on FracTown RWA platform."
+        },
+        "novDec2025": {
+          "period": "Q1 2026",
+          "description": "Transfer of intellectual property and technical solutions of FracTown project to a new American company (C-corporation, Delaware). Launch of the second marketplace of the future global network in the US market."
+        },
+        "q1_2026": {
+          "period": "Q2 2026",
+          "description": "Further scaling of the marketplace network connected to FracTown RWA platform via API. Start of development of our own blockchain specialized for the needs of the rapidly growing Real World Assets sphere."
+        }
+      },
+      "faq": {
+        "title": "FAQ",
+        "question1": "How will the auction be conducted?",
+        "answer1": "For the first time, an item of this caliber will be available to retail investors through our fractional ownership mechanism. The auction won't offer the entire object, but rather its FCC, divided into 200 lots, each containing different quantities of ownership shares, which we call fractions.",
+        "question2": "What is an FCC?",
+        "answer2": "This is a special type of crypto certificate - Fractional Crypto Certificate - that we created for precise identification of physical assets, enabling their almost instant resale, similar to the NFT market. FCC also provides the ability to own 'fractions' as shares of expensive assets.",
+        "question3": "What kind of expertise is required?",
+        "answer3": "There are several respected institutions and specialists in the world who can verify the authenticity of works from Karl Fabergé's workshop. We're currently in dialogue with two of them. We'll share all the details in our social media channels.",
+        "question4": "How can I manage my ownership shares?",
+        "answer4": "On our CoArt Marketplace, you'll be able to sell and resell both unique physical objects in their entirety and ownership shares of them as 'fractions' of specific FCCs.",
+        "question5": "Where will the Egg itself be stored?",
+        "answer5": "After the auction concludes, the object itself will be exhibited in one of the European museums or transferred for safekeeping to one of the specialized 'freeports'."
+      }
     },
     "saft": {
       "title": "SAFT contract"
+    },
+    "thankYou": {
+      "title": "Crack the egg...!",
+      "subtitle": "Congratulations!",
+      "paragraph1": "You have become the owner of a share of ownership rights to a unique Fabergé egg and have joined the community of select collectors.",
+      "paragraph2": "We will soon send a SAFT contract confirming your acquisition to your specified email.",
+      "paragraph3": "Increase your package right now and get additional privileges for the first owners of a unique asset!",
+      "button": "I want to buy more"
     }
   }
 }

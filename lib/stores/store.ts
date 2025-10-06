@@ -12,6 +12,8 @@ export interface IAppActions {
 
 export type TAppStore = IAppState & IAppActions;
 
+export const LANGUAGE_STORAGE_KEY = "fractown-language";
+
 export const initAppStore = (): IAppState => {
   return { language: EnabledLanguages.EN };
 };
@@ -23,6 +25,12 @@ export const defaultInitState: IAppState = {
 export const createAppStore = (initState: IAppState = defaultInitState) => {
   return createStore<TAppStore>()((set) => ({
     ...initState,
-    setLanguage: (language: EnabledLanguages) => set(() => ({ language })),
+    setLanguage: (language: EnabledLanguages) => {
+      // Save to localStorage
+      if (typeof window !== "undefined") {
+        localStorage.setItem(LANGUAGE_STORAGE_KEY, language);
+      }
+      set(() => ({ language }));
+    },
   }));
 };

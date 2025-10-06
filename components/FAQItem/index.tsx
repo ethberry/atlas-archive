@@ -1,38 +1,52 @@
-import { useState } from "react";
+"use client";
 
-const FAQItem = ({
-  question,
-  answer,
-}: {
+import { useState, useCallback, memo } from "react";
+
+interface IFAQItemProps {
   question: string;
   answer: string;
-}) => {
+}
+
+const FAQItem = memo<IFAQItemProps>(({ question, answer }) => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const toggleOpen = useCallback(() => {
+    setIsOpen((prev) => !prev);
+  }, []);
+
   return (
-    <div className="bg-gray-800/50 rounded-lg p-4 shadow-md hover:bg-gray-700/50 transition-colors duration-300 w-full max-w-xl mx-auto">
+    <div className="relative w-full">
       <button
-        onClick={() => setIsOpen(!isOpen)}
-        className="w-full flex justify-between items-center text-left focus:outline-none"
+        onClick={toggleOpen}
+        className={`w-full flex justify-between items-center text-left px-[14px] py-[16px] rounded-[12px] transition-all duration-300 ${
+          isOpen
+            ? "bg-[#1B1B41] border-2 border-[#262957]"
+            : "bg-[#1B1B41] border-2 border-transparent hover:border-[#262957]"
+        }`}
       >
-        <h3 className="text-lg md:text-xl text-yellow-300 font-semibold">
+        <h3
+          className="text-lg md:text-xl text-white font-normal flex-1 pr-4"
+          style={{ fontFamily: "var(--font-family-sans)" }}
+        >
           {question}
         </h3>
-        <span
-          className={`ml-4 text-yellow-300 text-2xl transform transition-transform duration-300 ${
-            isOpen ? "rotate-45" : ""
-          }`}
-        >
-          +
+        <span className="text-white text-2xl font-light flex-shrink-0">
+          {isOpen ? "−" : "+"}
         </span>
       </button>
+
       {isOpen && (
-        <div className="overflow-hidden text-gray-200 text-base leading-relaxed">
+        <div
+          className="px-4 py-2 text-gray-300 text-base leading-relaxed bg-[#21254A] rounded-b-[12px] -mt-3 pt-4 border-2 border-t-0 border-[#262957]"
+          style={{ fontFamily: "var(--font-family-sans)" }}
+        >
           {answer}
         </div>
       )}
     </div>
   );
-};
+});
+
+FAQItem.displayName = "FAQItem";
 
 export default FAQItem;

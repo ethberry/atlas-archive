@@ -9,25 +9,38 @@ interface IInputProps extends InputHTMLAttributes<HTMLInputElement> {
 }
 
 export const Input: FC<IInputProps> = (props) => {
-  const { error, helperText, name, ...rest } = props;
+  const { error, helperText, name, disabled, ...rest } = props;
   const { formatMessage } = useIntl();
   return (
-    <div className={"text-center w-full"}>
-      <label className="flex flex-col text-white text-sm">
+    <div className="text-left w-full">
+      <label
+        className="flex flex-col text-white text-sm mb-2"
+        style={{ fontFamily: "var(--font-family-sans)" }}
+      >
         {formatMessage({ id: `form.label.${name}` })}
         <input
           name={name}
+          disabled={disabled}
           className={clsx(
-            "w-full rounded-2xl border-2 border-yellow-400 bg-transparent text-white placeholder:text-gray-400 text-[16px] mobile:text-[18px] py-[14px] px-5 outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 transition duration-300 shadow-[0_0_12px_rgba(255,255,100,0.3)]",
-            { "border-red-500 focus:ring-red-500 focus:border-red-500": error },
-            "w-full bg-white/10 backdrop-blur-sm border-2 border-yellow-400/50 focus:border-yellow-400 transition-all duration-300 placeholder-gray-300",
+            "w-full rounded-[12px] text-base border-2 py-3 px-5 outline-none transition-all duration-300 mt-1 border-transparent focus:border-white",
+            disabled
+              ? "bg-[#3D4471] border-transparent text-[#414569] placeholder:text-[#777AA6] cursor-not-allowed"
+              : error
+                ? "bg-[#212551] text-white placeholder:text-[#777AA6] focus:border-[#E74C3C]"
+                : "bg-[#212551] text-white placeholder:text-[#777AA6] focus:border-white",
           )}
           placeholder={formatMessage({ id: `form.placeholder.${name}` })}
+          style={{ fontFamily: "var(--font-family-sans)" }}
           {...rest}
         />
       </label>
-      {error && (
-        <p className="flex text-sm text-red-500 mt-[8px]">{helperText}</p>
+      {error && helperText && (
+        <p
+          className="text-sm text-[#DF1C1C] mt-1 pl-5"
+          style={{ fontFamily: "var(--font-family-sans)" }}
+        >
+          {helperText}
+        </p>
       )}
     </div>
   );

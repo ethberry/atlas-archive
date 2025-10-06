@@ -80,15 +80,20 @@ export const Saft: FC = () => {
   );
 
   return (
-    <main>
-      <h2>
-        <FormattedMessage id="pages.saft.title" />
-      </h2>
+    <main className="min-h-screen py-12 px-4 md:px-8">
+      <div className="max-w-4xl mx-auto">
+        <h1
+          className="text-4xl md:text-5xl text-white text-center mb-12 font-normal"
+          style={{ fontFamily: "var(--font-family-serif)" }}
+        >
+          <FormattedMessage id="pages.saft.title" />
+        </h1>
 
-      <EmailForm
-        useFormInstance={useFormReturn}
-        submitEmailForm={submitEmailFormHandler}
-      />
+        <EmailForm
+          useFormInstance={useFormReturn}
+          submitEmailForm={submitEmailFormHandler}
+        />
+      </div>
     </main>
   );
 };
