@@ -1,98 +1,212 @@
 "use client";
 
 import { FC } from "react";
-import { FormattedMessage } from "react-intl";
 
 export const TermsAndConditions: FC = () => {
   return (
     <main className="flex-row justify-center text-center max-w-[800px] mx-[30px] mobile:mx-auto space-y-8">
       <h1 className="text-white text-[24px] tablet:text-[32px] mobile:text-[26px] text-center ">
-        <FormattedMessage id="TERMS_OF_USE" />
+        Terms of Sale — SAFT Offering
       </h1>
       <div className="font-[900] text-justify text-[16px] tablet:text-[18px] text-white space-y-5">
+        <h3>1. Overview</h3>
         <p>
-          General Conditions
-          <br /> Browse and purchase our IT services conveniently online. Get
-          all the information you need on our website, and our customer support
-          is available to assist you. We strive to provide a user-friendly
-          website and competitive pricing.
-          <br />
-          <br />
+          By purchasing a SAFT (Simple Agreement for Future Tokens) on this
+          platform, you acknowledge and agree that:
         </p>
-        <span>
-          Terms and Conditions
-          <br /> These terms and conditions apply to all our services, whether
-          accessed through our website, mobile device, email, mail, or phone. By
-          accessing, browsing, or using our website, and/or placing an order,
-          you acknowledge and agree to these terms and conditions (including our
-          Privacy Policy). Our website, content, infrastructure, and goods sold
-          online by CoArt UAB (including payment services) are owned and managed
-          by CoArt UAB, a company operating under the laws of the Republic of
-          Lithuania. CoArt UAB is responsible for the quality and provision of
-          our services.
-          <br />
-          <br />
-        </span>
-        <span>
-          Payments
-          <br /> We offer secure online payment options processed through
-          third-party intermediaries. Payments can be made using credit/debit
-          cards or bank accounts. CoArt UAB is responsible for payment
-          processing and will issue refunds for any unauthorized withdrawals.
-          <br />
-          <br />
-        </span>
-        <span>
-          Definitions
-          <br /> &#34;CoArt UAB,&#34; &#34;us,&#34; &#34;we,&#34; or
-          &#34;our&#34; refers to CoArt UAB, a company operating under the laws
-          of the Republic of Lithuania. &#34;IT services&#34; refers to the
-          information technology services we offer, including online store
-          creation and social network administration. Details about our IT
-          services and contact information can be found on our website.
-          &#34;Order&#34; refers to any online purchase, payment, or service
-          ordering process for the products and services offered by CoArt UAB on
-          our website.
-          <br />
-          <br />
-        </span>
-        <span>
-          Scope and Nature of Our Services
-          <br /> CoArt UAB sells and/or offers products and services through our
-          website. Visitors can search, compare, choose, purchase, reserve,
-          order, and pay for our offerings. By placing an order, you enter into
-          a direct and legally binding contract with CoArt UAB. We are
-          responsible for fulfilling your order and will provide an order
-          confirmation with relevant information. We update the information on
-          our platform, including prices and descriptions, and ensure its
-          accuracy.
-          <br />
-          <br />
-        </span>
-        <span>
-          Our services are for personal and commercial use only. You may not
-          resell, link to, use, copy, monitor, display, download, or reproduce
-          any content, information, software, products, or services on our
-          website for commercial or competitive purposes.
-          <br />
-          <br />
-        </span>
-        <span>
-          Privacy and Cookies
-          <br /> We respect your privacy. Please review our privacy and cookies
-          policy for more information.
-          <br />
-          <br />
-        </span>
-        <span>
-          Payment, Cancellation, Late Pickup, and Important Information By
-          placing an order with CoArt UAB, you agree to our cancellation and
-          refund policies, which will be provided at the time of order.
-          Carefully review these terms and conditions before placing your order,
-          as there are deadlines for cancellations, returns, or changes.
-          <br />
-          <br />
-        </span>
+        <ul>
+          <li>
+            {" "}
+            The SAFT represents a contractual{" "}
+            <strong>right to receive tokens in the future</strong>, not
+            immediate ownership of any physical asset.
+          </li>
+          <li>
+            The tokens, once issued, will represent a{" "}
+            <strong>
+              fractional interest in a digital claim to an underlying asset
+            </strong>
+            (the Fabergé egg) held by a partner entity.
+          </li>
+          <li>
+            The SAFT and future tokens do{" "}
+            <strong>not constitute direct ownership</strong> of the Fabergé egg.
+          </li>
+        </ul>
+
+        <h3>2. Eligibility and Restricted Jurisdictions</h3>
+        <p>
+          Participation in this SAFT offering is{" "}
+          <strong>
+            strictly limited to individuals who are legally permitted to
+            purchase in their jurisdiction
+          </strong>
+          .
+        </p>
+        <p>
+          By purchasing, you confirm that you are{" "}
+          <strong>
+            not a resident, citizen, or otherwise subject to the laws of any of
+            the following restricted jurisdictions
+          </strong>
+          :
+        </p>
+        <p>
+          <strong>
+            Restricted Jurisdictions include, but are not limited to:
+          </strong>
+        </p>
+        <ul>
+          <li>
+            <strong>United States of America</strong>
+            (all states and territories)
+          </li>
+          <li>
+            <strong>China</strong> (including Hong Kong SAR and Macau SAR if
+            local regulations prohibit)
+          </li>
+          <li>
+            <strong>North Korea</strong>
+          </li>
+          <li>
+            <strong>Iran</strong>
+          </li>
+          <li>
+            <strong>Singapore</strong> (unless pre-approved
+            professional/institutional investors)
+          </li>
+          <li>
+            <strong>Japan</strong> (unless local regulatory approval is
+            obtained)
+          </li>
+          <li>
+            <strong>
+              Other countries where offering or marketing SAFTs or tokens is
+              prohibited under applicable law
+            </strong>
+          </li>
+        </ul>
+
+        <p>
+          The list of restricted jurisdictions may be updated at any time. It is
+          your responsibility to ensure you are eligible before purchasing.
+        </p>
+        <ul>
+          <li>
+            Purchasers must{" "}
+            <strong>comply with all local laws and restrictions</strong>.
+          </li>
+          <li>
+            The platform may use{" "}
+            <strong>
+              IP geolocation, billing address, language detection, or other
+              verification methods
+            </strong>{" "}
+            to block restricted jurisdictions.
+          </li>
+          <li>
+            If you are located in a restricted jurisdiction, you{" "}
+            <strong>
+              may not access this page or participate in the SAFT sale.
+            </strong>
+          </li>
+        </ul>
+
+        <h3>3. No Guarantee of Token Delivery or Value</h3>
+        <ul>
+          <li>
+            Token issuance is subject to legal, regulatory, and operational
+            conditions.
+          </li>
+          <ul>
+            <li>The SAFT does not guarantee:</li>
+            <li>Delivery of tokens by a specific date.</li>
+          </ul>
+          <li>Any specific value of the tokens once issued.</li>
+          <li>
+            Tokens may be illiquid, and there is no assurance of resale or
+            market price.
+          </li>
+        </ul>
+
+        <h3>4. Risk Disclosures</h3>
+        <p>By participating, you acknowledge and accept the following risks:</p>
+        <ul>
+          <li>
+            <strong>Regulatory Risk</strong> – Tokens may be classified as
+            securities or other regulated instruments in some jurisdictions.
+          </li>
+          <li>
+            <strong>Contractual Risk</strong> – Tokens are backed by a
+            partnership agreement; failure of the partner to perform may result
+            in loss of value.
+          </li>
+          <li>
+            <strong>Asset Risk</strong> – The underlying Fabergé egg may be
+            damaged, lost, or otherwise unavailable.
+          </li>
+          <li>
+            <strong>Liquidity Risk</strong> – There is no guarantee that a
+            market will exist for the tokens.
+          </li>
+          <li>
+            <strong>Tax Risk</strong> – Purchasers are responsible for all tax
+            reporting and obligations in their jurisdiction.
+          </li>
+          <li>
+            <strong>Operational Risk</strong> – Delivery of tokens may be
+            delayed or fail due to technical, legal, or administrative reasons.
+          </li>
+        </ul>
+
+        <h3>5. Acknowledgment of Jurisdiction Restrictions</h3>
+        <ul>
+          <li>
+            The sale and these Terms are{" "}
+            <strong>
+              intended only for individuals who can legally participate
+            </strong>{" "}
+            in approved jurisdictions.
+          </li>
+          <li>
+            <strong>Do not proceed</strong> if you are a resident, citizen, or
+            accessing this page from a restricted jurisdiction.
+          </li>
+          <li>
+            The platform{" "}
+            <strong>
+              reserves the right to refuse access or reverse transactions
+            </strong>{" "}
+            based on IP, billing address, language, or other verification
+            methods.
+          </li>
+        </ul>
+
+        <h3>6. No Advice or Representation</h3>
+        <ul>
+          <li>
+            The information on this page is for{" "}
+            <strong>informational purposes only</strong>.
+          </li>
+          <li>
+            This is{" "}
+            <strong>not an offer, solicitation, or investment advice</strong>.
+          </li>
+          <li>
+            You are responsible for conducting your{" "}
+            <strong>own due diligence</strong> and consulting legal or financial
+            advisors.
+          </li>
+        </ul>
+
+        <h3>7. Acceptance of Terms</h3>
+        <p>By purchasing a SAFT, you:</p>
+        <ul>
+          <li>Confirm you have read and understood these Terms.</li>
+          <li>Acknowledge that you accept all the risks described above.</li>
+          <li>Confirm you are not in a restricted jurisdiction.</li>
+          <li>Agree to comply with all applicable laws and restrictions.</li>
+        </ul>
       </div>
     </main>
   );

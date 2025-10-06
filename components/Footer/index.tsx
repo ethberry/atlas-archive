@@ -241,14 +241,8 @@ const Footer: FC = () => {
         </SocialMediaButton>
       </div>
       <div className="flex flex-wrap text-white space-x-[32px] mt-[48px] justify-center">
-        <Link href={"/privacy-policy"}>
-          <FormattedMessage id="components.footer.privacyPolicy" />
-        </Link>
         <Link href={"/terms-and-conditions"}>
           <FormattedMessage id="components.footer.termsOfUse" />
-        </Link>
-        <Link href={"/refund-policy"}>
-          <FormattedMessage id="components.footer.refundPolicy" />
         </Link>
       </div>
     </footer>
