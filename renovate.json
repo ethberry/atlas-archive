@@ -1,4 +1,4 @@
 {
-  "baseBranches": ["dev"],
+  "baseBranches": ["main"],
   "extends": ["github>coartmarket/renovate-config"]
 }
