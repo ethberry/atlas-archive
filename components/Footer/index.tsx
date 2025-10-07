@@ -4,10 +4,10 @@ import { FC } from "react";
 import Link from "next/link";
 import { FormattedMessage } from "react-intl";
 
-import SocialMediaButton from "../SocialMediaButton";
+import { SocialMediaButton } from "../SocialMediaButton";
 import { Logo } from "../Header/Logo";
 
-const Footer: FC = () => {
+export const Footer: FC = () => {
   return (
     <footer
       id="footer"
@@ -100,5 +100,3 @@ const Footer: FC = () => {
     </footer>
   );
 };
-
-export default Footer;

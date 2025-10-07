@@ -1,11 +1,11 @@
-import React from "react";
+import { FC } from "react";
 
 interface IProps {
   href: string;
   children: React.ReactNode;
 }
 
-const SocialMediaButton: React.FC<IProps> = (props) => {
+export const SocialMediaButton: FC<IProps> = (props) => {
   const { href, children } = props;
   return (
     <a href={href} target="_blank" rel={"noopener noreferrer"}>
@@ -13,5 +13,3 @@ const SocialMediaButton: React.FC<IProps> = (props) => {
     </a>
   );
 };
-
-export default SocialMediaButton;
