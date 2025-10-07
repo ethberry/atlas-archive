@@ -32,11 +32,6 @@ export async function POST(req: Request) {
 
     const invoice = await createInvoice(user.id, body.package);
 
-    const baseUrl =
-      process.env.VERCEL_URL || process.env.NEXT_PUBLIC_VERCEL_URL
-        ? "https://fractown-ten.vercel.app"
-        : "http://localhost:3000";
-
     const data = {
       timestamp: Date.now(),
       account: "0x7292075804bd92bebc7f9a64e6909c223dc36749",
@@ -58,7 +53,7 @@ export async function POST(req: Request) {
         idempotencyKey: v4(),
         externalId: invoice.id,
       },
-      return_url: `${baseUrl}/thank-you`,
+      return_url: `${process.env.BASE_URL}/thank-you`,
     };
 
     const signature = createSignature(

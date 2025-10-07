@@ -1,4 +1,4 @@
-import { FC, useState, FocusEvent, useEffect } from "react";
+import { FC, FocusEvent, useEffect, useState } from "react";
 import { Controller, UseFormReturn } from "react-hook-form";
 import { FormattedMessage, useIntl } from "react-intl";
 import { enqueueSnackbar } from "notistack";
@@ -7,7 +7,10 @@ import { useMutation } from "@tanstack/react-query";
 import { PdfPreview } from "@/app/saft/PdfPreview";
 import type { IUserData } from "@/app/saft/interfaces";
 import { Input } from "@/components/Form/Input";
-import { CODE_TIMEOUT, SAFT_PACKAGES } from "@/app/saft/constants";
+import {
+  CODE_TIMEOUT_IN_MILLISECONDS,
+  SAFT_PACKAGES,
+} from "@/app/saft/constants";
 import { verificationSchema } from "@/app/saft/validation";
 
 interface IEmailFormProps {
@@ -56,7 +59,7 @@ export const EmailForm: FC<IEmailFormProps> = (props) => {
     },
     onSuccess: () => {
       setVerificationCodeSent(true);
-      setMillisecondsLeft(CODE_TIMEOUT);
+      setMillisecondsLeft(CODE_TIMEOUT_IN_MILLISECONDS);
       enqueueSnackbar(
         formatMessage({ id: "components.messages.verificationCode" }),
         {

@@ -8,7 +8,7 @@ import { useAppStore } from "@/components/providers/AppStoreProvider";
 import { LANGUAGE_OPTIONS } from "@/lib/constants";
 
 import { Logo } from "./Logo";
-import SocialMediaButton from "../SocialMediaButton";
+import { SocialMediaButton } from "../SocialMediaButton";
 
 interface IMobileMenuProps {
   isOpen: boolean;

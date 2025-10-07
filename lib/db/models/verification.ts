@@ -1,7 +1,7 @@
 import { captureException } from "@sentry/nextjs";
 
 import { supabase } from "@/lib/db/supabase.server";
-import { CODE_TIMEOUT } from "@/app/saft/constants";
+import { CODE_TIMEOUT_IN_MILLISECONDS } from "@/app/saft/constants";
 
 export const createVerificationCode = async (email: string) => {
   const { data, error } = await supabase
@@ -27,7 +27,10 @@ export const getVerificationCodeByEmail = async (email: string) => {
     .select()
     .eq("email", email)
     .order("created_at", { ascending: false })
-    .gte("created_at", new Date(Date.now() - CODE_TIMEOUT).toISOString())
+    .gte(
+      "created_at",
+      new Date(Date.now() - CODE_TIMEOUT_IN_MILLISECONDS).toISOString(),
+    )
     .limit(1)
     .maybeSingle();
 

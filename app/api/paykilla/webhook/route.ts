@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 import {
   createSignature,
   EmailType,
-  templateMapping,
+  getEmailTemplate,
 } from "@/app/api/paykilla/utils";
 import { PaykillaEventTypes } from "@/app/api/paykilla/interfaces";
 import { generatePdf } from "@/lib/actions/pdf";
@@ -74,9 +74,14 @@ export async function POST(req: Request) {
 
         await sendTemplate({
           to: [invoice.user.email],
-          template:
-            templateMapping[invoice.user.language][EmailType.SAFT_CONTRACT],
-          data: {},
+          template: getEmailTemplate(
+            invoice.user.language,
+            EmailType.SAFT_CONTRACT,
+          ),
+          data: {
+            support_email: process.env.MAILJET_FROM,
+            buy_more_link: `${process.env.BASE_URL}/saft`,
+          },
           attachments: [
             {
               ContentType: "application/pdf",
