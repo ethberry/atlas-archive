@@ -4,7 +4,7 @@ import { supabase } from "@/lib/db/supabase.server";
 
 export const storeSaftContract = async (fileName: string, blob: Blob) => {
   const { data, error } = await supabase.storage
-    .from("saft") // Your bucket name
+    .from("saft")
     .upload(`${fileName}.pdf`, blob, {
       cacheControl: "3600",
       // upsert: true,
