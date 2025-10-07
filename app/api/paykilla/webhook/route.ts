@@ -74,7 +74,9 @@ export async function POST(req: Request) {
         });
 
         const pdfBytes = await pdfDoc.save();
-        const pdfBlob = new Blob([pdfBytes], { type: "application/pdf" });
+        const pdfBlob = new Blob([new Uint8Array(pdfBytes)], {
+          type: "application/pdf",
+        });
 
         const { path } = await storeSaftContract(invoice.id, pdfBlob);
         const { publicUrl } = getSaftPublicUrl(path);
