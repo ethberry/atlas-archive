@@ -2,6 +2,7 @@ declare global {
   namespace NodeJS {
     interface ProcessEnv {
       BASE_URL: string;
+      NEXT_PUBLIC_BASE_URL: string;
 
       SUPABASE_URL: string;
       SUPABASE_ANON_KEY: string;

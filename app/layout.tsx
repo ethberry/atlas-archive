@@ -16,16 +16,16 @@ export const metadata: Metadata = {
     title: "Инвестируй в будущее, владея прошлым",
     description:
       "Стань совладельцем Яйца Фаберже — легенды искусства и символа роскоши. Fractown открывает доступ к уникальным артефактам через цифровые доли.",
-    images: "https://fractown.com/assets/fractown-og-img.png",
+    images: `${process.env.NEXT_PUBLIC_BASE_URL}/assets/fractown-og-img.png`,
     type: "website",
-    url: "https://fractown.com/",
+    url: `${process.env.NEXT_PUBLIC_BASE_URL}`,
   },
   twitter: {
     card: "summary_large_image",
     title: "Инвестируй в будущее, владея прошлым",
     description:
       "Стань совладельцем Яйца Фаберже — легенды искусства и символа роскоши. Fractown открывает доступ к уникальным артефактам через цифровые доли.",
-    images: "https://fractown.com/assets/fractown-og-img.png",
+    images: `${process.env.NEXT_PUBLIC_BASE_URL}/assets/fractown-og-img.png`,
   },
 };
 
