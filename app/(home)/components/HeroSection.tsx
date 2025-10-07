@@ -1,7 +1,6 @@
 "use client";
 
 import { FC, memo, useCallback } from "react";
-import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { FormattedMessage } from "react-intl";
 
@@ -25,14 +24,14 @@ export const HeroSection: FC = memo(() => {
 
         {/* Egg Image */}
         <div className="relative w-full max-w-[320px] md:max-w-[380px] my-6">
-          <Image
-            src="/assets/gifs/egg.gif"
+          <video
+            src="/assets/egg.mp4"
             width={380}
             height={400}
-            alt="Fabergé Egg"
-            className="w-full h-auto object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.8)]"
-            priority
-            unoptimized
+            autoPlay
+            muted
+            loop
+            playsInline
           />
         </div>
 
