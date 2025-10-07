@@ -1,4 +1,8 @@
 {
-  "baseBranches": ["main"],
-  "extends": ["github>coartmarket/renovate-config"]
+  "baseBranchPatterns": [
+    "main"
+  ],
+  "extends": [
+    "github>coartmarket/renovate-config"
+  ]
 }
