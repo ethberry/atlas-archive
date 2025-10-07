@@ -42,14 +42,14 @@ export const DiscordInvite: FC = memo(() => {
         {/* Center Content */}
         <div className="relative z-10 flex flex-col items-center text-center space-y-8">
           <h2
-            className="text-[46px] lg:text-[50px] text-white font-normal font-serif"
+            className="text-[46px] lg:text-[50px] text-white font-[600] font-serif"
             style={{ fontFamily: "var(--font-family-serif)" }}
           >
             <FormattedMessage id="pages.landing.discord.title" />
           </h2>
 
           <p
-            className="text-[20px] md:text-[22px] text-gray-300 leading-relaxed text-center"
+            className="text-[20px] md:text-[22px] text-white leading-relaxed text-center"
             style={{ fontFamily: "var(--font-family-sans)" }}
           >
             <FormattedMessage
@@ -62,10 +62,15 @@ export const DiscordInvite: FC = memo(() => {
             href="https://minisite.uno/discordfractown"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-8 px-12 py-3 text-[28px] font-normal rounded-[30px] bg-linear-to-b from-[#060F79] to-[#3F479C] border-transparent border-2 border-transparent hover:border-[#33399A] hover:from-transparent hover:to-transparent text-white"
+            className="mt-8 px-7 py-3 text-[20px] font-normal rounded-[30px] bg-linear-to-b from-[#060F79] to-[#3F479C] border-2 border-[#33399A] hover:border-[#33399A] hover:from-transparent hover:to-transparent text-white cursor-pointer"
             style={{ fontFamily: "var(--font-family-sans)" }}
           >
-            <FormattedMessage id="pages.landing.discord.button" />
+            <span className="md:hidden">
+              <FormattedMessage id="pages.landing.discord.join" />
+            </span>
+            <span className="hidden md:inline">
+              <FormattedMessage id="pages.landing.discord.button" />
+            </span>
           </a>
         </div>
 

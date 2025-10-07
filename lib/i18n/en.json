@@ -69,7 +69,7 @@
       "verify": "Send Code",
       "retry": "Resend",
       "retryIn": "Retry in {seconds}",
-      "learnMore": "Learn More"
+      "learnMore": "View details"
     },
     "pdf": {
       "preparing": "Preparing document...",
@@ -82,126 +82,62 @@
     }
   },
   "pages": {
-    "termsNew": {
-      "title": "Terms of Sale — SAFT Offering",
-      "overview": {
-        "title": "1. Overview",
-        "p1": "By purchasing a SAFT (Simple Agreement for Future Tokens) on this platform, you acknowledge and agree that:",
-        "li1": "The SAFT represents a contractual right to receive tokens in the future, not immediate ownership of any physical asset.",
-        "li2": "The tokens, once issued, will represent a fractional interest in a digital claim to an underlying asset (the Fabergé egg) held by a partner entity.",
-        "li3": "The SAFT and future tokens do not constitute direct ownership of the Fabergé egg."
-      },
-      "eligibility": {
-        "title": "2. Eligibility and Restricted Jurisdictions",
-        "p1": "Participation in this SAFT offering is strictly limited to individuals who are legally permitted to purchase in their jurisdiction.",
-        "p2": "By purchasing, you confirm that you are not a resident, citizen, or otherwise subject to the laws of any of the following restricted jurisdictions:",
-        "p3": "Restricted Jurisdictions include, but are not limited to:",
-        "r1": "United States of America (all states and territories)",
-        "r2": "China (including Hong Kong SAR and Macau SAR if local regulations prohibit)",
-        "r3": "North Korea",
-        "r4": "Iran",
-        "r5": "Singapore (unless pre-approved professional/institutional investors)",
-        "r6": "Japan (unless local regulatory approval is obtained)",
-        "r7": "Other countries where offering or marketing SAFTs or tokens is prohibited under applicable law",
-        "p4": "The list of restricted jurisdictions may be updated at any time. It is your responsibility to ensure you are eligible before purchasing.",
-        "l1": "Purchasers must comply with all local laws and restrictions.",
-        "l2": "The platform may use IP geolocation, billing address, language detection, or other verification methods to block restricted jurisdictions.",
-        "l3": "If you are located in a restricted jurisdiction, you may not access this page or participate in the SAFT sale."
-      },
-      "delivery": {
-        "title": "3. No Guarantee of Token Delivery or Value",
-        "l0": "Token issuance is subject to legal, regulatory, and operational conditions.",
-        "l1": "The SAFT does not guarantee:",
-        "l2": "Delivery of tokens by a specific date.",
-        "l3": "Any specific value of the tokens once issued.",
-        "l4": "Tokens may be illiquid, and there is no assurance of resale or market price."
-      },
-      "risks": {
-        "title": "4. Risk Disclosures",
-        "p1": "By participating, you acknowledge and accept the following risks:",
-        "r1": "Regulatory Risk – Tokens may be classified as securities or other regulated instruments in some jurisdictions.",
-        "r2": "Contractual Risk – Tokens are backed by a partnership agreement; failure of the partner to perform may result in loss of value.",
-        "r3": "Asset Risk – The underlying Fabergé egg may be damaged, lost, or otherwise unavailable.",
-        "r4": "Liquidity Risk – There is no guarantee that a market will exist for the tokens.",
-        "r5": "Tax Risk – Purchasers are responsible for all tax reporting and obligations in their jurisdiction.",
-        "r6": "Operational Risk – Delivery of tokens may be delayed or fail due to technical, legal, or administrative reasons."
-      },
-      "jurisdiction": {
-        "title": "5. Acknowledgment of Jurisdiction Restrictions",
-        "l1": "The sale and these Terms are intended only for individuals who can legally participate in approved jurisdictions.",
-        "l2": "Do not proceed if you are a resident, citizen, or accessing this page from a restricted jurisdiction.",
-        "l3": "The platform reserves the right to refuse access or reverse transactions based on IP, billing address, language, or other verification methods."
-      },
-      "disclaimer": {
-        "title": "6. No Advice or Representation",
-        "l1": "The information on this page is for informational purposes only.",
-        "l2": "This is not an offer, solicitation, or investment advice.",
-        "l3": "You are responsible for conducting your own due diligence and consulting legal or financial advisors."
-      },
-      "accept": {
-        "title": "7. Acceptance of Terms",
-        "p0": "By purchasing a SAFT, you:",
-        "l1": "Confirm you have read and understood these Terms.",
-        "l2": "Acknowledge that you accept all the risks described above.",
-        "l3": "Confirm you are not in a restricted jurisdiction.",
-        "l4": "Agree to comply with all applicable laws and restrictions."
-      }
-    },
     "landing": {
-      "title": "Crack the egg...!",
+      "title": "Grab destiny by the...!",
       "hero": {
-        "mainTitle": "For the first time, a Fabergé egg {br} is offered for fractional ownership!",
-        "description1": "The first three million ownership shares are already available with a 66% discount. Grab your share while it's still available!",
-        "description2": "Fabergé collectible eggs increase in value every year and sell for tens of millions.",
-        "description3": "We were lucky to find one of these eggs in a private collection.",
-        "description4": "Ownership rights to this egg are divided into 100 million parts - fractions.",
-        "learnMore": "Learn More"
+        "mainTitle": "For the first time ever - own a share of a Fabergé egg!",
+        "description1": "The first 3 million shares are live now - with a 66% launch discount.{br} Don’t miss your chance!",
+        "description2": "Fabergé eggs keep rising in value, often selling for tens of millions.",
+        "description3": "We secured one from a private European collection - now it can be yours too.",
+        "description4": "Ownership is divided into 100 million unique crypto-fractions.",
+        "learnMore": "View details"
       },
       "features": {
-        "item1": "Opportunity to resell fractions at market price after all 100 million shares are sold at the global Christmas auction!",
-        "item2": "The egg was created by a master craftsman of the House of Fabergé at the end of the 19th century. Expertise confirms authenticity!",
-        "item3": "After transitioning to shared ownership, the artwork will be stored in a specialized freeport facility."
+        "item1": "Trade your fractions at market price once all 100 million shares are sold by Christmas at the global auction.",
+        "item2": "Created by a leading Fabergé master in the late 19th century - authenticity fully confirmed.",
+        "item3": "Stored safely in a high-security freeport vault after fractionalization."
       },
       "discord": {
         "title": "Join our Discord",
         "subtitle": "Unlock exclusive updates and {br} opportunities!",
-        "button": "Join Discord Community"
+        "button": "Join Discord Community",
+        "join": "Join"
       },
       "roadmap": {
         "title": "Roadmap",
         "sep2025": {
           "period": "OCTOBER 2025",
-          "description": "Fabergé Egg, as the first Blue Chip Artwork level asset, reveals the potential of our Real-World Assets Tokenization platform."
+          "description": "The Fabergé egg becomes the first Blue Chip Artwork on our Real-World Assets platform."
         },
         "octNov2025": {
           "period": "Q4 2025",
-          "description": "Launch of the first MVP marketplace (CoArt Marketplace, Lithuania, EU) based on FracTown RWA platform."
+          "description": "Launch of our first marketplace (CoArt Marketplace, Lithuania, EU)."
         },
         "novDec2025": {
           "period": "Q1 2026",
-          "description": "Transfer of intellectual property and technical solutions of FracTown project to a new American company (C-corporation, Delaware). Launch of the second marketplace of the future global network in the US market."
+          "description": "Transfer of IP and tech to FracTown C-Corp (Delaware, USA). Launch of the second marketplace in the U.S."
         },
         "q1_2026": {
           "period": "Q2 2026",
-          "description": "Further scaling of the marketplace network connected to FracTown RWA platform via API. Start of development of our own blockchain specialized for the needs of the rapidly growing Real World Assets sphere."
+          "description": "Expansion of the global marketplace network via API integration. Kick-off of our own blockchain for the fast-growing RWA sector."
         }
       },
       "faq": {
         "title": "FAQ",
-        "question1": "How will the auction be conducted?",
-        "answer1": "For the first time, an item of this caliber will be available to retail investors through our fractional ownership mechanism. The auction won't offer the entire object, but rather its FCC, divided into 200 lots, each containing different quantities of ownership shares, which we call fractions.",
-        "question2": "What is an FCC?",
-        "answer2": "This is a special type of crypto certificate - Fractional Crypto Certificate - that we created for precise identification of physical assets, enabling their almost instant resale, similar to the NFT market. FCC also provides the ability to own 'fractions' as shares of expensive assets.",
-        "question3": "What kind of expertise is required?",
-        "answer3": "There are several respected institutions and specialists in the world who can verify the authenticity of works from Karl Fabergé's workshop. We're currently in dialogue with two of them. We'll share all the details in our social media channels.",
-        "question4": "How can I manage my ownership shares?",
-        "answer4": "On our CoArt Marketplace, you'll be able to sell and resell both unique physical objects in their entirety and ownership shares of them as 'fractions' of specific FCCs.",
-        "question5": "Where will the Egg itself be stored?",
-        "answer5": "After the auction concludes, the object itself will be exhibited in one of the European museums or transferred for safekeeping to one of the specialized 'freeports'."
+        "question1": "Why would I need a “fractional share”",
+        "answer1": "A share in a Blue Chip Artwork lets you benefit from its value growth and sell it anytime as a liquid asset. For 20+ years, Blue Chip art has outperformed the S&P 500.",
+        "question2": "How do I get my shares?",
+        "answer2": "The first 3M of 100M shares are available now through SAFT contracts. Buying today at a 66% discount, you’ll receive them in your personal wallet on the FracTown RWA Platform.",
+        "question3": "What can I do with my share?",
+        "answer3": "On CoArt Marketplace you can trade both entire physical assets and fractional shares via our FCC (Fractional Crypto Certificate), almost as instantly as NFTs.",
+        "question4": "How will the auction work?",
+        "answer4": "Ownership rights will be split into 300 lots, each with different share amounts. The auction runs for two weeks in early December, open to retail investors worldwide.",
+        "question5": "Where will the egg be kept?",
+        "answer5": "After the auction, it will be placed in a European museum or freeport vault. FracTown will retain 3% of the shares to manage the asset, while the remaining shares will trade freely on CoArt Marketplace."
       }
     },
     "saft": {
-      "title": "SAFT contract"
+      "title": "SAFT-contract"
     },
     "thankYou": {
       "title": "Crack the egg...!",

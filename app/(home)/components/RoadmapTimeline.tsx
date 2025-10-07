@@ -58,7 +58,7 @@ const RoadmapItem: FC<IRoadmapItemProps> = memo(
         <div className="flex-1 md:mt-6">
           {/* Period */}
           <h3
-            className="text-white font-medium text-[22px] leading-[26px] mb-4"
+            className="text-white font-[500] text-[22px] leading-[26px] mb-4"
             style={{ fontFamily: "var(--font-family-sans)" }}
           >
             {intl.formatMessage({ id: periodId })}
@@ -66,7 +66,7 @@ const RoadmapItem: FC<IRoadmapItemProps> = memo(
 
           {/* Description */}
           <p
-            className="text-white font-normal text-base leading-6 max-w-[300px]"
+            className="text-white font-normal leading-6 max-w-[300px] text-[20px] md:text-[16px]"
             style={{ fontFamily: "var(--font-family-sans)" }}
           >
             {intl.formatMessage({ id: descriptionId })}
@@ -106,7 +106,7 @@ export const RoadmapTimeline: FC = memo(() => {
       <div className="max-w-7xl mx-auto">
         {/* Title */}
         <h2
-          className="text-3xl md:text-5xl text-white text-center mb-20 font-normal"
+          className="text-[46px] md:text-[50px] text-white text-center mb-20 font-[600] font-serif"
           style={{ fontFamily: "var(--font-family-serif)" }}
         >
           <FormattedMessage id="pages.landing.roadmap.title" />

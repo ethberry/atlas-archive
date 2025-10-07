@@ -83,7 +83,7 @@ export const Saft: FC = () => {
     <main className="min-h-screen py-12 px-4 md:px-8">
       <div className="max-w-4xl mx-auto">
         <h1
-          className="text-4xl md:text-5xl text-white text-center mb-12 font-normal"
+          className="text-[46px] md:text-[70px] text-white text-center mb-12 font-[600]"
           style={{ fontFamily: "var(--font-family-serif)" }}
         >
           <FormattedMessage id="pages.saft.title" />

@@ -14,7 +14,7 @@ export const HexagonCard: FC<IHexagonCardProps> = memo(
   ({ imageSrc, imageAlt, description, position = "left" }) => {
     return (
       <div
-        className={`flex flex-col md:${position === "right" ? "flex-row-reverse" : "flex-row"} items-center gap-6 md:gap-12 my-8`}
+        className={`flex flex-col items-center gap-6 md:gap-12 my-8 ${position === "right" ? "md:flex-row-reverse" : "md:flex-row"}`}
       >
         {/* Hexagon Image */}
         <div className="relative flex-shrink-0">
@@ -32,9 +32,7 @@ export const HexagonCard: FC<IHexagonCardProps> = memo(
         </div>
 
         {/* Description */}
-        <div className="flex-1 text-white text-[20px] md:text-[22px] leading-relaxed text-left">
-          {description}
-        </div>
+        <div className="flex-1">{description}</div>
       </div>
     );
   },

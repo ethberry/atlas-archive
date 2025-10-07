@@ -151,7 +151,7 @@ export const EmailForm: FC<IEmailFormProps> = (props) => {
             />
             <label
               htmlFor="consent"
-              className="text-white text-base cursor-pointer"
+              className="text-white text-[14px] md:text-base cursor-pointer"
               style={{ fontFamily: "var(--font-family-sans)" }}
             >
               <FormattedMessage id="form.label.consent" />
@@ -179,7 +179,7 @@ export const EmailForm: FC<IEmailFormProps> = (props) => {
             />
             <label
               htmlFor="nonUsPerson"
-              className="text-white text-base cursor-pointer"
+              className="text-white text-[14px] md:text-base cursor-pointer"
               style={{ fontFamily: "var(--font-family-sans)" }}
             >
               <FormattedMessage id="form.label.nonUsPerson" />

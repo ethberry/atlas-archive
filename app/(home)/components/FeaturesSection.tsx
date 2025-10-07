@@ -55,7 +55,7 @@ export const FeaturesSection: FC = memo(() => {
               position={feature.position}
               description={
                 <p
-                  className="text-gray-300"
+                  className="text-white text-[20px] md:text-[22px] lg:text-[22px] font-normal font-sans"
                   style={{ fontFamily: "var(--font-family-sans)" }}
                 >
                   {intl.formatMessage({ id: feature.descriptionId })}
@@ -69,7 +69,7 @@ export const FeaturesSection: FC = memo(() => {
         <div className="flex justify-center mt-16">
           <button
             onClick={handleLearnMore}
-            className="px-12 py-3 text-[28px] font-normal rounded-[30px] bg-gradient-to-b from-[#060F79] to-[#3F479C] border-2 border-transparent hover:border-[#33399A] hover:from-transparent hover:to-transparent text-white transition-all duration-300"
+            className="px-7 py-3 text-[20px] font-normal rounded-[30px] bg-linear-to-b from-[#060F79] to-[#3F479C] border-2 border-[#33399A] hover:border-[#33399A] hover:from-transparent hover:to-transparent text-white cursor-pointer"
             style={{ fontFamily: "var(--font-family-sans)" }}
             aria-label="Learn more about conditions"
           >

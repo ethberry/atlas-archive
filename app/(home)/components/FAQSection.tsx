@@ -42,7 +42,7 @@ export const FAQSection: FC = memo(() => {
       <div className="max-w-4xl mx-auto">
         {/* Title */}
         <h2
-          className="text-[50px] text-white text-center mb-12 font-normal"
+          className="text-[50px] text-white text-center mb-12 font-[600] text-[50px] font-serif"
           style={{ fontFamily: "var(--font-family-serif)" }}
         >
           <FormattedMessage id="pages.landing.faq.title" />
@@ -63,7 +63,7 @@ export const FAQSection: FC = memo(() => {
         <div className="flex justify-center mt-12">
           <button
             onClick={handleLearnMore}
-            className="px-12 py-3 text-[28px] font-normal rounded-[30px] bg-gradient-to-b from-[#060F79] to-[#3F479C] border-2 border-transparent hover:border-[#33399A] hover:from-transparent hover:to-transparent text-white transition-all duration-300"
+            className="px-7 py-3 text-[20px] font-normal rounded-[30px] bg-linear-to-b from-[#060F79] to-[#3F479C] border-2 border-[#33399A] hover:border-[#33399A] hover:from-transparent hover:to-transparent text-white cursor-pointer"
             style={{ fontFamily: "var(--font-family-sans)" }}
           >
             <FormattedMessage id="form.button.learnMore" />

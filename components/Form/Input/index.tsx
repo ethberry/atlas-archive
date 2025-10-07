@@ -14,7 +14,7 @@ export const Input: FC<IInputProps> = (props) => {
   return (
     <div className="text-left w-full">
       <label
-        className="flex flex-col text-white text-sm mb-2"
+        className="flex flex-col text-white text-base mb-2"
         style={{ fontFamily: "var(--font-family-sans)" }}
       >
         {formatMessage({ id: `form.label.${name}` })}
