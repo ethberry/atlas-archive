@@ -3,16 +3,11 @@ import { captureException } from "@sentry/nextjs";
 
 import { IUserData } from "@/app/saft/interfaces";
 
-const baseUrl =
-  process.env.VERCEL_URL || process.env.NEXT_PUBLIC_VERCEL_URL
-    ? "https://fractown-ten.vercel.app"
-    : "http://localhost:3000";
-
 export const generatePdf = async (formData: IUserData) => {
   try {
-    const existingPdfBytes = await fetch(`${baseUrl}/pdf/saft1.pdf`).then(
-      (res) => res.arrayBuffer(),
-    );
+    const existingPdfBytes = await fetch(
+      `${process.env.BASE_URL}/pdf/saft1.pdf`,
+    ).then((res) => res.arrayBuffer());
     const pdfDoc = await PDFDocument.load(existingPdfBytes);
 
     const form = pdfDoc.getForm();

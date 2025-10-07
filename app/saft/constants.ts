@@ -1,2 +1,3 @@
 export const SAFT_PACKAGES = [10, 30, 100];
-export const CODE_TIMEOUT = 1 * 60 * 1000; // 1 minutes
+export const CODE_TIMEOUT_IN_MINUTES = 1; // 1 minutes
+export const CODE_TIMEOUT_IN_MILLISECONDS = CODE_TIMEOUT_IN_MINUTES * 60 * 1000;

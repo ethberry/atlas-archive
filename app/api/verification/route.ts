@@ -7,7 +7,8 @@ import {
   getVerificationCodeByEmail,
 } from "@/lib/db/models/verification";
 import { sendTemplate } from "@/app/api/email/utils";
-import { EmailType, templateMapping } from "@/app/api/paykilla/utils";
+import { EmailType, getEmailTemplate } from "@/app/api/paykilla/utils";
+import { CODE_TIMEOUT_IN_MINUTES } from "@/app/saft/constants";
 
 export async function POST(req: Request) {
   const json = await req.json();
@@ -27,9 +28,13 @@ export async function POST(req: Request) {
     verification = await createVerificationCode(body.email);
 
     await sendTemplate({
-      data: verification,
+      data: {
+        support_email: process.env.MAILJET_FROM,
+        otp_ttl_minutes: CODE_TIMEOUT_IN_MINUTES,
+        otp_code: verification.code,
+      },
       to: [verification.email],
-      template: templateMapping[body.language][EmailType.EMAIL_VERIFICATION],
+      template: getEmailTemplate(body.language, EmailType.EMAIL_VERIFICATION),
     });
 
     return NextResponse.json({ status: "OK" });

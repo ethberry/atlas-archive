@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { captureException } from "@sentry/nextjs";
 
 import { getUsersForFallowUp } from "@/lib/db/models/users";
-import { EmailType, templateMapping } from "@/app/api/paykilla/utils";
+import { EmailType, getEmailTemplate } from "@/app/api/paykilla/utils";
 
 import { sendTemplate } from "../utils";
 
@@ -17,7 +17,7 @@ export async function GET() {
     users.map((user) => {
       return sendTemplate({
         to: [user.email],
-        template: templateMapping[user.language][EmailType.FOLLOW_UP],
+        template: getEmailTemplate(user.language, EmailType.FOLLOW_UP),
         data: {},
       }).catch((e: unknown) => {
         console.error(e);
