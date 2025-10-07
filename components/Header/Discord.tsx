@@ -3,12 +3,13 @@
 import { FC, memo } from "react";
 import { useIntl } from "react-intl";
 
-import { DiscordIcon } from "./icons/DiscordIcon";
 import {
   DISCORD_LINK,
   BUTTON_BASE_CLASSES,
   BUTTON_GRADIENT_CLASSES,
-} from "./constants";
+} from "@/lib/constants";
+
+import { DiscordIcon } from "./icons/DiscordIcon";
 
 export const Discord: FC = memo(() => {
   const { formatMessage } = useIntl();
@@ -26,5 +27,3 @@ export const Discord: FC = memo(() => {
     </a>
   );
 });
-
-Discord.displayName = "Discord";

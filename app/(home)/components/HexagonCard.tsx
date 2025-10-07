@@ -39,5 +39,3 @@ export const HexagonCard: FC<IHexagonCardProps> = memo(
     );
   },
 );
-
-HexagonCard.displayName = "HexagonCard";

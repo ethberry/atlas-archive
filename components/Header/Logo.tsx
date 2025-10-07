@@ -25,5 +25,3 @@ export const Logo: FC = memo(() => {
     </Link>
   );
 });
-
-Logo.displayName = "Logo";

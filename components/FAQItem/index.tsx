@@ -47,6 +47,4 @@ const FAQItem = memo<IFAQItemProps>(({ question, answer }) => {
   );
 });
 
-FAQItem.displayName = "FAQItem";
-
 export default FAQItem;

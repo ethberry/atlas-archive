@@ -73,5 +73,3 @@ export const FAQSection: FC = memo(() => {
     </section>
   );
 });
-
-FAQSection.displayName = "FAQSection";

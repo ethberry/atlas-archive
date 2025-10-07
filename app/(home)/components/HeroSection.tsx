@@ -85,5 +85,3 @@ export const HeroSection: FC = memo(() => {
     </section>
   );
 });
-
-HeroSection.displayName = "HeroSection";

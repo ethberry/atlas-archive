@@ -5,8 +5,8 @@ import Link from "next/link";
 
 import { EnabledLanguages } from "@/lib/i18n";
 import { useAppStore } from "@/components/providers/AppStoreProvider";
+import { LANGUAGE_OPTIONS } from "@/lib/constants";
 
-import { LANGUAGE_OPTIONS } from "./constants";
 import { Logo } from "./Logo";
 import SocialMediaButton from "../SocialMediaButton";
 
@@ -164,5 +164,3 @@ export const MobileMenu: FC<IMobileMenuProps> = memo(({ isOpen, onClose }) => {
     </>
   );
 });
-
-MobileMenu.displayName = "MobileMenu";

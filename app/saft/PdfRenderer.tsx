@@ -47,9 +47,18 @@ export const PdfRenderer: FC<IPdfRendererProps> = (props) => {
       setHasScrolledToEnd(false);
       setTimeout(() => {
         setIsScrollDetectionEnabled(true);
+        // If content is not scrollable (fits into container), consider it as scrolled to end
+        const container = containerRef.current;
+        if (container) {
+          const { scrollHeight, clientHeight } = container;
+          if (scrollHeight <= clientHeight && !hasScrolledToEnd) {
+            setHasScrolledToEnd(true);
+            onScrollToEnd?.();
+          }
+        }
       }, 500);
     },
-    [],
+    [hasScrolledToEnd, onScrollToEnd],
   );
 
   const handleScroll = useCallback(() => {

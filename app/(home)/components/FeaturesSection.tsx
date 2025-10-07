@@ -80,5 +80,3 @@ export const FeaturesSection: FC = memo(() => {
     </section>
   );
 });
-
-FeaturesSection.displayName = "FeaturesSection";

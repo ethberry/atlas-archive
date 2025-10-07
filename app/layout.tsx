@@ -1,10 +1,26 @@
 import { PropsWithChildren } from "react";
 import type { Metadata } from "next";
+import { Cormorant_Garamond, Manrope } from "next/font/google";
 
 import { Providers } from "../components/providers/providers";
 import { Header } from "../components/Header";
 import Footer from "../components/Footer";
 import "./globals.css";
+
+const cormorantGaramond = Cormorant_Garamond({
+  subsets: ["latin", "cyrillic"],
+  weight: ["300", "400", "500", "600", "700"],
+  style: ["normal", "italic"],
+  display: "swap",
+  variable: "--font-family-serif",
+});
+
+const manrope = Manrope({
+  subsets: ["latin", "cyrillic"],
+  weight: ["200", "300", "400", "500", "600", "700", "800"],
+  display: "swap",
+  variable: "--font-family-sans",
+});
 
 export const metadata: Metadata = {
   title: "Fractown — Инвестируй в будущее, владея прошлым",
@@ -33,7 +49,10 @@ export default function RootLayout(props: PropsWithChildren) {
   const { children } = props;
 
   return (
-    <html lang="en" className={"dark"}>
+    <html
+      lang="en"
+      className={`dark ${cormorantGaramond.variable} ${manrope.variable}`}
+    >
       <head>
         <script
           async

@@ -1,9 +1,11 @@
-import { EnabledLanguages } from "@/lib/i18n";
+import { EnabledLanguages } from "./i18n";
 
-// Header constants
 export const DISCORD_LINK = "https://minisite.uno/discordfractown";
+export const X_LINK = "https://x.com/coart_market";
+export const TELEGRAM_LINK = "https://t.me/coart_market";
+export const FACEBOOK_LINK = "https://www.facebook.com/coart.space";
+export const INSTAGRAM_LINK = "https://www.instagram.com/coartmarket";
 
-// Shared button styles
 export const BUTTON_BASE_CLASSES =
   "flex items-center gap-2 border-2 text-white px-4 py-2 rounded-[12px] transition-all duration-300 font-sans";
 
@@ -13,7 +15,6 @@ export const BUTTON_GRADIENT_CLASSES =
 export const BUTTON_ACTIVE_CLASSES =
   "from-transparent to-transparent border-[#262957]";
 
-// Language options
 export const LANGUAGE_OPTIONS: Array<{
   value: EnabledLanguages;
   label: string;

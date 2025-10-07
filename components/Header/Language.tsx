@@ -10,14 +10,14 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { EnabledLanguages } from "@/lib/i18n";
 import { useAppStore } from "@/components/providers/AppStoreProvider";
-
-import { ChevronIcon } from "./icons/ChevronIcon";
 import {
   LANGUAGE_OPTIONS,
   BUTTON_BASE_CLASSES,
   BUTTON_GRADIENT_CLASSES,
   BUTTON_ACTIVE_CLASSES,
-} from "./constants";
+} from "@/lib/constants";
+
+import { ChevronIcon } from "./icons/ChevronIcon";
 
 export const Language: FC = memo(() => {
   const { language, setLanguage } = useAppStore((state) => state);
@@ -76,5 +76,3 @@ export const Language: FC = memo(() => {
     </DropdownMenu>
   );
 });
-
-Language.displayName = "Language";

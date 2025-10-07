@@ -84,5 +84,3 @@ export const DiscordInvite: FC = memo(() => {
     </section>
   );
 });
-
-DiscordInvite.displayName = "DiscordInvite";

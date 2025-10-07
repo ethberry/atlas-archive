@@ -3,13 +3,10 @@
     "footer": {
       "home": "Home",
       "saft": "SAFT",
-      "privacyPolicy": "Privacy Policy",
-      "refundPolicy": "Refund Policy",
       "termsOfUse": "Terms & Conditions"
     },
     "header": {
       "logo": "Fractown",
-      "language": "Language",
       "discord": "Discord"
     },
     "messages": {
@@ -85,32 +82,70 @@
     }
   },
   "pages": {
-    "privacyPolicy": {
-      "title": "Privacy Policy"
-    },
-    "refundPolicy": {
-      "title": "Refund Policy"
-    },
-    "termsAndConditions": {
+    "termsNew": {
       "title": "Terms of Sale — SAFT Offering",
-      "intro": "Congratulations! You have become the owner of a share of ownership rights to a unique Fabergé egg and have joined the community of select collectors.",
-      "contract": "We will soon send a SAFT contract confirming your acquisition to your specified email.{br}Increase your package right now and get additional privileges for the first owners of a unique asset!",
-      "congratulations": "Congratulations!{br}You now own a share of a unique Fabergé egg. Welcome to the circle of first collectors. Your SAFT contract will be sent to your email shortly.{br}Add more shares today - and enjoy exclusive early-holder benefits!",
-      "generalTitle": "General Conditions",
-      "generalText": "Browse and purchase our IT services conveniently online. Get all the information you need on our website, and our customer support is available to assist you. We strive to provide a user-friendly website and competitive pricing.",
-      "termsTitle": "Terms and Conditions",
-      "termsText": "These terms and conditions apply to all our services, whether accessed through our website, mobile device, email, mail, or phone. By accessing, browsing, or using our website, and/or placing an order, you acknowledge and agree to these terms and conditions (including our Privacy Policy). Our website, content, infrastructure, and goods sold online by CoArt UAB (including payment services) are owned and managed by CoArt UAB, a company operating under the laws of the Republic of Lithuania. CoArt UAB is responsible for the quality and provision of our services.",
-      "paymentsTitle": "Payments",
-      "paymentsText": "We offer secure online payment options processed through third-party intermediaries. Payments can be made using credit/debit cards or bank accounts. CoArt UAB is responsible for payment processing and will issue refunds for any unauthorized withdrawals.",
-      "definitionsTitle": "Definitions",
-      "definitionsText": "\"CoArt UAB,\" \"us,\" \"we,\" or \"our\" refers to CoArt UAB, a company operating under the laws of the Republic of Lithuania. \"IT services\" refers to the information technology services we offer, including online store creation and social network administration. Details about our IT services and contact information can be found on our website. \"Order\" refers to any online purchase, payment, or service ordering process for the products and services offered by CoArt UAB on our website.",
-      "scopeTitle": "Scope and Nature of Our Services",
-      "scopeText": "CoArt UAB sells and/or offers products and services through our website. Visitors can search, compare, choose, purchase, reserve, order, and pay for our offerings. By placing an order, you enter into a direct and legally binding contract with CoArt UAB. We are responsible for fulfilling your order and will provide an order confirmation with relevant information. We update the information on our platform, including prices and descriptions, and ensure its accuracy.",
-      "useRestrictions": "Our services are for personal and commercial use only. You may not resell, link to, use, copy, monitor, display, download, or reproduce any content, information, software, products, or services on our website for commercial or competitive purposes.",
-      "privacyTitle": "Privacy and Cookies",
-      "privacyText": "We respect your privacy. Please review our privacy and cookies policy for more information.",
-      "paymentPolicyTitle": "Payment, Cancellation, and Important Information",
-      "paymentPolicyText": "By placing an order with CoArt UAB, you agree to our cancellation and refund policies, which will be provided at the time of order. Carefully review these terms and conditions before placing your order, as there are deadlines for cancellations, returns, or changes."
+      "overview": {
+        "title": "1. Overview",
+        "p1": "By purchasing a SAFT (Simple Agreement for Future Tokens) on this platform, you acknowledge and agree that:",
+        "li1": "The SAFT represents a contractual right to receive tokens in the future, not immediate ownership of any physical asset.",
+        "li2": "The tokens, once issued, will represent a fractional interest in a digital claim to an underlying asset (the Fabergé egg) held by a partner entity.",
+        "li3": "The SAFT and future tokens do not constitute direct ownership of the Fabergé egg."
+      },
+      "eligibility": {
+        "title": "2. Eligibility and Restricted Jurisdictions",
+        "p1": "Participation in this SAFT offering is strictly limited to individuals who are legally permitted to purchase in their jurisdiction.",
+        "p2": "By purchasing, you confirm that you are not a resident, citizen, or otherwise subject to the laws of any of the following restricted jurisdictions:",
+        "p3": "Restricted Jurisdictions include, but are not limited to:",
+        "r1": "United States of America (all states and territories)",
+        "r2": "China (including Hong Kong SAR and Macau SAR if local regulations prohibit)",
+        "r3": "North Korea",
+        "r4": "Iran",
+        "r5": "Singapore (unless pre-approved professional/institutional investors)",
+        "r6": "Japan (unless local regulatory approval is obtained)",
+        "r7": "Other countries where offering or marketing SAFTs or tokens is prohibited under applicable law",
+        "p4": "The list of restricted jurisdictions may be updated at any time. It is your responsibility to ensure you are eligible before purchasing.",
+        "l1": "Purchasers must comply with all local laws and restrictions.",
+        "l2": "The platform may use IP geolocation, billing address, language detection, or other verification methods to block restricted jurisdictions.",
+        "l3": "If you are located in a restricted jurisdiction, you may not access this page or participate in the SAFT sale."
+      },
+      "delivery": {
+        "title": "3. No Guarantee of Token Delivery or Value",
+        "l0": "Token issuance is subject to legal, regulatory, and operational conditions.",
+        "l1": "The SAFT does not guarantee:",
+        "l2": "Delivery of tokens by a specific date.",
+        "l3": "Any specific value of the tokens once issued.",
+        "l4": "Tokens may be illiquid, and there is no assurance of resale or market price."
+      },
+      "risks": {
+        "title": "4. Risk Disclosures",
+        "p1": "By participating, you acknowledge and accept the following risks:",
+        "r1": "Regulatory Risk – Tokens may be classified as securities or other regulated instruments in some jurisdictions.",
+        "r2": "Contractual Risk – Tokens are backed by a partnership agreement; failure of the partner to perform may result in loss of value.",
+        "r3": "Asset Risk – The underlying Fabergé egg may be damaged, lost, or otherwise unavailable.",
+        "r4": "Liquidity Risk – There is no guarantee that a market will exist for the tokens.",
+        "r5": "Tax Risk – Purchasers are responsible for all tax reporting and obligations in their jurisdiction.",
+        "r6": "Operational Risk – Delivery of tokens may be delayed or fail due to technical, legal, or administrative reasons."
+      },
+      "jurisdiction": {
+        "title": "5. Acknowledgment of Jurisdiction Restrictions",
+        "l1": "The sale and these Terms are intended only for individuals who can legally participate in approved jurisdictions.",
+        "l2": "Do not proceed if you are a resident, citizen, or accessing this page from a restricted jurisdiction.",
+        "l3": "The platform reserves the right to refuse access or reverse transactions based on IP, billing address, language, or other verification methods."
+      },
+      "disclaimer": {
+        "title": "6. No Advice or Representation",
+        "l1": "The information on this page is for informational purposes only.",
+        "l2": "This is not an offer, solicitation, or investment advice.",
+        "l3": "You are responsible for conducting your own due diligence and consulting legal or financial advisors."
+      },
+      "accept": {
+        "title": "7. Acceptance of Terms",
+        "p0": "By purchasing a SAFT, you:",
+        "l1": "Confirm you have read and understood these Terms.",
+        "l2": "Acknowledge that you accept all the risks described above.",
+        "l3": "Confirm you are not in a restricted jurisdiction.",
+        "l4": "Agree to comply with all applicable laws and restrictions."
+      }
     },
     "landing": {
       "title": "Crack the egg...!",
@@ -130,8 +165,7 @@
       "discord": {
         "title": "Join our Discord",
         "subtitle": "Unlock exclusive updates and {br} opportunities!",
-        "button": "Join Discord Community",
-        "description": "Get early access to auctions, exclusive content, and connect with fellow art enthusiasts"
+        "button": "Join Discord Community"
       },
       "roadmap": {
         "title": "Roadmap",

@@ -77,8 +77,6 @@ const RoadmapItem: FC<IRoadmapItemProps> = memo(
   },
 );
 
-RoadmapItem.displayName = "RoadmapItem";
-
 export const RoadmapTimeline: FC = memo(() => {
   const roadmapItems = [
     {
@@ -140,5 +138,3 @@ export const RoadmapTimeline: FC = memo(() => {
     </section>
   );
 });
-
-RoadmapTimeline.displayName = "RoadmapTimeline";

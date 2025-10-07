@@ -310,7 +310,7 @@ export const EmailForm: FC<IEmailFormProps> = (props) => {
         </div>
 
         <button
-          className={`px-4 py-[14px] text-base font-normal rounded-[12px] border-2 text-white whitespace-nowrap flex items-center justify-center disabled:opacity-70 disabled:cursor-not-allowed mb-[6px] ${
+          className={`px-4 py-[12px] text-base font-normal rounded-[12px] border-2 text-white whitespace-nowrap flex items-center justify-center disabled:opacity-70 disabled:cursor-not-allowed mb-[8px] ${
             !verificationSchema.shape.email.safeParse(formDateRT.email)
               .success || millisecondsLeft > 0
               ? "bg-[#3D4471] border-transparent cursor-not-allowed opacity-70"
