@@ -32,6 +32,7 @@ export const HeroSection: FC = memo(() => {
             alt="Fabergé Egg"
             className="w-full h-auto object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.8)]"
             priority
+            unoptimized
           />
         </div>
 
