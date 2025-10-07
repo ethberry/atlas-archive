@@ -1,4 +1,4 @@
 {
   "baseBranches": ["dev"],
-  "extends": ["github>asklina/renovate-config"]
+  "extends": ["github>coartmarket/renovate-config"]
 }
