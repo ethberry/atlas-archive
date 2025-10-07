@@ -25,10 +25,10 @@ export const PdfPreview: FC<IPdfPreviewProps> = (props) => {
     void (async () => {
       const pdfDoc = await generatePdf(formData);
       const pdfBytes = await pdfDoc.save();
-      const blob = new Blob([new Uint8Array(pdfBytes)], {
+      const pdfBlob = new Blob([pdfBytes], {
         type: "application/pdf",
       });
-      setPdfUrl(URL.createObjectURL(blob));
+      setPdfUrl(URL.createObjectURL(pdfBlob));
     })();
   }, [formData]);
 

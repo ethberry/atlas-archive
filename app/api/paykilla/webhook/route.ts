@@ -10,6 +10,7 @@ import { generatePdf } from "@/lib/actions/pdf";
 import { sendTemplate } from "@/app/api/email/utils";
 import { getInvoiceById, updateInvoiceStatus } from "@/lib/db/models/invoices";
 import { EnabledLanguages } from "@/lib/i18n";
+import { getSaftPublicUrl, storeSaftContract } from "@/lib/db/storage/saft";
 
 export async function POST(req: Request) {
   const text = await req.text();
@@ -72,6 +73,12 @@ export async function POST(req: Request) {
           verificationCode: "",
         });
 
+        const pdfBytes = await pdfDoc.save();
+        const pdfBlob = new Blob([pdfBytes], { type: "application/pdf" });
+
+        const { path } = await storeSaftContract(invoice.id, pdfBlob);
+        const { publicUrl } = getSaftPublicUrl(path);
+
         await sendTemplate({
           to: [invoice.user.email],
           template: getEmailTemplate(
@@ -80,15 +87,16 @@ export async function POST(req: Request) {
           ),
           data: {
             support_email: process.env.MAILJET_FROM,
-            buy_more_link: `${process.env.BASE_URL}/saft`,
+            buy_more_url: `${process.env.BASE_URL}/saft`,
+            contract_url: publicUrl,
           },
-          attachments: [
-            {
-              ContentType: "application/pdf",
-              Filename: "saft.pdf",
-              Base64Content: await pdfDoc.saveAsBase64(),
-            },
-          ],
+          // attachments: [
+          //   {
+          //     ContentType: "application/pdf",
+          //     Filename: "saft.pdf",
+          //     Base64Content: await pdfDoc.saveAsBase64(),
+          //   },
+          // ],
         });
 
         break;
@@ -98,6 +106,7 @@ export async function POST(req: Request) {
         break;
     }
   } catch (error) {
+    console.error(error);
     void error; // error is already processed
     return NextResponse.json(
       { status: "Internal server error" },
