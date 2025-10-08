@@ -39,7 +39,7 @@ export const Language: FC = memo(() => {
 
   const triggerClasses = useMemo(
     () =>
-      `hidden md:${BUTTON_BASE_CLASSES} max-w-[80px] ${
+      `hidden md:${BUTTON_BASE_CLASSES} max-w-[80px] !duration-0 cursor-pointer outline-none ${
         isOpen
           ? `${BUTTON_ACTIVE_CLASSES} border-b-0 rounded-b-none`
           : BUTTON_GRADIENT_CLASSES

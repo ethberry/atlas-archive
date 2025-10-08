@@ -83,6 +83,7 @@ export const HeroSection: FC = memo(() => {
               style={{
                 objectFit: "contain",
                 background: "transparent",
+                zIndex: -1,
               }}
             >
               <source src="/assets/egg.mp4" type="video/mp4" />
@@ -140,7 +141,7 @@ export const HeroSection: FC = memo(() => {
 
         <button
           onClick={handleLearnMore}
-          className="mt-8 px-7 py-3 text-[20px] font-normal rounded-[30px] bg-linear-to-b from-[#060F79] to-[#3F479C] border-2 border-[#33399A] hover:border-[#33399A] hover:from-transparent hover:to-transparent text-white cursor-pointer"
+          className="mt-8 px-7 py-3 text-[20px] font-normal rounded-[30px] bg-linear-to-b from-[#060F79] to-[#3F479C] border-2 border-[#33399A] hover:border-[#33399A] hover:from-transparent hover:to-transparent text-white cursor-pointer transition-colors duration-300"
           style={{ fontFamily: "var(--font-family-sans)" }}
         >
           <FormattedMessage id="pages.landing.hero.learnMore" />

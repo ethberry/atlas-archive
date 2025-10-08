@@ -287,5 +287,5 @@ select option:checked {
 /* Firefox scrollbar */
 .custom-scrollbar {
   scrollbar-width: thin;
-  scrollbar-color: #5865F2 rgba(255, 255, 255, 0.05);
+  scrollbar-color: #6D75B9 rgba(255, 255, 255, 0.05);
 }

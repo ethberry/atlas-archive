@@ -7,6 +7,8 @@ import { useMutation } from "@tanstack/react-query";
 import { PdfPreview } from "@/app/saft/PdfPreview";
 import type { IUserData } from "@/app/saft/interfaces";
 import { Input } from "@/components/Form/Input";
+import { Select } from "@/components/ui/select";
+import { Checkbox } from "@/components/ui/checkbox";
 import {
   CODE_TIMEOUT_IN_MILLISECONDS,
   SAFT_PACKAGES,
@@ -129,62 +131,32 @@ export const EmailForm: FC<IEmailFormProps> = (props) => {
       {/* Checkboxes and Timer Row */}
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 py-4">
         <div className="flex flex-col gap-3 flex-1">
-          <div className="flex items-center gap-3">
-            <Controller
-              name="consent"
-              control={control}
-              render={({ field: { onChange, value } }) => (
-                <input
-                  type="checkbox"
-                  id="consent"
-                  checked={value}
-                  onChange={onChange}
-                  disabled={!hasScrolledToEnd}
-                  className="w-5 h-5 rounded-[4px] border-2 border-[#5865F2] bg-transparent checked:bg-[#5865F2] cursor-pointer disabled:cursor-not-allowed disabled:opacity-50 appearance-none checked:bg-[length:12px_12px] checked:bg-center checked:bg-no-repeat transition-all duration-200"
-                  style={{
-                    backgroundImage: value
-                      ? `url("data:image/svg+xml,%3Csvg width='12' height='10' viewBox='0 0 12 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 5L4.5 8.5L11 1' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")`
-                      : undefined,
-                  }}
-                />
-              )}
-            />
-            <label
-              htmlFor="consent"
-              className="text-white text-[14px] md:text-base cursor-pointer"
-              style={{ fontFamily: "var(--font-family-sans)" }}
-            >
-              <FormattedMessage id="form.label.consent" />
-            </label>
-          </div>
+          <Controller
+            name="consent"
+            control={control}
+            render={({ field: { onChange, value } }) => (
+              <Checkbox
+                id="consent"
+                checked={value}
+                onChange={onChange}
+                disabled={!hasScrolledToEnd}
+                labelId="form.label.consent"
+              />
+            )}
+          />
 
-          <div className="flex items-center gap-3">
-            <Controller
-              name="nonUsPerson"
-              control={control}
-              render={({ field: { onChange, value } }) => (
-                <input
-                  type="checkbox"
-                  id="nonUsPerson"
-                  checked={value}
-                  onChange={onChange}
-                  className="w-5 h-5 rounded-[4px] border-2 border-[#5865F2] bg-transparent checked:bg-[#5865F2] cursor-pointer appearance-none checked:bg-[length:12px_12px] checked:bg-center checked:bg-no-repeat transition-all duration-200"
-                  style={{
-                    backgroundImage: value
-                      ? `url("data:image/svg+xml,%3Csvg width='12' height='10' viewBox='0 0 12 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 5L4.5 8.5L11 1' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")`
-                      : undefined,
-                  }}
-                />
-              )}
-            />
-            <label
-              htmlFor="nonUsPerson"
-              className="text-white text-[14px] md:text-base cursor-pointer"
-              style={{ fontFamily: "var(--font-family-sans)" }}
-            >
-              <FormattedMessage id="form.label.nonUsPerson" />
-            </label>
-          </div>
+          <Controller
+            name="nonUsPerson"
+            control={control}
+            render={({ field: { onChange, value } }) => (
+              <Checkbox
+                id="nonUsPerson"
+                checked={value}
+                onChange={onChange}
+                labelId="form.label.nonUsPerson"
+              />
+            )}
+          />
         </div>
 
         <div className="w-full md:w-auto flex justify-center gap-3">
@@ -193,18 +165,20 @@ export const EmailForm: FC<IEmailFormProps> = (props) => {
               className="text-base text-white text-right flex items-center justify-end gap-[2px]"
               style={{ fontFamily: "var(--font-family-sans)" }}
             >
-              <span className="inline-block w-[50px] text-[50px] text-center">
+              <span className="inline-block w-[25px] min-w-[25px] text-[50px] text-center">
                 {String(Math.floor(pageTimerLeft / 60000)).padStart(2, "0")[0]}
               </span>
               <span
-                className="inline-block w-[50px] text-[50px] text-center flip-number"
+                className="inline-block w-[25px] min-w-[25px] text-[50px] text-center flip-number"
                 key={`min-${String(Math.floor(pageTimerLeft / 60000)).padStart(2, "0")[1]}`}
               >
                 {String(Math.floor(pageTimerLeft / 60000)).padStart(2, "0")[1]}
               </span>
-              <span className="w-[50px] text-[50px] text-center">:</span>
+              <span className="w-[25px] min-w-[25px] text-[50px] text-center">
+                :
+              </span>
               <span
-                className="inline-block w-[50px] text-[50px] text-center flip-number"
+                className="inline-block w-[25px] min-w-[25px] text-[50px] text-center flip-number"
                 key={`sec-tens-${String(Math.floor((pageTimerLeft % 60000) / 1000)).padStart(2, "0")[0]}`}
               >
                 {
@@ -215,7 +189,7 @@ export const EmailForm: FC<IEmailFormProps> = (props) => {
                 }
               </span>
               <span
-                className="inline-block w-[50px] text-[50px] text-center flip-number"
+                className="inline-block w-[25px] min-w-[25px] text-[50px] text-center flip-number"
                 key={`sec-ones-${String(Math.floor((pageTimerLeft % 60000) / 1000)).padStart(2, "0")[1]}`}
               >
                 {
@@ -313,11 +287,11 @@ export const EmailForm: FC<IEmailFormProps> = (props) => {
         </div>
 
         <button
-          className={`px-4 py-[12px] text-base font-normal rounded-[12px] border-2 text-white whitespace-nowrap flex items-center justify-center disabled:opacity-70 disabled:cursor-not-allowed mb-[8px] ${
+          className={`px-4 py-[10px] text-base font-normal rounded-[12px] border-2 text-white whitespace-nowrap flex items-center justify-center disabled:opacity-70 disabled:text-[#414569] disabled:cursor-not-allowed mb-[8px] ${
             !verificationSchema.shape.email.safeParse(formDateRT.email)
               .success || millisecondsLeft > 0
-              ? "bg-[#3D4471] border-transparent cursor-not-allowed opacity-70"
-              : "bg-gradient-to-b from-[#1A1D3F] to-[#262B5E] border-transparent hover:from-transparent hover:to-transparent hover:border-[#262957] hover:cursor-pointer"
+              ? "bg-gradient-to-b from-[#1A1D3F] to-[#262B5E] border-[#262957] cursor-not-allowed opacity-70 text-[#414569]"
+              : "bg-gradient-to-b from-[#1A1D3F] to-[#262B5E] border-[#262957] hover:from-transparent hover:to-transparent hover:border-[#262957] hover:cursor-pointer"
           }`}
           style={{ fontFamily: "var(--font-family-sans)" }}
           type="button"
@@ -390,79 +364,29 @@ export const EmailForm: FC<IEmailFormProps> = (props) => {
         name="package"
         control={control}
         render={({ field: { onChange, value } }) => (
-          <div className="w-full text-left relative">
-            <label
-              className="flex flex-col text-white text-sm mb-2"
-              style={{ fontFamily: "var(--font-family-sans)" }}
-            >
-              <FormattedMessage id="form.label.package" />
-            </label>
-            <div className="relative">
-              <select
-                value={value}
-                onChange={(e) => {
-                  const amount = Number(e.target.value);
-                  onChange(amount);
-                  setFormData((prev) => ({ ...prev, package: amount }));
-                }}
-                className="w-full rounded-[12px] border-2 bg-[#212551] text-white border-transparent focus:border-white text-base py-3 px-5 pr-12 outline-none transition-all duration-300 cursor-pointer appearance-none"
-                style={{
-                  fontFamily: "var(--font-family-sans)",
-                }}
-              >
-                {Object.entries(SAFT_PACKAGES).map(([fractions, amount]) => (
-                  <option
-                    value={amount}
-                    key={fractions}
-                    className="bg-[#1B1F47] text-white py-3 hover:bg-[#2A2E5E]"
-                  >
-                    <FormattedMessage
-                      id="form.label.packageName"
-                      values={{
-                        fractions,
-                        amount,
-                      }}
-                    />
-                  </option>
-                ))}
-              </select>
-              {/* Custom Arrow Icon */}
-              <div className="absolute right-5 top-1/2 -translate-y-1/2 pointer-events-none">
-                <svg
-                  width="12"
-                  height="8"
-                  viewBox="0 0 12 8"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M1 1L6 6L11 1"
-                    stroke="#8B8FA8"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </div>
-            </div>
-            {Boolean(errors.package?.message) && (
-              <span
-                className="text-sm text-[#DF1C1C] mt-1 pl-5 block"
-                style={{ fontFamily: "var(--font-family-sans)" }}
-              >
-                {formatMessage({ id: errors.package?.message as any })}
-              </span>
-            )}
-          </div>
+          <Select
+            value={value}
+            onChange={(amount) => {
+              onChange(amount);
+              setFormData((prev) => ({ ...prev, package: amount }));
+            }}
+            options={SAFT_PACKAGES}
+            error={Boolean(errors.package?.message)}
+            helperText={
+              errors.package?.message
+                ? formatMessage({ id: errors.package.message })
+                : undefined
+            }
+          />
         )}
       />
 
       {/* Submit Button */}
       <button
-        className={`px-4 py-[14px] text-base font-normal rounded-[12px] border-2 text-white whitespace-nowrap flex items-center justify-center disabled:opacity-70 disabled:cursor-not-allowed mb-[6px] w-full md:w-min ${
+        className={`px-4 py-[12px] text-base font-normal rounded-[12px] border-2 text-white whitespace-nowrap flex items-center justify-center disabled:opacity-70 disabled:text-[#414569] disabled:cursor-not-allowed mb-[6px] w-full md:w-min ${
           disabled
-            ? "bg-[#3D4471] border-transparent cursor-not-allowed opacity-70"
-            : "bg-gradient-to-b from-[#1A1D3F] to-[#262B5E] border-transparent hover:from-transparent hover:to-transparent hover:border-[#262957] hover:cursor-pointer"
+            ? "bg-gradient-to-b from-[#1A1D3F] to-[#262B5E] border-[#262957] cursor-not-allowed opacity-70"
+            : "bg-gradient-to-b from-[#1A1D3F] to-[#262B5E] border-[#262957] hover:from-transparent hover:to-transparent hover:border-[#262957] hover:cursor-pointer"
         }`}
         style={{ fontFamily: "var(--font-family-sans)" }}
         type="submit"

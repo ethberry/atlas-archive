@@ -39,7 +39,7 @@ export const Footer: FC = () => {
 
         {/* Social Media Icons */}
         <div className="flex justify-center items-center space-x-[8px] tablet:space-x-[16px]">
-          <SocialMediaButton href="https://x.com/coart_market">
+          <SocialMediaButton href="https://x.com/frac_town">
             <svg
               width="20"
               height="18"

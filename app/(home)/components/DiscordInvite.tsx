@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export const DiscordInvite: FC = memo(() => {
   return (
-    <section className="relative w-full py-16 md:py-24 px-4 md:px-0 bg-[#0D0925]">
+    <section className="relative w-full py-16 md:py-24 my-56 md:my-0 bg-[#0D0925]">
       {/* Stars background - Grid pattern */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* Generate stars in a grid */}
@@ -28,10 +28,10 @@ export const DiscordInvite: FC = memo(() => {
 
       <div className="relative flex items-center justify-center">
         {/* Left Egg Image - can overflow section */}
-        <div className="hidden lg:block absolute left-0 top-[40%] -translate-y-1/2 w-[244px] xl:w-[244px] pointer-events-none">
+        <div className=" absolute left-0 -top-[50%] md:top-[50%] -translate-y-1/2 w-[158px] md:w-[264px] pointer-events-none">
           <Image
-            src="/assets/img/ds-2.png"
-            width={244}
+            src="/assets/img/ds-1.png"
+            width={264}
             height={465}
             alt="Fabergé Egg Left"
             className="w-full h-auto object-contain"
@@ -62,7 +62,7 @@ export const DiscordInvite: FC = memo(() => {
             href="https://minisite.uno/discordfractown"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-8 px-7 py-3 text-[20px] font-normal rounded-[30px] bg-linear-to-b from-[#060F79] to-[#3F479C] border-2 border-[#33399A] hover:border-[#33399A] hover:from-transparent hover:to-transparent text-white cursor-pointer"
+            className="mt-8 px-7 py-3 text-[20px] font-normal rounded-[30px] bg-linear-to-b from-[#060F79] to-[#3F479C] border-2 border-[#33399A] hover:border-[#33399A] hover:from-transparent hover:to-transparent text-white cursor-pointer transition-colors duration-300"
             style={{ fontFamily: "var(--font-family-sans)" }}
           >
             <span className="md:hidden">
@@ -75,10 +75,10 @@ export const DiscordInvite: FC = memo(() => {
         </div>
 
         {/* Right Egg Image - can overflow section */}
-        <div className="hidden lg:block absolute right-0 top-[30%] -translate-y-1/2 w-[244px] xl:w-[244px] pointer-events-none">
+        <div className=" absolute right-0 top-[150%] md:top-[50%] -translate-y-1/2 w-[158px] md:w-[264px] pointer-events-none">
           <Image
-            src="/assets/img/ds-1.png"
-            width={244}
+            src="/assets/img/ds-2.png"
+            width={264}
             height={465}
             alt="Fabergé Egg Right"
             className="w-full h-auto object-contain"

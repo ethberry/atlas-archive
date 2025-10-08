@@ -22,7 +22,7 @@ export const Input: FC<IInputProps> = (props) => {
           name={name}
           disabled={disabled}
           className={clsx(
-            "w-full rounded-[12px] text-base border-2 py-3 px-5 outline-none transition-all duration-300 mt-1 border-transparent focus:border-white",
+            "w-full rounded-[12px] text-base border-2 py-2 px-5 outline-none transition-all duration-300 mt-1 border-transparent focus:border-white",
             disabled
               ? "bg-[#3D4471] border-transparent text-[#414569] placeholder:text-[#777AA6] cursor-not-allowed"
               : error

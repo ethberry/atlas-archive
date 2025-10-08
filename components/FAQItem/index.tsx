@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback, memo } from "react";
+import { useState, useCallback, memo, useRef, useEffect } from "react";
 
 interface IFAQItemProps {
   question: string;
@@ -9,18 +9,30 @@ interface IFAQItemProps {
 
 const FAQItem = memo<IFAQItemProps>(({ question, answer }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [height, setHeight] = useState<number>(0);
+  const contentRef = useRef<HTMLDivElement>(null);
 
   const toggleOpen = useCallback(() => {
     setIsOpen((prev) => !prev);
   }, []);
 
+  useEffect(() => {
+    if (contentRef.current) {
+      if (isOpen) {
+        setHeight(contentRef.current.scrollHeight);
+      } else {
+        setHeight(0);
+      }
+    }
+  }, [isOpen]);
+
   return (
     <div className="relative w-full">
       <button
         onClick={toggleOpen}
-        className={`w-full flex justify-between items-center text-left px-[14px] py-[16px] rounded-[12px] transition-all duration-300 ${
+        className={`w-full flex justify-between items-center text-left px-[14px] py-[8px] rounded-[12px] transition-all duration-300 ${
           isOpen
-            ? "bg-[#1B1B41] border-2 border-[#262957]"
+            ? "bg-[#1B1B41] border-2 border-[#262957] rounded-b-none border-b-0"
             : "bg-[#1B1B41] border-2 border-transparent hover:border-[#262957]"
         }`}
       >
@@ -30,19 +42,31 @@ const FAQItem = memo<IFAQItemProps>(({ question, answer }) => {
         >
           {question}
         </h3>
-        <span className="text-white text-2xl font-light flex-shrink-0">
-          {isOpen ? "−" : "+"}
+        <span
+          className="text-white text-2xl font-light flex-shrink-0 transition-transform duration-300"
+          style={{
+            transform: isOpen ? "rotate(45deg)" : "rotate(0deg)",
+          }}
+        >
+          +
         </span>
       </button>
 
-      {isOpen && (
+      <div
+        ref={contentRef}
+        className="overflow-hidden transition-all duration-500 ease-in-out"
+        style={{
+          maxHeight: isOpen ? `${height}px` : "0px",
+          opacity: isOpen ? 1 : 0,
+        }}
+      >
         <div
-          className="px-4 py-2 text-gray-300 text-[14px] md:text-[18px] leading-relaxed bg-[#21254A] rounded-b-[12px] -mt-3 pt-4 border-2 border-t-0 border-[#262957]"
+          className="px-4 py-4 text-gray-300 text-[14px] md:text-[18px] leading-relaxed bg-[#21254A] rounded-b-[12px] border-2 border-t-0 border-[#262957] mt-[-2px]"
           style={{ fontFamily: "var(--font-family-sans)" }}
         >
           {answer}
         </div>
-      )}
+      </div>
     </div>
   );
 });

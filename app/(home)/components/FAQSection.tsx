@@ -63,7 +63,7 @@ export const FAQSection: FC = memo(() => {
         <div className="flex justify-center mt-12">
           <button
             onClick={handleLearnMore}
-            className="px-7 py-3 text-[20px] font-normal rounded-[30px] bg-linear-to-b from-[#060F79] to-[#3F479C] border-2 border-[#33399A] hover:border-[#33399A] hover:from-transparent hover:to-transparent text-white cursor-pointer"
+            className="px-7 py-3 text-[20px] font-normal rounded-[30px] bg-linear-to-b from-[#060F79] to-[#3F479C] border-2 border-[#33399A] hover:border-[#33399A] hover:from-transparent hover:to-transparent text-white cursor-pointer transition-colors duration-300"
             style={{ fontFamily: "var(--font-family-sans)" }}
           >
             <FormattedMessage id="form.button.learnMore" />
