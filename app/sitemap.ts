@@ -1,24 +1,31 @@
 import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const date = new Date();
   return [
     {
-      url: "https://fractown.com/",
-      lastModified: new Date(),
+      url: process.env.NEXT_PUBLIC_BASE_URL,
+      lastModified: date,
       changeFrequency: "monthly",
       priority: 1,
     },
     {
-      url: "https://fractown.com/terms-of-service",
-      lastModified: new Date(),
+      url: `${process.env.NEXT_PUBLIC_BASE_URL}/terms-of-service`,
+      lastModified: date,
       changeFrequency: "monthly",
       priority: 0.9,
     },
     {
-      url: "https://fractown.com/data-room",
-      lastModified: new Date(),
+      url: `${process.env.NEXT_PUBLIC_BASE_URL}/saft`,
+      lastModified: date,
       changeFrequency: "monthly",
-      priority: 0.8,
+      priority: 0.9,
+    },
+    {
+      url: `${process.env.NEXT_PUBLIC_BASE_URL}/thank-you`,
+      lastModified: date,
+      changeFrequency: "monthly",
+      priority: 0.1,
     },
   ];
 }
