@@ -48,8 +48,10 @@ export const validationSchema = verificationSchema
     nonUsPerson: z.boolean().refine((val) => val === true, {
       message: "form.error.nonUsPerson.required",
     }),
-    package: z.number().refine((val) => SAFT_PACKAGES.includes(val), {
-      message: `Must be one of ${SAFT_PACKAGES.join(", ")}`,
-    }),
+    package: z
+      .number()
+      .refine((val) => Object.values(SAFT_PACKAGES).includes(val), {
+        message: `Must be one of ${Object.values(SAFT_PACKAGES).join(", ")}`,
+      }),
   })
   .strict();

@@ -6,14 +6,21 @@
       "termsOfUse": "Terms & Conditions"
     },
     "header": {
-      "logo": "Fractown",
-      "discord": "Discord"
+      "discord": "Discord",
+      "logo": "Fractown"
     },
     "messages": {
       "verificationCode": "Verification code sent!"
     }
   },
   "form": {
+    "button": {
+      "learnMore": "View details",
+      "retry": "Resend",
+      "retryIn": "Retry in {seconds}",
+      "saft": "Submit",
+      "verify": "Send Code"
+    },
     "error": {
       "address": {
         "required": "Address is required",
@@ -55,97 +62,91 @@
       "lastName": "Last name on contract",
       "nonUsPerson": "I'm not a US person",
       "package": "Select number of fractions",
+      "packageName": "{fractions, number} fractions ({amount, number} USD)",
       "verificationCode": "Enter verification code from email"
+    },
+    "pdf": {
+      "error": "Error loading document",
+      "loading": "Loading document...",
+      "loadingPage": "Loading page...",
+      "pageIndicator": "{current} / {total}",
+      "pleaseWait": "Please wait",
+      "preparing": "Preparing document...",
+      "scrollToEnd": "Scroll to the end"
     },
     "placeholder": {
       "address": "90210, USA, San Francisco, Builder Street, 223A",
-      "email": "@Andrey",
+      "email": "me@gmail.com",
       "firstName": "First Name",
       "lastName": "Last Name",
       "verificationCode": "000000"
-    },
-    "button": {
-      "saft": "Submit",
-      "verify": "Send Code",
-      "retry": "Resend",
-      "retryIn": "Retry in {seconds}",
-      "learnMore": "View details"
-    },
-    "pdf": {
-      "preparing": "Preparing document...",
-      "loading": "Loading document...",
-      "loadingPage": "Loading page...",
-      "error": "Error loading document",
-      "scrollToEnd": "Scroll to the end",
-      "pleaseWait": "Please wait",
-      "pageIndicator": "{current} / {total}"
     }
   },
   "pages": {
     "landing": {
-      "title": "Grab destiny by the...!",
-      "hero": {
-        "mainTitle": "For the first time ever - own a share of a Fabergé egg!",
-        "description1": "The first 3 million shares are live now - with a 66% launch discount.{br} Don’t miss your chance!",
-        "description2": "Fabergé eggs keep rising in value, often selling for tens of millions.",
-        "description3": "We secured one from a private European collection - now it can be yours too.",
-        "description4": "Ownership is divided into 100 million unique crypto-fractions.",
-        "learnMore": "View details"
+      "discord": {
+        "button": "Join Discord Community",
+        "join": "Join",
+        "subtitle": "Unlock exclusive updates and {br} opportunities!",
+        "title": "Join our Discord"
+      },
+      "faq": {
+        "answer1": "A share in a Blue Chip Artwork lets you benefit from its value growth and sell it anytime as a liquid asset. For 20+ years, Blue Chip art has outperformed the S&P 500.",
+        "answer2": "The first 3M of 100M shares are available now through SAFT contracts. Buying today at a 66% discount, you’ll receive them in your personal wallet on the FracTown RWA Platform.",
+        "answer3": "On CoArt Marketplace you can trade both entire physical assets and fractional shares via our FCC (Fractional Crypto Certificate), almost as instantly as NFTs.",
+        "answer4": "Ownership rights will be split into 300 lots, each with different share amounts. The auction runs for two weeks in early December, open to retail investors worldwide.",
+        "answer5": "After the auction, it will be placed in a European museum or freeport vault. FracTown will retain 3% of the shares to manage the asset, while the remaining shares will trade freely on CoArt Marketplace.",
+        "question1": "Why would I need a “fractional share”",
+        "question2": "How do I get my shares?",
+        "question3": "What can I do with my share?",
+        "question4": "How will the auction work?",
+        "question5": "Where will the egg be kept?",
+        "title": "FAQ"
       },
       "features": {
         "item1": "Trade your fractions at market price once all 100 million shares are sold by Christmas at the global auction.",
         "item2": "Created by a leading Fabergé master in the late 19th century - authenticity fully confirmed.",
         "item3": "Stored safely in a high-security freeport vault after fractionalization."
       },
-      "discord": {
-        "title": "Join our Discord",
-        "subtitle": "Unlock exclusive updates and {br} opportunities!",
-        "button": "Join Discord Community",
-        "join": "Join"
+      "hero": {
+        "description1": "The first 3 million shares are live now - with a 66% launch discount.{br} Don’t miss your chance!",
+        "description2": "Fabergé eggs keep rising in value, often selling for tens of millions.",
+        "description3": "We secured one from a private European collection - now it can be yours too.",
+        "description4": "Ownership is divided into 100 million unique crypto-fractions.",
+        "learnMore": "View details",
+        "mainTitle": "For the first time ever - own a share of a Fabergé egg!"
       },
       "roadmap": {
-        "title": "Roadmap",
-        "sep2025": {
-          "period": "OCTOBER 2025",
-          "description": "The Fabergé egg becomes the first Blue Chip Artwork on our Real-World Assets platform."
+        "novDec2025": {
+          "description": "Transfer of IP and tech to FracTown C-Corp (Delaware, USA). Launch of the second marketplace in the U.S.",
+          "period": "Q1 2026"
         },
         "octNov2025": {
-          "period": "Q4 2025",
-          "description": "Launch of our first marketplace (CoArt Marketplace, Lithuania, EU)."
-        },
-        "novDec2025": {
-          "period": "Q1 2026",
-          "description": "Transfer of IP and tech to FracTown C-Corp (Delaware, USA). Launch of the second marketplace in the U.S."
+          "description": "Launch of our first marketplace (CoArt Marketplace, Lithuania, EU).",
+          "period": "Q4 2025"
         },
         "q1_2026": {
-          "period": "Q2 2026",
-          "description": "Expansion of the global marketplace network via API integration. Kick-off of our own blockchain for the fast-growing RWA sector."
-        }
+          "description": "Expansion of the global marketplace network via API integration. Kick-off of our own blockchain for the fast-growing RWA sector.",
+          "period": "Q2 2026"
+        },
+        "sep2025": {
+          "description": "The Fabergé egg becomes the first Blue Chip Artwork on our Real-World Assets platform.",
+          "period": "OCTOBER 2025"
+        },
+        "title": "Roadmap"
       },
-      "faq": {
-        "title": "FAQ",
-        "question1": "Why would I need a “fractional share”",
-        "answer1": "A share in a Blue Chip Artwork lets you benefit from its value growth and sell it anytime as a liquid asset. For 20+ years, Blue Chip art has outperformed the S&P 500.",
-        "question2": "How do I get my shares?",
-        "answer2": "The first 3M of 100M shares are available now through SAFT contracts. Buying today at a 66% discount, you’ll receive them in your personal wallet on the FracTown RWA Platform.",
-        "question3": "What can I do with my share?",
-        "answer3": "On CoArt Marketplace you can trade both entire physical assets and fractional shares via our FCC (Fractional Crypto Certificate), almost as instantly as NFTs.",
-        "question4": "How will the auction work?",
-        "answer4": "Ownership rights will be split into 300 lots, each with different share amounts. The auction runs for two weeks in early December, open to retail investors worldwide.",
-        "question5": "Where will the egg be kept?",
-        "answer5": "After the auction, it will be placed in a European museum or freeport vault. FracTown will retain 3% of the shares to manage the asset, while the remaining shares will trade freely on CoArt Marketplace."
-      }
+      "title": "Grab destiny by the...!"
     },
     "saft": {
       "title": "SAFT-contract"
     },
     "thankYou": {
-      "title": "Crack the egg...!",
-      "subtitle": "Congratulations!",
+      "button": "I want to buy more",
       "paragraph1": "You have become the owner of a share of ownership rights to a unique Fabergé egg and have joined the community of select collectors.",
       "paragraph2": "We will soon send a SAFT contract confirming your acquisition to your specified email.",
       "paragraph3": "Increase your package right now and get additional privileges for the first owners of a unique asset!",
-      "button": "I want to buy more"
+      "subtitle": "Congratulations!",
+      "title": "Crack the egg...!"
     }
   }
 }

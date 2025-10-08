@@ -410,13 +410,19 @@ export const EmailForm: FC<IEmailFormProps> = (props) => {
                   fontFamily: "var(--font-family-sans)",
                 }}
               >
-                {SAFT_PACKAGES.map((pkg) => (
+                {Object.entries(SAFT_PACKAGES).map(([fractions, amount]) => (
                   <option
-                    value={pkg}
-                    key={pkg}
+                    value={amount}
+                    key={fractions}
                     className="bg-[#1B1F47] text-white py-3 hover:bg-[#2A2E5E]"
                   >
-                    {pkg} фракций (${pkg})
+                    <FormattedMessage
+                      id="form.label.packageName"
+                      values={{
+                        fractions,
+                        amount,
+                      }}
+                    />
                   </option>
                 ))}
               </select>

@@ -1,3 +1,9 @@
-export const SAFT_PACKAGES = [10, 30, 100];
+export const SAFT_PACKAGES = {
+  1000: 30,
+  3000: 90,
+  10000: 300,
+  30000: 900,
+  100000: 3000,
+};
 export const CODE_TIMEOUT_IN_MINUTES = 1; // 1 minutes
 export const CODE_TIMEOUT_IN_MILLISECONDS = CODE_TIMEOUT_IN_MINUTES * 60 * 1000;
