@@ -76,7 +76,7 @@ export const MobileMenu: FC<IMobileMenuProps> = memo(({ isOpen, onClose }) => {
               SAFT
             </Link>
             <Link
-              href="/terms-and-conditions"
+              href="/terms-of-use"
               onClick={onClose}
               className="text-white text-[24px] font-sans hover:text-[#4c5fd5] transition-colors"
             >

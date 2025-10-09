@@ -19,6 +19,6 @@ export const LANGUAGE_OPTIONS: Array<{
   value: EnabledLanguages;
   label: string;
 }> = [
-  { value: EnabledLanguages.EN, label: "Eng" },
-  { value: EnabledLanguages.RU, label: "Rus" },
+  { value: EnabledLanguages.EN, label: "EN" },
+  { value: EnabledLanguages.RU, label: "RU" },
 ];

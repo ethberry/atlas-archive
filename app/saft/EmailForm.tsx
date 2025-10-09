@@ -7,8 +7,8 @@ import { useMutation } from "@tanstack/react-query";
 import { PdfPreview } from "@/app/saft/PdfPreview";
 import type { IUserData } from "@/app/saft/interfaces";
 import { Input } from "@/components/Form/Input";
-import { Select } from "@/components/ui/select";
-import { Checkbox } from "@/components/ui/checkbox";
+import { Select } from "@/components/Form/select";
+import { Checkbox } from "@/components/Form/checkbox";
 import {
   CODE_TIMEOUT_IN_MILLISECONDS,
   SAFT_PACKAGES,

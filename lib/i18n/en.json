@@ -3,7 +3,7 @@
     "footer": {
       "home": "Home",
       "saft": "SAFT",
-      "termsOfUse": "Terms & Conditions"
+      "termsOfUse": "Terms of Use"
     },
     "header": {
       "discord": "Discord",
@@ -28,7 +28,7 @@
         "tooShort": "Address is too short"
       },
       "consent": {
-        "required": "You must agree to the terms and conditions"
+        "required": "You must agree to the <a>Terms of Use</a>"
       },
       "email": {
         "invalid": "Invalid email format",
@@ -56,7 +56,7 @@
     },
     "label": {
       "address": "Address",
-      "consent": "I agree to the terms and conditions",
+      "consent": "I agree to the <a>Terms of Use</a>",
       "email": "Email for contract",
       "firstName": "First name on contract",
       "lastName": "Last name on contract",
@@ -147,6 +147,10 @@
       "paragraph3": "Increase your package right now and get additional privileges for the first owners of a unique asset!",
       "subtitle": "Congratulations!",
       "title": "Crack the egg...!"
+    },
+    "notFound": {
+      "title": "Page not found",
+      "button": "I want to own a share of the Fabergé egg!"
     }
   }
 }

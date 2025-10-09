@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { FC } from "react";
 import { FormattedMessage } from "react-intl";
 
@@ -42,7 +43,20 @@ export const Checkbox: FC<ICheckboxProps> = ({
         className="text-white text-[14px] md:text-base cursor-pointer"
         style={{ fontFamily: "var(--font-family-sans)" }}
       >
-        <FormattedMessage id={labelId} />
+        <FormattedMessage
+          id={labelId}
+          values={{
+            a: (chunks) => (
+              <Link
+                href="/terms-of-use"
+                className="text-[#4c5fd5] hover:text-[#4c5fd5] transition-colors"
+                rel="noopener noreferrer"
+              >
+                {chunks}
+              </Link>
+            ),
+          }}
+        />
       </label>
     </div>
   );

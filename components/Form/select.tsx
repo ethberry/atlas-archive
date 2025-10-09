@@ -3,7 +3,7 @@
 import { FC, useState, useRef, useEffect } from "react";
 import { FormattedMessage } from "react-intl";
 
-interface Option {
+interface IOption {
   value: number;
   fractions: number;
   amount: number;
@@ -25,7 +25,7 @@ export const Select: FC<ISelectProps> = ({
   helperText,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedOption, setSelectedOption] = useState<Option | null>(null);
+  const [selectedOption, setSelectedOption] = useState<IOption | null>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   // Convert options to array and find selected option
@@ -55,7 +55,7 @@ export const Select: FC<ISelectProps> = ({
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  const handleOptionClick = (option: Option) => {
+  const handleOptionClick = (option: IOption) => {
     onChange(option.value);
     setSelectedOption(option);
     setIsOpen(false);

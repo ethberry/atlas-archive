@@ -59,7 +59,7 @@ export const Language: FC = memo(() => {
       </DropdownMenuTrigger>
 
       <DropdownMenuContent
-        className="bg-transparent border-2 border-[#262957] border-t-0 rounded-[12px] rounded-t-none min-w-[80px] max-w-[80px] w-full -mt-2 px-0 outline-none"
+        className="bg-transparent border-2 border-[#262957] border-t-0 rounded-[12px] rounded-t-none min-w-[76px] max-w-[76px] w-full -mt-2 px-0 outline-none"
         align="end"
       >
         {LANGUAGE_OPTIONS.map((option) => (
