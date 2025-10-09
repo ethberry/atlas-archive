@@ -24,24 +24,21 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "Fractown — Инвестируй в будущее, владея прошлым",
-  description:
-    "Стань совладельцем Яйца Фаберже — легенды искусства и символа роскоши. Fractown открывает доступ к уникальным артефактам через цифровые доли.",
+  title: "Fractown — Turn Heritage into your future!",
+  description: "Invest in masterpieces that never lose their shine.",
   openGraph: {
-    locale: "ru_RU",
+    locale: "en_US",
     siteName: "Fractown",
-    title: "Инвестируй в будущее, владея прошлым",
-    description:
-      "Стань совладельцем Яйца Фаберже — легенды искусства и символа роскоши. Fractown открывает доступ к уникальным артефактам через цифровые доли.",
+    title: "Turn Heritage into your future!",
+    description: "Invest in masterpieces that never lose their shine.",
     images: `${process.env.NEXT_PUBLIC_BASE_URL}/assets/og-img.png`,
     type: "website",
     url: `${process.env.NEXT_PUBLIC_BASE_URL}`,
   },
   twitter: {
     card: "summary_large_image",
-    title: "Инвестируй в будущее, владея прошлым",
-    description:
-      "Стань совладельцем Яйца Фаберже — легенды искусства и символа роскоши. Fractown открывает доступ к уникальным артефактам через цифровые доли.",
+    title: "Turn Heritage into your future!",
+    description: "Invest in masterpieces that never lose their shine.",
     images: `${process.env.NEXT_PUBLIC_BASE_URL}/assets/og-img.png`,
   },
 };
