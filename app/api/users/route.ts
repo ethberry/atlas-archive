@@ -8,6 +8,8 @@ import { createUser, getUserByEmail } from "@/lib/db/models/users";
 import { validationSchema } from "@/app/saft/validation";
 import { createSignature } from "@/app/api/paykilla/utils";
 import { getVerificationCodeByEmail } from "@/lib/db/models/verification";
+import { SAFT_PACKAGES } from "@/app/saft/constants";
+import { EnabledLanguages } from "@/lib/i18n";
 
 export async function POST(req: Request) {
   const json = await req.json();
@@ -32,18 +34,27 @@ export async function POST(req: Request) {
 
     const invoice = await createInvoice(user.id, body.package);
 
+    const fractions =
+      Object.entries(SAFT_PACKAGES).find(([, v]) => v === body.package)?.[0] ||
+      "N/A";
+
     const data = {
       timestamp: Date.now(),
       account: "0x7292075804bd92bebc7f9a64e6909c223dc36749",
       payload: {
-        description: `Payment for package: $${body.package}`,
+        description:
+          body.language === EnabledLanguages.RU
+            ? `Оплата за ${fractions} фракций яйца Фаберже`
+            : `Payment for ${fractions} fractions of a Fabergé egg`,
         fiatAmount: body.package,
         fiatCurrency: "USD",
         cryptoCurrencies: [
-          "USDC",
-          "USDT",
           "USDT_TRX",
           "USDT_BSC",
+          "USDT_TON",
+          "USDT",
+          "USDC",
+          "TON",
           "BNB",
           "TRX",
           "DAI",
