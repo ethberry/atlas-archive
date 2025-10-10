@@ -9,6 +9,7 @@ import type { IUserData } from "@/app/saft/interfaces";
 import { Input } from "@/components/Form/Input";
 import { Select } from "@/components/Form/select";
 import { Checkbox } from "@/components/Form/checkbox";
+import { Countdown } from "@/components/Countdown";
 import {
   CODE_TIMEOUT_IN_MILLISECONDS,
   SAFT_PACKAGES,
@@ -37,7 +38,6 @@ export const EmailForm: FC<IEmailFormProps> = (props) => {
   const [verificationCodeSent, setVerificationCodeSent] =
     useState<boolean>(false);
   const [millisecondsLeft, setMillisecondsLeft] = useState(0);
-  const [pageTimerLeft, setPageTimerLeft] = useState(10 * 60 * 1000); // 10 minutes in milliseconds
 
   const formDateRT = watch();
   const disabled = isSubmitting || !hasScrolledToEnd;
@@ -108,15 +108,6 @@ export const EmailForm: FC<IEmailFormProps> = (props) => {
     return () => clearInterval(intervalId); // cleanup on unmount
   }, [verificationCodeSent]);
 
-  // Page timer countdown from 10 minutes
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setPageTimerLeft((prev) => Math.max(prev - 1000, 0));
-    }, 1000);
-
-    return () => clearInterval(intervalId); // cleanup on unmount
-  }, []);
-
   return (
     <form
       className="space-y-6 w-full max-w-3xl mx-auto"
@@ -160,62 +151,7 @@ export const EmailForm: FC<IEmailFormProps> = (props) => {
         </div>
 
         <div className="w-full md:w-auto flex justify-center gap-3">
-          <div className="w-full max-w-[133px] flex flex-col gap-3">
-            <div
-              className="text-base text-white text-right flex items-center justify-end gap-[2px]"
-              style={{ fontFamily: "var(--font-family-sans)" }}
-            >
-              <span className="inline-block w-[25px] min-w-[25px] text-[50px] text-center">
-                {String(Math.floor(pageTimerLeft / 60000)).padStart(2, "0")[0]}
-              </span>
-              <span
-                className="inline-block w-[25px] min-w-[25px] text-[50px] text-center flip-number"
-                key={`min-${String(Math.floor(pageTimerLeft / 60000)).padStart(2, "0")[1]}`}
-              >
-                {String(Math.floor(pageTimerLeft / 60000)).padStart(2, "0")[1]}
-              </span>
-              <span className="w-[25px] min-w-[25px] text-[50px] text-center">
-                :
-              </span>
-              <span
-                className="inline-block w-[25px] min-w-[25px] text-[50px] text-center flip-number"
-                key={`sec-tens-${String(Math.floor((pageTimerLeft % 60000) / 1000)).padStart(2, "0")[0]}`}
-              >
-                {
-                  String(Math.floor((pageTimerLeft % 60000) / 1000)).padStart(
-                    2,
-                    "0",
-                  )[0]
-                }
-              </span>
-              <span
-                className="inline-block w-[25px] min-w-[25px] text-[50px] text-center flip-number"
-                key={`sec-ones-${String(Math.floor((pageTimerLeft % 60000) / 1000)).padStart(2, "0")[1]}`}
-              >
-                {
-                  String(Math.floor((pageTimerLeft % 60000) / 1000)).padStart(
-                    2,
-                    "0",
-                  )[1]
-                }
-              </span>
-            </div>
-            <div
-              className="relative w-full h-[12px] rounded-full"
-              style={{ background: "rgba(30, 35, 70, 0.5)" }}
-            >
-              <div
-                className="absolute top-0 left-0 h-full rounded-full transition-all duration-1000 ease-linear"
-                style={{
-                  width: `${(pageTimerLeft / (10 * 60 * 1000)) * 100}%`,
-                  background: "#2887CC",
-                  boxShadow:
-                    "0 0 30px 8px rgba(66, 165, 245, 0.8), 0 0 60px 15px rgba(66, 165, 245, 0.4)",
-                  filter: "brightness(1.2)",
-                }}
-              />
-            </div>
-          </div>
+          <Countdown initialMilliseconds={10 * 60 * 1000} />
         </div>
       </div>
 
