@@ -48,12 +48,14 @@ export const updateInvoiceStatus = async (
     .from("invoices")
     .update({
       status,
+      updated_at: new Date().toISOString(),
     })
     .eq("id", id)
     .select()
     .maybeSingle();
 
   if (error) {
+    console.error(error);
     captureException(error);
     throw error;
   }

@@ -11,6 +11,7 @@ import { sendTemplate } from "@/app/api/email/utils";
 import { getInvoiceById, updateInvoiceStatus } from "@/lib/db/models/invoices";
 import { EnabledLanguages } from "@/lib/i18n";
 import { getSaftPublicUrl, storeSaftContract } from "@/lib/db/storage/saft";
+import { updateUserStage } from "@/lib/db/models/users";
 
 export async function POST(req: Request) {
   const text = await req.text();
@@ -60,6 +61,7 @@ export async function POST(req: Request) {
       }
       case PaykillaEventTypes.INVOICE_PAID: {
         await updateInvoiceStatus(externalId, "PAID");
+        await updateUserStage(invoice.user_id, "PAID");
 
         const pdfDoc = await generatePdf({
           firstName: invoice.user.first_name,

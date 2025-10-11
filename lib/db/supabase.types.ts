@@ -83,6 +83,8 @@ export type Database = {
           non_us_person: boolean
           stage: Database["public"]["Enums"]["UserStage"]
           updated_at: string
+          upsale1: string | null
+          upsale2: string | null
         }
         Insert: {
           address: string
@@ -96,6 +98,8 @@ export type Database = {
           non_us_person?: boolean
           stage?: Database["public"]["Enums"]["UserStage"]
           updated_at?: string
+          upsale1?: string | null
+          upsale2?: string | null
         }
         Update: {
           address?: string
@@ -109,6 +113,8 @@ export type Database = {
           non_us_person?: boolean
           stage?: Database["public"]["Enums"]["UserStage"]
           updated_at?: string
+          upsale1?: string | null
+          upsale2?: string | null
         }
         Relationships: []
       }
@@ -122,7 +128,7 @@ export type Database = {
     Enums: {
       InvoiceStatus: "NEW" | "CREATED" | "EXPIRED" | "PAID"
       UserLanguage: "EN" | "RU"
-      UserStage: "NEW" | "PAID" | "FOLLOWUP" | "UPSALE"
+      UserStage: "NEW" | "PAID" | "UPSALE_1" | "UPSALE_2"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -252,7 +258,7 @@ export const Constants = {
     Enums: {
       InvoiceStatus: ["NEW", "CREATED", "EXPIRED", "PAID"],
       UserLanguage: ["EN", "RU"],
-      UserStage: ["NEW", "PAID", "FOLLOWUP", "UPSALE"],
+      UserStage: ["NEW", "PAID", "UPSALE_1", "UPSALE_2"],
     },
   },
 } as const

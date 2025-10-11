@@ -10,22 +10,22 @@ export const createSignature = (body: string, secretKey: string) => {
 export enum EmailType {
   EMAIL_VERIFICATION = "EMAIL_VERIFICATION",
   SAFT_CONTRACT = "SAFT_CONTRACT",
-  FOLLOW_UP = "FOLLOW_UP",
-  UP_SALE = "UP_SALE",
+  UPSALE_1 = "UPSALE_1",
+  UPSALE_2 = "UPSALE_2",
 }
 
 export const templateMapping = {
   [EnabledLanguages.EN]: {
     [EmailType.EMAIL_VERIFICATION]: 7363250,
     [EmailType.SAFT_CONTRACT]: 7373752,
-    [EmailType.FOLLOW_UP]: 7373755,
-    [EmailType.UP_SALE]: 7373757,
+    [EmailType.UPSALE_1]: 7373755,
+    [EmailType.UPSALE_2]: 7373757,
   },
   [EnabledLanguages.RU]: {
     [EmailType.EMAIL_VERIFICATION]: 7363250,
     [EmailType.SAFT_CONTRACT]: 7363257,
-    [EmailType.FOLLOW_UP]: 7373747,
-    [EmailType.UP_SALE]: 7373748,
+    [EmailType.UPSALE_1]: 7373747,
+    [EmailType.UPSALE_2]: 7373748,
   },
 };
 
@@ -37,4 +37,17 @@ export const getEmailTemplate = (
     return 7358617;
   }
   return templateMapping[language][type];
+};
+
+export const mapSeries = <T>(
+  tasks: Array<() => Promise<T>>,
+): Promise<Array<T>> => {
+  return tasks.reduce(
+    (promiseChain, currentTask) => {
+      return promiseChain.then((chainResults) =>
+        currentTask().then((currentResult) => [...chainResults, currentResult]),
+      );
+    },
+    Promise.resolve([] as Array<T>),
+  );
 };

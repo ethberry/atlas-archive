@@ -148,6 +148,7 @@ export const Select: FC<ISelectProps> = ({
                   <span>
                     <FormattedMessage
                       id="form.label.packageName"
+                      key={option.fractions}
                       values={{
                         fractions: option.fractions,
                         amount: option.amount,
