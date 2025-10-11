@@ -6,24 +6,40 @@ import { IUserData } from "@/app/saft/interfaces";
 export const generatePdf = async (formData: IUserData) => {
   try {
     const existingPdfBytes = await fetch(
-      `${process.env.BASE_URL || process.env.NEXT_PUBLIC_BASE_URL}/pdf/saft1.pdf`,
+      `${process.env.BASE_URL || process.env.NEXT_PUBLIC_BASE_URL}/pdf/template.pdf`,
     ).then((res) => res.arrayBuffer());
     const pdfDoc = await PDFDocument.load(existingPdfBytes);
 
     const form = pdfDoc.getForm();
 
     // Example field names in the template
+    form.getTextField("date").setText(
+      new Date().toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "long",
+        day: "2-digit",
+      }),
+    );
+
     if (formData.firstName) {
-      form.getTextField("Name").setText(formData.firstName);
+      form.getTextField("name").setText(formData.firstName);
     }
     if (formData.lastName) {
-      form.getTextField("Surname").setText(formData.lastName);
+      form.getTextField("surname").setText(formData.lastName);
+    }
+    if (formData.firstName || formData.lastName) {
+      form
+        .getTextField("buyer")
+        .setText(`${formData.firstName || ""} ${formData.lastName || ""}`);
     }
     if (formData.email) {
-      form.getTextField("Email").setText(formData.email);
+      form.getTextField("email").setText(formData.email);
     }
     if (formData.address) {
-      form.getTextField("Address").setText(formData.address);
+      form.getTextField("address").setText(formData.address);
+    }
+    if (formData.package) {
+      form.getTextField("amount").setText(formData.package.toString());
     }
 
     // makes PDF read-only

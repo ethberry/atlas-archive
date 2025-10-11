@@ -27,7 +27,7 @@ export const Saft: FC = () => {
       address: "",
       consent: false,
       nonUsPerson: false,
-      package: 10,
+      package: 30,
       verificationCode: "",
       language,
     },

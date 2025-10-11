@@ -198,6 +198,27 @@ export const EmailForm: FC<IEmailFormProps> = (props) => {
         />
       </div>
 
+      {/* Address Field */}
+      <Controller
+        name="address"
+        control={control}
+        render={({ field: { onChange, value } }) => (
+          <Input
+            name="address"
+            value={value}
+            onChange={onChange}
+            maxLength={255}
+            error={Boolean(errors.address?.message)}
+            helperText={
+              errors.address?.message
+                ? formatMessage({ id: errors.address.message })
+                : void 0
+            }
+            onBlur={handleBlur}
+          />
+        )}
+      />
+
       {/* Email and Verification Code Row */}
       <div className="flex flex-col md:flex-row gap-4 md:items-end">
         <div className="flex-1">
@@ -273,27 +294,6 @@ export const EmailForm: FC<IEmailFormProps> = (props) => {
           )}
         />
       )}
-
-      {/* Address Field */}
-      <Controller
-        name="address"
-        control={control}
-        render={({ field: { onChange, value } }) => (
-          <Input
-            name="address"
-            value={value}
-            onChange={onChange}
-            maxLength={255}
-            error={Boolean(errors.address?.message)}
-            helperText={
-              errors.address?.message
-                ? formatMessage({ id: errors.address.message })
-                : void 0
-            }
-            onBlur={handleBlur}
-          />
-        )}
-      />
 
       {/* Package Selection */}
       <Controller
