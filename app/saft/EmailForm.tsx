@@ -164,7 +164,11 @@ export const EmailForm: FC<IEmailFormProps> = (props) => {
             <Input
               name="firstName"
               value={value}
-              onChange={onChange}
+              onChange={(e) => {
+                const inputValue = e.target.value;
+                const filteredValue = inputValue.replace(/[^A-Z\s]/gi, "");
+                onChange(filteredValue);
+              }}
               maxLength={40}
               error={Boolean(errors.firstName?.message)}
               helperText={
@@ -184,7 +188,11 @@ export const EmailForm: FC<IEmailFormProps> = (props) => {
             <Input
               name="lastName"
               value={value}
-              onChange={onChange}
+              onChange={(e) => {
+                const inputValue = e.target.value;
+                const filteredValue = inputValue.replace(/[^A-Z\s]/gi, "");
+                onChange(filteredValue);
+              }}
               maxLength={40}
               error={Boolean(errors.lastName?.message)}
               helperText={
@@ -206,7 +214,14 @@ export const EmailForm: FC<IEmailFormProps> = (props) => {
           <Input
             name="address"
             value={value}
-            onChange={onChange}
+            onChange={(e) => {
+              const inputValue = e.target.value;
+              const filteredValue = inputValue.replace(
+                /[^A-Z0-9,./#\- ]/gi,
+                "",
+              );
+              onChange(filteredValue);
+            }}
             maxLength={255}
             error={Boolean(errors.address?.message)}
             helperText={
