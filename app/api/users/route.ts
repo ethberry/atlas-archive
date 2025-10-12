@@ -67,8 +67,6 @@ export async function POST(req: Request) {
       return_url: `${process.env.BASE_URL}/thank-you`,
     };
 
-    console.info(`${process.env.BASE_URL}/thank-you`);
-
     const signature = createSignature(
       JSON.stringify(data),
       process.env.PAYKILLA_API_PRIVATE,
