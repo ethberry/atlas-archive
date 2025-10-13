@@ -56,7 +56,7 @@ export const VideoWithFallback = () => {
           loop
           playsInline
           preload="auto"
-          poster="/assets/egg_1.png"
+          poster="/assets/poster.png"
           onError={() => {
             setVideoError(true);
           }}
