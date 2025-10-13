@@ -26,7 +26,7 @@ export const EmailForm: FC<IEmailFormProps> = (props) => {
   const { formatMessage } = useIntl();
   const {
     handleSubmit,
-    formState: { errors, isSubmitting },
+    formState: { errors, isSubmitting, isValid },
     getValues,
     control,
     trigger,
@@ -40,7 +40,7 @@ export const EmailForm: FC<IEmailFormProps> = (props) => {
   const [millisecondsLeft, setMillisecondsLeft] = useState(0);
 
   const formDateRT = watch();
-  const disabled = isSubmitting || !hasScrolledToEnd;
+  const disabled = !isValid || isSubmitting || !hasScrolledToEnd;
 
   const { mutate: sendVerificationCode } = useMutation({
     mutationFn: async (data: IUserData) => {

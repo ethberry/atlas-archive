@@ -96,6 +96,13 @@ export const PdfRenderer: FC<IPdfRendererProps> = (props) => {
     return undefined;
   }, [handleScroll]);
 
+  const scrollToDocumentEnd = () => {
+    containerRef.current?.scrollTo({
+      top: containerRef.current?.scrollHeight,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <div className="relative w-full">
       {/* Page indicator */}
@@ -116,6 +123,7 @@ export const PdfRenderer: FC<IPdfRendererProps> = (props) => {
         <div
           className="absolute bottom-4 left-1/2 -translate-x-1/2 z-10 px-4 py-2 bg-[#5865F2]/90 backdrop-blur-sm text-white text-sm rounded-full flex items-center gap-2 animate-pulse"
           style={{ fontFamily: "var(--font-family-sans)" }}
+          onClick={scrollToDocumentEnd}
         >
           <svg
             width="16"
