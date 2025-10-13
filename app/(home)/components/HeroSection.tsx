@@ -1,55 +1,17 @@
 "use client";
 
-import { FC, memo, useCallback, useRef, useEffect, useState } from "react";
+import { FC, memo, useCallback } from "react";
 import { useRouter } from "next/navigation";
 import { FormattedMessage } from "react-intl";
 
+import { VideoWithFallback } from "@/components/VideoWithFallback";
+
 export const HeroSection: FC = memo(() => {
   const router = useRouter();
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const [videoError, setVideoError] = useState(false);
 
   const handleLearnMore = useCallback(() => {
     router.push("/saft");
   }, [router]);
-
-  useEffect(() => {
-    const video = videoRef.current;
-    if (!video || videoError) return;
-
-    const playVideo = async () => {
-      try {
-        video.muted = true;
-        video.playsInline = true;
-        video.loop = true;
-        await video.play();
-      } catch (error) {
-        console.error("Video autoplay failed:", error);
-        setVideoError(true);
-      }
-    };
-
-    const handleError = () => {
-      setVideoError(true);
-    };
-
-    video.addEventListener("error", handleError);
-
-    void playVideo();
-
-    const handleInteraction = () => {
-      void playVideo();
-    };
-
-    document.addEventListener("click", handleInteraction, { once: true });
-    document.addEventListener("touchstart", handleInteraction, { once: true });
-
-    return () => {
-      video.removeEventListener("error", handleError);
-      document.removeEventListener("click", handleInteraction);
-      document.removeEventListener("touchstart", handleInteraction);
-    };
-  }, [videoError]);
 
   return (
     <section className="relative w-full min-h-screen flex flex-col items-center justify-center snap-start px-4 md:px-8 pt-12 md:pt-20 pb-12">
@@ -61,44 +23,7 @@ export const HeroSection: FC = memo(() => {
           <FormattedMessage id="pages.landing.title" />
         </h1>
 
-        <div className="relative w-full max-w-[320px] md:max-w-[420px] my-6">
-          {!videoError ? (
-            <video
-              ref={videoRef}
-              width={420}
-              height={400}
-              autoPlay
-              muted
-              loop
-              playsInline
-              preload="auto"
-              onError={() => {
-                setVideoError(true);
-              }}
-              className="w-full h-auto"
-              data-webkit-playsinline="true"
-              data-x5-playsinline="true"
-              data-x5-video-player-type="h5"
-              data-x5-video-player-fullscreen="false"
-              style={{
-                objectFit: "contain",
-                background: "transparent",
-                zIndex: -1,
-              }}
-            >
-              <source src="/assets/egg.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          ) : (
-            <img
-              src="/assets/gifs/egg.gif"
-              width={320}
-              height={400}
-              alt="Fabergé Egg"
-              className="w-full h-auto max-w-[320px] md:max-w-[380px]"
-            />
-          )}
-        </div>
+        <VideoWithFallback />
 
         <h2
           className="text-[34px] md:text-[40px] lg:text-[40px] text-white max-w-2xl leading-[44px] font-[600] "
