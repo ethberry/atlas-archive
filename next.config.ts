@@ -4,6 +4,12 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   reactStrictMode: false,
   webpack(config, { dev }) {
+    // Object.defineProperty(config, 'devtool', {
+    //   get() {
+    //     return 'cheap-source-map';
+    //   },
+    //   set() {},
+    // });
     config.module.rules.push({
       test: /\.svg$/i,
       use: ["@svgr/webpack"],
