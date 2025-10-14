@@ -10,11 +10,11 @@ import { isPdfJsSupported } from "@/app/saft/utils";
 
 const PdfRenderer = dynamic(
   () =>
-    isPdfJsSupported()
-      .then(() => import("./PdfRenderer").then((mod) => mod.PdfRenderer))
-      .catch(() =>
-        import("./PdfPlaceholder").then((mod) => mod.PdfPlaceholder),
-      ),
+    isPdfJsSupported().then((isSupported) =>
+      isSupported
+        ? import("./PdfRenderer").then((mod) => mod.PdfRenderer)
+        : import("./PdfPlaceholder").then((mod) => mod.PdfPlaceholder),
+    ),
   { ssr: false },
 );
 

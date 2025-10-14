@@ -18,6 +18,7 @@ export const PdfPlaceholder: FC<IPdfRendererProps> = () => {
           a: (chunks) => (
             <Link
               href="/pdf/template.pdf"
+              key="key"
               className="text-[#4c5fd5] hover:text-[#4c5fd5] transition-colors"
               rel="noopener noreferrer"
               target="_blank"
