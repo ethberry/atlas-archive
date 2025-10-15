@@ -16,7 +16,7 @@ export enum EmailType {
 
 export const templateMapping = {
   [EnabledLanguages.EN]: {
-    [EmailType.EMAIL_VERIFICATION]: 7363250,
+    [EmailType.EMAIL_VERIFICATION]: 7373750,
     [EmailType.SAFT_CONTRACT]: 7373752,
     [EmailType.UPSALE_1]: 7373755,
     [EmailType.UPSALE_2]: 7373757,

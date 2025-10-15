@@ -25,19 +25,25 @@ export const validationSchema = verificationSchema
       .trim()
       .min(1, "form.error.firstName.required")
       .min(2, "form.error.firstName.tooShort")
-      .max(40, "form.error.firstName.tooLong"),
+      .max(40, "form.error.firstName.tooLong")
+      .regex(/^[A-Z]+(?: [A-Z]+)*$/i, "form.error.firstName.invalidCharacters"),
     lastName: z
       .string()
       .trim()
       .min(1, "form.error.lastName.required")
       .min(2, "form.error.lastName.tooShort")
-      .max(40, "form.error.lastName.tooLong"),
+      .max(40, "form.error.lastName.tooLong")
+      .regex(/^[A-Z]+(?: [A-Z]+)*$/i, "form.error.firstName.invalidCharacters"),
     address: z
       .string()
       .trim()
       .min(1, "form.error.address.required")
       .min(5, "form.error.address.tooShort")
-      .max(254, "form.error.address.tooLong"),
+      .max(254, "form.error.address.tooLong")
+      .regex(
+        /^[A-Z0-9,./#-]+(?: [A-Z0-9,./#-]+)*$/i,
+        "form.error.firstName.invalidCharacters",
+      ),
     verificationCode: z
       .string()
       .min(1, "form.error.verificationCode.required")

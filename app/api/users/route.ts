@@ -63,8 +63,8 @@ export async function POST(req: Request) {
         ],
         idempotencyKey: v4(),
         externalId: invoice.id,
+        returnUrl: `${process.env.BASE_URL}/thank-you`,
       },
-      return_url: `${process.env.BASE_URL}/thank-you`,
     };
 
     const signature = createSignature(

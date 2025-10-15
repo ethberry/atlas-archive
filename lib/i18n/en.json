@@ -137,7 +137,12 @@
       },
       "title": "Grab destiny by the...!"
     },
+    "notFound": {
+      "button": "I want to own a share of the Fabergé egg!",
+      "title": "Page not found"
+    },
     "saft": {
+      "pdfjs": "Document not showing? Tap the link to read the <a>SAFT</a>, then complete the form.",
       "title": "SAFT-contract"
     },
     "thankYou": {
@@ -147,10 +152,6 @@
       "paragraph3": "Increase your package right now and get additional privileges for the first owners of a unique asset!",
       "subtitle": "Congratulations!",
       "title": "Crack the egg...!"
-    },
-    "notFound": {
-      "title": "Page not found",
-      "button": "I want to own a share of the Fabergé egg!"
     }
   }
 }

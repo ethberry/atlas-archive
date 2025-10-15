@@ -4,8 +4,17 @@ import { FC } from "react";
 import Link from "next/link";
 import { FormattedMessage } from "react-intl";
 
-import { SocialMediaButton } from "../SocialMediaButton";
-import { Logo } from "../Header/Logo";
+import {
+  FACEBOOK_LINK,
+  INSTAGRAM_LINK,
+  LINKEDIN_LINK,
+  MEDIUM_LINK,
+  TELEGRAM_LINK,
+  TIKTOK_LINK,
+  X_LINK,
+} from "@/lib/constants";
+import { SocialMediaButton } from "@/components/SocialMediaButton";
+import { Logo } from "@/components/Header/Logo";
 
 export const Footer: FC = () => {
   return (
@@ -39,7 +48,7 @@ export const Footer: FC = () => {
 
         {/* Social Media Icons */}
         <div className="flex justify-center items-center space-x-[8px] tablet:space-x-[16px]">
-          <SocialMediaButton href="https://x.com/frac_town">
+          <SocialMediaButton href={X_LINK}>
             <svg
               width="20"
               height="18"
@@ -55,7 +64,7 @@ export const Footer: FC = () => {
               />
             </svg>
           </SocialMediaButton>
-          <SocialMediaButton href="https://t.me/coart_market">
+          <SocialMediaButton href={TELEGRAM_LINK}>
             <svg
               width="20"
               height="17"
@@ -71,7 +80,7 @@ export const Footer: FC = () => {
               />
             </svg>
           </SocialMediaButton>
-          <SocialMediaButton href="https://www.facebook.com/coart.space">
+          <SocialMediaButton href={FACEBOOK_LINK}>
             <svg
               width="19"
               height="19"
@@ -87,7 +96,7 @@ export const Footer: FC = () => {
               />
             </svg>
           </SocialMediaButton>
-          <SocialMediaButton href="https://www.instagram.com/coartmarket">
+          <SocialMediaButton href={INSTAGRAM_LINK}>
             <svg
               width="19"
               height="19"
@@ -103,7 +112,7 @@ export const Footer: FC = () => {
               />
             </svg>
           </SocialMediaButton>
-          <SocialMediaButton href="https://www.linkedin.com/in/dimitricoart">
+          <SocialMediaButton href={LINKEDIN_LINK}>
             <svg
               width="18"
               height="18"
@@ -119,7 +128,7 @@ export const Footer: FC = () => {
               />
             </svg>
           </SocialMediaButton>
-          <SocialMediaButton href="https://www.tiktok.com/@coartai">
+          <SocialMediaButton href={TIKTOK_LINK}>
             <svg
               width="15"
               height="18"
@@ -135,7 +144,7 @@ export const Footer: FC = () => {
               />
             </svg>
           </SocialMediaButton>
-          <SocialMediaButton href="https://medium.com/@dimitri-coart">
+          <SocialMediaButton href={MEDIUM_LINK}>
             <svg
               width="17"
               height="10"

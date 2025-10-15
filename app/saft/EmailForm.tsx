@@ -26,7 +26,7 @@ export const EmailForm: FC<IEmailFormProps> = (props) => {
   const { formatMessage } = useIntl();
   const {
     handleSubmit,
-    formState: { errors, isSubmitting },
+    formState: { errors, isSubmitting, isValid },
     getValues,
     control,
     trigger,
@@ -40,7 +40,7 @@ export const EmailForm: FC<IEmailFormProps> = (props) => {
   const [millisecondsLeft, setMillisecondsLeft] = useState(0);
 
   const formDateRT = watch();
-  const disabled = isSubmitting || !hasScrolledToEnd;
+  const disabled = !isValid || isSubmitting || !hasScrolledToEnd;
 
   const { mutate: sendVerificationCode } = useMutation({
     mutationFn: async (data: IUserData) => {
@@ -164,7 +164,11 @@ export const EmailForm: FC<IEmailFormProps> = (props) => {
             <Input
               name="firstName"
               value={value}
-              onChange={onChange}
+              onChange={(e) => {
+                const inputValue = e.target.value;
+                const filteredValue = inputValue.replace(/[^A-Z\s]/gi, "");
+                onChange(filteredValue);
+              }}
               maxLength={40}
               error={Boolean(errors.firstName?.message)}
               helperText={
@@ -184,7 +188,11 @@ export const EmailForm: FC<IEmailFormProps> = (props) => {
             <Input
               name="lastName"
               value={value}
-              onChange={onChange}
+              onChange={(e) => {
+                const inputValue = e.target.value;
+                const filteredValue = inputValue.replace(/[^A-Z\s]/gi, "");
+                onChange(filteredValue);
+              }}
               maxLength={40}
               error={Boolean(errors.lastName?.message)}
               helperText={
@@ -206,7 +214,14 @@ export const EmailForm: FC<IEmailFormProps> = (props) => {
           <Input
             name="address"
             value={value}
-            onChange={onChange}
+            onChange={(e) => {
+              const inputValue = e.target.value;
+              const filteredValue = inputValue.replace(
+                /[^A-Z0-9,./#\- ]/gi,
+                "",
+              );
+              onChange(filteredValue);
+            }}
             maxLength={255}
             error={Boolean(errors.address?.message)}
             helperText={

@@ -6,9 +6,15 @@ import { FormattedMessage } from "react-intl";
 
 import { IUserData } from "@/app/saft/interfaces";
 import { generatePdf } from "@/lib/actions/pdf";
+import { isPdfJsSupported } from "@/app/saft/utils";
 
 const PdfRenderer = dynamic(
-  () => import("./PdfRenderer").then((mod) => mod.PdfRenderer),
+  () =>
+    isPdfJsSupported().then((isSupported) =>
+      isSupported
+        ? import("./PdfRenderer").then((mod) => mod.PdfRenderer)
+        : import("./PdfPlaceholder").then((mod) => mod.PdfPlaceholder),
+    ),
   { ssr: false },
 );
 

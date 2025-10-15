@@ -48,6 +48,7 @@ export const Checkbox: FC<ICheckboxProps> = ({
           values={{
             a: (chunks) => (
               <Link
+                key={labelId}
                 href="/terms-of-use"
                 className="text-[#4c5fd5] hover:text-[#4c5fd5] transition-colors"
                 rel="noopener noreferrer"
