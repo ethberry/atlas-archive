@@ -11,12 +11,7 @@ import { isPdfJsSupported } from "@/app/saft/utils";
 import { PdfPlaceholder } from "./PdfPlaceholder";
 
 const PdfRenderer = dynamic(
-  () =>
-    isPdfJsSupported().then((isSupported) =>
-      isSupported
-        ? import("./PdfRenderer").then((mod) => mod.PdfRenderer)
-        : import("./PdfPlaceholder").then((mod) => mod.PdfPlaceholder),
-    ),
+  () => import("./PdfRenderer").then((mod) => mod.PdfRenderer),
   { ssr: false },
 );
 
@@ -33,9 +28,14 @@ export const PdfPreview: FC<IPdfPreviewProps> = (props) => {
 
   useEffect(() => {
     void (async () => {
-      const isSupported = await isPdfJsSupported();
-      setIsPdfSupported(isSupported);
-      if (!isSupported) {
+      try {
+        const isSupported = await isPdfJsSupported();
+        setIsPdfSupported(isSupported);
+        if (!isSupported) {
+          onPdfNotSupported?.();
+        }
+      } catch {
+        setIsPdfSupported(false);
         onPdfNotSupported?.();
       }
     })();
