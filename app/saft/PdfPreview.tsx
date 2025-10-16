@@ -8,6 +8,8 @@ import { IUserData } from "@/app/saft/interfaces";
 import { generatePdf } from "@/lib/actions/pdf";
 import { isPdfJsSupported } from "@/app/saft/utils";
 
+import { PdfPlaceholder } from "./PdfPlaceholder";
+
 const PdfRenderer = dynamic(
   () =>
     isPdfJsSupported().then((isSupported) =>
@@ -21,11 +23,23 @@ const PdfRenderer = dynamic(
 interface IPdfPreviewProps {
   formData: IUserData;
   onScrollToEnd?: () => void;
+  onPdfNotSupported?: () => void;
 }
 
 export const PdfPreview: FC<IPdfPreviewProps> = (props) => {
-  const { formData, onScrollToEnd } = props;
+  const { formData, onScrollToEnd, onPdfNotSupported } = props;
   const [pdfUrl, setPdfUrl] = useState<string>("");
+  const [isPdfSupported, setIsPdfSupported] = useState<boolean | null>(null);
+
+  useEffect(() => {
+    void (async () => {
+      const isSupported = await isPdfJsSupported();
+      setIsPdfSupported(isSupported);
+      if (!isSupported) {
+        onPdfNotSupported?.();
+      }
+    })();
+  }, [onPdfNotSupported]);
 
   useEffect(() => {
     void (async () => {
@@ -56,6 +70,11 @@ export const PdfPreview: FC<IPdfPreviewProps> = (props) => {
         </div>
       </div>
     );
+  }
+
+  // Если PDF.js не поддерживается, показываем placeholder
+  if (isPdfSupported === false) {
+    return <PdfPlaceholder fileUrl={pdfUrl} onScrollToEnd={onScrollToEnd} />;
   }
 
   return <PdfRenderer fileUrl={pdfUrl} onScrollToEnd={onScrollToEnd} />;

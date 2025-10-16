@@ -18,7 +18,7 @@ export const Saft: FC = () => {
 
   const useFormReturn = useForm<IUserData>({
     resolver: zodResolver(validationSchema),
-    mode: "onSubmit",
+    mode: "onChange",
     reValidateMode: "onChange",
     defaultValues: {
       firstName: "",
