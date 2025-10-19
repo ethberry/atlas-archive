@@ -89,9 +89,12 @@ export const Saft: FC = () => {
           <FormattedMessage id="pages.saft.title" />
         </h1>
 
-        {/* <p className="text-white text-left mb-12">
-          <FormattedMessage id="pages.saft.description" values={{ br: <br /> }} />
-        </p> */}
+        <p className="text-white text-left mb-12">
+          <FormattedMessage
+            id="pages.saft.description"
+            values={{ br: <br /> }}
+          />
+        </p>
 
         <EmailForm
           useFormInstance={useFormReturn}
