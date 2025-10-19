@@ -96,7 +96,8 @@ const GalleryImage: FC<{ image: IGalleryImage; index: number }> = ({
         className="object-cover"
         sizes="(max-width: 640px) 80vw, (max-width: 1024px) 50vw, (max-width: 1536px) 33vw, 25vw"
         priority={index < 2}
-        quality={85}
+        quality={75}
+        loading={index < 2 ? "eager" : "lazy"}
         onError={() => setImageError(true)}
         onLoad={() => setImageLoaded(true)}
       />
@@ -113,7 +114,7 @@ export const GalerySection: FC = memo(() => {
             responsive={responsive}
             infinite
             autoPlay
-            autoPlaySpeed={3000}
+            autoPlaySpeed={5000}
             keyBoardControl
             customTransition="transform 500ms ease-in-out"
             transitionDuration={500}
