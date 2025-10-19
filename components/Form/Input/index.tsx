@@ -1,5 +1,5 @@
 import { FC, InputHTMLAttributes, ReactNode } from "react";
-import clsx from "clsx";
+import { clsx } from "clsx";
 import { useIntl } from "react-intl";
 
 interface IInputProps extends InputHTMLAttributes<HTMLInputElement> {

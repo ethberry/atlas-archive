@@ -6,7 +6,6 @@ import {
   HeroSection,
   FeaturesSection,
   RoadmapTimeline,
-  // VideoSection,
   GalerySection,
   DiscordInvite,
   FAQSection,
@@ -16,7 +15,6 @@ export const Home: FC = () => {
   return (
     <main>
       <HeroSection />
-      {/*<VideoSection />*/}
       <GalerySection />
       <FeaturesSection />
       <RoadmapTimeline />
