@@ -291,80 +291,100 @@ select option:checked {
 }
 
 .gallery-carousel .react-multi-carousel-list {
-  padding: 10px 0;
+  position: relative;
 }
 
 .gallery-carousel .react-multi-carousel-item {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 4px;
-}
-
-.gallery-carousel .react-multi-carousel-item:first-child {
-  padding-left: 0;
-}
-
-.gallery-carousel .react-multi-carousel-item:last-child {
-  padding-right: 0;
+  padding: 0 12px;
 }
 
 .gallery-carousel .react-multiple-carousel__arrow {
   background: linear-gradient(
     to bottom,
-    rgba(6, 15, 121, 0.8),
-    rgba(63, 71, 156, 0.8)
+    rgba(6, 15, 121, 0.9),
+    rgba(63, 71, 156, 0.9)
   );
   border: 2px solid #33399a;
   border-radius: 50%;
-  min-width: 45px;
-  min-height: 45px;
+  min-width: 60px;
+  min-height: 60px;
   transition: all 0.3s ease;
+  z-index: 20;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .gallery-carousel .react-multiple-carousel__arrow:hover {
-  background: transparent;
+  background: linear-gradient(
+    to bottom,
+    rgba(5, 17, 210, 0.9),
+    rgba(74, 82, 181, 0.9)
+  );
   border-color: #4a52b5;
+  transform: translateY(-50%) scale(1.1);
 }
 
 .gallery-carousel .react-multiple-carousel__arrow::before {
   color: white;
-  font-size: 18px;
+  font-size: 24px;
   font-weight: bold;
 }
 
 .gallery-carousel .react-multiple-carousel__arrow--left {
-  left: 10px;
+  left: 0px;
 }
 
 .gallery-carousel .react-multiple-carousel__arrow--right {
-  right: 10px;
+  right: 0px;
 }
 
 .gallery-carousel .react-multi-carousel-dot-list {
-  bottom: 0;
-  gap: 8px;
+  bottom: -50px;
+  gap: 12px;
+  justify-content: center;
 }
 
 .gallery-carousel .react-multi-carousel-dot button {
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   border: 2px solid #33399a;
   background: transparent;
+  border-radius: 50%;
   transition: all 0.3s ease;
 }
 
 .gallery-carousel .react-multi-carousel-dot--active button {
   background: #0511d2;
   border-color: #4a52b5;
+  transform: scale(1.2);
 }
 
 @media (max-width: 640px) {
-  .gallery-carousel .react-multiple-carousel__arrow {
-    display: none;
+  .gallery-carousel .react-multi-carousel-item {
+    padding: 0 8px;
   }
   
-  .gallery-carousel .react-multi-carousel-item {
-    padding: 0 2px;
+  .gallery-carousel .react-multiple-carousel__arrow {
+    min-width: 45px;
+    min-height: 45px;
+  }
+
+  .gallery-carousel .react-multiple-carousel__arrow::before {
+    font-size: 18px;
+  }
+
+  .gallery-carousel .react-multiple-carousel__arrow--left {
+    left: 5px;
+  }
+
+  .gallery-carousel .react-multiple-carousel__arrow--right {
+    right: 5px;
   }
 }

@@ -1,6 +1,7 @@
 "use client";
 
 import { FC, memo, useState } from "react";
+import Image from "next/image";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
@@ -59,13 +60,16 @@ const responsive = {
   },
 };
 
-const GalleryImage: FC<{ image: IGalleryImage }> = ({ image }) => {
+const GalleryImage: FC<{ image: IGalleryImage; index: number }> = ({
+  image,
+  index,
+}) => {
   const [imageError, setImageError] = useState(false);
   const [imageLoaded, setImageLoaded] = useState(false);
 
   if (imageError) {
     return (
-      <div className="relative w-full h-[450px] rounded-2xl overflow-hidden border-2 border-[#33399A] shadow-2xl bg-[#0D0925] flex items-center justify-center">
+      <div className="relative w-full h-[300px] md:h-[400px] rounded-2xl overflow-hidden border-2 border-[#33399A] shadow-2xl bg-[#0D0925] flex items-center justify-center">
         <div className="text-white text-center">
           <div className="text-4xl mb-2">🖼️</div>
           <div className="text-sm">Image not found</div>
@@ -76,19 +80,23 @@ const GalleryImage: FC<{ image: IGalleryImage }> = ({ image }) => {
   }
 
   return (
-    <div className="relative w-full h-[450px] rounded-2xl overflow-hidden border-2 border-[#33399A] shadow-2xl bg-[#0D0925] hover:border-[#4A52B5] transition-colors duration-300">
+    <div className="relative w-full h-[450px] md:h-[550px] rounded-2xl overflow-hidden border-2 border-[#33399A] shadow-2xl bg-[#0D0925] hover:border-[#4A52B5] transition-colors duration-300">
       {!imageLoaded && (
-        <div className="absolute inset-0 flex items-center justify-center bg-[#0D0925]">
+        <div className="absolute inset-0 flex items-center justify-center bg-[#0D0925] z-10">
           <div className="text-white text-center">
             <div className="animate-spin w-8 h-8 border-2 border-[#33399A] border-t-transparent rounded-full mx-auto mb-2"></div>
             <div className="text-sm">Loading...</div>
           </div>
         </div>
       )}
-      <img
+      <Image
         src={image.src}
         alt={image.alt}
-        className="w-full h-full object-cover"
+        fill
+        className="object-cover"
+        sizes="(max-width: 640px) 80vw, (max-width: 1024px) 50vw, (max-width: 1536px) 33vw, 25vw"
+        priority={index < 2}
+        quality={85}
         onError={() => setImageError(true)}
         onLoad={() => setImageLoaded(true)}
       />
@@ -100,7 +108,7 @@ export const GalerySection: FC = memo(() => {
   return (
     <section className="relative w-full py-16 md:py-24 px-4 md:px-8 bg-transparent overflow-hidden">
       <div className="max-w-7xl mx-auto">
-        <div className="gallery-carousel">
+        <div className="gallery-carousel relative">
           <Carousel
             responsive={responsive}
             infinite
@@ -117,9 +125,9 @@ export const GalerySection: FC = memo(() => {
             {GALLERY_IMAGES.map((image, index) => (
               <div
                 key={index}
-                className="px-2 flex items-center justify-center"
+                className="px-2 flex items-center justify-center w-full"
               >
-                <GalleryImage image={image} />
+                <GalleryImage image={image} index={index} />
               </div>
             ))}
           </Carousel>
