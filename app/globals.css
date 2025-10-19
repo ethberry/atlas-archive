@@ -289,3 +289,82 @@ select option:checked {
   scrollbar-width: thin;
   scrollbar-color: #6D75B9 rgba(255, 255, 255, 0.05);
 }
+
+.gallery-carousel .react-multi-carousel-list {
+  padding: 10px 0;
+}
+
+.gallery-carousel .react-multi-carousel-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4px;
+}
+
+.gallery-carousel .react-multi-carousel-item:first-child {
+  padding-left: 0;
+}
+
+.gallery-carousel .react-multi-carousel-item:last-child {
+  padding-right: 0;
+}
+
+.gallery-carousel .react-multiple-carousel__arrow {
+  background: linear-gradient(
+    to bottom,
+    rgba(6, 15, 121, 0.8),
+    rgba(63, 71, 156, 0.8)
+  );
+  border: 2px solid #33399a;
+  border-radius: 50%;
+  min-width: 45px;
+  min-height: 45px;
+  transition: all 0.3s ease;
+}
+
+.gallery-carousel .react-multiple-carousel__arrow:hover {
+  background: transparent;
+  border-color: #4a52b5;
+}
+
+.gallery-carousel .react-multiple-carousel__arrow::before {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.gallery-carousel .react-multiple-carousel__arrow--left {
+  left: 10px;
+}
+
+.gallery-carousel .react-multiple-carousel__arrow--right {
+  right: 10px;
+}
+
+.gallery-carousel .react-multi-carousel-dot-list {
+  bottom: 0;
+  gap: 8px;
+}
+
+.gallery-carousel .react-multi-carousel-dot button {
+  width: 10px;
+  height: 10px;
+  border: 2px solid #33399a;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.gallery-carousel .react-multi-carousel-dot--active button {
+  background: #0511d2;
+  border-color: #4a52b5;
+}
+
+@media (max-width: 640px) {
+  .gallery-carousel .react-multiple-carousel__arrow {
+    display: none;
+  }
+  
+  .gallery-carousel .react-multi-carousel-item {
+    padding: 0 2px;
+  }
+}

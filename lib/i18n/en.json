@@ -109,10 +109,10 @@
         "item3": "Stored safely in a high-security freeport vault after fractionalization."
       },
       "hero": {
-        "description1": "The first 3 million shares are live now - with a 66% launch discount.{br} Don’t miss your chance!",
-        "description2": "Fabergé eggs keep rising in value, often selling for tens of millions.",
-        "description3": "We secured one from a private European collection - now it can be yours too.",
-        "description4": "Ownership is divided into 100 million unique crypto-fractions.",
+        "description1": "Ownership rights to the asset are legally divided into 100 million shares.",
+        "description2": "Each ownership share corresponds to one FCC crypto-fraction.",
+        "description3": "The first 3 million FCC fractions are available now with a 66% discount.",
+        "description4": "A SAFT contract is a secure way to acquire crypto-fractions early.",
         "learnMore": "View details",
         "mainTitle": "For the first time ever - own a share of a Fabergé egg!"
       },
@@ -143,7 +143,8 @@
     },
     "saft": {
       "pdfjs": "Document not showing? Tap the link to read the <a>SAFT</a>, then complete the form.",
-      "title": "SAFT-contract"
+      "title": "SAFT-contract",
+      "description": "SAFT (Simple Agreement for Future Tokens) - an investment agreement between the project developers and investors who invest money in exchange for a promise to receive corresponding tokens after the project launch.{br}In our case, after placing the egg as an object on the new CoArt Marketplace in autumn of this year. This is a legal instrument that helps sell tokens at a discount at an early stage. In fact, such a form of selling future tokens helps comply with securities laws."
     },
     "thankYou": {
       "button": "I want to buy more",
