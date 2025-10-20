@@ -108,6 +108,7 @@ export const EmailForm: FC<IEmailFormProps> = (props) => {
   const handlePdfNotSupported = useCallback(() => {
     setIsPdfNotSupported(true);
   }, []);
+
   const handleSendVerificationCode = useCallback(() => {
     if (isSendingCode) return;
 

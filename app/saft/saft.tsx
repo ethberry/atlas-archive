@@ -50,18 +50,6 @@ export const Saft: FC = () => {
       return json;
     },
     onSuccess: (json) => {
-      useFormReturn.reset({
-        firstName: "",
-        lastName: "",
-        email: "",
-        address: "",
-        consent: false,
-        nonUsPerson: false,
-        package: 10,
-        verificationCode: "",
-        language,
-      });
-
       window.location.href = `https://pay.paykilla.com/pay?widgetKey=${json.idempotencyKey}`;
     },
     onError: (error) => {
