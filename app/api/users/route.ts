@@ -63,6 +63,7 @@ export async function POST(req: Request) {
         ],
         idempotencyKey: v4(),
         externalId: invoice.id,
+        returnUrl: `${process.env.BASE_URL}/saft`,
       },
     };
 
