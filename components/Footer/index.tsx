@@ -44,6 +44,12 @@ export const Footer: FC = () => {
           >
             <FormattedMessage id="components.footer.termsOfUse" />
           </Link>
+          <Link
+            href={"mailto:support@fractown.com"}
+            className="hover:text-[#4c5fd5] transition-colors"
+          >
+            <FormattedMessage id="components.footer.support" />
+          </Link>
         </div>
 
         {/* Social Media Icons */}

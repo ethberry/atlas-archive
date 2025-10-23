@@ -2,6 +2,7 @@
 
 import { FC, memo, useCallback } from "react";
 import Link from "next/link";
+import { FormattedMessage } from "react-intl";
 
 import { EnabledLanguages } from "@/lib/i18n";
 import { useAppStore } from "@/components/providers/AppStoreProvider";
@@ -75,21 +76,28 @@ export const MobileMenu: FC<IMobileMenuProps> = memo(({ isOpen, onClose }) => {
               onClick={onClose}
               className="text-white text-[24px] font-sans hover:text-[#4c5fd5] transition-colors"
             >
-              Home
+              <FormattedMessage id="components.footer.home" />
             </Link>
             <Link
               href="/saft"
               onClick={onClose}
               className="text-white text-[24px] font-sans hover:text-[#4c5fd5] transition-colors"
             >
-              SAFT
+              <FormattedMessage id="components.footer.saft" />
             </Link>
             <Link
               href="/terms-of-use"
               onClick={onClose}
               className="text-white text-[24px] font-sans hover:text-[#4c5fd5] transition-colors"
             >
-              Terms of Use — SAFT Offering
+              <FormattedMessage id="components.footer.termsOfUse" />
+            </Link>
+            <Link
+              href={"mailto:support@fractown.com"}
+              onClick={onClose}
+              className="text-white text-[24px] font-sans hover:text-[#4c5fd5] transition-colors"
+            >
+              <FormattedMessage id="components.footer.support" />
             </Link>
           </div>
 

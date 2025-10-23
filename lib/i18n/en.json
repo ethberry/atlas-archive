@@ -3,6 +3,7 @@
     "footer": {
       "home": "Home",
       "saft": "SAFT",
+      "support": "Support",
       "termsOfUse": "Terms of Use"
     },
     "header": {
@@ -142,9 +143,9 @@
       "title": "Page not found"
     },
     "saft": {
+      "description": "By purchasing shares of the Fabergé egg through a SAFT, you reserve FCC crypto-fractions of the egg at a 66% discount.{br}{br}To claim your shares later, simply create an account on the CoArt Marketplace using the same email you provide in the form below.{br}{br}This early-token sale format helps us stay fully compliant with securities regulations.{br}{br}The CoArt Marketplace will launch by December this year.",
       "pdfjs": "Document not showing? Tap the link to read the <a>SAFT</a>, then complete the form.",
-      "title": "SAFT-contract",
-      "description": "By purchasing shares of the Fabergé egg through a SAFT, you reserve FCC crypto-fractions of the egg at a 66% discount.{br}{br}To claim your shares later, simply create an account on the CoArt Marketplace using the same email you provide in the form below.{br}{br}This early-token sale format helps us stay fully compliant with securities regulations.{br}{br}The CoArt Marketplace will launch by December this year."
+      "title": "SAFT-contract"
     },
     "thankYou": {
       "button": "I want to buy more",
