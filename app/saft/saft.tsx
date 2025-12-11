@@ -80,7 +80,7 @@ export const Saft: FC = () => {
         <p className="text-white text-left mb-12">
           <FormattedMessage
             id="pages.saft.description"
-            values={{ br: <br /> }}
+            values={{ br: () => <br key={"1"} /> }}
           />
         </p>
 
