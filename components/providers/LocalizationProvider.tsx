@@ -1,13 +1,12 @@
 import { PropsWithChildren, ReactElement } from "react";
 import { IntlProvider } from "react-intl";
 
-import { useAppStore } from "@/components/providers/AppStoreProvider";
-import { EnabledLanguages } from "@/lib/i18n";
+import { EnabledLanguages, type NestedMessages } from "@/lib/i18n";
 
 import { flattenMessages } from "./utils";
 
 interface ILocalizationProviderProps {
-  i18n: Record<EnabledLanguages, any>;
+  i18n: Record<EnabledLanguages, NestedMessages>;
   defaultLanguage: EnabledLanguages;
 }
 
@@ -16,13 +15,11 @@ export const LocalizationProvider = (
 ): ReactElement | null => {
   const { children, i18n, defaultLanguage } = props;
 
-  const { language } = useAppStore((state) => state);
-
   return (
     <IntlProvider
       defaultLocale={defaultLanguage}
-      locale={language}
-      messages={flattenMessages(i18n[language])}
+      locale={defaultLanguage}
+      messages={flattenMessages(i18n[defaultLanguage])}
     >
       {children}
     </IntlProvider>

@@ -1,159 +1,231 @@
 {
-  "components": {
-    "footer": {
-      "home": "Home",
-      "saft": "SAFT",
-      "support": "Support",
-      "termsOfUse": "Terms of Use"
-    },
-    "header": {
-      "discord": "Discord",
-      "logo": "Fractown"
-    },
-    "messages": {
-      "verificationCode": "Verification code sent!"
-    }
+  "archive": {
+    "title": "Atlas",
+    "browse": "Browse",
+    "signIn": "Sign in",
+    "signOut": "Sign out",
+    "account": "Account",
+    "authTitle": "Sign in",
+    "continueWithGoogle": "Continue with Google",
+    "featured": "Featured",
+    "featuredEmpty": "Nothing is featured yet.",
+    "topRated": "Top rated",
+    "latest": "Latest",
+    "empty": "Nothing is stored yet.",
+    "unavailable": "The archive could not be read.",
+    "loading": "Loading",
+    "search": "Search",
+    "any": "Any",
+    "previous": "Previous",
+    "next": "Next",
+    "like": "Like",
+    "unlike": "Remove like",
+    "name": "Name",
+    "star": "Star",
+    "station": "Station",
+    "biome": "Biome",
+    "sentinels": "Sentinels",
+    "hull": "Hull",
+    "rank": "Rank",
+    "toolBody": "Body",
+    "building": "Building",
+    "population": "Population",
+    "lightYears": "Light years",
+    "economy": "Economy",
+    "wealth": "Wealth",
+    "conflict": "Conflict",
+    "water": "Water",
+    "dissonance": "Dissonance",
+    "gasGiant": "Gas giant",
+    "glyphs": "Glyphs",
+    "helpfulness": "Helpfulness",
+    "aggression": "Aggression",
+    "independence": "Independence",
+    "phrase": "Phrase",
+    "resources": "Resources",
+    "ancientBones": "Ancient bones",
+    "salvage": "Salvageable scrap",
+    "activated": "Activated stellar metal",
+    "buildingType": "Building",
+    "face": "Face",
+    "cellI": "I",
+    "cellJ": "J",
+    "supercharged": "Supercharged slots",
+    "locator": "Path",
+    "systemsCount": "Stored systems",
+    "planetsCount": "Planets",
+    "yes": "Yes",
+    "no": "No",
+    "absent": "—"
   },
-  "form": {
-    "button": {
-      "learnMore": "View details",
-      "retry": "Resend",
-      "retryIn": "Retry in {seconds}",
-      "saft": "Submit",
-      "verify": "Send Code"
-    },
-    "error": {
-      "address": {
-        "required": "Address is required",
-        "tooLong": "Address is too long",
-        "tooShort": "Address is too short"
-      },
-      "consent": {
-        "required": "You must agree to the <a>Terms of Use</a>"
-      },
-      "email": {
-        "invalid": "Invalid email format",
-        "required": "Email is required",
-        "tooLong": "Email is too long",
-        "tooShort": "Email is too short"
-      },
-      "firstName": {
-        "required": "First name is required",
-        "tooLong": "First name is too long",
-        "tooShort": "First name is too short"
-      },
-      "lastName": {
-        "required": "Last name is required",
-        "tooLong": "Last name is too long",
-        "tooShort": "Last name is too short"
-      },
-      "nonUsPerson": {
-        "required": "You are not an US person"
-      },
-      "verificationCode": {
-        "pattern": "Code must be exactly 6 digits",
-        "required": "Verification code is required"
-      }
-    },
-    "label": {
-      "address": "Address",
-      "consent": "I agree to the <a>Terms of Use</a>",
-      "email": "Email for contract",
-      "firstName": "First name on contract",
-      "lastName": "Last name on contract",
-      "nonUsPerson": "I'm not a US person",
-      "package": "Select number of fractions",
-      "packageName": "{fractions, number} fractions ({amount, number} USD)",
-      "verificationCode": "Enter verification code from email"
-    },
-    "pdf": {
-      "error": "Error loading document",
-      "loading": "Loading document...",
-      "loadingPage": "Loading page...",
-      "pageIndicator": "{current} / {total}",
-      "pleaseWait": "Please wait",
-      "preparing": "Preparing document...",
-      "scrollToEnd": "Scroll to the end"
-    },
-    "placeholder": {
-      "address": "90210, USA, San Francisco, Builder Street, 223A",
-      "email": "me@gmail.com",
-      "firstName": "First Name",
-      "lastName": "Last Name",
-      "verificationCode": "000000"
-    }
+  "kind": {
+    "galaxy": "Galaxy",
+    "system": "Star system",
+    "planet": "Planet",
+    "building": "Building",
+    "ship": "Ship",
+    "tool": "Tool",
+    "creature": "Creature"
   },
   "pages": {
-    "landing": {
-      "discord": {
-        "button": "Join Discord Community",
-        "join": "Join",
-        "subtitle": "Unlock exclusive updates and {br} opportunities!",
-        "title": "Join our Discord"
-      },
-      "faq": {
-        "answer1": "A share in a Blue Chip Artwork lets you benefit from its value growth and sell it anytime as a liquid asset. For 20+ years, Blue Chip art has outperformed the S&P 500.",
-        "answer2": "The first 3M of 100M shares are available now through SAFT contracts. Buying today at a 66% discount, you’ll receive them in your personal wallet on the FracTown RWA Platform.",
-        "answer3": "On CoArt Marketplace you can trade both entire physical assets and fractional shares via our FCC (Fractional Crypto Certificate), almost as instantly as NFTs.",
-        "answer4": "Ownership rights will be split into 300 lots, each with different share amounts. The auction runs for two weeks in early December, open to retail investors worldwide.",
-        "answer5": "After the auction, it will be placed in a European museum or freeport vault. FracTown will retain 3% of the shares to manage the asset, while the remaining shares will trade freely on CoArt Marketplace.",
-        "question1": "Why would I need a “fractional share”",
-        "question2": "How do I get my shares?",
-        "question3": "What can I do with my share?",
-        "question4": "How will the auction work?",
-        "question5": "Where will the egg be kept?",
-        "title": "FAQ"
-      },
-      "features": {
-        "item1": "Trade your fractions at market price once all 100 million shares are sold by Christmas at the global auction.",
-        "item2": "Created by a leading Fabergé master in the late 19th century - authenticity fully confirmed.",
-        "item3": "Stored safely in a high-security freeport vault after fractionalization."
-      },
-      "hero": {
-        "description1": "Ownership rights to the asset are legally divided into 100 million shares.",
-        "description2": "Each ownership share corresponds to one FCC crypto-fraction.",
-        "description3": "The first 3 million FCC fractions are available now with a 66% discount.",
-        "description4": "A SAFT contract is a secure way to acquire crypto-fractions early.",
-        "learnMore": "View details",
-        "mainTitle": "For the first time ever - own a share of a Fabergé egg!"
-      },
-      "roadmap": {
-        "novDec2025": {
-          "description": "Transfer of IP and tech to FracTown C-Corp (Delaware, USA). Launch of the second marketplace in the U.S.",
-          "period": "Q1 2026"
-        },
-        "octNov2025": {
-          "description": "Launch of our first marketplace (CoArt Marketplace, Lithuania, EU).",
-          "period": "Q4 2025"
-        },
-        "q1_2026": {
-          "description": "Expansion of the global marketplace network via API integration. Kick-off of our own blockchain for the fast-growing RWA sector.",
-          "period": "Q2 2026"
-        },
-        "sep2025": {
-          "description": "The Fabergé egg becomes the first Blue Chip Artwork on our Real-World Assets platform.",
-          "period": "OCTOBER 2025"
-        },
-        "title": "Roadmap"
-      },
-      "title": "Grab destiny by the...!"
-    },
     "notFound": {
-      "button": "I want to own a share of the Fabergé egg!",
-      "title": "Page not found"
-    },
-    "saft": {
-      "description": "By purchasing shares of the Fabergé egg through a SAFT, you reserve FCC crypto-fractions of the egg at a 66% discount.{br}{br}To claim your shares later, simply create an account on the CoArt Marketplace using the same email you provide in the form below.{br}{br}This early-token sale format helps us stay fully compliant with securities regulations.{br}{br}The CoArt Marketplace will launch by December this year.",
-      "pdfjs": "Document not showing? Tap the link to read the <a>SAFT</a>, then complete the form.",
-      "title": "SAFT-contract"
-    },
-    "thankYou": {
-      "button": "I want to buy more",
-      "paragraph1": "You have become the owner of a share of ownership rights to a unique Fabergé egg and have joined the community of select collectors.",
-      "paragraph2": "We will soon send a SAFT contract confirming your acquisition to your specified email.",
-      "paragraph3": "Increase your package right now and get additional privileges for the first owners of a unique asset!",
-      "subtitle": "Congratulations!",
-      "title": "Crack the egg...!"
+      "title": "This page is not in the archive.",
+      "home": "Back to the archive"
     }
+  },
+  "population": {
+    "gek": "Gek",
+    "vykeen": "Vy'keen",
+    "korvax": "Korvax",
+    "uncharted": "Uncharted"
+  },
+  "economy": {
+    "mining": "Mining",
+    "manufacturing": "Manufacturing",
+    "technology": "Technology",
+    "power": "Power Generation",
+    "science": "Scientific",
+    "trading": "Trading",
+    "alloy": "Material Fusion"
+  },
+  "wealth": {
+    "low": "Low",
+    "medium": "Medium",
+    "high": "High",
+    "pirate": "Pirate"
+  },
+  "conflict": {
+    "low": "Low",
+    "medium": "Medium",
+    "high": "High"
+  },
+  "star": {
+    "yellow": "Yellow",
+    "green": "Green",
+    "blue": "Blue",
+    "red": "Red",
+    "purple": "Purple"
+  },
+  "station": {
+    "inhabited": "Inhabited",
+    "abandoned": "Abandoned",
+    "pirate": "Pirate",
+    "uncharted": "Uncharted"
+  },
+  "sentinel": {
+    "low": "Low",
+    "high": "High Sentinel Activity",
+    "aggressive": "Aggressive Sentinels"
+  },
+  "biome": {
+    "0": "Lush",
+    "1": "Toxic",
+    "2": "Scorched",
+    "3": "Radioactive",
+    "4": "Frozen",
+    "5": "Barren",
+    "6": "Dead",
+    "7": "Weird",
+    "8": "Red",
+    "9": "Green",
+    "10": "Blue",
+    "11": "Test",
+    "12": "Swamp",
+    "13": "Lava",
+    "14": "Waterworld",
+    "15": "Gas Giant"
+  },
+  "hull": {
+    "Freighter": "Freighter",
+    "Dropship": "Hauler",
+    "Fighter": "Fighter",
+    "Scientific": "Explorer",
+    "Shuttle": "Shuttle",
+    "Royal": "Exotic",
+    "Alien": "Living ship",
+    "Sail": "Solar",
+    "Robot": "Interceptor",
+    "Corvette": "Corvette",
+    "SwarmDrone": "Swarmer"
+  },
+  "rank": {
+    "C": "C",
+    "B": "B",
+    "A": "A",
+    "S": "S"
+  },
+  "toolBody": {
+    "Pistol": "Pistol",
+    "Rifle": "Rifle",
+    "Pristine": "Experimental",
+    "Alien": "Alien",
+    "Royal": "Royal",
+    "Robot": "Sentinel",
+    "Atlas": "Atlas",
+    "Staff": "Staff"
+  },
+  "building": {
+    "TerrainResource": "Resource deposit",
+    "Shelter": "Shelter",
+    "Abandoned": "Abandoned building",
+    "Terminal": "Terminal",
+    "Shop": "Minor settlement",
+    "Outpost": "Outpost",
+    "Waypoint": "Waypoint",
+    "Beacon": "Beacon",
+    "RadioTower": "Transmission tower",
+    "Observatory": "Observatory",
+    "Depot": "Depot",
+    "Factory": "Manufacturing facility",
+    "Harvester": "Harvester",
+    "Plaque": "Plaque",
+    "Monolith": "Monolith",
+    "Portal": "Portal",
+    "Ruin": "Ruin",
+    "Debris": "Debris",
+    "DropPod": "Drop pod",
+    "DistressSignal": "Distress signal",
+    "LandingPad": "Landing pad",
+    "Base": "Base",
+    "MissionTower": "Holographic comms tower",
+    "CrashedFreighter": "Crashed freighter",
+    "GraveInCave": "Grave",
+    "StoryGlitch": "Boundary failure",
+    "TreasureRuins": "Ancient ruin",
+    "GameStartSpawn": "Starting site",
+    "WaterCrashedFreighter": "Sunken freighter",
+    "WaterTreasureRuins": "Sunken ruin",
+    "WaterAbandoned": "Sunken building",
+    "WaterDistressSignal": "Sunken distress signal",
+    "NPCDistressSignal": "Distress beacon",
+    "NPCDebris": "Debris",
+    "LargeBuilding": "Colossal archive",
+    "Settlement_Hub": "Settlement hub",
+    "Settlement_LandingZone": "Settlement landing zone",
+    "Settlement_Bar": "Settlement bar",
+    "Settlement_Tower": "Settlement tower",
+    "Settlement_Market": "Settlement market",
+    "Settlement_Small": "Small settlement building",
+    "Settlement_SmallIndustrial": "Small industrial building",
+    "Settlement_Medium": "Medium settlement building",
+    "Settlement_Large": "Large settlement building",
+    "Settlement_Monument": "Settlement monument",
+    "Settlement_SheriffsOffice": "Sheriff's office",
+    "Settlement_Double": "Double settlement building",
+    "Settlement_Farm": "Settlement farm",
+    "Settlement_Factory": "Settlement factory",
+    "Settlement_Clump": "Settlement cluster",
+    "DroneHive": "Sentinel pillar",
+    "SentinelDistressSignal": "Sentinel crash",
+    "AbandonedRobotCamp": "Harmonic camp",
+    "RobotHead": "Robot head",
+    "DigSite": "Dig site",
+    "AncientGuardian": "Ancient guardian",
+    "Settlement_Hub_Builders": "Builders' hub",
+    "Settlement_FishPond": "Fish pond",
+    "Settlement_Builders_RoboArm": "Builder arm",
+    "CargoDrop": "Cargo drop",
+    "ScrapYard": "Scrap yard",
+    "Crashed_Swarm": "Crashed swarm"
   }
 }

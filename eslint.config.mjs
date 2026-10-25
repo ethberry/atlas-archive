@@ -1,44 +1,19 @@
-import path from "node:path";
-import { fileURLToPath } from "node:url";
+import { defineConfig, globalIgnores } from "eslint/config";
+import nextVitals from "eslint-config-next/core-web-vitals";
+import nextTs from "eslint-config-next/typescript";
+import prettier from "eslint-config-prettier/flat";
 
-import typescriptRules from "@ethberry/eslint-config/presets/tsx.mjs";
+const eslintConfig = defineConfig([
+  ...nextVitals,
+  ...nextTs,
+  prettier,
+  globalIgnores([
+    ".next/**",
+    "out/**",
+    "build/**",
+    "next-env.d.ts",
+    "lib/db/supabase.types.ts",
+  ]),
+]);
 
-// DON'T ADD ANY RULES!
-// FIX YOUR SHIT!!!
-
-export default [
-  {
-    ignores: [
-      ".next",
-      "node_modules",
-      "components/ui",
-      "lib/db/supabase.types.ts",
-      "next-auth.d.ts",
-      "eslint.config.mjs"
-    ]
-  },
-
-  {
-    languageOptions: {
-      parserOptions: {
-        project: [
-          "./tsconfig.eslint.json",
-        ],
-        tsconfigRootDir: path.dirname(fileURLToPath(import.meta.url)),
-      },
-    },
-  },
-
-  {
-    settings: {
-      'import/resolver': {
-        typescript: {
-          alwaysTryTypes: true,
-          project: './tsconfig.eslint.json',
-        },
-      },
-    },
-  },
-
-  ...typescriptRules,
-];
+export default eslintConfig;

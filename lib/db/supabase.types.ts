@@ -7,116 +7,354 @@ export type Json =
   | Json[]
 
 export type Database = {
-  // Allows to automatically instantiate createClient with right options
-  // instead of createClient<Database, { PostgrestVersion: 'XX' }>(URL, KEY)
   __InternalSupabase: {
     PostgrestVersion: "13.0.5"
   }
   public: {
     Tables: {
-      email_verification: {
+      assets: {
         Row: {
-          code: string
           created_at: string
-          email: string
+          created_by: string | null
           id: string
+          kind: string
+          like_count: number
+          locator: string | null
+          name: string
+          parent_id: string | null
+          visibility: string
         }
         Insert: {
-          code?: string
           created_at?: string
-          email: string
+          created_by?: string | null
           id?: string
+          kind: string
+          like_count?: number
+          locator?: string | null
+          name: string
+          parent_id?: string | null
+          visibility?: string
         }
         Update: {
-          code?: string
           created_at?: string
-          email?: string
+          created_by?: string | null
           id?: string
-        }
-        Relationships: []
-      }
-      invoices: {
-        Row: {
-          amount: number
-          created_at: string
-          id: string
-          status: Database["public"]["Enums"]["InvoiceStatus"]
-          updated_at: string
-          user_id: string
-        }
-        Insert: {
-          amount: number
-          created_at?: string
-          id?: string
-          status?: Database["public"]["Enums"]["InvoiceStatus"]
-          updated_at?: string
-          user_id?: string
-        }
-        Update: {
-          amount?: number
-          created_at?: string
-          id?: string
-          status?: Database["public"]["Enums"]["InvoiceStatus"]
-          updated_at?: string
-          user_id?: string
+          kind?: string
+          like_count?: number
+          locator?: string | null
+          name?: string
+          parent_id?: string | null
+          visibility?: string
         }
         Relationships: [
           {
-            foreignKeyName: "invoices_user_id_fkey"
-            columns: ["user_id"]
+            foreignKeyName: "assets_parent_id_fkey"
+            columns: ["parent_id"]
             isOneToOne: false
-            referencedRelation: "users"
+            referencedRelation: "assets"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "galaxies_id_fkey"
+            columns: ["id"]
+            isOneToOne: true
+            referencedRelation: "galaxies"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "systems_id_fkey"
+            columns: ["id"]
+            isOneToOne: true
+            referencedRelation: "systems"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "bodies_id_fkey"
+            columns: ["id"]
+            isOneToOne: true
+            referencedRelation: "bodies"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "pois_id_fkey"
+            columns: ["id"]
+            isOneToOne: true
+            referencedRelation: "pois"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "ships_id_fkey"
+            columns: ["id"]
+            isOneToOne: true
+            referencedRelation: "ships"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "tools_id_fkey"
+            columns: ["id"]
+            isOneToOne: true
+            referencedRelation: "tools"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "creatures_id_fkey"
+            columns: ["id"]
+            isOneToOne: true
+            referencedRelation: "creatures"
             referencedColumns: ["id"]
           },
         ]
       }
-      users: {
+      asset_ancestors: {
+        Row: { ancestor_id: string; asset_id: string }
+        Insert: { ancestor_id: string; asset_id: string }
+        Update: { ancestor_id?: string; asset_id?: string }
+        Relationships: []
+      }
+      asset_grants: {
+        Row: { asset_id: string; user_id: string }
+        Insert: { asset_id: string; user_id: string }
+        Update: { asset_id?: string; user_id?: string }
+        Relationships: []
+      }
+      likes: {
+        Row: { asset_id: string; created_at: string; user_id: string }
+        Insert: { asset_id: string; created_at?: string; user_id: string }
+        Update: { asset_id?: string; created_at?: string; user_id?: string }
+        Relationships: []
+      }
+      galaxies: {
+        Row: { id: string }
+        Insert: { id: string }
+        Update: { id?: string }
+        Relationships: [
+          {
+            foreignKeyName: "galaxies_id_fkey"
+            columns: ["id"]
+            isOneToOne: true
+            referencedRelation: "assets"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      systems: {
         Row: {
           address: string
-          consent: boolean
-          created_at: string
-          email: string
-          first_name: string
+          conflict: string | null
+          dissonance: boolean | null
+          economy: string | null
+          gas_giant: boolean | null
           id: string
-          language: Database["public"]["Enums"]["UserLanguage"]
-          last_name: string
-          non_us_person: boolean
-          stage: Database["public"]["Enums"]["UserStage"]
-          updated_at: string
-          upsale1: string | null
-          upsale2: string | null
+          light_years: number
+          population: string | null
+          star: string
+          station: string
+          water: boolean | null
+          wealth: string | null
         }
         Insert: {
           address: string
-          consent?: boolean
-          created_at?: string
-          email: string
-          first_name: string
-          id?: string
-          language?: Database["public"]["Enums"]["UserLanguage"]
-          last_name: string
-          non_us_person?: boolean
-          stage?: Database["public"]["Enums"]["UserStage"]
-          updated_at?: string
-          upsale1?: string | null
-          upsale2?: string | null
+          conflict?: string | null
+          dissonance?: boolean | null
+          economy?: string | null
+          gas_giant?: boolean | null
+          id: string
+          light_years: number
+          population?: string | null
+          star: string
+          station: string
+          water?: boolean | null
+          wealth?: string | null
         }
         Update: {
           address?: string
-          consent?: boolean
-          created_at?: string
-          email?: string
-          first_name?: string
+          conflict?: string | null
+          dissonance?: boolean | null
+          economy?: string | null
+          gas_giant?: boolean | null
           id?: string
-          language?: Database["public"]["Enums"]["UserLanguage"]
-          last_name?: string
-          non_us_person?: boolean
-          stage?: Database["public"]["Enums"]["UserStage"]
-          updated_at?: string
-          upsale1?: string | null
-          upsale2?: string | null
+          light_years?: number
+          population?: string | null
+          star?: string
+          station?: string
+          water?: boolean | null
+          wealth?: string | null
         }
-        Relationships: []
+        Relationships: [
+          {
+            foreignKeyName: "systems_id_fkey"
+            columns: ["id"]
+            isOneToOne: true
+            referencedRelation: "assets"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      bodies: {
+        Row: {
+          activated_stellar: boolean | null
+          ancient_bones: boolean | null
+          biome: number | null
+          dissonance: boolean
+          glyphs: string | null
+          id: string
+          phrase: string
+          resources: string[]
+          salvageable_scrap: boolean | null
+          sentinels: string | null
+        }
+        Insert: {
+          activated_stellar?: boolean | null
+          ancient_bones?: boolean | null
+          biome?: number | null
+          dissonance?: boolean
+          glyphs?: string | null
+          id: string
+          phrase?: string
+          resources?: string[]
+          salvageable_scrap?: boolean | null
+          sentinels?: string | null
+        }
+        Update: {
+          activated_stellar?: boolean | null
+          ancient_bones?: boolean | null
+          biome?: number | null
+          dissonance?: boolean
+          glyphs?: string | null
+          id?: string
+          phrase?: string
+          resources?: string[]
+          salvageable_scrap?: boolean | null
+          sentinels?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "bodies_id_fkey"
+            columns: ["id"]
+            isOneToOne: true
+            referencedRelation: "assets"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      pois: {
+        Row: {
+          building_type: string
+          face: number | null
+          i: number | null
+          id: string
+          j: number | null
+        }
+        Insert: {
+          building_type: string
+          face?: number | null
+          i?: number | null
+          id: string
+          j?: number | null
+        }
+        Update: {
+          building_type?: string
+          face?: number | null
+          i?: number | null
+          id?: string
+          j?: number | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "pois_id_fkey"
+            columns: ["id"]
+            isOneToOne: true
+            referencedRelation: "assets"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      ships: {
+        Row: {
+          class: string | null
+          hull: string | null
+          id: string
+          supercharged: Json
+        }
+        Insert: {
+          class?: string | null
+          hull?: string | null
+          id: string
+          supercharged?: Json
+        }
+        Update: {
+          class?: string | null
+          hull?: string | null
+          id?: string
+          supercharged?: Json
+        }
+        Relationships: [
+          {
+            foreignKeyName: "ships_id_fkey"
+            columns: ["id"]
+            isOneToOne: true
+            referencedRelation: "assets"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      tools: {
+        Row: {
+          body: string | null
+          class: string | null
+          id: string
+          supercharged: Json
+        }
+        Insert: {
+          body?: string | null
+          class?: string | null
+          id: string
+          supercharged?: Json
+        }
+        Update: {
+          body?: string | null
+          class?: string | null
+          id?: string
+          supercharged?: Json
+        }
+        Relationships: [
+          {
+            foreignKeyName: "tools_id_fkey"
+            columns: ["id"]
+            isOneToOne: true
+            referencedRelation: "assets"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      creatures: {
+        Row: {
+          aggression: string | null
+          helpfulness: string | null
+          id: string
+          independence: string | null
+        }
+        Insert: {
+          aggression?: string | null
+          helpfulness?: string | null
+          id: string
+          independence?: string | null
+        }
+        Update: {
+          aggression?: string | null
+          helpfulness?: string | null
+          id?: string
+          independence?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "creatures_id_fkey"
+            columns: ["id"]
+            isOneToOne: true
+            referencedRelation: "assets"
+            referencedColumns: ["id"]
+          },
+        ]
       }
     }
     Views: {
@@ -126,9 +364,7 @@ export type Database = {
       [_ in never]: never
     }
     Enums: {
-      InvoiceStatus: "NEW" | "CREATED" | "EXPIRED" | "PAID"
-      UserLanguage: "EN" | "RU"
-      UserStage: "NEW" | "PAID" | "UPSALE_1" | "UPSALE_2"
+      [_ in never]: never
     }
     CompositeTypes: {
       [_ in never]: never
@@ -255,10 +491,6 @@ export type CompositeTypes<
 
 export const Constants = {
   public: {
-    Enums: {
-      InvoiceStatus: ["NEW", "CREATED", "EXPIRED", "PAID"],
-      UserLanguage: ["EN", "RU"],
-      UserStage: ["NEW", "PAID", "UPSALE_1", "UPSALE_2"],
-    },
+    Enums: {},
   },
 } as const

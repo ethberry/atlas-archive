@@ -1,34 +1,21 @@
-// This file configures the initialization of Sentry on the client.
-// The added config here will be used whenever a users loads a page in their browser.
-// https://docs.sentry.io/platforms/javascript/guides/nextjs/
-
+import { consoleLoggingIntegration } from "@sentry/core";
 import {
   captureRouterTransitionStart,
   init,
   replayIntegration,
 } from "@sentry/nextjs";
 
-init({
-  dsn: "https://b9acec0fd8362ba70c40adf6df988a74@o4509219733307392.ingest.de.sentry.io/4510091901075536",
+const dsn = process.env.NEXT_PUBLIC_SENTRY_DSN;
 
-  // Add optional integrations for additional features
-  integrations: [replayIntegration()],
-
-  // Define how likely traces are sampled. Adjust this value in production, or use tracesSampler for greater control.
-  tracesSampleRate: 1,
-  // Enable logs to be sent to Sentry
-  enableLogs: true,
-
-  // Define how likely Replay events are sampled.
-  // This sets the sample rate to be 10%. You may want this to be 100% while
-  // in development and sample at a lower rate in production
-  replaysSessionSampleRate: 0.1,
-
-  // Define how likely Replay events are sampled when an error occurs.
-  replaysOnErrorSampleRate: 1.0,
-
-  // Setting this option to true will print useful information to the console while you're setting up Sentry.
-  debug: false,
-});
+if (dsn) {
+  init({
+    dsn,
+    integrations: [replayIntegration(), consoleLoggingIntegration()],
+    tracesSampleRate: 1,
+    replaysSessionSampleRate: 0.1,
+    replaysOnErrorSampleRate: 1,
+    debug: false,
+  });
+}
 
 export const onRouterTransitionStart = captureRouterTransitionStart;

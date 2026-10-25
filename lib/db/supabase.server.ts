@@ -1,9 +1,33 @@
-import { createClient } from "@supabase/supabase-js";
+import { createServerClient, type CookieOptions } from "@supabase/ssr";
+import type { SupabaseClient } from "@supabase/supabase-js";
+import { cookies } from "next/headers";
 
-import type { Database } from "./supabase.types";
+import { supabasePublishableKey, supabaseUrl } from "@/lib/db/env";
+import type { Database } from "@/lib/db/supabase.types";
 
-export const supabase = createClient<Database>(
-  process.env.SUPABASE_URL || process.env.NEXT_PUBLIC_SUPABASE_URL,
-  process.env.SUPABASE_SERVICE_ROLE_KEY ||
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY,
-);
+export async function createArchiveClient(): Promise<SupabaseClient<Database> | null> {
+  const url = supabaseUrl();
+  const key = supabasePublishableKey();
+  if (!url || !key) {
+    return null;
+  }
+  const cookieStore = await cookies();
+  return createServerClient<Database>(url, key, {
+    cookies: {
+      getAll() {
+        return cookieStore.getAll();
+      },
+      setAll(
+        cookiesToSet: { name: string; value: string; options: CookieOptions }[],
+      ) {
+        try {
+          cookiesToSet.forEach(({ name, value, options }) => {
+            cookieStore.set(name, value, options);
+          });
+        } catch {
+          // Server Components cannot write cookies. The proxy refreshes the session.
+        }
+      },
+    },
+  });
+}

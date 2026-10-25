@@ -6,7 +6,11 @@ export enum EnabledLanguages {
   RU = "RU",
 }
 
-export const i18n: Record<EnabledLanguages, any> = {
+export type NestedMessages = {
+  [key: string]: string | NestedMessages;
+};
+
+export const i18n: Record<EnabledLanguages, NestedMessages> = {
   [EnabledLanguages.EN]: en,
   [EnabledLanguages.RU]: ru,
 };

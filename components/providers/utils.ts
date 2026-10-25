@@ -1,5 +1,7 @@
+import { type NestedMessages } from "@/lib/i18n";
+
 export function flattenMessages(
-  nestedMessages: Record<string, any> = {},
+  nestedMessages: NestedMessages = {},
   prefix = "",
 ): Record<string, string> {
   return Object.keys(nestedMessages).reduce(

@@ -12,7 +12,7 @@ export interface IAppActions {
 
 export type TAppStore = IAppState & IAppActions;
 
-export const LANGUAGE_STORAGE_KEY = "fractown-language";
+export const LANGUAGE_STORAGE_KEY = "atlas-archive-language";
 
 export const getBrowserLanguage = (): EnabledLanguages => {
   if (

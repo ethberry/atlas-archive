@@ -5,7 +5,7 @@ import {
   FC,
   PropsWithChildren,
   useContext,
-  useRef,
+  useState,
 } from "react";
 import { useStore } from "zustand";
 
@@ -23,13 +23,10 @@ export const AppStoreContext = createContext<AppStoreApi | undefined>(
 
 export const AppStoreProvider: FC<PropsWithChildren> = (props) => {
   const { children } = props;
-  const storeRef = useRef<AppStoreApi | null>(null);
-  if (storeRef.current === null) {
-    storeRef.current = createAppStore(initAppStore());
-  }
+  const [store] = useState(() => createAppStore(initAppStore()));
 
   return (
-    <AppStoreContext.Provider value={storeRef.current}>
+    <AppStoreContext.Provider value={store}>
       {children}
     </AppStoreContext.Provider>
   );
