@@ -22,6 +22,10 @@ yarn-error.log*
 .env*
 !.env.sample
 
+# Google OAuth client downloaded from Cloud Console
+google-oauth-client.json
+client_secret_*.json
+
 # vercel
 .vercel
 
