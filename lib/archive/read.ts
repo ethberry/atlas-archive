@@ -79,7 +79,7 @@ export function galaxyImage(index: unknown): string | null {
     : null;
 }
 
-export type FeedSection = "galaxies" | "top" | "latest";
+export type FeedSection = "galaxies" | "top";
 
 const FEATURED_GALAXIES = 4;
 
@@ -399,14 +399,9 @@ export async function readFeed(
     .in("kind", [...FEED_KINDS])
     .limit(FEED_SIZE);
 
-  const ordered =
-    section === "top"
-      ? request
-          .order("like_count", { ascending: false })
-          .order("created_at", { ascending: false })
-      : request.order("created_at", { ascending: false });
-
-  const { data, error } = await ordered;
+  const { data, error } = await request
+    .order("like_count", { ascending: false })
+    .order("created_at", { ascending: false });
   if (error) {
     fail();
   }

@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export default async function Page() {
   const queryClient = getQueryClient();
   const supabase = await createArchiveClient();
-  const sections: FeedSection[] = ["galaxies", "top", "latest"];
+  const sections: FeedSection[] = ["galaxies", "top"];
   if (supabase) {
     await Promise.all(
       sections.map((section) =>

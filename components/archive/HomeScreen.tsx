@@ -26,7 +26,6 @@ import { getBrowserSupabase } from "@/lib/db/supabase.browser";
 const SECTIONS: { id: FeedSection; title: string }[] = [
   { id: "galaxies", title: "archive.galaxies" },
   { id: "top", title: "archive.topRated" },
-  { id: "latest", title: "archive.latest" },
 ];
 
 export function HomeScreen(props: { confession: string }) {
