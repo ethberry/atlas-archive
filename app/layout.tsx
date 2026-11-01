@@ -23,6 +23,9 @@ const glyphs = localFont({
 export const metadata: Metadata = {
   title: "Atlas Archive",
   description: "A catalogue of generated worlds, ships, tools, and creatures.",
+  verification: {
+    google: "5bJVHey_Y1j3CNcU_hjDHzvmgn248Hw1bSvkQxQiJ6g",
+  },
 };
 
 export default function RootLayout(props: PropsWithChildren) {
