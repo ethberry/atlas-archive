@@ -243,14 +243,14 @@ isOneToOne: true
                   ]
                 },"ships": {
                   Row: {
-                    "class": string,"hull": string,"id": string,"natural_supercharged": Json | null,"supercharged": NonNullable<Json>,"verified": boolean
+                    "base_agile": number | null,"base_damage": number | null,"base_hyperdrive": number | null,"base_shield": number | null,"class": string,"hull": string,"id": string,"natural_supercharged": Json | null,"supercharged": NonNullable<Json>,"verified": boolean
                   }
                   ComputedFields: never
                   Insert: {
-                    "class": string,"hull": string,"id": string,"natural_supercharged"?: Json | null,"supercharged"?: NonNullable<Json>,"verified"?: boolean
+                    "base_agile"?: number | null,"base_damage"?: number | null,"base_hyperdrive"?: number | null,"base_shield"?: number | null,"class": string,"hull": string,"id": string,"natural_supercharged"?: Json | null,"supercharged"?: NonNullable<Json>,"verified"?: boolean
                   }
                   Update: {
-                    "class"?: string,"hull"?: string,"id"?: string,"natural_supercharged"?: Json | null,"supercharged"?: NonNullable<Json>,"verified"?: boolean
+                    "base_agile"?: number | null,"base_damage"?: number | null,"base_hyperdrive"?: number | null,"base_shield"?: number | null,"class"?: string,"hull"?: string,"id"?: string,"natural_supercharged"?: Json | null,"supercharged"?: NonNullable<Json>,"verified"?: boolean
                   }
                   Relationships: [
                     {
@@ -283,14 +283,14 @@ isOneToOne: true
                   ]
                 },"tools": {
                   Row: {
-                    "body": string,"class": string,"head_item": string | null,"head_sold_here": boolean | null,"id": string,"natural_supercharged": NonNullable<Json>,"supercharged": NonNullable<Json>,"verified": boolean
+                    "base_damage": number | null,"base_mining": number | null,"base_scanner": number | null,"body": string,"class": string,"head_item": string | null,"head_sold_here": boolean | null,"id": string,"natural_supercharged": NonNullable<Json>,"supercharged": NonNullable<Json>,"verified": boolean
                   }
                   ComputedFields: never
                   Insert: {
-                    "body": string,"class": string,"head_item"?: string | null,"head_sold_here"?: boolean | null,"id": string,"natural_supercharged"?: NonNullable<Json>,"supercharged"?: NonNullable<Json>,"verified"?: boolean
+                    "base_damage"?: number | null,"base_mining"?: number | null,"base_scanner"?: number | null,"body": string,"class": string,"head_item"?: string | null,"head_sold_here"?: boolean | null,"id": string,"natural_supercharged"?: NonNullable<Json>,"supercharged"?: NonNullable<Json>,"verified"?: boolean
                   }
                   Update: {
-                    "body"?: string,"class"?: string,"head_item"?: string | null,"head_sold_here"?: boolean | null,"id"?: string,"natural_supercharged"?: NonNullable<Json>,"supercharged"?: NonNullable<Json>,"verified"?: boolean
+                    "base_damage"?: number | null,"base_mining"?: number | null,"base_scanner"?: number | null,"body"?: string,"class"?: string,"head_item"?: string | null,"head_sold_here"?: boolean | null,"id"?: string,"natural_supercharged"?: NonNullable<Json>,"supercharged"?: NonNullable<Json>,"verified"?: boolean
                   }
                   Relationships: [
                     {

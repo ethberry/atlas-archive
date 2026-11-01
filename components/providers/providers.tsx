@@ -7,7 +7,6 @@ import { ThemeProvider } from "@mui/material/styles";
 import { SnackbarProvider } from "notistack";
 
 import { ArchiveShell } from "@/components/archive/ArchiveShell";
-import { AppStoreProvider } from "@/components/providers/AppStoreProvider";
 import { AuthProvider } from "@/components/providers/AuthProvider";
 import { LocalizationProvider } from "@/components/providers/LocalizationProvider";
 import { ReactQueryClientProvider } from "@/components/providers/ReactQueryClientProvider";
@@ -17,30 +16,28 @@ import { EnabledLanguages, i18n } from "@/lib/i18n";
 export const Providers = ({ children }: PropsWithChildren) => {
   return (
     <ReactQueryClientProvider>
-      <AppStoreProvider>
-        <AppRouterCacheProvider options={{ key: "css", enableCssLayer: true }}>
-          <ThemeProvider theme={theme}>
-            <CssBaseline />
-            <LocalizationProvider
-              i18n={i18n}
-              defaultLanguage={EnabledLanguages.EN}
+      <AppRouterCacheProvider options={{ key: "css", enableCssLayer: true }}>
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
+          <LocalizationProvider
+            i18n={i18n}
+            defaultLanguage={EnabledLanguages.EN}
+          >
+            <SnackbarProvider
+              maxSnack={3}
+              anchorOrigin={{
+                vertical: "top",
+                horizontal: "right",
+              }}
+              autoHideDuration={3000}
             >
-              <SnackbarProvider
-                maxSnack={3}
-                anchorOrigin={{
-                  vertical: "top",
-                  horizontal: "right",
-                }}
-                autoHideDuration={3000}
-              >
-                <AuthProvider>
-                  <ArchiveShell>{children}</ArchiveShell>
-                </AuthProvider>
-              </SnackbarProvider>
-            </LocalizationProvider>
-          </ThemeProvider>
-        </AppRouterCacheProvider>
-      </AppStoreProvider>
+              <AuthProvider>
+                <ArchiveShell>{children}</ArchiveShell>
+              </AuthProvider>
+            </SnackbarProvider>
+          </LocalizationProvider>
+        </ThemeProvider>
+      </AppRouterCacheProvider>
     </ReactQueryClientProvider>
   );
 };

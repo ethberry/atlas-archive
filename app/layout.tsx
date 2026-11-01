@@ -21,8 +21,19 @@ const glyphs = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Atlas Archive",
-  description: "A catalogue of generated worlds, ships, tools, and creatures.",
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_BASE_URL ?? "http://localhost:3000",
+  ),
+  title: "Atlas Archive — a No Man's Sky catalogue",
+  description:
+    "A catalogue of No Man's Sky worlds, starships, multi-tools, and creatures, with where to find them.",
+  openGraph: {
+    siteName: "Atlas Archive",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
   verification: {
     google: "5bJVHey_Y1j3CNcU_hjDHzvmgn248Hw1bSvkQxQiJ6g",
   },

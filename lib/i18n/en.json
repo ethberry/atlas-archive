@@ -45,6 +45,13 @@
     "salvage": "Salvageable scrap",
     "activated": "Activated stellar metal",
     "supercharged": "Supercharged slots",
+    "baseStats": "Base stats",
+    "baseDamage": "Base damage",
+    "baseMining": "Base mining",
+    "baseScanner": "Base scanner",
+    "baseShield": "Base shield",
+    "baseHyperdrive": "Base hyperdrive",
+    "baseAgile": "Base maneuverability",
     "systemsCount": "Systems in the archive",
     "planetsCount": "Planets",
     "yes": "Yes",
@@ -97,6 +104,7 @@
     "uploadRejected": "This file does not fit: use JPEG, PNG, or WebP up to 30 MB.",
     "uploadSignIn": "Sign in with Google to add a screenshot.",
     "about": "How it works",
+    "statistics": "Statistics",
     "browse": "Encyclopedia",
     "yourLikes": "Your likes"
   },
@@ -192,6 +200,9 @@
     "B": "B",
     "A": "A",
     "S": "S"
+  },
+  "baseStats": {
+    "asFound": "As the crashed ship shows them. Claiming it can raise a stat, never lower it."
   },
   "toolBody": {
     "pistol": "Pistol",

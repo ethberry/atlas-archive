@@ -9,13 +9,14 @@ import {
 
 export const metadata: Metadata = {
   title: "Privacy policy — Atlas Archive",
+  alternates: { canonical: "/privacy" },
   description:
     "What Atlas Archive stores if you sign in with Google, mark a record, or send a bug report.",
 };
 
 export default function PrivacyPage() {
   return (
-    <LegalDocument title="Privacy policy" updated="26 October 2026">
+    <LegalDocument title="Privacy policy" updated="2 November 2026">
       <LegalText>
         Atlas Archive is an informational catalogue of worlds, ships, tools, and
         creatures. The catalogue can be read without an account. This policy
@@ -55,6 +56,14 @@ export default function PrivacyPage() {
         <LegalText>
           After sign-in, the browser keeps a session cookie so the account stays
           signed in. The site does not run advertising cookies.
+        </LegalText>
+      </LegalSection>
+
+      <LegalSection title="Visits">
+        <LegalText>
+          The site counts visits with Vercel Web Analytics: which pages are
+          opened, from what country, on what kind of device, and which site led
+          here. It sets no cookies and does not identify a visitor.
         </LegalText>
       </LegalSection>
 

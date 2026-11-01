@@ -5,6 +5,7 @@ import { readContent } from "@/lib/archive/content";
 
 export const metadata: Metadata = {
   title: "Release notes — Atlas Archive",
+  alternates: { canonical: "/release-notes" },
   description: "What changed on Atlas Archive, release by release.",
 };
 

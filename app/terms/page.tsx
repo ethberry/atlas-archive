@@ -8,6 +8,7 @@ import {
 
 export const metadata: Metadata = {
   title: "Terms of service — Atlas Archive",
+  alternates: { canonical: "/terms" },
   description:
     "Atlas Archive shows catalogue information as is, with no warranties and no liability for what is displayed.",
 };
@@ -34,8 +35,8 @@ export default function TermsPage() {
         <LegalText>
           Records are provided as is and as available. There is no warranty of
           accuracy, completeness, currency, availability, or fitness for a
-          particular purpose. A record may be generated, incomplete, outdated,
-          or wrong. The site may be interrupted or contain errors.
+          particular purpose. A record may be incomplete, outdated, or wrong.
+          The site may be interrupted or contain errors.
         </LegalText>
       </LegalSection>
 

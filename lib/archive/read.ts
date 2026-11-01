@@ -730,6 +730,7 @@ async function fieldsFor(
         ship.natural_supercharged ?? ship.supercharged,
         text(ship.class),
       ),
+      ...shipStats(ship),
     );
   }
   if (kind === "tool") {
@@ -741,6 +742,11 @@ async function fieldsFor(
       ...(headItem ? [term("archive.headItem", "headItem", headItem)] : []),
       term("archive.rank", "rank", text(tool.class)),
       slotGrid(tool.supercharged, tool.natural_supercharged, text(tool.class)),
+      ...baseStats([
+        ["archive.baseDamage", tool.base_damage],
+        ["archive.baseMining", tool.base_mining],
+        ["archive.baseScanner", tool.base_scanner],
+      ]),
     );
   }
   if (kind === "creature") {
@@ -757,6 +763,29 @@ async function fieldsFor(
     );
   }
   return fields;
+}
+
+// The percents that close an item's card, one decimal each. A stat the body
+// or hull has no range for is null, and stays off the card.
+function baseStats(stats: [string, unknown][]): Field[] {
+  return stats.flatMap(([label, value]) =>
+    typeof value === "number"
+      ? [{ type: "text", label, text: `${value.toFixed(1)}%` }]
+      : [],
+  );
+}
+
+// A ship's numbers are its wreck's, so a line above them says so.
+function shipStats(ship: Record<string, unknown>): Field[] {
+  const stats = baseStats([
+    ["archive.baseDamage", ship.base_damage],
+    ["archive.baseShield", ship.base_shield],
+    ["archive.baseHyperdrive", ship.base_hyperdrive],
+    ["archive.baseAgile", ship.base_agile],
+  ]);
+  return stats.length > 0
+    ? [term("archive.baseStats", "baseStats", "asFound"), ...stats]
+    : [];
 }
 
 // One step of the "how to get it" list: a message id and its values.

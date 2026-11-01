@@ -97,6 +97,7 @@
     "uploadRejected": "Файл не подходит: нужен JPEG, PNG или WebP до 30 МБ.",
     "uploadSignIn": "Войдите через Google, чтобы добавить скриншот.",
     "about": "Как это работает",
+    "statistics": "Статистика",
     "browse": "Энциклопедия",
     "yourLikes": "Ваши лайки"
   },

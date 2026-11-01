@@ -1,10 +1,15 @@
 import { HydrationBoundary, dehydrate } from "@tanstack/react-query";
+import type { Metadata } from "next";
 
 import { HomeScreen } from "@/components/archive/HomeScreen";
 import { readContent } from "@/lib/archive/content";
 import { readFeed, type FeedSection } from "@/lib/archive/read";
 import { createArchiveClient } from "@/lib/db/supabase.server";
 import { getQueryClient } from "@/lib/query-client";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
 
 export default async function Page() {
   const queryClient = getQueryClient();

@@ -12,5 +12,3 @@ export const listRowSchema = z.object({
 });
 
 export const slotSchema = z.tuple([z.number(), z.number()]);
-
-export type ListRow = z.infer<typeof listRowSchema>;

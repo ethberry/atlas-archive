@@ -1,14 +1,35 @@
 import { HydrationBoundary, dehydrate } from "@tanstack/react-query";
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import { RecordScreen } from "@/components/archive/RecordScreen";
-import { childKinds, isRecordKind } from "@/lib/archive/kinds";
+import { childKinds, isRecordKind, KIND_TITLES } from "@/lib/archive/kinds";
 import { catalogKey, parseCatalogQuery } from "@/lib/archive/query";
 import { readCatalog, readRecord } from "@/lib/archive/read";
 import { createArchiveClient } from "@/lib/db/supabase.server";
 import { getQueryClient } from "@/lib/query-client";
 
 type Search = Record<string, string | string[] | undefined>;
+
+export async function generateMetadata(props: {
+  params: Promise<{ kind: string; id: string }>;
+}): Promise<Metadata> {
+  const { kind, id } = await props.params;
+  if (!isRecordKind(kind)) {
+    return {};
+  }
+  const supabase = await createArchiveClient();
+  const record = supabase ? await readRecord(supabase, kind, id) : null;
+  if (!record) {
+    return {};
+  }
+  const title = KIND_TITLES[kind].one;
+  return {
+    title: `${record.name}, No Man's Sky ${title.toLowerCase()} — Atlas Archive`,
+    description: `${record.name}: a ${title.toLowerCase()} of No Man's Sky, with where to find it.`,
+    alternates: { canonical: `/${kind}/${id}` },
+  };
+}
 
 export default async function RecordPage(props: {
   params: Promise<{ kind: string; id: string }>;

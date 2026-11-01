@@ -10,9 +10,18 @@ export const KINDS = [
 
 export type Kind = (typeof KINDS)[number];
 
-export const FEED_KINDS = ["planet", "ship", "tool", "creature"] as const;
+// The words a search uses, for page titles.
+export const KIND_TITLES: Record<Kind, { one: string; many: string }> = {
+  galaxy: { one: "Galaxy", many: "Galaxies" },
+  system: { one: "Star system", many: "Star systems" },
+  planet: { one: "Planet", many: "Planets" },
+  building: { one: "Building", many: "Buildings" },
+  ship: { one: "Starship", many: "Starships" },
+  tool: { one: "Multi-tool", many: "Multi-tools" },
+  creature: { one: "Creature", many: "Creatures" },
+};
 
-export type FeedKind = (typeof FEED_KINDS)[number];
+export const FEED_KINDS = ["planet", "ship", "tool", "creature"] as const;
 
 export const PAGE_SIZE = 25;
 
@@ -68,13 +77,6 @@ export const HULL_OPTIONS = [
 ] as const;
 
 export const RANK_OPTIONS = ["C", "B", "A", "S"] as const;
-
-export const GALAXY_TYPE_OPTIONS = [
-  "normal",
-  "harsh",
-  "lush",
-  "empty",
-] as const;
 
 // Bodies a stored tool can have: the standard pool gives the first four and
 // the exotic pool gives royal, a harmonic camp pays sentinel, and a monolith
