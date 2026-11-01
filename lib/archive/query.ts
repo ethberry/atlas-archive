@@ -33,19 +33,11 @@ export type CatalogQuery = {
   counted: boolean;
 };
 
-// Whether the visitor narrowed the list with a filter.
+// Whether the visitor narrowed the list with a filter this kind has.
 export function isFiltered(query: CatalogQuery): boolean {
   return (
     query.name !== "" ||
-    query.star !== "" ||
-    query.station !== "" ||
-    query.biome !== "" ||
-    query.sentinels !== "" ||
-    query.hull !== "" ||
-    query.rank !== "" ||
-    query.toolBody !== "" ||
-    query.dissonance ||
-    query.gasGiant
+    filtersFor(query.kinds).some((field) => query[field.param])
   );
 }
 
@@ -157,7 +149,6 @@ export function catalogKey(query: CatalogQuery): readonly unknown[] {
 }
 
 export function toSearchParams(query: CatalogQuery, page = query.page): string {
-  const active = new Set(filtersFor(query.kinds).map((field) => field.param));
   const params = new URLSearchParams();
   if (query.tab) {
     params.set("tab", query.tab);
@@ -165,32 +156,11 @@ export function toSearchParams(query: CatalogQuery, page = query.page): string {
   if (query.name) {
     params.set("name", query.name);
   }
-  if (query.star && active.has("star")) {
-    params.set("star", query.star);
-  }
-  if (query.station && active.has("station")) {
-    params.set("station", query.station);
-  }
-  if (query.biome && active.has("biome")) {
-    params.set("biome", query.biome);
-  }
-  if (query.sentinels && active.has("sentinels")) {
-    params.set("sentinels", query.sentinels);
-  }
-  if (query.hull && active.has("hull")) {
-    params.set("hull", query.hull);
-  }
-  if (query.rank && active.has("rank")) {
-    params.set("rank", query.rank);
-  }
-  if (query.toolBody && active.has("toolBody")) {
-    params.set("toolBody", query.toolBody);
-  }
-  if (query.dissonance && active.has("dissonance")) {
-    params.set("dissonance", "1");
-  }
-  if (query.gasGiant && active.has("gasGiant")) {
-    params.set("gasGiant", "1");
+  for (const field of filtersFor(query.kinds)) {
+    const value = query[field.param];
+    if (value) {
+      params.set(field.param, value === true ? "1" : value);
+    }
   }
   if (page > 1) {
     params.set("page", String(page));

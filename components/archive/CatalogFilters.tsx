@@ -41,11 +41,10 @@ function CatalogFiltersForm(props: { pathname: string; query: CatalogQuery }) {
   const router = useRouter();
   const intl = useIntl();
   const fields = filtersFor(query.kinds);
-  const [name, setName] = useState(query.name);
   const [draft, setDraft] = useState(query);
 
   function submit(next: CatalogQuery) {
-    const cleared = { ...next, name, page: 1 };
+    const cleared = { ...next, page: 1 };
     // Stay where the form is; the address keeps the filters for a link.
     router.push(`${pathname}${toSearchParams(cleared, 1)}`, { scroll: false });
   }
@@ -60,8 +59,8 @@ function CatalogFiltersForm(props: { pathname: string; query: CatalogQuery }) {
       }}
     >
       <TextField
-        value={name}
-        onChange={(event) => setName(event.target.value)}
+        value={draft.name}
+        onChange={(event) => setDraft({ ...draft, name: event.target.value })}
         label={intl.formatMessage({ id: "archive.name" })}
         fullWidth
         slotProps={{
@@ -122,21 +121,11 @@ function FilterControl(props: {
             }
           />
         }
-        label={
-          <FormattedMessage
-            id={
-              field.param === "gasGiant"
-                ? "archive.gasGiant"
-                : "archive.dissonance"
-            }
-          />
-        }
+        label={<FormattedMessage id={`archive.${field.param}`} />}
       />
     );
   }
-  const label = intl.formatMessage({
-    id: `archive.${field.param === "toolBody" ? "toolBody" : field.param}`,
-  });
+  const label = intl.formatMessage({ id: `archive.${field.param}` });
   return (
     <FormControl sx={{ minWidth: 180 }} size="small">
       <InputLabel id={`${field.param}-label`} shrink>

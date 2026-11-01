@@ -10,12 +10,8 @@ import { FormattedMessage } from "react-intl";
 
 import type { CatalogRow } from "@/lib/archive/read";
 
-export function CatalogList(props: {
-  rows: CatalogRow[];
-  showKind?: boolean;
-  showLikes?: boolean;
-}) {
-  const { rows, showKind = false, showLikes = false } = props;
+export function CatalogList(props: { rows: CatalogRow[] }) {
+  const { rows } = props;
   if (rows.length === 0) {
     return (
       <Typography color="text.secondary">
@@ -28,20 +24,7 @@ export function CatalogList(props: {
       {rows.map((row) => (
         <ListItem key={row.id} disablePadding>
           <ListItemButton component={Link} href={`/${row.kind}/${row.id}`}>
-            <ListItemText
-              primary={row.name}
-              secondary={
-                showKind || showLikes ? (
-                  <>
-                    {showKind ? (
-                      <FormattedMessage id={`kind.${row.kind}`} />
-                    ) : null}
-                    {showKind && showLikes ? " · " : null}
-                    {showLikes ? row.likeCount : null}
-                  </>
-                ) : null
-              }
-            />
+            <ListItemText primary={row.name} />
           </ListItemButton>
         </ListItem>
       ))}

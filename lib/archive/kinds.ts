@@ -117,10 +117,6 @@ export function childKinds(kind: Kind): Kind[] {
       return ["system"];
     case "system":
       return ["planet"];
-    // A planet lists its items; the points between them only hold
-    // coordinates and are not shown.
-    case "planet":
-      return ["ship", "tool", "creature"];
     default:
       return [];
   }

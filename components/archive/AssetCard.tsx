@@ -320,12 +320,6 @@ function FieldValue(props: { field: Field }) {
                 time: step.values.time ? (
                   <FormattedMessage id={`activeTime.${step.values.time}`} />
                 ) : undefined,
-                code:
-                  step.values.code && step.values.code !== "?" ? (
-                    <Glyphs code={step.values.code} />
-                  ) : (
-                    step.values.code
-                  ),
               }}
             />
           </li>

@@ -23,10 +23,10 @@ import {
 } from "@/lib/archive/read";
 import { getBrowserSupabase } from "@/lib/db/supabase.browser";
 
-const SECTIONS: { id: FeedSection; title: string; showLikes: boolean }[] = [
-  { id: "galaxies", title: "archive.galaxies", showLikes: false },
-  { id: "top", title: "archive.topRated", showLikes: true },
-  { id: "latest", title: "archive.latest", showLikes: false },
+const SECTIONS: { id: FeedSection; title: string }[] = [
+  { id: "galaxies", title: "archive.galaxies" },
+  { id: "top", title: "archive.topRated" },
+  { id: "latest", title: "archive.latest" },
 ];
 
 export function HomeScreen(props: { confession: string }) {
@@ -35,11 +35,7 @@ export function HomeScreen(props: { confession: string }) {
     <Stack spacing={6}>
       {SECTIONS.map((section) => (
         <Fragment key={section.id}>
-          <FeedBlock
-            section={section.id}
-            title={section.title}
-            showLikes={section.showLikes}
-          />
+          <FeedBlock section={section.id} title={section.title} />
           {section.id === "galaxies" ? <Confession html={confession} /> : null}
         </Fragment>
       ))}
@@ -65,12 +61,8 @@ function Confession(props: { html: string }) {
   );
 }
 
-function FeedBlock(props: {
-  section: FeedSection;
-  title: string;
-  showLikes: boolean;
-}) {
-  const { section, title, showLikes } = props;
+function FeedBlock(props: { section: FeedSection; title: string }) {
+  const { section, title } = props;
   const { enqueueSnackbar } = useSnackbar();
   const feed = useQuery({
     queryKey: ["feed", section],
@@ -120,7 +112,7 @@ function FeedBlock(props: {
                   : { xs: 12, sm: 6, md: 4, lg: 3 }
               }
             >
-              <FeedCard row={row} showLikes={showLikes} />
+              <FeedCard row={row} />
             </Grid>
           ))}
         </Grid>
@@ -131,7 +123,7 @@ function FeedBlock(props: {
 
 // One home-page card: the picture, then the name with the like button beside
 // it (galaxies have none).
-function FeedCard(props: { row: CatalogRow; showLikes: boolean }) {
+function FeedCard(props: { row: CatalogRow }) {
   const { row } = props;
   return (
     <Card variant="outlined">

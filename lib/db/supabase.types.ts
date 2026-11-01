@@ -243,14 +243,14 @@ isOneToOne: true
                   ]
                 },"ships": {
                   Row: {
-                    "base_agile": number | null,"base_damage": number | null,"base_hyperdrive": number | null,"base_shield": number | null,"class": string,"hull": string,"id": string,"natural_supercharged": Json | null,"supercharged": NonNullable<Json>,"verified": boolean
+                    "base_agile": number | null,"base_damage": number | null,"base_hyperdrive": number | null,"base_shield": number | null,"class": string,"hull": string,"id": string,"model_draw_1": number | null,"model_draw_2": number | null,"natural_supercharged": Json | null,"supercharged": NonNullable<Json>,"verified": boolean
                   }
                   ComputedFields: never
                   Insert: {
-                    "base_agile"?: number | null,"base_damage"?: number | null,"base_hyperdrive"?: number | null,"base_shield"?: number | null,"class": string,"hull": string,"id": string,"natural_supercharged"?: Json | null,"supercharged"?: NonNullable<Json>,"verified"?: boolean
+                    "base_agile"?: number | null,"base_damage"?: number | null,"base_hyperdrive"?: number | null,"base_shield"?: number | null,"class": string,"hull": string,"id": string,"model_draw_1"?: number | null,"model_draw_2"?: number | null,"natural_supercharged"?: Json | null,"supercharged"?: NonNullable<Json>,"verified"?: boolean
                   }
                   Update: {
-                    "base_agile"?: number | null,"base_damage"?: number | null,"base_hyperdrive"?: number | null,"base_shield"?: number | null,"class"?: string,"hull"?: string,"id"?: string,"natural_supercharged"?: Json | null,"supercharged"?: NonNullable<Json>,"verified"?: boolean
+                    "base_agile"?: number | null,"base_damage"?: number | null,"base_hyperdrive"?: number | null,"base_shield"?: number | null,"class"?: string,"hull"?: string,"id"?: string,"model_draw_1"?: number | null,"model_draw_2"?: number | null,"natural_supercharged"?: Json | null,"supercharged"?: NonNullable<Json>,"verified"?: boolean
                   }
                   Relationships: [
                     {

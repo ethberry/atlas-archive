@@ -2,7 +2,7 @@ import { PropsWithChildren } from "react";
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 import localFont from "next/font/local";
-import InitColorSchemeScript from "@mui/system/InitColorSchemeScript";
+import InitColorSchemeScript from "@mui/material/InitColorSchemeScript";
 import { Analytics } from "@vercel/analytics/next";
 
 import { Providers } from "@/components/providers/providers";

@@ -69,7 +69,7 @@ export function RecordScreen(props: {
           query={query}
         />
       ) : null}
-      {record.data && kind !== "planet" && children.length > 0 ? (
+      {record.data && children.length > 0 ? (
         <CatalogScreen
           pathname={pathname}
           query={{ ...query, kinds: children, parentId: id }}

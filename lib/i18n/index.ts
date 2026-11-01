@@ -1,9 +1,9 @@
 import en from "./en.json";
-import ru from "./ru.json";
 
+// English only for now: ru.json waits here, and importing it would put it in
+// every client bundle.
 export enum EnabledLanguages {
   EN = "EN",
-  RU = "RU",
 }
 
 export type NestedMessages = {
@@ -12,5 +12,4 @@ export type NestedMessages = {
 
 export const i18n: Record<EnabledLanguages, NestedMessages> = {
   [EnabledLanguages.EN]: en,
-  [EnabledLanguages.RU]: ru,
 };
