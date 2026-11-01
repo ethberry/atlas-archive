@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-import { FEED_KINDS } from "@/lib/archive/kinds";
+import { FEED_KINDS, STATION_BUILDING } from "@/lib/archive/kinds";
 import { createArchiveClient } from "@/lib/db/supabase.server";
 
 const BATCH = 1000;
@@ -16,13 +16,14 @@ async function recordEntries(base: string): Promise<MetadataRoute.Sitemap> {
   const rows: {
     id: string;
     kind: string;
+    name: string;
     locator: string | null;
     parent_id: string | null;
   }[] = [];
   for (let from = 0; ; from += BATCH) {
     const { data, error } = await supabase
       .from("assets")
-      .select("id, kind, locator, parent_id")
+      .select("id, kind, name, locator, parent_id")
       .order("id")
       .range(from, from + BATCH - 1);
     if (error) {
@@ -48,6 +49,7 @@ async function recordEntries(base: string): Promise<MetadataRoute.Sitemap> {
   return rows
     .filter((row) => !isHidden(row.id))
     .filter((row) => row.kind !== "galaxy" || parents.has(row.id))
+    .filter((row) => row.kind !== "building" || row.name === STATION_BUILDING)
     .map((row) => ({
       url: `${base}/${row.kind}/${row.id}`,
       changeFrequency: "yearly" as const,

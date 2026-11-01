@@ -45,9 +45,7 @@
     "salvage": "Salvageable scrap",
     "activated": "Activated stellar metal",
     "supercharged": "Supercharged slots",
-    "baseStats": "Base stats",
     "baseDamage": "Base damage",
-    "baseMining": "Base mining",
     "baseScanner": "Base scanner",
     "baseShield": "Base shield",
     "baseHyperdrive": "Base hyperdrive",
@@ -200,9 +198,6 @@
     "B": "B",
     "A": "A",
     "S": "S"
-  },
-  "baseStats": {
-    "asFound": "As the crashed ship shows them. Claiming it can raise a stat, never lower it."
   },
   "toolBody": {
     "pistol": "Pistol",

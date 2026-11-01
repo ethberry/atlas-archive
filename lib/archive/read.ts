@@ -742,11 +742,7 @@ async function fieldsFor(
       ...(headItem ? [term("archive.headItem", "headItem", headItem)] : []),
       term("archive.rank", "rank", text(tool.class)),
       slotGrid(tool.supercharged, tool.natural_supercharged, text(tool.class)),
-      ...baseStats([
-        ["archive.baseDamage", tool.base_damage],
-        ["archive.baseMining", tool.base_mining],
-        ["archive.baseScanner", tool.base_scanner],
-      ]),
+      ...toolStats(tool),
     );
   }
   if (kind === "creature") {
@@ -765,27 +761,80 @@ async function fieldsFor(
   return fields;
 }
 
-// The percents that close an item's card, one decimal each. A stat the body
-// or hull has no range for is null, and stays off the card.
-function baseStats(stats: [string, unknown][]): Field[] {
+// The numbers that close an item's card: what it reads bare, with nothing
+// installed. A stat the body or hull has no range for is null, and stays off.
+function baseStats(stats: [string, number | null][]): Field[] {
   return stats.flatMap(([label, value]) =>
-    typeof value === "number"
-      ? [{ type: "text", label, text: `${value.toFixed(1)}%` }]
-      : [],
+    value === null ? [] : [{ type: "text", label, text: value.toFixed(1) }],
   );
 }
 
-// A ship's numbers are its wreck's, so a line above them says so.
-function shipStats(ship: Record<string, unknown>): Field[] {
-  const stats = baseStats([
-    ["archive.baseDamage", ship.base_damage],
-    ["archive.baseShield", ship.base_shield],
-    ["archive.baseHyperdrive", ship.base_hyperdrive],
-    ["archive.baseAgile", ship.base_agile],
+function percentOf(value: unknown) {
+  return typeof value === "number" ? value / 100 : null;
+}
+
+// The card of a bare tool: the Mining Beam and the scanner, in whole beam
+// points. Only an Atlantid beam runs at heat 12.
+function toolStats(tool: Record<string, unknown>): Field[] {
+  const damage = percentOf(tool.base_damage) ?? 0;
+  const scanner = percentOf(tool.base_scanner);
+  const heat = text(tool.body)?.startsWith("atlantid") ? 12 : 8;
+  const beam = (Math.trunc(20 * (1 + damage)) * 20 * heat) / (heat + 1.6);
+  return baseStats([
+    ["archive.baseDamage", beam],
+    ["archive.baseScanner", scanner === null ? null : 200 * (1 + scanner)],
   ]);
-  return stats.length > 0
-    ? [term("archive.baseStats", "baseStats", "asFound"), ...stats]
-    : [];
+}
+
+// Hull and class constants of `CalculateShipStatEngines`. An interceptor runs
+// the Robot rows. The last row is the middle of the draw of the ship being
+// flown, so manoeuvrability is about right, not exact.
+const AGILE_HULL: Record<string, number> = {
+  hauler: 157.5,
+  interceptor: 210,
+  shuttle: 237.5,
+};
+const AGILE_CLASS: Record<string, number> = { C: 5, B: 10, A: 15, S: 20 };
+const AGILE_MIDDLE: Record<string, number> = {
+  C: 0,
+  B: 7.5,
+  A: 11.25,
+  S: 43.75,
+};
+
+// The card of a bare ship, from `CalculateShipStat*`. Damage takes the middle
+// of a 33 to 37 draw of the ship being flown.
+function shipStats(ship: Record<string, unknown>): Field[] {
+  const hull = text(ship.hull) ?? "";
+  const rank = text(ship.class) ?? "C";
+  const robot = hull === "interceptor";
+  const of = (value: unknown, card: (base: number) => number) => {
+    const base = percentOf(value);
+    return base === null ? null : card(base * 100);
+  };
+  return baseStats([
+    [
+      "archive.baseDamage",
+      of(ship.base_damage, (base) => 35 + (base * 215) / 60),
+    ],
+    ["archive.baseShield", of(ship.base_shield, (base) => 165 + base / 0.85)],
+    [
+      "archive.baseHyperdrive",
+      of(ship.base_hyperdrive, (base) => (robot ? 601 + 6 * base : 101 + base)),
+    ],
+    [
+      "archive.baseAgile",
+      of(ship.base_agile, (base) => {
+        const x = 1 + base / 100;
+        return (
+          (AGILE_HULL[hull] ?? 352.5) +
+          AGILE_CLASS[rank] +
+          90 * ((robot ? 1.5 : 1) * x * x - 1) +
+          AGILE_MIDDLE[rank]
+        );
+      }),
+    ],
+  ]);
 }
 
 // One step of the "how to get it" list: a message id and its values.
