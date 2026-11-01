@@ -46,7 +46,8 @@ function CatalogFiltersForm(props: { pathname: string; query: CatalogQuery }) {
 
   function submit(next: CatalogQuery) {
     const cleared = { ...next, name, page: 1 };
-    router.push(`${pathname}${toSearchParams(cleared, 1)}`);
+    // Stay where the form is; the address keeps the filters for a link.
+    router.push(`${pathname}${toSearchParams(cleared, 1)}`, { scroll: false });
   }
 
   return (
@@ -90,7 +91,11 @@ function CatalogFiltersForm(props: { pathname: string; query: CatalogQuery }) {
               key={field.param}
               field={field}
               query={draft}
-              onChange={(next) => setDraft(next)}
+              // A list or a box applies at once; the name waits for Enter.
+              onChange={(next) => {
+                setDraft(next);
+                submit(next);
+              }}
             />
           ))}
         </Stack>
@@ -134,7 +139,9 @@ function FilterControl(props: {
   });
   return (
     <FormControl sx={{ minWidth: 180 }} size="small">
-      <InputLabel id={`${field.param}-label`}>{label}</InputLabel>
+      <InputLabel id={`${field.param}-label`} shrink>
+        {label}
+      </InputLabel>
       <Select
         labelId={`${field.param}-label`}
         label={label}

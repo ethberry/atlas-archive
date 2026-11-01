@@ -7,7 +7,7 @@ export async function proxy(request: NextRequest) {
   const url = supabaseUrl();
   const key = supabasePublishableKey();
   if (!url || !key) {
-    return NextResponse.next();
+    return localReferrer(request, NextResponse.next());
   }
 
   let response = NextResponse.next({ request });
@@ -28,6 +28,14 @@ export async function proxy(request: NextRequest) {
     },
   });
   await supabase.auth.getUser();
+  return localReferrer(request, response);
+}
+
+function localReferrer(request: NextRequest, response: NextResponse) {
+  const host = request.headers.get("host") ?? "";
+  if (host.startsWith("localhost") || host.startsWith("127.0.0.1")) {
+    response.headers.set("Referrer-Policy", "no-referrer-when-downgrade");
+  }
   return response;
 }
 

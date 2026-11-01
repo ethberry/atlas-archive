@@ -1,10 +1,7 @@
 "use client";
 
-import Button from "@mui/material/Button";
 import Pagination from "@mui/material/Pagination";
-import Stack from "@mui/material/Stack";
 import { useRouter } from "next/navigation";
-import { FormattedMessage } from "react-intl";
 
 import {
   pageCount,
@@ -18,30 +15,16 @@ export function CatalogPagination(props: {
   total: number | null;
   hasNext: boolean;
 }) {
-  const { pathname, query, total, hasNext } = props;
+  const { pathname, query, total } = props;
   const router = useRouter();
 
   function open(page: number) {
-    router.push(`${pathname}${toSearchParams(query, page)}`);
+    router.push(`${pathname}${toSearchParams(query, page)}`, { scroll: false });
   }
 
-  if (total === null) {
-    if (query.page === 1 && !hasNext) {
-      return null;
-    }
-    return (
-      <Stack direction="row" spacing={1}>
-        <Button disabled={query.page <= 1} onClick={() => open(query.page - 1)}>
-          <FormattedMessage id="archive.previous" />
-        </Button>
-        <Button disabled={!hasNext} onClick={() => open(query.page + 1)}>
-          <FormattedMessage id="archive.next" />
-        </Button>
-      </Stack>
-    );
-  }
-
-  const count = pageCount(total);
+  // First, previous, the first three pages, the current one, the last
+  // three, next, last. A list of one page shows none.
+  const count = pageCount(total ?? 0);
   if (count <= 1) {
     return null;
   }
@@ -49,6 +32,10 @@ export function CatalogPagination(props: {
     <Pagination
       page={Math.min(query.page, count)}
       count={count}
+      boundaryCount={3}
+      siblingCount={0}
+      showFirstButton
+      showLastButton
       onChange={(_event, page) => open(page)}
     />
   );

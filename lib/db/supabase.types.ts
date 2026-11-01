@@ -1,378 +1,338 @@
-export type Json =
-  | string
-  | number
-  | boolean
-  | null
-  | { [key: string]: Json | undefined }
-  | Json[]
+
+export type Json = string | number | boolean | null | { [key: string]: Json | undefined } | Json[]
 
 export type Database = {
-  __InternalSupabase: {
-    PostgrestVersion: "13.0.5"
-  }
-  public: {
-    Tables: {
-      assets: {
-        Row: {
-          created_at: string
-          created_by: string | null
-          id: string
-          kind: string
-          like_count: number
-          locator: string | null
-          name: string
-          parent_id: string | null
-          visibility: string
-        }
-        Insert: {
-          created_at?: string
-          created_by?: string | null
-          id?: string
-          kind: string
-          like_count?: number
-          locator?: string | null
-          name: string
-          parent_id?: string | null
-          visibility?: string
-        }
-        Update: {
-          created_at?: string
-          created_by?: string | null
-          id?: string
-          kind?: string
-          like_count?: number
-          locator?: string | null
-          name?: string
-          parent_id?: string | null
-          visibility?: string
-        }
-        Relationships: [
-          {
-            foreignKeyName: "assets_parent_id_fkey"
-            columns: ["parent_id"]
-            isOneToOne: false
-            referencedRelation: "assets"
-            referencedColumns: ["id"]
-          },
-          {
-            foreignKeyName: "galaxies_id_fkey"
-            columns: ["id"]
-            isOneToOne: true
-            referencedRelation: "galaxies"
-            referencedColumns: ["id"]
-          },
-          {
-            foreignKeyName: "systems_id_fkey"
-            columns: ["id"]
-            isOneToOne: true
-            referencedRelation: "systems"
-            referencedColumns: ["id"]
-          },
-          {
-            foreignKeyName: "bodies_id_fkey"
-            columns: ["id"]
-            isOneToOne: true
-            referencedRelation: "bodies"
-            referencedColumns: ["id"]
-          },
-          {
-            foreignKeyName: "pois_id_fkey"
-            columns: ["id"]
-            isOneToOne: true
-            referencedRelation: "pois"
-            referencedColumns: ["id"]
-          },
-          {
-            foreignKeyName: "ships_id_fkey"
-            columns: ["id"]
-            isOneToOne: true
-            referencedRelation: "ships"
-            referencedColumns: ["id"]
-          },
-          {
-            foreignKeyName: "tools_id_fkey"
-            columns: ["id"]
-            isOneToOne: true
-            referencedRelation: "tools"
-            referencedColumns: ["id"]
-          },
-          {
-            foreignKeyName: "creatures_id_fkey"
-            columns: ["id"]
-            isOneToOne: true
-            referencedRelation: "creatures"
-            referencedColumns: ["id"]
-          },
-        ]
-      }
-      asset_ancestors: {
-        Row: { ancestor_id: string; asset_id: string }
-        Insert: { ancestor_id: string; asset_id: string }
-        Update: { ancestor_id?: string; asset_id?: string }
-        Relationships: []
-      }
-      asset_grants: {
-        Row: { asset_id: string; user_id: string }
-        Insert: { asset_id: string; user_id: string }
-        Update: { asset_id?: string; user_id?: string }
-        Relationships: []
-      }
-      likes: {
-        Row: { asset_id: string; created_at: string; user_id: string }
-        Insert: { asset_id: string; created_at?: string; user_id: string }
-        Update: { asset_id?: string; created_at?: string; user_id?: string }
-        Relationships: []
-      }
-      galaxies: {
-        Row: { id: string }
-        Insert: { id: string }
-        Update: { id?: string }
-        Relationships: [
-          {
-            foreignKeyName: "galaxies_id_fkey"
-            columns: ["id"]
-            isOneToOne: true
-            referencedRelation: "assets"
-            referencedColumns: ["id"]
-          },
-        ]
-      }
-      systems: {
-        Row: {
-          address: string
-          conflict: string | null
-          dissonance: boolean | null
-          economy: string | null
-          gas_giant: boolean | null
-          id: string
-          light_years: number
-          population: string | null
-          star: string
-          station: string
-          water: boolean | null
-          wealth: string | null
-        }
-        Insert: {
-          address: string
-          conflict?: string | null
-          dissonance?: boolean | null
-          economy?: string | null
-          gas_giant?: boolean | null
-          id: string
-          light_years: number
-          population?: string | null
-          star: string
-          station: string
-          water?: boolean | null
-          wealth?: string | null
-        }
-        Update: {
-          address?: string
-          conflict?: string | null
-          dissonance?: boolean | null
-          economy?: string | null
-          gas_giant?: boolean | null
-          id?: string
-          light_years?: number
-          population?: string | null
-          star?: string
-          station?: string
-          water?: boolean | null
-          wealth?: string | null
-        }
-        Relationships: [
-          {
-            foreignKeyName: "systems_id_fkey"
-            columns: ["id"]
-            isOneToOne: true
-            referencedRelation: "assets"
-            referencedColumns: ["id"]
-          },
-        ]
-      }
-      bodies: {
-        Row: {
-          activated_stellar: boolean | null
-          ancient_bones: boolean | null
-          biome: number | null
-          dissonance: boolean
-          glyphs: string | null
-          id: string
-          phrase: string
-          resources: string[]
-          salvageable_scrap: boolean | null
-          sentinels: string | null
-        }
-        Insert: {
-          activated_stellar?: boolean | null
-          ancient_bones?: boolean | null
-          biome?: number | null
-          dissonance?: boolean
-          glyphs?: string | null
-          id: string
-          phrase?: string
-          resources?: string[]
-          salvageable_scrap?: boolean | null
-          sentinels?: string | null
-        }
-        Update: {
-          activated_stellar?: boolean | null
-          ancient_bones?: boolean | null
-          biome?: number | null
-          dissonance?: boolean
-          glyphs?: string | null
-          id?: string
-          phrase?: string
-          resources?: string[]
-          salvageable_scrap?: boolean | null
-          sentinels?: string | null
-        }
-        Relationships: [
-          {
-            foreignKeyName: "bodies_id_fkey"
-            columns: ["id"]
-            isOneToOne: true
-            referencedRelation: "assets"
-            referencedColumns: ["id"]
-          },
-        ]
-      }
-      pois: {
-        Row: {
-          building_type: string
-          face: number | null
-          i: number | null
-          id: string
-          j: number | null
-        }
-        Insert: {
-          building_type: string
-          face?: number | null
-          i?: number | null
-          id: string
-          j?: number | null
-        }
-        Update: {
-          building_type?: string
-          face?: number | null
-          i?: number | null
-          id?: string
-          j?: number | null
-        }
-        Relationships: [
-          {
-            foreignKeyName: "pois_id_fkey"
-            columns: ["id"]
-            isOneToOne: true
-            referencedRelation: "assets"
-            referencedColumns: ["id"]
-          },
-        ]
-      }
-      ships: {
-        Row: {
-          class: string | null
-          hull: string | null
-          id: string
-          supercharged: Json
-        }
-        Insert: {
-          class?: string | null
-          hull?: string | null
-          id: string
-          supercharged?: Json
-        }
-        Update: {
-          class?: string | null
-          hull?: string | null
-          id?: string
-          supercharged?: Json
-        }
-        Relationships: [
-          {
-            foreignKeyName: "ships_id_fkey"
-            columns: ["id"]
-            isOneToOne: true
-            referencedRelation: "assets"
-            referencedColumns: ["id"]
-          },
-        ]
-      }
-      tools: {
-        Row: {
-          body: string | null
-          class: string | null
-          id: string
-          supercharged: Json
-        }
-        Insert: {
-          body?: string | null
-          class?: string | null
-          id: string
-          supercharged?: Json
-        }
-        Update: {
-          body?: string | null
-          class?: string | null
-          id?: string
-          supercharged?: Json
-        }
-        Relationships: [
-          {
-            foreignKeyName: "tools_id_fkey"
-            columns: ["id"]
-            isOneToOne: true
-            referencedRelation: "assets"
-            referencedColumns: ["id"]
-          },
-        ]
-      }
-      creatures: {
-        Row: {
-          aggression: string | null
-          helpfulness: string | null
-          id: string
-          independence: string | null
-        }
-        Insert: {
-          aggression?: string | null
-          helpfulness?: string | null
-          id: string
-          independence?: string | null
-        }
-        Update: {
-          aggression?: string | null
-          helpfulness?: string | null
-          id?: string
-          independence?: string | null
-        }
-        Relationships: [
-          {
-            foreignKeyName: "creatures_id_fkey"
-            columns: ["id"]
-            isOneToOne: true
-            referencedRelation: "assets"
-            referencedColumns: ["id"]
-          },
-        ]
-      }
+  
+  "graphql_public": {
+          Tables: {
+            [_ in never]: never
+          }
+          Views: {
+            [_ in never]: never
+          }
+          Functions: {
+            "graphql":
+{ Args: { "extensions"?: Json,"operationName"?: string,"query"?: string,"variables"?: Json }; Returns: Json
+                           }
+          }
+          Enums: {
+            [_ in never]: never
+          }
+          CompositeTypes: {
+            [_ in never]: never
+          }
+        },"public": {
+          Tables: {
+            "asset_ancestors": {
+                  Row: {
+                    "ancestor_id": string,"asset_id": string
+                  }
+                  ComputedFields: never
+                  Insert: {
+                    "ancestor_id": string,"asset_id": string
+                  }
+                  Update: {
+                    "ancestor_id"?: string,"asset_id"?: string
+                  }
+                  Relationships: [
+                    {
+      foreignKeyName: "asset_ancestors_ancestor_id_fkey"
+      columns: ["ancestor_id"]
+isOneToOne: false
+      referencedRelation: "assets"
+      referencedColumns: ["id"]
+    },{
+      foreignKeyName: "asset_ancestors_asset_id_fkey"
+      columns: ["asset_id"]
+isOneToOne: false
+      referencedRelation: "assets"
+      referencedColumns: ["id"]
     }
-    Views: {
-      [_ in never]: never
+                  ]
+                },"asset_grants": {
+                  Row: {
+                    "asset_id": string,"user_id": string
+                  }
+                  ComputedFields: never
+                  Insert: {
+                    "asset_id": string,"user_id": string
+                  }
+                  Update: {
+                    "asset_id"?: string,"user_id"?: string
+                  }
+                  Relationships: [
+                    {
+      foreignKeyName: "asset_grants_asset_id_fkey"
+      columns: ["asset_id"]
+isOneToOne: false
+      referencedRelation: "assets"
+      referencedColumns: ["id"]
     }
-    Functions: {
-      [_ in never]: never
+                  ]
+                },"asset_images": {
+                  Row: {
+                    "asset_id": string,"created_at": string,"id": string,"is_verified": boolean,"object_path": string,"user_id": string
+                  }
+                  ComputedFields: never
+                  Insert: {
+                    "asset_id": string,"created_at"?: string,"id"?: string,"is_verified"?: boolean,"object_path": string,"user_id": string
+                  }
+                  Update: {
+                    "asset_id"?: string,"created_at"?: string,"id"?: string,"is_verified"?: boolean,"object_path"?: string,"user_id"?: string
+                  }
+                  Relationships: [
+                    {
+      foreignKeyName: "asset_images_asset_id_fkey"
+      columns: ["asset_id"]
+isOneToOne: false
+      referencedRelation: "assets"
+      referencedColumns: ["id"]
     }
-    Enums: {
-      [_ in never]: never
+                  ]
+                },"assets": {
+                  Row: {
+                    "created_at": string,"created_by": string | null,"id": string,"kind": string,"locator": string | null,"name": string,"parent_id": string | null,"visibility": string,"like_count": number | null
+                  }
+                  ComputedFields: "like_count"
+                  Insert: {
+                    "created_at"?: string,"created_by"?: string | null,"id"?: string,"kind": string,"locator"?: string | null,"name": string,"parent_id"?: string | null,"visibility"?: string
+                  }
+                  Update: {
+                    "created_at"?: string,"created_by"?: string | null,"id"?: string,"kind"?: string,"locator"?: string | null,"name"?: string,"parent_id"?: string | null,"visibility"?: string
+                  }
+                  Relationships: [
+                    {
+      foreignKeyName: "assets_parent_id_fkey"
+      columns: ["parent_id"]
+isOneToOne: false
+      referencedRelation: "assets"
+      referencedColumns: ["id"]
     }
-    CompositeTypes: {
-      [_ in never]: never
+                  ]
+                },"bodies": {
+                  Row: {
+                    "activated_stellar": boolean,"ancient_bones": boolean | null,"biome": number,"dissonance": boolean,"gas_giant": boolean,"id": string,"resources": (string)[],"salvageable_scrap": boolean,"sentinels": string,"water": boolean
+                  }
+                  ComputedFields: never
+                  Insert: {
+                    "activated_stellar": boolean,"ancient_bones"?: boolean | null,"biome": number,"dissonance"?: boolean,"gas_giant": boolean,"id": string,"resources"?: (string)[],"salvageable_scrap": boolean,"sentinels": string,"water": boolean
+                  }
+                  Update: {
+                    "activated_stellar"?: boolean,"ancient_bones"?: boolean | null,"biome"?: number,"dissonance"?: boolean,"gas_giant"?: boolean,"id"?: string,"resources"?: (string)[],"salvageable_scrap"?: boolean,"sentinels"?: string,"water"?: boolean
+                  }
+                  Relationships: [
+                    {
+      foreignKeyName: "bodies_id_fkey"
+      columns: ["id"]
+isOneToOne: true
+      referencedRelation: "assets"
+      referencedColumns: ["id"]
     }
-  }
+                  ]
+                },"creatures": {
+                  Row: {
+                    "active_time": string,"affinity": string,"agility": string,"combat": string,"habitat": string,"health": string,"id": string,"verified": boolean
+                  }
+                  ComputedFields: never
+                  Insert: {
+                    "active_time": string,"affinity": string,"agility": string,"combat": string,"habitat": string,"health": string,"id": string,"verified"?: boolean
+                  }
+                  Update: {
+                    "active_time"?: string,"affinity"?: string,"agility"?: string,"combat"?: string,"habitat"?: string,"health"?: string,"id"?: string,"verified"?: boolean
+                  }
+                  Relationships: [
+                    {
+      foreignKeyName: "creatures_id_fkey"
+      columns: ["id"]
+isOneToOne: true
+      referencedRelation: "assets"
+      referencedColumns: ["id"]
+    }
+                  ]
+                },"galaxies": {
+                  Row: {
+                    "featured": number | null,"id": string,"index": number,"type": string
+                  }
+                  ComputedFields: never
+                  Insert: {
+                    "featured"?: number | null,"id": string,"index": number,"type": string
+                  }
+                  Update: {
+                    "featured"?: number | null,"id"?: string,"index"?: number,"type"?: string
+                  }
+                  Relationships: [
+                    {
+      foreignKeyName: "galaxies_id_fkey"
+      columns: ["id"]
+isOneToOne: true
+      referencedRelation: "assets"
+      referencedColumns: ["id"]
+    }
+                  ]
+                },"likes": {
+                  Row: {
+                    "asset_id": string,"created_at": string,"user_id": string
+                  }
+                  ComputedFields: never
+                  Insert: {
+                    "asset_id": string,"created_at"?: string,"user_id": string
+                  }
+                  Update: {
+                    "asset_id"?: string,"created_at"?: string,"user_id"?: string
+                  }
+                  Relationships: [
+                    {
+      foreignKeyName: "likes_asset_id_fkey"
+      columns: ["asset_id"]
+isOneToOne: false
+      referencedRelation: "assets"
+      referencedColumns: ["id"]
+    }
+                  ]
+                },"poi_items": {
+                  Row: {
+                    "entry_planet": string | null,"entry_station": boolean,"item_id": string,"poi_id": string
+                  }
+                  ComputedFields: never
+                  Insert: {
+                    "entry_planet"?: string | null,"entry_station"?: boolean,"item_id": string,"poi_id": string
+                  }
+                  Update: {
+                    "entry_planet"?: string | null,"entry_station"?: boolean,"item_id"?: string,"poi_id"?: string
+                  }
+                  Relationships: [
+                    {
+      foreignKeyName: "poi_items_entry_planet_fkey"
+      columns: ["entry_planet"]
+isOneToOne: false
+      referencedRelation: "bodies"
+      referencedColumns: ["id"]
+    },{
+      foreignKeyName: "poi_items_item_id_fkey"
+      columns: ["item_id"]
+isOneToOne: false
+      referencedRelation: "assets"
+      referencedColumns: ["id"]
+    },{
+      foreignKeyName: "poi_items_poi_id_fkey"
+      columns: ["poi_id"]
+isOneToOne: false
+      referencedRelation: "pois"
+      referencedColumns: ["id"]
+    }
+                  ]
+                },"pois": {
+                  Row: {
+                    "building_type": string,"id": string,"latitude": number | null,"longitude": number | null
+                  }
+                  ComputedFields: never
+                  Insert: {
+                    "building_type": string,"id": string,"latitude"?: number | null,"longitude"?: number | null
+                  }
+                  Update: {
+                    "building_type"?: string,"id"?: string,"latitude"?: number | null,"longitude"?: number | null
+                  }
+                  Relationships: [
+                    {
+      foreignKeyName: "pois_id_fkey"
+      columns: ["id"]
+isOneToOne: true
+      referencedRelation: "assets"
+      referencedColumns: ["id"]
+    }
+                  ]
+                },"ships": {
+                  Row: {
+                    "class": string,"hull": string,"id": string,"natural_supercharged": Json | null,"supercharged": NonNullable<Json>,"verified": boolean
+                  }
+                  ComputedFields: never
+                  Insert: {
+                    "class": string,"hull": string,"id": string,"natural_supercharged"?: Json | null,"supercharged"?: NonNullable<Json>,"verified"?: boolean
+                  }
+                  Update: {
+                    "class"?: string,"hull"?: string,"id"?: string,"natural_supercharged"?: Json | null,"supercharged"?: NonNullable<Json>,"verified"?: boolean
+                  }
+                  Relationships: [
+                    {
+      foreignKeyName: "ships_id_fkey"
+      columns: ["id"]
+isOneToOne: true
+      referencedRelation: "assets"
+      referencedColumns: ["id"]
+    }
+                  ]
+                },"systems": {
+                  Row: {
+                    "address": string,"conflict": string | null,"dissonance": boolean,"economy": string | null,"gas_giant": boolean,"id": string,"light_years": number,"population": string,"star": string,"station": string,"water": boolean,"wealth": string | null
+                  }
+                  ComputedFields: never
+                  Insert: {
+                    "address": string,"conflict"?: string | null,"dissonance": boolean,"economy"?: string | null,"gas_giant": boolean,"id": string,"light_years": number,"population": string,"star": string,"station": string,"water": boolean,"wealth"?: string | null
+                  }
+                  Update: {
+                    "address"?: string,"conflict"?: string | null,"dissonance"?: boolean,"economy"?: string | null,"gas_giant"?: boolean,"id"?: string,"light_years"?: number,"population"?: string,"star"?: string,"station"?: string,"water"?: boolean,"wealth"?: string | null
+                  }
+                  Relationships: [
+                    {
+      foreignKeyName: "systems_id_fkey"
+      columns: ["id"]
+isOneToOne: true
+      referencedRelation: "assets"
+      referencedColumns: ["id"]
+    }
+                  ]
+                },"tools": {
+                  Row: {
+                    "body": string,"class": string,"head_item": string | null,"head_sold_here": boolean | null,"id": string,"natural_supercharged": NonNullable<Json>,"supercharged": NonNullable<Json>,"verified": boolean
+                  }
+                  ComputedFields: never
+                  Insert: {
+                    "body": string,"class": string,"head_item"?: string | null,"head_sold_here"?: boolean | null,"id": string,"natural_supercharged"?: NonNullable<Json>,"supercharged"?: NonNullable<Json>,"verified"?: boolean
+                  }
+                  Update: {
+                    "body"?: string,"class"?: string,"head_item"?: string | null,"head_sold_here"?: boolean | null,"id"?: string,"natural_supercharged"?: NonNullable<Json>,"supercharged"?: NonNullable<Json>,"verified"?: boolean
+                  }
+                  Relationships: [
+                    {
+      foreignKeyName: "tools_id_fkey"
+      columns: ["id"]
+isOneToOne: true
+      referencedRelation: "assets"
+      referencedColumns: ["id"]
+    }
+                  ]
+                }
+          }
+          Views: {
+            [_ in never]: never
+          }
+          Functions: {
+            "can_read_asset":
+{ Args: { "target": string }; Returns: boolean
+                           },
+"like_count":
+{ Args: { "asset": Omit<Database["public"]['Tables']["assets"]['Row'], Database["public"]['Tables']["assets"]['ComputedFields']> }; Returns: number
+                           },
+"rebuild_ancestors":
+{ Args: { "target": string }; Returns: undefined
+                           },
+"show_limit":
+{ Args: Record<PropertyKey, never>; Returns: number
+                           },
+"show_trgm":
+{ Args: { "": string }; Returns: (string)[]
+                           }
+          }
+          Enums: {
+            [_ in never]: never
+          }
+          CompositeTypes: {
+            [_ in never]: never
+          }
+        }
 }
 
-type DatabaseWithoutInternals = Omit<Database, "__InternalSupabase">
+type DatabaseWithoutInternals = Omit<Database, '__InternalSupabase'>
 
 type DefaultSchema = DatabaseWithoutInternals[Extract<keyof Database, "public">]
 
@@ -385,25 +345,21 @@ export type Tables<
   }
     ? keyof (DatabaseWithoutInternals[DefaultSchemaTableNameOrOptions["schema"]]["Tables"] &
         DatabaseWithoutInternals[DefaultSchemaTableNameOrOptions["schema"]]["Views"])
-    : never = never,
-> = DefaultSchemaTableNameOrOptions extends {
-  schema: keyof DatabaseWithoutInternals
-}
+    : never = never
+> = DefaultSchemaTableNameOrOptions extends { schema: keyof DatabaseWithoutInternals }
   ? (DatabaseWithoutInternals[DefaultSchemaTableNameOrOptions["schema"]]["Tables"] &
       DatabaseWithoutInternals[DefaultSchemaTableNameOrOptions["schema"]]["Views"])[TableName] extends {
       Row: infer R
     }
     ? R
     : never
-  : DefaultSchemaTableNameOrOptions extends keyof (DefaultSchema["Tables"] &
-        DefaultSchema["Views"])
-    ? (DefaultSchema["Tables"] &
-        DefaultSchema["Views"])[DefaultSchemaTableNameOrOptions] extends {
-        Row: infer R
-      }
-      ? R
-      : never
+  : DefaultSchemaTableNameOrOptions extends keyof (DefaultSchema["Tables"] & DefaultSchema["Views"])
+  ? (DefaultSchema["Tables"] & DefaultSchema["Views"])[DefaultSchemaTableNameOrOptions] extends {
+      Row: infer R
+    }
+    ? R
     : never
+  : never
 
 export type TablesInsert<
   DefaultSchemaTableNameOrOptions extends
@@ -413,22 +369,20 @@ export type TablesInsert<
     schema: keyof DatabaseWithoutInternals
   }
     ? keyof DatabaseWithoutInternals[DefaultSchemaTableNameOrOptions["schema"]]["Tables"]
-    : never = never,
-> = DefaultSchemaTableNameOrOptions extends {
-  schema: keyof DatabaseWithoutInternals
-}
+    : never = never
+> = DefaultSchemaTableNameOrOptions extends { schema: keyof DatabaseWithoutInternals }
   ? DatabaseWithoutInternals[DefaultSchemaTableNameOrOptions["schema"]]["Tables"][TableName] extends {
       Insert: infer I
     }
     ? I
     : never
   : DefaultSchemaTableNameOrOptions extends keyof DefaultSchema["Tables"]
-    ? DefaultSchema["Tables"][DefaultSchemaTableNameOrOptions] extends {
-        Insert: infer I
-      }
-      ? I
-      : never
+  ? DefaultSchema["Tables"][DefaultSchemaTableNameOrOptions] extends {
+      Insert: infer I
+    }
+    ? I
     : never
+  : never
 
 export type TablesUpdate<
   DefaultSchemaTableNameOrOptions extends
@@ -438,22 +392,20 @@ export type TablesUpdate<
     schema: keyof DatabaseWithoutInternals
   }
     ? keyof DatabaseWithoutInternals[DefaultSchemaTableNameOrOptions["schema"]]["Tables"]
-    : never = never,
-> = DefaultSchemaTableNameOrOptions extends {
-  schema: keyof DatabaseWithoutInternals
-}
+    : never = never
+> = DefaultSchemaTableNameOrOptions extends { schema: keyof DatabaseWithoutInternals }
   ? DatabaseWithoutInternals[DefaultSchemaTableNameOrOptions["schema"]]["Tables"][TableName] extends {
       Update: infer U
     }
     ? U
     : never
   : DefaultSchemaTableNameOrOptions extends keyof DefaultSchema["Tables"]
-    ? DefaultSchema["Tables"][DefaultSchemaTableNameOrOptions] extends {
-        Update: infer U
-      }
-      ? U
-      : never
+  ? DefaultSchema["Tables"][DefaultSchemaTableNameOrOptions] extends {
+      Update: infer U
+    }
+    ? U
     : never
+  : never
 
 export type Enums<
   DefaultSchemaEnumNameOrOptions extends
@@ -463,14 +415,12 @@ export type Enums<
     schema: keyof DatabaseWithoutInternals
   }
     ? keyof DatabaseWithoutInternals[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"]
-    : never = never,
-> = DefaultSchemaEnumNameOrOptions extends {
-  schema: keyof DatabaseWithoutInternals
-}
+    : never = never
+> = DefaultSchemaEnumNameOrOptions extends { schema: keyof DatabaseWithoutInternals }
   ? DatabaseWithoutInternals[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"][EnumName]
   : DefaultSchemaEnumNameOrOptions extends keyof DefaultSchema["Enums"]
-    ? DefaultSchema["Enums"][DefaultSchemaEnumNameOrOptions]
-    : never
+  ? DefaultSchema["Enums"][DefaultSchemaEnumNameOrOptions]
+  : never
 
 export type CompositeTypes<
   PublicCompositeTypeNameOrOptions extends
@@ -480,17 +430,21 @@ export type CompositeTypes<
     schema: keyof DatabaseWithoutInternals
   }
     ? keyof DatabaseWithoutInternals[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"]
-    : never = never,
-> = PublicCompositeTypeNameOrOptions extends {
-  schema: keyof DatabaseWithoutInternals
-}
+    : never = never
+> = PublicCompositeTypeNameOrOptions extends { schema: keyof DatabaseWithoutInternals }
   ? DatabaseWithoutInternals[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"][CompositeTypeName]
   : PublicCompositeTypeNameOrOptions extends keyof DefaultSchema["CompositeTypes"]
-    ? DefaultSchema["CompositeTypes"][PublicCompositeTypeNameOrOptions]
-    : never
+  ? DefaultSchema["CompositeTypes"][PublicCompositeTypeNameOrOptions]
+  : never
 
 export const Constants = {
-  public: {
-    Enums: {},
-  },
+  "graphql_public": {
+          Enums: {
+            
+          }
+        },"public": {
+          Enums: {
+            
+          }
+        }
 } as const

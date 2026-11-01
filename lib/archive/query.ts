@@ -1,6 +1,5 @@
 import {
   BIOME_OPTIONS,
-  BUILDING_OPTIONS,
   HULL_OPTIONS,
   PAGE_SIZE,
   RANK_OPTIONS,
@@ -14,6 +13,12 @@ import {
 export type CatalogQuery = {
   kinds: Kind[];
   parentId: string | null;
+  // Any depth below this record: a planet's items hang under its points.
+  ancestorId: string | null;
+  // The items this player liked.
+  likedBy: string | null;
+  // The open tab of a planet's items: tool, creature, or ship.
+  tab: string;
   page: number;
   name: string;
   star: string;
@@ -23,11 +28,26 @@ export type CatalogQuery = {
   hull: string;
   rank: string;
   toolBody: string;
-  building: string;
   dissonance: boolean;
   gasGiant: boolean;
   counted: boolean;
 };
+
+// Whether the visitor narrowed the list with a filter.
+export function isFiltered(query: CatalogQuery): boolean {
+  return (
+    query.name !== "" ||
+    query.star !== "" ||
+    query.station !== "" ||
+    query.biome !== "" ||
+    query.sentinels !== "" ||
+    query.hull !== "" ||
+    query.rank !== "" ||
+    query.toolBody !== "" ||
+    query.dissonance ||
+    query.gasGiant
+  );
+}
 
 export type FilterField =
   | {
@@ -39,14 +59,7 @@ export type FilterField =
   | { type: "check"; param: "dissonance" | "gasGiant" };
 
 type SelectParam =
-  | "star"
-  | "station"
-  | "biome"
-  | "sentinels"
-  | "hull"
-  | "rank"
-  | "toolBody"
-  | "building";
+  "star" | "station" | "biome" | "sentinels" | "hull" | "rank" | "toolBody";
 
 type RawSearch = Record<string, string | string[] | undefined>;
 
@@ -65,10 +78,12 @@ export function parseCatalogQuery(
   parentId?: string,
 ): CatalogQuery {
   const page = Number(first(raw.page));
-  const onlyBuildings = kinds.length === 1 && kinds[0] === "building";
   return {
     kinds,
     parentId: parentId ?? null,
+    ancestorId: null,
+    likedBy: null,
+    tab: oneOf(first(raw.tab), ["tool", "creature", "ship"] as const),
     page: Number.isInteger(page) && page > 0 ? page : 1,
     name: first(raw.name).slice(0, 80),
     star: oneOf(first(raw.star), STAR_OPTIONS),
@@ -78,10 +93,9 @@ export function parseCatalogQuery(
     hull: oneOf(first(raw.hull), HULL_OPTIONS),
     rank: oneOf(first(raw.rank), RANK_OPTIONS),
     toolBody: oneOf(first(raw.toolBody), TOOL_BODY_OPTIONS),
-    building: oneOf(first(raw.building), BUILDING_OPTIONS),
     dissonance: first(raw.dissonance) === "1",
     gasGiant: first(raw.gasGiant) === "1",
-    counted: !onlyBuildings,
+    counted: true,
   };
 }
 
@@ -118,15 +132,6 @@ export function filtersFor(kinds: Kind[]): FilterField[] {
         },
         { type: "check", param: "dissonance" },
       ];
-    case "building":
-      return [
-        {
-          type: "select",
-          param: "building",
-          group: "building",
-          options: BUILDING_OPTIONS,
-        },
-      ];
     case "ship":
       return [
         { type: "select", param: "hull", group: "hull", options: HULL_OPTIONS },
@@ -154,6 +159,9 @@ export function catalogKey(query: CatalogQuery): readonly unknown[] {
 export function toSearchParams(query: CatalogQuery, page = query.page): string {
   const active = new Set(filtersFor(query.kinds).map((field) => field.param));
   const params = new URLSearchParams();
+  if (query.tab) {
+    params.set("tab", query.tab);
+  }
   if (query.name) {
     params.set("name", query.name);
   }
@@ -177,9 +185,6 @@ export function toSearchParams(query: CatalogQuery, page = query.page): string {
   }
   if (query.toolBody && active.has("toolBody")) {
     params.set("toolBody", query.toolBody);
-  }
-  if (query.building && active.has("building")) {
-    params.set("building", query.building);
   }
   if (query.dissonance && active.has("dissonance")) {
     params.set("dissonance", "1");

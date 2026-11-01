@@ -1,5 +1,7 @@
 "use client";
 
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import { useQuery } from "@tanstack/react-query";
@@ -10,9 +12,23 @@ import { useSnackbar } from "notistack";
 import { CatalogFilters } from "@/components/archive/CatalogFilters";
 import { CatalogList } from "@/components/archive/CatalogList";
 import { CatalogPagination } from "@/components/archive/CatalogPagination";
-import { catalogKey, type CatalogQuery } from "@/lib/archive/query";
+import { catalogKey, isFiltered, type CatalogQuery } from "@/lib/archive/query";
 import { readCatalog } from "@/lib/archive/read";
 import { getBrowserSupabase } from "@/lib/db/supabase.browser";
+
+// The note shown instead of an empty list.
+export function NothingFound() {
+  return (
+    <Card variant="outlined" sx={{ mb: 4 }}>
+      {/* CardContent pads its last child more at the bottom; even it out. */}
+      <CardContent sx={{ "&:last-child": { pb: 2 } }}>
+        <Typography color="text.secondary">
+          <FormattedMessage id="archive.nothingFound" />
+        </Typography>
+      </CardContent>
+    </Card>
+  );
+}
 
 export function CatalogScreen(props: {
   pathname: string;
@@ -37,6 +53,11 @@ export function CatalogScreen(props: {
       enqueueSnackbar(list.error.message, { variant: "error" });
     }
   }, [enqueueSnackbar, list.error]);
+
+  // Nothing at all here: no form to search with, only a note.
+  if (list.data && list.data.total === 0 && !isFiltered(query)) {
+    return <NothingFound />;
+  }
 
   return (
     <Stack spacing={3}>

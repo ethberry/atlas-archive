@@ -2,7 +2,7 @@ import { HydrationBoundary, dehydrate } from "@tanstack/react-query";
 import { notFound } from "next/navigation";
 
 import { RecordScreen } from "@/components/archive/RecordScreen";
-import { childKinds, isKind } from "@/lib/archive/kinds";
+import { childKinds, isRecordKind } from "@/lib/archive/kinds";
 import { catalogKey, parseCatalogQuery } from "@/lib/archive/query";
 import { readCatalog, readRecord } from "@/lib/archive/read";
 import { createArchiveClient } from "@/lib/db/supabase.server";
@@ -15,7 +15,7 @@ export default async function RecordPage(props: {
   searchParams: Promise<Search>;
 }) {
   const { kind: kindParam, id } = await props.params;
-  if (!isKind(kindParam)) {
+  if (!isRecordKind(kindParam)) {
     notFound();
   }
   const children = childKinds(kindParam);

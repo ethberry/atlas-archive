@@ -1,7 +1,7 @@
 import { HydrationBoundary, dehydrate } from "@tanstack/react-query";
 
 import { HomeScreen } from "@/components/archive/HomeScreen";
-import { featuredIds } from "@/lib/archive/featured";
+import { readContent } from "@/lib/archive/content";
 import { readFeed, type FeedSection } from "@/lib/archive/read";
 import { createArchiveClient } from "@/lib/db/supabase.server";
 import { getQueryClient } from "@/lib/query-client";
@@ -9,7 +9,7 @@ import { getQueryClient } from "@/lib/query-client";
 export default async function Page() {
   const queryClient = getQueryClient();
   const supabase = await createArchiveClient();
-  const sections: FeedSection[] = ["featured", "top", "latest"];
+  const sections: FeedSection[] = ["galaxies", "top", "latest"];
   if (supabase) {
     await Promise.all(
       sections.map((section) =>
@@ -19,13 +19,13 @@ export default async function Page() {
         }),
       ),
     );
-  } else if (featuredIds.length === 0) {
-    queryClient.setQueryData(["feed", "featured"], []);
   }
+
+  const confession = await readContent("confession");
 
   return (
     <HydrationBoundary state={dehydrate(queryClient)}>
-      <HomeScreen />
+      <HomeScreen confession={confession} />
     </HydrationBoundary>
   );
 }

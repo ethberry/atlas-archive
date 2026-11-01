@@ -13,7 +13,9 @@ if (dsn) {
     dsn,
     integrations: [
       replayIntegration(),
-      feedbackIntegration({ colorScheme: "system" }),
+      ...(process.env.NODE_ENV === "production"
+        ? [feedbackIntegration({ colorScheme: "system" })]
+        : []),
       consoleLoggingIntegration(),
     ],
     tracesSampleRate: 1,

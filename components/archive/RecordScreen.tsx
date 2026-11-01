@@ -10,6 +10,8 @@ import { useSnackbar } from "notistack";
 
 import { AssetCard } from "@/components/archive/AssetCard";
 import { CatalogScreen } from "@/components/archive/CatalogScreen";
+import { ItemTabs } from "@/components/archive/ItemTabs";
+import { RecordTrail } from "@/components/archive/RecordTrail";
 import { childKinds, type Kind } from "@/lib/archive/kinds";
 import type { CatalogQuery } from "@/lib/archive/query";
 import { readRecord } from "@/lib/archive/read";
@@ -58,8 +60,16 @@ export function RecordScreen(props: {
           <FormattedMessage id="archive.unavailable" />
         </Typography>
       ) : null}
+      {record.data ? <RecordTrail asset={record.data} /> : null}
       {record.data ? <AssetCard asset={record.data} /> : null}
-      {record.data && children.length > 0 ? (
+      {record.data && (kind === "planet" || kind === "building") ? (
+        <ItemTabs
+          anchor={{ ancestorId: id }}
+          pathname={pathname}
+          query={query}
+        />
+      ) : null}
+      {record.data && kind !== "planet" && children.length > 0 ? (
         <CatalogScreen
           pathname={pathname}
           query={{ ...query, kinds: children, parentId: id }}

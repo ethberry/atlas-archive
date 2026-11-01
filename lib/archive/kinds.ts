@@ -16,15 +16,7 @@ export type FeedKind = (typeof FEED_KINDS)[number];
 
 export const PAGE_SIZE = 25;
 
-export const HOME_LIMIT = 12;
-
-export const LIKABLE = new Set<Kind>([
-  "planet",
-  "building",
-  "ship",
-  "tool",
-  "creature",
-]);
+export const LIKABLE = new Set<Kind>(["planet", "ship", "tool", "creature"]);
 
 export const STAR_OPTIONS = [
   "yellow",
@@ -41,6 +33,7 @@ export const STATION_OPTIONS = [
   "uncharted",
 ] as const;
 
+// Biome types; Test (11) is not a biome of the game.
 export const BIOME_OPTIONS = [
   "0",
   "1",
@@ -53,7 +46,6 @@ export const BIOME_OPTIONS = [
   "8",
   "9",
   "10",
-  "11",
   "12",
   "13",
   "14",
@@ -62,102 +54,59 @@ export const BIOME_OPTIONS = [
 
 export const SENTINEL_OPTIONS = ["low", "high", "aggressive"] as const;
 
+// Hulls a wreck can have: the civilian weights give the first five, a few
+// become solar, and a sentinel wreck is an interceptor. Freighters, living
+// ships, corvettes, and swarm drones are never wrecks on a planet.
 export const HULL_OPTIONS = [
-  "Freighter",
-  "Dropship",
-  "Fighter",
-  "Scientific",
-  "Shuttle",
-  "Royal",
-  "Alien",
-  "Sail",
-  "Robot",
-  "Corvette",
-  "SwarmDrone",
+  "hauler",
+  "fighter",
+  "explorer",
+  "shuttle",
+  "exotic",
+  "solar",
+  "interceptor",
 ] as const;
 
 export const RANK_OPTIONS = ["C", "B", "A", "S"] as const;
 
+export const GALAXY_TYPE_OPTIONS = [
+  "normal",
+  "harsh",
+  "lush",
+  "empty",
+] as const;
+
+// Bodies a stored tool can have: the standard pool gives the first four and
+// the exotic pool gives royal, a harmonic camp pays sentinel, and a monolith
+// pays one of the three Atlas models, and a robot head builds a staff.
 export const TOOL_BODY_OPTIONS = [
-  "Pistol",
-  "Rifle",
-  "Pristine",
-  "Alien",
-  "Royal",
-  "Robot",
-  "Atlas",
-  "Staff",
+  "pistol",
+  "rifle",
+  "experimental",
+  "alien",
+  "royal",
+  "sentinel",
+  "atlantid",
+  "staff",
 ] as const;
 
-export const BUILDING_OPTIONS = [
-  "TerrainResource",
-  "Shelter",
-  "Abandoned",
-  "Terminal",
-  "Shop",
-  "Outpost",
-  "Waypoint",
-  "Beacon",
-  "RadioTower",
-  "Observatory",
-  "Depot",
-  "Factory",
-  "Harvester",
-  "Plaque",
-  "Monolith",
-  "Portal",
-  "Ruin",
-  "Debris",
-  "DropPod",
-  "DistressSignal",
-  "LandingPad",
-  "Base",
-  "MissionTower",
-  "CrashedFreighter",
-  "GraveInCave",
-  "StoryGlitch",
-  "TreasureRuins",
-  "GameStartSpawn",
-  "WaterCrashedFreighter",
-  "WaterTreasureRuins",
-  "WaterAbandoned",
-  "WaterDistressSignal",
-  "NPCDistressSignal",
-  "NPCDebris",
-  "LargeBuilding",
-  "Settlement_Hub",
-  "Settlement_LandingZone",
-  "Settlement_Bar",
-  "Settlement_Tower",
-  "Settlement_Market",
-  "Settlement_Small",
-  "Settlement_SmallIndustrial",
-  "Settlement_Medium",
-  "Settlement_Large",
-  "Settlement_Monument",
-  "Settlement_SheriffsOffice",
-  "Settlement_Double",
-  "Settlement_Farm",
-  "Settlement_Factory",
-  "Settlement_Clump",
-  "DroneHive",
-  "SentinelDistressSignal",
-  "AbandonedRobotCamp",
-  "RobotHead",
-  "DigSite",
-  "AncientGuardian",
-  "Settlement_Hub_Builders",
-  "Settlement_FishPond",
-  "Settlement_Builders_RoboArm",
-  "CargoDrop",
-  "ScrapYard",
-  "Crashed_Swarm",
-] as const;
+// Kinds with lists of their own. A building only holds the coordinates of its
+// items and has none.
+export const PAGE_KINDS = KINDS.filter((kind) => kind !== "building");
 
-const KIND_SET = new Set<string>(KINDS);
+const KIND_SET = new Set<string>(PAGE_KINDS);
+
+// The `name` of a space station's point; a planet's points have their class.
+export const STATION_BUILDING = "SpaceStation";
 
 export function isKind(value: string): value is Kind {
   return KIND_SET.has(value);
+}
+
+// A record page takes a building too, for a space station: `readRecord` turns
+// down any other.
+export function isRecordKind(value: string): value is Kind {
+  return isKind(value) || value === "building";
 }
 
 export function childKinds(kind: Kind): Kind[] {
@@ -166,10 +115,10 @@ export function childKinds(kind: Kind): Kind[] {
       return ["system"];
     case "system":
       return ["planet"];
+    // A planet lists its items; the points between them only hold
+    // coordinates and are not shown.
     case "planet":
-      return ["building", "creature"];
-    case "building":
-      return ["ship", "tool"];
+      return ["ship", "tool", "creature"];
     default:
       return [];
   }

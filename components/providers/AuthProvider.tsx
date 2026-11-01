@@ -2,35 +2,85 @@
 
 import {
   createContext,
+  useCallback,
   useContext,
   useEffect,
   useMemo,
+  useRef,
   useState,
   type PropsWithChildren,
 } from "react";
-import GoogleIcon from "@mui/icons-material/Google";
-import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
-import Drawer from "@mui/material/Drawer";
-import Stack from "@mui/material/Stack";
-import Typography from "@mui/material/Typography";
+import { useRouter } from "next/navigation";
+import Script from "next/script";
 import type { User } from "@supabase/supabase-js";
 import { useSnackbar } from "notistack";
-import { FormattedMessage } from "react-intl";
+import { useIntl } from "react-intl";
 
 import { getBrowserSupabase } from "@/lib/db/supabase.browser";
 
 type AuthContextValue = {
   user: User | null;
-  open: boolean;
-  setOpen: (open: boolean) => void;
+  signOut: () => Promise<void>;
 };
+
+type GoogleCredentialResponse = {
+  credential: string;
+};
+
+declare global {
+  interface Window {
+    google?: {
+      accounts: {
+        id: {
+          initialize: (config: {
+            client_id: string;
+            callback: (response: GoogleCredentialResponse) => void;
+            nonce?: string;
+            use_fedcm_for_prompt?: boolean;
+            itp_support?: boolean;
+            auto_select?: boolean;
+            context?: "signin" | "signup" | "use";
+          }) => void;
+          prompt: () => void;
+          cancel: () => void;
+        };
+      };
+    };
+  }
+}
 
 const AuthContext = createContext<AuthContextValue | undefined>(undefined);
 
+const googleClientId = process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID;
+
+const promptDelayMs = 3000;
+
+function showGooglePrompt() {
+  window.google?.accounts.id.prompt();
+}
+
+async function generateNonce(): Promise<[string, string]> {
+  const bytes = crypto.getRandomValues(new Uint8Array(32));
+  const nonce = Array.from(bytes, (byte) =>
+    byte.toString(16).padStart(2, "0"),
+  ).join("");
+  const encodedNonce = new TextEncoder().encode(nonce);
+  const hashBuffer = await crypto.subtle.digest("SHA-256", encodedNonce);
+  const hashedNonce = Array.from(new Uint8Array(hashBuffer))
+    .map((byte) => byte.toString(16).padStart(2, "0"))
+    .join("");
+  return [nonce, hashedNonce];
+}
+
 export function AuthProvider({ children }: PropsWithChildren) {
   const [user, setUser] = useState<User | null>(null);
-  const [open, setOpen] = useState(false);
+  const [sessionChecked, setSessionChecked] = useState(false);
+  const [scriptReady, setScriptReady] = useState(false);
+  const nonceRef = useRef<string | null>(null);
+  const initializeRef = useRef<Promise<void> | null>(null);
+  const { enqueueSnackbar } = useSnackbar();
+  const intl = useIntl();
+  const router = useRouter();
 
   useEffect(() => {
     const supabase = getBrowserSupabase();
@@ -39,6 +89,7 @@ export function AuthProvider({ children }: PropsWithChildren) {
     }
     void supabase.auth.getUser().then(({ data }) => {
       setUser(data.user);
+      setSessionChecked(true);
     });
     const { data } = supabase.auth.onAuthStateChange((_event, session) => {
       setUser(session?.user ?? null);
@@ -48,36 +99,78 @@ export function AuthProvider({ children }: PropsWithChildren) {
     };
   }, []);
 
-  const value = useMemo(() => ({ user, open, setOpen }), [user, open]);
-
-  return (
-    <AuthContext.Provider value={value}>
-      {children}
-      <AuthDrawer />
-    </AuthContext.Provider>
+  const signInWithCredential = useCallback(
+    async (response: GoogleCredentialResponse) => {
+      const supabase = getBrowserSupabase();
+      if (!supabase) {
+        enqueueSnackbar(intl.formatMessage({ id: "archive.unavailable" }), {
+          variant: "error",
+        });
+        return;
+      }
+      const { error } = await supabase.auth.signInWithIdToken({
+        provider: "google",
+        token: response.credential,
+        nonce: nonceRef.current ?? undefined,
+      });
+      if (error) {
+        enqueueSnackbar(error.message, { variant: "error" });
+        return;
+      }
+      router.refresh();
+    },
+    [enqueueSnackbar, intl, router],
   );
-}
 
-function AuthDrawer() {
-  const { user, open, setOpen } = useAuth();
-  const { enqueueSnackbar } = useSnackbar();
+  const signInWithCredentialRef = useRef(signInWithCredential);
+  useEffect(() => {
+    signInWithCredentialRef.current = signInWithCredential;
+  }, [signInWithCredential]);
 
-  async function signIn() {
-    const supabase = getBrowserSupabase();
-    if (!supabase) {
-      enqueueSnackbar("The archive could not be read.", { variant: "error" });
+  const ensureGoogle = useCallback(async () => {
+    if (!googleClientId || !window.google) {
+      return false;
+    }
+    if (!initializeRef.current) {
+      initializeRef.current = (async () => {
+        const [nonce, hashedNonce] = await generateNonce();
+        nonceRef.current = nonce;
+        window.google?.accounts.id.initialize({
+          client_id: googleClientId,
+          callback: (response) => {
+            void signInWithCredentialRef.current(response);
+          },
+          nonce: hashedNonce,
+          context: "signin",
+          auto_select: false,
+          itp_support: true,
+          use_fedcm_for_prompt: true,
+        });
+      })();
+    }
+    await initializeRef.current;
+    return true;
+  }, []);
+
+  useEffect(() => {
+    if (!scriptReady || !sessionChecked || user) {
       return;
     }
-    const { error } = await supabase.auth.signInWithOAuth({
-      provider: "google",
-      options: { redirectTo: `${window.location.origin}/auth/callback` },
-    });
-    if (error) {
-      enqueueSnackbar(error.message, { variant: "error" });
-    }
-  }
+    let cancelled = false;
+    const timer = window.setTimeout(() => {
+      void ensureGoogle().then((ready) => {
+        if (!cancelled && ready) {
+          showGooglePrompt();
+        }
+      });
+    }, promptDelayMs);
+    return () => {
+      cancelled = true;
+      window.clearTimeout(timer);
+    };
+  }, [ensureGoogle, scriptReady, sessionChecked, user]);
 
-  async function signOut() {
+  const signOut = useCallback(async () => {
     const supabase = getBrowserSupabase();
     if (!supabase) {
       return;
@@ -87,36 +180,24 @@ function AuthDrawer() {
       enqueueSnackbar(error.message, { variant: "error" });
       return;
     }
-    setOpen(false);
-  }
+    router.refresh();
+  }, [enqueueSnackbar, router]);
+
+  const value = useMemo(() => ({ user, signOut }), [user, signOut]);
 
   return (
-    <Drawer anchor="right" open={open} onClose={() => setOpen(false)}>
-      <Stack spacing={2} sx={{ width: 320, p: 3 }}>
-        <Typography variant="h6">
-          <FormattedMessage id="archive.authTitle" />
-        </Typography>
-        {user ? (
-          <>
-            <Typography color="text.secondary">{user.email}</Typography>
-            <Button variant="outlined" onClick={() => void signOut()}>
-              <FormattedMessage id="archive.signOut" />
-            </Button>
-          </>
-        ) : (
-          <Box>
-            <Button
-              variant="contained"
-              fullWidth
-              startIcon={<GoogleIcon />}
-              onClick={() => void signIn()}
-            >
-              <FormattedMessage id="archive.continueWithGoogle" />
-            </Button>
-          </Box>
-        )}
-      </Stack>
-    </Drawer>
+    <AuthContext.Provider value={value}>
+      {children}
+      {googleClientId ? (
+        <Script
+          src="https://accounts.google.com/gsi/client"
+          strategy="afterInteractive"
+          onReady={() => {
+            setScriptReady(true);
+          }}
+        />
+      ) : null}
+    </AuthContext.Provider>
   );
 }
 

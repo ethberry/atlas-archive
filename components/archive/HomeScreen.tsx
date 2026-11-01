@@ -1,35 +1,67 @@
 "use client";
 
+import Card from "@mui/material/Card";
+import CardActionArea from "@mui/material/CardActionArea";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Grid from "@mui/material/Grid";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import { useQuery } from "@tanstack/react-query";
-import { useEffect } from "react";
+import { Fragment, useEffect } from "react";
 import { FormattedMessage } from "react-intl";
 import { useSnackbar } from "notistack";
 
-import { CatalogList } from "@/components/archive/CatalogList";
-import { featuredIds } from "@/lib/archive/featured";
-import { readFeed, type FeedSection } from "@/lib/archive/read";
+import Link from "next/link";
+
+import { DonationBlock } from "@/components/archive/DonationBlock";
+import { LikeButton } from "@/components/archive/LikeButton";
+import {
+  readFeed,
+  type CatalogRow,
+  type FeedSection,
+} from "@/lib/archive/read";
 import { getBrowserSupabase } from "@/lib/db/supabase.browser";
 
 const SECTIONS: { id: FeedSection; title: string; showLikes: boolean }[] = [
-  { id: "featured", title: "archive.featured", showLikes: false },
+  { id: "galaxies", title: "archive.galaxies", showLikes: false },
   { id: "top", title: "archive.topRated", showLikes: true },
   { id: "latest", title: "archive.latest", showLikes: false },
 ];
 
-export function HomeScreen() {
+export function HomeScreen(props: { confession: string }) {
+  const { confession } = props;
   return (
     <Stack spacing={6}>
       {SECTIONS.map((section) => (
-        <FeedBlock
-          key={section.id}
-          section={section.id}
-          title={section.title}
-          showLikes={section.showLikes}
-        />
+        <Fragment key={section.id}>
+          <FeedBlock
+            section={section.id}
+            title={section.title}
+            showLikes={section.showLikes}
+          />
+          {section.id === "galaxies" ? <Confession html={confession} /> : null}
+        </Fragment>
       ))}
+      <DonationBlock />
     </Stack>
+  );
+}
+
+// The author's note, already rendered from content/LOCALE/confession.md.
+function Confession(props: { html: string }) {
+  const { html } = props;
+  return (
+    <Card variant="outlined">
+      <CardContent
+        sx={(theme) => ({
+          "& h2": { ...theme.typography.h5, mt: 0 },
+          "& p": { ...theme.typography.body1, color: "text.secondary" },
+          "& p:last-child": { mb: 0 },
+        })}
+        dangerouslySetInnerHTML={{ __html: html }}
+      />
+    </Card>
   );
 }
 
@@ -43,9 +75,6 @@ function FeedBlock(props: {
   const feed = useQuery({
     queryKey: ["feed", section],
     queryFn: async () => {
-      if (section === "featured" && featuredIds.length === 0) {
-        return [];
-      }
       const supabase = getBrowserSupabase();
       if (!supabase) {
         throw new Error("The archive could not be read.");
@@ -77,16 +106,64 @@ function FeedBlock(props: {
       ) : null}
       {feed.data && feed.data.length === 0 ? (
         <Typography color="text.secondary">
-          <FormattedMessage
-            id={
-              section === "featured" ? "archive.featuredEmpty" : "archive.empty"
-            }
-          />
+          <FormattedMessage id="archive.empty" />
         </Typography>
       ) : null}
       {feed.data && feed.data.length > 0 ? (
-        <CatalogList rows={feed.data} showKind showLikes={showLikes} />
+        <Grid container spacing={2}>
+          {feed.data.map((row) => (
+            <Grid
+              key={row.id}
+              size={
+                section === "galaxies"
+                  ? { xs: 12, md: 6 }
+                  : { xs: 12, sm: 6, md: 4, lg: 3 }
+              }
+            >
+              <FeedCard row={row} showLikes={showLikes} />
+            </Grid>
+          ))}
+        </Grid>
       ) : null}
     </Stack>
+  );
+}
+
+// One home-page card: the picture, then the name with the like button beside
+// it (galaxies have none).
+function FeedCard(props: { row: CatalogRow; showLikes: boolean }) {
+  const { row } = props;
+  return (
+    <Card variant="outlined">
+      <CardActionArea component={Link} href={`/${row.kind}/${row.id}`}>
+        <CardMedia
+          component="img"
+          height="220"
+          image={row.image ?? "/assets/img/no-image.svg"}
+          alt={row.name}
+          sx={{ objectFit: "cover" }}
+        />
+      </CardActionArea>
+      <CardContent sx={{ py: 1, "&:last-child": { pb: 1 } }}>
+        <Stack direction="row" sx={{ alignItems: "center" }}>
+          <Typography
+            variant="h6"
+            component={Link}
+            href={`/${row.kind}/${row.id}`}
+            sx={{ flexGrow: 1, color: "inherit", textDecoration: "none" }}
+          >
+            {row.name}
+          </Typography>
+          {row.kind === "galaxy" ? null : (
+            <LikeButton
+              id={row.id}
+              kind={row.kind}
+              liked={row.liked}
+              count={row.likeCount}
+            />
+          )}
+        </Stack>
+      </CardContent>
+    </Card>
   );
 }
