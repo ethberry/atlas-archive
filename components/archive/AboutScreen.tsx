@@ -692,6 +692,7 @@ const WIDGETS: Record<string, () => ReactNode> = {
   galaxies: Galaxies,
 };
 
+// How it works: its text, its widgets, and the guided tour.
 export function AboutScreen(props: { html: string }) {
   return (
     <Stack spacing={1}>

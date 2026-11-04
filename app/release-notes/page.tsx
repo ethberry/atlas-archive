@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import { AboutScreen } from "@/components/archive/AboutScreen";
+import { Article } from "@/components/archive/Article";
 import { readContent } from "@/lib/archive/content";
 
 export const metadata: Metadata = {
@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   description: "What changed on Atlas Archive, release by release.",
 };
 
+// A page of text: the shared Article, with no widgets of another page.
 export default async function ReleaseNotesPage() {
-  return <AboutScreen html={await readContent("release-notes")} />;
+  return <Article html={await readContent("release-notes")} widgets={{}} />;
 }
