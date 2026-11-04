@@ -5,10 +5,11 @@ import { fillNumbers } from "@/lib/archive/about";
 import { readContent } from "@/lib/archive/content";
 
 export const metadata: Metadata = {
-  title: "How it works — Atlas Archive",
+  title:
+    "How the best multitool is found: adjacent supercharged slots — Atlas Archive",
   alternates: { canonical: "/about" },
   description:
-    "How a galaxy of trillions of stars narrows to a short list of multitools and crashed ships per system.",
+    "How a galaxy of trillions of stars narrows to a short list of multitools and crashed ships per system, and why four adjacent supercharged slots matter most.",
 };
 
 export default async function AboutPage() {

@@ -11,27 +11,22 @@ export const metadata: Metadata = {
   title: "Privacy policy — Atlas Archive",
   alternates: { canonical: "/privacy" },
   description:
-    "What Atlas Archive stores if you sign in with Google, mark a record, or send a bug report.",
+    "What Atlas Archive keeps if you sign in with Google, like a record, or send a bug report.",
 };
 
 export default function PrivacyPage() {
   return (
-    <LegalDocument title="Privacy policy" updated="2 November 2026">
+    <LegalDocument title="Privacy policy" updated="3 November 2026">
       <LegalText>
-        Atlas Archive is an informational catalogue of worlds, ships, tools, and
-        creatures. The catalogue can be read without an account. This policy
-        describes the information the site handles and what it is used for.
+        Atlas Archive can be read without an account. This policy describes the
+        information the site handles and why.
       </LegalText>
 
-      <LegalSection title="Google sign-in">
+      <LegalSection title="Signing in">
         <LegalText>
-          Sign-in is optional. If you continue with Google, Google provides your
-          name, email address, and profile picture. The site uses them only to
-          create the account, keep you signed in, and show the email address in
-          the account menu.
-        </LegalText>
-        <LegalText>
-          Information received from Google APIs is used in line with the{" "}
+          Signing in with Google is optional. Google gives the site your name,
+          email address, and profile picture, which are used only to run your
+          account. They are used in line with the{" "}
           <Link
             href="https://developers.google.com/terms/api-services-user-data-policy"
             target="_blank"
@@ -39,73 +34,54 @@ export default function PrivacyPage() {
           >
             Google API Services User Data Policy
           </Link>
-          , including the Limited Use requirements. It is not sold, and it is
-          not used for advertising.
+          , including the Limited Use requirements, and are never sold or used
+          for advertising. A cookie keeps you signed in. Likes you mark are
+          stored with your account.
         </LegalText>
       </LegalSection>
 
-      <LegalSection title="Likes">
+      <LegalSection title="Visits and errors">
         <LegalText>
-          If you are signed in and mark a record, the site stores that mark with
-          the account. The mark updates the count on the record and can be
-          removed later.
+          The site counts page visits without cookies and without identifying
+          you. When a page fails, a technical error report is sent so the fault
+          can be fixed; it can include the page address, browser details, and
+          how the page was used. A bug report you send is attached to it.
         </LegalText>
       </LegalSection>
 
-      <LegalSection title="Session">
+      <LegalSection title="Who handles it">
         <LegalText>
-          After sign-in, the browser keeps a session cookie so the account stays
-          signed in. The site does not run advertising cookies.
+          The services that host the site, store accounts, provide sign-in, and
+          receive error reports handle this information only to run the site.
+          Nothing is shared with anyone else.
         </LegalText>
       </LegalSection>
 
-      <LegalSection title="Visits">
+      <LegalSection title="How long it is kept">
         <LegalText>
-          The site counts visits with Vercel Web Analytics: which pages are
-          opened, from what country, on what kind of device, and which site led
-          here. It sets no cookies and does not identify a visitor.
+          Account details and likes are kept while the account exists. Error
+          reports are kept while they help fix faults.
         </LegalText>
       </LegalSection>
 
-      <LegalSection title="Errors and bug reports">
+      <LegalSection title="Your account">
         <LegalText>
-          The production site sends technical error reports to Sentry. A report
-          can include the page address, browser details, and, on a sample of
-          visits, a recording of how the page was used. If you send a bug
-          report, the message you write is included with that technical report.
-          These reports are used to fix faults.
-        </LegalText>
-      </LegalSection>
-
-      <LegalSection title="Service providers">
-        <LegalText>
-          The site is hosted on Vercel. Accounts and catalogue records are
-          stored with Supabase. Sign-in is provided by Google. Error reports are
-          processed by Sentry. These providers handle the information so the
-          site can run. Account information is not given to anyone else for
-          their own marketing.
-        </LegalText>
-      </LegalSection>
-
-      <LegalSection title="How long information is kept">
-        <LegalText>
-          Account details and likes remain while the account exists. Error
-          reports are kept while they are useful for fixing faults, and then
-          removed.
+          You can ask to see or delete your account and everything kept with it.
+          Write through the Report a Bug button at the bottom of any page and
+          sign in first, so the request can be matched to your account.
         </LegalText>
       </LegalSection>
 
       <LegalSection title="Children">
         <LegalText>
-          The catalogue is not directed at children. The site does not knowingly
-          collect personal information from children.
+          The site is not directed at children and does not knowingly collect
+          their information.
         </LegalText>
       </LegalSection>
 
       <LegalSection title="Changes">
         <LegalText>
-          This policy can be updated by publishing a new version on this page.
-          The date above is the date of the version you are reading.
+          This policy may change; the date above is the date of this version.
         </LegalText>
       </LegalSection>
     </LegalDocument>

@@ -24,9 +24,9 @@ export const metadata: Metadata = {
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_BASE_URL ?? "http://localhost:3000",
   ),
-  title: "Atlas Archive — a No Man's Sky catalogue",
+  title: "Best items in No Man's Sky and where to find them — Atlas Archive",
   description:
-    "A catalogue of No Man's Sky worlds, starships, multi-tools, and creatures, with where to find them.",
+    "Where to find the best multitools, crashed ships, and creatures in No Man's Sky: finds with portal glyphs, and guides from the galaxy down to the planet.",
   openGraph: {
     siteName: "Atlas Archive",
     type: "website",

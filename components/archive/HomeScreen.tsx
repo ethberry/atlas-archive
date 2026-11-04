@@ -16,6 +16,8 @@ import Link from "next/link";
 
 import { DonationBlock } from "@/components/archive/DonationBlock";
 import { LikeButton } from "@/components/archive/LikeButton";
+import { link } from "@/components/archive/RecordNote";
+import { FINDERS_ENABLED } from "@/lib/archive/features";
 import {
   readFeed,
   type CatalogRow,
@@ -28,10 +30,35 @@ const SECTIONS: { id: FeedSection; title: string }[] = [
   { id: "top", title: "archive.topRated" },
 ];
 
+// The site's question and where each answer lives.
+const LEAD = {
+  tools: link("/tool"),
+  ships: link("/ship"),
+  creatures: link("/creature"),
+  guides: link("/guides"),
+  lucky: link("/how-lucky-am-i"),
+  interceptor: link("/interceptor-finder"),
+  capital: link("/capital-freighter-finder"),
+  about: link("/about"),
+};
+
 export function HomeScreen(props: { confession: string }) {
   const { confession } = props;
   return (
     <Stack spacing={6}>
+      <Stack spacing={1}>
+        <Typography variant="h4" component="h1">
+          <FormattedMessage id="archive.homeTitle" />
+        </Typography>
+        <Typography color="text.secondary">
+          <FormattedMessage
+            id={
+              FINDERS_ENABLED ? "archive.homeLeadFinders" : "archive.homeLead"
+            }
+            values={LEAD}
+          />
+        </Typography>
+      </Stack>
       {SECTIONS.map((section) => (
         <Fragment key={section.id}>
           <FeedBlock section={section.id} title={section.title} />
@@ -82,7 +109,7 @@ function FeedBlock(props: { section: FeedSection; title: string }) {
 
   return (
     <Stack spacing={1}>
-      <Typography variant="h4">
+      <Typography variant="h4" component="h2">
         <FormattedMessage id={title} />
       </Typography>
       {feed.isPending ? (

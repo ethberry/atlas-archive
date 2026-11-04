@@ -3,13 +3,18 @@
 import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
+import MuiLink from "@mui/material/Link";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { FormattedMessage } from "react-intl";
 
 import { LikeButton } from "@/components/archive/LikeButton";
 import { PictureGallery } from "@/components/archive/PictureGallery";
 import { VerifiedMark } from "@/components/archive/VerifiedMark";
+import { explainHref } from "@/lib/archive/explain";
+import type { Kind } from "@/lib/archive/kinds";
 import type {
   AssetCard as AssetCardData,
   Field,
@@ -55,7 +60,7 @@ export function AssetCard(props: { asset: AssetCardData }) {
             spacing={1}
             sx={{ alignItems: "center", mb: 2 }}
           >
-            <Typography variant="h4" sx={{ flexGrow: 1 }}>
+            <Typography variant="h4" component="h1" sx={{ flexGrow: 1 }}>
               {asset.name}
             </Typography>
             {asset.verified ? <VerifiedMark /> : null}
@@ -81,11 +86,22 @@ export function AssetCard(props: { asset: AssetCardData }) {
                     <FormattedMessage id="archive.type" />
                   </Typography>
                   <Typography>
-                    <FormattedMessage id={`kind.${kindWord}`} />
+                    {/* The kind leads to its list in the catalog. */}
+                    <MuiLink
+                      component={Link}
+                      href={`/${asset.kind}`}
+                      color="inherit"
+                    >
+                      <FormattedMessage id={`kind.${kindWord}`} />
+                    </MuiLink>
                   </Typography>
                 </Stack>
                 {fields.map((field) => (
-                  <FieldLine key={field.label} field={field} />
+                  <FieldLine
+                    key={field.label}
+                    field={field}
+                    kind={asset.kind}
+                  />
                 ))}
               </Stack>
             </Box>
@@ -115,7 +131,7 @@ export function AssetCard(props: { asset: AssetCardData }) {
                         sx={{ justifyContent: "space-between" }}
                       >
                         <Typography color="text.secondary">
-                          <FormattedMessage id={field.label} />
+                          <FieldLabel kind={asset.kind} label={field.label} />
                         </Typography>
                         <Typography component="div">
                           <FieldValue field={field} />
@@ -127,7 +143,7 @@ export function AssetCard(props: { asset: AssetCardData }) {
                 {slots.map((field) => (
                   <Stack key={field.label} spacing={1}>
                     <Typography color="text.secondary">
-                      <FormattedMessage id={field.label} />
+                      <FieldLabel kind={asset.kind} label={field.label} />
                     </Typography>
                     <FieldValue field={field} />
                   </Stack>
@@ -165,12 +181,26 @@ export function AssetCard(props: { asset: AssetCardData }) {
   );
 }
 
-function FieldLine(props: { field: Field }) {
-  const { field } = props;
+// A label, linked to the Statistics page that explains it when there is one.
+function FieldLabel(props: { kind: Kind; label: string }) {
+  const { kind, label } = props;
+  const href = explainHref(kind, label);
+  if (!href) {
+    return <FormattedMessage id={label} />;
+  }
+  return (
+    <MuiLink component={Link} href={href} color="inherit">
+      <FormattedMessage id={label} />
+    </MuiLink>
+  );
+}
+
+function FieldLine(props: { field: Field; kind: Kind }) {
+  const { field, kind } = props;
   return (
     <Stack direction="row" spacing={2}>
       <Typography sx={LABEL} color="text.secondary">
-        <FormattedMessage id={field.label} />
+        <FieldLabel kind={kind} label={field.label} />
       </Typography>
       <Typography
         component="div"
@@ -268,7 +298,7 @@ function SlotGrid(props: { width: number; height: number; cells: SlotCell[] }) {
 const RANK_ORDER = ["S", "A", "B", "C"];
 
 // Twelve portal glyphs drawn with the glyph font.
-function Glyphs(props: { code: string }) {
+export function Glyphs(props: { code: string }) {
   const { code } = props;
   return (
     <Box
@@ -288,6 +318,8 @@ function Glyphs(props: { code: string }) {
 
 function FieldValue(props: { field: Field }) {
   const { field } = props;
+  // A place row of the record itself stays plain text: no link to this page.
+  const here = usePathname();
   if (field.type === "slots") {
     if (field.cells.length === 0) {
       return <FormattedMessage id="archive.absent" />;
@@ -360,6 +392,13 @@ function FieldValue(props: { field: Field }) {
   }
   if (!field.text) {
     return <FormattedMessage id="archive.absent" />;
+  }
+  if (field.href && field.href !== here) {
+    return (
+      <MuiLink component={Link} href={field.href} color="inherit">
+        {field.text}
+      </MuiLink>
+    );
   }
   return field.text;
 }

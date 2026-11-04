@@ -1,0 +1,249 @@
+[
+  {
+    "id": "cockpit",
+    "title": "Head",
+    "options": [
+      {
+        "id": "round",
+        "label": "Round",
+        "names": [
+          "_cockpit_ALOD0",
+          "_cockpit_ALOD1",
+          "_cockpit_ALOD2",
+          "_cockpit_ALOD3"
+        ]
+      },
+      {
+        "id": "jaw",
+        "label": "Jaw",
+        "names": [
+          "_cockpit_BLOD0",
+          "_cockpit_BLOD1",
+          "_cockpit_BLOD2",
+          "_cockpit_BLOD3"
+        ]
+      },
+      {
+        "id": "pointed",
+        "label": "Pointed",
+        "names": [
+          "_cockpit_B1LOD0",
+          "_cockpit_B1LOD1",
+          "_cockpit_B1LOD2",
+          "_cockpit_B1LOD3"
+        ]
+      },
+      {
+        "id": "flat",
+        "label": "Flat",
+        "names": [
+          "_cockpit_C5LOD0",
+          "_cockpit_C5LOD1",
+          "_cockpit_C5LOD2",
+          "_cockpit_C5LOD3"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "crest",
+    "title": "On the head",
+    "requires": {
+      "group": "cockpit",
+      "option": "flat"
+    },
+    "options": [
+      {
+        "id": "none",
+        "label": "None",
+        "names": [
+          "_TopHat_NullLOD0",
+          "_TopHat_NullLOD1",
+          "_TopHat_NullLOD2",
+          "_TopHat_NullLOD3"
+        ]
+      },
+      {
+        "id": "fin",
+        "label": "Fin",
+        "names": [
+          "_TopHat_A2LOD0",
+          "_TopHat_A2LOD1",
+          "_TopHat_A2LOD2",
+          "_TopHat_A2LOD3"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ridge",
+    "title": "Back ridge",
+    "options": [
+      {
+        "id": "none",
+        "label": "None",
+        "names": ["_TopMid_Null1"]
+      },
+      {
+        "id": "ridge",
+        "label": "Ridge",
+        "names": ["_TopMid_B3LOD0"]
+      }
+    ]
+  },
+  {
+    "id": "feelers",
+    "title": "Feelers",
+    "options": [
+      {
+        "id": "none",
+        "label": "None",
+        "names": ["_TopAcc_Null", "_TopAcc_Null1"]
+      },
+      {
+        "id": "feelers",
+        "label": "Feelers",
+        "names": ["_TopAcc_A"]
+      }
+    ]
+  },
+  {
+    "id": "underside",
+    "title": "Underside",
+    "options": [
+      {
+        "id": "arch",
+        "label": "Arch",
+        "names": ["_feet_ALOD0"]
+      },
+      {
+        "id": "sweep",
+        "label": "Sweep",
+        "names": ["_feet_BLOD0"]
+      },
+      {
+        "id": "claws",
+        "label": "Claws",
+        "names": ["_feet_CLOD0"]
+      },
+      {
+        "id": "fins",
+        "label": "Small fins",
+        "names": ["_feet_DLOD0"]
+      },
+      {
+        "id": "open",
+        "label": "Open",
+        "whole": true,
+        "names": ["_feet_E"]
+      }
+    ]
+  },
+  {
+    "id": "rear",
+    "title": "Rear pedals",
+    "requires": {
+      "group": "underside",
+      "option": "fins"
+    },
+    "options": [
+      {
+        "id": "none",
+        "label": "None",
+        "names": ["_backfeet_NullLOD0"]
+      },
+      {
+        "id": "pedals",
+        "label": "Pedals",
+        "names": ["_backfeet_ALOD0"]
+      }
+    ]
+  },
+  {
+    "id": "belly",
+    "title": "Belly",
+    "requires": {
+      "group": "underside",
+      "option": "open"
+    },
+    "options": [
+      {
+        "id": "none",
+        "label": "None",
+        "names": ["_frontfeet_Null"]
+      },
+      {
+        "id": "belly",
+        "label": "Belly",
+        "names": [
+          "_frontfeet_BLOD0",
+          "_frontfeet_BLOD1",
+          "_frontfeet_BLOD2",
+          "_frontfeet_BLOD3"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "pedals",
+    "title": "Pedals",
+    "requires": {
+      "group": "underside",
+      "option": "open"
+    },
+    "options": [
+      {
+        "id": "none",
+        "label": "None",
+        "names": ["_backpedals_B"]
+      },
+      {
+        "id": "pedals",
+        "label": "Pedals",
+        "names": [
+          "_backpedals_A1LOD0",
+          "_backpedals_A1LOD1",
+          "_backpedals_A1LOD2",
+          "_backpedals_A1LOD3"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "engine",
+    "title": "Engine",
+    "options": [
+      {
+        "id": "a",
+        "label": "Bell",
+        "names": ["_engine_aREF"]
+      },
+      {
+        "id": "b",
+        "label": "Cone",
+        "names": ["_engine_bREF"]
+      }
+    ]
+  },
+  {
+    "id": "wings",
+    "title": "Wings",
+    "options": [
+      {
+        "id": "none",
+        "label": "None",
+        "names": ["_wings_Null"]
+      },
+      {
+        "id": "short",
+        "label": "Short",
+        "names": ["_wings_ALOD0"]
+      },
+      {
+        "id": "long",
+        "label": "Long",
+        "names": ["_wings_B3LOD0"]
+      }
+    ]
+  }
+]

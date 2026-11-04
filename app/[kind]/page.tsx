@@ -3,10 +3,13 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import { CatalogScreen } from "@/components/archive/CatalogScreen";
-import { isKind, KIND_TITLES } from "@/lib/archive/kinds";
+import { PageTrail } from "@/components/archive/PageTrail";
+import { StructuredData } from "@/components/archive/StructuredData";
+import { CATALOG_PAGES, isKind, KIND_TITLES } from "@/lib/archive/kinds";
 import { catalogKey, parseCatalogQuery } from "@/lib/archive/query";
 import { readCatalog } from "@/lib/archive/read";
 import { createArchiveClient } from "@/lib/db/supabase.server";
+import { trailData } from "@/lib/archive/trail";
 import { getQueryClient } from "@/lib/query-client";
 
 type Search = Record<string, string | string[] | undefined>;
@@ -18,10 +21,10 @@ export async function generateMetadata(props: {
   if (!isKind(kind)) {
     return {};
   }
-  const title = KIND_TITLES[kind].many;
+  const page = CATALOG_PAGES[kind];
   return {
-    title: `No Man's Sky ${title.toLowerCase()} — Atlas Archive`,
-    description: `${title} of No Man's Sky, with where to find them.`,
+    title: `${page.title} — Atlas Archive`,
+    description: page.description,
     alternates: { canonical: `/${kind}` },
   };
 }
@@ -45,8 +48,14 @@ export default async function KindPage(props: {
     });
   }
 
+  const trail = [
+    { name: "Home", href: "/" },
+    { name: KIND_TITLES[kindParam].many },
+  ];
   return (
     <HydrationBoundary state={dehydrate(queryClient)}>
+      <StructuredData data={trailData(trail)} />
+      <PageTrail steps={trail} />
       <CatalogScreen pathname={`/${kindParam}`} query={query} heading />
     </HydrationBoundary>
   );

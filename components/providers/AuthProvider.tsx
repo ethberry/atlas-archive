@@ -21,6 +21,8 @@ import { getBrowserSupabase } from "@/lib/db/supabase.browser";
 type AuthContextValue = {
   user: User | null;
   signOut: () => Promise<void>;
+  promptSignIn: () => Promise<void>;
+  renderSignIn: (element: HTMLElement) => Promise<void>;
 };
 
 type GoogleCredentialResponse = {
@@ -43,6 +45,10 @@ declare global {
           }) => void;
           prompt: () => void;
           cancel: () => void;
+          renderButton: (
+            parent: HTMLElement,
+            options: { theme?: string; size?: string; text?: string },
+          ) => void;
         };
       };
     };
@@ -183,7 +189,31 @@ export function AuthProvider({ children }: PropsWithChildren) {
     router.refresh();
   }, [enqueueSnackbar, router]);
 
-  const value = useMemo(() => ({ user, signOut }), [user, signOut]);
+  const promptSignIn = useCallback(async () => {
+    if (await ensureGoogle()) {
+      showGooglePrompt();
+    }
+  }, [ensureGoogle]);
+
+  // One Tap may refuse: a cooldown after a dismissal, or the prompt already open.
+  // A button always works.
+  const renderSignIn = useCallback(
+    async (element: HTMLElement) => {
+      if (await ensureGoogle()) {
+        window.google?.accounts.id.renderButton(element, {
+          theme: "outline",
+          size: "large",
+          text: "signin_with",
+        });
+      }
+    },
+    [ensureGoogle],
+  );
+
+  const value = useMemo(
+    () => ({ user, signOut, promptSignIn, renderSignIn }),
+    [user, signOut, promptSignIn, renderSignIn],
+  );
 
   return (
     <AuthContext.Provider value={value}>

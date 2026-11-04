@@ -1,4 +1,5 @@
 import stats from "@/lib/archive/about-stats.json";
+import { galaxyHref } from "@/lib/archive/galaxies";
 
 export { stats };
 
@@ -42,6 +43,30 @@ export function stepOf(steps: typeof euclid.tools, key: string) {
 
 export const STARS_PER_REGION = stats.galaxy.stars_per_region;
 
+// The shares of a whole as counts in one voxel. `tool_types` and `tool_classes`
+// share out the offers on a tool's own load, the kept shares the kept tools, so
+// two counts of one row stand on one scale and the kept never pass the whole.
+export function inVoxel(
+  shares: Record<string, number>,
+  perSystem: number,
+): Record<string, number> {
+  return Object.fromEntries(
+    Object.entries(shares).map(([key, part]) => [
+      key,
+      part * perSystem * STARS_PER_REGION,
+    ]),
+  );
+}
+
+// The offers on a tool's own load per system. A file written before `pages`
+// wrote it falls back on every offer, which is larger, so the kept still stay
+// under it.
+export const OWN_OFFERS =
+  (euclid as { own_offers_per_system?: number }).own_offers_per_system ??
+  stepOf(euclid.tools, "offers");
+
+const COUNT_WORDS = ["none", "one", "two", "three", "four", "five", "six"];
+
 function bucket(histogram: Record<string, number>, keys: string[]) {
   return keys.reduce((sum, key) => sum + (histogram[key] ?? 0), 0);
 }
@@ -53,6 +78,7 @@ function numbers(): Record<string, string> {
   const pillars = euclid.pillar_survey;
   const secondsPerYear = 365.25 * 24 * 3600;
   const star = stats.star_of_the_show;
+  const regular = stats.showcase.filter((row) => row.name !== star.galaxy);
   return {
     regions: String(stats.sample.regions),
     otherRegions: String(stats.sample.regions_per_other_galaxy),
@@ -64,6 +90,12 @@ function numbers(): Record<string, string> {
     yearsToLook: amount(stats.galaxy.systems / secondsPerYear),
     yellowShare: share(euclid.star_colours.yellow),
     offersPerSystem: amount(offers),
+    groundToolShare: share(
+      1 - stepOf(euclid.tools, "sources") / stepOf(euclid.tools, "ground"),
+    ),
+    groundShipShare: share(
+      1 - stepOf(euclid.ships, "sources") / stepOf(euclid.ships, "ground"),
+    ),
     touchingShare: share(euclid.tool_touching_share),
     touchingOneIn: String(Math.round((1 - euclid.tool_touching_share) * 100)),
     toolCap: "six",
@@ -77,10 +109,7 @@ function numbers(): Record<string, string> {
     shipPlacements: String(stats.grids.ship),
     squareShare: share(euclid.tool_figures.O),
     squareOneIn: oneIn(pillars.square_share),
-    wholeStars: String(stats.whole_region.stars),
     pistolPlacements: String(stats.whole_region.pistol_placements),
-    wholeTools: String(stats.whole_region.kept_tools),
-    wholeShips: String(stats.whole_region.kept_ships),
     wrecksPerShip: amount(stepOf(euclid.ships, "connected") / ships),
     interceptorAll: share(euclid.ship_hulls.interceptor),
     interceptorKept: share(euclid.kept_ship_hulls.interceptor),
@@ -89,13 +118,16 @@ function numbers(): Record<string, string> {
     shipsPerFinding: amount(euclid.per_finding_system.ships),
     toolsPerFinding: amount(euclid.per_finding_system.tools),
     fullOneIn: `one in ${oneIn(euclid.system_shares.full)}`,
-    showcaseTotal: String(
-      stats.showcase.reduce((sum, row) => sum + row.systems, 0),
-    ),
-    showcaseList: stats.showcase
-      .map((row) => `${row.name.replace(" Galaxy", "")} ${row.systems}`)
+    // The star's galaxy holds the star alone; the others hold the systems
+    // without a square.
+    showcaseRegular: String(regular.reduce((sum, row) => sum + row.systems, 0)),
+    showcaseList: regular
+      .map((row) => {
+        const name = row.name.replace(" Galaxy", "");
+        return `<a href="${galaxyHref(name)}">${name}</a>`;
+      })
       .join(", "),
-    showcaseGalaxies: String(stats.showcase.length),
+    showcaseGalaxies: COUNT_WORDS[regular.length] ?? String(regular.length),
     starTool: star.tool,
     starSystem: star.system,
     starGalaxy: star.galaxy,

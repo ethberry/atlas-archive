@@ -1,0 +1,375 @@
+[
+  {
+    "id": "hull",
+    "title": "Hull",
+    "options": [
+      {
+        "id": "wedge",
+        "label": "Wedge",
+        "names": ["_Hull_A1"]
+      },
+      {
+        "id": "block",
+        "label": "Block",
+        "names": ["_Hull_A2"]
+      }
+    ]
+  },
+  {
+    "id": "modules",
+    "title": "Length",
+    "requires": {
+      "group": "hull",
+      "option": "wedge"
+    },
+    "owns": [
+      "_CargoC_A1",
+      "_CargoC1_B1",
+      "_CargoC2_B1",
+      "_CargoEnd1_B2",
+      "_CargoC2_B2"
+    ],
+    "options": [
+      {
+        "id": "short",
+        "label": "Short",
+        "names": ["_CargoEnd1_B1"]
+      },
+      {
+        "id": "medium",
+        "label": "Medium",
+        "names": ["_CargoEnd2_B1"]
+      },
+      {
+        "id": "long",
+        "label": "Long",
+        "names": ["_CargoEnd2_B2"]
+      }
+    ]
+  },
+  {
+    "id": "top",
+    "title": "Top",
+    "requires": {
+      "group": "hull",
+      "option": "wedge"
+    },
+    "options": [
+      {
+        "id": "tower",
+        "label": "Tower",
+        "names": ["_HullBTop_B"]
+      },
+      {
+        "id": "thrusters",
+        "label": "Thrusters",
+        "names": ["_HullBTop_C2"]
+      }
+    ]
+  },
+  {
+    "id": "head",
+    "title": "Tower head",
+    "requires": {
+      "group": "top",
+      "option": "tower"
+    },
+    "options": [
+      {
+        "id": "rounded",
+        "label": "Rounded",
+        "names": ["_HullTop_A"]
+      },
+      {
+        "id": "flat",
+        "label": "Flat",
+        "names": ["_HullTop_B"]
+      }
+    ]
+  },
+  {
+    "id": "crown",
+    "title": "On the thrusters",
+    "requires": {
+      "group": "top",
+      "option": "thrusters"
+    },
+    "options": [
+      {
+        "id": "none",
+        "label": "Nothing",
+        "names": ["_VerticalFinC_None"]
+      },
+      {
+        "id": "fin",
+        "label": "Fin",
+        "names": ["_VerticalFinC_A"]
+      },
+      {
+        "id": "box",
+        "label": "Box bridge",
+        "names": ["_VerticalFinC_B"]
+      },
+      {
+        "id": "dome",
+        "label": "Dome bridge",
+        "names": ["_VerticalFinC_C"]
+      }
+    ]
+  },
+  {
+    "id": "keel",
+    "title": "Keel",
+    "requires": {
+      "group": "hull",
+      "option": "wedge"
+    },
+    "options": [
+      {
+        "id": "curved",
+        "label": "Curved",
+        "names": ["_HullBBot_C2"]
+      },
+      {
+        "id": "thrusters",
+        "label": "Thrusters",
+        "names": ["_HullBBot_C1"]
+      }
+    ]
+  },
+  {
+    "id": "keelfin",
+    "title": "Under the thrusters",
+    "requires": {
+      "group": "keel",
+      "option": "thrusters"
+    },
+    "options": [
+      {
+        "id": "none",
+        "label": "Nothing",
+        "names": ["_VertFinC1_None"]
+      },
+      {
+        "id": "fin",
+        "label": "Fin",
+        "names": ["_VertFinC1_A"]
+      }
+    ]
+  },
+  {
+    "id": "sections",
+    "title": "Length",
+    "requires": {
+      "group": "hull",
+      "option": "block"
+    },
+    "owns": ["_CargoC_S1", "_CargoC_S2", "_Cap_2"],
+    "options": [
+      {
+        "id": "short",
+        "label": "Short",
+        "names": ["_Cap_1"]
+      },
+      {
+        "id": "medium",
+        "label": "Medium",
+        "names": ["_Cap_3"]
+      },
+      {
+        "id": "long",
+        "label": "Long",
+        "names": ["_Cap_4"]
+      }
+    ]
+  },
+  {
+    "id": "bridge",
+    "title": "Bridge",
+    "requires": {
+      "group": "hull",
+      "option": "block"
+    },
+    "options": [
+      {
+        "id": "box",
+        "label": "Box bridge",
+        "names": ["_HA2B_1"]
+      },
+      {
+        "id": "dome",
+        "label": "Dome bridge",
+        "names": ["_HA2B_2"]
+      }
+    ]
+  },
+  {
+    "id": "rearpod",
+    "title": "Rear pod",
+    "requires": {
+      "group": "hull",
+      "option": "block"
+    },
+    "options": [
+      {
+        "id": "none",
+        "label": "None",
+        "names": ["_S1_AccA"]
+      },
+      {
+        "id": "pod",
+        "label": "Pod",
+        "names": ["_S1_AccB"]
+      }
+    ]
+  },
+  {
+    "id": "frontpod",
+    "title": "Front pod",
+    "requires": {
+      "group": "sections",
+      "option": "long"
+    },
+    "options": [
+      {
+        "id": "none",
+        "label": "None",
+        "names": ["_S4_AccA"]
+      },
+      {
+        "id": "pod",
+        "label": "Pod",
+        "names": ["_S4_AccB"]
+      }
+    ]
+  },
+  {
+    "id": "containers",
+    "title": "Containers",
+    "requires": {
+      "group": "hull",
+      "option": "block"
+    },
+    "first": true,
+    "options": [
+      {
+        "id": "spheres",
+        "label": "Spheres",
+        "names": ["_Container_H"]
+      },
+      {
+        "id": "boxes",
+        "label": "Boxes",
+        "names": ["_Container_F"]
+      }
+    ]
+  },
+  {
+    "id": "trim",
+    "title": "Trim colour",
+    "options": [
+      {
+        "id": "grey",
+        "label": "Grey",
+        "names": ["trim.grey"],
+        "swatch": "#a3a5a8"
+      },
+      {
+        "id": "brown",
+        "label": "Brown",
+        "names": ["trim.brown"],
+        "swatch": "#9b6a4b"
+      },
+      {
+        "id": "ochre",
+        "label": "Ochre",
+        "names": ["trim.ochre"],
+        "swatch": "#b8964f"
+      },
+      {
+        "id": "red",
+        "label": "Red",
+        "names": ["trim.red"],
+        "swatch": "#b0473b"
+      },
+      {
+        "id": "maroon",
+        "label": "Maroon",
+        "names": ["trim.maroon"],
+        "swatch": "#8c4452"
+      },
+      {
+        "id": "blue",
+        "label": "Blue",
+        "names": ["trim.blue"],
+        "swatch": "#5d86b0"
+      },
+      {
+        "id": "navy",
+        "label": "Navy",
+        "names": ["trim.navy"],
+        "swatch": "#3f5a8c"
+      },
+      {
+        "id": "green",
+        "label": "Green",
+        "names": ["trim.green"],
+        "swatch": "#5f8c63"
+      }
+    ]
+  },
+  {
+    "id": "panels",
+    "title": "Panel colour",
+    "options": [
+      {
+        "id": "grey",
+        "label": "Grey",
+        "names": ["panels.grey"],
+        "swatch": "#a3a5a8"
+      },
+      {
+        "id": "brown",
+        "label": "Brown",
+        "names": ["panels.brown"],
+        "swatch": "#9b6a4b"
+      },
+      {
+        "id": "ochre",
+        "label": "Ochre",
+        "names": ["panels.ochre"],
+        "swatch": "#b8964f"
+      },
+      {
+        "id": "red",
+        "label": "Red",
+        "names": ["panels.red"],
+        "swatch": "#b0473b"
+      },
+      {
+        "id": "maroon",
+        "label": "Maroon",
+        "names": ["panels.maroon"],
+        "swatch": "#8c4452"
+      },
+      {
+        "id": "blue",
+        "label": "Blue",
+        "names": ["panels.blue"],
+        "swatch": "#5d86b0"
+      },
+      {
+        "id": "navy",
+        "label": "Navy",
+        "names": ["panels.navy"],
+        "swatch": "#3f5a8c"
+      },
+      {
+        "id": "green",
+        "label": "Green",
+        "names": ["panels.green"],
+        "swatch": "#5f8c63"
+      }
+    ]
+  }
+]

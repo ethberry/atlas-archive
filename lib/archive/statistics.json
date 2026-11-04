@@ -1,0 +1,5955 @@
+{
+  "numbers": {
+    "census": { "k": "count", "v": 63360 },
+    "systems": { "k": "count", "v": 63360 },
+    "topics": "36",
+    "voxels": "1056"
+  },
+  "order": [
+    "galaxies",
+    "where-to-look",
+    "systems",
+    "economy",
+    "races",
+    "space-stations",
+    "station-upgrades",
+    "freighters",
+    "dreadnoughts",
+    "freighter-modules",
+    "frigates",
+    "organic-frigates",
+    "sentinel-capital-ship",
+    "sources-by-size",
+    "sources-by-type",
+    "empty-worlds",
+    "sentinels-and-dissonance",
+    "multitool-types",
+    "multitool-classes",
+    "multitool-stats",
+    "multitool-upgrades",
+    "figures",
+    "square",
+    "staffs",
+    "ship-types",
+    "ship-classes",
+    "ship-stats",
+    "ship-upgrades",
+    "ship-figures",
+    "ship-square",
+    "interceptors",
+    "living-ships",
+    "creature-roles",
+    "creature-grades",
+    "creature-stats",
+    "creature-affinity"
+  ],
+  "pages": {
+    "creature-affinity": {
+      "fact": "A planet gives its creatures one affinity. Mechanical is the exception: one in ten full-life planets of Uncharted systems, and nothing else lives there.",
+      "numbers": {
+        "fourOne": { "k": "smallShare", "v": 0.01343180989 },
+        "listFour": { "k": "share", "v": 0.506602581 },
+        "listThree": { "k": "share", "v": 0.493397419 },
+        "mechAll": { "k": "smallShare", "v": 0.01268716669 },
+        "threeOne": { "k": "smallShare", "v": 0.01009086657 },
+        "unchartedPlanets": { "k": "share", "v": 0.1452138947 },
+        "wildAll": { "k": "share", "v": 0.0873688204 }
+      },
+      "tables": {
+        "biomes": {
+          "head": ["Type", "Affinity", "Of its creatures"],
+          "kinds": ["text", "text", "share"],
+          "note": "Adoptable creatures on planets and moons of Euclid.",
+          "rows": [
+            ["Weird", "Anomalous", 0.8742660152],
+            ["Lush", "Tropical", 0.8784971375],
+            ["Red", "Anomalous", 0.901857999],
+            ["Green", "Anomalous", 0.925947256],
+            ["Blue", "Anomalous", 0.9267521338],
+            ["Barren", "Desert", 0.9527496747],
+            ["Lava", "Fire", 0.9549777898],
+            ["Toxic", "Toxic", 0.9606818232],
+            ["Radioactive", "Radioactive", 0.9607795435],
+            ["Scorched", "Fire", 0.9612689209],
+            ["Frozen", "Frost", 0.9612880643],
+            ["Swamp", "Toxic", 0.9620848888],
+            ["Waterworld", "Anomalous", "all"]
+          ]
+        },
+        "chart": {
+          "head": ["Affinity", "Strong against", "Weak against"],
+          "kinds": ["text", "text", "text"],
+          "note": "Strong hits count 1.66 times, weak ones 0.66.",
+          "rows": [
+            ["Tropical", "Anomalous", "Mechanical"],
+            ["Frost", "Mechanical", "Radioactive"],
+            ["Fire", "Frost", "Desert"],
+            ["Toxic", "Tropical", "Frost"],
+            ["Desert", "Toxic", "Tropical"],
+            ["Radioactive", "Fire", "Toxic"],
+            ["Anomalous", "Radioactive", "Fire"],
+            ["Mechanical", "Desert", "Anomalous"]
+          ]
+        },
+        "forced": {
+          "head": ["Kind", "Affinity on every planet", "Of all creatures"],
+          "kinds": ["text", "text", "share"],
+          "note": "Adoptable creatures on planets and moons of Euclid.",
+          "rows": [
+            ["Flying snakes", "Desert", 0],
+            ["Purple star creatures", "Anomalous", 0.005366849136],
+            ["Machines", "Mechanical", 0.01081389619],
+            ["Plant and bone creatures", "Tropical", 0.0298642358]
+          ]
+        },
+        "galaxies": {
+          "head": [
+            "Galaxy",
+            "Planets in Uncharted systems",
+            "Of those, mechanical",
+            "Of all planets"
+          ],
+          "kinds": ["text", "share", "share", "smallShare"],
+          "note": "Planets and moons of each galaxy.",
+          "rows": [
+            ["Eissentam (Lush)", 0.1436438695, 0.09004800258, 0.01293484353],
+            ["Calypso (Harsh)", 0.1436797831, 0.09221567759, 0.01324952856],
+            ["Euclid (Normal)", 0.1452138947, 0.0873688204, 0.01268716669],
+            ["Budullangr (Empty)", 0.1472991237, 0.08776185473, 0.01292724429]
+          ]
+        }
+      },
+      "title": "Creature affinity"
+    },
+    "creature-grades": {
+      "fact": {
+        "t": "On any planet: all three grades at S come to {0} creatures, whatever the type, size, or galaxy. Two on one planet: {1} planets.",
+        "v": [
+          { "k": "oneIn", "v": 296.2962963 },
+          { "k": "oneIn", "v": 8458.976777 }
+        ]
+      },
+      "numbers": {
+        "bestOneIn": { "k": "oneIn", "v": 296.2962963 },
+        "fiveOne": { "k": "smallShare", "v": 0.01676147754 },
+        "fourTwo": { "k": "oneIn", "v": 14697.97304 },
+        "lushOne": { "k": "smallShare", "v": 0.01707005064 },
+        "mostOnPlanet": { "k": "about", "v": 2 },
+        "oneOne": { "k": "smallShare", "v": 0.003375 },
+        "planetsWith": { "k": "share", "v": 0.01397880131 },
+        "tenOne": { "k": "smallShare", "v": 0.03324200794 },
+        "twoOneIn": { "k": "oneIn", "v": 8458.976777 },
+        "waterOne": { "k": "smallShare", "v": 0.001034955667 },
+        "weirdOne": { "k": "smallShare", "v": 0.003555040927 }
+      },
+      "tables": {
+        "affinities": {
+          "head": ["Affinity", "Of all creatures", "Of all-S creatures"],
+          "kinds": ["text", "share", "share"],
+          "note": "Adoptable creatures on planets and moons of Euclid.",
+          "rows": [
+            ["Mechanical", 0.01081389619, 0.01126339267],
+            ["Anomalous", 0.08092717333, 0.086283405],
+            ["Desert", 0.1098382113, 0.115026133],
+            ["Radioactive", 0.124427801, 0.1157515933],
+            ["Frost", 0.1395548642, 0.1383074645],
+            ["Fire", 0.1605222375, 0.1659719081],
+            ["Toxic", 0.1761152679, 0.1696582243],
+            ["Tropical", 0.1978005485, 0.1977378791]
+          ]
+        },
+        "biomes": {
+          "head": [
+            "Type",
+            "Median creatures",
+            "Holds one or more",
+            "Holds two or more"
+          ],
+          "kinds": ["text", "median", "smallShare", "smallShare"],
+          "note": "Worked out from the odds above and the length of each planet's list. Euclid.",
+          "rows": [
+            ["Waterworld", 0, 0.001034955667, 5.186601021e-18],
+            ["Weird", 1, 0.003555040927, 3.962917994e-6],
+            ["Lush", 5, 0.01707005064, 0.000153961454],
+            ["Toxic", 5, 0.01650745397, 0.0001387149657],
+            ["Scorched", 5, 0.01626745274, 0.0001346551221],
+            ["Radioactive", 5, 0.01652978237, 0.000138839125],
+            ["Frozen", 5, 0.01667341803, 0.0001419607348],
+            ["Barren", 5, 0.015915224, 0.0001349814652],
+            ["Red", 5, 0.01639970185, 0.0001386425274],
+            ["Green", 5, 0.0157741813, 0.000135009799],
+            ["Blue", 5, 0.01572614788, 0.000134944379],
+            ["Swamp", 5, 0.01701757649, 0.0001542654569],
+            ["Lava", 5, 0.01621948773, 0.0001384800768]
+          ]
+        },
+        "galaxies": {
+          "head": [
+            "Galaxy",
+            "Median creatures",
+            "Holds one or more",
+            "Holds two or more"
+          ],
+          "kinds": ["text", "median", "smallShare", "smallShare"],
+          "note": "Worked out from the odds above and the length of each planet's list.",
+          "rows": [
+            ["Calypso (Harsh)", 4, 0.01375921137, 0.0001151615299],
+            ["Budullangr (Empty)", 4, 0.01257064306, 0.0001026150855],
+            ["Euclid (Normal)", 5, 0.01376334876, 0.0001151938011],
+            ["Eissentam (Lush)", 5, 0.01410816835, 0.0001180390784]
+          ]
+        },
+        "lists": {
+          "head": [
+            "Creatures on a planet",
+            "At least one all-S",
+            "Two or more"
+          ],
+          "kinds": ["text", "smallShare", "smallShare"],
+          "note": "Worked out from the odds above.",
+          "rows": [
+            ["1", 0.003375, "never"],
+            ["2", 0.006738609375, 0.000011390625],
+            ["3", 0.01009086657, 0.00003409498828],
+            ["4", 0.01343180989, 0.00006803659236],
+            ["5", 0.01676147754, 0.0001131393273],
+            ["6", 0.02007990755, 0.0001693274687],
+            ["8", 0.02668320627, 0.0003146589926],
+            ["10", 0.03324200794, 0.0005034330191],
+            ["12", 0.03975661241, 0.0007350574647],
+            ["15", 0.04944630031, 0.001161558256]
+          ]
+        },
+        "odds": {
+          "head": ["Grades at S", "Chance"],
+          "kinds": ["text", "share"],
+          "note": "Each grade of one creature, rolled apart.",
+          "rows": [
+            ["0", 0.614125],
+            ["1", 0.325125],
+            ["2", 0.057375],
+            ["3", 0.003375]
+          ]
+        },
+        "sizes": {
+          "head": [
+            "Size",
+            "Median creatures",
+            "Holds one or more",
+            "Holds two or more"
+          ],
+          "kinds": ["text", "median", "smallShare", "smallShare"],
+          "note": "Worked out from the odds above and the length of each planet's list. Euclid.",
+          "rows": [
+            ["Moon, 15 km", 4, 0.01243348754, 0.00009815997188],
+            ["Small, 65 km", 5, 0.0140792337, 0.0001190282202],
+            ["Medium, 98 km", 5, 0.01397381892, 0.0001177251631],
+            ["Large, 130 km", 5, 0.01402122772, 0.000118385564],
+            ["Giant, 523 km", 0, 0.004464156962, 0.00003549391245]
+          ]
+        }
+      },
+      "title": "Creature grades"
+    },
+    "creature-roles": {
+      "fact": {
+        "t": "A median planet lists {0} adoptable creatures: {1} live on the ground and {2} under water.",
+        "v": [
+          { "k": "median", "v": 5 },
+          { "k": "share", "v": 0.8096716853 },
+          { "k": "share", "v": 0.04773327884 }
+        ]
+      },
+      "numbers": {
+        "anyTime": { "k": "share", "v": 0.888643762 },
+        "cave": { "k": "share", "v": 0.1425950358 },
+        "caveShare": { "k": "share", "v": 0.375361543 },
+        "emptyShare": { "k": "share", "v": 0.1462823872 },
+        "fullList": { "k": "about", "v": 8 },
+        "ground": { "k": "share", "v": 0.8096716853 },
+        "lushMedian": { "k": "about", "v": 5 },
+        "medianRoster": { "k": "about", "v": 5 },
+        "water": { "k": "share", "v": 0.04773327884 },
+        "waterMedian": { "k": "about", "v": 0 },
+        "weirdMedian": { "k": "about", "v": 1 }
+      },
+      "tables": {
+        "biomes": {
+          "head": [
+            "Type",
+            "Median creatures",
+            "Longest list",
+            "No creature",
+            "In the air",
+            "Under water",
+            "Underground",
+            "On the ground"
+          ],
+          "kinds": [
+            "text",
+            "median",
+            "count",
+            "share",
+            "tenths",
+            "tenths",
+            "tenths",
+            "tenths"
+          ],
+          "note": "Adoptable creatures on planets and moons of Euclid. The last four columns are means per planet.",
+          "rows": [
+            ["Waterworld", 0, 1, 0.6933464691, 0, 0.3066535309, 0, 0],
+            ["Weird", 1, 7, 0.1121055717, 0, 0, 0.02026769101, 1.034255219],
+            [
+              "Blue",
+              5,
+              13,
+              0.09243637623,
+              0,
+              0.3550568438,
+              0.5986567365,
+              3.746093784
+            ],
+            [
+              "Green",
+              5,
+              13,
+              0.09843939342,
+              0,
+              0.3738031014,
+              0.5871420258,
+              3.753110601
+            ],
+            [
+              "Barren",
+              5,
+              14,
+              0.07548381028,
+              0,
+              0.1355443721,
+              0.648341244,
+              3.971950425
+            ],
+            [
+              "Lava",
+              5,
+              13,
+              0.06333933529,
+              0,
+              0.1600672502,
+              0.6430035614,
+              4.04396193
+            ],
+            [
+              "Scorched",
+              5,
+              14,
+              0.06084182273,
+              0,
+              0.1124997274,
+              0.770791636,
+              3.976801454
+            ],
+            [
+              "Red",
+              5,
+              14,
+              0.04125220003,
+              0,
+              0.3555224725,
+              0.6239993863,
+              3.920955832
+            ],
+            [
+              "Toxic",
+              5,
+              14,
+              0.05564012218,
+              0,
+              0.1836495377,
+              0.7800632729,
+              3.968705522
+            ],
+            [
+              "Radioactive",
+              5,
+              15,
+              0.05344725445,
+              0,
+              0.1837885604,
+              0.7853231779,
+              3.969959423
+            ],
+            [
+              "Frozen",
+              5,
+              14,
+              0.05538643359,
+              0,
+              0.223533671,
+              0.7757011886,
+              3.983328192
+            ],
+            [
+              "Swamp",
+              5,
+              14,
+              0.06316706342,
+              0,
+              0.4598766947,
+              0.6613368825,
+              3.967009467
+            ],
+            [
+              "Lush",
+              5,
+              15,
+              0.05368474303,
+              0,
+              0.4311018341,
+              0.6556963641,
+              4.016881543
+            ]
+          ]
+        },
+        "habitats": {
+          "head": [
+            "Lives",
+            "Of all creatures",
+            "Planets with one",
+            "Median where they live",
+            "Who"
+          ],
+          "kinds": ["text", "share", "share", "median", "text"],
+          "note": "Adoptable creatures on planets and moons of Euclid.",
+          "rows": [
+            [
+              "In the air",
+              0,
+              0,
+              null,
+              "None: flying lizards and snakes show no grades"
+            ],
+            ["Under water", 0.04773327884, 0.1501467553, 1, "Crabs"],
+            [
+              "Underground",
+              0.1425950358,
+              0.375361543,
+              1,
+              "Rodents, spiders and blobs"
+            ],
+            [
+              "On the ground",
+              0.8096716853,
+              0.8062089547,
+              4,
+              "Most kinds, large insects and floating creatures too"
+            ]
+          ]
+        },
+        "lists": {
+          "head": ["Creatures on a planet", "Planets"],
+          "kinds": ["text", "share"],
+          "note": "Adoptable creatures on planets and moons of Euclid.",
+          "rows": [
+            ["None", 0.1462823872],
+            ["1 or 2", 0.1640998202],
+            ["3 or 4", 0.1883582112],
+            ["5 or 6", 0.317342945],
+            ["7 or 8", 0.1318098756],
+            ["9 or more", 0.0521067609]
+          ]
+        },
+        "roles": {
+          "head": ["Role", "Of all creatures", "Lives"],
+          "kinds": ["text", "share", "text"],
+          "note": "Adoptable creatures on planets and moons of Euclid.",
+          "rows": [
+            ["Flyer", 0, null],
+            ["Insect", 0.02889075444, "On the ground"],
+            ["Player predator", 0.02982713523, "On the ground"],
+            ["Predator", 0.1604620241, "Underground and on the ground"],
+            ["Prey", 0.2895760699, "On the ground"],
+            [
+              "Passive",
+              0.4912440164,
+              "Under water, underground and on the ground"
+            ]
+          ]
+        },
+        "times": {
+          "head": ["Active", "Of all creatures", "Who"],
+          "kinds": ["text", "share", "text"],
+          "note": "Adoptable creatures on planets and moons of Euclid.",
+          "rows": [
+            ["Only by day", 0.01600522893, "Insect"],
+            ["Mostly by day", 0.07771484492, "Prey"],
+            [
+              "At any time",
+              0.888643762,
+              "Passive, Prey, Predator, Player predator and Insect"
+            ],
+            ["Mostly at night", 0.01763616417, "Passive"],
+            ["Only at night", "never", null]
+          ]
+        }
+      },
+      "title": "Creature roles"
+    },
+    "creature-stats": {
+      "fact": {
+        "t": "Each letter stands for a number. An S on Health is a base of {0} to {1}, a C {2} to {3}, and size moves it.",
+        "v": [
+          { "k": "plain", "v": 575 },
+          { "k": "plain", "v": 725 },
+          { "k": "plain", "v": 425 },
+          { "k": "plain", "v": 525 }
+        ]
+      },
+      "numbers": {
+        "bigHealthC": "630",
+        "smallHealthS": "460",
+        "topAgility": { "k": "plain", "v": 420 },
+        "topCombat": { "k": "plain", "v": 900 },
+        "topHealth": { "k": "plain", "v": 4120 },
+        "traitC": { "k": "share", "v": 0.027 },
+        "traitS": { "k": "share", "v": 0.068625 }
+      },
+      "tables": {
+        "bands": {
+          "head": ["Grade", "Combat Effectiveness", "Agility", "Health"],
+          "kinds": ["text", "text", "text", "text"],
+          "note": "The base of a wild creature, before its own roll and its size.",
+          "rows": [
+            [
+              "C",
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 100 },
+                  { "k": "plain", "v": 120 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 20 },
+                  { "k": "plain", "v": 50 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 425 },
+                  { "k": "plain", "v": 525 }
+                ]
+              }
+            ],
+            [
+              "B",
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 120 },
+                  { "k": "plain", "v": 140 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 40 },
+                  { "k": "plain", "v": 60 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 475 },
+                  { "k": "plain", "v": 625 }
+                ]
+              }
+            ],
+            [
+              "A",
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 160 },
+                  { "k": "plain", "v": 180 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 50 },
+                  { "k": "plain", "v": 80 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 550 },
+                  { "k": "plain", "v": 650 }
+                ]
+              }
+            ],
+            [
+              "S",
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 180 },
+                  { "k": "plain", "v": 200 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 60 },
+                  { "k": "plain", "v": 100 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 575 },
+                  { "k": "plain", "v": 725 }
+                ]
+              }
+            ]
+          ]
+        },
+        "chance": {
+          "head": ["Grade", "Chance"],
+          "kinds": ["text", "share"],
+          "note": "The same for all three grades.",
+          "rows": [
+            ["C", 0.3],
+            ["B", 0.3],
+            ["A", 0.25],
+            ["S", 0.15]
+          ]
+        },
+        "growth": {
+          "head": ["Grade", "Combat Effectiveness", "Agility", "Health"],
+          "kinds": ["text", "plus", "plus", "plus"],
+          "note": "Added at each level of that grade, up to level 10.",
+          "rows": [
+            ["C", 41, 13, 175],
+            ["B", 48, 22, 225],
+            ["A", 63, 25, 275],
+            ["S", 70, 30, 325]
+          ]
+        },
+        "reach": {
+          "head": ["Grade", "Combat Effectiveness", "Agility", "Health"],
+          "kinds": ["text", "text", "text", "text"],
+          "note": "The base of a wild creature with its own roll at both ends.",
+          "rows": [
+            [
+              "C",
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 100 },
+                  { "k": "plain", "v": 120 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 16 },
+                  { "k": "plain", "v": 60 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 340 },
+                  { "k": "plain", "v": 630 }
+                ]
+              }
+            ],
+            [
+              "B",
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 120 },
+                  { "k": "plain", "v": 140 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 32 },
+                  { "k": "plain", "v": 72 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 380 },
+                  { "k": "plain", "v": 750 }
+                ]
+              }
+            ],
+            [
+              "A",
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 160 },
+                  { "k": "plain", "v": 180 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 40 },
+                  { "k": "plain", "v": 96 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 440 },
+                  { "k": "plain", "v": 780 }
+                ]
+              }
+            ],
+            [
+              "S",
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 180 },
+                  { "k": "plain", "v": 200 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 48 },
+                  { "k": "plain", "v": 120 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 460 },
+                  { "k": "plain", "v": 870 }
+                ]
+              }
+            ]
+          ]
+        },
+        "tops": {
+          "head": ["Grade", "Combat Effectiveness", "Agility", "Health"],
+          "kinds": ["text", "text", "text", "text"],
+          "note": "The same reach at level 10 of each grade.",
+          "rows": [
+            [
+              "C",
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 510 },
+                  { "k": "plain", "v": 530 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 146 },
+                  { "k": "plain", "v": 190 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 2090 },
+                  { "k": "plain", "v": 2380 }
+                ]
+              }
+            ],
+            [
+              "B",
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 600 },
+                  { "k": "plain", "v": 620 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 252 },
+                  { "k": "plain", "v": 292 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 2630 },
+                  { "k": "plain", "v": 3000 }
+                ]
+              }
+            ],
+            [
+              "A",
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 790 },
+                  { "k": "plain", "v": 810 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 290 },
+                  { "k": "plain", "v": 346 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 3190 },
+                  { "k": "plain", "v": 3530 }
+                ]
+              }
+            ],
+            [
+              "S",
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 880 },
+                  { "k": "plain", "v": 900 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 348 },
+                  { "k": "plain", "v": 420 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 3710 },
+                  { "k": "plain", "v": 4120 }
+                ]
+              }
+            ]
+          ]
+        },
+        "trait": {
+          "head": [
+            "Trait Potential",
+            "Sum of the three grades",
+            "Chance",
+            "For example"
+          ],
+          "kinds": ["text", "text", "share", "text"],
+          "note": "C counts 0, B 1, A 2, S 3.",
+          "rows": [
+            ["S", "7 to 9", 0.068625, "S, A, A"],
+            ["A", "4 to 6", 0.472375, "A, B, B"],
+            ["B", "1 to 3", 0.432, "C, A, C"],
+            ["C", "0", 0.027, "C, C, C"]
+          ]
+        }
+      },
+      "title": "Creature stats"
+    },
+    "dreadnoughts": {
+      "fact": {
+        "t": "Own a freighter, then fight in a pirate system: every battle there brings a dreadnought. Break its engines to seize it, class S {0} of the time.",
+        "v": [{ "k": "share", "v": 0.05 }]
+      },
+      "numbers": {
+        "every": { "k": "share", "v": 0.04549040173 },
+        "highArrival": { "k": "share", "v": 0.1 },
+        "pirateArrival": { "k": "share", "v": 0.2 },
+        "pirateHalf": { "k": "plain", "v": 14 },
+        "pirateS": { "k": "share", "v": 0.05 }
+      },
+      "tables": {
+        "arrival": {
+          "head": [
+            "Conflict",
+            "Of systems",
+            "Dreadnought on arrival",
+            "Of all systems"
+          ],
+          "kinds": ["text", "share", "share", "share"],
+          "note": "Systems of Euclid by conflict level, for a player who owns a freighter.",
+          "rows": [
+            ["Low", 0.3438124801, 0, 0],
+            ["Medium", 0.2882002395, 0, 0],
+            ["High", 0.2810705434, 0.1, 0.02810705434],
+            ["Pirate", 0.08691673696, 0.2, 0.01738334739]
+          ]
+        },
+        "outcomes": {
+          "head": ["What you do", "What you get"],
+          "kinds": ["text", "text"],
+          "note": "The end of a dreadnought battle.",
+          "rows": [
+            [
+              "Destroy it",
+              "One freighter module at class S, and the large reward for the freighter you saved"
+            ],
+            [
+              "Break all four engines, and its hull below a quarter or all its large cannons",
+              "It surrenders: seize it, take 5 to 10 million units, or leave. Also the large reward"
+            ],
+            [
+              "Let it warp out",
+              "Only the small reward for the freighter you saved"
+            ]
+          ],
+          "text": 2
+        }
+      },
+      "title": "Dreadnoughts"
+    },
+    "economy": {
+      "fact": {
+        "t": "Farm three-star systems: class S is {0} of multitools at low wealth and {1} at high, with as many tools at each. The economy type changes nothing you could plan on.",
+        "v": [
+          { "k": "share", "v": 0 },
+          { "k": "share", "v": 0.01999716497 }
+        ]
+      },
+      "numbers": {
+        "economyHigh": { "k": "about", "v": 302082 },
+        "economyLow": { "k": "about", "v": 293830 },
+        "highKept": { "k": "about", "v": 307330 },
+        "highS": { "k": "share", "v": 0.01999716497 },
+        "highTouch": { "k": "share", "v": 0.04221190547 },
+        "lowKept": { "k": "about", "v": 294456 },
+        "lowS": { "k": "share", "v": 0 },
+        "lowTouch": { "k": "share", "v": 0.002429681811 },
+        "mediumShips": { "k": "about", "v": 4255 },
+        "pirateS": { "k": "share", "v": 0.05004724862 },
+        "pirateShips": { "k": "about", "v": 3846 },
+        "pirateTouch": { "k": "share", "v": 0.00272100947 }
+      },
+      "tables": {
+        "classes": {
+          "head": ["Economy", "C", "B", "A", "S"],
+          "kinds": ["text", "share", "share", "share", "share"],
+          "note": "Share of tools at each class in Euclid, staffs included.",
+          "rows": [
+            ["Uncharted", null, null, null, null],
+            [
+              "Trading",
+              0.4903460077,
+              0.3460747303,
+              0.1543805646,
+              0.009198697407
+            ],
+            [
+              "Manufacturing",
+              0.4907100318,
+              0.3457773599,
+              0.1543569348,
+              0.009155673514
+            ],
+            [
+              "Material Fusion",
+              0.4919388153,
+              0.3454260173,
+              0.1535315838,
+              0.009103583521
+            ],
+            [
+              "Mining",
+              0.4929251509,
+              0.3452345991,
+              0.1528056075,
+              0.009034642537
+            ],
+            [
+              "Scientific",
+              0.4930021688,
+              0.3450189655,
+              0.1529598646,
+              0.009019001136
+            ],
+            [
+              "Power Generation",
+              0.4932645072,
+              0.3450768958,
+              0.1526468479,
+              0.009011749071
+            ],
+            [
+              "Technology",
+              0.4936121164,
+              0.3447045876,
+              0.1527594762,
+              0.008923819727
+            ],
+            ["Abandoned", 0.5999825144, 0.2999790752, 0.1000384104, 0],
+            [
+              "Pirate",
+              0.8499864866,
+              0.04998066549,
+              0.04998559925,
+              0.05004724862
+            ]
+          ]
+        },
+        "conflict": {
+          "head": [
+            "Conflict",
+            "Tools in a system",
+            "Wrecks in a system",
+            "Class S tools",
+            "Adjacent tools"
+          ],
+          "kinds": ["text", "median", "median", "share", "share"],
+          "note": "Charted systems of Euclid, Uncharted left out.",
+          "rows": [
+            ["Low", 300467, 4325, 0.007075319246, 0.01307472824],
+            ["Medium", 303302, 4266, 0.009101742016, 0.01620225474],
+            ["High", 307676, 4239, 0.009033353365, 0.01611511121],
+            ["Pirate", 254335, 3846, 0.05004724862, 0.00272100947]
+          ]
+        },
+        "economy": {
+          "head": [
+            "Economy",
+            "Tools in a system",
+            "Wrecks in a system",
+            "Class S tools",
+            "Adjacent tools"
+          ],
+          "kinds": ["text", "median", "median", "share", "share"],
+          "note": "Charted systems of Euclid, Uncharted left out.",
+          "rows": [
+            ["Power Generation", 293830, 4224, 0.01180514964, 0.01380000522],
+            ["Mining", 294863, 4246, 0.01196005567, 0.0137806323],
+            ["Scientific", 297266, 4210, 0.01187528472, 0.01383080148],
+            ["Material Fusion", 298659, 4229, 0.01208788469, 0.01397484282],
+            ["Technology", 299429, 4194, 0.01168977319, 0.01381696275],
+            ["Manufacturing", 301590, 4248, 0.0118446563, 0.01393609753],
+            ["Trading", 302082, 4254, 0.01172315094, 0.01416617292]
+          ]
+        },
+        "stations": {
+          "head": [
+            "System number",
+            "Inhabited",
+            "Pirate",
+            "Abandoned",
+            "Uncharted"
+          ],
+          "kinds": ["text", "share", "share", "share", "share"],
+          "note": "Stars of Euclid. The number is the part of a portal address after the first glyph, in base 16.",
+          "rows": [
+            [
+              "0 to 99",
+              0.8534012358,
+              0.01463669247,
+              0.01506305478,
+              0.1168990169
+            ],
+            [
+              "100 to 149",
+              0.8245108191,
+              0.07664187463,
+              0.009538815125,
+              0.08930849118
+            ],
+            [
+              "150 to 599",
+              0.6927506655,
+              0.1208080353,
+              0.01841605849,
+              0.1680252408
+            ],
+            [
+              "Over 600",
+              0.4836539267,
+              0.02558492445,
+              0.3621985893,
+              0.1285625595
+            ]
+          ]
+        },
+        "types": {
+          "head": [
+            "Economy",
+            "Rifle",
+            "Pistol",
+            "Atlantid",
+            "Sentinel",
+            "Experimental",
+            "Alien",
+            "Royal"
+          ],
+          "kinds": [
+            "text",
+            "share",
+            "share",
+            "share",
+            "share",
+            "share",
+            "share",
+            "share"
+          ],
+          "note": "Share of each type among tools that reach a list, in Euclid. Staffs left out.",
+          "rows": [
+            [
+              "Abandoned",
+              0.3277047415,
+              0.2449816248,
+              0.3389472849,
+              0.08687778594,
+              0.0002297763162,
+              0.0006910472879,
+              0.0005677392677
+            ],
+            [
+              "Pirate",
+              0.4030570477,
+              0.2900810009,
+              0.2643205248,
+              0.01204252075,
+              0.01425813521,
+              0.01575606428,
+              0.0004847063273
+            ],
+            [
+              "Manufacturing",
+              0.4328530163,
+              0.2947530788,
+              0.2555227439,
+              0.01398949828,
+              0.001240844823,
+              0.001311425213,
+              0.0003293927651
+            ],
+            [
+              "Technology",
+              0.4336856491,
+              0.2958081802,
+              0.2542131295,
+              0.01384492897,
+              0.0009866305897,
+              0.001235937616,
+              0.0002255439343
+            ],
+            [
+              "Mining",
+              0.4379117497,
+              0.2977889428,
+              0.2478273896,
+              0.01363935546,
+              0.001216366003,
+              0.001305030124,
+              0.0003111663435
+            ],
+            [
+              "Scientific",
+              0.4403699746,
+              0.2950511276,
+              0.2459925727,
+              0.01582242633,
+              0.00138633095,
+              0.001118832289,
+              0.0002587355952
+            ],
+            [
+              "Power Generation",
+              0.4409728839,
+              0.2992900774,
+              0.2446139613,
+              0.01268586285,
+              0.001086043814,
+              0.001178459683,
+              0.0001727110344
+            ],
+            [
+              "Material Fusion",
+              0.4470726167,
+              0.2929074592,
+              0.2437486856,
+              0.01316653509,
+              0.001380179532,
+              0.001406371704,
+              0.0003181522228
+            ],
+            [
+              "Trading",
+              0.4473001217,
+              0.2933468476,
+              0.2430244081,
+              0.01371062172,
+              0.0009017804139,
+              0.001433925328,
+              0.0002822950929
+            ]
+          ]
+        },
+        "wealth": {
+          "head": [
+            "Wealth",
+            "Tools in a system",
+            "Wrecks in a system",
+            "Class S tools",
+            "Adjacent tools"
+          ],
+          "kinds": ["text", "median", "median", "share", "share"],
+          "note": "Charted systems of Euclid, Uncharted left out.",
+          "rows": [
+            ["Low", 294456, 4342, 0, 0.002429681811],
+            ["Medium", 306226, 4255, 0.0100032644, 0.01617705353],
+            ["High", 307330, 4280, 0.01999716497, 0.04221190547],
+            ["Pirate", 254335, 3846, 0.05004724862, 0.00272100947]
+          ]
+        }
+      },
+      "title": "Economy"
+    },
+    "empty-worlds": {
+      "fact": {
+        "t": "No planet is empty: crashed ships reach every type but Waterworlds, which hold sunken ones. What a planet can lack is a tool source. {0} lose nothing to sea level.",
+        "v": [{ "k": "share", "v": 0.2421144719 }]
+      },
+      "numbers": {
+        "emptyCount": { "k": "about", "v": 43796 },
+        "gasCensus": { "k": "share", "v": 0.002354588836 },
+        "gasCount": { "k": "about", "v": 710 },
+        "gasMedian": { "k": "about", "v": 163329 },
+        "gasNoTool": { "k": "share", "v": 1 },
+        "noSourceCharted": { "k": "share", "v": 0.00002073747393 },
+        "noSourceCount": { "k": "about", "v": 5 },
+        "noToolCharted": { "k": "share", "v": 0.1142210053 },
+        "planets": { "k": "about", "v": 301596 },
+        "seaAll": { "k": "about", "v": 4 },
+        "seaHigh": { "k": "about", "v": 511 },
+        "seaMedian": { "k": "share", "v": 0.06155507559 },
+        "seaNone": { "k": "share", "v": 0.2421144719 },
+        "seaPlanets": { "k": "about", "v": 256636 },
+        "seaWet": { "k": "share", "v": 0.3029360791 },
+        "unchartedMedian": { "k": "about", "v": 0 },
+        "unchartedNoSource": { "k": "share", "v": 1 },
+        "unchartedPlanets": { "k": "about", "v": 43796 },
+        "waterworldLost": { "k": "about", "v": 341517 },
+        "waterworldSpots": { "k": "about", "v": 7069 },
+        "waterworlds": { "k": "about", "v": 1361 }
+      },
+      "tables": {
+        "biomes": {
+          "head": ["Planets", "No tool source"],
+          "kinds": ["text", "share"],
+          "note": "Planets and moons of charted systems of Euclid. Tool sources are shops, monoliths, pillars, and camps.",
+          "rows": [
+            ["Scorched", 0],
+            ["Lava", 0],
+            ["Waterworld", 0],
+            ["Barren", 0.00008442127945],
+            ["Lush", 0.000135074489],
+            ["Toxic", 0.000154095811],
+            ["Radioactive", 0.0001898905491],
+            ["Swamp", 0.0003281375884],
+            ["Frozen", 0.0003560697685],
+            ["Blue", 0.001453288858],
+            ["Green", 0.001925406173],
+            ["Red", 0.003529326387],
+            ["Weird", 0.6675329819],
+            ["Dead", 0.6704685769],
+            ["Gas Giant", 1]
+          ]
+        },
+        "matrix": {
+          "head": [
+            "Source",
+            "Most planets",
+            "Dead",
+            "Weird",
+            "Infested",
+            "Waterworld",
+            "Gas Giant"
+          ],
+          "kinds": ["text", "text", "text", "text", "text", "text", "text"],
+          "note": "Whether the kind of planet can hold the source at all. A yes can still be empty on a given planet.",
+          "rows": [
+            ["Shop", "yes", "no", "no", "yes", "yes", "no"],
+            ["Sentinel pillar", "yes", "no", "no", "yes", "yes", "no"],
+            ["Monolith", "yes", "yes", "yes", "yes", "yes", "no"],
+            ["Harmonic camp", "yes", "no", "no", "yes", "no", "yes"],
+            ["Beacon", "yes", "no", "no", "yes", "yes", "yes"],
+            ["Drop Pod", "yes", "no", "yes", "yes", "yes", "yes"],
+            ["Debris", "yes", "no", "yes", "yes", "yes", "yes"],
+            ["Crashed freighter", "yes", "yes", "yes", "yes", "no", "yes"],
+            ["Robot head", "yes", "no", "no", "no", "no", "yes"],
+            ["Crashed ship", "yes", "yes", "yes", "yes", "no", "yes"],
+            ["Sentinel wreck", "yes", "no", "no", "yes", "no", "no"],
+            ["Sunken ship", "yes", "no", "no", "yes", "yes", "no"]
+          ]
+        },
+        "sea": {
+          "head": ["Grid lost to sea level", "Share"],
+          "kinds": ["text", "share"],
+          "note": "Planets and moons of Euclid with at least one land spot in the grid, Waterworlds left out. Sea level means at sea level or under it, up to 5 m above the water.",
+          "rows": [
+            ["None lost", 0.2421144719],
+            ["Under 10%", 0.2808319206],
+            ["10% to 50%", 0.2915006105],
+            ["50% to 90%", 0.1835434577],
+            ["90% or more", 0.001992911894],
+            ["All lost", 0.00001662750183]
+          ]
+        },
+        "seaBiomes": {
+          "head": ["Planets", "Median lost", "Most lost"],
+          "kinds": ["text", "share", "share"],
+          "note": "Planets and moons of Euclid with at least one land spot in the grid, Waterworlds left out. Sea level means at sea level or under it, up to 5 m above the water.",
+          "rows": [
+            ["Dead", 0.00261951539, 0.3742718447],
+            ["Weird", 0.006285147205, 0.706088993],
+            ["Scorched", 0.01846785226, 0.9241018722],
+            ["Toxic", 0.02767014406, 0.9997574699],
+            ["Radioactive", 0.02773535045, 0.9997775801],
+            ["Barren", 0.02870211549, 1],
+            ["Frozen", 0.1298150432, 1],
+            ["Lava", 0.159064966, 0.9081889982],
+            ["Gas Giant", 0.1694743885, 0.9859838035],
+            ["Red", 0.353489788, 0.9999511182],
+            ["Swamp", 0.393011811, 0.9999347386],
+            ["Blue", 0.4171797503, 0.9998983533],
+            ["Green", 0.4196126502, 0.9998617677],
+            ["Lush", 0.4833033588, 1]
+          ]
+        },
+        "seaSizes": {
+          "head": ["Planets", "Median lost", "Most lost"],
+          "kinds": ["text", "share", "share"],
+          "note": "Planets and moons of Euclid with at least one land spot in the grid, Waterworlds left out. Sea level means at sea level or under it, up to 5 m above the water.",
+          "rows": [
+            ["Moon, 15 km", 0, 0.6261061947],
+            ["Small, 65 km", 0.1489457156, 1],
+            ["Medium, 98 km", 0.1519622307, 0.9998443983],
+            ["Large, 130 km", 0.1514705882, 0.9999511182],
+            ["Giant, 523 km", 0.1677147494, 0.9994484063]
+          ]
+        },
+        "sizes": {
+          "head": ["Planets", "No tool source"],
+          "kinds": ["text", "share"],
+          "note": "Planets and moons of charted systems of Euclid. Tool sources are shops, monoliths, pillars, and camps.",
+          "rows": [
+            ["Moon, 15 km", 0.1423901027],
+            ["Small, 65 km", 0.1058421657],
+            ["Medium, 98 km", 0.1077225472],
+            ["Large, 130 km", 0.1075881548],
+            ["Giant, 523 km", 0.7122851625]
+          ]
+        }
+      },
+      "title": "Empty worlds"
+    },
+    "figures": {
+      "fact": {
+        "t": "Four adjacent supercharged slots on a multitool most often form a corner. A flat line is rare on a staff, {0}, and ordinary on a rifle, {1}.",
+        "v": [
+          { "k": "share", "v": 0.001897709268 },
+          { "k": "share", "v": 0.06236417564 }
+        ]
+      },
+      "numbers": {
+        "commonestShare": { "k": "share", "v": 0.1206092697 },
+        "rarest": "flat line",
+        "rarestShare": { "k": "share", "v": 0.003638514039 },
+        "rifleLine": { "k": "share", "v": 0.06236417564 },
+        "staffLine": { "k": "share", "v": 0.001897709268 },
+        "tools": { "k": "about", "v": 241308542 }
+      },
+      "tables": {
+        "turns": {
+          "head": [
+            "Figure",
+            "Pistol",
+            "Rifle",
+            "Atlantid, plain",
+            "Atlantid, blue",
+            "Atlantid, yellow",
+            "Sentinel, pistol",
+            "Sentinel, rifle",
+            "Experimental",
+            "Alien",
+            "Royal",
+            "All staffs",
+            "All tools"
+          ],
+          "kinds": [
+            "text",
+            "share",
+            "share",
+            "share",
+            "share",
+            "share",
+            "share",
+            "share",
+            "share",
+            "share",
+            "share",
+            "share",
+            "share"
+          ],
+          "marks": [
+            [
+              [0, 0],
+              [0, 1],
+              [1, 0],
+              [1, 1]
+            ],
+            [
+              [0, 0],
+              [1, 0],
+              [2, 0],
+              [3, 0]
+            ],
+            [
+              [0, 0],
+              [0, 1],
+              [0, 2],
+              [0, 3]
+            ],
+            [
+              [0, 1],
+              [1, 0],
+              [1, 1],
+              [2, 0]
+            ],
+            [
+              [0, 0],
+              [0, 1],
+              [1, 1],
+              [1, 2]
+            ],
+            [
+              [0, 0],
+              [1, 0],
+              [1, 1],
+              [2, 1]
+            ],
+            [
+              [0, 1],
+              [0, 2],
+              [1, 0],
+              [1, 1]
+            ],
+            [
+              [0, 1],
+              [1, 0],
+              [1, 1],
+              [1, 2]
+            ],
+            [
+              [0, 0],
+              [1, 0],
+              [1, 1],
+              [2, 0]
+            ],
+            [
+              [0, 1],
+              [1, 0],
+              [1, 1],
+              [2, 1]
+            ],
+            [
+              [0, 0],
+              [0, 1],
+              [0, 2],
+              [1, 1]
+            ],
+            [
+              [0, 1],
+              [1, 1],
+              [2, 0],
+              [2, 1]
+            ],
+            [
+              [0, 0],
+              [1, 0],
+              [1, 1],
+              [1, 2]
+            ],
+            [
+              [0, 0],
+              [0, 1],
+              [0, 2],
+              [1, 2]
+            ],
+            [
+              [0, 0],
+              [0, 1],
+              [1, 0],
+              [2, 0]
+            ],
+            [
+              [0, 0],
+              [1, 0],
+              [2, 0],
+              [2, 1]
+            ],
+            [
+              [0, 2],
+              [1, 0],
+              [1, 1],
+              [1, 2]
+            ],
+            [
+              [0, 0],
+              [0, 1],
+              [0, 2],
+              [1, 0]
+            ],
+            [
+              [0, 0],
+              [0, 1],
+              [1, 1],
+              [2, 1]
+            ]
+          ],
+          "note": "Tools with adjacent slots, as you find them, in Euclid.",
+          "rows": [
+            [
+              "",
+              0.07004256825,
+              0.06998533063,
+              0.06304572804,
+              0.0750038415,
+              0.07446201352,
+              0.07041383074,
+              0.0698367134,
+              0.07798691505,
+              0.07573012552,
+              0.07800696385,
+              0.08031627751,
+              0.08001865408
+            ],
+            [
+              "",
+              0.06265170964,
+              0.06236417564,
+              0.07168228485,
+              0.05494526324,
+              0.05510554302,
+              0.06205311428,
+              0.06219945413,
+              0.05425711688,
+              0.05150317934,
+              0.05291772748,
+              0.001897709268,
+              0.003638514039
+            ],
+            [
+              "",
+              0.02723925563,
+              0.02669951788,
+              0.02132060572,
+              0.03142525863,
+              0.03203145727,
+              0.02718229457,
+              0.02736460158,
+              0.05218321515,
+              0.05240710743,
+              0.04992105849,
+              0.0146327952,
+              0.01499813583
+            ],
+            [
+              "",
+              0.05817405059,
+              0.05898453326,
+              0.06324002539,
+              0.05477347859,
+              0.05502343972,
+              0.05819424179,
+              0.05859957712,
+              0.03864323808,
+              0.03844121225,
+              0.04141577777,
+              0.04055440559,
+              0.04106795959
+            ],
+            [
+              "",
+              0.04677451945,
+              0.04614327251,
+              0.04241699763,
+              0.05014178421,
+              0.05058581978,
+              0.04623447013,
+              0.04642683387,
+              0.0528147763,
+              0.05352578598,
+              0.05307001484,
+              0.08019505356,
+              0.07922760114
+            ],
+            [
+              "",
+              0.05847513234,
+              0.0590531133,
+              0.06305380337,
+              0.05482412984,
+              0.0550085553,
+              0.05838978957,
+              0.05805134651,
+              0.03865058508,
+              0.03823596259,
+              0.0416932071,
+              0.04057377405,
+              0.04108932655
+            ],
+            [
+              "",
+              0.04659537868,
+              0.0463363109,
+              0.0424401253,
+              0.05040543242,
+              0.04990348938,
+              0.04690024662,
+              0.04672818664,
+              0.04869307497,
+              0.05196074361,
+              0.05208990285,
+              0.08013466238,
+              0.0791680873
+            ],
+            [
+              "",
+              0.04631960039,
+              0.04744832866,
+              0.04228485785,
+              0.05664978437,
+              0.04360234533,
+              0.04666959787,
+              0.04709312508,
+              0.02663762321,
+              0.02783119107,
+              0.07651176934,
+              0.01497358152,
+              0.01588732953
+            ],
+            [
+              "",
+              0.05870928464,
+              0.05880712948,
+              0.06335310115,
+              0.05508477173,
+              0.05462541784,
+              0.05831991607,
+              0.05840374054,
+              0.0407129478,
+              0.03877352037,
+              0.04125182449,
+              0.04059511885,
+              0.04111032828
+            ],
+            [
+              "",
+              0.05834037011,
+              0.05901802147,
+              0.06290140164,
+              0.05479156728,
+              0.05464077659,
+              0.05828610327,
+              0.05833027389,
+              0.03869405371,
+              0.04028204733,
+              0.0411853642,
+              0.04066709321,
+              0.04117737123
+            ],
+            [
+              "",
+              0.04668967349,
+              0.04565636321,
+              0.04200677424,
+              0.04308648331,
+              0.0563876378,
+              0.04680532567,
+              0.04681794741,
+              0.08085985334,
+              0.07975728902,
+              0.02859780871,
+              0.09421056209,
+              0.09283772703
+            ],
+            [
+              "",
+              0.05852459084,
+              0.05874206062,
+              0.06326411893,
+              0.06441358266,
+              0.04480497196,
+              0.05843645284,
+              0.05817269844,
+              0.03948079607,
+              0.03956034149,
+              0.07674038508,
+              0.004074738267,
+              0.005638826316
+            ],
+            [
+              "",
+              0.04693403981,
+              0.04713312187,
+              0.04288675033,
+              0.05713637157,
+              0.04339161884,
+              0.04680427646,
+              0.04673313935,
+              0.02823275085,
+              0.02653284926,
+              0.07674589184,
+              0.01495248132,
+              0.01587089867
+            ],
+            [
+              "",
+              0.04666605343,
+              0.04632533214,
+              0.04224932033,
+              0.04342545804,
+              0.05630953443,
+              0.04692276678,
+              0.04693123111,
+              0.08380196854,
+              0.07805450971,
+              0.02911137867,
+              0.09430024769,
+              0.09293422463
+            ],
+            [
+              "",
+              0.05834641863,
+              0.05750067573,
+              0.06298252312,
+              0.04477899625,
+              0.06483308126,
+              0.0582870023,
+              0.05856451798,
+              0.07907451353,
+              0.0792252677,
+              0.0397598509,
+              0.1224598663,
+              0.1206092697
+            ],
+            [
+              "",
+              0.05845855467,
+              0.05881304231,
+              0.0632785806,
+              0.06426330451,
+              0.04483899876,
+              0.05866476654,
+              0.05828034468,
+              0.03957241941,
+              0.03950540338,
+              0.07667410842,
+              0.004063479342,
+              0.005628035534
+            ],
+            [
+              "",
+              0.04676298371,
+              0.04752907042,
+              0.04245373184,
+              0.05635830434,
+              0.04320733689,
+              0.04681692024,
+              0.04651764555,
+              0.02523125791,
+              0.0270302514,
+              0.07623871004,
+              0.01492224853,
+              0.01584055746
+            ],
+            [
+              "",
+              0.04655073203,
+              0.04567485709,
+              0.04226320718,
+              0.04349223182,
+              0.05682792191,
+              0.04658760265,
+              0.04674071707,
+              0.07380566528,
+              0.07851534948,
+              0.02867984082,
+              0.09429569829,
+              0.09292097477
+            ],
+            [
+              "",
+              0.05774508368,
+              0.05778574288,
+              0.0628760625,
+              0.04499995569,
+              0.06441004037,
+              0.05803128162,
+              0.05820790565,
+              0.08066722885,
+              0.08312786307,
+              0.0393884151,
+              0.122180207,
+              0.1203361784
+            ]
+          ],
+          "upright": true
+        }
+      },
+      "title": "Tetris figures"
+    },
+    "freighter-modules": {
+      "fact": "Destroy pirate dreadnoughts: each gives one class S freighter module, and a system's dreadnought always gives the same one, so you farm one system per module.",
+      "numbers": { "hours": { "k": "plain", "v": 3 } },
+      "tables": {
+        "modules": {
+          "head": ["Module", "At class S"],
+          "kinds": ["text", "text"],
+          "note": "The seven freighter modules a destroyed dreadnought gives.",
+          "rows": [
+            [
+              "Hyperdrive",
+              "+200 to 250 light years, and one more jump from each warp cell"
+            ],
+            ["Fuel efficiency", "15 to 20% less fuel"],
+            ["Expedition speed", "+15%"],
+            ["Expedition defences", "+15%"],
+            ["Expedition trade", "+15%"],
+            ["Expedition mining", "+15%"],
+            ["Expedition science", "+15%"]
+          ],
+          "text": 2
+        }
+      },
+      "title": "Freighter modules"
+    },
+    "freighters": {
+      "fact": {
+        "t": "Farm your capital freighter in a pirate system before you own one: each battle saves a freighter of class S {0} of the time, so it takes {1} tries on average.",
+        "v": [
+          { "k": "share", "v": 0.05 },
+          { "k": "plain", "v": 20 }
+        ]
+      },
+      "numbers": {
+        "highHalf": { "k": "plain", "v": 35 },
+        "highS": { "k": "share", "v": 0.02 },
+        "hours": { "k": "plain", "v": 3 },
+        "largeS": {
+          "t": "{0} to {1}",
+          "v": [
+            { "k": "plain", "v": 197.4 },
+            { "k": "plain", "v": 600 }
+          ]
+        },
+        "mediumS": { "k": "share", "v": 0.01 },
+        "pirateAll": { "k": "plain", "v": 90 },
+        "pirateC": { "k": "share", "v": 0.85 },
+        "pirateHalf": { "k": "plain", "v": 14 },
+        "pirateMean": { "k": "plain", "v": 20 },
+        "pirateNine": { "k": "plain", "v": 45 },
+        "pirateOneIn": { "k": "oneIn", "v": 11.50526395 },
+        "pirateS": { "k": "share", "v": 0.05 },
+        "pirateSystems": { "k": "share", "v": 0.08691673696 },
+        "smallS": {
+          "t": "{0} to {1}",
+          "v": [
+            { "k": "plain", "v": 10 },
+            { "k": "plain", "v": 23 }
+          ]
+        },
+        "warps": { "k": "plain", "v": 5 }
+      },
+      "tables": {
+        "battles": {
+          "head": ["Battle", "When it comes", "Freighter you save"],
+          "kinds": ["text", "text", "text"],
+          "note": "The battle a system brings when one is due. A system keeps its type: the game draws it from the system.",
+          "rows": [
+            [
+              "Easy",
+              "Your first two battles, unless you own a freighter in a pirate system",
+              "Regular"
+            ],
+            [
+              "Standard",
+              "Half of systems, a third once you own a freighter",
+              "Capital"
+            ],
+            [
+              "Hard",
+              "Half of systems, a third once you own a freighter",
+              "Capital"
+            ],
+            [
+              "Dreadnought",
+              "A third of systems once you own a freighter, and every pirate system",
+              "Capital"
+            ]
+          ],
+          "text": 3
+        },
+        "classes": {
+          "head": ["Wealth", "Of systems", "C", "B", "A", "S"],
+          "kinds": ["text", "share", "share", "share", "share", "share"],
+          "note": "Class odds of a freighter by the wealth of its system, and the share of Euclid's systems at that wealth.",
+          "rows": [
+            ["Low", 0.2256204378, 0.6, 0.3, 0.1, 0],
+            ["Medium", 0.6011737249, 0.49, 0.35, 0.15, 0.01],
+            ["High", 0.08628910035, 0.3, 0.4, 0.28, 0.02],
+            ["Pirate", 0.08691673696, 0.85, 0.05, 0.05, 0.05]
+          ]
+        },
+        "kinds": {
+          "head": ["Freighter", "Where you get it", "Size"],
+          "kinds": ["text", "text", "text"],
+          "note": "The size sets the slots a freighter starts with, not the most it can hold.",
+          "rows": [
+            [
+              "Regular",
+              "In the fleets of a system: buy it from its captain",
+              "Small nearly always, Medium now and then"
+            ],
+            [
+              "Capital",
+              "Saved from a battle, from your third on",
+              "Medium or Large, half each, the same in every battle of a system"
+            ]
+          ],
+          "text": 3
+        },
+        "limits": {
+          "head": [
+            "Class",
+            "General slots at most",
+            "Technology slots at most"
+          ],
+          "kinds": ["text", "plain", "plain"],
+          "note": "The same for a regular and a capital freighter, whatever it starts with.",
+          "rows": [
+            ["C", 60, 30],
+            ["B", 80, 40],
+            ["A", 100, 50],
+            ["S", 120, 60]
+          ]
+        },
+        "prices": {
+          "head": [
+            "Size",
+            "Slots it starts with",
+            "Class C, million units",
+            "Class B, million units",
+            "Class A, million units",
+            "Class S, million units"
+          ],
+          "kinds": ["text", "text", "text", "text", "text", "text"],
+          "note": "Price in millions of units: the first number for the fewest slots, the second for the most.",
+          "rows": [
+            [
+              "Small",
+              {
+                "t": "{0} to {1}, and {2} to {3} for technology",
+                "v": [
+                  { "k": "plain", "v": 15 },
+                  { "k": "plain", "v": 19 },
+                  { "k": "plain", "v": 8 },
+                  { "k": "plain", "v": 12 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 5 },
+                  { "k": "plain", "v": 11.5 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 7 },
+                  { "k": "plain", "v": 16.1 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 8 },
+                  { "k": "plain", "v": 18.4 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 10 },
+                  { "k": "plain", "v": 23 }
+                ]
+              }
+            ],
+            [
+              "Medium",
+              {
+                "t": "{0} to {1}, and {2} to {3} for technology",
+                "v": [
+                  { "k": "plain", "v": 24 },
+                  { "k": "plain", "v": 34 },
+                  { "k": "plain", "v": 12 },
+                  { "k": "plain", "v": 20 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 26.2 },
+                  { "k": "plain", "v": 89.1 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 36.6 },
+                  { "k": "plain", "v": 124.8 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 41.8 },
+                  { "k": "plain", "v": 142.6 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 52.3 },
+                  { "k": "plain", "v": 178.2 }
+                ]
+              }
+            ],
+            [
+              "Large",
+              {
+                "t": "{0} to {1}, and {2} to {3} for technology",
+                "v": [
+                  { "k": "plain", "v": 35 },
+                  { "k": "plain", "v": 48 },
+                  { "k": "plain", "v": 18 },
+                  { "k": "plain", "v": 30 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 98.7 },
+                  { "k": "plain", "v": 300 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 138.2 },
+                  { "k": "plain", "v": 420 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 157.9 },
+                  { "k": "plain", "v": 480 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 197.4 },
+                  { "k": "plain", "v": 600 }
+                ]
+              }
+            ]
+          ],
+          "text": 2
+        },
+        "supercharged": {
+          "head": ["Class", "Supercharged slots"],
+          "kinds": ["text", "plain"],
+          "note": "The same for a regular and a capital freighter of any size, all in the technology inventory.",
+          "rows": [
+            ["C", 1],
+            ["B", 2],
+            ["A", 3],
+            ["S", 4]
+          ]
+        },
+        "tries": {
+          "head": [
+            "Wealth",
+            "Half the players",
+            "Three in four",
+            "Nine in ten",
+            "99 in 100",
+            "On average"
+          ],
+          "kinds": ["text", "plain", "plain", "plain", "plain", "plain"],
+          "note": "Tries until a freighter comes at class S. Each try is a new roll, so the tries before do not bring it closer.",
+          "rows": [
+            ["Pirate", 14, 28, 45, 90, 20],
+            ["High", 35, 69, 114, 228, 50],
+            ["Medium", 69, 138, 230, 459, 100]
+          ]
+        }
+      },
+      "title": "Freighters"
+    },
+    "frigates": {
+      "fact": {
+        "t": "Buy one from the fleets of a system and keep looking: every new fleet brings new frigates. Class S needs four good traits on top of its own, at most {0}.",
+        "v": [{ "k": "share", "v": 0.09834496 }]
+      },
+      "numbers": {
+        "atMostS": { "k": "share", "v": 0.09834496 },
+        "combatS": { "k": "share", "v": 0.0253574373 },
+        "extra": { "k": "share", "v": 0.56 },
+        "fleet": { "k": "plain", "v": 30 },
+        "levels": "4, 8, 15, 25, 30, 35, 40, 45, 50, 55",
+        "organicS": { "k": "share", "v": 0.09834496 },
+        "raiderS": { "k": "share", "v": 0.03549986154 },
+        "sale": { "k": "share", "v": 0.6 }
+      },
+      "tables": {
+        "kinds": {
+          "head": ["Frigate", "Where you get it"],
+          "kinds": ["text", "text"],
+          "note": "Every frigate type of the game.",
+          "rows": [
+            ["Combat", "Bought from the fleets of a system"],
+            ["Exploration", "Bought from the fleets of a system"],
+            ["Industrial", "Bought from the fleets of a system"],
+            ["Trade", "Bought from the fleets of a system"],
+            ["Support", "Bought from the fleets of a system"],
+            ["Raider", "Bought after a dreadnought battle"],
+            ["Organic", "Called from a space whale with a Dream Aerial"],
+            ["Stealth Reconnaissance", "A reward of Expedition 2"],
+            ["Organic Vessel", "A reward of Expedition 7"],
+            ["Cursed", "A reward of Expedition 13"]
+          ],
+          "text": 2
+        },
+        "odds": {
+          "head": ["Frigate", "C", "B", "A", "S"],
+          "kinds": ["text", "share", "share", "share", "share"],
+          "note": "The letter a frigate has when it appears, by its type.",
+          "rows": [
+            ["Organic", 0.6864, 0.137984, 0.07727104, 0.09834496],
+            [
+              "Raider",
+              0.8015001303,
+              0.1266555823,
+              0.03634442587,
+              0.03549986154
+            ],
+            [
+              "Exploration",
+              0.8289199613,
+              0.1153923709,
+              0.02924783865,
+              0.02643982906
+            ],
+            [
+              "Industrial",
+              0.8289199613,
+              0.1153923709,
+              0.02924783865,
+              0.02643982906
+            ],
+            ["Trade", 0.8289199613, 0.1153923709, 0.02924783865, 0.02643982906],
+            [
+              "Support",
+              0.830820204,
+              0.1145573613,
+              0.02877329556,
+              0.02584913921
+            ],
+            ["Combat", 0.8325810415, 0.1137136246, 0.02834789666, 0.0253574373]
+          ]
+        },
+        "prices": {
+          "head": ["Frigate", "Class C", "Class B", "Class A", "Class S"],
+          "kinds": ["text", "text", "text", "text", "text"],
+          "note": "Price in millions of units.",
+          "rows": [
+            [
+              "Combat, Exploration, Industrial, Trade, Support",
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 1.5 },
+                  { "k": "plain", "v": 2.5 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 3 },
+                  { "k": "plain", "v": 5 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 5.3 },
+                  { "k": "plain", "v": 8.8 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 7.5 },
+                  { "k": "plain", "v": 12.5 }
+                ]
+              }
+            ],
+            [
+              "Raider",
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 4.5 },
+                  { "k": "plain", "v": 5.5 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 9 },
+                  { "k": "plain", "v": 11 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 15.8 },
+                  { "k": "plain", "v": 19.3 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 22.5 },
+                  { "k": "plain", "v": 27.5 }
+                ]
+              }
+            ],
+            [
+              "Organic",
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 7.5 },
+                  { "k": "plain", "v": 12.5 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 15 },
+                  { "k": "plain", "v": 25 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 26.3 },
+                  { "k": "plain", "v": 43.8 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 37.5 },
+                  { "k": "plain", "v": 62.5 }
+                ]
+              }
+            ]
+          ],
+          "text": 1
+        },
+        "starts": {
+          "head": ["Frigate", "Combat", "Exploration", "Industrial", "Trade"],
+          "kinds": ["text", "text", "text", "text", "text"],
+          "note": "Main stats as a frigate appears, before its traits and levels.",
+          "rows": [
+            [
+              "Combat",
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 1 },
+                  { "k": "plain", "v": 5 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 0 },
+                  { "k": "plain", "v": 2 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 0 },
+                  { "k": "plain", "v": 4 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 0 },
+                  { "k": "plain", "v": 2 }
+                ]
+              }
+            ],
+            [
+              "Exploration",
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 0 },
+                  { "k": "plain", "v": 2 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 1 },
+                  { "k": "plain", "v": 5 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 0 },
+                  { "k": "plain", "v": 2 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 0 },
+                  { "k": "plain", "v": 4 }
+                ]
+              }
+            ],
+            [
+              "Industrial",
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 0 },
+                  { "k": "plain", "v": 3 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 0 },
+                  { "k": "plain", "v": 1 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 1 },
+                  { "k": "plain", "v": 5 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 0 },
+                  { "k": "plain", "v": 3 }
+                ]
+              }
+            ],
+            [
+              "Trade",
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 0 },
+                  { "k": "plain", "v": 1 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 0 },
+                  { "k": "plain", "v": 2 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 0 },
+                  { "k": "plain", "v": 4 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 1 },
+                  { "k": "plain", "v": 5 }
+                ]
+              }
+            ],
+            [
+              "Support",
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 0 },
+                  { "k": "plain", "v": 4 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 0 },
+                  { "k": "plain", "v": 4 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 0 },
+                  { "k": "plain", "v": 4 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 0 },
+                  { "k": "plain", "v": 4 }
+                ]
+              }
+            ],
+            [
+              "Raider",
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 1 },
+                  { "k": "plain", "v": 5 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 0 },
+                  { "k": "plain", "v": 2 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 0 },
+                  { "k": "plain", "v": 4 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 0 },
+                  { "k": "plain", "v": 2 }
+                ]
+              }
+            ],
+            [
+              "Organic",
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 1 },
+                  { "k": "plain", "v": 3 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 1 },
+                  { "k": "plain", "v": 3 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 1 },
+                  { "k": "plain", "v": 3 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 1 },
+                  { "k": "plain", "v": 3 }
+                ]
+              }
+            ]
+          ],
+          "text": 1
+        },
+        "strengths": {
+          "head": ["Trait", "Small", "Medium", "Large"],
+          "kinds": ["text", "text", "text", "text"],
+          "note": "What a trait adds to a main stat. A stat stays between -10 and 50.",
+          "rows": [
+            ["Primary, the trait of its type", "+15", "+15", "+15"],
+            ["Secondary, good", "+2", "+4", "+6"],
+            ["Tertiary, good", "+1", "+2", "+3"],
+            ["Bad", "-2", "-4", "-6"]
+          ],
+          "text": 1
+        }
+      },
+      "title": "Frigates"
+    },
+    "galaxies": {
+      "fact": {
+        "t": "Search the galaxy you are in, unless you hunt Sentinel multitools or Interceptors: a Harsh galaxy nearly doubles both. {0} of the 256 galaxies are Normal.",
+        "v": [{ "k": "share", "v": 0.69921875 }]
+      },
+      "numbers": {
+        "empty": { "k": "about", "v": 26 },
+        "harsh": { "k": "about", "v": 26 },
+        "longest": { "k": "about", "v": 254 },
+        "lush": { "k": "about", "v": 25 },
+        "normal": { "k": "about", "v": 179 },
+        "voxels": "1056"
+      },
+      "tables": {
+        "ring": {
+          "head": [
+            "Type",
+            "Galaxies",
+            "Share",
+            "Jumps from Euclid to the nearest"
+          ],
+          "kinds": ["text", "count", "share", "text"],
+          "note": "All 256 galaxies. A jump through the core leads to the next galaxy.",
+          "rows": [
+            ["Lush", 25, 0.09765625, "9"],
+            ["Harsh", 26, 0.1015625, "2"],
+            ["Empty", 26, 0.1015625, "6"],
+            ["Normal", 179, 0.69921875, "1"]
+          ]
+        },
+        "worlds": {
+          "head": ["Stat", "Normal", "Harsh", "Empty", "Lush"],
+          "kinds": ["text", "share", "share", "share", "share"],
+          "note": "The mean of several galaxies of each type, each counted once. Tools and wrecks as shares of their own kind, staffs left out.",
+          "rows": [
+            [
+              "Lush worlds",
+              0.1572563608,
+              0.1579901197,
+              0.08857214565,
+              0.2800713662
+            ],
+            [
+              "Weird worlds",
+              0.09319663067,
+              0.09152439555,
+              0.1535267865,
+              0.1164794824
+            ],
+            [
+              "Red, Green, and Blue worlds",
+              0.05185652879,
+              0.04918105448,
+              0.08971665256,
+              0.0803377425
+            ],
+            [
+              "Dead worlds",
+              0.08781433771,
+              0.09027542026,
+              0.1094934638,
+              0.04877426674
+            ],
+            [
+              "Planets with water",
+              0.3821400556,
+              0.3817182858,
+              0.3401336681,
+              0.4128206411
+            ],
+            [
+              "Planets with no creature",
+              0.1418826983,
+              0.1450079351,
+              0.1657019757,
+              0.106454356
+            ],
+            [
+              "Dissonant planets",
+              0.05291419771,
+              0.09715331421,
+              0.05399440754,
+              0.05233434196
+            ],
+            [
+              "Aggressive Sentinels",
+              0.08662030978,
+              0.2339810198,
+              0.0845407339,
+              0.08504481356
+            ],
+            [
+              "Sentinel tools",
+              0.01086983817,
+              0.02196823113,
+              0.011777633,
+              0.01064151464
+            ],
+            [
+              "Interceptors",
+              0.02299368843,
+              0.04586065454,
+              0.02269688169,
+              0.02237032777
+            ]
+          ]
+        }
+      },
+      "title": "Galaxies"
+    },
+    "interceptors": {
+      "fact": {
+        "t": "Claim a crashed Sentinel ship on a dissonant planet that is no Waterworld, Dead, or Weird world: {0} of planets hold them, one form per system.",
+        "v": [{ "k": "share", "v": 0.03643230883 }]
+      },
+      "numbers": {
+        "adjacent": { "k": "share", "v": 0.01172690764 },
+        "highS": { "k": "share", "v": 0.01981484663 },
+        "lowS": { "k": "share", "v": 0 },
+        "median": { "k": "about", "v": 446 },
+        "ofDissonant": { "k": "share", "v": 0.6803892743 },
+        "otherAdjacent": { "k": "share", "v": 0.008713826436 },
+        "otherSquare": { "k": "share", "v": 0.07577237757 },
+        "pirateS": { "k": "share", "v": 0.05017364069 },
+        "planets": { "k": "share", "v": 0.03643230883 },
+        "square": { "k": "share", "v": 0.08396456697 },
+        "wrecks": { "k": "share", "v": 0.0275417408 }
+      },
+      "tables": {
+        "biomes": {
+          "head": ["Type", "Dissonant", "Holds Interceptors"],
+          "kinds": ["text", "share", "share"],
+          "note": "Planets and moons of Euclid.",
+          "rows": [
+            ["Gas Giant", 0, 0],
+            ["Frozen", 0.04411514401, 0.03804108588],
+            ["Scorched", 0.04523152717, 0.03903636669],
+            ["Radioactive", 0.04656343668, 0.04106918977],
+            ["Lava", 0.04662966489, 0.03852197964],
+            ["Lush", 0.04666630406, 0.04249559323],
+            ["Toxic", 0.04836885647, 0.04157771445],
+            ["Swamp", 0.05117774697, 0.04545338923],
+            ["Barren", 0.05457610298, 0.04815856187],
+            ["Weird", 0.05567259264, 0],
+            ["Dead", 0.06050283583, 0],
+            ["Green", 0.1131643446, 0.09340841406],
+            ["Blue", 0.1164200514, 0.09731167459],
+            ["Red", 0.1186359212, 0.08905259173],
+            ["Waterworld", 0.2304297261, 0]
+          ]
+        },
+        "compare": {
+          "head": [
+            "Ship",
+            "Adjacent",
+            "Figure, no square",
+            "Square",
+            "Square, of adjacent"
+          ],
+          "kinds": ["text", "share", "share", "share", "share"],
+          "note": "Wrecks in Euclid, with the four slots each holds at class S.",
+          "rows": [
+            [
+              "Other wrecks",
+              0.008713826436,
+              0.00805355909,
+              0.0006602673468,
+              0.07577237757
+            ],
+            [
+              "Interceptor",
+              0.01172690764,
+              0.01074226291,
+              0.0009846447214,
+              0.08396456697
+            ]
+          ]
+        },
+        "wealth": {
+          "head": ["Wealth", "Of Interceptors", "Class S", "Adjacent"],
+          "kinds": ["text", "share", "share", "share"],
+          "note": "Interceptor wrecks in Euclid, with the four slots each holds at class S.",
+          "rows": [
+            ["Low", 0.3514712524, 0, 0.01174495526],
+            ["Medium", 0.4994739081, 0.01005913613, 0.01172058507],
+            ["High", 0.07257774326, 0.01981484663, 0.01171693282],
+            ["Pirate", 0.07647709622, 0.05017364069, 0.0116947239]
+          ]
+        }
+      },
+      "title": "Interceptors"
+    },
+    "living-ships": {
+      "fact": "Carry a Void Egg into space: a living ship hails you, and five missions later you claim it on a far planet, always class S. Each more ship costs another egg.",
+      "numbers": {
+        "height": { "k": "plain", "v": 3 },
+        "nanites": { "k": "plain", "v": 10000 },
+        "supercharged": { "k": "plain", "v": 4 },
+        "wait": { "k": "plain", "v": 22 },
+        "width": { "k": "plain", "v": 10 }
+      },
+      "tables": {
+        "slots": {
+          "head": ["Inventory", "Slots", "Most after upgrades"],
+          "kinds": ["text", "text", "text"],
+          "note": "The game's table for living ships.",
+          "rows": [
+            ["General", "36", "120"],
+            ["Technology", "30", "60"],
+            ["Supercharged, in Technology", "4", "4"]
+          ],
+          "text": 3
+        },
+        "stats": {
+          "head": ["Stat", "Class S"],
+          "kinds": ["text", "text"],
+          "note": "Base stats of a living ship in the game's table, which holds class S only.",
+          "rows": [
+            ["Damage", "50 to 75"],
+            ["Shield", "15 to 38"],
+            ["Hyperdrive", "75 to 95"],
+            ["Manoeuvrability", "10 to 15"]
+          ],
+          "text": 2
+        }
+      },
+      "title": "Living ships"
+    },
+    "multitool-classes": {
+      "fact": {
+        "t": "Find a class S multitool in a medium, high, or pirate wealth system, never at low wealth. Pirate systems hold the most, {0}, but weak ones.",
+        "v": [{ "k": "share", "v": 0.05001922557 }]
+      },
+      "numbers": {
+        "highC": { "k": "share", "v": 0.3000548603 },
+        "highS": { "k": "share", "v": 0.02000689298 },
+        "lowS": { "k": "share", "v": 0 },
+        "mediumS": { "k": "share", "v": 0.01000469232 },
+        "pirateC": { "k": "share", "v": 0.8500233027 },
+        "pirateS": { "k": "share", "v": 0.05001922557 }
+      },
+      "tables": {
+        "peaks": {
+          "head": ["Wealth", "Median S tools", "Most S tools", "No S tool"],
+          "kinds": ["text", "median", "count", "share"],
+          "note": "S tools of a system, staffs included, in Euclid.",
+          "rows": [
+            ["Low", 0, 0, 1],
+            ["Medium", 2690, 34256, 0.1694772769],
+            ["High", 5415, 65601, 0.1759525418],
+            ["Pirate", 12757, 161289, 0]
+          ]
+        },
+        "sources": {
+          "head": ["Source", "C", "B", "A", "S"],
+          "kinds": ["text", "share", "share", "share", "share"],
+          "note": "Tools as you find them, in Euclid, by class. Staffs left out.",
+          "rows": [
+            [
+              "Space station",
+              0.5132492374,
+              0.3273638113,
+              0.1480910305,
+              0.01129592079
+            ],
+            ["Shop", 0.5279702299, 0.3174476397, 0.1422303378, 0.01235179257],
+            [
+              "Monolith",
+              0.5304374435,
+              0.3165324383,
+              0.1409620699,
+              0.01206804825
+            ],
+            [
+              "Sentinel pillar",
+              0.534222017,
+              0.3136340337,
+              0.1395073767,
+              0.01263657265
+            ],
+            [
+              "Harmonic camp",
+              0.5423909822,
+              0.3132585031,
+              0.134104859,
+              0.01024565568
+            ]
+          ]
+        },
+        "staffs": {
+          "head": ["Wealth", "C", "B", "A", "S"],
+          "kinds": ["text", "share", "share", "share", "share"],
+          "note": "Tools as you find them, in Euclid, by class.",
+          "rows": [
+            ["Low", 0.5999952679, 0.2999905855, 0.1000141467, 0],
+            ["Medium", 0.4899754587, 0.3500305225, 0.1499908031, 0.01000321577],
+            ["High", 0.3000368376, 0.4000088871, 0.2799574446, 0.01999683074],
+            [
+              "Pirate",
+              0.8499852354,
+              0.04998044318,
+              0.04998612039,
+              0.05004820098
+            ]
+          ]
+        },
+        "wealth": {
+          "head": ["Wealth", "C", "B", "A", "S"],
+          "kinds": ["text", "share", "share", "share", "share"],
+          "note": "Tools as you find them, in Euclid, by class. Staffs left out.",
+          "rows": [
+            ["Low", 0.6000441167, 0.2999581859, 0.09999769743, 0],
+            ["Medium", 0.4899930476, 0.3500033447, 0.1499989154, 0.01000469232],
+            ["High", 0.3000548603, 0.3999675371, 0.2799707097, 0.02000689298],
+            ["Pirate", 0.8500233027, 0.04998720702, 0.0499702647, 0.05001922557]
+          ]
+        }
+      },
+      "title": "Multitool classes"
+    },
+    "multitool-stats": {
+      "fact": "At class S, a Sentinel or a staff reaches 50% damage, an Atlantid 50% mining, and an Experimental or Royal 100% scanner, and staffs run 28.8% to 50.0% damage.",
+      "numbers": {},
+      "tables": {},
+      "title": "Multitool stats"
+    },
+    "multitool-types": {
+      "fact": {
+        "t": "Most multitools you find are pistols or rifles, {0}, beside Atlantid, Sentinel, Experimental, Alien, and Royal ones. A Royal is {1}.",
+        "v": [
+          { "k": "share", "v": 0.6774604684 },
+          { "k": "oneIn", "v": 17260.60326 }
+        ]
+      },
+      "numbers": {
+        "plainShare": { "k": "share", "v": 0.6774604684 },
+        "rareCount": { "k": "about", "v": 32082 },
+        "rareName": "Royal",
+        "rareOneIn": { "k": "oneIn", "v": 17260.60326 },
+        "systems": { "k": "about", "v": 63360 },
+        "tools": { "k": "about", "v": 553762107 }
+      },
+      "tables": {
+        "sources": {
+          "head": ["Source", "Share", "Pays mostly"],
+          "kinds": ["text", "share", "text"],
+          "note": "Each tool as you find it, in Euclid.",
+          "rows": [
+            [
+              "Space station",
+              0.0001721791715,
+              {
+                "t": "Rifle {0}, Pistol {1}, Experimental {2}, Alien {3}",
+                "v": [
+                  { "k": "share", "v": 0.5716562372 },
+                  { "k": "share", "v": 0.3965501044 },
+                  { "k": "share", "v": 0.01598194072 },
+                  { "k": "share", "v": 0.01581171771 }
+                ]
+              }
+            ],
+            [
+              "Sentinel pillar",
+              0.0003865913994,
+              {
+                "t": "Rifle {0}, Pistol {1}, Royal {2}, Alien {3}",
+                "v": [
+                  { "k": "share", "v": 0.4862781998 },
+                  { "k": "share", "v": 0.3370763527 },
+                  { "k": "share", "v": 0.1498621095 },
+                  { "k": "share", "v": 0.01356866211 }
+                ]
+              }
+            ],
+            [
+              "Harmonic camp",
+              0.01173776399,
+              {
+                "t": "Sentinel, pistol {0}, Sentinel, rifle {1}",
+                "v": [
+                  { "k": "share", "v": 0.5043187684 },
+                  { "k": "share", "v": 0.4956812316 }
+                ]
+              }
+            ],
+            [
+              "Monolith",
+              0.2878966108,
+              {
+                "t": "Atlantid, plain {0}, Atlantid, blue {1}, Atlantid, yellow {2}",
+                "v": [
+                  { "k": "share", "v": 0.3360825931 },
+                  { "k": "share", "v": 0.3329499699 },
+                  { "k": "share", "v": 0.330967437 }
+                ]
+              }
+            ],
+            [
+              "Shop",
+              0.6998068546,
+              {
+                "t": "Rifle {0}, Pistol {1}, Alien {2}, Experimental {3}",
+                "v": [
+                  { "k": "share", "v": 0.5696159341 },
+                  { "k": "share", "v": 0.3977587882 },
+                  { "k": "share", "v": 0.01663025543 },
+                  { "k": "share", "v": 0.0159950223 }
+                ]
+              }
+            ]
+          ]
+        },
+        "types": {
+          "head": [
+            "Type",
+            "Share",
+            "Class C",
+            "Class B",
+            "Class A",
+            "Class S",
+            "Adjacent"
+          ],
+          "kinds": [
+            "text",
+            "share",
+            "share",
+            "share",
+            "share",
+            "share",
+            "share"
+          ],
+          "note": "Each tool as you find it, in Euclid.",
+          "rows": [
+            [
+              "Royal",
+              0.00005793540265,
+              0.09668543564,
+              0.07593126843,
+              0.7744005757,
+              0.05298272024,
+              0.006820639905
+            ],
+            [
+              "Sentinel, rifle",
+              0.005818189308,
+              0.5390382809,
+              0.3148431075,
+              0.135660695,
+              0.01045791659,
+              0.01254247091
+            ],
+            [
+              "Sentinel, pistol",
+              0.005919574677,
+              0.5456862614,
+              0.3117010384,
+              0.13257567,
+              0.01003703019,
+              0.01254760307
+            ],
+            [
+              "Experimental",
+              0.01120128668,
+              0.5250426985,
+              0.3179653116,
+              0.1443393031,
+              0.01265268685,
+              0.006433624094
+            ],
+            [
+              "Alien",
+              0.01164593472,
+              0.5381136255,
+              0.3129657787,
+              0.1367879276,
+              0.01213266816,
+              0.006687666576
+            ],
+            [
+              "Atlantid, yellow",
+              0.09528440339,
+              0.528790314,
+              0.3171191225,
+              0.1418868805,
+              0.01220368302,
+              0.01069320456
+            ],
+            [
+              "Atlantid, blue",
+              0.09585516792,
+              0.5325627804,
+              0.3154666745,
+              0.1399088736,
+              0.01206167149,
+              0.01068466213
+            ],
+            [
+              "Atlantid, plain",
+              0.09675703951,
+              0.5299539771,
+              0.3170105133,
+              0.1410947145,
+              0.01194079515,
+              0.0162299523
+            ],
+            [
+              "Pistol",
+              0.2785529149,
+              0.5295743266,
+              0.3163239178,
+              0.14180475,
+              0.01229700566,
+              0.01262423309
+            ],
+            [
+              "Rifle",
+              0.3989075535,
+              0.5266985215,
+              0.3183842936,
+              0.1425352679,
+              0.01238191705,
+              0.01286365668
+            ]
+          ]
+        },
+        "wealth": {
+          "head": [
+            "Wealth",
+            "Rifle",
+            "Pistol",
+            "Atlantid",
+            "Sentinel",
+            "Experimental",
+            "Alien",
+            "Royal"
+          ],
+          "kinds": [
+            "text",
+            "share",
+            "share",
+            "share",
+            "share",
+            "share",
+            "share",
+            "share"
+          ],
+          "note": "Share of tools of each type, in Euclid. Staffs left out.",
+          "rows": [
+            [
+              "Low",
+              0.3804781763,
+              0.2706407247,
+              0.3063877451,
+              0.01917138911,
+              0.01148885889,
+              0.01177180412,
+              0.00006130174258
+            ],
+            [
+              "Medium",
+              0.404560205,
+              0.2806001258,
+              0.2822387669,
+              0.009626291342,
+              0.01129219064,
+              0.01162631552,
+              0.00005610471851
+            ],
+            [
+              "High",
+              0.4034145035,
+              0.2815953568,
+              0.2838305347,
+              0.009735809954,
+              0.009923445152,
+              0.01144367632,
+              0.0000566737055
+            ],
+            [
+              "Pirate",
+              0.4005874975,
+              0.2807937271,
+              0.2856627664,
+              0.01007942199,
+              0.01113914394,
+              0.01167386839,
+              0.00006357462102
+            ]
+          ]
+        }
+      },
+      "title": "Multitool types"
+    },
+    "multitool-upgrades": {
+      "fact": "Find a multitool at S for damage: an Alien or Experimental upgraded to S always lands at the floor of its damage, and an Atlantid's colour tells you where.",
+      "numbers": {},
+      "tables": {},
+      "title": "How to upgrade a multitool"
+    },
+    "organic-frigates": {
+      "fact": "Build a Dream Aerial and call a cosmic whale: your answers in the first whale's dream pick the kind of organic frigate it gives.",
+      "numbers": {
+        "expeditions": { "k": "plain", "v": 3 },
+        "fleet": { "k": "plain", "v": 30 },
+        "frigates": { "k": "plain", "v": 3 },
+        "questions": { "k": "plain", "v": 9 }
+      },
+      "tables": {
+        "dream": {
+          "head": ["The dream shows", "You answer", "It raises"],
+          "kinds": ["text", "text", "text"],
+          "note": "The first whale's dream: the answers in the game's words, the scenes shortened. Each answer raises its count by one.",
+          "rows": [
+            ["Strange visions manifest in my mind...", "Look", "Nothing"],
+            ["", "Feel", "Nothing"],
+            ["", "Move", "Nothing"],
+            [
+              "Three worlds invite me closer. Only one planet can be reached. I dive towards...",
+              "A bustling alien metropolis",
+              "Trade"
+            ],
+            ["", "Indium-veined mountains", "Industrial"],
+            ["", "A megafauna ecosystem", "Exploration"],
+            [
+              "A heat-scorched desert, and a firestorm approaches...",
+              "Patiently wait and refuel",
+              "Support"
+            ],
+            ["", "Gather Storm Crystals", "Industrial"],
+            ["", "Leave this hostile world", "Support (a Speed answer)"],
+            [
+              "My capital ship's systems are failing, and pirates will likely strike at any moment...",
+              "Conserve power",
+              "Support"
+            ],
+            ["", "Divert power to hyperdrive", "Support (a Speed answer)"],
+            ["", "Signal authorities for help", "Trade"],
+            [
+              "I spend a day training with and learning the customs of the...",
+              "Gek",
+              "Trade"
+            ],
+            ["", "Korvax", "Exploration"],
+            ["", "Vy'keen", "Combat"],
+            [
+              "A derelict freighter, its ceiling hung with egg sacs, and I am alone.",
+              "Extract a sac to study",
+              "Exploration"
+            ],
+            ["", "Shoot the sacs", "Combat"],
+            ["", "Make a tactical exit", "Support (a Speed answer)"],
+            [
+              "A pilot adrift with a dry fuel tank, and an outlaw makes to flee...",
+              "Gift the pilot spare fuel",
+              "Support"
+            ],
+            ["", "Mine fresh tritium", "Industrial"],
+            ["", "Seize the outlaw's fuel", "Combat"],
+            [
+              "\"Surrender your cargo, or die\": a better-armed starship...",
+              "Negotiate a deal",
+              "Trade"
+            ],
+            ["", "Shoot before they do", "Combat"],
+            ["", "Outmanoeuvre them and flee", "Support (a Speed answer)"],
+            [
+              "A breathtaking planet of grazing herds and caverns of wealth. I could linger, or leave...",
+              "Discover every species",
+              "Exploration"
+            ],
+            ["", "Wring out every resource", "Industrial"],
+            ["", "Pause only to refuel", "Support"]
+          ],
+          "text": 3
+        }
+      },
+      "title": "Organic frigates"
+    },
+    "races": {
+      "fact": "Gek, Korvax, or Vy'keen matters for Atlantid multitools only, which all come from Korvax systems. Otherwise the three races pay alike.",
+      "numbers": {
+        "gekKept": { "k": "about", "v": 295268 },
+        "korvax": { "k": "share", "v": 1 },
+        "korvaxKept": { "k": "about", "v": 304520 },
+        "systems": { "k": "about", "v": 63360 },
+        "uncharted": { "k": "about", "v": 9333 },
+        "unchartedShips": { "k": "about", "v": 0 },
+        "vykeenKept": { "k": "about", "v": 295234 }
+      },
+      "tables": {
+        "finds": {
+          "head": [
+            "Population",
+            "Tools in a system",
+            "Wrecks in a system",
+            "Class S tools",
+            "Adjacent tools"
+          ],
+          "kinds": ["text", "median", "median", "share", "share"],
+          "note": "Systems of Euclid.",
+          "rows": [
+            ["Uncharted", 0, 0, null, null],
+            ["Vy'keen", 295234, 4241, 0.01191612918, 0.01383214697],
+            ["Gek", 295268, 4216, 0.01181609044, 0.01391999061],
+            ["Korvax", 304520, 4230, 0.01183535504, 0.01395085658]
+          ]
+        },
+        "spots": {
+          "head": [
+            "Population",
+            "Shop",
+            "Sentinel pillar",
+            "Monolith",
+            "Harmonic camp"
+          ],
+          "kinds": ["text", "median", "median", "median", "median"],
+          "note": "Medians per planet in Euclid.",
+          "rows": [
+            ["Uncharted", 0, 0, 0, 0],
+            ["Gek", 894, 212, 0, 0],
+            ["Korvax", 1070, 212, 1333, 0],
+            ["Vy'keen", 1088, 212, 0, 0]
+          ]
+        },
+        "types": {
+          "head": ["Type", "Gek", "Vy'keen", "Korvax"],
+          "kinds": ["text", "share", "share", "share"],
+          "note": "Share of each population's tools at their own place, staffs left out, in Euclid.",
+          "rows": [
+            ["Atlantid, plain", 0, 0, 0.1836212079],
+            ["Atlantid, blue", 0, 0, 0.1819096761],
+            ["Atlantid, yellow", 0, 0, 0.1808265046],
+            ["Royal", 0.00008505619022, 0.00007854357995, 0.00003661119596],
+            ["Sentinel, rifle", 0.008291740085, 0.007988998385, 0.003738100259],
+            [
+              "Sentinel, pistol",
+              0.008436495939,
+              0.008212899906,
+              0.003763804319
+            ],
+            ["Experimental", 0.01571686453, 0.01535092936, 0.007317295546],
+            ["Alien", 0.01626018879, 0.01688057002, 0.007215436152],
+            ["Pistol", 0.3893838796, 0.3920978296, 0.1777937878],
+            ["Rifle", 0.5618257748, 0.5593902292, 0.253777576]
+          ]
+        }
+      },
+      "title": "Races"
+    },
+    "sentinel-capital-ship": {
+      "fact": "No: at the top wanted level the Sentinels send a capital ship you can destroy for a Carrier AI Fragment, but it never surrenders and no one hands it to you.",
+      "numbers": {},
+      "tables": {},
+      "title": "Sentinel capital ship"
+    },
+    "sentinels-and-dissonance": {
+      "fact": {
+        "t": "Dissonance lies on {0} of planets. Look on Red, Green, and Blue worlds and on moons: a dissonant Waterworld holds no Interceptor and no Sentinel multitool.",
+        "v": [{ "k": "share", "v": 0.05354627153 }]
+      },
+      "numbers": {
+        "aggressive": { "k": "share", "v": 0.08680813314 },
+        "dissonant": { "k": "share", "v": 0.05354627153 },
+        "harshAggressive": { "k": "share", "v": 0.2365608413 },
+        "harshDissonant": { "k": "share", "v": 0.09720327402 },
+        "high": { "k": "share", "v": 0.3868459908 },
+        "low": { "k": "share", "v": 0.526345876 },
+        "medium": { "k": "share", "v": 0.04878096613 },
+        "moon": { "k": "share", "v": 0.08397960971 },
+        "red": { "k": "share", "v": 0.1186359212 },
+        "water": { "k": "share", "v": 0.2304297261 }
+      },
+      "tables": {
+        "biomes": {
+          "head": ["Type", "Dissonant", "Low", "High", "Aggressive"],
+          "kinds": ["text", "share", "share", "share", "share"],
+          "note": "Planets and moons of Euclid.",
+          "rows": [
+            ["Gas Giant", 0, 0.5874842582, 0.4125157418, 0],
+            [
+              "Frozen",
+              0.04411514401,
+              0.5259782718,
+              0.3954918313,
+              0.07852989691
+            ],
+            [
+              "Scorched",
+              0.04523152717,
+              0.5258400542,
+              0.3950811637,
+              0.0790787821
+            ],
+            [
+              "Radioactive",
+              0.04656343668,
+              0.531508843,
+              0.3926085742,
+              0.07588258278
+            ],
+            ["Lava", 0.04662966489, 0.5171039966, 0.3889750437, 0.09392095975],
+            ["Lush", 0.04666630406, 0.5196600867, 0.3837238128, 0.09661610057],
+            ["Toxic", 0.04836885647, 0.5278225284, 0.3952423396, 0.07693513195],
+            ["Swamp", 0.05117774697, 0.5174129264, 0.3875006584, 0.09508641522],
+            [
+              "Barren",
+              0.05457610298,
+              0.5169578001,
+              0.3893062084,
+              0.09373599155
+            ],
+            ["Weird", 0.05567259264, 0.5249552038, 0.3785440515, 0.09650074472],
+            ["Dead", 0.06050283583, 0.5265462233, 0.3806034553, 0.09285032144],
+            ["Green", 0.1131643446, 0.5417201246, 0.3611806388, 0.09709923664],
+            ["Blue", 0.1164200514, 0.5589071518, 0.3501297106, 0.09096313765],
+            ["Red", 0.1186359212, 0.5599196483, 0.3457367789, 0.09434357281],
+            [
+              "Waterworld",
+              0.2304297261,
+              0.6140854605,
+              0.3132495051,
+              0.07266503436
+            ]
+          ]
+        },
+        "galaxies": {
+          "head": ["Galaxy", "Dissonant", "Low", "High", "Aggressive"],
+          "kinds": ["text", "share", "share", "share", "share"],
+          "note": "Planets and moons of each galaxy.",
+          "rows": [
+            [
+              "Budullangr (empty)",
+              0.05282503149,
+              0.5258472669,
+              0.3892006649,
+              0.08495206817
+            ],
+            [
+              "Eissentam (lush)",
+              0.05326117803,
+              0.5285629134,
+              0.3846397963,
+              0.08679729035
+            ],
+            [
+              "Euclid (normal)",
+              0.05354627153,
+              0.526345876,
+              0.3868459908,
+              0.08680813314
+            ],
+            [
+              "Calypso (harsh)",
+              0.09720327402,
+              0.465562337,
+              0.2978768217,
+              0.2365608413
+            ]
+          ]
+        },
+        "sizes": {
+          "head": ["Size", "Dissonant", "Low", "High", "Aggressive"],
+          "kinds": ["text", "share", "share", "share", "share"],
+          "note": "Planets and moons of Euclid.",
+          "rows": [
+            [
+              "Moon, 15 km",
+              0.08397960971,
+              0.5379115187,
+              0.3708365398,
+              0.09125194153
+            ],
+            [
+              "Small, 65 km",
+              0.04808208502,
+              0.5243651631,
+              0.3902314261,
+              0.08540341075
+            ],
+            [
+              "Medium, 98 km",
+              0.04878096613,
+              0.5240439615,
+              0.3902704525,
+              0.08568558607
+            ],
+            [
+              "Large, 130 km",
+              0.04903072126,
+              0.524422275,
+              0.3878296968,
+              0.08774802825
+            ],
+            [
+              "Giant, 523 km",
+              0.007647073712,
+              0.5574736984,
+              0.4072657324,
+              0.03526056914
+            ]
+          ]
+        }
+      },
+      "title": "Sentinels and dissonance"
+    },
+    "ship-classes": {
+      "fact": {
+        "t": "Look for an Exotic: they are class S {0} of the time, against {1} for Haulers and {2} for Explorers, since one roll sets type and class.",
+        "v": [
+          { "k": "share", "v": 0.6658909063 },
+          { "k": "share", "v": 0.01003045889 },
+          { "k": "share", "v": 0.00006213472846 }
+        ]
+      },
+      "numbers": {
+        "exoticA": { "k": "share", "v": 0.2607720581 },
+        "exoticC": { "k": "share", "v": 0.0733370356 },
+        "exoticS": { "k": "share", "v": 0.6658909063 },
+        "explorerB": { "k": "share", "v": 0.6002401946 },
+        "explorerOfS": { "k": "share", "v": 0.001130362033 },
+        "explorerOneIn": { "k": "oneIn", "v": 16094.05923 },
+        "explorerS": { "k": "share", "v": 0.00006213472846 },
+        "fighterC": { "k": "share", "v": 0.8928864789 },
+        "haulerC": { "k": "share", "v": 0.9291539814 },
+        "haulerS": { "k": "share", "v": 0.01003045889 },
+        "highS": { "k": "share", "v": 0.01998993599 },
+        "interceptorS": { "k": "share", "v": 0.01029952723 },
+        "lowS": { "k": "share", "v": 0 },
+        "mediumS": { "k": "share", "v": 0.01000619837 },
+        "mediumShuttleS": { "k": "share", "v": 0.5879111085 },
+        "pirateC": { "k": "share", "v": 0.8500777535 },
+        "pirateFighterS": { "k": "share", "v": 0.3990307352 },
+        "pirateHaulerS": { "k": "share", "v": 0.4796620552 },
+        "pirateS": { "k": "share", "v": 0.04997276805 },
+        "shuttleC": { "k": "share", "v": 0.0108407228 },
+        "shuttleS": { "k": "share", "v": 0.01701264867 }
+      },
+      "tables": {
+        "classBands": {
+          "head": ["Wealth", "C", "B", "A", "S"],
+          "kinds": ["text", "text", "text", "text", "text"],
+          "note": "Where each class lies on the roll.",
+          "rows": [
+            ["Low", "0 to 0.60", "0.60 to 0.90", "0.90 to 1", "never"],
+            [
+              "Medium",
+              "0 to 0.49",
+              "0.49 to 0.84",
+              "0.84 to 0.99",
+              "0.99 to 1"
+            ],
+            ["High", "0 to 0.30", "0.30 to 0.70", "0.70 to 0.98", "0.98 to 1"],
+            [
+              "Pirate",
+              "0 to 0.05, and 0.20 to 1",
+              "0.05 to 0.10",
+              "0.10 to 0.15",
+              "0.15 to 0.20"
+            ]
+          ]
+        },
+        "exotic": {
+          "head": ["Wealth", "C", "B", "A", "S"],
+          "kinds": ["text", "share", "share", "share", "share"],
+          "note": "Exotic wrecks in Euclid, by the class they lie at.",
+          "rows": [
+            ["Low", 0, 0, 1, 0],
+            ["Medium", 0, 0, 0, 1],
+            ["High", 0, 0, 0, 1],
+            ["Pirate", 1, 0, 0, 0]
+          ]
+        },
+        "hullBands": {
+          "head": [
+            "System",
+            "Hauler",
+            "Fighter",
+            "Explorer",
+            "Shuttle",
+            "Exotic"
+          ],
+          "kinds": ["text", "text", "text", "text", "text", "text"],
+          "note": "Where each ship type lies on the roll, before Solars and Interceptors.",
+          "rows": [
+            [
+              "Gek",
+              "0.00 to 0.33",
+              "0.33 to 0.50",
+              "0.50 to 0.66",
+              "0.66 to 0.997",
+              "0.997 to 1"
+            ],
+            [
+              "Vy'keen",
+              "0.00 to 0.17",
+              "0.17 to 0.50",
+              "0.50 to 0.66",
+              "0.66 to 0.997",
+              "0.997 to 1"
+            ],
+            [
+              "Korvax",
+              "0.00 to 0.17",
+              "0.17 to 0.33",
+              "0.33 to 0.66",
+              "0.66 to 0.997",
+              "0.997 to 1"
+            ],
+            [
+              "Uncharted",
+              "0.00 to 0.25",
+              "0.25 to 0.50",
+              "0.50 to 0.75",
+              "0.75 to 0.998",
+              "0.998 to 1"
+            ]
+          ]
+        },
+        "hulls": {
+          "head": ["Ship", "C", "B", "A", "S"],
+          "kinds": ["text", "share", "share", "share", "share"],
+          "note": "Wrecks in Euclid, by the class they lie at.",
+          "rows": [
+            [
+              "Shuttle",
+              0.0108407228,
+              0.5353930801,
+              0.4367535485,
+              0.01701264867
+            ],
+            ["Exotic", 0.0733370356, 0, 0.2607720581, 0.6658909063],
+            [
+              "Explorer",
+              0.3981293719,
+              0.6002401946,
+              0.001568298749,
+              0.00006213472846
+            ],
+            [
+              "Interceptor",
+              0.5423103781,
+              0.3130811325,
+              0.1343089622,
+              0.01029952723
+            ],
+            ["Solar", 0.6355332709, 0.1912962523, 0.1579766014, 0.01519387538],
+            [
+              "Fighter",
+              0.8928864789,
+              0.08147933683,
+              0.01705993716,
+              0.008574247089
+            ],
+            [
+              "Hauler",
+              0.9291539814,
+              0.03346697186,
+              0.02734858789,
+              0.01003045889
+            ]
+          ]
+        },
+        "mix": {
+          "head": [
+            "Wealth",
+            "Shuttle",
+            "Fighter",
+            "Hauler",
+            "Explorer",
+            "Solar",
+            "Interceptor",
+            "Exotic"
+          ],
+          "kinds": [
+            "text",
+            "share",
+            "share",
+            "share",
+            "share",
+            "share",
+            "share",
+            "share"
+          ],
+          "note": "Wrecks at class S in Euclid, by ship type.",
+          "rows": [
+            [
+              "Medium",
+              0.5879111085,
+              0.01906229258,
+              0.01066911566,
+              0.001691359358,
+              0.03394504525,
+              0.02417658075,
+              0.3225444979
+            ],
+            [
+              "High",
+              0.7327700662,
+              0.0241072784,
+              0.01326753218,
+              0.002038670666,
+              0.04204697879,
+              0.02434545597,
+              0.1614240177
+            ],
+            [
+              "Pirate",
+              0,
+              0.3990307352,
+              0.4796620552,
+              0.00006774878389,
+              0.09728849559,
+              0.02395096517,
+              0
+            ]
+          ]
+        },
+        "sources": {
+          "head": ["Source", "C", "B", "A", "S"],
+          "kinds": ["text", "share", "share", "share", "share"],
+          "note": "Wrecks in Euclid, by the class they lie at.",
+          "rows": [
+            [
+              "Crashed ship",
+              0.5336551416,
+              0.315427446,
+              0.1392058172,
+              0.01171159522
+            ],
+            [
+              "Sunken ship",
+              0.5388293521,
+              0.3111233847,
+              0.1377711893,
+              0.01227607394
+            ],
+            [
+              "Sentinel wreck",
+              0.5423103781,
+              0.3130811325,
+              0.1343089622,
+              0.01029952723
+            ]
+          ]
+        },
+        "wealth": {
+          "head": ["Wealth", "C", "B", "A", "S"],
+          "kinds": ["text", "share", "share", "share", "share"],
+          "note": "Wrecks in Euclid, by the class they lie at. Uncharted systems hold a wealth the map does not show.",
+          "rows": [
+            ["Low", 0.6000390232, 0.2998961777, 0.1000647991, 0],
+            ["Medium", 0.489922832, 0.3500558808, 0.1500150888, 0.01000619837],
+            ["High", 0.3001311377, 0.400083549, 0.2797953773, 0.01998993599],
+            [
+              "Pirate",
+              0.8500777535,
+              0.04997566478,
+              0.04997381367,
+              0.04997276805
+            ]
+          ]
+        }
+      },
+      "title": "Ship classes"
+    },
+    "ship-figures": {
+      "fact": {
+        "t": "Four adjacent supercharged slots on a ship most often form a corner, {0}. An upright line never fits, because a ship's grid is three rows tall.",
+        "v": [{ "k": "share", "v": 0.4172833693 }]
+      },
+      "numbers": {
+        "corner": { "k": "share", "v": 0.4172833693 },
+        "interceptorFlat": { "k": "share", "v": 0.08396456697 },
+        "line": { "k": "share", "v": 0.0866256905 },
+        "shuttleFlat": { "k": "share", "v": 0.07676786993 },
+        "t": { "k": "share", "v": 0.2089690394 }
+      },
+      "tables": {
+        "figures": {
+          "head": ["Figure", "Ordinary wrecks", "Interceptor"],
+          "kinds": ["text", "share", "share"],
+          "note": "Wrecks with adjacent slots at class S, in Euclid.",
+          "rows": [
+            ["Square", 0.07577237757, 0.08396456697],
+            ["Line", 0.08743114553, 0.06549341407],
+            ["Zigzag S", 0.1049033726, 0.1168635419],
+            ["Zigzag Z", 0.1052988286, 0.1163954408],
+            ["T", 0.2080119489, 0.2340796931],
+            ["Corner L", 0.2082790505, 0.1918203346],
+            ["Corner J", 0.2103032763, 0.1913830086]
+          ]
+        },
+        "turns": {
+          "head": [
+            "Figure",
+            "Shuttle",
+            "Fighter",
+            "Hauler",
+            "Explorer",
+            "Solar",
+            "Interceptor",
+            "Exotic",
+            "All wrecks"
+          ],
+          "kinds": [
+            "text",
+            "share",
+            "share",
+            "share",
+            "share",
+            "share",
+            "share",
+            "share",
+            "share"
+          ],
+          "marks": [
+            [
+              [0, 0],
+              [0, 1],
+              [1, 0],
+              [1, 1]
+            ],
+            [
+              [0, 0],
+              [0, 1],
+              [0, 2],
+              [0, 3]
+            ],
+            [
+              [0, 0],
+              [1, 0],
+              [2, 0],
+              [3, 0]
+            ],
+            [
+              [0, 0],
+              [0, 1],
+              [1, 1],
+              [1, 2]
+            ],
+            [
+              [0, 1],
+              [1, 0],
+              [1, 1],
+              [2, 0]
+            ],
+            [
+              [0, 1],
+              [0, 2],
+              [1, 0],
+              [1, 1]
+            ],
+            [
+              [0, 0],
+              [1, 0],
+              [1, 1],
+              [2, 1]
+            ],
+            [
+              [0, 1],
+              [1, 0],
+              [1, 1],
+              [1, 2]
+            ],
+            [
+              [0, 0],
+              [0, 1],
+              [0, 2],
+              [1, 1]
+            ],
+            [
+              [0, 0],
+              [1, 0],
+              [1, 1],
+              [2, 0]
+            ],
+            [
+              [0, 1],
+              [1, 0],
+              [1, 1],
+              [2, 1]
+            ],
+            [
+              [0, 0],
+              [1, 0],
+              [1, 1],
+              [1, 2]
+            ],
+            [
+              [0, 0],
+              [0, 1],
+              [0, 2],
+              [1, 2]
+            ],
+            [
+              [0, 0],
+              [0, 1],
+              [1, 0],
+              [2, 0]
+            ],
+            [
+              [0, 1],
+              [1, 1],
+              [2, 0],
+              [2, 1]
+            ],
+            [
+              [0, 2],
+              [1, 0],
+              [1, 1],
+              [1, 2]
+            ],
+            [
+              [0, 0],
+              [0, 1],
+              [0, 2],
+              [1, 0]
+            ],
+            [
+              [0, 0],
+              [0, 1],
+              [1, 1],
+              [2, 1]
+            ],
+            [
+              [0, 0],
+              [1, 0],
+              [2, 0],
+              [2, 1]
+            ]
+          ],
+          "note": "Wrecks with adjacent slots at class S, in Euclid.",
+          "rows": [
+            [
+              "",
+              0.07676786993,
+              0.07578230049,
+              0.07506846653,
+              0.07525686025,
+              0.07574058313,
+              0.08396456697,
+              0.07450624104,
+              0.07607315799
+            ],
+            ["", 0, 0, 0, 0, 0, 0, 0, 0],
+            [
+              "",
+              0.08802602967,
+              0.08680134443,
+              0.0871101651,
+              0.08752591396,
+              0.08814506001,
+              0.06549341407,
+              0.08685923854,
+              0.0866256905
+            ],
+            [
+              "",
+              0.03814367184,
+              0.03866716562,
+              0.03708706568,
+              0.03727858155,
+              0.03896170335,
+              0.042033299,
+              0.0400858969,
+              0.0380329263
+            ],
+            [
+              "",
+              0.06704586609,
+              0.06715988364,
+              0.06734362792,
+              0.06651142255,
+              0.06734081909,
+              0.07483024288,
+              0.06314959084,
+              0.06730957008
+            ],
+            [
+              "",
+              0.03867708115,
+              0.03799215271,
+              0.03851301542,
+              0.03728666772,
+              0.03734784335,
+              0.04180977619,
+              0.03690720162,
+              0.0382461005
+            ],
+            [
+              "",
+              0.0674354141,
+              0.06711292411,
+              0.06635668475,
+              0.06759770084,
+              0.06848671384,
+              0.07458566458,
+              0.06292594885,
+              0.0674601459
+            ],
+            [
+              "",
+              0.03630190169,
+              0.03731113176,
+              0.03704248347,
+              0.03842074995,
+              0.03771684083,
+              0.04240186826,
+              0.03622761319,
+              0.03742052235
+            ],
+            [
+              "",
+              0.03751199941,
+              0.03782627797,
+              0.03677312028,
+              0.03794466533,
+              0.03891893734,
+              0.04193617832,
+              0.04149880114,
+              0.03775079346
+            ],
+            [
+              "",
+              0.06661511006,
+              0.06658396257,
+              0.06709836934,
+              0.06591046275,
+              0.0664441692,
+              0.07477531744,
+              0.07036998471,
+              0.06686792163
+            ],
+            [
+              "",
+              0.06726349788,
+              0.06633453088,
+              0.06694937671,
+              0.06592217137,
+              0.06618883583,
+              0.07496632905,
+              0.06361046539,
+              0.066929802
+            ],
+            [
+              "",
+              0.03681770861,
+              0.03694502913,
+              0.03761220717,
+              0.0378379805,
+              0.03651854908,
+              0.02121524498,
+              0.03680448074,
+              0.0366474158
+            ],
+            [
+              "",
+              0.03808308,
+              0.03826651504,
+              0.03790460493,
+              0.03789306404,
+              0.03711777812,
+              0.02114033127,
+              0.04251701208,
+              0.03739309231
+            ],
+            [
+              "",
+              0.06540897148,
+              0.06591261605,
+              0.06702127102,
+              0.06621616034,
+              0.06570197037,
+              0.07500059405,
+              0.0667060972,
+              0.06640998309
+            ],
+            [
+              "",
+              0.06673920479,
+              0.06698618611,
+              0.0669783919,
+              0.0671518556,
+              0.06707408683,
+              0.07446416432,
+              0.0644316845,
+              0.06722426909
+            ],
+            [
+              "",
+              0.03737181268,
+              0.0379065399,
+              0.03752690645,
+              0.03816763012,
+              0.03843807953,
+              0.02113846556,
+              0.03917969038,
+              0.03714933831
+            ],
+            [
+              "",
+              0.03836668068,
+              0.03798415742,
+              0.03835069236,
+              0.03747349187,
+              0.03654589072,
+              0.02092975717,
+              0.03792137269,
+              0.0373664412
+            ],
+            [
+              "",
+              0.06685308962,
+              0.06664406824,
+              0.06710985087,
+              0.06765379381,
+              0.06368327754,
+              0.07451035635,
+              0.06891171827,
+              0.06717668956
+            ],
+            [
+              "",
+              0.06657101032,
+              0.06778321392,
+              0.06815370011,
+              0.06795082745,
+              0.06962886184,
+              0.07480442955,
+              0.06738696192,
+              0.06791613994
+            ]
+          ],
+          "upright": true
+        }
+      },
+      "title": "Ship figures"
+    },
+    "ship-square": {
+      "fact": {
+        "t": "A square of supercharged slots is {0} wrecks, whatever the class. Interceptors land on one most often, {1}.",
+        "v": [
+          { "k": "oneIn", "v": 1494.318755 },
+          { "k": "oneIn", "v": 1015.59474 }
+        ]
+      },
+      "numbers": {
+        "best": "Interceptor",
+        "bestOneIn": { "k": "oneIn", "v": 1015.59474 },
+        "oneIn": { "k": "oneIn", "v": 1494.318755 },
+        "places": { "k": "about", "v": 18 },
+        "share": { "k": "share", "v": 0.07607315799 }
+      },
+      "tables": {
+        "classes": {
+          "head": ["Class", "Of adjacent", "Of all"],
+          "kinds": ["text", "share", "oneIn"],
+          "note": "Wrecks in Euclid, with the four slots each holds at class S.",
+          "rows": [
+            ["Class C", 0.07567145783, 1502.833279],
+            ["Class B", 0.07632966363, 1479.760169],
+            ["Class A", 0.07701738552, 1492.632922],
+            ["Class S", 0.0764074751, 1523.220905]
+          ]
+        },
+        "sources": {
+          "head": ["Source", "Of adjacent", "Of all"],
+          "kinds": ["text", "share", "oneIn"],
+          "note": "Wrecks in Euclid, with the four slots each holds at class S.",
+          "rows": [
+            ["Sunken ship", 0.07573209737, 1515.2874],
+            ["Crashed ship", 0.07578030192, 1514.390688],
+            ["Sentinel wreck", 0.08396456697, 1015.59474]
+          ]
+        },
+        "types": {
+          "head": ["Ship", "Of adjacent", "Of all"],
+          "kinds": ["text", "share", "oneIn"],
+          "note": "Wrecks in Euclid, with the four slots each holds at class S.",
+          "rows": [
+            ["Exotic", 0.07450624104, 1537.362412],
+            ["Hauler", 0.07506846653, 1530.040618],
+            ["Explorer", 0.07525686025, 1529.858865],
+            ["Solar", 0.07574058313, 1517.657325],
+            ["Fighter", 0.07578230049, 1513.016438],
+            ["Shuttle", 0.07676786993, 1490.712847],
+            ["Interceptor", 0.08396456697, 1015.59474]
+          ]
+        }
+      },
+      "title": "The square on a ship"
+    },
+    "ship-stats": {
+      "fact": "It depends on the ship type: a claimed Fighter reaches 359.5 damage, a Hauler 312.1 shield, an Exotic 557.2 maneuverability, an Interceptor 661.0 hyperdrive.",
+      "numbers": {},
+      "tables": {},
+      "title": "Ship stats"
+    },
+    "ship-types": {
+      "fact": {
+        "t": "Most wrecks are Shuttles, Haulers, Fighters, and Explorers: the last three fill {0} of them. An Exotic is {1}.",
+        "v": [
+          { "k": "share", "v": 0.6558811387 },
+          { "k": "oneIn", "v": 315.7761352 }
+        ]
+      },
+      "numbers": {
+        "crashedPlanets": { "k": "share", "v": 0.8507637592 },
+        "economySwing": { "k": "tenths", "v": 0.4269964758 },
+        "exotic": { "k": "share", "v": 0.003166800428 },
+        "exoticOneIn": { "k": "oneIn", "v": 315.7761352 },
+        "explorer": { "k": "share", "v": 0.2139927401 },
+        "fighter": { "k": "share", "v": 0.2226447493 },
+        "gekHauler": { "k": "share", "v": 0.3362385133 },
+        "hauler": { "k": "share", "v": 0.2192436493 },
+        "interceptor": { "k": "share", "v": 0.0275417408 },
+        "korvaxExplorer": { "k": "share", "v": 0.3226948292 },
+        "lowSolar": { "k": "share", "v": 0.01663347594 },
+        "pirateSolar": { "k": "share", "v": 0.3424495694 },
+        "sentinelPlanets": { "k": "share", "v": 0.03643230883 },
+        "shuttle": { "k": "share", "v": 0.2678675131 },
+        "shuttleSolar": { "k": "share", "v": 0.3134103201 },
+        "solar": { "k": "share", "v": 0.04554280693 },
+        "sunkenPlanets": { "k": "share", "v": 0.3105328288 },
+        "touching": { "k": "share", "v": 0.008796811938 },
+        "vykeenFighter": { "k": "share", "v": 0.3352270498 }
+      },
+      "tables": {
+        "hulls": {
+          "head": ["Ship", "Share", "Adjacent"],
+          "kinds": ["text", "share", "share"],
+          "note": "Wrecks in Euclid.",
+          "rows": [
+            ["Exotic", 0.003166800428, 0.008730338611],
+            ["Interceptor", 0.0275417408, 0.01172690764],
+            ["Solar", 0.04554280693, 0.008699566921],
+            ["Explorer", 0.2139927401, 0.008685654244],
+            ["Hauler", 0.2192436493, 0.008706417628],
+            ["Fighter", 0.2226447493, 0.008721447456],
+            ["Shuttle", 0.2678675131, 0.008738291242]
+          ]
+        },
+        "races": {
+          "head": [
+            "System",
+            "Shuttle",
+            "Fighter",
+            "Hauler",
+            "Explorer",
+            "Solar",
+            "Interceptor",
+            "Exotic"
+          ],
+          "kinds": [
+            "text",
+            "share",
+            "share",
+            "share",
+            "share",
+            "share",
+            "share",
+            "share"
+          ],
+          "note": "Wrecks in Euclid.",
+          "rows": [
+            ["Uncharted", null, null, null, null, null, null, null],
+            [
+              "Vy'keen",
+              0.2669086095,
+              0.3352270498,
+              0.1599916455,
+              0.1601120822,
+              0.04661120804,
+              0.02798694372,
+              0.003162461267
+            ],
+            [
+              "Korvax",
+              0.268095648,
+              0.172841916,
+              0.1600389986,
+              0.3226948292,
+              0.04509786731,
+              0.02806163445,
+              0.003169106435
+            ],
+            [
+              "Gek",
+              0.2685922055,
+              0.16023756,
+              0.3362385133,
+              0.1602508676,
+              0.04492328868,
+              0.02658873989,
+              0.003168824961
+            ]
+          ]
+        },
+        "sourceHulls": {
+          "head": [
+            "Source",
+            "Shuttle",
+            "Fighter",
+            "Hauler",
+            "Explorer",
+            "Solar",
+            "Interceptor",
+            "Exotic"
+          ],
+          "kinds": [
+            "text",
+            "share",
+            "share",
+            "share",
+            "share",
+            "share",
+            "share",
+            "share"
+          ],
+          "note": "Wrecks in Euclid.",
+          "rows": [
+            ["Sentinel wreck", 0, 0, 0, 0, 0, 1, 0],
+            [
+              "Sunken ship",
+              0.2722738607,
+              0.2234650287,
+              0.2251978247,
+              0.2247398745,
+              0.05108420438,
+              0,
+              0.003239207061
+            ],
+            [
+              "Crashed ship",
+              0.2760795978,
+              0.2300295441,
+              0.22550322,
+              0.2191314603,
+              0.04599628806,
+              0,
+              0.003259889725
+            ]
+          ]
+        },
+        "sources": {
+          "head": ["Source", "Share", "Planets with one", "Adjacent"],
+          "kinds": ["text", "share", "share", "share"],
+          "note": "Wrecks in Euclid.",
+          "rows": [
+            ["Sentinel wreck", 0.0275417408, 0.03643230883, 0.01172690764],
+            ["Sunken ship", 0.1598565433, 0.3105328288, 0.008714149437],
+            ["Crashed ship", 0.812601716, 0.8507637592, 0.008713762895]
+          ]
+        },
+        "wealth": {
+          "head": [
+            "Wealth",
+            "Shuttle",
+            "Fighter",
+            "Hauler",
+            "Explorer",
+            "Solar",
+            "Interceptor",
+            "Exotic"
+          ],
+          "kinds": [
+            "text",
+            "share",
+            "share",
+            "share",
+            "share",
+            "share",
+            "share",
+            "share"
+          ],
+          "note": "Wrecks in Euclid.",
+          "rows": [
+            [
+              "Low",
+              0.2877631179,
+              0.2217123223,
+              0.2200046898,
+              0.2132145817,
+              0.01663347594,
+              0.03747483017,
+              0.003196982267
+            ],
+            [
+              "Medium",
+              0.2917954735,
+              0.2254934516,
+              0.2217790469,
+              0.2167924704,
+              0.01686276561,
+              0.02404934775,
+              0.00322744423
+            ],
+            [
+              "High",
+              0.2914783396,
+              0.2246508925,
+              0.221226463,
+              0.2181022942,
+              0.01675457588,
+              0.02456057903,
+              0.003226855783
+            ],
+            [
+              "Pirate",
+              0.0328879133,
+              0.2050687362,
+              0.1987645797,
+              0.1943438445,
+              0.3424495694,
+              0.02385507631,
+              0.002630280587
+            ]
+          ]
+        }
+      },
+      "title": "Ship types"
+    },
+    "ship-upgrades": {
+      "fact": "Upgrade a ship for its supercharged slots, which come in a fixed order, and find one at class S for its stats: what an upgrade does to them is not measured yet.",
+      "numbers": {
+        "interceptorC": { "k": "share", "v": 0.01185719382 },
+        "interceptorS": { "k": "share", "v": 0.007279348436 },
+        "ordinary": { "k": "share", "v": 0.008705366464 }
+      },
+      "tables": {
+        "slots": {
+          "head": [
+            "Class",
+            "Of wrecks",
+            "Slots found",
+            "Slots an upgrade adds",
+            "Adjacent at S",
+            "Interceptor, adjacent at S"
+          ],
+          "kinds": ["text", "share", "text", "text", "share", "share"],
+          "note": "Wrecks in Euclid, with the four slots each holds at class S.",
+          "rows": [
+            ["Class C", 0.5347206533, "1", "3", 0.008705366464, 0.01185719382],
+            ["Class B", 0.3146747921, "2", "2", 0.008722916063, 0.01348860382],
+            ["Class A", 0.1388416146, "3", "1", 0.008733361075, 0.00743529807],
+            ["Class S", 0.01176294002, "4", "0", 0.008624578969, 0.007279348436]
+          ]
+        }
+      },
+      "title": "How to upgrade a ship"
+    },
+    "sources-by-size": {
+      "fact": {
+        "t": "Bigger is better: a large planet holds a median of {0} spots, a moon one {1}, with the same mix of sources.",
+        "v": [
+          { "k": "about", "v": 19445 },
+          { "k": "about", "v": 499 }
+        ]
+      },
+      "numbers": {
+        "giantShare": { "k": "share", "v": 0.003521718822 },
+        "high": { "k": "about", "v": 19445 },
+        "highName": "large",
+        "low": { "k": "about", "v": 499 },
+        "lowName": "moon",
+        "planets": { "k": "about", "v": 301596 },
+        "ratio": { "k": "about", "v": 39 }
+      },
+      "tables": {
+        "peaks": {
+          "head": [
+            "Source",
+            "Most on one planet",
+            "That planet",
+            "Planets with none"
+          ],
+          "kinds": ["text", "count", "text", "share"],
+          "note": "Planets and moons of Euclid.",
+          "rows": [
+            ["Crashed ship", 29243, "Dead", 0.1492362408],
+            ["Crashed freighter", 29074, "Gas Giant", 0.1495620969],
+            ["Drop Pod", 116005, "Barren", 0.2156340332],
+            ["Debris", 87500, "Barren", 0.2156582722],
+            ["Beacon", 203144, "Frozen", 0.2878562504],
+            ["Sentinel pillar", 19772, "Scorched", 0.2901774788],
+            ["Robot head", 14756, "Barren", 0.3157906778],
+            ["Shop", 86832, "Scorched", 0.319033212],
+            ["Sunken ship", 28986, "Frozen", 0.6894671712],
+            ["Monolith", 87123, "Barren", 0.7190983428],
+            ["Sentinel wreck", 29072, "Barren", 0.9635676912],
+            ["Harmonic camp", 28842, "Scorched", 0.9636083548]
+          ]
+        },
+        "present": {
+          "head": [
+            "Planets",
+            "Monolith",
+            "Harmonic camp",
+            "Sentinel wreck",
+            "Sunken ship"
+          ],
+          "kinds": ["text", "text", "text", "text", "text"],
+          "note": "Median spots where the source stands in Euclid, and on what share of planets.",
+          "rows": [
+            [
+              "Moon, 15 km",
+              {
+                "t": "{0} on {1}",
+                "v": [
+                  { "k": "median", "v": 72 },
+                  { "k": "share", "v": 0.280331033 }
+                ]
+              },
+              {
+                "t": "{0} on {1}",
+                "v": [
+                  { "k": "median", "v": 23 },
+                  { "k": "share", "v": 0.05739008943 }
+                ]
+              },
+              {
+                "t": "{0} on {1}",
+                "v": [
+                  { "k": "median", "v": 23 },
+                  { "k": "share", "v": 0.05739008943 }
+                ]
+              },
+              "none"
+            ],
+            [
+              "Small, 65 km",
+              {
+                "t": "{0} on {1}",
+                "v": [
+                  { "k": "median", "v": 817 },
+                  { "k": "share", "v": 0.2802254633 }
+                ]
+              },
+              {
+                "t": "{0} on {1}",
+                "v": [
+                  { "k": "median", "v": 309 },
+                  { "k": "share", "v": 0.03286109219 }
+                ]
+              },
+              {
+                "t": "{0} on {1}",
+                "v": [
+                  { "k": "median", "v": 339 },
+                  { "k": "share", "v": 0.03291061452 }
+                ]
+              },
+              {
+                "t": "{0} on {1}",
+                "v": [
+                  { "k": "median", "v": 163 },
+                  { "k": "share", "v": 0.3623180743 }
+                ]
+              }
+            ],
+            [
+              "Medium, 98 km",
+              {
+                "t": "{0} on {1}",
+                "v": [
+                  { "k": "median", "v": 1861 },
+                  { "k": "share", "v": 0.2844498334 }
+                ]
+              },
+              {
+                "t": "{0} on {1}",
+                "v": [
+                  { "k": "median", "v": 691 },
+                  { "k": "share", "v": 0.03313733693 }
+                ]
+              },
+              {
+                "t": "{0} on {1}",
+                "v": [
+                  { "k": "median", "v": 753 },
+                  { "k": "share", "v": 0.03317505612 }
+                ]
+              },
+              {
+                "t": "{0} on {1}",
+                "v": [
+                  { "k": "median", "v": 352 },
+                  { "k": "share", "v": 0.3656397758 }
+                ]
+              }
+            ],
+            [
+              "Large, 130 km",
+              {
+                "t": "{0} on {1}",
+                "v": [
+                  { "k": "median", "v": 3379 },
+                  { "k": "share", "v": 0.2804396228 }
+                ]
+              },
+              {
+                "t": "{0} on {1}",
+                "v": [
+                  { "k": "median", "v": 1233 },
+                  { "k": "share", "v": 0.03298823181 }
+                ]
+              },
+              {
+                "t": "{0} on {1}",
+                "v": [
+                  { "k": "median", "v": 1378 },
+                  { "k": "share", "v": 0.03304398453 }
+                ]
+              },
+              {
+                "t": "{0} on {1}",
+                "v": [
+                  { "k": "median", "v": 611 },
+                  { "k": "share", "v": 0.3620149681 }
+                ]
+              }
+            ],
+            [
+              "Giant, 523 km",
+              {
+                "t": "{0} on {1}",
+                "v": [
+                  { "k": "median", "v": 58450 },
+                  { "k": "share", "v": 0.1094365092 }
+                ]
+              },
+              {
+                "t": "{0} on {1}",
+                "v": [
+                  { "k": "median", "v": 20933 },
+                  { "k": "share", "v": 0.005693121515 }
+                ]
+              },
+              {
+                "t": "{0} on {1}",
+                "v": [
+                  { "k": "median", "v": 21141 },
+                  { "k": "share", "v": 0.005693121515 }
+                ]
+              },
+              {
+                "t": "{0} on {1}",
+                "v": [
+                  { "k": "median", "v": 6921 },
+                  { "k": "share", "v": 0.1425271453 }
+                ]
+              }
+            ]
+          ]
+        },
+        "staffs": {
+          "head": [
+            "Planets",
+            "Beacon",
+            "Drop Pod",
+            "Debris",
+            "Crashed freighter",
+            "Robot head"
+          ],
+          "kinds": ["text", "median", "median", "median", "median", "median"],
+          "note": "Medians per planet of Euclid.",
+          "rows": [
+            ["Moon, 15 km", 166, 92, 68, 24, 9],
+            ["Small, 65 km", 1529, 870, 652, 231, 110],
+            ["Medium, 98 km", 3738, 2119, 1589, 548, 268],
+            ["Large, 130 km", 6466, 3669, 2755, 948, 461],
+            ["Giant, 523 km", 12360, 24776, 68183, 20299, 11645]
+          ]
+        },
+        "tools": {
+          "head": [
+            "Planets",
+            "Shop",
+            "Sentinel pillar",
+            "Monolith",
+            "Harmonic camp"
+          ],
+          "kinds": ["text", "median", "median", "median", "median"],
+          "note": "Medians per planet of Euclid. A space station's cabinets stand on no planet, so they are not counted here.",
+          "rows": [
+            ["Moon, 15 km", 67, 10, 0, 0],
+            ["Small, 65 km", 601, 112, 0, 0],
+            ["Medium, 98 km", 1424, 268, 0, 0],
+            ["Large, 130 km", 2518, 464, 0, 0],
+            ["Giant, 523 km", 0, 0, 0, 0]
+          ]
+        },
+        "wrecks": {
+          "head": ["Planets", "Crashed ship", "Sentinel wreck", "Sunken ship"],
+          "kinds": ["text", "median", "median", "median"],
+          "note": "Medians per planet of Euclid.",
+          "rows": [
+            ["Moon, 15 km", 24, 0, 0],
+            ["Small, 65 km", 312, 0, 0],
+            ["Medium, 98 km", 690, 0, 0],
+            ["Large, 130 km", 1256, 0, 0],
+            ["Giant, 523 km", 23742, 0, 0]
+          ]
+        }
+      },
+      "title": "Sources by planet size"
+    },
+    "sources-by-type": {
+      "fact": {
+        "t": "Among rocky planets, Lava worlds hold the most, a median of {0} spots; Red worlds come last with {1}.",
+        "v": [
+          { "k": "about", "v": 11216 },
+          { "k": "count", "v": 0 }
+        ]
+      },
+      "numbers": {
+        "planets": { "k": "about", "v": 301596 },
+        "poorest": "Red",
+        "poorestSpots": { "k": "about", "v": 0 },
+        "redUncharted": { "k": "share", "v": 0.6169631591 },
+        "richest": "Gas Giant",
+        "richestSpots": { "k": "about", "v": 163329 },
+        "runner": "Lava",
+        "runnerSpots": { "k": "about", "v": 11216 }
+      },
+      "tables": {
+        "present": {
+          "head": [
+            "Planets",
+            "Monolith",
+            "Harmonic camp",
+            "Sentinel wreck",
+            "Sunken ship"
+          ],
+          "kinds": ["text", "text", "text", "text", "text"],
+          "note": "Median spots where the source stands in Euclid, and on what share of planets.",
+          "rows": [
+            ["Gas Giant", "none", "none", "none", "none"],
+            [
+              "Weird",
+              {
+                "t": "{0} on {1}",
+                "v": [
+                  { "k": "median", "v": 955 },
+                  { "k": "share", "v": 0.2389594717 }
+                ]
+              },
+              "none",
+              "none",
+              "none"
+            ],
+            [
+              "Dead",
+              {
+                "t": "{0} on {1}",
+                "v": [
+                  { "k": "median", "v": 969 },
+                  { "k": "share", "v": 0.2866718352 }
+                ]
+              },
+              "none",
+              "none",
+              "none"
+            ],
+            [
+              "Waterworld",
+              {
+                "t": "{0} on {1}",
+                "v": [
+                  { "k": "median", "v": 1015 },
+                  { "k": "share", "v": 0.2703901608 }
+                ]
+              },
+              "none",
+              "none",
+              {
+                "t": "{0} on {1}",
+                "v": [
+                  { "k": "median", "v": 3032 },
+                  { "k": "share", "v": 0.8552836941 }
+                ]
+              }
+            ],
+            [
+              "Red",
+              {
+                "t": "{0} on {1}",
+                "v": [
+                  { "k": "median", "v": 1037 },
+                  { "k": "share", "v": 0.1395046316 }
+                ]
+              },
+              {
+                "t": "{0} on {1}",
+                "v": [
+                  { "k": "median", "v": 325 },
+                  { "k": "share", "v": 0.08841606949 }
+                ]
+              },
+              {
+                "t": "{0} on {1}",
+                "v": [
+                  { "k": "median", "v": 341 },
+                  { "k": "share", "v": 0.08905259173 }
+                ]
+              },
+              {
+                "t": "{0} on {1}",
+                "v": [
+                  { "k": "median", "v": 247 },
+                  { "k": "share", "v": 0.2366817663 }
+                ]
+              }
+            ],
+            [
+              "Lush",
+              {
+                "t": "{0} on {1}",
+                "v": [
+                  { "k": "median", "v": 1093 },
+                  { "k": "share", "v": 0.3006166672 }
+                ]
+              },
+              {
+                "t": "{0} on {1}",
+                "v": [
+                  { "k": "median", "v": 366 },
+                  { "k": "share", "v": 0.04249559323 }
+                ]
+              },
+              {
+                "t": "{0} on {1}",
+                "v": [
+                  { "k": "median", "v": 380 },
+                  { "k": "share", "v": 0.04249559323 }
+                ]
+              },
+              {
+                "t": "{0} on {1}",
+                "v": [
+                  { "k": "median", "v": 341 },
+                  { "k": "share", "v": 0.7038585743 }
+                ]
+              }
+            ],
+            [
+              "Blue",
+              {
+                "t": "{0} on {1}",
+                "v": [
+                  { "k": "median", "v": 1180 },
+                  { "k": "share", "v": 0.2420071165 }
+                ]
+              },
+              {
+                "t": "{0} on {1}",
+                "v": [
+                  { "k": "median", "v": 284 },
+                  { "k": "share", "v": 0.09709939847 }
+                ]
+              },
+              {
+                "t": "{0} on {1}",
+                "v": [
+                  { "k": "median", "v": 302 },
+                  { "k": "share", "v": 0.09731167459 }
+                ]
+              },
+              {
+                "t": "{0} on {1}",
+                "v": [
+                  { "k": "median", "v": 273 },
+                  { "k": "share", "v": 0.527843257 }
+                ]
+              }
+            ],
+            [
+              "Green",
+              {
+                "t": "{0} on {1}",
+                "v": [
+                  { "k": "median", "v": 1222 },
+                  { "k": "share", "v": 0.2430989628 }
+                ]
+              },
+              {
+                "t": "{0} on {1}",
+                "v": [
+                  { "k": "median", "v": 348 },
+                  { "k": "share", "v": 0.09331633177 }
+                ]
+              },
+              {
+                "t": "{0} on {1}",
+                "v": [
+                  { "k": "median", "v": 362 },
+                  { "k": "share", "v": 0.09340841406 }
+                ]
+              },
+              {
+                "t": "{0} on {1}",
+                "v": [
+                  { "k": "median", "v": 269 },
+                  { "k": "share", "v": 0.5342289392 }
+                ]
+              }
+            ],
+            [
+              "Radioactive",
+              {
+                "t": "{0} on {1}",
+                "v": [
+                  { "k": "median", "v": 1389 },
+                  { "k": "share", "v": 0.2891469087 }
+                ]
+              },
+              {
+                "t": "{0} on {1}",
+                "v": [
+                  { "k": "median", "v": 437 },
+                  { "k": "share", "v": 0.04100344486 }
+                ]
+              },
+              {
+                "t": "{0} on {1}",
+                "v": [
+                  { "k": "median", "v": 442 },
+                  { "k": "share", "v": 0.04106918977 }
+                ]
+              },
+              {
+                "t": "{0} on {1}",
+                "v": [
+                  { "k": "median", "v": 348 },
+                  { "k": "share", "v": 0.2869534093 }
+                ]
+              }
+            ],
+            [
+              "Toxic",
+              {
+                "t": "{0} on {1}",
+                "v": [
+                  { "k": "median", "v": 1429 },
+                  { "k": "share", "v": 0.2915598603 }
+                ]
+              },
+              {
+                "t": "{0} on {1}",
+                "v": [
+                  { "k": "median", "v": 435 },
+                  { "k": "share", "v": 0.0415435516 }
+                ]
+              },
+              {
+                "t": "{0} on {1}",
+                "v": [
+                  { "k": "median", "v": 442 },
+                  { "k": "share", "v": 0.04157771445 }
+                ]
+              },
+              {
+                "t": "{0} on {1}",
+                "v": [
+                  { "k": "median", "v": 349 },
+                  { "k": "share", "v": 0.2837903049 }
+                ]
+              }
+            ],
+            [
+              "Frozen",
+              {
+                "t": "{0} on {1}",
+                "v": [
+                  { "k": "median", "v": 1430 },
+                  { "k": "share", "v": 0.2896466012 }
+                ]
+              },
+              {
+                "t": "{0} on {1}",
+                "v": [
+                  { "k": "median", "v": 438 },
+                  { "k": "share", "v": 0.03795275848 }
+                ]
+              },
+              {
+                "t": "{0} on {1}",
+                "v": [
+                  { "k": "median", "v": 442 },
+                  { "k": "share", "v": 0.03804108588 }
+                ]
+              },
+              {
+                "t": "{0} on {1}",
+                "v": [
+                  { "k": "median", "v": 335 },
+                  { "k": "share", "v": 0.3629773324 }
+                ]
+              }
+            ],
+            [
+              "Barren",
+              {
+                "t": "{0} on {1}",
+                "v": [
+                  { "k": "median", "v": 1556 },
+                  { "k": "share", "v": 0.2875144019 }
+                ]
+              },
+              {
+                "t": "{0} on {1}",
+                "v": [
+                  { "k": "median", "v": 458 },
+                  { "k": "share", "v": 0.04812523963 }
+                ]
+              },
+              {
+                "t": "{0} on {1}",
+                "v": [
+                  { "k": "median", "v": 469 },
+                  { "k": "share", "v": 0.04815856187 }
+                ]
+              },
+              {
+                "t": "{0} on {1}",
+                "v": [
+                  { "k": "median", "v": 342 },
+                  { "k": "share", "v": 0.2213855565 }
+                ]
+              }
+            ],
+            [
+              "Scorched",
+              {
+                "t": "{0} on {1}",
+                "v": [
+                  { "k": "median", "v": 1770 },
+                  { "k": "share", "v": 0.2890465829 }
+                ]
+              },
+              {
+                "t": "{0} on {1}",
+                "v": [
+                  { "k": "median", "v": 475 },
+                  { "k": "share", "v": 0.03903636669 }
+                ]
+              },
+              {
+                "t": "{0} on {1}",
+                "v": [
+                  { "k": "median", "v": 489 },
+                  { "k": "share", "v": 0.03903636669 }
+                ]
+              },
+              {
+                "t": "{0} on {1}",
+                "v": [
+                  { "k": "median", "v": 337 },
+                  { "k": "share", "v": 0.1807991738 }
+                ]
+              }
+            ],
+            [
+              "Swamp",
+              {
+                "t": "{0} on {1}",
+                "v": [
+                  { "k": "median", "v": 1829 },
+                  { "k": "share", "v": 0.2973474839 }
+                ]
+              },
+              {
+                "t": "{0} on {1}",
+                "v": [
+                  { "k": "median", "v": 415 },
+                  { "k": "share", "v": 0.04545338923 }
+                ]
+              },
+              {
+                "t": "{0} on {1}",
+                "v": [
+                  { "k": "median", "v": 452 },
+                  { "k": "share", "v": 0.04545338923 }
+                ]
+              },
+              {
+                "t": "{0} on {1}",
+                "v": [
+                  { "k": "median", "v": 241 },
+                  { "k": "share", "v": 0.7815689504 }
+                ]
+              }
+            ],
+            [
+              "Lava",
+              {
+                "t": "{0} on {1}",
+                "v": [
+                  { "k": "median", "v": 2579 },
+                  { "k": "share", "v": 0.2767848761 }
+                ]
+              },
+              {
+                "t": "{0} on {1}",
+                "v": [
+                  { "k": "median", "v": 769 },
+                  { "k": "share", "v": 0.03852197964 }
+                ]
+              },
+              {
+                "t": "{0} on {1}",
+                "v": [
+                  { "k": "median", "v": 918 },
+                  { "k": "share", "v": 0.03852197964 }
+                ]
+              },
+              {
+                "t": "{0} on {1}",
+                "v": [
+                  { "k": "median", "v": 232 },
+                  { "k": "share", "v": 0.2380077911 }
+                ]
+              }
+            ]
+          ]
+        },
+        "staffs": {
+          "head": [
+            "Planets",
+            "Beacon",
+            "Drop Pod",
+            "Debris",
+            "Crashed freighter",
+            "Robot head"
+          ],
+          "kinds": ["text", "median", "median", "median", "median", "median"],
+          "note": "Medians per planet of Euclid.",
+          "rows": [
+            ["Red", 0, 0, 0, 0, 0],
+            ["Dead", 0, 0, 0, 465, 0],
+            ["Weird", 0, 430, 430, 425, 0],
+            ["Waterworld", 965, 927, 927, 0, 0],
+            ["Blue", 1553, 888, 661, 157, 111],
+            ["Green", 1583, 892, 668, 158, 115],
+            ["Lush", 2103, 1182, 894, 267, 157],
+            ["Barren", 3098, 1768, 1327, 415, 225],
+            ["Frozen", 3095, 1765, 1324, 421, 240],
+            ["Toxic", 3088, 1764, 1322, 436, 237],
+            ["Radioactive", 3095, 1768, 1327, 438, 241],
+            ["Scorched", 3142, 1804, 1360, 444, 288],
+            ["Swamp", 4008, 2168, 1621, 260, 282],
+            ["Lava", 4383, 2148, 1615, 223, 310],
+            ["Gas Giant", 12028, 23704, 71206, 20831, 12104]
+          ]
+        },
+        "tools": {
+          "head": [
+            "Planets",
+            "Shop",
+            "Sentinel pillar",
+            "Monolith",
+            "Harmonic camp"
+          ],
+          "kinds": ["text", "median", "median", "median", "median"],
+          "note": "Medians per planet of Euclid. A space station's cabinets stand on no planet, so they are not counted here.",
+          "rows": [
+            ["Dead", 0, 0, 0, 0],
+            ["Weird", 0, 0, 0, 0],
+            ["Red", 0, 0, 0, 0],
+            ["Gas Giant", 0, 0, 0, 0],
+            ["Blue", 313, 108, 0, 0],
+            ["Green", 324, 110, 0, 0],
+            ["Waterworld", 0, 915, 0, 0],
+            ["Lush", 797, 163, 0, 0],
+            ["Swamp", 908, 250, 0, 0],
+            ["Lava", 950, 245, 0, 0],
+            ["Barren", 1275, 226, 0, 0],
+            ["Frozen", 1287, 226, 0, 0],
+            ["Toxic", 1299, 227, 0, 0],
+            ["Radioactive", 1304, 228, 0, 0],
+            ["Scorched", 1326, 240, 0, 0]
+          ]
+        },
+        "wrecks": {
+          "head": ["Planets", "Crashed ship", "Sentinel wreck", "Sunken ship"],
+          "kinds": ["text", "median", "median", "median"],
+          "note": "Medians per planet of Euclid.",
+          "rows": [
+            ["Red", 0, 0, 0],
+            ["Blue", 220, 0, 67],
+            ["Green", 224, 0, 77],
+            ["Weird", 431, 0, 0],
+            ["Frozen", 448, 0, 0],
+            ["Barren", 449, 0, 0],
+            ["Toxic", 450, 0, 0],
+            ["Radioactive", 450, 0, 0],
+            ["Scorched", 469, 0, 0],
+            ["Dead", 469, 0, 0],
+            ["Lush", 322, 0, 214],
+            ["Lava", 577, 0, 0],
+            ["Swamp", 555, 0, 184],
+            ["Waterworld", 0, 0, 2980],
+            ["Gas Giant", 23896, 0, 0]
+          ]
+        }
+      },
+      "title": "Sources by planet type"
+    },
+    "space-stations": {
+      "fact": "An inhabited station has four technology merchants, for starship, multitool, exosuit, and exocraft modules, and each sells the same items on every visit.",
+      "numbers": {
+        "merchants": { "k": "plain", "v": 4 },
+        "pirateAll": { "k": "plain", "v": 22 },
+        "pirateShown": { "k": "plain", "v": 12 }
+      },
+      "tables": {
+        "kinds": {
+          "head": [
+            "Station",
+            "Technology merchants sell",
+            "Multitool cabinets"
+          ],
+          "kinds": ["text", "text", "text"],
+          "note": "Read from the scenes of each kind of station and the merchants placed in them.",
+          "rows": [
+            [
+              "Inhabited",
+              "Starship, multitool, exosuit, and exocraft modules",
+              "Two"
+            ],
+            ["Pirate", "Suspicious modules, and a black market", "One"],
+            ["Abandoned", "None", "None"]
+          ],
+          "text": 3
+        },
+        "merchants": {
+          "head": ["Merchant", "Items for sale", "Always for sale"],
+          "kinds": ["text", "text", "text"],
+          "note": "The game's trade table for each merchant.",
+          "rows": [
+            [
+              "Starship",
+              "16 to 24",
+              "The four reactors, C to S, and Launch Thrusters, Pulse Engine, Hyperdrive, and Starship Shield at class C"
+            ],
+            [
+              "Multitool",
+              "12 to 18",
+              "Mining Beam, Scanner, and Boltcaster at class C"
+            ],
+            [
+              "Exosuit",
+              "12 to 18",
+              "Life Support, Movement, and Shield at class C"
+            ],
+            ["Exocraft", "12", "Nothing"],
+            ["Pirate technology", "12", "Nothing"],
+            [
+              "Black market",
+              "10 to 14",
+              "Starshield Battery and the three Suspicious Packets"
+            ]
+          ],
+          "text": 3
+        }
+      },
+      "title": "Space stations"
+    },
+    "square": {
+      "fact": {
+        "t": "About one multitool in a thousand has a square of supercharged slots: Atlantid, plain tools most often, {0}, and Experimental tools least, {1}.",
+        "v": [
+          { "k": "oneIn", "v": 977.2981854 },
+          { "k": "oneIn", "v": 1993.070112 }
+        ]
+      },
+      "numbers": {
+        "best": "Atlantid, plain",
+        "bestOneIn": { "k": "oneIn", "v": 977.2981854 },
+        "listNoStaff": { "k": "share", "v": 0.570503286 },
+        "listShare": { "k": "share", "v": 0.7646262118 },
+        "places": { "k": "about", "v": 18 },
+        "poolSystems": { "k": "about", "v": 63360 },
+        "poolVoxels": { "k": "about", "v": 1056 },
+        "staffA": { "k": "oneIn", "v": 55204.45331 },
+        "staffB": { "k": "oneIn", "v": 285.3400989 },
+        "systems": { "k": "about", "v": 63360 },
+        "worst": "Experimental",
+        "worstOneIn": { "k": "oneIn", "v": 1993.070112 }
+      },
+      "tables": {
+        "classes": {
+          "head": ["Class", "Of adjacent", "Of all"],
+          "kinds": ["text", "share", "oneIn"],
+          "note": "Tools as you find them, in Euclid. Staffs left out.",
+          "rows": [
+            ["Class C", 0.06974952241, 1134.397067],
+            ["Class B", 0.06820384672, 993.7530632],
+            ["Class A", 0.07832772952, 1664.331362],
+            ["Class S", 0.07820358762, 1442.092916]
+          ]
+        },
+        "kept": {
+          "head": ["Type", "Share"],
+          "kinds": ["text", "share"],
+          "note": "Tools we keep, in Euclid, before the showcase leaves squares out: the share of each type that makes a square.",
+          "rows": [
+            ["Experimental", 0.06364434756],
+            ["Staff", 0.06403417644],
+            ["Alien", 0.06848450531],
+            ["Rifle", 0.06956571565],
+            ["Pistol", 0.07034885474],
+            ["Atlantid", 0.07113042816],
+            ["Royal", 0.07130401699],
+            ["Sentinel", 0.07223178025]
+          ]
+        },
+        "sources": {
+          "head": ["Source", "Of adjacent", "Of all"],
+          "kinds": ["text", "share", "oneIn"],
+          "note": "Tools as you find them, in Euclid.",
+          "rows": [
+            ["Monolith", 0.06965418956, 1143.849064],
+            ["Sentinel pillar", 0.06988868202, 1140.365031],
+            ["Shop", 0.07012508951, 1135.151266],
+            ["Harmonic camp", 0.07012782353, 1136.676617],
+            ["Space station", 0.07013369014, 1135.411391],
+            ["Debris", 0.08010665416, 914.2173087],
+            ["Crashed freighter", 0.08011625606, 909.2345491],
+            ["Robot head", 0.08033427403, 888.4609281],
+            ["Beacon", 0.08037242057, 882.9604528],
+            ["Drop Pod", 0.08044222352, 888.985833]
+          ]
+        },
+        "staffClasses": {
+          "head": ["Class", "Of adjacent", "Of all"],
+          "kinds": ["text", "share", "oneIn"],
+          "note": "Staffs as you find them, in Euclid.",
+          "rows": [
+            ["Class C", null, "never"],
+            ["Class B", 0.08072972778, 285.3400989],
+            ["Class A", 0.02566929817, 55204.45331],
+            ["Class S", 0.07775673626, 1438.194892]
+          ]
+        },
+        "types": {
+          "head": ["Type", "Of adjacent", "Of all"],
+          "kinds": ["text", "share", "oneIn"],
+          "note": "Tools as you find them, in Euclid.",
+          "rows": [
+            ["Atlantid, plain", 0.06304572804, 977.2981854],
+            ["Sentinel, rifle", 0.0698367134, 1141.650326],
+            ["Rifle", 0.06998533063, 1110.781251],
+            ["Pistol", 0.07004256825, 1130.922732],
+            ["Sentinel, pistol", 0.07041383074, 1131.830144],
+            ["Atlantid, yellow", 0.07446201352, 1255.906619],
+            ["Atlantid, blue", 0.0750038415, 1247.830795],
+            ["Alien", 0.07573012552, 1974.498057],
+            ["Experimental", 0.07798691505, 1993.070112],
+            ["Royal", 0.07800696385, 1879.496423],
+            ["All staffs", 0.08031627751, 892.9056538]
+          ]
+        }
+      },
+      "title": "The square on a multitool"
+    },
+    "staffs": {
+      "fact": {
+        "t": "Any staff head will do: each is sold at {0} of terminals, any terminal builds with a head you carry, and {1} of staffs hold adjacent slots whichever you fit.",
+        "v": [
+          { "k": "share", "v": 0.2856763758 },
+          { "k": "share", "v": 0.01395089855 }
+        ]
+      },
+      "numbers": {
+        "perSystem": { "k": "about", "v": 37894 },
+        "soldAt": { "k": "share", "v": 0.2856763758 },
+        "square": { "k": "share", "v": 0.08060922107 },
+        "systems": { "k": "about", "v": 63360 },
+        "terminals": { "k": "about", "v": 2400950614 },
+        "touching": { "k": "share", "v": 0.01395089855 }
+      },
+      "tables": {
+        "classes": {
+          "head": ["Class", "Share"],
+          "kinds": ["text", "share"],
+          "note": "Terminals in Euclid, seven staffs each.",
+          "rows": [
+            ["Class C", 0.5313955624],
+            ["Class B", 0.3164888623],
+            ["Class A", 0.140272694],
+            ["Class S", 0.0118428812]
+          ]
+        },
+        "heads": {
+          "head": [
+            "Head",
+            "Sold at",
+            "Class S",
+            "Adjacent",
+            "Square, of adjacent"
+          ],
+          "kinds": ["text", "share", "share", "share", "share"],
+          "note": "Terminals in Euclid, seven staffs each.",
+          "rows": [
+            [
+              "Havoc Coil",
+              0.2856573341,
+              0.01183684503,
+              0.01392880233,
+              0.08046856776
+            ],
+            [
+              "Salvaged Aerator",
+              0.2856763758,
+              0.01184374412,
+              0.01395089855,
+              0.08060922107
+            ],
+            [
+              "Reclaimed Head",
+              0.2857023721,
+              0.01184808118,
+              0.01394762287,
+              0.08042843001
+            ],
+            [
+              "Reclaimed Claw",
+              0.2857127022,
+              0.01183616767,
+              0.01394463361,
+              0.08011648537
+            ],
+            [
+              "Radiant Heart",
+              0.2857307724,
+              0.01185461233,
+              0.01394527827,
+              0.08034853651
+            ],
+            [
+              "Concentric Transducer",
+              0.285740474,
+              0.01183541709,
+              0.01394529607,
+              0.07990437639
+            ],
+            [
+              "Runic Focus",
+              0.2857799695,
+              0.01184530096,
+              0.01394625074,
+              0.08033835821
+            ]
+          ]
+        },
+        "terminals": {
+          "head": ["Stands at", "Share", "Adjacent"],
+          "kinds": ["text", "share", "share"],
+          "note": "Terminals in Euclid, seven staffs each.",
+          "rows": [
+            ["Robot head", 0.03912079546, 0.01401073094],
+            ["Crashed freighter", 0.07450613835, 0.01372787842],
+            ["Debris", 0.2056690137, 0.01365469386],
+            ["Drop Pod", 0.2524489929, 0.01398366765],
+            ["Beacon", 0.4282550596, 0.01409132072]
+          ]
+        }
+      },
+      "title": "Staffs"
+    },
+    "station-upgrades": {
+      "fact": {
+        "t": "Inhabited space stations sell class S upgrade modules: each starship one at {0} of stations, whatever the wealth, and the top six together at {1} stations.",
+        "v": [
+          { "k": "share", "v": 0.375 },
+          { "k": "oneIn", "v": 419.5333333 }
+        ]
+      },
+      "numbers": {
+        "coreOneIn": { "k": "oneIn", "v": 52.77886497 },
+        "craftOne": { "k": "share", "v": 0.3333333333 },
+        "ninePerS": { "k": "plain", "v": 9 },
+        "pirateAll": { "k": "plain", "v": 22 },
+        "pirateOne": { "k": "share", "v": 0.5454545455 },
+        "pirateShown": { "k": "plain", "v": 12 },
+        "shipOne": { "k": "share", "v": 0.375 },
+        "sixOneIn": { "k": "oneIn", "v": 419.5333333 },
+        "suitOne": { "k": "share", "v": 0.5217391304 },
+        "threeOrFour": { "k": "share", "v": 0.5050945495 },
+        "toolOne": { "k": "share", "v": 0.3636363636 }
+      },
+      "tables": {
+        "count": {
+          "head": ["Class S modules", "Chance"],
+          "kinds": ["text", "share"],
+          "note": "Starship modules at class S on one starship merchant, of the nine it can sell.",
+          "rows": [
+            ["0", 0.01291697961],
+            ["1", 0.0768900868],
+            ["2", 0.1899223734],
+            ["3", 0.2657426105],
+            ["4", 0.239351939],
+            ["5", 0.1440660088],
+            ["6", 0.05624240609],
+            ["7", 0.01317270852],
+            ["8", 0.00161784699],
+            ["9", 0.00007704033288]
+          ]
+        },
+        "exocraft": {
+          "head": ["Module", "Class C", "Class B", "Class A", "Class S"],
+          "kinds": ["text", "share", "share", "share", "share"],
+          "note": "The exocraft merchant of an inhabited station, from the game's trade table: the chance a module is on sale. A dash is a class it never sells.",
+          "rows": [
+            ["Minotaur Engine", null, 0.3333333333, 0.3333333333, 0.3333333333],
+            ["Minotaur Laser", null, 0.3333333333, 0.3333333333, 0.3333333333],
+            ["Minotaur Cannon", null, 0.3333333333, 0.3333333333, 0.3333333333],
+            [
+              "Minotaur Flamethrower",
+              null,
+              0.3333333333,
+              0.3333333333,
+              0.3333333333
+            ],
+            [
+              "Exocraft Cannon",
+              0.3333333333,
+              0.3333333333,
+              0.3333333333,
+              0.3333333333
+            ],
+            [
+              "Exocraft Laser",
+              0.3333333333,
+              0.3333333333,
+              0.3333333333,
+              0.3333333333
+            ],
+            [
+              "Exocraft Boost",
+              0.3333333333,
+              0.3333333333,
+              0.3333333333,
+              0.3333333333
+            ],
+            [
+              "Exocraft Engine",
+              0.3333333333,
+              0.3333333333,
+              0.3333333333,
+              0.3333333333
+            ],
+            [
+              "Humboldt Drive",
+              0.3333333333,
+              0.3333333333,
+              0.3333333333,
+              0.3333333333
+            ],
+            [
+              "Nautilon Cannon",
+              0.3333333333,
+              0.3333333333,
+              0.3333333333,
+              0.3333333333
+            ]
+          ]
+        },
+        "exosuit": {
+          "head": ["Module", "Class C", "Class B", "Class A", "Class S"],
+          "kinds": ["text", "share", "share", "share", "share"],
+          "note": "The exosuit merchant of an inhabited station, from the game's trade table: the chance a module is on sale. A dash is a class it never sells.",
+          "rows": [
+            [
+              "Underwater Protection",
+              null,
+              0.5217391304,
+              0.5217391304,
+              0.5217391304
+            ],
+            [
+              "Radiation Protection",
+              null,
+              0.5217391304,
+              0.5217391304,
+              0.5217391304
+            ],
+            [
+              "Toxic Protection",
+              null,
+              0.5217391304,
+              0.5217391304,
+              0.5217391304
+            ],
+            [
+              "Thermal Protection, cold",
+              null,
+              0.5217391304,
+              0.5217391304,
+              0.5217391304
+            ],
+            [
+              "Thermal Protection, heat",
+              null,
+              0.5217391304,
+              0.5217391304,
+              0.5217391304
+            ],
+            ["Life Support", 1, null, 0.5217391304, 0.5217391304],
+            ["Movement", 1, 0.5217391304, 0.5217391304, 0.5217391304],
+            ["Shield", 1, 0.5217391304, 0.5217391304, 0.5217391304]
+          ]
+        },
+        "multitool": {
+          "head": ["Module", "Class C", "Class B", "Class A", "Class S"],
+          "kinds": ["text", "share", "share", "share", "share"],
+          "note": "The multitool merchant of an inhabited station, from the game's trade table: the chance a module is on sale. A dash is a class it never sells.",
+          "rows": [
+            [
+              "Plasma Launcher",
+              0.3636363636,
+              0.3636363636,
+              0.3636363636,
+              0.3636363636
+            ],
+            [
+              "Geology Cannon",
+              0.3636363636,
+              0.3636363636,
+              0.3636363636,
+              0.3636363636
+            ],
+            [
+              "Neutron Cannon",
+              0.3636363636,
+              0.3636363636,
+              0.3636363636,
+              0.3636363636
+            ],
+            [
+              "Pulse Spitter",
+              0.3636363636,
+              0.3636363636,
+              0.3636363636,
+              0.3636363636
+            ],
+            [
+              "Scatter Blaster",
+              0.3636363636,
+              0.3636363636,
+              0.3636363636,
+              0.3636363636
+            ],
+            [
+              "Blaze Javelin",
+              0.3636363636,
+              0.3636363636,
+              0.3636363636,
+              0.3636363636
+            ],
+            ["Mining Beam", 1, 0.3636363636, 0.3636363636, 0.3636363636],
+            ["Scanner", 1, 0.3636363636, 0.3636363636, 0.3636363636],
+            ["Boltcaster", 1, 0.3636363636, 0.3636363636, 0.3636363636]
+          ]
+        },
+        "sets": {
+          "head": ["On one merchant", "Chance", "How rare"],
+          "kinds": ["text", "smallShare", "oneIn"],
+          "note": "The chance that one merchant sells every module of the set at class S at once.",
+          "rows": [
+            [
+              "Launch Thrusters, Pulse Engine, Hyperdrive, and Starship Shield at S",
+              0.01894697812,
+              52.77886497
+            ],
+            [
+              "Those four, Phase Beam, and Infra-Knife at S",
+              0.002383600826,
+              419.5333333
+            ],
+            ["All nine starship modules at S", 0.00007704033288, 12980.2139],
+            ["All nine multitool modules at S", 0.00002966258806, 33712.5],
+            ["All eight exosuit modules at S", 0.003332849678, 300.0435353],
+            ["All ten exocraft modules at S", 2.596515061e-7, 3851316]
+          ]
+        },
+        "starship": {
+          "head": ["Module", "Class C", "Class B", "Class A", "Class S"],
+          "kinds": ["text", "share", "share", "share", "share"],
+          "note": "The starship merchant of an inhabited station, from the game's trade table: the chance a module is on sale. A dash is a class it never sells.",
+          "rows": [
+            ["Photon Cannon", 0.375, 0.375, 0.375, 0.375],
+            ["Phase Beam", 0.375, 0.375, 0.375, 0.375],
+            ["Positron", 0.375, 0.375, 0.375, 0.375],
+            ["Infra-Knife", 0.375, 0.375, 0.375, 0.375],
+            ["Cyclotron", 0.375, 0.375, 0.375, 0.375],
+            ["Launch Thrusters", 1, 0.375, 0.375, 0.375],
+            ["Pulse Engine", 1, 0.375, 0.375, 0.375],
+            ["Hyperdrive", 1, 0.375, 0.375, 0.375],
+            ["Starship Shield", 1, 0.375, 0.375, 0.375],
+            ["Reactor", 1, 1, 1, 1]
+          ]
+        }
+      },
+      "title": "Station upgrade modules"
+    },
+    "systems": {
+      "fact": {
+        "t": "A star system holds up to six bodies, and {0} hold all six. A gas giant turns up in {1}, only at purple stars.",
+        "v": [
+          { "k": "share", "v": 0.4368974177 },
+          { "k": "share", "v": 0.01120793387 }
+        ]
+      },
+      "numbers": {
+        "giantCount": { "k": "about", "v": 710 },
+        "giants": { "k": "share", "v": 0.01120793387 },
+        "mostMoons": { "k": "about", "v": 5 },
+        "noMoons": { "k": "share", "v": 0.5710669964 },
+        "planets": { "k": "about", "v": 301596 },
+        "six": { "k": "share", "v": 0.4368974177 },
+        "systems": { "k": "about", "v": 63360 },
+        "two": { "k": "share", "v": 0.08542462562 },
+        "voxels": "1056"
+      },
+      "tables": {
+        "biomes": {
+          "head": ["Type", "Share"],
+          "kinds": ["text", "share"],
+          "note": "Planets and moons of Euclid.",
+          "rows": [
+            ["Gas Giant", 0.002354588836],
+            ["Waterworld", 0.004511754148],
+            ["Blue", 0.01685215354],
+            ["Red", 0.01688826536],
+            ["Green", 0.01735946004],
+            ["Lava", 0.02240863664],
+            ["Swamp", 0.02312751545],
+            ["Dead", 0.08087861152],
+            ["Barren", 0.09968681069],
+            ["Weird", 0.1005314004],
+            ["Radioactive", 0.1078296828],
+            ["Toxic", 0.1095838184],
+            ["Scorched", 0.1190957305],
+            ["Frozen", 0.1198197911],
+            ["Lush", 0.1590717806]
+          ]
+        },
+        "bodies": {
+          "head": ["Bodies, moons included", "Share"],
+          "kinds": ["text", "share"],
+          "note": "Stars of Euclid.",
+          "rows": [
+            ["2", 0.08542462562],
+            ["3", 0.1284826067],
+            ["4", 0.1636196775],
+            ["5", 0.1855756725],
+            ["6", 0.4368974177]
+          ]
+        },
+        "colours": {
+          "head": [
+            "Star",
+            "Share",
+            "Median bodies",
+            "Median moons",
+            "Gas giant"
+          ],
+          "kinds": ["text", "share", "median", "median", "share"],
+          "note": "Stars of Euclid.",
+          "rows": [
+            ["Blue", 0.07847259348, 5, 0, 0],
+            ["Red", 0.08002735816, 5, 0, 0],
+            ["Green", 0.0805006667, 5, 0, 0],
+            ["Purple", 0.1156952711, 5, 1, 0.09687460653],
+            ["Yellow", 0.6453041106, 5, 0, 0]
+          ]
+        },
+        "moons": {
+          "head": ["Moons", "Share"],
+          "kinds": ["text", "share"],
+          "note": "Stars of Euclid.",
+          "rows": [
+            ["0", 0.5710669964],
+            ["1", 0.2408793701],
+            ["2", 0.152444527],
+            ["3", 0.01998242878],
+            ["4", 0.002388322887],
+            ["5", 0.01323835482]
+          ]
+        },
+        "sizes": {
+          "head": ["Size", "Share"],
+          "kinds": ["text", "share"],
+          "note": "Planets and moons of Euclid.",
+          "rows": [
+            ["Moon, 15 km", 0.1431628662],
+            ["Small, 65 km", 0.2857053543],
+            ["Medium, 98 km", 0.2845216867],
+            ["Large, 130 km", 0.283088374],
+            ["Giant, 523 km", 0.003521718822]
+          ]
+        },
+        "stations": {
+          "head": ["Space station", "Share"],
+          "kinds": ["text", "share"],
+          "note": "Stars of Euclid.",
+          "rows": [
+            ["Abandoned", 0.05682386858],
+            ["Pirate", 0.08691673696],
+            ["Uncharted", 0.1473006167],
+            ["Inhabited", 0.7089587778]
+          ]
+        }
+      },
+      "title": "Star systems"
+    },
+    "where-to-look": {
+      "fact": {
+        "t": "Anywhere: there is no golden ring. A median system offers {0} tools at the core and {1} at the rim, and wealth matters more than distance.",
+        "v": [
+          { "k": "about", "v": 215910 },
+          { "k": "about", "v": 287065 }
+        ]
+      },
+      "numbers": {
+        "innerPirate": { "k": "share", "v": 0.1325817576 },
+        "innerStars": { "k": "about", "v": 593 },
+        "innerTools": { "k": "about", "v": 215910 },
+        "innerUncharted": { "k": "share", "v": 0.2329128526 },
+        "outerPirate": { "k": "share", "v": 0.0483063391 },
+        "outerStars": { "k": "about", "v": 595 },
+        "outerTools": { "k": "about", "v": 287065 },
+        "outerUncharted": { "k": "share", "v": 0.1268417338 }
+      },
+      "tables": {
+        "rings": {
+          "head": [
+            "From the core",
+            "Tools, median system",
+            "Class S, median",
+            "Class S, mean",
+            "Pirate",
+            "Uncharted",
+            "Wrecks, median system"
+          ],
+          "kinds": [
+            "text",
+            "median",
+            "median",
+            "count",
+            "share",
+            "share",
+            "median"
+          ],
+          "note": "Stars of Euclid, spread over the disc. Tools on offer in a system, at any class.",
+          "rows": [
+            [
+              {
+                "t": "{0} to {1} ly",
+                "v": [
+                  { "k": "count", "v": 0 },
+                  { "k": "count", "v": 100000 }
+                ]
+              },
+              215910,
+              1922,
+              3727,
+              0.1440444296,
+              0.2329128526,
+              3548
+            ],
+            [
+              {
+                "t": "{0} to {1} ly",
+                "v": [
+                  { "k": "count", "v": 100000 },
+                  { "k": "count", "v": 200000 }
+                ]
+              },
+              229644,
+              1861,
+              3429,
+              0.1325817576,
+              0.2141258353,
+              3599
+            ],
+            [
+              {
+                "t": "{0} to {1} ly",
+                "v": [
+                  { "k": "count", "v": 200000 },
+                  { "k": "count", "v": 300000 }
+                ]
+              },
+              234549,
+              2068,
+              3604,
+              0.1429836192,
+              0.192606176,
+              3648
+            ],
+            [
+              {
+                "t": "{0} to {1} ly",
+                "v": [
+                  { "k": "count", "v": 300000 },
+                  { "k": "count", "v": 400000 }
+                ]
+              },
+              242014,
+              2128,
+              3576,
+              0.1350967582,
+              0.1749128167,
+              3772
+            ],
+            [
+              {
+                "t": "{0} to {1} ly",
+                "v": [
+                  { "k": "count", "v": 400000 },
+                  { "k": "count", "v": 500000 }
+                ]
+              },
+              250204,
+              2321,
+              3632,
+              0.1357949927,
+              0.1519643907,
+              3839
+            ],
+            [
+              {
+                "t": "{0} to {1} ly",
+                "v": [
+                  { "k": "count", "v": 500000 },
+                  { "k": "count", "v": 600000 }
+                ]
+              },
+              275829,
+              2428,
+              3173,
+              0.07274966838,
+              0.1328316776,
+              3954
+            ],
+            [
+              {
+                "t": "{0} to {1} ly",
+                "v": [
+                  { "k": "count", "v": 600000 },
+                  { "k": "count", "v": 700000 }
+                ]
+              },
+              289121,
+              2461,
+              2945,
+              0.04884446716,
+              0.1268518243,
+              4024
+            ],
+            [
+              "Over 700,000 ly",
+              287065,
+              2483,
+              3006,
+              0.0483063391,
+              0.1268417338,
+              3989
+            ]
+          ]
+        },
+        "stars": {
+          "head": [
+            "From the core",
+            "Stars per voxel",
+            "Bodies",
+            "Yellow stars",
+            "Purple stars",
+            "Uncharted"
+          ],
+          "kinds": ["text", "median", "median", "share", "share", "share"],
+          "note": "Stars of Euclid, medians, spread over the disc out to 800,000 ly.",
+          "rows": [
+            [
+              "Under 200,000 ly",
+              593,
+              5,
+              0.508375534,
+              0.1195018908,
+              0.2188870343
+            ],
+            [
+              "200,000 to 400,000 ly",
+              593.5,
+              5,
+              0.5824770975,
+              0.1157344722,
+              0.1824213461
+            ],
+            [
+              "400,000 to 600,000 ly",
+              601,
+              5,
+              0.6561237465,
+              0.1177701245,
+              0.1415785336
+            ],
+            [
+              "Over 600,000 ly",
+              595,
+              5,
+              0.6826861865,
+              0.1137282774,
+              0.1268463886
+            ]
+          ]
+        }
+      },
+      "title": "Where to look"
+    }
+  }
+}

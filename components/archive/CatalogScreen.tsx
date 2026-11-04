@@ -12,6 +12,8 @@ import { useSnackbar } from "notistack";
 import { CatalogFilters } from "@/components/archive/CatalogFilters";
 import { CatalogList } from "@/components/archive/CatalogList";
 import { CatalogPagination } from "@/components/archive/CatalogPagination";
+import { SHIP_GUIDES, GUIDES } from "@/components/archive/RecordNote";
+import { FINDERS_ENABLED } from "@/lib/archive/features";
 import { catalogKey, isFiltered, type CatalogQuery } from "@/lib/archive/query";
 import { readCatalog } from "@/lib/archive/read";
 import { getBrowserSupabase } from "@/lib/db/supabase.browser";
@@ -62,9 +64,17 @@ export function CatalogScreen(props: {
   return (
     <Stack spacing={3}>
       {heading && query.kinds.length === 1 ? (
-        <Typography variant="h4">
-          <FormattedMessage id={`kind.${query.kinds[0]}`} />
-        </Typography>
+        <Stack spacing={1}>
+          <Typography variant="h4" component="h1">
+            <FormattedMessage id={`kinds.${query.kinds[0]}`} />
+          </Typography>
+          <Typography color="text.secondary">
+            <FormattedMessage
+              id={`kindLead.${query.kinds[0]}${FINDERS_ENABLED && query.kinds[0] === "ship" ? "Finders" : ""}`}
+              values={query.kinds[0] === "ship" ? SHIP_GUIDES : GUIDES}
+            />
+          </Typography>
+        </Stack>
       ) : null}
       <CatalogFilters pathname={pathname} query={query} />
       {list.isPending ? (

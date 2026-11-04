@@ -1,9 +1,7 @@
 "use client";
 
-import Link from "@mui/material/Link";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
-import NextLink from "next/link";
 import type { ReactNode } from "react";
 
 export function LegalDocument(props: {
@@ -20,15 +18,6 @@ export function LegalDocument(props: {
         Last updated: {props.updated}
       </Typography>
       {props.children}
-      <Typography variant="body2" color="text.secondary">
-        <Link component={NextLink} href="/privacy">
-          Privacy policy
-        </Link>
-        {" · "}
-        <Link component={NextLink} href="/terms">
-          Terms of service
-        </Link>
-      </Typography>
     </Stack>
   );
 }

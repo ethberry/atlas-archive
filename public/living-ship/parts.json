@@ -1,0 +1,137 @@
+{
+  "width": 1000,
+  "height": 600,
+  "layers": {
+    "_TopAcc_A": [422, 12, 496, 244],
+    "_TopHat_A2LOD0": [59, 254, 286, 123],
+    "_TopMid_B3LOD0": [325, 94, 627, 170],
+    "_backfeet_ALOD0": [520, 277, 296, 227],
+    "_backpedals_A1LOD0": [520, 277, 296, 227],
+    "_cockpit_ALOD0": [229, 158, 678, 339],
+    "_cockpit_B1LOD0": [116, 158, 791, 339],
+    "_cockpit_BLOD0": [15, 158, 892, 340],
+    "_cockpit_C5LOD0": [118, 158, 789, 339],
+    "_engine_aREF": [601, 208, 195, 137],
+    "_engine_bREF": [598, 211, 209, 136],
+    "_feet_ALOD0": [260, 272, 565, 280],
+    "_feet_BLOD0": [222, 268, 598, 313],
+    "_feet_CLOD0": [425, 207, 389, 339],
+    "_feet_DLOD0": [215, 393, 427, 195],
+    "_frontfeet_BLOD0": [111, 289, 578, 293],
+    "_wings_ALOD0": [263, 177, 604, 298],
+    "_wings_B3LOD0": [87, 177, 898, 333],
+    "base": [298, 185, 487, 329]
+  },
+  "tree": [
+    [
+      { "name": "_TopMid_B3LOD0", "layer": "_TopMid_B3LOD0", "groups": [] },
+      { "name": "_TopMid_Null1", "layer": "_TopMid_Null1", "groups": [] }
+    ],
+    [
+      { "name": "_TopAcc_A", "layer": "_TopAcc_A", "groups": [] },
+      { "name": "_TopAcc_Null", "layer": "_TopAcc_Null", "groups": [] },
+      { "name": "_TopAcc_Null1", "layer": "_TopAcc_Null1", "groups": [] }
+    ],
+    [
+      { "name": "_feet_ALOD0", "layer": "_feet_ALOD0", "groups": [] },
+      { "name": "_feet_BLOD0", "layer": "_feet_BLOD0", "groups": [] },
+      { "name": "_feet_CLOD0", "layer": "_feet_CLOD0", "groups": [] },
+      {
+        "name": "_feet_DLOD0",
+        "layer": "_feet_DLOD0",
+        "groups": [
+          [
+            {
+              "name": "_backfeet_NullLOD0",
+              "layer": "_backfeet_NullLOD0",
+              "groups": []
+            },
+            {
+              "name": "_backfeet_ALOD0",
+              "layer": "_backfeet_ALOD0",
+              "groups": []
+            }
+          ]
+        ]
+      },
+      {
+        "name": "_feet_E",
+        "layer": "_feet_E",
+        "groups": [
+          [
+            {
+              "name": "_frontfeet_BLOD0",
+              "layer": "_frontfeet_BLOD0",
+              "groups": []
+            },
+            {
+              "name": "_frontfeet_Null",
+              "layer": "_frontfeet_Null",
+              "groups": []
+            }
+          ],
+          [
+            {
+              "name": "_backpedals_A1LOD0",
+              "layer": "_backpedals_A1LOD0",
+              "groups": []
+            },
+            { "name": "_backpedals_B", "layer": "_backpedals_B", "groups": [] }
+          ]
+        ]
+      }
+    ],
+    [
+      {
+        "name": "_Cockpits_1",
+        "layer": "_Cockpits_1",
+        "groups": [
+          [
+            {
+              "name": "_cockpit_ALOD0",
+              "layer": "_cockpit_ALOD0",
+              "groups": []
+            },
+            {
+              "name": "_cockpit_BLOD0",
+              "layer": "_cockpit_BLOD0",
+              "groups": []
+            },
+            {
+              "name": "_cockpit_B1LOD0",
+              "layer": "_cockpit_B1LOD0",
+              "groups": []
+            },
+            {
+              "name": "_cockpit_C5LOD0",
+              "layer": "_cockpit_C5LOD0",
+              "groups": [
+                [
+                  {
+                    "name": "_TopHat_NullLOD0",
+                    "layer": "_TopHat_NullLOD0",
+                    "groups": []
+                  },
+                  {
+                    "name": "_TopHat_A2LOD0",
+                    "layer": "_TopHat_A2LOD0",
+                    "groups": []
+                  }
+                ]
+              ]
+            }
+          ]
+        ]
+      }
+    ],
+    [
+      { "name": "_engine_aREF", "layer": "_engine_aREF", "groups": [] },
+      { "name": "_engine_bREF", "layer": "_engine_bREF", "groups": [] }
+    ],
+    [
+      { "name": "_wings_ALOD0", "layer": "_wings_ALOD0", "groups": [] },
+      { "name": "_wings_B3LOD0", "layer": "_wings_B3LOD0", "groups": [] },
+      { "name": "_wings_Null", "layer": "_wings_Null", "groups": [] }
+    ]
+  ]
+}

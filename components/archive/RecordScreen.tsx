@@ -11,6 +11,7 @@ import { useSnackbar } from "notistack";
 import { AssetCard } from "@/components/archive/AssetCard";
 import { CatalogScreen } from "@/components/archive/CatalogScreen";
 import { ItemTabs } from "@/components/archive/ItemTabs";
+import { RecordNote } from "@/components/archive/RecordNote";
 import { RecordTrail } from "@/components/archive/RecordTrail";
 import { childKinds, type Kind } from "@/lib/archive/kinds";
 import type { CatalogQuery } from "@/lib/archive/query";
@@ -62,6 +63,7 @@ export function RecordScreen(props: {
       ) : null}
       {record.data ? <RecordTrail asset={record.data} /> : null}
       {record.data ? <AssetCard asset={record.data} /> : null}
+      {record.data ? <RecordNote asset={record.data} /> : null}
       {record.data && (kind === "planet" || kind === "building") ? (
         <ItemTabs
           anchor={{ ancestorId: id }}

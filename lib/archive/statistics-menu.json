@@ -1,0 +1,186 @@
+[
+  {
+    "pages": [
+      {
+        "slug": "galaxies",
+        "title": "Galaxies"
+      },
+      {
+        "slug": "where-to-look",
+        "title": "Where to look"
+      }
+    ],
+    "title": "Galaxies"
+  },
+  {
+    "pages": [
+      {
+        "slug": "systems",
+        "title": "Star systems"
+      },
+      {
+        "slug": "economy",
+        "title": "Economy"
+      },
+      {
+        "slug": "races",
+        "title": "Races"
+      }
+    ],
+    "title": "Systems"
+  },
+  {
+    "pages": [
+      {
+        "slug": "space-stations",
+        "title": "Space stations"
+      },
+      {
+        "slug": "station-upgrades",
+        "title": "Station upgrade modules"
+      }
+    ],
+    "title": "Stations"
+  },
+  {
+    "pages": [
+      {
+        "slug": "freighters",
+        "title": "Freighters"
+      },
+      {
+        "slug": "dreadnoughts",
+        "title": "Dreadnoughts"
+      },
+      {
+        "slug": "freighter-modules",
+        "title": "Freighter modules"
+      },
+      {
+        "slug": "frigates",
+        "title": "Frigates"
+      },
+      {
+        "slug": "organic-frigates",
+        "title": "Organic frigates"
+      },
+      {
+        "slug": "sentinel-capital-ship",
+        "title": "Sentinel capital ship"
+      }
+    ],
+    "title": "Freighters"
+  },
+  {
+    "pages": [
+      {
+        "slug": "sources-by-size",
+        "title": "Sources by planet size"
+      },
+      {
+        "slug": "sources-by-type",
+        "title": "Sources by planet type"
+      },
+      {
+        "slug": "empty-worlds",
+        "title": "Empty worlds"
+      },
+      {
+        "slug": "sentinels-and-dissonance",
+        "title": "Sentinels and dissonance"
+      }
+    ],
+    "title": "Planets"
+  },
+  {
+    "pages": [
+      {
+        "slug": "multitool-types",
+        "title": "Multitool types"
+      },
+      {
+        "slug": "multitool-classes",
+        "title": "Multitool classes"
+      },
+      {
+        "slug": "multitool-stats",
+        "title": "Multitool stats"
+      },
+      {
+        "slug": "multitool-upgrades",
+        "title": "How to upgrade a multitool"
+      },
+      {
+        "slug": "figures",
+        "title": "Tetris figures"
+      },
+      {
+        "slug": "square",
+        "title": "The square on a multitool"
+      },
+      {
+        "slug": "staffs",
+        "title": "Staffs"
+      }
+    ],
+    "title": "Multitools"
+  },
+  {
+    "pages": [
+      {
+        "slug": "ship-types",
+        "title": "Ship types"
+      },
+      {
+        "slug": "ship-classes",
+        "title": "Ship classes"
+      },
+      {
+        "slug": "ship-stats",
+        "title": "Ship stats"
+      },
+      {
+        "slug": "ship-upgrades",
+        "title": "How to upgrade a ship"
+      },
+      {
+        "slug": "ship-figures",
+        "title": "Ship figures"
+      },
+      {
+        "slug": "ship-square",
+        "title": "The square on a ship"
+      },
+      {
+        "slug": "interceptors",
+        "title": "Interceptors"
+      },
+      {
+        "slug": "living-ships",
+        "title": "Living ships"
+      }
+    ],
+    "title": "Ships"
+  },
+  {
+    "pages": [
+      {
+        "slug": "creature-roles",
+        "title": "Creature roles"
+      },
+      {
+        "slug": "creature-grades",
+        "title": "Creature grades"
+      },
+      {
+        "slug": "creature-stats",
+        "title": "Creature stats"
+      },
+      {
+        "slug": "creature-affinity",
+        "title": "Creature affinity"
+      }
+    ],
+    "title": "Creatures"
+  }
+]

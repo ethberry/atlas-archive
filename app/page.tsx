@@ -8,6 +8,9 @@ import { createArchiveClient } from "@/lib/db/supabase.server";
 import { getQueryClient } from "@/lib/query-client";
 
 export const metadata: Metadata = {
+  title: "Best items in No Man's Sky and where to find them — Atlas Archive",
+  description:
+    "How to get the best item in No Man's Sky: multitools and crashed ships with four adjacent supercharged slots and all-S creatures, with portal glyphs, plus guides to where each one comes from.",
   alternates: { canonical: "/" },
 };
 

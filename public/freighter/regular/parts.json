@@ -1,0 +1,2457 @@
+{
+  "width": 1200,
+  "height": 472,
+  "layers": {
+    "_Bridge_A1": [169, 150, 74, 47],
+    "_Bridge_B1": [203, 130, 28, 67],
+    "_Cargo_A15": [329, 166, 226, 120],
+    "_Cargo_A15._CargoSmall_A": [344, 224, 193, 71],
+    "_Cargo_A15._CargoSmall_B": [349, 228, 185, 71],
+    "_Cargo_A15._CargoSmall_C": [352, 230, 182, 61],
+    "_Cargo_A15._Cargo_A": [377, 194, 128, 51],
+    "_Cargo_A15._Cargo_B": [349, 189, 185, 71],
+    "_Cargo_A15._Cargo_C": [352, 191, 182, 62],
+    "_Cargo_A16": [471, 150, 226, 120],
+    "_Cargo_A16._CargoSmall_A": [487, 208, 193, 71],
+    "_Cargo_A16._CargoSmall_B": [492, 213, 184, 70],
+    "_Cargo_A16._CargoSmall_C": [494, 214, 182, 62],
+    "_Cargo_A16._Cargo_A": [520, 179, 127, 50],
+    "_Cargo_A16._Cargo_B": [492, 174, 184, 70],
+    "_Cargo_A16._Cargo_C": [494, 175, 182, 62],
+    "_Cargo_A17": [614, 135, 226, 120],
+    "_Cargo_A17._CargoSmall_A": [629, 192, 193, 72],
+    "_Cargo_A17._CargoSmall_B": [634, 197, 185, 70],
+    "_Cargo_A17._CargoSmall_C": [637, 199, 182, 61],
+    "_Cargo_A17._Cargo_A": [662, 163, 128, 50],
+    "_Cargo_A17._Cargo_B": [634, 158, 185, 70],
+    "_Cargo_A17._Cargo_C": [637, 160, 182, 61],
+    "_Cargo_A18": [757, 105, 366, 134],
+    "_Cargo_A18._CargoSmall_A": [772, 176, 193, 72],
+    "_Cargo_A18._CargoSmall_B": [777, 181, 185, 70],
+    "_Cargo_A18._CargoSmall_C": [779, 183, 182, 61],
+    "_Cargo_A18._Cargo_A": [805, 147, 127, 50],
+    "_Cargo_A18._Cargo_B": [777, 142, 185, 70],
+    "_Cargo_A18._Cargo_C": [779, 144, 182, 61],
+    "_Cargo_A18._Cargo_ContA": [947, 131, 128, 51],
+    "_Cargo_A18._Cargo_ContB": [919, 126, 185, 71],
+    "_Cargo_A18._Cargo_ContC": [933, 131, 164, 57],
+    "_Cargo_A18._GantryAcc_1": [1016, 114, 161, 208],
+    "_Cargo_A18._SmallCargo_A": [904, 170, 119, 63],
+    "_Cargo_A18._SmallCargo_B": [907, 174, 120, 62],
+    "_Cargo_A18._SmallCargo_C": [904, 176, 120, 54],
+    "_Cargo_ABot10": [614, 172, 225, 83],
+    "_Cargo_ABot10._CargoB_A": [629, 192, 193, 72],
+    "_Cargo_ABot10._CargoB_B": [634, 197, 185, 70],
+    "_Cargo_ABot10._CargoB_C": [637, 199, 182, 61],
+    "_Cargo_ABot11": [757, 157, 299, 82],
+    "_Cargo_ABot11._CargoB_A": [772, 170, 251, 78],
+    "_Cargo_ABot11._CargoB_B": [777, 174, 250, 77],
+    "_Cargo_ABot11._CargoB_C": [779, 176, 245, 68],
+    "_Cargo_ABot12": [614, 137, 225, 118],
+    "_Cargo_ABot12._CargoB_A": [629, 163, 193, 101],
+    "_Cargo_ABot12._CargoB_B": [634, 158, 185, 109],
+    "_Cargo_ABot12._CargoB_C": [637, 162, 182, 98],
+    "_Cargo_ABot13": [757, 157, 299, 82],
+    "_Cargo_ABot13._CargoB_A": [772, 170, 251, 78],
+    "_Cargo_ABot13._CargoB_B": [777, 174, 250, 77],
+    "_Cargo_ABot13._CargoB_C": [779, 176, 245, 68],
+    "_Cargo_ABot14": [757, 122, 299, 117],
+    "_Cargo_ABot14._CargoB_A": [772, 147, 251, 101],
+    "_Cargo_ABot14._CargoB_B": [777, 142, 250, 109],
+    "_Cargo_ABot14._CargoB_C": [779, 146, 245, 98],
+    "_Cargo_ABot5": [329, 169, 224, 117],
+    "_Cargo_ABot5._CargoB_A": [344, 194, 193, 101],
+    "_Cargo_ABot5._CargoB_B": [349, 189, 185, 110],
+    "_Cargo_ABot5._CargoB_C": [352, 194, 182, 97],
+    "_Cargo_ABot6": [471, 188, 225, 83],
+    "_Cargo_ABot6._CargoB_A": [487, 208, 193, 71],
+    "_Cargo_ABot6._CargoB_B": [492, 213, 184, 70],
+    "_Cargo_ABot6._CargoB_C": [494, 214, 182, 62],
+    "_Cargo_ABot7": [614, 172, 225, 83],
+    "_Cargo_ABot7._CargoB_A": [629, 192, 193, 72],
+    "_Cargo_ABot7._CargoB_B": [634, 197, 185, 70],
+    "_Cargo_ABot7._CargoB_C": [637, 199, 182, 61],
+    "_Cargo_ABot8": [757, 157, 299, 82],
+    "_Cargo_ABot8._CargoB_A": [772, 170, 251, 78],
+    "_Cargo_ABot8._CargoB_B": [777, 174, 250, 77],
+    "_Cargo_ABot8._CargoB_C": [779, 176, 245, 68],
+    "_Cargo_ABot9": [471, 153, 225, 118],
+    "_Cargo_ABot9._CargoB_A": [487, 179, 193, 100],
+    "_Cargo_ABot9._CargoB_B": [492, 174, 184, 109],
+    "_Cargo_ABot9._CargoB_C": [494, 178, 182, 98],
+    "_Cargo_CapB10": [756, 173, 158, 67],
+    "_Cargo_CapB10._CargoB_A": [762, 186, 119, 63],
+    "_Cargo_CapB10._CargoB_B": [765, 190, 120, 61],
+    "_Cargo_CapB10._CargoB_C": [762, 192, 120, 54],
+    "_Cargo_CapB5": [471, 204, 157, 68],
+    "_Cargo_CapB5._CargoB_A": [477, 217, 119, 63],
+    "_Cargo_CapB5._CargoB_B": [480, 221, 120, 62],
+    "_Cargo_CapB5._CargoB_C": [476, 223, 121, 55],
+    "_Cargo_CapB6": [614, 186, 157, 70],
+    "_Cargo_CapB6._CargoB_A": [619, 201, 119, 64],
+    "_Cargo_CapB6._CargoB_B": [622, 205, 120, 62],
+    "_Cargo_CapB6._CargoB_C": [619, 207, 120, 55],
+    "_Cargo_CapB7": [756, 173, 158, 67],
+    "_Cargo_CapB7._CargoB_A": [762, 186, 119, 63],
+    "_Cargo_CapB7._CargoB_B": [765, 190, 120, 61],
+    "_Cargo_CapB7._CargoB_C": [762, 192, 120, 54],
+    "_Cargo_CapB8": [614, 186, 157, 70],
+    "_Cargo_CapB8._CargoB_A": [619, 201, 119, 64],
+    "_Cargo_CapB8._CargoB_B": [622, 205, 120, 62],
+    "_Cargo_CapB8._CargoB_C": [619, 207, 120, 55],
+    "_Cargo_CapB9": [756, 173, 158, 67],
+    "_Cargo_CapB9._CargoB_A": [762, 186, 119, 63],
+    "_Cargo_CapB9._CargoB_B": [765, 190, 120, 61],
+    "_Cargo_CapB9._CargoB_C": [762, 192, 120, 54],
+    "_Cargo_CapD1": [329, 169, 224, 118],
+    "_Cargo_CapD1._Cargo_ContA": [377, 194, 128, 51],
+    "_Cargo_CapD1._Cargo_ContB": [349, 189, 185, 71],
+    "_Cargo_CapD1._Cargo_ContC": [363, 194, 163, 57],
+    "_Cargo_CapD1._GantryAcc_1": [446, 177, 161, 208],
+    "_Cargo_CapD1._SmallCargo_A": [334, 233, 119, 63],
+    "_Cargo_CapD1._SmallCargo_B": [337, 237, 120, 62],
+    "_Cargo_CapD1._SmallCargo_C": [334, 239, 120, 54],
+    "_Cargo_CapD2": [471, 153, 225, 119],
+    "_Cargo_CapD2._Cargo_ContA": [520, 179, 127, 50],
+    "_Cargo_CapD2._Cargo_ContB": [492, 174, 184, 70],
+    "_Cargo_CapD2._Cargo_ContC": [506, 178, 163, 57],
+    "_Cargo_CapD2._GantryAcc_1": [589, 161, 162, 209],
+    "_Cargo_CapD2._SmallCargo_A": [477, 217, 119, 63],
+    "_Cargo_CapD2._SmallCargo_B": [480, 221, 120, 62],
+    "_Cargo_CapD2._SmallCargo_C": [476, 223, 121, 55],
+    "_Cargo_CapD3": [614, 137, 224, 119],
+    "_Cargo_CapD3._Cargo_ContA": [662, 163, 128, 50],
+    "_Cargo_CapD3._Cargo_ContB": [634, 158, 185, 70],
+    "_Cargo_CapD3._Cargo_ContC": [648, 162, 164, 57],
+    "_Cargo_CapD3._GantryAcc_1": [731, 146, 165, 208],
+    "_Cargo_CapD3._SmallCargo_A": [619, 201, 119, 64],
+    "_Cargo_CapD3._SmallCargo_B": [622, 205, 120, 62],
+    "_Cargo_CapD3._SmallCargo_C": [619, 207, 120, 55],
+    "_Cargo_CapD4": [757, 122, 224, 118],
+    "_Cargo_CapD4._Cargo_ContA": [805, 147, 127, 50],
+    "_Cargo_CapD4._Cargo_ContB": [777, 142, 185, 70],
+    "_Cargo_CapD4._Cargo_ContC": [791, 146, 163, 57],
+    "_Cargo_CapD4._GantryAcc_1": [874, 130, 165, 208],
+    "_Cargo_CapD4._SmallCargo_A": [762, 186, 119, 63],
+    "_Cargo_CapD4._SmallCargo_B": [765, 190, 120, 61],
+    "_Cargo_CapD4._SmallCargo_C": [762, 192, 120, 54],
+    "_Cargo_CapT10": [757, 122, 224, 67],
+    "_Cargo_CapT10._CargoB_A": [805, 147, 127, 50],
+    "_Cargo_CapT10._CargoB_B": [777, 142, 185, 70],
+    "_Cargo_CapT10._CargoB_C": [791, 146, 163, 57],
+    "_Cargo_CapT5": [471, 153, 225, 67],
+    "_Cargo_CapT5._CargoB_A": [520, 179, 127, 50],
+    "_Cargo_CapT5._CargoB_B": [492, 174, 184, 70],
+    "_Cargo_CapT5._CargoB_C": [506, 178, 163, 57],
+    "_Cargo_CapT6": [614, 137, 224, 68],
+    "_Cargo_CapT6._CargoB_A": [662, 163, 128, 50],
+    "_Cargo_CapT6._CargoB_B": [634, 158, 185, 70],
+    "_Cargo_CapT6._CargoB_C": [648, 162, 164, 57],
+    "_Cargo_CapT7": [757, 122, 224, 67],
+    "_Cargo_CapT7._CargoB_A": [805, 147, 127, 50],
+    "_Cargo_CapT7._CargoB_B": [777, 142, 185, 70],
+    "_Cargo_CapT7._CargoB_C": [791, 146, 163, 57],
+    "_Cargo_CapT8": [614, 137, 224, 68],
+    "_Cargo_CapT8._CargoB_A": [662, 163, 128, 50],
+    "_Cargo_CapT8._CargoB_B": [634, 158, 185, 70],
+    "_Cargo_CapT8._CargoB_C": [648, 162, 164, 57],
+    "_Cargo_CapT9": [757, 122, 224, 67],
+    "_Cargo_CapT9._CargoB_A": [805, 147, 127, 50],
+    "_Cargo_CapT9._CargoB_B": [777, 142, 185, 70],
+    "_Cargo_CapT9._CargoB_C": [791, 146, 163, 57],
+    "_Cargo_D": [301, 138, 614, 138],
+    "_Cargo_E10._CargoB_A": [312, 190, 168, 78],
+    "_Cargo_E10._CargoB_B": [315, 195, 155, 70],
+    "_Cargo_E10._CargoB_B._Container_A1": [296, 198, 215, 91],
+    "_Cargo_E10._CargoB_B._Container_B2": [320, 198, 169, 92],
+    "_Cargo_E10._CargoB_C": [318, 191, 166, 76],
+    "_Cargo_E11._CargoB_A": [210, 202, 168, 77],
+    "_Cargo_E11._CargoB_B": [213, 206, 155, 70],
+    "_Cargo_E11._CargoB_B._Container_A1": [194, 209, 215, 91],
+    "_Cargo_E11._CargoB_B._Container_B2": [218, 210, 170, 91],
+    "_Cargo_E11._CargoB_C": [216, 202, 166, 76],
+    "_Cargo_E4._CargoB_A": [414, 179, 168, 77],
+    "_Cargo_E4._CargoB_B": [417, 184, 155, 70],
+    "_Cargo_E4._CargoB_B._Container_A1": [398, 187, 215, 90],
+    "_Cargo_E4._CargoB_B._Container_B2": [422, 187, 170, 91],
+    "_Cargo_E4._CargoB_C": [420, 180, 166, 75],
+    "_Cargo_E5._CargoB_A": [516, 168, 168, 77],
+    "_Cargo_E5._CargoB_B": [519, 172, 155, 71],
+    "_Cargo_E5._CargoB_B._Container_A1": [500, 175, 215, 91],
+    "_Cargo_E5._CargoB_B._Container_B2": [524, 176, 170, 91],
+    "_Cargo_E5._CargoB_C": [522, 168, 166, 76],
+    "_Cargo_E6._CargoB_A": [617, 157, 168, 77],
+    "_Cargo_E6._CargoB_B": [620, 161, 155, 70],
+    "_Cargo_E6._CargoB_B._Container_A1": [601, 164, 215, 91],
+    "_Cargo_E6._CargoB_B._Container_B2": [625, 165, 170, 91],
+    "_Cargo_E6._CargoB_C": [623, 157, 166, 76],
+    "_Cargo_EndA": [880, 79, 131, 174],
+    "_Cargo_EndB": [859, 55, 279, 223],
+    "_Cargo_EndC": [395, 157, 477, 112],
+    "_Cargo_EndE._GantryBcapbridge_A._CapBbridge_A": [354, 162, 216, 83],
+    "_Cargo_EndE._GantryBcapbridge_A._CapBbridge_B": [427, 136, 158, 131],
+    "_Cargo_EndE._GantryBcapbridge_A._CapBbridge_C": [437, 153, 171, 125],
+    "_Cargo_EndE._GantryBcapbridge_A._CapBbridge_D": [417, 116, 314, 157],
+    "_Cargo_EndE10": [346, 176, 361, 107],
+    "_Cargo_EndE10._GantryBcapbridge_A._CapBbridge_A": [658, 128, 217, 83],
+    "_Cargo_EndE10._GantryBcapbridge_A._CapBbridge_B": [732, 106, 160, 127],
+    "_Cargo_EndE10._GantryBcapbridge_A._CapBbridge_C": [743, 120, 170, 124],
+    "_Cargo_EndE10._GantryBcapbridge_A._CapBbridge_D": [723, 82, 313, 157],
+    "_Cargo_EndE2": [402, 176, 206, 89],
+    "_Cargo_EndE2._GantryBcapbridge_A._CapBbridge_A": [557, 139, 216, 83],
+    "_Cargo_EndE2._GantryBcapbridge_A._CapBbridge_B": [630, 121, 162, 123],
+    "_Cargo_EndE2._GantryBcapbridge_A._CapBbridge_C": [641, 131, 170, 124],
+    "_Cargo_EndE2._GantryBcapbridge_A._CapBbridge_D": [621, 93, 314, 157],
+    "_Cargo_EndE6": [302, 188, 205, 88],
+    "_Cargo_EndE6._GantryBcapbridge_A._CapBbridge_A": [456, 151, 217, 82],
+    "_Cargo_EndE6._GantryBcapbridge_A._CapBbridge_B": [530, 134, 163, 121],
+    "_Cargo_EndE6._GantryBcapbridge_A._CapBbridge_C": [540, 128, 170, 138],
+    "_Cargo_EndE6._GantryBcapbridge_A._CapBbridge_D": [520, 116, 314, 158],
+    "_Cargo_JointtB": [704, 54, 149, 266],
+    "_Cargo_JointtB1": [842, 69, 152, 209],
+    "_Cargo_Top10": [614, 135, 225, 82],
+    "_Cargo_Top10._CargoB_A": [629, 153, 193, 72],
+    "_Cargo_Top10._CargoB_B": [634, 158, 185, 70],
+    "_Cargo_Top10._CargoB_C": [637, 160, 182, 61],
+    "_Cargo_Top11": [757, 105, 366, 96],
+    "_Cargo_Top11._CargoB_A": [772, 131, 303, 78],
+    "_Cargo_Top11._CargoB_B": [777, 126, 327, 86],
+    "_Cargo_Top11._CargoB_C": [779, 131, 318, 74],
+    "_Cargo_Top12": [614, 135, 225, 121],
+    "_Cargo_Top12._CargoB_A": [619, 153, 203, 112],
+    "_Cargo_Top12._CargoB_B": [622, 158, 197, 109],
+    "_Cargo_Top12._CargoB_C": [619, 160, 200, 102],
+    "_Cargo_Top13": [757, 105, 366, 96],
+    "_Cargo_Top13._CargoB_A": [772, 131, 303, 78],
+    "_Cargo_Top13._CargoB_B": [777, 126, 327, 86],
+    "_Cargo_Top13._CargoB_C": [779, 131, 318, 74],
+    "_Cargo_Top14": [756, 105, 367, 135],
+    "_Cargo_Top14._CargoB_A": [762, 131, 313, 118],
+    "_Cargo_Top14._CargoB_B": [765, 126, 339, 125],
+    "_Cargo_Top14._CargoB_C": [762, 131, 335, 115],
+    "_Cargo_Top5": [328, 166, 225, 121],
+    "_Cargo_Top5._CargoB_A": [334, 185, 203, 111],
+    "_Cargo_Top5._CargoB_B": [337, 189, 197, 110],
+    "_Cargo_Top5._CargoB_C": [334, 191, 200, 102],
+    "_Cargo_Top6": [471, 151, 225, 82],
+    "_Cargo_Top6._CargoB_A": [487, 169, 193, 71],
+    "_Cargo_Top6._CargoB_B": [492, 174, 184, 70],
+    "_Cargo_Top6._CargoB_C": [494, 175, 182, 62],
+    "_Cargo_Top7": [614, 135, 225, 82],
+    "_Cargo_Top7._CargoB_A": [629, 153, 193, 72],
+    "_Cargo_Top7._CargoB_B": [634, 158, 185, 70],
+    "_Cargo_Top7._CargoB_C": [637, 160, 182, 61],
+    "_Cargo_Top8": [757, 105, 366, 96],
+    "_Cargo_Top8._CargoB_A": [772, 131, 303, 78],
+    "_Cargo_Top8._CargoB_B": [777, 126, 327, 86],
+    "_Cargo_Top8._CargoB_C": [779, 131, 318, 74],
+    "_Cargo_Top9": [471, 151, 225, 121],
+    "_Cargo_Top9._CargoB_A": [477, 169, 203, 111],
+    "_Cargo_Top9._CargoB_B": [480, 174, 196, 109],
+    "_Cargo_Top9._CargoB_C": [476, 175, 200, 103],
+    "_Engine_A": [122, 217, 131, 112],
+    "_Engine_B": [136, 218, 115, 109],
+    "_Engine_C2": [128, 216, 119, 111],
+    "_HullABot_B5": [172, 300, 111, 55],
+    "_HullABot_B6": [185, 277, 221, 125],
+    "_HullATop_A._Hull_Top._HullTop_A": [153, 59, 111, 170],
+    "_HullATop_A._Hull_Top._HullTop_B": [153, 150, 91, 77],
+    "_HullATop_B": [159, 179, 111, 55],
+    "_HullBBot_B3": [154, 252, 221, 122],
+    "_HullBBot_B4": [150, 270, 111, 55],
+    "_HullBTop_A._Hull_Top._HullTop_A": [130, 60, 111, 171],
+    "_HullBTop_A._Hull_Top._HullTop_B": [130, 153, 91, 77],
+    "_HullBTop_B3": [138, 185, 111, 56],
+    "_HullSide_A1": [202, 237, 91, 89],
+    "_HullSide_B": [165, 231, 160, 87],
+    "_HullWings_A": [109, 197, 197, 113],
+    "_HullWings_B": [77, 208, 253, 108],
+    "_HullWings_C": [18, 191, 289, 129],
+    "_Hull_A": [122, 199, 185, 139],
+    "_Hull_A.Cargo_A": [170, 182, 242, 120],
+    "_Hull_A._CargoSmall_A": [202, 239, 193, 72],
+    "_Hull_A._CargoSmall_B": [207, 244, 184, 70],
+    "_Hull_A._CargoSmall_C": [209, 246, 182, 61],
+    "_Hull_A._Cargo_A": [235, 210, 127, 50],
+    "_Hull_A._Cargo_B": [207, 205, 184, 70],
+    "_Hull_A._Cargo_C": [209, 207, 182, 61],
+    "_Hull_B": [105, 205, 180, 104],
+    "_SideAcc1_A1": [341, 187, 96, 66],
+    "_SideAcc2_A1": [483, 172, 96, 66],
+    "_SideAcc3_A1": [625, 156, 96, 66],
+    "_SideAcc4_A1": [771, 140, 96, 66],
+    "_VerticalFin_A": [175, 99, 46, 115],
+    "_VerticalFin_A1": [167, 88, 42, 115],
+    "_VerticalFin_A10": [1057, 18, 43, 115],
+    "_VerticalFin_A2": [175, 308, 45, 121],
+    "_VerticalFin_A3": [195, 337, 47, 124],
+    "_VerticalFin_A4": [181, 110, 40, 120],
+    "_VerticalFin_A5": [217, 91, 40, 115],
+    "_VerticalFin_A6": [1057, 18, 43, 115],
+    "_VerticalFin_A7": [1057, 18, 43, 115],
+    "_VerticalFin_A8": [1057, 18, 43, 115],
+    "_VerticalFin_A9": [1057, 18, 43, 115]
+  },
+  "tree": [
+    [
+      {
+        "name": "_Hull_A",
+        "layer": "_Hull_A",
+        "groups": [
+          [{ "name": "Cargo_A", "layer": "_Hull_A.Cargo_A", "groups": [] }],
+          [
+            { "name": "_HullSide_A1", "layer": "_HullSide_A1", "groups": [] },
+            { "name": "_HullSide_B", "layer": "_HullSide_B", "groups": [] }
+          ],
+          [
+            {
+              "name": "_HullATop_B",
+              "layer": "_HullATop_B",
+              "groups": [
+                [
+                  {
+                    "name": "_Bridge_A1",
+                    "layer": "_Bridge_A1",
+                    "groups": [
+                      [
+                        {
+                          "name": "_VerticalFin_A4",
+                          "layer": "_VerticalFin_A4",
+                          "groups": []
+                        },
+                        {
+                          "name": "_VerticalFin_None4",
+                          "layer": "_VerticalFin_None4",
+                          "groups": []
+                        }
+                      ]
+                    ]
+                  },
+                  {
+                    "name": "_Bridge_B1",
+                    "layer": "_Bridge_B1",
+                    "groups": [
+                      [
+                        {
+                          "name": "_VerticalFin_None5",
+                          "layer": "_VerticalFin_None5",
+                          "groups": []
+                        },
+                        {
+                          "name": "_VerticalFin_A5",
+                          "layer": "_VerticalFin_A5",
+                          "groups": []
+                        }
+                      ]
+                    ]
+                  }
+                ]
+              ]
+            },
+            {
+              "name": "_HullATop_A",
+              "layer": "_HullATop_A",
+              "groups": [
+                [
+                  {
+                    "name": "_Hull_Top",
+                    "layer": "_HullATop_A._Hull_Top",
+                    "groups": [
+                      [
+                        {
+                          "name": "_HullTop_A",
+                          "layer": "_HullATop_A._Hull_Top._HullTop_A",
+                          "groups": []
+                        },
+                        {
+                          "name": "_HullTop_B",
+                          "layer": "_HullATop_A._Hull_Top._HullTop_B",
+                          "groups": []
+                        }
+                      ]
+                    ]
+                  }
+                ]
+              ]
+            }
+          ],
+          [
+            {
+              "name": "_HullABot_B5",
+              "layer": "_HullABot_B5",
+              "groups": [
+                [
+                  {
+                    "name": "_VerticalFin_A3",
+                    "layer": "_VerticalFin_A3",
+                    "groups": []
+                  },
+                  {
+                    "name": "_VerticalFin_None3",
+                    "layer": "_VerticalFin_None3",
+                    "groups": []
+                  }
+                ]
+              ]
+            },
+            { "name": "_HullABot_B6", "layer": "_HullABot_B6", "groups": [] }
+          ],
+          [
+            { "name": "_Engine_A", "layer": "_Engine_A", "groups": [] },
+            { "name": "_Engine_B", "layer": "_Engine_B", "groups": [] },
+            { "name": "_Engine_C2", "layer": "_Engine_C2", "groups": [] }
+          ],
+          [
+            {
+              "name": "_Cargo_CapD1",
+              "layer": "_Cargo_CapD1",
+              "groups": [
+                [
+                  {
+                    "name": "_GantryAcc_1",
+                    "layer": "_Cargo_CapD1._GantryAcc_1",
+                    "groups": []
+                  },
+                  {
+                    "name": "_GantryAcc_2",
+                    "layer": "_Cargo_CapD1._GantryAcc_2",
+                    "groups": []
+                  }
+                ],
+                [
+                  {
+                    "name": "_SmallCargo_A",
+                    "layer": "_Cargo_CapD1._SmallCargo_A",
+                    "groups": []
+                  },
+                  {
+                    "name": "_SmallCargo_B",
+                    "layer": "_Cargo_CapD1._SmallCargo_B",
+                    "groups": []
+                  },
+                  {
+                    "name": "_SmallCargo_C",
+                    "layer": "_Cargo_CapD1._SmallCargo_C",
+                    "groups": []
+                  }
+                ],
+                [
+                  {
+                    "name": "_Cargo_ContA",
+                    "layer": "_Cargo_CapD1._Cargo_ContA",
+                    "groups": []
+                  },
+                  {
+                    "name": "_Cargo_ContB",
+                    "layer": "_Cargo_CapD1._Cargo_ContB",
+                    "groups": []
+                  },
+                  {
+                    "name": "_Cargo_ContC",
+                    "layer": "_Cargo_CapD1._Cargo_ContC",
+                    "groups": []
+                  }
+                ]
+              ]
+            },
+            {
+              "name": "_Cargo_A15",
+              "layer": "_Cargo_A15",
+              "groups": [
+                [
+                  {
+                    "name": "_SideAcc1_A1",
+                    "layer": "_SideAcc1_A1",
+                    "groups": []
+                  },
+                  {
+                    "name": "_SideAcc1_None1",
+                    "layer": "_SideAcc1_None1",
+                    "groups": []
+                  }
+                ],
+                [
+                  {
+                    "name": "_Cargo_Top9",
+                    "layer": "_Cargo_Top9",
+                    "groups": [
+                      [
+                        {
+                          "name": "_Cargo_CapT8",
+                          "layer": "_Cargo_CapT8",
+                          "groups": [
+                            [
+                              {
+                                "name": "_CargoB_A",
+                                "layer": "_Cargo_CapT8._CargoB_A",
+                                "groups": []
+                              },
+                              {
+                                "name": "_CargoB_B",
+                                "layer": "_Cargo_CapT8._CargoB_B",
+                                "groups": []
+                              },
+                              {
+                                "name": "_CargoB_C",
+                                "layer": "_Cargo_CapT8._CargoB_C",
+                                "groups": []
+                              }
+                            ]
+                          ]
+                        },
+                        {
+                          "name": "_Cargo_Top10",
+                          "layer": "_Cargo_Top10",
+                          "groups": [
+                            [
+                              {
+                                "name": "_Cargo_CapT9",
+                                "layer": "_Cargo_CapT9",
+                                "groups": [
+                                  [
+                                    {
+                                      "name": "_CargoB_A",
+                                      "layer": "_Cargo_CapT9._CargoB_A",
+                                      "groups": []
+                                    },
+                                    {
+                                      "name": "_CargoB_B",
+                                      "layer": "_Cargo_CapT9._CargoB_B",
+                                      "groups": []
+                                    },
+                                    {
+                                      "name": "_CargoB_C",
+                                      "layer": "_Cargo_CapT9._CargoB_C",
+                                      "groups": []
+                                    }
+                                  ]
+                                ]
+                              },
+                              {
+                                "name": "_Cargo_Top11",
+                                "layer": "_Cargo_Top11",
+                                "groups": [
+                                  [
+                                    {
+                                      "name": "_VerticalFin_A6",
+                                      "layer": "_VerticalFin_A6",
+                                      "groups": []
+                                    }
+                                  ],
+                                  [
+                                    {
+                                      "name": "_CargoB_A",
+                                      "layer": "_Cargo_Top11._CargoB_A",
+                                      "groups": []
+                                    },
+                                    {
+                                      "name": "_CargoB_B",
+                                      "layer": "_Cargo_Top11._CargoB_B",
+                                      "groups": []
+                                    },
+                                    {
+                                      "name": "_CargoB_C",
+                                      "layer": "_Cargo_Top11._CargoB_C",
+                                      "groups": []
+                                    }
+                                  ],
+                                  [
+                                    {
+                                      "name": "_CargoB_A",
+                                      "layer": "_Cargo_Top11._CargoB_A",
+                                      "groups": []
+                                    },
+                                    {
+                                      "name": "_CargoB_B",
+                                      "layer": "_Cargo_Top11._CargoB_B",
+                                      "groups": []
+                                    },
+                                    {
+                                      "name": "_CargoB_C",
+                                      "layer": "_Cargo_Top11._CargoB_C",
+                                      "groups": []
+                                    }
+                                  ]
+                                ]
+                              }
+                            ],
+                            [
+                              {
+                                "name": "_CargoB_A",
+                                "layer": "_Cargo_Top10._CargoB_A",
+                                "groups": []
+                              },
+                              {
+                                "name": "_CargoB_B",
+                                "layer": "_Cargo_Top10._CargoB_B",
+                                "groups": []
+                              },
+                              {
+                                "name": "_CargoB_C",
+                                "layer": "_Cargo_Top10._CargoB_C",
+                                "groups": []
+                              }
+                            ]
+                          ]
+                        }
+                      ],
+                      [
+                        {
+                          "name": "_CargoB_A",
+                          "layer": "_Cargo_Top9._CargoB_A",
+                          "groups": []
+                        },
+                        {
+                          "name": "_CargoB_B",
+                          "layer": "_Cargo_Top9._CargoB_B",
+                          "groups": []
+                        },
+                        {
+                          "name": "_CargoB_C",
+                          "layer": "_Cargo_Top9._CargoB_C",
+                          "groups": []
+                        }
+                      ],
+                      [
+                        {
+                          "name": "_CargoB_A",
+                          "layer": "_Cargo_Top9._CargoB_A",
+                          "groups": []
+                        },
+                        {
+                          "name": "_CargoB_B",
+                          "layer": "_Cargo_Top9._CargoB_B",
+                          "groups": []
+                        },
+                        {
+                          "name": "_CargoB_C",
+                          "layer": "_Cargo_Top9._CargoB_C",
+                          "groups": []
+                        }
+                      ]
+                    ]
+                  },
+                  {
+                    "name": "_Cargo_ABot9",
+                    "layer": "_Cargo_ABot9",
+                    "groups": [
+                      [
+                        {
+                          "name": "_Cargo_CapB8",
+                          "layer": "_Cargo_CapB8",
+                          "groups": [
+                            [
+                              {
+                                "name": "_CargoB_A",
+                                "layer": "_Cargo_CapB8._CargoB_A",
+                                "groups": []
+                              },
+                              {
+                                "name": "_CargoB_B",
+                                "layer": "_Cargo_CapB8._CargoB_B",
+                                "groups": []
+                              },
+                              {
+                                "name": "_CargoB_C",
+                                "layer": "_Cargo_CapB8._CargoB_C",
+                                "groups": []
+                              }
+                            ]
+                          ]
+                        },
+                        {
+                          "name": "_Cargo_ABot10",
+                          "layer": "_Cargo_ABot10",
+                          "groups": [
+                            [
+                              {
+                                "name": "_Cargo_CapB9",
+                                "layer": "_Cargo_CapB9",
+                                "groups": [
+                                  [
+                                    {
+                                      "name": "_CargoB_A",
+                                      "layer": "_Cargo_CapB9._CargoB_A",
+                                      "groups": []
+                                    },
+                                    {
+                                      "name": "_CargoB_B",
+                                      "layer": "_Cargo_CapB9._CargoB_B",
+                                      "groups": []
+                                    },
+                                    {
+                                      "name": "_CargoB_C",
+                                      "layer": "_Cargo_CapB9._CargoB_C",
+                                      "groups": []
+                                    }
+                                  ]
+                                ]
+                              },
+                              {
+                                "name": "_Cargo_ABot11",
+                                "layer": "_Cargo_ABot11",
+                                "groups": [
+                                  [
+                                    {
+                                      "name": "_CargoB_A",
+                                      "layer": "_Cargo_ABot11._CargoB_A",
+                                      "groups": []
+                                    },
+                                    {
+                                      "name": "_CargoB_B",
+                                      "layer": "_Cargo_ABot11._CargoB_B",
+                                      "groups": []
+                                    },
+                                    {
+                                      "name": "_CargoB_C",
+                                      "layer": "_Cargo_ABot11._CargoB_C",
+                                      "groups": []
+                                    }
+                                  ],
+                                  [
+                                    {
+                                      "name": "_CargoB_A",
+                                      "layer": "_Cargo_ABot11._CargoB_A",
+                                      "groups": []
+                                    },
+                                    {
+                                      "name": "_CargoB_B",
+                                      "layer": "_Cargo_ABot11._CargoB_B",
+                                      "groups": []
+                                    },
+                                    {
+                                      "name": "_CargoB_C",
+                                      "layer": "_Cargo_ABot11._CargoB_C",
+                                      "groups": []
+                                    }
+                                  ]
+                                ]
+                              }
+                            ],
+                            [
+                              {
+                                "name": "_CargoB_A",
+                                "layer": "_Cargo_ABot10._CargoB_A",
+                                "groups": []
+                              },
+                              {
+                                "name": "_CargoB_B",
+                                "layer": "_Cargo_ABot10._CargoB_B",
+                                "groups": []
+                              },
+                              {
+                                "name": "_CargoB_C",
+                                "layer": "_Cargo_ABot10._CargoB_C",
+                                "groups": []
+                              }
+                            ]
+                          ]
+                        }
+                      ],
+                      [
+                        {
+                          "name": "_CargoB_A",
+                          "layer": "_Cargo_ABot9._CargoB_A",
+                          "groups": []
+                        },
+                        {
+                          "name": "_CargoB_B",
+                          "layer": "_Cargo_ABot9._CargoB_B",
+                          "groups": []
+                        },
+                        {
+                          "name": "_CargoB_C",
+                          "layer": "_Cargo_ABot9._CargoB_C",
+                          "groups": []
+                        }
+                      ],
+                      [
+                        {
+                          "name": "_CargoB_A",
+                          "layer": "_Cargo_ABot9._CargoB_A",
+                          "groups": []
+                        },
+                        {
+                          "name": "_CargoB_B",
+                          "layer": "_Cargo_ABot9._CargoB_B",
+                          "groups": []
+                        },
+                        {
+                          "name": "_CargoB_C",
+                          "layer": "_Cargo_ABot9._CargoB_C",
+                          "groups": []
+                        }
+                      ]
+                    ]
+                  },
+                  {
+                    "name": "_Cargo_A16",
+                    "layer": "_Cargo_A16",
+                    "groups": [
+                      [
+                        {
+                          "name": "_SideAcc2_A1",
+                          "layer": "_SideAcc2_A1",
+                          "groups": []
+                        },
+                        {
+                          "name": "_SideAcc2_None1",
+                          "layer": "_SideAcc2_None1",
+                          "groups": []
+                        }
+                      ],
+                      [
+                        {
+                          "name": "_Cargo_Top12",
+                          "layer": "_Cargo_Top12",
+                          "groups": [
+                            [
+                              {
+                                "name": "_Cargo_CapT10",
+                                "layer": "_Cargo_CapT10",
+                                "groups": [
+                                  [
+                                    {
+                                      "name": "_CargoB_A",
+                                      "layer": "_Cargo_CapT10._CargoB_A",
+                                      "groups": []
+                                    },
+                                    {
+                                      "name": "_CargoB_B",
+                                      "layer": "_Cargo_CapT10._CargoB_B",
+                                      "groups": []
+                                    },
+                                    {
+                                      "name": "_CargoB_C",
+                                      "layer": "_Cargo_CapT10._CargoB_C",
+                                      "groups": []
+                                    }
+                                  ]
+                                ]
+                              },
+                              {
+                                "name": "_Cargo_Top13",
+                                "layer": "_Cargo_Top13",
+                                "groups": [
+                                  [
+                                    {
+                                      "name": "_VerticalFin_A7",
+                                      "layer": "_VerticalFin_A7",
+                                      "groups": []
+                                    }
+                                  ],
+                                  [
+                                    {
+                                      "name": "_CargoB_A",
+                                      "layer": "_Cargo_Top13._CargoB_A",
+                                      "groups": []
+                                    },
+                                    {
+                                      "name": "_CargoB_B",
+                                      "layer": "_Cargo_Top13._CargoB_B",
+                                      "groups": []
+                                    },
+                                    {
+                                      "name": "_CargoB_C",
+                                      "layer": "_Cargo_Top13._CargoB_C",
+                                      "groups": []
+                                    }
+                                  ],
+                                  [
+                                    {
+                                      "name": "_CargoB_A",
+                                      "layer": "_Cargo_Top13._CargoB_A",
+                                      "groups": []
+                                    },
+                                    {
+                                      "name": "_CargoB_B",
+                                      "layer": "_Cargo_Top13._CargoB_B",
+                                      "groups": []
+                                    },
+                                    {
+                                      "name": "_CargoB_C",
+                                      "layer": "_Cargo_Top13._CargoB_C",
+                                      "groups": []
+                                    }
+                                  ]
+                                ]
+                              }
+                            ],
+                            [
+                              {
+                                "name": "_CargoB_A",
+                                "layer": "_Cargo_Top12._CargoB_A",
+                                "groups": []
+                              },
+                              {
+                                "name": "_CargoB_B",
+                                "layer": "_Cargo_Top12._CargoB_B",
+                                "groups": []
+                              },
+                              {
+                                "name": "_CargoB_C",
+                                "layer": "_Cargo_Top12._CargoB_C",
+                                "groups": []
+                              }
+                            ],
+                            [
+                              {
+                                "name": "_CargoB_A",
+                                "layer": "_Cargo_Top12._CargoB_A",
+                                "groups": []
+                              },
+                              {
+                                "name": "_CargoB_B",
+                                "layer": "_Cargo_Top12._CargoB_B",
+                                "groups": []
+                              },
+                              {
+                                "name": "_CargoB_C",
+                                "layer": "_Cargo_Top12._CargoB_C",
+                                "groups": []
+                              }
+                            ]
+                          ]
+                        },
+                        {
+                          "name": "_Cargo_ABot12",
+                          "layer": "_Cargo_ABot12",
+                          "groups": [
+                            [
+                              {
+                                "name": "_Cargo_CapB10",
+                                "layer": "_Cargo_CapB10",
+                                "groups": [
+                                  [
+                                    {
+                                      "name": "_CargoB_A",
+                                      "layer": "_Cargo_CapB10._CargoB_A",
+                                      "groups": []
+                                    },
+                                    {
+                                      "name": "_CargoB_B",
+                                      "layer": "_Cargo_CapB10._CargoB_B",
+                                      "groups": []
+                                    },
+                                    {
+                                      "name": "_CargoB_C",
+                                      "layer": "_Cargo_CapB10._CargoB_C",
+                                      "groups": []
+                                    }
+                                  ]
+                                ]
+                              },
+                              {
+                                "name": "_Cargo_ABot13",
+                                "layer": "_Cargo_ABot13",
+                                "groups": [
+                                  [
+                                    {
+                                      "name": "_CargoB_A",
+                                      "layer": "_Cargo_ABot13._CargoB_A",
+                                      "groups": []
+                                    },
+                                    {
+                                      "name": "_CargoB_B",
+                                      "layer": "_Cargo_ABot13._CargoB_B",
+                                      "groups": []
+                                    },
+                                    {
+                                      "name": "_CargoB_C",
+                                      "layer": "_Cargo_ABot13._CargoB_C",
+                                      "groups": []
+                                    }
+                                  ],
+                                  [
+                                    {
+                                      "name": "_CargoB_A",
+                                      "layer": "_Cargo_ABot13._CargoB_A",
+                                      "groups": []
+                                    },
+                                    {
+                                      "name": "_CargoB_B",
+                                      "layer": "_Cargo_ABot13._CargoB_B",
+                                      "groups": []
+                                    },
+                                    {
+                                      "name": "_CargoB_C",
+                                      "layer": "_Cargo_ABot13._CargoB_C",
+                                      "groups": []
+                                    }
+                                  ]
+                                ]
+                              }
+                            ],
+                            [
+                              {
+                                "name": "_CargoB_A",
+                                "layer": "_Cargo_ABot12._CargoB_A",
+                                "groups": []
+                              },
+                              {
+                                "name": "_CargoB_B",
+                                "layer": "_Cargo_ABot12._CargoB_B",
+                                "groups": []
+                              },
+                              {
+                                "name": "_CargoB_C",
+                                "layer": "_Cargo_ABot12._CargoB_C",
+                                "groups": []
+                              }
+                            ],
+                            [
+                              {
+                                "name": "_CargoB_A",
+                                "layer": "_Cargo_ABot12._CargoB_A",
+                                "groups": []
+                              },
+                              {
+                                "name": "_CargoB_B",
+                                "layer": "_Cargo_ABot12._CargoB_B",
+                                "groups": []
+                              },
+                              {
+                                "name": "_CargoB_C",
+                                "layer": "_Cargo_ABot12._CargoB_C",
+                                "groups": []
+                              }
+                            ]
+                          ]
+                        },
+                        {
+                          "name": "_Cargo_A17",
+                          "layer": "_Cargo_A17",
+                          "groups": [
+                            [
+                              {
+                                "name": "_SideAcc3_A1",
+                                "layer": "_SideAcc3_A1",
+                                "groups": []
+                              },
+                              {
+                                "name": "_SideAcc3_None1",
+                                "layer": "_SideAcc3_None1",
+                                "groups": []
+                              }
+                            ],
+                            [
+                              {
+                                "name": "_Cargo_Top14",
+                                "layer": "_Cargo_Top14",
+                                "groups": [
+                                  [
+                                    {
+                                      "name": "_VerticalFin_A8",
+                                      "layer": "_VerticalFin_A8",
+                                      "groups": []
+                                    }
+                                  ],
+                                  [
+                                    {
+                                      "name": "_CargoB_A",
+                                      "layer": "_Cargo_Top14._CargoB_A",
+                                      "groups": []
+                                    },
+                                    {
+                                      "name": "_CargoB_B",
+                                      "layer": "_Cargo_Top14._CargoB_B",
+                                      "groups": []
+                                    },
+                                    {
+                                      "name": "_CargoB_C",
+                                      "layer": "_Cargo_Top14._CargoB_C",
+                                      "groups": []
+                                    }
+                                  ],
+                                  [
+                                    {
+                                      "name": "_CargoB_A",
+                                      "layer": "_Cargo_Top14._CargoB_A",
+                                      "groups": []
+                                    },
+                                    {
+                                      "name": "_CargoB_B",
+                                      "layer": "_Cargo_Top14._CargoB_B",
+                                      "groups": []
+                                    },
+                                    {
+                                      "name": "_CargoB_C",
+                                      "layer": "_Cargo_Top14._CargoB_C",
+                                      "groups": []
+                                    }
+                                  ],
+                                  [
+                                    {
+                                      "name": "_CargoB_A",
+                                      "layer": "_Cargo_Top14._CargoB_A",
+                                      "groups": []
+                                    },
+                                    {
+                                      "name": "_CargoB_B",
+                                      "layer": "_Cargo_Top14._CargoB_B",
+                                      "groups": []
+                                    },
+                                    {
+                                      "name": "_CargoB_C",
+                                      "layer": "_Cargo_Top14._CargoB_C",
+                                      "groups": []
+                                    }
+                                  ]
+                                ]
+                              },
+                              {
+                                "name": "_Cargo_ABot14",
+                                "layer": "_Cargo_ABot14",
+                                "groups": [
+                                  [
+                                    {
+                                      "name": "_CargoB_A",
+                                      "layer": "_Cargo_ABot14._CargoB_A",
+                                      "groups": []
+                                    },
+                                    {
+                                      "name": "_CargoB_B",
+                                      "layer": "_Cargo_ABot14._CargoB_B",
+                                      "groups": []
+                                    },
+                                    {
+                                      "name": "_CargoB_C",
+                                      "layer": "_Cargo_ABot14._CargoB_C",
+                                      "groups": []
+                                    }
+                                  ],
+                                  [
+                                    {
+                                      "name": "_CargoB_A",
+                                      "layer": "_Cargo_ABot14._CargoB_A",
+                                      "groups": []
+                                    },
+                                    {
+                                      "name": "_CargoB_B",
+                                      "layer": "_Cargo_ABot14._CargoB_B",
+                                      "groups": []
+                                    },
+                                    {
+                                      "name": "_CargoB_C",
+                                      "layer": "_Cargo_ABot14._CargoB_C",
+                                      "groups": []
+                                    }
+                                  ],
+                                  [
+                                    {
+                                      "name": "_CargoB_A",
+                                      "layer": "_Cargo_ABot14._CargoB_A",
+                                      "groups": []
+                                    },
+                                    {
+                                      "name": "_CargoB_B",
+                                      "layer": "_Cargo_ABot14._CargoB_B",
+                                      "groups": []
+                                    },
+                                    {
+                                      "name": "_CargoB_C",
+                                      "layer": "_Cargo_ABot14._CargoB_C",
+                                      "groups": []
+                                    }
+                                  ]
+                                ]
+                              },
+                              {
+                                "name": "_Cargo_A18",
+                                "layer": "_Cargo_A18",
+                                "groups": [
+                                  [
+                                    {
+                                      "name": "_SideAcc4_A1",
+                                      "layer": "_SideAcc4_A1",
+                                      "groups": []
+                                    },
+                                    {
+                                      "name": "_SideAcc4_None1",
+                                      "layer": "_SideAcc4_None1",
+                                      "groups": []
+                                    }
+                                  ],
+                                  [
+                                    {
+                                      "name": "_VerticalFin_A10",
+                                      "layer": "_VerticalFin_A10",
+                                      "groups": []
+                                    }
+                                  ],
+                                  [
+                                    {
+                                      "name": "_GantryAcc_1",
+                                      "layer": "_Cargo_A18._GantryAcc_1",
+                                      "groups": []
+                                    },
+                                    {
+                                      "name": "_GantryAcc_2",
+                                      "layer": "_Cargo_A18._GantryAcc_2",
+                                      "groups": []
+                                    }
+                                  ],
+                                  [
+                                    {
+                                      "name": "_SmallCargo_A",
+                                      "layer": "_Cargo_A18._SmallCargo_A",
+                                      "groups": []
+                                    },
+                                    {
+                                      "name": "_SmallCargo_B",
+                                      "layer": "_Cargo_A18._SmallCargo_B",
+                                      "groups": []
+                                    },
+                                    {
+                                      "name": "_SmallCargo_C",
+                                      "layer": "_Cargo_A18._SmallCargo_C",
+                                      "groups": []
+                                    }
+                                  ],
+                                  [
+                                    {
+                                      "name": "_Cargo_ContA",
+                                      "layer": "_Cargo_A18._Cargo_ContA",
+                                      "groups": []
+                                    },
+                                    {
+                                      "name": "_Cargo_ContB",
+                                      "layer": "_Cargo_A18._Cargo_ContB",
+                                      "groups": []
+                                    },
+                                    {
+                                      "name": "_Cargo_ContC",
+                                      "layer": "_Cargo_A18._Cargo_ContC",
+                                      "groups": []
+                                    }
+                                  ],
+                                  [
+                                    {
+                                      "name": "_CargoSmall_A",
+                                      "layer": "_Cargo_A18._CargoSmall_A",
+                                      "groups": []
+                                    },
+                                    {
+                                      "name": "_CargoSmall_B",
+                                      "layer": "_Cargo_A18._CargoSmall_B",
+                                      "groups": []
+                                    },
+                                    {
+                                      "name": "_CargoSmall_C",
+                                      "layer": "_Cargo_A18._CargoSmall_C",
+                                      "groups": []
+                                    }
+                                  ],
+                                  [
+                                    {
+                                      "name": "_Cargo_A",
+                                      "layer": "_Cargo_A18._Cargo_A",
+                                      "groups": []
+                                    },
+                                    {
+                                      "name": "_Cargo_B",
+                                      "layer": "_Cargo_A18._Cargo_B",
+                                      "groups": []
+                                    },
+                                    {
+                                      "name": "_Cargo_C",
+                                      "layer": "_Cargo_A18._Cargo_C",
+                                      "groups": []
+                                    }
+                                  ]
+                                ]
+                              },
+                              {
+                                "name": "_Cargo_CapD4",
+                                "layer": "_Cargo_CapD4",
+                                "groups": [
+                                  [
+                                    {
+                                      "name": "_GantryAcc_1",
+                                      "layer": "_Cargo_CapD4._GantryAcc_1",
+                                      "groups": []
+                                    },
+                                    {
+                                      "name": "_GantryAcc_2",
+                                      "layer": "_Cargo_CapD4._GantryAcc_2",
+                                      "groups": []
+                                    }
+                                  ],
+                                  [
+                                    {
+                                      "name": "_SmallCargo_A",
+                                      "layer": "_Cargo_CapD4._SmallCargo_A",
+                                      "groups": []
+                                    },
+                                    {
+                                      "name": "_SmallCargo_B",
+                                      "layer": "_Cargo_CapD4._SmallCargo_B",
+                                      "groups": []
+                                    },
+                                    {
+                                      "name": "_SmallCargo_C",
+                                      "layer": "_Cargo_CapD4._SmallCargo_C",
+                                      "groups": []
+                                    }
+                                  ],
+                                  [
+                                    {
+                                      "name": "_Cargo_ContA",
+                                      "layer": "_Cargo_CapD4._Cargo_ContA",
+                                      "groups": []
+                                    },
+                                    {
+                                      "name": "_Cargo_ContB",
+                                      "layer": "_Cargo_CapD4._Cargo_ContB",
+                                      "groups": []
+                                    },
+                                    {
+                                      "name": "_Cargo_ContC",
+                                      "layer": "_Cargo_CapD4._Cargo_ContC",
+                                      "groups": []
+                                    }
+                                  ]
+                                ]
+                              }
+                            ],
+                            [
+                              {
+                                "name": "_CargoSmall_A",
+                                "layer": "_Cargo_A17._CargoSmall_A",
+                                "groups": []
+                              },
+                              {
+                                "name": "_CargoSmall_B",
+                                "layer": "_Cargo_A17._CargoSmall_B",
+                                "groups": []
+                              },
+                              {
+                                "name": "_CargoSmall_C",
+                                "layer": "_Cargo_A17._CargoSmall_C",
+                                "groups": []
+                              }
+                            ],
+                            [
+                              {
+                                "name": "_Cargo_A",
+                                "layer": "_Cargo_A17._Cargo_A",
+                                "groups": []
+                              },
+                              {
+                                "name": "_Cargo_B",
+                                "layer": "_Cargo_A17._Cargo_B",
+                                "groups": []
+                              },
+                              {
+                                "name": "_Cargo_C",
+                                "layer": "_Cargo_A17._Cargo_C",
+                                "groups": []
+                              }
+                            ]
+                          ]
+                        },
+                        {
+                          "name": "_Cargo_CapD3",
+                          "layer": "_Cargo_CapD3",
+                          "groups": [
+                            [
+                              {
+                                "name": "_GantryAcc_1",
+                                "layer": "_Cargo_CapD3._GantryAcc_1",
+                                "groups": []
+                              },
+                              {
+                                "name": "_GantryAcc_2",
+                                "layer": "_Cargo_CapD3._GantryAcc_2",
+                                "groups": []
+                              }
+                            ],
+                            [
+                              {
+                                "name": "_SmallCargo_A",
+                                "layer": "_Cargo_CapD3._SmallCargo_A",
+                                "groups": []
+                              },
+                              {
+                                "name": "_SmallCargo_B",
+                                "layer": "_Cargo_CapD3._SmallCargo_B",
+                                "groups": []
+                              },
+                              {
+                                "name": "_SmallCargo_C",
+                                "layer": "_Cargo_CapD3._SmallCargo_C",
+                                "groups": []
+                              }
+                            ],
+                            [
+                              {
+                                "name": "_Cargo_ContA",
+                                "layer": "_Cargo_CapD3._Cargo_ContA",
+                                "groups": []
+                              },
+                              {
+                                "name": "_Cargo_ContB",
+                                "layer": "_Cargo_CapD3._Cargo_ContB",
+                                "groups": []
+                              },
+                              {
+                                "name": "_Cargo_ContC",
+                                "layer": "_Cargo_CapD3._Cargo_ContC",
+                                "groups": []
+                              }
+                            ]
+                          ]
+                        }
+                      ],
+                      [
+                        {
+                          "name": "_CargoSmall_A",
+                          "layer": "_Cargo_A16._CargoSmall_A",
+                          "groups": []
+                        },
+                        {
+                          "name": "_CargoSmall_B",
+                          "layer": "_Cargo_A16._CargoSmall_B",
+                          "groups": []
+                        },
+                        {
+                          "name": "_CargoSmall_C",
+                          "layer": "_Cargo_A16._CargoSmall_C",
+                          "groups": []
+                        }
+                      ],
+                      [
+                        {
+                          "name": "_Cargo_A",
+                          "layer": "_Cargo_A16._Cargo_A",
+                          "groups": []
+                        },
+                        {
+                          "name": "_Cargo_B",
+                          "layer": "_Cargo_A16._Cargo_B",
+                          "groups": []
+                        },
+                        {
+                          "name": "_Cargo_C",
+                          "layer": "_Cargo_A16._Cargo_C",
+                          "groups": []
+                        }
+                      ]
+                    ]
+                  },
+                  {
+                    "name": "_Cargo_CapD2",
+                    "layer": "_Cargo_CapD2",
+                    "groups": [
+                      [
+                        {
+                          "name": "_GantryAcc_1",
+                          "layer": "_Cargo_CapD2._GantryAcc_1",
+                          "groups": []
+                        },
+                        {
+                          "name": "_GantryAcc_2",
+                          "layer": "_Cargo_CapD2._GantryAcc_2",
+                          "groups": []
+                        }
+                      ],
+                      [
+                        {
+                          "name": "_SmallCargo_A",
+                          "layer": "_Cargo_CapD2._SmallCargo_A",
+                          "groups": []
+                        },
+                        {
+                          "name": "_SmallCargo_B",
+                          "layer": "_Cargo_CapD2._SmallCargo_B",
+                          "groups": []
+                        },
+                        {
+                          "name": "_SmallCargo_C",
+                          "layer": "_Cargo_CapD2._SmallCargo_C",
+                          "groups": []
+                        }
+                      ],
+                      [
+                        {
+                          "name": "_Cargo_ContA",
+                          "layer": "_Cargo_CapD2._Cargo_ContA",
+                          "groups": []
+                        },
+                        {
+                          "name": "_Cargo_ContB",
+                          "layer": "_Cargo_CapD2._Cargo_ContB",
+                          "groups": []
+                        },
+                        {
+                          "name": "_Cargo_ContC",
+                          "layer": "_Cargo_CapD2._Cargo_ContC",
+                          "groups": []
+                        }
+                      ]
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "name": "_CargoSmall_A",
+                    "layer": "_Cargo_A15._CargoSmall_A",
+                    "groups": []
+                  },
+                  {
+                    "name": "_CargoSmall_B",
+                    "layer": "_Cargo_A15._CargoSmall_B",
+                    "groups": []
+                  },
+                  {
+                    "name": "_CargoSmall_C",
+                    "layer": "_Cargo_A15._CargoSmall_C",
+                    "groups": []
+                  }
+                ],
+                [
+                  {
+                    "name": "_Cargo_A",
+                    "layer": "_Cargo_A15._Cargo_A",
+                    "groups": []
+                  },
+                  {
+                    "name": "_Cargo_B",
+                    "layer": "_Cargo_A15._Cargo_B",
+                    "groups": []
+                  },
+                  {
+                    "name": "_Cargo_C",
+                    "layer": "_Cargo_A15._Cargo_C",
+                    "groups": []
+                  }
+                ]
+              ]
+            },
+            {
+              "name": "_Cargo_ABot5",
+              "layer": "_Cargo_ABot5",
+              "groups": [
+                [
+                  {
+                    "name": "_Cargo_CapB5",
+                    "layer": "_Cargo_CapB5",
+                    "groups": [
+                      [
+                        {
+                          "name": "_CargoB_A",
+                          "layer": "_Cargo_CapB5._CargoB_A",
+                          "groups": []
+                        },
+                        {
+                          "name": "_CargoB_B",
+                          "layer": "_Cargo_CapB5._CargoB_B",
+                          "groups": []
+                        },
+                        {
+                          "name": "_CargoB_C",
+                          "layer": "_Cargo_CapB5._CargoB_C",
+                          "groups": []
+                        }
+                      ]
+                    ]
+                  },
+                  {
+                    "name": "_Cargo_ABot6",
+                    "layer": "_Cargo_ABot6",
+                    "groups": [
+                      [
+                        {
+                          "name": "_Cargo_CapB6",
+                          "layer": "_Cargo_CapB6",
+                          "groups": [
+                            [
+                              {
+                                "name": "_CargoB_A",
+                                "layer": "_Cargo_CapB6._CargoB_A",
+                                "groups": []
+                              },
+                              {
+                                "name": "_CargoB_B",
+                                "layer": "_Cargo_CapB6._CargoB_B",
+                                "groups": []
+                              },
+                              {
+                                "name": "_CargoB_C",
+                                "layer": "_Cargo_CapB6._CargoB_C",
+                                "groups": []
+                              }
+                            ]
+                          ]
+                        },
+                        {
+                          "name": "_Cargo_ABot7",
+                          "layer": "_Cargo_ABot7",
+                          "groups": [
+                            [
+                              {
+                                "name": "_Cargo_CapB7",
+                                "layer": "_Cargo_CapB7",
+                                "groups": [
+                                  [
+                                    {
+                                      "name": "_CargoB_A",
+                                      "layer": "_Cargo_CapB7._CargoB_A",
+                                      "groups": []
+                                    },
+                                    {
+                                      "name": "_CargoB_B",
+                                      "layer": "_Cargo_CapB7._CargoB_B",
+                                      "groups": []
+                                    },
+                                    {
+                                      "name": "_CargoB_C",
+                                      "layer": "_Cargo_CapB7._CargoB_C",
+                                      "groups": []
+                                    }
+                                  ]
+                                ]
+                              },
+                              {
+                                "name": "_Cargo_ABot8",
+                                "layer": "_Cargo_ABot8",
+                                "groups": [
+                                  [
+                                    {
+                                      "name": "_CargoB_A",
+                                      "layer": "_Cargo_ABot8._CargoB_A",
+                                      "groups": []
+                                    },
+                                    {
+                                      "name": "_CargoB_B",
+                                      "layer": "_Cargo_ABot8._CargoB_B",
+                                      "groups": []
+                                    },
+                                    {
+                                      "name": "_CargoB_C",
+                                      "layer": "_Cargo_ABot8._CargoB_C",
+                                      "groups": []
+                                    }
+                                  ],
+                                  [
+                                    {
+                                      "name": "_CargoB_A",
+                                      "layer": "_Cargo_ABot8._CargoB_A",
+                                      "groups": []
+                                    },
+                                    {
+                                      "name": "_CargoB_B",
+                                      "layer": "_Cargo_ABot8._CargoB_B",
+                                      "groups": []
+                                    },
+                                    {
+                                      "name": "_CargoB_C",
+                                      "layer": "_Cargo_ABot8._CargoB_C",
+                                      "groups": []
+                                    }
+                                  ]
+                                ]
+                              }
+                            ],
+                            [
+                              {
+                                "name": "_CargoB_A",
+                                "layer": "_Cargo_ABot7._CargoB_A",
+                                "groups": []
+                              },
+                              {
+                                "name": "_CargoB_B",
+                                "layer": "_Cargo_ABot7._CargoB_B",
+                                "groups": []
+                              },
+                              {
+                                "name": "_CargoB_C",
+                                "layer": "_Cargo_ABot7._CargoB_C",
+                                "groups": []
+                              }
+                            ]
+                          ]
+                        }
+                      ],
+                      [
+                        {
+                          "name": "_CargoB_A",
+                          "layer": "_Cargo_ABot6._CargoB_A",
+                          "groups": []
+                        },
+                        {
+                          "name": "_CargoB_B",
+                          "layer": "_Cargo_ABot6._CargoB_B",
+                          "groups": []
+                        },
+                        {
+                          "name": "_CargoB_C",
+                          "layer": "_Cargo_ABot6._CargoB_C",
+                          "groups": []
+                        }
+                      ]
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "name": "_CargoB_A",
+                    "layer": "_Cargo_ABot5._CargoB_A",
+                    "groups": []
+                  },
+                  {
+                    "name": "_CargoB_B",
+                    "layer": "_Cargo_ABot5._CargoB_B",
+                    "groups": []
+                  },
+                  {
+                    "name": "_CargoB_C",
+                    "layer": "_Cargo_ABot5._CargoB_C",
+                    "groups": []
+                  }
+                ],
+                [
+                  {
+                    "name": "_CargoB_A",
+                    "layer": "_Cargo_ABot5._CargoB_A",
+                    "groups": []
+                  },
+                  {
+                    "name": "_CargoB_B",
+                    "layer": "_Cargo_ABot5._CargoB_B",
+                    "groups": []
+                  },
+                  {
+                    "name": "_CargoB_C",
+                    "layer": "_Cargo_ABot5._CargoB_C",
+                    "groups": []
+                  }
+                ]
+              ]
+            },
+            {
+              "name": "_Cargo_Top5",
+              "layer": "_Cargo_Top5",
+              "groups": [
+                [
+                  {
+                    "name": "_Cargo_CapT5",
+                    "layer": "_Cargo_CapT5",
+                    "groups": [
+                      [
+                        {
+                          "name": "_CargoB_A",
+                          "layer": "_Cargo_CapT5._CargoB_A",
+                          "groups": []
+                        },
+                        {
+                          "name": "_CargoB_B",
+                          "layer": "_Cargo_CapT5._CargoB_B",
+                          "groups": []
+                        },
+                        {
+                          "name": "_CargoB_C",
+                          "layer": "_Cargo_CapT5._CargoB_C",
+                          "groups": []
+                        }
+                      ]
+                    ]
+                  },
+                  {
+                    "name": "_Cargo_Top6",
+                    "layer": "_Cargo_Top6",
+                    "groups": [
+                      [
+                        {
+                          "name": "_Cargo_CapT6",
+                          "layer": "_Cargo_CapT6",
+                          "groups": [
+                            [
+                              {
+                                "name": "_CargoB_A",
+                                "layer": "_Cargo_CapT6._CargoB_A",
+                                "groups": []
+                              },
+                              {
+                                "name": "_CargoB_B",
+                                "layer": "_Cargo_CapT6._CargoB_B",
+                                "groups": []
+                              },
+                              {
+                                "name": "_CargoB_C",
+                                "layer": "_Cargo_CapT6._CargoB_C",
+                                "groups": []
+                              }
+                            ]
+                          ]
+                        },
+                        {
+                          "name": "_Cargo_Top7",
+                          "layer": "_Cargo_Top7",
+                          "groups": [
+                            [
+                              {
+                                "name": "_Cargo_CapT7",
+                                "layer": "_Cargo_CapT7",
+                                "groups": [
+                                  [
+                                    {
+                                      "name": "_CargoB_A",
+                                      "layer": "_Cargo_CapT7._CargoB_A",
+                                      "groups": []
+                                    },
+                                    {
+                                      "name": "_CargoB_B",
+                                      "layer": "_Cargo_CapT7._CargoB_B",
+                                      "groups": []
+                                    },
+                                    {
+                                      "name": "_CargoB_C",
+                                      "layer": "_Cargo_CapT7._CargoB_C",
+                                      "groups": []
+                                    }
+                                  ]
+                                ]
+                              },
+                              {
+                                "name": "_Cargo_Top8",
+                                "layer": "_Cargo_Top8",
+                                "groups": [
+                                  [
+                                    {
+                                      "name": "_VerticalFin_A9",
+                                      "layer": "_VerticalFin_A9",
+                                      "groups": []
+                                    }
+                                  ],
+                                  [
+                                    {
+                                      "name": "_CargoB_A",
+                                      "layer": "_Cargo_Top8._CargoB_A",
+                                      "groups": []
+                                    },
+                                    {
+                                      "name": "_CargoB_B",
+                                      "layer": "_Cargo_Top8._CargoB_B",
+                                      "groups": []
+                                    },
+                                    {
+                                      "name": "_CargoB_C",
+                                      "layer": "_Cargo_Top8._CargoB_C",
+                                      "groups": []
+                                    }
+                                  ],
+                                  [
+                                    {
+                                      "name": "_CargoB_A",
+                                      "layer": "_Cargo_Top8._CargoB_A",
+                                      "groups": []
+                                    },
+                                    {
+                                      "name": "_CargoB_B",
+                                      "layer": "_Cargo_Top8._CargoB_B",
+                                      "groups": []
+                                    },
+                                    {
+                                      "name": "_CargoB_C",
+                                      "layer": "_Cargo_Top8._CargoB_C",
+                                      "groups": []
+                                    }
+                                  ]
+                                ]
+                              }
+                            ],
+                            [
+                              {
+                                "name": "_CargoB_A",
+                                "layer": "_Cargo_Top7._CargoB_A",
+                                "groups": []
+                              },
+                              {
+                                "name": "_CargoB_B",
+                                "layer": "_Cargo_Top7._CargoB_B",
+                                "groups": []
+                              },
+                              {
+                                "name": "_CargoB_C",
+                                "layer": "_Cargo_Top7._CargoB_C",
+                                "groups": []
+                              }
+                            ]
+                          ]
+                        }
+                      ],
+                      [
+                        {
+                          "name": "_CargoB_A",
+                          "layer": "_Cargo_Top6._CargoB_A",
+                          "groups": []
+                        },
+                        {
+                          "name": "_CargoB_B",
+                          "layer": "_Cargo_Top6._CargoB_B",
+                          "groups": []
+                        },
+                        {
+                          "name": "_CargoB_C",
+                          "layer": "_Cargo_Top6._CargoB_C",
+                          "groups": []
+                        }
+                      ]
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "name": "_CargoB_A",
+                    "layer": "_Cargo_Top5._CargoB_A",
+                    "groups": []
+                  },
+                  {
+                    "name": "_CargoB_B",
+                    "layer": "_Cargo_Top5._CargoB_B",
+                    "groups": []
+                  },
+                  {
+                    "name": "_CargoB_C",
+                    "layer": "_Cargo_Top5._CargoB_C",
+                    "groups": []
+                  }
+                ],
+                [
+                  {
+                    "name": "_CargoB_A",
+                    "layer": "_Cargo_Top5._CargoB_A",
+                    "groups": []
+                  },
+                  {
+                    "name": "_CargoB_B",
+                    "layer": "_Cargo_Top5._CargoB_B",
+                    "groups": []
+                  },
+                  {
+                    "name": "_CargoB_C",
+                    "layer": "_Cargo_Top5._CargoB_C",
+                    "groups": []
+                  }
+                ]
+              ]
+            }
+          ],
+          [
+            {
+              "name": "_CargoSmall_A",
+              "layer": "_Hull_A._CargoSmall_A",
+              "groups": []
+            },
+            {
+              "name": "_CargoSmall_B",
+              "layer": "_Hull_A._CargoSmall_B",
+              "groups": []
+            },
+            {
+              "name": "_CargoSmall_C",
+              "layer": "_Hull_A._CargoSmall_C",
+              "groups": []
+            }
+          ],
+          [
+            { "name": "_Cargo_A", "layer": "_Hull_A._Cargo_A", "groups": [] },
+            { "name": "_Cargo_B", "layer": "_Hull_A._Cargo_B", "groups": [] },
+            { "name": "_Cargo_C", "layer": "_Hull_A._Cargo_C", "groups": [] }
+          ]
+        ]
+      },
+      {
+        "name": "_Hull_B",
+        "layer": "_Hull_B",
+        "groups": [
+          [
+            {
+              "name": "_HullSide_B2",
+              "layer": "_HullSide_B2",
+              "groups": [
+                [
+                  {
+                    "name": "_HullSide_",
+                    "layer": "_HullSide_",
+                    "groups": [
+                      [
+                        {
+                          "name": "_HullWings_C",
+                          "layer": "_HullWings_C",
+                          "groups": []
+                        },
+                        {
+                          "name": "_HullWings_B",
+                          "layer": "_HullWings_B",
+                          "groups": []
+                        },
+                        {
+                          "name": "_HullWings_A",
+                          "layer": "_HullWings_A",
+                          "groups": []
+                        }
+                      ]
+                    ]
+                  }
+                ]
+              ]
+            }
+          ],
+          [
+            {
+              "name": "_HullBTop_B3",
+              "layer": "_HullBTop_B3",
+              "groups": [
+                [
+                  {
+                    "name": "_VerticalFin_A1",
+                    "layer": "_VerticalFin_A1",
+                    "groups": []
+                  },
+                  {
+                    "name": "_VerticalFin_None1",
+                    "layer": "_VerticalFin_None1",
+                    "groups": []
+                  }
+                ]
+              ]
+            },
+            {
+              "name": "_HullBTop_A",
+              "layer": "_HullBTop_A",
+              "groups": [
+                [
+                  {
+                    "name": "_VerticalFin_A",
+                    "layer": "_VerticalFin_A",
+                    "groups": []
+                  },
+                  {
+                    "name": "_VerticalFin_None",
+                    "layer": "_VerticalFin_None",
+                    "groups": []
+                  }
+                ],
+                [
+                  {
+                    "name": "_Hull_Top",
+                    "layer": "_HullBTop_A._Hull_Top",
+                    "groups": [
+                      [
+                        {
+                          "name": "_HullTop_A",
+                          "layer": "_HullBTop_A._Hull_Top._HullTop_A",
+                          "groups": []
+                        },
+                        {
+                          "name": "_HullTop_B",
+                          "layer": "_HullBTop_A._Hull_Top._HullTop_B",
+                          "groups": []
+                        }
+                      ]
+                    ]
+                  }
+                ]
+              ]
+            }
+          ],
+          [
+            {
+              "name": "_HullBBot_B4",
+              "layer": "_HullBBot_B4",
+              "groups": [
+                [
+                  {
+                    "name": "_VerticalFin_A2",
+                    "layer": "_VerticalFin_A2",
+                    "groups": []
+                  },
+                  {
+                    "name": "_VerticalFin_None2",
+                    "layer": "_VerticalFin_None2",
+                    "groups": []
+                  }
+                ]
+              ]
+            },
+            { "name": "_HullBBot_B3", "layer": "_HullBBot_B3", "groups": [] }
+          ],
+          [
+            {
+              "name": "_Cargo_E11",
+              "layer": "_Cargo_E11",
+              "groups": [
+                [
+                  {
+                    "name": "_Cargo_E10",
+                    "layer": "_Cargo_E10",
+                    "groups": [
+                      [
+                        {
+                          "name": "_Cargo_E4",
+                          "layer": "_Cargo_E4",
+                          "groups": [
+                            [
+                              {
+                                "name": "_Cargo_EndE6",
+                                "layer": "_Cargo_EndE6",
+                                "groups": [
+                                  [
+                                    {
+                                      "name": "_GantryBcapbridge_A",
+                                      "layer": "_Cargo_EndE6._GantryBcapbridge_A",
+                                      "groups": [
+                                        [
+                                          {
+                                            "name": "_CapBbridge_A",
+                                            "layer": "_Cargo_EndE6._GantryBcapbridge_A._CapBbridge_A",
+                                            "groups": []
+                                          },
+                                          {
+                                            "name": "_CapBbridge_B",
+                                            "layer": "_Cargo_EndE6._GantryBcapbridge_A._CapBbridge_B",
+                                            "groups": []
+                                          },
+                                          {
+                                            "name": "_CapBbridge_C",
+                                            "layer": "_Cargo_EndE6._GantryBcapbridge_A._CapBbridge_C",
+                                            "groups": []
+                                          },
+                                          {
+                                            "name": "_CapBbridge_D",
+                                            "layer": "_Cargo_EndE6._GantryBcapbridge_A._CapBbridge_D",
+                                            "groups": []
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ]
+                                ]
+                              },
+                              {
+                                "name": "_Cargo_E5",
+                                "layer": "_Cargo_E5",
+                                "groups": [
+                                  [
+                                    {
+                                      "name": "_Cargo_E6",
+                                      "layer": "_Cargo_E6",
+                                      "groups": [
+                                        [
+                                          {
+                                            "name": "_Cargo_EndE10",
+                                            "layer": "_Cargo_EndE10",
+                                            "groups": [
+                                              [
+                                                {
+                                                  "name": "_GantryBcapbridge_A",
+                                                  "layer": "_Cargo_EndE10._GantryBcapbridge_A",
+                                                  "groups": [
+                                                    [
+                                                      {
+                                                        "name": "_CapBbridge_A",
+                                                        "layer": "_Cargo_EndE10._GantryBcapbridge_A._CapBbridge_A",
+                                                        "groups": []
+                                                      },
+                                                      {
+                                                        "name": "_CapBbridge_B",
+                                                        "layer": "_Cargo_EndE10._GantryBcapbridge_A._CapBbridge_B",
+                                                        "groups": []
+                                                      },
+                                                      {
+                                                        "name": "_CapBbridge_C",
+                                                        "layer": "_Cargo_EndE10._GantryBcapbridge_A._CapBbridge_C",
+                                                        "groups": []
+                                                      },
+                                                      {
+                                                        "name": "_CapBbridge_D",
+                                                        "layer": "_Cargo_EndE10._GantryBcapbridge_A._CapBbridge_D",
+                                                        "groups": []
+                                                      }
+                                                    ]
+                                                  ]
+                                                }
+                                              ]
+                                            ]
+                                          },
+                                          {
+                                            "name": "_Cargo_D",
+                                            "layer": "_Cargo_D",
+                                            "groups": [
+                                              [
+                                                {
+                                                  "name": "_Cargo_EndA",
+                                                  "layer": "_Cargo_EndA",
+                                                  "groups": []
+                                                },
+                                                {
+                                                  "name": "_Cargo_EndB",
+                                                  "layer": "_Cargo_EndB",
+                                                  "groups": []
+                                                },
+                                                {
+                                                  "name": "_Cargo_JointtB1",
+                                                  "layer": "_Cargo_JointtB1",
+                                                  "groups": []
+                                                }
+                                              ]
+                                            ]
+                                          },
+                                          {
+                                            "name": "_Cargo_JointtB",
+                                            "layer": "_Cargo_JointtB",
+                                            "groups": [
+                                              [
+                                                {
+                                                  "name": "_Cargo_EndC",
+                                                  "layer": "_Cargo_EndC",
+                                                  "groups": []
+                                                }
+                                              ]
+                                            ]
+                                          }
+                                        ],
+                                        [
+                                          {
+                                            "name": "_CargoB_A",
+                                            "layer": "_Cargo_E6._CargoB_A",
+                                            "groups": []
+                                          },
+                                          {
+                                            "name": "_CargoB_B",
+                                            "layer": "_Cargo_E6._CargoB_B",
+                                            "groups": [
+                                              [
+                                                {
+                                                  "name": "_Container_A1",
+                                                  "layer": "_Cargo_E6._CargoB_B._Container_A1",
+                                                  "groups": []
+                                                },
+                                                {
+                                                  "name": "_Container_B2",
+                                                  "layer": "_Cargo_E6._CargoB_B._Container_B2",
+                                                  "groups": []
+                                                }
+                                              ]
+                                            ]
+                                          },
+                                          {
+                                            "name": "_CargoB_C",
+                                            "layer": "_Cargo_E6._CargoB_C",
+                                            "groups": []
+                                          }
+                                        ]
+                                      ]
+                                    },
+                                    {
+                                      "name": "_Cargo_EndE2",
+                                      "layer": "_Cargo_EndE2",
+                                      "groups": [
+                                        [
+                                          {
+                                            "name": "_GantryBcapbridge_A",
+                                            "layer": "_Cargo_EndE2._GantryBcapbridge_A",
+                                            "groups": [
+                                              [
+                                                {
+                                                  "name": "_CapBbridge_A",
+                                                  "layer": "_Cargo_EndE2._GantryBcapbridge_A._CapBbridge_A",
+                                                  "groups": []
+                                                },
+                                                {
+                                                  "name": "_CapBbridge_B",
+                                                  "layer": "_Cargo_EndE2._GantryBcapbridge_A._CapBbridge_B",
+                                                  "groups": []
+                                                },
+                                                {
+                                                  "name": "_CapBbridge_C",
+                                                  "layer": "_Cargo_EndE2._GantryBcapbridge_A._CapBbridge_C",
+                                                  "groups": []
+                                                },
+                                                {
+                                                  "name": "_CapBbridge_D",
+                                                  "layer": "_Cargo_EndE2._GantryBcapbridge_A._CapBbridge_D",
+                                                  "groups": []
+                                                }
+                                              ]
+                                            ]
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ],
+                                  [
+                                    {
+                                      "name": "_CargoB_A",
+                                      "layer": "_Cargo_E5._CargoB_A",
+                                      "groups": []
+                                    },
+                                    {
+                                      "name": "_CargoB_B",
+                                      "layer": "_Cargo_E5._CargoB_B",
+                                      "groups": [
+                                        [
+                                          {
+                                            "name": "_Container_A1",
+                                            "layer": "_Cargo_E5._CargoB_B._Container_A1",
+                                            "groups": []
+                                          },
+                                          {
+                                            "name": "_Container_B2",
+                                            "layer": "_Cargo_E5._CargoB_B._Container_B2",
+                                            "groups": []
+                                          }
+                                        ]
+                                      ]
+                                    },
+                                    {
+                                      "name": "_CargoB_C",
+                                      "layer": "_Cargo_E5._CargoB_C",
+                                      "groups": []
+                                    }
+                                  ]
+                                ]
+                              }
+                            ],
+                            [
+                              {
+                                "name": "_CargoB_A",
+                                "layer": "_Cargo_E4._CargoB_A",
+                                "groups": []
+                              },
+                              {
+                                "name": "_CargoB_B",
+                                "layer": "_Cargo_E4._CargoB_B",
+                                "groups": [
+                                  [
+                                    {
+                                      "name": "_Container_A1",
+                                      "layer": "_Cargo_E4._CargoB_B._Container_A1",
+                                      "groups": []
+                                    },
+                                    {
+                                      "name": "_Container_B2",
+                                      "layer": "_Cargo_E4._CargoB_B._Container_B2",
+                                      "groups": []
+                                    }
+                                  ]
+                                ]
+                              },
+                              {
+                                "name": "_CargoB_C",
+                                "layer": "_Cargo_E4._CargoB_C",
+                                "groups": []
+                              }
+                            ]
+                          ]
+                        },
+                        {
+                          "name": "_Cargo_EndE",
+                          "layer": "_Cargo_EndE",
+                          "groups": [
+                            [
+                              {
+                                "name": "_GantryBcapbridge_A",
+                                "layer": "_Cargo_EndE._GantryBcapbridge_A",
+                                "groups": [
+                                  [
+                                    {
+                                      "name": "_CapBbridge_A",
+                                      "layer": "_Cargo_EndE._GantryBcapbridge_A._CapBbridge_A",
+                                      "groups": []
+                                    },
+                                    {
+                                      "name": "_CapBbridge_B",
+                                      "layer": "_Cargo_EndE._GantryBcapbridge_A._CapBbridge_B",
+                                      "groups": []
+                                    },
+                                    {
+                                      "name": "_CapBbridge_C",
+                                      "layer": "_Cargo_EndE._GantryBcapbridge_A._CapBbridge_C",
+                                      "groups": []
+                                    },
+                                    {
+                                      "name": "_CapBbridge_D",
+                                      "layer": "_Cargo_EndE._GantryBcapbridge_A._CapBbridge_D",
+                                      "groups": []
+                                    }
+                                  ]
+                                ]
+                              }
+                            ]
+                          ]
+                        }
+                      ],
+                      [
+                        {
+                          "name": "_CargoB_A",
+                          "layer": "_Cargo_E10._CargoB_A",
+                          "groups": []
+                        },
+                        {
+                          "name": "_CargoB_B",
+                          "layer": "_Cargo_E10._CargoB_B",
+                          "groups": [
+                            [
+                              {
+                                "name": "_Container_A1",
+                                "layer": "_Cargo_E10._CargoB_B._Container_A1",
+                                "groups": []
+                              },
+                              {
+                                "name": "_Container_B2",
+                                "layer": "_Cargo_E10._CargoB_B._Container_B2",
+                                "groups": []
+                              }
+                            ]
+                          ]
+                        },
+                        {
+                          "name": "_CargoB_C",
+                          "layer": "_Cargo_E10._CargoB_C",
+                          "groups": []
+                        }
+                      ]
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "name": "_CargoB_A",
+                    "layer": "_Cargo_E11._CargoB_A",
+                    "groups": []
+                  },
+                  {
+                    "name": "_CargoB_B",
+                    "layer": "_Cargo_E11._CargoB_B",
+                    "groups": [
+                      [
+                        {
+                          "name": "_Container_A1",
+                          "layer": "_Cargo_E11._CargoB_B._Container_A1",
+                          "groups": []
+                        },
+                        {
+                          "name": "_Container_B2",
+                          "layer": "_Cargo_E11._CargoB_B._Container_B2",
+                          "groups": []
+                        }
+                      ]
+                    ]
+                  },
+                  {
+                    "name": "_CargoB_C",
+                    "layer": "_Cargo_E11._CargoB_C",
+                    "groups": []
+                  }
+                ]
+              ]
+            }
+          ]
+        ]
+      }
+    ]
+  ]
+}

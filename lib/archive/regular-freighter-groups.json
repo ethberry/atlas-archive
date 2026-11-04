@@ -1,0 +1,747 @@
+[
+  {
+    "id": "hull",
+    "title": "Hull",
+    "options": [
+      {
+        "id": "box",
+        "label": "Box",
+        "names": ["_Hull_A"]
+      },
+      {
+        "id": "spine",
+        "label": "Spine",
+        "names": ["_Hull_B"]
+      }
+    ]
+  },
+  {
+    "id": "sides",
+    "title": "Sides",
+    "requires": {
+      "group": "hull",
+      "option": "box"
+    },
+    "options": [
+      {
+        "id": "slim",
+        "label": "Slim",
+        "names": ["_HullSide_A1"]
+      },
+      {
+        "id": "panel",
+        "label": "Panel",
+        "names": ["_HullSide_B"]
+      }
+    ]
+  },
+  {
+    "id": "top",
+    "title": "Top",
+    "requires": {
+      "group": "hull",
+      "option": "box"
+    },
+    "options": [
+      {
+        "id": "thrusters",
+        "label": "Thrusters",
+        "names": ["_HullATop_B"]
+      },
+      {
+        "id": "tower",
+        "label": "Tower",
+        "names": ["_HullATop_A"]
+      }
+    ]
+  },
+  {
+    "id": "bridge",
+    "title": "Bridge",
+    "requires": {
+      "group": "top",
+      "option": "thrusters"
+    },
+    "options": [
+      {
+        "id": "block",
+        "label": "Block",
+        "names": ["_Bridge_A1"]
+      },
+      {
+        "id": "mast",
+        "label": "Mast",
+        "names": ["_Bridge_B1"]
+      }
+    ]
+  },
+  {
+    "id": "bridgefin",
+    "title": "On the bridge",
+    "requires": {
+      "group": "top",
+      "option": "thrusters"
+    },
+    "options": [
+      {
+        "id": "none",
+        "label": "Nothing",
+        "names": ["_VerticalFin_None4", "_VerticalFin_None5"]
+      },
+      {
+        "id": "fin",
+        "label": "Fin",
+        "names": ["_VerticalFin_A4", "_VerticalFin_A5"]
+      }
+    ]
+  },
+  {
+    "id": "head",
+    "title": "Tower head",
+    "requires": {
+      "group": "top",
+      "option": "tower"
+    },
+    "options": [
+      {
+        "id": "rounded",
+        "label": "Rounded",
+        "names": ["_HullTop_A"]
+      },
+      {
+        "id": "flat",
+        "label": "Flat",
+        "names": ["_HullTop_B"]
+      }
+    ]
+  },
+  {
+    "id": "keel",
+    "title": "Keel",
+    "requires": {
+      "group": "hull",
+      "option": "box"
+    },
+    "options": [
+      {
+        "id": "curved",
+        "label": "Curved",
+        "names": ["_HullABot_B6"]
+      },
+      {
+        "id": "thrusters",
+        "label": "Thrusters",
+        "names": ["_HullABot_B5"]
+      }
+    ]
+  },
+  {
+    "id": "keelfin",
+    "title": "Under the thrusters",
+    "requires": {
+      "group": "keel",
+      "option": "thrusters"
+    },
+    "options": [
+      {
+        "id": "none",
+        "label": "Nothing",
+        "names": ["_VerticalFin_None3"]
+      },
+      {
+        "id": "fin",
+        "label": "Fin",
+        "names": ["_VerticalFin_A3"]
+      }
+    ]
+  },
+  {
+    "id": "engines",
+    "title": "Engines",
+    "requires": {
+      "group": "hull",
+      "option": "box"
+    },
+    "options": [
+      {
+        "id": "stacked",
+        "label": "Stacked",
+        "names": ["_Engine_A"]
+      },
+      {
+        "id": "cluster",
+        "label": "Cluster",
+        "names": ["_Engine_B"]
+      },
+      {
+        "id": "large",
+        "label": "Large",
+        "names": ["_Engine_C2"]
+      }
+    ]
+  },
+  {
+    "id": "sections",
+    "title": "Length",
+    "requires": {
+      "group": "hull",
+      "option": "box"
+    },
+    "owns": [
+      "Cargo_A",
+      "_Cargo_A15",
+      "_Cargo_A16",
+      "_Cargo_A17",
+      "_SideAcc1_A1",
+      "_SideAcc2_A1",
+      "_SideAcc3_A1",
+      "_SideAcc4_A1",
+      "_Cargo_CapD1",
+      "_Cargo_CapD2",
+      "_Cargo_CapD3",
+      "_Cargo_CapD4",
+      "_Cargo_A18"
+    ],
+    "options": [
+      {
+        "id": "1",
+        "label": "2 sections",
+        "names": [
+          "_Cargo_CapD1",
+          "_Cargo_CapT5",
+          "_Cargo_CapT6",
+          "_Cargo_CapT7",
+          "_Cargo_Top8",
+          "_Cargo_CapB5",
+          "_Cargo_CapB6",
+          "_Cargo_CapB7",
+          "_Cargo_ABot8"
+        ]
+      },
+      {
+        "id": "2",
+        "label": "3 sections",
+        "names": [
+          "_Cargo_CapD2",
+          "_Cargo_CapT8",
+          "_Cargo_CapT9",
+          "_Cargo_Top11",
+          "_Cargo_CapB8",
+          "_Cargo_CapB9",
+          "_Cargo_ABot11"
+        ]
+      },
+      {
+        "id": "3",
+        "label": "4 sections",
+        "names": [
+          "_Cargo_CapD3",
+          "_Cargo_CapT10",
+          "_Cargo_Top13",
+          "_Cargo_CapB10",
+          "_Cargo_ABot13"
+        ]
+      },
+      {
+        "id": "4",
+        "label": "5 sections",
+        "names": ["_Cargo_CapD4", "_Cargo_Top14", "_Cargo_ABot14"]
+      },
+      {
+        "id": "5",
+        "label": "6 sections",
+        "names": ["_Cargo_A18"]
+      }
+    ]
+  },
+  {
+    "id": "tail",
+    "title": "Tail",
+    "requires": {
+      "group": "hull",
+      "option": "box"
+    },
+    "owns": [
+      "_Cargo_Top5",
+      "_Cargo_Top6",
+      "_Cargo_Top7",
+      "_Cargo_Top9",
+      "_Cargo_Top10",
+      "_Cargo_Top12",
+      "_Cargo_ABot5",
+      "_Cargo_ABot6",
+      "_Cargo_ABot7",
+      "_Cargo_ABot9",
+      "_Cargo_ABot10",
+      "_Cargo_ABot12"
+    ],
+    "options": [
+      {
+        "id": "none",
+        "label": "None",
+        "names": [
+          "_Cargo_CapD1",
+          "_Cargo_CapD2",
+          "_Cargo_CapD3",
+          "_Cargo_CapD4",
+          "_Cargo_A18"
+        ]
+      },
+      {
+        "id": "upper1",
+        "label": "Upper 1",
+        "names": [
+          "_Cargo_CapT5",
+          "_Cargo_CapT8",
+          "_Cargo_CapT10",
+          "_Cargo_Top14"
+        ]
+      },
+      {
+        "id": "upper2",
+        "label": "Upper 2",
+        "names": ["_Cargo_CapT6", "_Cargo_CapT9", "_Cargo_Top13"]
+      },
+      {
+        "id": "upper3",
+        "label": "Upper 3",
+        "names": ["_Cargo_CapT7", "_Cargo_Top11"]
+      },
+      {
+        "id": "upper4",
+        "label": "Upper 4",
+        "names": ["_Cargo_Top8"]
+      },
+      {
+        "id": "lower1",
+        "label": "Lower 1",
+        "names": [
+          "_Cargo_CapB5",
+          "_Cargo_CapB8",
+          "_Cargo_CapB10",
+          "_Cargo_ABot14"
+        ]
+      },
+      {
+        "id": "lower2",
+        "label": "Lower 2",
+        "names": ["_Cargo_CapB6", "_Cargo_CapB9", "_Cargo_ABot13"]
+      },
+      {
+        "id": "lower3",
+        "label": "Lower 3",
+        "names": ["_Cargo_CapB7", "_Cargo_ABot11"]
+      },
+      {
+        "id": "lower4",
+        "label": "Lower 4",
+        "names": ["_Cargo_ABot8"]
+      }
+    ]
+  },
+  {
+    "id": "frame",
+    "title": "End plate",
+    "requires": {
+      "group": "tail",
+      "option": "none"
+    },
+    "options": [
+      {
+        "id": "frame",
+        "label": "Plate",
+        "names": ["_GantryAcc_1"]
+      },
+      {
+        "id": "none",
+        "label": "None",
+        "names": ["_GantryAcc_2"]
+      }
+    ]
+  },
+  {
+    "id": "lowercontainers",
+    "title": "Lower containers",
+    "requires": {
+      "group": "hull",
+      "option": "box"
+    },
+    "first": true,
+    "free": true,
+    "options": [
+      {
+        "id": "discs",
+        "label": "Discs",
+        "names": ["_CargoSmall_A"]
+      },
+      {
+        "id": "boxes",
+        "label": "Boxes",
+        "names": ["_CargoSmall_B"]
+      },
+      {
+        "id": "cylinders",
+        "label": "Cylinders",
+        "names": ["_CargoSmall_C"]
+      }
+    ]
+  },
+  {
+    "id": "uppercontainers",
+    "title": "Upper containers",
+    "requires": {
+      "group": "hull",
+      "option": "box"
+    },
+    "first": true,
+    "free": true,
+    "options": [
+      {
+        "id": "discs",
+        "label": "Discs",
+        "names": ["_Cargo_A"]
+      },
+      {
+        "id": "boxes",
+        "label": "Boxes",
+        "names": ["_Cargo_B"]
+      },
+      {
+        "id": "cylinders",
+        "label": "Cylinders",
+        "names": ["_Cargo_C"]
+      }
+    ]
+  },
+  {
+    "id": "rowcontainers",
+    "title": "Row containers",
+    "requires": {
+      "group": "hull",
+      "option": "box"
+    },
+    "first": true,
+    "free": true,
+    "options": [
+      {
+        "id": "discs",
+        "label": "Discs",
+        "names": ["_CargoB_A"]
+      },
+      {
+        "id": "boxes",
+        "label": "Boxes",
+        "names": ["_CargoB_B"]
+      },
+      {
+        "id": "cylinders",
+        "label": "Cylinders",
+        "names": ["_CargoB_C"]
+      }
+    ],
+    "tile": {
+      "tail": "upper2"
+    }
+  },
+  {
+    "id": "lowerendcontainers",
+    "title": "Lower end containers",
+    "requires": {
+      "group": "tail",
+      "option": "none"
+    },
+    "first": true,
+    "free": true,
+    "options": [
+      {
+        "id": "discs",
+        "label": "Discs",
+        "names": ["_SmallCargo_A"]
+      },
+      {
+        "id": "boxes",
+        "label": "Boxes",
+        "names": ["_SmallCargo_B"]
+      },
+      {
+        "id": "cylinders",
+        "label": "Cylinders",
+        "names": ["_SmallCargo_C"]
+      }
+    ]
+  },
+  {
+    "id": "upperendcontainers",
+    "title": "Upper end containers",
+    "requires": {
+      "group": "tail",
+      "option": "none"
+    },
+    "first": true,
+    "free": true,
+    "options": [
+      {
+        "id": "discs",
+        "label": "Discs",
+        "names": ["_Cargo_ContA"]
+      },
+      {
+        "id": "boxes",
+        "label": "Boxes",
+        "names": ["_Cargo_ContB"]
+      },
+      {
+        "id": "cylinders",
+        "label": "Cylinders",
+        "names": ["_Cargo_ContC"]
+      }
+    ]
+  },
+  {
+    "id": "wings",
+    "title": "Wings",
+    "requires": {
+      "group": "hull",
+      "option": "spine"
+    },
+    "options": [
+      {
+        "id": "fins",
+        "label": "Fins",
+        "names": ["_HullWings_A"]
+      },
+      {
+        "id": "pods",
+        "label": "Plates",
+        "names": ["_HullWings_B"]
+      },
+      {
+        "id": "delta",
+        "label": "Delta",
+        "names": ["_HullWings_C"]
+      }
+    ]
+  },
+  {
+    "id": "spinetop",
+    "title": "Top",
+    "requires": {
+      "group": "hull",
+      "option": "spine"
+    },
+    "options": [
+      {
+        "id": "thrusters",
+        "label": "Thrusters",
+        "names": ["_HullBTop_B3"]
+      },
+      {
+        "id": "tower",
+        "label": "Tower",
+        "names": ["_HullBTop_A"]
+      }
+    ]
+  },
+  {
+    "id": "spinehead",
+    "title": "Tower head",
+    "requires": {
+      "group": "spinetop",
+      "option": "tower"
+    },
+    "options": [
+      {
+        "id": "rounded",
+        "label": "Rounded",
+        "names": ["_HullTop_A"]
+      },
+      {
+        "id": "flat",
+        "label": "Flat",
+        "names": ["_HullTop_B"]
+      }
+    ]
+  },
+  {
+    "id": "spinefin",
+    "title": "Fin on top",
+    "requires": {
+      "group": "hull",
+      "option": "spine"
+    },
+    "options": [
+      {
+        "id": "none",
+        "label": "Nothing",
+        "names": ["_VerticalFin_None1", "_VerticalFin_None"]
+      },
+      {
+        "id": "fin",
+        "label": "Fin",
+        "names": ["_VerticalFin_A1", "_VerticalFin_A"]
+      }
+    ]
+  },
+  {
+    "id": "spinekeel",
+    "title": "Keel",
+    "requires": {
+      "group": "hull",
+      "option": "spine"
+    },
+    "options": [
+      {
+        "id": "curved",
+        "label": "Curved",
+        "names": ["_HullBBot_B3"]
+      },
+      {
+        "id": "thrusters",
+        "label": "Thrusters",
+        "names": ["_HullBBot_B4"]
+      }
+    ]
+  },
+  {
+    "id": "spinekeelfin",
+    "title": "Under the thrusters",
+    "requires": {
+      "group": "spinekeel",
+      "option": "thrusters"
+    },
+    "options": [
+      {
+        "id": "none",
+        "label": "Nothing",
+        "names": ["_VerticalFin_None2"]
+      },
+      {
+        "id": "fin",
+        "label": "Fin",
+        "names": ["_VerticalFin_A2"]
+      }
+    ]
+  },
+  {
+    "id": "modules",
+    "title": "Length",
+    "requires": {
+      "group": "hull",
+      "option": "spine"
+    },
+    "owns": ["_Cargo_E11", "_Cargo_E10", "_Cargo_E4", "_Cargo_E5"],
+    "options": [
+      {
+        "id": "2",
+        "label": "2 sections",
+        "names": ["_Cargo_EndE"]
+      },
+      {
+        "id": "3",
+        "label": "3 sections",
+        "names": ["_Cargo_EndE6"]
+      },
+      {
+        "id": "4",
+        "label": "4 sections",
+        "names": ["_Cargo_EndE2"]
+      },
+      {
+        "id": "5",
+        "label": "5 sections",
+        "names": ["_Cargo_E6"]
+      }
+    ]
+  },
+  {
+    "id": "spinecontainers",
+    "title": "Containers",
+    "requires": {
+      "group": "hull",
+      "option": "spine"
+    },
+    "first": true,
+    "owns": ["_CargoB_B"],
+    "options": [
+      {
+        "id": "tanks",
+        "label": "Tanks",
+        "names": ["_CargoB_A"]
+      },
+      {
+        "id": "crates",
+        "label": "Crates",
+        "names": ["_Container_A1"]
+      },
+      {
+        "id": "spheres",
+        "label": "Spheres",
+        "names": ["_Container_B2"]
+      },
+      {
+        "id": "covered",
+        "label": "Covered",
+        "names": ["_CargoB_C"]
+      }
+    ]
+  },
+  {
+    "id": "nose",
+    "title": "Nose",
+    "requires": {
+      "group": "hull",
+      "option": "spine"
+    },
+    "owns": [
+      "_Cargo_D",
+      "_Cargo_JointtB",
+      "_Cargo_EndE",
+      "_Cargo_EndE6",
+      "_Cargo_EndE2",
+      "_Cargo_EndE10",
+      "_GantryBcapbridge_A"
+    ],
+    "options": [
+      {
+        "id": "wedge",
+        "label": "Wedge bridge",
+        "names": ["_CapBbridge_A"]
+      },
+      {
+        "id": "block",
+        "label": "Block bridge",
+        "names": ["_CapBbridge_B"]
+      },
+      {
+        "id": "drums",
+        "label": "Drum bridge",
+        "names": ["_CapBbridge_C"]
+      },
+      {
+        "id": "saucer",
+        "label": "Saucer bridge",
+        "names": ["_CapBbridge_D"]
+      },
+      {
+        "id": "disc",
+        "label": "Disc",
+        "names": ["_Cargo_EndA"]
+      },
+      {
+        "id": "sphere",
+        "label": "Sphere",
+        "names": ["_Cargo_EndB"]
+      },
+      {
+        "id": "ring",
+        "label": "Ring",
+        "names": ["_Cargo_EndC"]
+      },
+      {
+        "id": "turrets",
+        "label": "Ring and turrets",
+        "names": ["_Cargo_JointtB1"]
+      }
+    ]
+  }
+]
