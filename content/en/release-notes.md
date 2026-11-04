@@ -1,5 +1,10 @@
 # Release notes
 
+## 5 November 2026: version 2.0
+
+- Added the [guides](/guides).
+- Added [How lucky am I?](/how-lucky-am-i), which scores a multitool or a ship you found.
+
 ## 1 November 2026: version 1.0
 
 🎉 The first public release.
