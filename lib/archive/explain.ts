@@ -1,4 +1,5 @@
 import type { Kind } from "@/lib/archive/kinds";
+import { guidePath } from "@/lib/archive/guides";
 
 // The Statistics page that explains a card's field, by the field's label. The
 // label is the link's text, so each one appears on its page. A base stat leads
@@ -49,5 +50,5 @@ const STATISTICS: Partial<Record<Kind, Record<string, string>>> = {
 
 export function explainHref(kind: Kind, label: string) {
   const slug = STATISTICS[kind]?.[label];
-  return slug ? `/guides/${slug}` : undefined;
+  return slug ? guidePath(slug) : undefined;
 }

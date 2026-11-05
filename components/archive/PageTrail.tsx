@@ -12,10 +12,10 @@ export function PageTrail(props: { steps: PageStep[] }) {
   const { steps } = props;
   return (
     <Breadcrumbs sx={{ mb: 2 }}>
-      {steps.map((step) =>
+      {steps.map((step, index) =>
         step.href ? (
           <MuiLink
-            key={step.name}
+            key={index}
             component={Link}
             href={step.href}
             color="inherit"
@@ -24,7 +24,7 @@ export function PageTrail(props: { steps: PageStep[] }) {
             {step.name}
           </MuiLink>
         ) : (
-          <Typography key={step.name} color="text.primary">
+          <Typography key={index} color="text.primary">
             {step.name}
           </Typography>
         ),

@@ -1,503 +1,2144 @@
 [
   {
-    "id": "hull",
-    "title": "Hull",
+    "id": "Pit_A",
     "options": [
       {
-        "id": "a",
-        "label": "Plated",
-        "names": ["_Skirt_A"]
-      },
-      {
-        "id": "b",
-        "label": "Frame",
-        "names": ["_Skirt_B"]
-      }
-    ]
-  },
-  {
-    "id": "cockpit",
-    "title": "Cockpit",
-    "options": [
-      {
-        "id": "a",
+        "id": "Pit_A",
         "label": "Low",
         "names": ["_Pit_A"]
       },
       {
-        "id": "b",
+        "id": "Pit_B",
         "label": "Stepped",
         "names": ["_Pit_B"]
       },
       {
-        "id": "c",
+        "id": "Pit_C",
         "label": "Tall",
         "names": ["_Pit_C"]
       }
-    ]
+    ],
+    "title": "Cockpit"
   },
   {
-    "id": "flap",
-    "title": "Top flap",
+    "id": "Lights_NULL1",
     "options": [
       {
-        "id": "without",
-        "label": "Without",
-        "names": ["_TopFlap_Null"],
-        "empty": true
+        "empty": true,
+        "id": "Lights_NULL1",
+        "label": "None",
+        "names": ["_Lights_NULL1"]
       },
       {
-        "id": "with",
+        "id": "Lights_A1",
+        "label": "Variant 1",
+        "names": ["_Lights_A1"]
+      },
+      {
+        "id": "Lights_B1",
+        "label": "Variant 2",
+        "names": ["_Lights_B1"]
+      },
+      {
+        "id": "Lights_C1",
+        "label": "Variant 3",
+        "names": ["_Lights_C1"]
+      },
+      {
+        "id": "Lights_D1",
+        "label": "Variant 4",
+        "names": ["_Lights_D1"]
+      },
+      {
+        "id": "Lights_E1",
+        "label": "Variant 5",
+        "names": ["_Lights_E1"]
+      },
+      {
+        "id": "Lights_F1",
+        "label": "Variant 6",
+        "names": ["_Lights_F1"]
+      },
+      {
+        "id": "Lights_G1",
+        "label": "Variant 7",
+        "names": ["_Lights_G1"]
+      },
+      {
+        "id": "Lights_H1",
+        "label": "Variant 8",
+        "names": ["_Lights_H1"]
+      },
+      {
+        "id": "Lights_I1",
+        "label": "Variant 9",
+        "names": ["_Lights_I1"]
+      },
+      {
+        "id": "Lights_J2",
+        "label": "Variant 10",
+        "names": ["_Lights_J2"]
+      },
+      {
+        "id": "Lights_G8",
+        "label": "Variant 11",
+        "names": ["_Lights_G8"]
+      }
+    ],
+    "requires": {
+      "group": "Pit_A",
+      "option": "Pit_B"
+    },
+    "title": "Cockpit lights"
+  },
+  {
+    "id": "Lights_NULL",
+    "options": [
+      {
+        "empty": true,
+        "id": "Lights_NULL",
+        "label": "None",
+        "names": ["_Lights_NULL"]
+      },
+      {
+        "id": "Lights_A",
+        "label": "Variant 1",
+        "names": ["_Lights_A"]
+      },
+      {
+        "id": "Lights_B",
+        "label": "Variant 2",
+        "names": ["_Lights_B"]
+      },
+      {
+        "id": "Lights_C",
+        "label": "Variant 3",
+        "names": ["_Lights_C"]
+      },
+      {
+        "id": "Lights_D",
+        "label": "Variant 4",
+        "names": ["_Lights_D"]
+      },
+      {
+        "id": "Lights_E",
+        "label": "Variant 5",
+        "names": ["_Lights_E"]
+      },
+      {
+        "id": "Lights_F",
+        "label": "Variant 6",
+        "names": ["_Lights_F"]
+      },
+      {
+        "id": "Lights_G",
+        "label": "Variant 7",
+        "names": ["_Lights_G"]
+      },
+      {
+        "id": "Lights_H",
+        "label": "Variant 8",
+        "names": ["_Lights_H"]
+      },
+      {
+        "id": "Lights_I",
+        "label": "Variant 9",
+        "names": ["_Lights_I"]
+      },
+      {
+        "id": "Lights_J",
+        "label": "Variant 10",
+        "names": ["_Lights_J"]
+      }
+    ],
+    "requires": {
+      "group": "Pit_A",
+      "option": "Pit_C"
+    },
+    "title": "Cockpit lights"
+  },
+  {
+    "id": "TopFlap_A",
+    "options": [
+      {
+        "id": "TopFlap_A",
         "label": "With",
         "names": ["_TopFlap_A"]
+      },
+      {
+        "empty": true,
+        "id": "TopFlap_Null",
+        "label": "Without",
+        "names": ["_TopFlap_Null"]
       }
-    ]
+    ],
+    "title": "Top flap"
   },
   {
-    "id": "wings",
-    "title": "Wing set",
+    "id": "Wings_V",
     "options": [
       {
-        "id": "v",
+        "id": "Wings_V",
         "label": "Stacked",
-        "names": ["_Wings_V"]
+        "names": ["_Wings_V"],
+        "vanishes": true
       },
       {
-        "id": "h",
+        "id": "Wings_H",
         "label": "Spread",
-        "names": ["_Wings_H"]
+        "names": ["_Wings_H"],
+        "vanishes": true
       },
       {
-        "id": "b",
-        "label": "Carriage",
-        "names": ["_Wings_B"]
-      }
-    ]
-  },
-  {
-    "id": "upper",
-    "title": "Upper wings",
-    "requires": {
-      "group": "wings",
-      "option": "v"
-    },
-    "options": [
-      {
-        "id": "none",
-        "label": "None",
-        "names": ["_WingsO_NULL"],
-        "empty": true
-      },
-      {
-        "id": "rings",
-        "label": "Rings",
-        "names": ["_WingsO_oFlip"]
-      },
-      {
-        "id": "open",
-        "label": "Open",
-        "names": ["_WingsO_oTop"]
-      },
-      {
-        "id": "closed",
-        "label": "Closed",
-        "names": ["_WingsO_cTop"]
-      }
-    ]
-  },
-  {
-    "id": "lower",
-    "title": "Lower wings",
-    "requires": {
-      "group": "wings",
-      "option": "v"
-    },
-    "options": [
-      {
-        "id": "none",
-        "label": "None",
-        "names": ["_WingsU_NULL"],
-        "empty": true
-      },
-      {
-        "id": "open",
-        "label": "Open",
-        "names": ["_WingsU_oBot"]
-      },
-      {
-        "id": "closed",
-        "label": "Closed",
-        "names": ["_WingsU_cBot"]
-      },
-      {
-        "id": "legs",
-        "label": "Legs",
-        "names": ["_WingsU_Legs"]
-      }
-    ]
-  },
-  {
-    "id": "flat",
-    "title": "Spread wings",
-    "requires": {
-      "group": "wings",
-      "option": "h"
-    },
-    "options": [
-      {
-        "id": "none",
-        "label": "None",
-        "names": ["_Wings1_NULL"],
-        "empty": true
-      },
-      {
-        "id": "open",
-        "label": "Open",
-        "names": ["_Wings1_O"]
-      },
-      {
-        "id": "closed",
-        "label": "Closed",
-        "names": ["_Wings1_C"]
-      },
-      {
-        "id": "bf",
-        "label": "Low",
-        "names": ["_Wings1_BF"]
-      },
-      {
-        "id": "tf",
-        "label": "High",
-        "names": ["_Wings1_TF"]
-      }
-    ]
-  },
-  {
-    "id": "carriage",
-    "title": "Carriage",
-    "requires": {
-      "group": "wings",
-      "option": "b"
-    },
-    "options": [
-      {
-        "id": "fork",
+        "id": "Carriage_A",
         "label": "Fork",
         "names": ["_Carriage_A"]
       },
       {
-        "id": "pod",
+        "id": "Carriage_B",
         "label": "Pod",
         "names": ["_Carriage_B"]
-      }
-    ]
-  },
-  {
-    "id": "topTrunk",
-    "title": "Top trunk",
-    "requires": {
-      "group": "carriage",
-      "option": "fork"
-    },
-    "options": [
-      {
-        "id": "without",
-        "label": "Without",
-        "names": ["_TrunkTOP_NULL"],
-        "empty": true
       },
       {
-        "id": "plate",
+        "empty": true,
+        "id": "none",
+        "label": "None",
+        "names": ["_Wings_V", "_WingsO_NULL", "_WingsU_NULL"],
+        "nothing": true
+      }
+    ],
+    "title": "Wing set"
+  },
+  {
+    "id": "WingsO_NULL",
+    "options": [
+      {
+        "empty": true,
+        "id": "WingsO_NULL",
+        "label": "None",
+        "names": ["_WingsO_NULL"]
+      },
+      {
+        "id": "WingsO_oFlip",
+        "label": "Rings",
+        "names": ["_WingsO_oFlip"],
+        "shared": true
+      },
+      {
+        "id": "WingsO_oTop",
+        "label": "Open",
+        "names": ["_WingsO_oTop"]
+      },
+      {
+        "id": "WingsO_cTop",
+        "label": "Closed",
+        "names": ["_WingsO_cTop"]
+      }
+    ],
+    "requires": {
+      "group": "Wings_V",
+      "option": "Wings_V"
+    },
+    "title": "Upper wings"
+  },
+  {
+    "id": "extrawings_NULLq",
+    "options": [
+      {
+        "empty": true,
+        "id": "extrawings_NULLq",
+        "label": "None",
+        "names": ["_extrawings_NULLq"]
+      },
+      {
+        "id": "extrawings_tops4q",
+        "label": "With",
+        "names": ["_extrawings_tops4q"]
+      }
+    ],
+    "requires": {
+      "group": "WingsO_NULL",
+      "option": "WingsO_oFlip"
+    },
+    "title": "Extra wings"
+  },
+  {
+    "id": "Type_Black1q",
+    "options": [
+      {
+        "id": "Type_Black1q",
+        "label": "Black",
+        "names": ["_Type_Black1q"]
+      },
+      {
+        "id": "Type_White1q",
+        "label": "White",
+        "names": ["_Type_White1q"]
+      },
+      {
+        "id": "Type_Sentinel1q",
+        "label": "Sentinel",
+        "names": ["_Type_Sentinel1q"]
+      }
+    ],
+    "requires": {
+      "group": "extrawings_NULLq",
+      "option": "extrawings_tops4q"
+    },
+    "title": "Plate shade"
+  },
+  {
+    "id": "axWingss_11",
+    "options": [
+      {
+        "empty": true,
+        "id": "axWingss_11",
+        "label": "None",
+        "names": ["_axWingss_11"]
+      },
+      {
+        "id": "axWingss_12",
+        "label": "With",
+        "names": ["_axWingss_12"]
+      }
+    ],
+    "requires": {
+      "group": "WingsO_NULL",
+      "option": "WingsO_oTop"
+    },
+    "title": "Wing plates"
+  },
+  {
+    "id": "JetTop_NULL",
+    "options": [
+      {
+        "empty": true,
+        "id": "JetTop_NULL",
+        "label": "None",
+        "names": ["_JetTop_NULL"]
+      },
+      {
+        "id": "JetTop_A",
+        "label": "With",
+        "names": ["_JetTop_A"]
+      }
+    ],
+    "requires": {
+      "group": "WingsO_NULL",
+      "option": "WingsO_oTop"
+    },
+    "title": "Top jet"
+  },
+  {
+    "id": "Type_Non",
+    "options": [
+      {
+        "empty": true,
+        "id": "Type_Non",
+        "label": "None",
+        "names": ["_Type_Non"]
+      },
+      {
+        "id": "Type_Black1",
+        "label": "Black",
+        "names": ["_Type_Black1"]
+      },
+      {
+        "id": "Type_White1",
+        "label": "White",
+        "names": ["_Type_White1"]
+      },
+      {
+        "id": "Type_Sentinel1",
+        "label": "Sentinel",
+        "names": ["_Type_Sentinel1"]
+      }
+    ],
+    "requires": {
+      "group": "WingsO_NULL",
+      "option": "WingsO_oTop"
+    },
+    "title": "Plate shade"
+  },
+  {
+    "id": "exWings_non",
+    "options": [
+      {
+        "empty": true,
+        "id": "exWings_non",
+        "label": "None",
+        "names": ["_exWings_non"]
+      },
+      {
+        "id": "exWings_5s436",
+        "label": "With",
+        "names": ["_exWings_5s436"]
+      }
+    ],
+    "requires": {
+      "group": "WingsO_NULL",
+      "option": "WingsO_oTop"
+    },
+    "title": "Wing tips"
+  },
+  {
+    "id": "TopJets_NULL",
+    "options": [
+      {
+        "empty": true,
+        "id": "TopJets_NULL",
+        "label": "None",
+        "names": ["_TopJets_NULL"]
+      },
+      {
+        "id": "TopJets_A",
+        "label": "With",
+        "names": ["_TopJets_A"]
+      }
+    ],
+    "requires": {
+      "group": "WingsO_NULL",
+      "option": "WingsO_cTop"
+    },
+    "title": "Top jets"
+  },
+  {
+    "id": "WingsU_NULL",
+    "options": [
+      {
+        "empty": true,
+        "id": "WingsU_NULL",
+        "label": "None",
+        "names": ["_WingsU_NULL"]
+      },
+      {
+        "id": "WingsU_oBot",
+        "label": "Open",
+        "names": ["_WingsU_oBot"]
+      },
+      {
+        "id": "WingsU_cBot",
+        "label": "Closed",
+        "names": ["_WingsU_cBot"]
+      },
+      {
+        "id": "WingsU_Legs",
+        "label": "Legs",
+        "names": ["_WingsU_Legs"]
+      }
+    ],
+    "requires": {
+      "group": "Wings_V",
+      "option": "Wings_V"
+    },
+    "title": "Lower wings"
+  },
+  {
+    "id": "JetBots_NULL",
+    "options": [
+      {
+        "empty": true,
+        "id": "JetBots_NULL",
+        "label": "None",
+        "names": ["_JetBots_NULL"]
+      },
+      {
+        "id": "JetBots_A",
+        "label": "With",
+        "names": ["_JetBots_A"]
+      }
+    ],
+    "requires": {
+      "group": "WingsU_NULL",
+      "option": "WingsU_oBot"
+    },
+    "title": "Bottom jets"
+  },
+  {
+    "id": "Type_non1",
+    "options": [
+      {
+        "empty": true,
+        "id": "Type_non1",
+        "label": "None",
+        "names": ["_Type_non1"]
+      },
+      {
+        "id": "Type_Sentinel2",
+        "label": "Sentinel",
+        "names": ["_Type_Sentinel2"]
+      },
+      {
+        "id": "Type_White2",
+        "label": "White",
+        "names": ["_Type_White2"]
+      },
+      {
+        "id": "Type_Black2",
+        "label": "Black",
+        "names": ["_Type_Black2"]
+      }
+    ],
+    "requires": {
+      "group": "WingsU_NULL",
+      "option": "WingsU_oBot"
+    },
+    "title": "Plate shade"
+  },
+  {
+    "id": "JetBot_NULL",
+    "options": [
+      {
+        "empty": true,
+        "id": "JetBot_NULL",
+        "label": "None",
+        "names": ["_JetBot_NULL"]
+      },
+      {
+        "id": "JetBot_A",
+        "label": "With",
+        "names": ["_JetBot_A"]
+      }
+    ],
+    "requires": {
+      "group": "WingsU_NULL",
+      "option": "WingsU_cBot"
+    },
+    "title": "Bottom jet"
+  },
+  {
+    "id": "Wings1_NULL",
+    "options": [
+      {
+        "empty": true,
+        "id": "Wings1_NULL",
+        "label": "None",
+        "names": ["_Wings1_NULL"]
+      },
+      {
+        "id": "Wings1_O",
+        "label": "Open",
+        "names": ["_Wings1_O"]
+      },
+      {
+        "id": "Wings1_C",
+        "label": "Closed",
+        "names": ["_Wings1_C"]
+      },
+      {
+        "id": "Wings1_oBot",
+        "label": "Open, low",
+        "names": ["_Wings1_oBot"]
+      },
+      {
+        "id": "Wings1_cBot",
+        "label": "Closed, low",
+        "names": ["_Wings1_cBot"]
+      },
+      {
+        "id": "Wings1H_oTop",
+        "label": "Open, high",
+        "names": ["_Wings1H_oTop"]
+      },
+      {
+        "id": "Wings1H_cTop",
+        "label": "Closed, high",
+        "names": ["_Wings1H_cTop"]
+      }
+    ],
+    "requires": {
+      "group": "Wings_V",
+      "option": "Wings_H"
+    },
+    "title": "Spread wings"
+  },
+  {
+    "id": "SWings_NULL",
+    "options": [
+      {
+        "empty": true,
+        "id": "SWings_NULL",
+        "label": "None",
+        "names": ["_SWings_NULL"]
+      },
+      {
+        "id": "SWings_A2",
+        "label": "Variant 1",
+        "names": ["_SWings_A2"]
+      },
+      {
+        "id": "SWings_A3",
+        "label": "Variant 2",
+        "names": ["_SWings_A3"],
+        "shared": true
+      }
+    ],
+    "requires": {
+      "group": "Wings1_NULL",
+      "option": "Wings1_O"
+    },
+    "title": "Side wings"
+  },
+  {
+    "id": "TipLight_NULL",
+    "options": [
+      {
+        "empty": true,
+        "id": "TipLight_NULL",
+        "label": "None",
+        "names": ["_TipLight_NULL"]
+      },
+      {
+        "id": "TipLight_A",
+        "label": "With",
+        "names": ["_TipLight_A"]
+      }
+    ],
+    "requires": {
+      "group": "SWings_NULL",
+      "option": "SWings_A2"
+    },
+    "title": "Tip lights"
+  },
+  {
+    "id": "HorTopW_NULL",
+    "options": [
+      {
+        "empty": true,
+        "id": "HorTopW_NULL",
+        "label": "None",
+        "names": ["_HorTopW_NULL"]
+      },
+      {
+        "id": "HorTopW_A",
+        "label": "With",
+        "names": ["_HorTopW_A"],
+        "shared": true
+      }
+    ],
+    "requires": {
+      "group": "Wings1_NULL",
+      "option": "Wings1_O"
+    },
+    "title": "Top fins"
+  },
+  {
+    "id": "Engines_Null",
+    "options": [
+      {
+        "empty": true,
+        "id": "Engines_Null",
+        "label": "None",
+        "names": ["_Engines_Null"]
+      },
+      {
+        "id": "Jets_A",
+        "label": "Jets 1",
+        "names": ["_Jets_A"]
+      },
+      {
+        "id": "Jets_B",
+        "label": "Jets 2",
+        "names": ["_Jets_B"]
+      },
+      {
+        "id": "Jets_C",
+        "label": "Jets 3",
+        "names": ["_Jets_C"]
+      }
+    ],
+    "requires": {
+      "group": "Wings1_NULL",
+      "option": "Wings1_O"
+    },
+    "title": "Wing engines"
+  },
+  {
+    "id": "exWingsb_NULL4",
+    "options": [
+      {
+        "empty": true,
+        "id": "exWingsb_NULL4",
+        "label": "None",
+        "names": ["_exWingsb_NULL4"]
+      },
+      {
+        "id": "exWingsb_5sts3",
+        "label": "With",
+        "names": ["_exWingsb_5sts3"]
+      }
+    ],
+    "requires": {
+      "group": "Wings1_NULL",
+      "option": "Wings1_C"
+    },
+    "title": "Wing tips"
+  },
+  {
+    "id": "SWings_A444",
+    "options": [
+      {
+        "empty": true,
+        "id": "SWings_A444",
+        "label": "None",
+        "names": ["_SWings_A444"]
+      },
+      {
+        "id": "SWings_A4",
+        "label": "With",
+        "names": ["_SWings_A4"],
+        "shared": true
+      }
+    ],
+    "requires": {
+      "group": "Wings1_NULL",
+      "option": "Wings1_oBot"
+    },
+    "title": "Side wings"
+  },
+  {
+    "id": "TipLight_LL",
+    "options": [
+      {
+        "empty": true,
+        "id": "TipLight_LL",
+        "label": "None",
+        "names": ["_TipLight_LL"]
+      },
+      {
+        "id": "TipLight_A3",
+        "label": "With",
+        "names": ["_TipLight_A3"]
+      }
+    ],
+    "requires": {
+      "group": "SWings_A444",
+      "option": "SWings_A4"
+    },
+    "title": "Tip lights"
+  },
+  {
+    "id": "Wings1b_NULL",
+    "options": [
+      {
+        "empty": true,
+        "id": "Wings1b_NULL",
+        "label": "None",
+        "names": ["_Wings1b_NULL"]
+      },
+      {
+        "id": "Wings1b_closedTop",
+        "label": "Closed",
+        "names": ["_Wings1b_closedTop"]
+      }
+    ],
+    "requires": {
+      "group": "Wings1_NULL",
+      "option": "Wings1_oBot"
+    },
+    "title": "Upper plate"
+  },
+  {
+    "id": "Wings1c_NULL",
+    "options": [
+      {
+        "empty": true,
+        "id": "Wings1c_NULL",
+        "label": "None",
+        "names": ["_Wings1c_NULL"]
+      },
+      {
+        "id": "Wings1c_openTop",
+        "label": "Open",
+        "names": ["_Wings1c_openTop"]
+      }
+    ],
+    "requires": {
+      "group": "Wings1_NULL",
+      "option": "Wings1_cBot"
+    },
+    "title": "Upper plate"
+  },
+  {
+    "id": "HorTopW_NULL56",
+    "options": [
+      {
+        "empty": true,
+        "id": "HorTopW_NULL56",
+        "label": "None",
+        "names": ["_HorTopW_NULL56"]
+      },
+      {
+        "id": "HorTopW_A1",
+        "label": "With",
+        "names": ["_HorTopW_A1"],
+        "shared": true
+      }
+    ],
+    "requires": {
+      "group": "Wings1c_NULL",
+      "option": "Wings1c_openTop"
+    },
+    "title": "Top fins"
+  },
+  {
+    "id": "exWings_443",
+    "options": [
+      {
+        "empty": true,
+        "id": "exWings_443",
+        "label": "None",
+        "names": ["_exWings_443"]
+      },
+      {
+        "id": "exWings_5s1",
+        "label": "Variant 1",
+        "names": ["_exWings_5s1"],
+        "shared": true
+      },
+      {
+        "id": "exWings_5s432",
+        "label": "Variant 2",
+        "names": ["_exWings_5s432"],
+        "shared": true
+      }
+    ],
+    "requires": {
+      "group": "Wings1c_NULL",
+      "option": "Wings1c_openTop"
+    },
+    "title": "Wing tips"
+  },
+  {
+    "id": "TipLight_U",
+    "options": [
+      {
+        "empty": true,
+        "id": "TipLight_U",
+        "label": "None",
+        "names": ["_TipLight_U"]
+      },
+      {
+        "id": "TipLight_A4",
+        "label": "With",
+        "names": ["_TipLight_A4"]
+      }
+    ],
+    "requires": {
+      "group": "exWings_443",
+      "option": "exWings_5s1"
+    },
+    "title": "Tip lights"
+  },
+  {
+    "id": "Wings1H_NULL",
+    "options": [
+      {
+        "empty": true,
+        "id": "Wings1H_NULL",
+        "label": "None",
+        "names": ["_Wings1H_NULL"]
+      },
+      {
+        "id": "Wings1H_closedBot",
+        "label": "Closed",
+        "names": ["_Wings1H_closedBot"]
+      }
+    ],
+    "requires": {
+      "group": "Wings1_NULL",
+      "option": "Wings1H_oTop"
+    },
+    "title": "Plates"
+  },
+  {
+    "id": "HorBotW_NULL33",
+    "options": [
+      {
+        "empty": true,
+        "id": "HorBotW_NULL33",
+        "label": "None",
+        "names": ["_HorBotW_NULL33"]
+      },
+      {
+        "id": "HorBotW_A2",
+        "label": "With",
+        "names": ["_HorBotW_A2"],
+        "shared": true
+      }
+    ],
+    "requires": {
+      "group": "Wings1_NULL",
+      "option": "Wings1H_oTop"
+    },
+    "title": "Bottom fins"
+  },
+  {
+    "id": "exWings_422",
+    "options": [
+      {
+        "empty": true,
+        "id": "exWings_422",
+        "label": "None",
+        "names": ["_exWings_422"]
+      },
+      {
+        "id": "exWings_422f",
+        "label": "Variant 1",
+        "names": ["_exWings_422f"],
+        "shared": true
+      },
+      {
+        "id": "exWings_444",
+        "label": "Variant 2",
+        "names": ["_exWings_444"],
+        "shared": true
+      }
+    ],
+    "requires": {
+      "group": "Wings1_NULL",
+      "option": "Wings1H_oTop"
+    },
+    "title": "Wing tips"
+  },
+  {
+    "id": "TipLight_N",
+    "options": [
+      {
+        "empty": true,
+        "id": "TipLight_N",
+        "label": "None",
+        "names": ["_TipLight_N"]
+      },
+      {
+        "id": "TipLight_A5",
+        "label": "With",
+        "names": ["_TipLight_A5"]
+      }
+    ],
+    "requires": {
+      "group": "exWings_422",
+      "option": "exWings_422f"
+    },
+    "title": "Tip lights"
+  },
+  {
+    "id": "Wings1H_NULL1",
+    "options": [
+      {
+        "empty": true,
+        "id": "Wings1H_NULL1",
+        "label": "None",
+        "names": ["_Wings1H_NULL1"]
+      },
+      {
+        "id": "Wings1H_openBot",
+        "label": "Open",
+        "names": ["_Wings1H_openBot"]
+      }
+    ],
+    "requires": {
+      "group": "Wings1_NULL",
+      "option": "Wings1H_cTop"
+    },
+    "title": "Plates"
+  },
+  {
+    "id": "SWings_Nu3",
+    "options": [
+      {
+        "empty": true,
+        "id": "SWings_Nu3",
+        "label": "None",
+        "names": ["_SWings_Nu3"]
+      },
+      {
+        "id": "SWings_A7",
+        "label": "With",
+        "names": ["_SWings_A7"],
+        "shared": true
+      }
+    ],
+    "requires": {
+      "group": "Wings1H_NULL1",
+      "option": "Wings1H_openBot"
+    },
+    "title": "Side wings"
+  },
+  {
+    "id": "TipLight_L",
+    "options": [
+      {
+        "empty": true,
+        "id": "TipLight_L",
+        "label": "None",
+        "names": ["_TipLight_L"]
+      },
+      {
+        "id": "TipLight_A2",
+        "label": "With",
+        "names": ["_TipLight_A2"]
+      }
+    ],
+    "requires": {
+      "group": "SWings_Nu3",
+      "option": "SWings_A7"
+    },
+    "title": "Tip lights"
+  },
+  {
+    "id": "TrunkTOP_NULL",
+    "options": [
+      {
+        "empty": true,
+        "id": "TrunkTOP_NULL",
+        "label": "Without",
+        "names": ["_TrunkTOP_NULL"]
+      },
+      {
+        "id": "TrunkTOP_A",
         "label": "Plate",
         "names": ["_TrunkTOP_A"]
       },
       {
-        "id": "blades",
+        "id": "TrunkTOP_B",
         "label": "Blades",
-        "names": ["_TrunkTOP_B"]
+        "names": ["_TrunkTOP_B"],
+        "shared": true
       }
-    ]
+    ],
+    "requires": {
+      "group": "Wings_V",
+      "option": "Carriage_A"
+    },
+    "title": "Top trunk"
   },
   {
-    "id": "bottomTrunk",
-    "title": "Bottom trunk",
-    "requires": {
-      "group": "carriage",
-      "option": "fork"
-    },
+    "id": "TypeA_Sentinel4x",
     "options": [
       {
-        "id": "without",
-        "label": "Without",
-        "names": ["_TrunkBOT_NULL"],
-        "empty": true
+        "id": "TypeA_Sentinel4x",
+        "label": "Sentinel",
+        "names": ["_TypeA_Sentinel4x"],
+        "shared": true
       },
       {
-        "id": "plate",
+        "id": "TypeA_White4x",
+        "label": "White",
+        "names": ["_TypeA_White4x"],
+        "shared": true
+      },
+      {
+        "id": "TypeA_Black4x",
+        "label": "Black",
+        "names": ["_TypeA_Black4x"],
+        "shared": true
+      }
+    ],
+    "requires": {
+      "group": "TrunkTOP_NULL",
+      "option": "TrunkTOP_A"
+    },
+    "title": "Plate shade"
+  },
+  {
+    "id": "antsb_16",
+    "options": [
+      {
+        "id": "antsb_16",
+        "label": "With",
+        "names": ["_antsb_16"],
+        "shared": true
+      },
+      {
+        "empty": true,
+        "id": "antsb_15",
+        "label": "None",
+        "names": ["_antsb_15"]
+      }
+    ],
+    "requires": {
+      "group": "TrunkTOP_NULL",
+      "option": "TrunkTOP_A"
+    },
+    "title": "Antennas"
+  },
+  {
+    "id": "Type_Sentinel4e",
+    "options": [
+      {
+        "id": "Type_Sentinel4e",
+        "label": "Sentinel",
+        "names": ["_Type_Sentinel4e"],
+        "shared": true
+      },
+      {
+        "id": "Type_White4e",
+        "label": "White",
+        "names": ["_Type_White4e"],
+        "shared": true
+      },
+      {
+        "id": "Type_Black4e",
+        "label": "Black",
+        "names": ["_Type_Black4e"],
+        "shared": true
+      }
+    ],
+    "requires": {
+      "group": "TrunkTOP_NULL",
+      "option": "TrunkTOP_B"
+    },
+    "title": "Plate shade"
+  },
+  {
+    "id": "ants_15u",
+    "options": [
+      {
+        "id": "ants_15u",
+        "label": "With",
+        "names": ["_ants_15u"],
+        "shared": true
+      },
+      {
+        "empty": true,
+        "id": "ants_15",
+        "label": "None",
+        "names": ["_ants_15"]
+      }
+    ],
+    "requires": {
+      "group": "TrunkTOP_NULL",
+      "option": "TrunkTOP_B"
+    },
+    "title": "Antennas"
+  },
+  {
+    "id": "TrunkBOT_NULL",
+    "options": [
+      {
+        "empty": true,
+        "id": "TrunkBOT_NULL",
+        "label": "Without",
+        "names": ["_TrunkBOT_NULL"]
+      },
+      {
+        "id": "TrunkBOT_A",
         "label": "Plate",
         "names": ["_TrunkBOT_A"]
       },
       {
-        "id": "blades",
+        "id": "TrunkBOT_B",
         "label": "Blades",
-        "names": ["_TrunkBOT_B"]
+        "names": ["_TrunkBOT_B"],
+        "shared": true
       }
-    ]
+    ],
+    "requires": {
+      "group": "Wings_V",
+      "option": "Carriage_A"
+    },
+    "title": "Bottom trunk"
   },
   {
-    "id": "podUpper",
-    "title": "Upper wings",
-    "requires": {
-      "group": "carriage",
-      "option": "pod"
-    },
+    "id": "Type_Black5",
     "options": [
       {
-        "id": "rings",
-        "label": "Rings",
-        "names": ["_NWTop_Flip"]
+        "id": "Type_Black5",
+        "label": "Black",
+        "names": ["_Type_Black5"],
+        "shared": true
       },
       {
-        "id": "long",
-        "label": "Long",
-        "names": ["_NWTop_Full"]
+        "id": "Type_Sentinel5",
+        "label": "Sentinel",
+        "names": ["_Type_Sentinel5"],
+        "shared": true
       },
       {
-        "id": "short",
-        "label": "Short",
-        "names": ["_NWTop_Half"]
-      },
-      {
-        "id": "long-plated",
-        "label": "Long, plated",
-        "names": ["_Carriage_Full"]
-      },
-      {
-        "id": "short-plated",
-        "label": "Short, plated",
-        "names": ["_Carriage_Half"]
+        "id": "Type_White5",
+        "label": "White",
+        "names": ["_Type_White5"],
+        "shared": true
       }
-    ]
+    ],
+    "requires": {
+      "group": "TrunkBOT_NULL",
+      "option": "TrunkBOT_A"
+    },
+    "title": "Plate shade"
   },
   {
-    "id": "podLower",
-    "title": "Lower wings",
-    "requires": {
-      "group": "carriage",
-      "option": "pod"
-    },
+    "id": "Type_White6",
     "options": [
       {
-        "id": "long",
+        "id": "Type_White6",
+        "label": "White",
+        "names": ["_Type_White6"],
+        "shared": true
+      },
+      {
+        "id": "Type_Sentinel6",
+        "label": "Sentinel",
+        "names": ["_Type_Sentinel6"],
+        "shared": true
+      },
+      {
+        "id": "Type_Black6",
+        "label": "Black",
+        "names": ["_Type_Black6"],
+        "shared": true
+      }
+    ],
+    "requires": {
+      "group": "TrunkBOT_NULL",
+      "option": "TrunkBOT_B"
+    },
+    "title": "Plate shade"
+  },
+  {
+    "id": "NWBot_Full",
+    "options": [
+      {
+        "id": "NWBot_Full",
         "label": "Long",
         "names": ["_NWBot_Full"]
       },
       {
-        "id": "short",
+        "id": "NWBot_Half",
         "label": "Short",
         "names": ["_NWBot_Half"]
       },
       {
-        "id": "long-plated",
+        "id": "Carriage_FullBot",
         "label": "Long, plated",
         "names": ["_Carriage_FullBot"]
       },
       {
-        "id": "short-plated",
+        "id": "Carriage_HalfBot",
         "label": "Short, plated",
         "names": ["_Carriage_HalfBot"]
       }
-    ]
+    ],
+    "requires": {
+      "group": "Wings_V",
+      "option": "Carriage_B"
+    },
+    "title": "Lower wings"
   },
   {
-    "id": "nose",
-    "title": "Snout",
-    "requires": {
-      "group": "hull",
-      "option": "a"
-    },
+    "id": "ExtensionsBot_NULL",
     "options": [
       {
-        "id": "one",
+        "empty": true,
+        "id": "ExtensionsBot_NULL",
+        "label": "None",
+        "names": ["_ExtensionsBot_NULL"]
+      },
+      {
+        "id": "ExtensionsBot_A",
+        "label": "With",
+        "names": ["_ExtensionsBot_A"],
+        "shared": true
+      }
+    ],
+    "requires": {
+      "group": "NWBot_Full",
+      "option": "NWBot_Full"
+    },
+    "title": "Lower tips"
+  },
+  {
+    "id": "Type_White6b",
+    "options": [
+      {
+        "id": "Type_White6b",
+        "label": "White",
+        "names": ["_Type_White6b"],
+        "shared": true
+      },
+      {
+        "id": "Type_Sentinel6b",
+        "label": "Sentinel",
+        "names": ["_Type_Sentinel6b"],
+        "shared": true
+      },
+      {
+        "id": "Type_Black6b",
+        "label": "Black",
+        "names": ["_Type_Black6b"],
+        "shared": true
+      }
+    ],
+    "requires": {
+      "group": "ExtensionsBot_NULL",
+      "option": "ExtensionsBot_A"
+    },
+    "title": "Plate shade"
+  },
+  {
+    "id": "ExtensionsBot_NULL1",
+    "options": [
+      {
+        "empty": true,
+        "id": "ExtensionsBot_NULL1",
+        "label": "None",
+        "names": ["_ExtensionsBot_NULL1"]
+      },
+      {
+        "id": "ExtensionsBot_A1",
+        "label": "With",
+        "names": ["_ExtensionsBot_A1"],
+        "shared": true
+      }
+    ],
+    "requires": {
+      "group": "NWBot_Full",
+      "option": "NWBot_Half"
+    },
+    "title": "Lower tips"
+  },
+  {
+    "id": "Type_White6b1",
+    "options": [
+      {
+        "id": "Type_White6b1",
+        "label": "White",
+        "names": ["_Type_White6b1"],
+        "shared": true
+      },
+      {
+        "id": "Type_Sentinel6b1",
+        "label": "Sentinel",
+        "names": ["_Type_Sentinel6b1"],
+        "shared": true
+      },
+      {
+        "id": "Type_Black6b1",
+        "label": "Black",
+        "names": ["_Type_Black6b1"],
+        "shared": true
+      }
+    ],
+    "requires": {
+      "group": "ExtensionsBot_NULL1",
+      "option": "ExtensionsBot_A1"
+    },
+    "title": "Plate shade"
+  },
+  {
+    "id": "Type_White6b5",
+    "options": [
+      {
+        "id": "Type_White6b5",
+        "label": "White",
+        "names": ["_Type_White6b5"],
+        "shared": true
+      },
+      {
+        "id": "Type_Sentinel6b5",
+        "label": "Sentinel",
+        "names": ["_Type_Sentinel6b5"],
+        "shared": true
+      },
+      {
+        "id": "Type_Black6b5",
+        "label": "Black",
+        "names": ["_Type_Black6b5"],
+        "shared": true
+      }
+    ],
+    "requires": {
+      "group": "NWBot_Full",
+      "option": "Carriage_FullBot"
+    },
+    "title": "Plate shade"
+  },
+  {
+    "id": "Type_White6b15",
+    "options": [
+      {
+        "id": "Type_White6b15",
+        "label": "White",
+        "names": ["_Type_White6b15"],
+        "shared": true
+      },
+      {
+        "id": "Type_Sentinel6b15",
+        "label": "Sentinel",
+        "names": ["_Type_Sentinel6b15"],
+        "shared": true
+      },
+      {
+        "id": "Type_Black6b15",
+        "label": "Black",
+        "names": ["_Type_Black6b15"],
+        "shared": true
+      }
+    ],
+    "requires": {
+      "group": "NWBot_Full",
+      "option": "Carriage_HalfBot"
+    },
+    "title": "Plate shade"
+  },
+  {
+    "id": "NWTop_Flip",
+    "options": [
+      {
+        "id": "NWTop_Flip",
+        "label": "Rings",
+        "names": ["_NWTop_Flip"],
+        "shared": true
+      },
+      {
+        "id": "NWTop_Full",
+        "label": "Long",
+        "names": ["_NWTop_Full"]
+      },
+      {
+        "id": "NWTop_Half",
+        "label": "Short",
+        "names": ["_NWTop_Half"]
+      },
+      {
+        "id": "Carriage_Full",
+        "label": "Long, plated",
+        "names": ["_Carriage_Full"]
+      },
+      {
+        "id": "Carriage_Half",
+        "label": "Short, plated",
+        "names": ["_Carriage_Half"]
+      }
+    ],
+    "requires": {
+      "group": "Wings_V",
+      "option": "Carriage_B"
+    },
+    "title": "Upper wings"
+  },
+  {
+    "id": "extrawings_NULLzz",
+    "options": [
+      {
+        "empty": true,
+        "id": "extrawings_NULLzz",
+        "label": "None",
+        "names": ["_extrawings_NULLzz"]
+      },
+      {
+        "id": "extrawings_tops4zz",
+        "label": "With",
+        "names": ["_extrawings_tops4zz"]
+      }
+    ],
+    "requires": {
+      "group": "NWTop_Flip",
+      "option": "NWTop_Flip"
+    },
+    "title": "Extra wings"
+  },
+  {
+    "id": "Type_Black1qz",
+    "options": [
+      {
+        "id": "Type_Black1qz",
+        "label": "Black",
+        "names": ["_Type_Black1qz"]
+      },
+      {
+        "id": "Type_White1qz",
+        "label": "White",
+        "names": ["_Type_White1qz"]
+      },
+      {
+        "id": "Type_Sentinel1qz",
+        "label": "Sentinel",
+        "names": ["_Type_Sentinel1qz"]
+      }
+    ],
+    "requires": {
+      "group": "extrawings_NULLzz",
+      "option": "extrawings_tops4zz"
+    },
+    "title": "Plate shade"
+  },
+  {
+    "id": "ExtensionsTop_NULL",
+    "options": [
+      {
+        "empty": true,
+        "id": "ExtensionsTop_NULL",
+        "label": "None",
+        "names": ["_ExtensionsTop_NULL"]
+      },
+      {
+        "id": "ExtensionsTop_A",
+        "label": "With",
+        "names": ["_ExtensionsTop_A"],
+        "shared": true
+      }
+    ],
+    "requires": {
+      "group": "NWTop_Flip",
+      "option": "NWTop_Full"
+    },
+    "title": "Upper tips"
+  },
+  {
+    "id": "Type_Sentinel4eb",
+    "options": [
+      {
+        "id": "Type_Sentinel4eb",
+        "label": "Sentinel",
+        "names": ["_Type_Sentinel4eb"],
+        "shared": true
+      },
+      {
+        "id": "Type_White4eb",
+        "label": "White",
+        "names": ["_Type_White4eb"],
+        "shared": true
+      },
+      {
+        "id": "Type_Black4eb",
+        "label": "Black",
+        "names": ["_Type_Black4eb"],
+        "shared": true
+      }
+    ],
+    "requires": {
+      "group": "ExtensionsTop_NULL",
+      "option": "ExtensionsTop_A"
+    },
+    "title": "Plate shade"
+  },
+  {
+    "id": "ants_14b",
+    "options": [
+      {
+        "id": "ants_14b",
+        "label": "With",
+        "names": ["_ants_14b"],
+        "shared": true
+      },
+      {
+        "empty": true,
+        "id": "ants_15b",
+        "label": "None",
+        "names": ["_ants_15b"]
+      }
+    ],
+    "requires": {
+      "group": "ExtensionsTop_NULL",
+      "option": "ExtensionsTop_A"
+    },
+    "title": "Antennas"
+  },
+  {
+    "id": "ExtensionsTop_NULL1",
+    "options": [
+      {
+        "empty": true,
+        "id": "ExtensionsTop_NULL1",
+        "label": "None",
+        "names": ["_ExtensionsTop_NULL1"]
+      },
+      {
+        "id": "ExtensionsTop_A1",
+        "label": "With",
+        "names": ["_ExtensionsTop_A1"],
+        "shared": true
+      }
+    ],
+    "requires": {
+      "group": "NWTop_Flip",
+      "option": "NWTop_Half"
+    },
+    "title": "Upper tips"
+  },
+  {
+    "id": "Type_Sentinel4eb1",
+    "options": [
+      {
+        "id": "Type_Sentinel4eb1",
+        "label": "Sentinel",
+        "names": ["_Type_Sentinel4eb1"],
+        "shared": true
+      },
+      {
+        "id": "Type_White4eb1",
+        "label": "White",
+        "names": ["_Type_White4eb1"],
+        "shared": true
+      },
+      {
+        "id": "Type_Black4eb1",
+        "label": "Black",
+        "names": ["_Type_Black4eb1"],
+        "shared": true
+      }
+    ],
+    "requires": {
+      "group": "ExtensionsTop_NULL1",
+      "option": "ExtensionsTop_A1"
+    },
+    "title": "Plate shade"
+  },
+  {
+    "id": "ants_14b1",
+    "options": [
+      {
+        "id": "ants_14b1",
+        "label": "With",
+        "names": ["_ants_14b1"],
+        "shared": true
+      },
+      {
+        "empty": true,
+        "id": "ants_15b1",
+        "label": "None",
+        "names": ["_ants_15b1"]
+      }
+    ],
+    "requires": {
+      "group": "ExtensionsTop_NULL1",
+      "option": "ExtensionsTop_A1"
+    },
+    "title": "Antennas"
+  },
+  {
+    "id": "Type_Sentinel4eb2",
+    "options": [
+      {
+        "id": "Type_Sentinel4eb2",
+        "label": "Sentinel",
+        "names": ["_Type_Sentinel4eb2"],
+        "shared": true
+      },
+      {
+        "id": "Type_White4eb2",
+        "label": "White",
+        "names": ["_Type_White4eb2"],
+        "shared": true
+      },
+      {
+        "id": "Type_Black4eb2",
+        "label": "Black",
+        "names": ["_Type_Black4eb2"],
+        "shared": true
+      }
+    ],
+    "requires": {
+      "group": "NWTop_Flip",
+      "option": "Carriage_Full"
+    },
+    "title": "Plate shade"
+  },
+  {
+    "id": "ants_14b2",
+    "options": [
+      {
+        "id": "ants_14b2",
+        "label": "With",
+        "names": ["_ants_14b2"],
+        "shared": true
+      },
+      {
+        "empty": true,
+        "id": "ants_15b2",
+        "label": "None",
+        "names": ["_ants_15b2"]
+      }
+    ],
+    "requires": {
+      "group": "NWTop_Flip",
+      "option": "Carriage_Full"
+    },
+    "title": "Antennas"
+  },
+  {
+    "id": "Type_Sentinel4eb11",
+    "options": [
+      {
+        "id": "Type_Sentinel4eb11",
+        "label": "Sentinel",
+        "names": ["_Type_Sentinel4eb11"],
+        "shared": true
+      },
+      {
+        "id": "Type_White4eb11",
+        "label": "White",
+        "names": ["_Type_White4eb11"],
+        "shared": true
+      },
+      {
+        "id": "Type_Black4eb11",
+        "label": "Black",
+        "names": ["_Type_Black4eb11"],
+        "shared": true
+      }
+    ],
+    "requires": {
+      "group": "NWTop_Flip",
+      "option": "Carriage_Half"
+    },
+    "title": "Plate shade"
+  },
+  {
+    "id": "ants_14b11",
+    "options": [
+      {
+        "id": "ants_14b11",
+        "label": "With",
+        "names": ["_ants_14b11"],
+        "shared": true
+      },
+      {
+        "empty": true,
+        "id": "ants_15b11",
+        "label": "None",
+        "names": ["_ants_15b11"]
+      }
+    ],
+    "requires": {
+      "group": "NWTop_Flip",
+      "option": "Carriage_Half"
+    },
+    "title": "Antennas"
+  },
+  {
+    "id": "Skirt_A",
+    "options": [
+      {
+        "id": "Skirt_A",
+        "label": "Plated",
+        "names": ["_Skirt_A"]
+      },
+      {
+        "id": "Skirt_B",
+        "label": "Frame",
+        "names": ["_Skirt_B"],
+        "vanishes": true
+      }
+    ],
+    "title": "Hull"
+  },
+  {
+    "id": "sideEngines_NULL",
+    "options": [
+      {
+        "empty": true,
+        "id": "sideEngines_NULL",
+        "label": "Without",
+        "names": ["_sideEngines_NULL"]
+      },
+      {
+        "id": "sideEngines_A2",
+        "label": "With",
+        "names": ["_sideEngines_A2"],
+        "shared": true
+      }
+    ],
+    "requires": {
+      "group": "Skirt_A",
+      "option": "Skirt_A"
+    },
+    "title": "Side engines"
+  },
+  {
+    "id": "Underwing_NULL",
+    "options": [
+      {
+        "empty": true,
+        "id": "Underwing_NULL",
+        "label": "None",
+        "names": ["_Underwing_NULL"]
+      },
+      {
+        "id": "Underwing_A",
+        "label": "With",
+        "names": ["_Underwing_A"]
+      }
+    ],
+    "requires": {
+      "group": "Skirt_A",
+      "option": "Skirt_A"
+    },
+    "title": "Underwing"
+  },
+  {
+    "id": "asides_A2",
+    "options": [
+      {
+        "empty": true,
+        "id": "asides_A2",
+        "label": "None",
+        "names": ["_asides_A2"]
+      },
+      {
+        "id": "asides_A4",
+        "label": "Variant 1",
+        "names": ["_asides_A4"],
+        "shared": true
+      },
+      {
+        "id": "asides_Ae",
+        "label": "Variant 2",
+        "names": ["_asides_Ae"],
+        "shared": true
+      }
+    ],
+    "requires": {
+      "group": "Skirt_A",
+      "option": "Skirt_A"
+    },
+    "title": "Side panels"
+  },
+  {
+    "id": "aFront_snout1",
+    "options": [
+      {
+        "empty": true,
+        "id": "aFront_snout1",
         "label": "Plain",
         "names": ["_aFront_snout1"]
       },
       {
-        "id": "two",
+        "id": "aFront_snout2",
         "label": "Wedge",
         "names": ["_aFront_snout2"]
       }
-    ]
+    ],
+    "requires": {
+      "group": "Skirt_A",
+      "option": "Skirt_A"
+    },
+    "title": "Snout"
   },
   {
-    "id": "side",
-    "title": "Side engines",
+    "id": "grill_NULL1",
     "options": [
       {
-        "id": "without",
-        "label": "Without",
-        "names": [
-          "_sideEngines_NULL",
-          "_sideEngines_NULL1",
-          "_BodyA_Null",
-          "_Engine_NULL2"
-        ],
-        "empty": true
+        "empty": true,
+        "id": "grill_NULL1",
+        "label": "None",
+        "names": ["_grill_NULL1"]
       },
       {
-        "id": "with",
-        "label": "With",
-        "names": ["_sideEngines_A2", "_sideEngines_A3"]
-      }
-    ]
-  },
-  {
-    "id": "rear",
-    "title": "Rear engine",
-    "requires": {
-      "group": "hull",
-      "option": "b"
-    },
-    "options": [
-      {
-        "id": "without",
-        "label": "Without",
-        "names": ["_Engine_NULL2"],
-        "empty": true
+        "id": "grill_snout10s3",
+        "label": "Variant 1",
+        "names": ["_grill_snout10s3"]
       },
       {
-        "id": "with",
-        "label": "With",
-        "names": ["_Engine_A"]
+        "id": "grill_snout3",
+        "label": "Variant 2",
+        "names": ["_grill_snout3"]
+      },
+      {
+        "id": "grill_snout11",
+        "label": "Variant 3",
+        "names": ["_grill_snout11"]
+      },
+      {
+        "id": "grill_snout10s6",
+        "label": "Variant 4",
+        "names": ["_grill_snout10s6"]
+      },
+      {
+        "id": "Teeth_A",
+        "label": "Teeth 1",
+        "names": ["_Teeth_A"]
+      },
+      {
+        "id": "Teeth_B",
+        "label": "Teeth 2",
+        "names": ["_Teeth_B"]
+      },
+      {
+        "id": "Teeth_C",
+        "label": "Teeth 3",
+        "names": ["_Teeth_C"]
+      },
+      {
+        "id": "Teeth_D",
+        "label": "Teeth 4",
+        "names": ["_Teeth_D"]
       }
-    ]
+    ],
+    "requires": {
+      "group": "aFront_snout1",
+      "option": "aFront_snout2"
+    },
+    "title": "Grill"
   },
   {
-    "id": "skirting",
-    "title": "Skirting",
-    "requires": {
-      "group": "hull",
-      "option": "a"
-    },
+    "id": "aAltSkirt_Null",
     "options": [
       {
-        "id": "box-black",
+        "empty": true,
+        "id": "aAltSkirt_Null",
+        "label": "None",
+        "names": ["_aAltSkirt_Null"]
+      },
+      {
+        "id": "Var_A7",
+        "label": "Black",
+        "names": ["_Var_A7"],
+        "shared": true
+      },
+      {
+        "id": "Var_A8",
+        "label": "Light",
+        "names": ["_Var_A8"]
+      }
+    ],
+    "requires": {
+      "group": "Skirt_A",
+      "option": "Skirt_A"
+    },
+    "title": "Side fins"
+  },
+  {
+    "id": "aEndWings_NULL",
+    "options": [
+      {
+        "empty": true,
+        "id": "aEndWings_NULL",
+        "label": "None",
+        "names": ["_aEndWings_NULL"]
+      },
+      {
+        "id": "aEndWings_Ant",
+        "label": "With",
+        "names": ["_aEndWings_Ant"]
+      }
+    ],
+    "requires": {
+      "group": "Skirt_A",
+      "option": "Skirt_A"
+    },
+    "title": "Tail antenna"
+  },
+  {
+    "id": "askirting_A6",
+    "options": [
+      {
+        "id": "askirting_A6",
         "label": "Box, black",
         "names": ["_askirting_A6"]
       },
       {
-        "id": "box-light",
-        "label": "Box, light",
-        "names": ["_askirting_A8"]
-      },
-      {
-        "id": "long-black",
+        "id": "askirting_A1s6",
         "label": "Long, black",
         "names": ["_askirting_A1s6"]
       },
       {
-        "id": "long-light",
-        "label": "Long, light",
-        "names": ["_askirting_A1s10"]
-      },
-      {
-        "id": "thin-black",
+        "id": "askirting_A1s3",
         "label": "Thin, black",
         "names": ["_askirting_A1s3"]
       },
       {
-        "id": "thin-light",
-        "label": "Thin, light",
-        "names": ["_askirting_A1s11"]
-      },
-      {
-        "id": "broad-black",
+        "id": "askirting_A1s",
         "label": "Broad, black",
         "names": ["_askirting_A1s"]
       },
       {
-        "id": "broad-light",
+        "id": "askirting_A8",
+        "label": "Box, light",
+        "names": ["_askirting_A8"]
+      },
+      {
+        "id": "askirting_A1s10",
+        "label": "Long, light",
+        "names": ["_askirting_A1s10"]
+      },
+      {
+        "id": "askirting_A1s11",
+        "label": "Thin, light",
+        "names": ["_askirting_A1s11"]
+      },
+      {
+        "id": "askirting_A1s12",
         "label": "Broad, light",
         "names": ["_askirting_A1s12"]
       }
-    ]
+    ],
+    "requires": {
+      "group": "Skirt_A",
+      "option": "Skirt_A"
+    },
+    "title": "Skirting"
   },
   {
-    "id": "frameSkirting",
-    "title": "Skirting",
-    "requires": {
-      "group": "hull",
-      "option": "b"
-    },
+    "id": "AltSkirting_NULL",
     "options": [
       {
-        "id": "none",
+        "empty": true,
+        "id": "AltSkirting_NULL",
         "label": "None",
-        "names": ["_SkirtWings_NULL", "_askirting_NULL3"],
-        "empty": true
+        "names": ["_AltSkirting_NULL", "_SkirtWings_NULL"]
       },
       {
-        "id": "box-black",
+        "id": "AltSkirting_A",
+        "label": "Black",
+        "names": ["_AltSkirting_A"],
+        "shared": true
+      }
+    ],
+    "requires": {
+      "group": "Skirt_A",
+      "option": "Skirt_B"
+    },
+    "title": "Side fins"
+  },
+  {
+    "id": "askirting_NULL3",
+    "options": [
+      {
+        "empty": true,
+        "id": "askirting_NULL3",
+        "label": "None",
+        "names": ["_askirting_NULL3", "_SkirtWings_NULL"]
+      },
+      {
+        "id": "askirting_A7",
         "label": "Box, black",
         "names": ["_askirting_A7"]
       },
       {
-        "id": "box-light",
-        "label": "Box, light",
-        "names": ["_askirting_A9"]
-      },
-      {
-        "id": "long-black",
+        "id": "askirting_A1s7",
         "label": "Long, black",
         "names": ["_askirting_A1s7"]
       },
       {
-        "id": "long-light",
-        "label": "Long, light",
-        "names": ["_askirting_A1s13"]
-      },
-      {
-        "id": "thin-black",
+        "id": "askirting_A1s8",
         "label": "Thin, black",
         "names": ["_askirting_A1s8"]
       },
       {
-        "id": "thin-light",
-        "label": "Thin, light",
-        "names": ["_askirting_A1s14"]
-      },
-      {
-        "id": "broad-black",
+        "id": "askirting_A1s9",
         "label": "Broad, black",
         "names": ["_askirting_A1s9"]
       },
       {
-        "id": "broad-light",
+        "id": "askirting_A9",
+        "label": "Box, light",
+        "names": ["_askirting_A9"]
+      },
+      {
+        "id": "askirting_A1s13",
+        "label": "Long, light",
+        "names": ["_askirting_A1s13"]
+      },
+      {
+        "id": "askirting_A1s14",
+        "label": "Thin, light",
+        "names": ["_askirting_A1s14"]
+      },
+      {
+        "id": "askirting_A1s15",
         "label": "Broad, light",
         "names": ["_askirting_A1s15"]
       }
-    ]
+    ],
+    "requires": {
+      "group": "Skirt_A",
+      "option": "Skirt_B"
+    },
+    "title": "Skirting"
   },
   {
-    "id": "fins",
-    "title": "Side fins",
+    "id": "Engine_NULL2",
     "options": [
       {
-        "id": "none",
-        "label": "None",
-        "names": ["_aAltSkirt_Null", "_AltSkirting_NULL", "_SkirtWings_NULL"],
-        "empty": true
+        "empty": true,
+        "id": "Engine_NULL2",
+        "label": "Without",
+        "names": ["_Engine_NULL2"]
       },
       {
-        "id": "black",
-        "label": "Black",
-        "names": ["_Var_A7", "_AltSkirting_A"]
-      },
-      {
-        "id": "light",
-        "label": "Light",
-        "names": ["_Var_A8"]
+        "id": "Engine_A",
+        "label": "With",
+        "names": ["_Engine_A"]
       }
-    ]
+    ],
+    "requires": {
+      "group": "Skirt_A",
+      "option": "Skirt_B"
+    },
+    "title": "Rear engine"
+  },
+  {
+    "id": "BodyA_Null",
+    "options": [
+      {
+        "empty": true,
+        "id": "BodyA_Null",
+        "label": "Without",
+        "names": ["_BodyA_Null"]
+      },
+      {
+        "id": "BodyA_1n",
+        "label": "With",
+        "names": ["_BodyA_1n"]
+      }
+    ],
+    "requires": {
+      "group": "Engine_NULL2",
+      "option": "Engine_A"
+    },
+    "title": "Rear engine body"
+  },
+  {
+    "id": "asides_A5",
+    "options": [
+      {
+        "empty": true,
+        "id": "asides_A5",
+        "label": "None",
+        "names": ["_asides_A5"]
+      },
+      {
+        "id": "asides_A6",
+        "label": "Variant 1",
+        "names": ["_asides_A6"],
+        "shared": true
+      },
+      {
+        "id": "asides_Ae1",
+        "label": "Variant 2",
+        "names": ["_asides_Ae1"],
+        "shared": true
+      }
+    ],
+    "requires": {
+      "group": "BodyA_Null",
+      "option": "BodyA_1n"
+    },
+    "title": "Side panels"
+  },
+  {
+    "id": "sideEngines_NULL1",
+    "options": [
+      {
+        "empty": true,
+        "id": "sideEngines_NULL1",
+        "label": "Without",
+        "names": ["_sideEngines_NULL1"]
+      },
+      {
+        "id": "sideEngines_A3",
+        "label": "With",
+        "names": ["_sideEngines_A3"],
+        "shared": true
+      }
+    ],
+    "requires": {
+      "group": "BodyA_Null",
+      "option": "BodyA_1n"
+    },
+    "title": "Side engines"
   }
 ]

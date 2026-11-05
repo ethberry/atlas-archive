@@ -4,7 +4,7 @@ import { Article } from "@/components/archive/Article";
 import { PageTrail } from "@/components/archive/PageTrail";
 import { TopicList } from "@/components/archive/StatisticsScreen";
 import { StructuredData } from "@/components/archive/StructuredData";
-import { readContent } from "@/lib/archive/content";
+import { guideQuestions, readContent } from "@/lib/archive/content";
 import { fillStatistics, TOPICS } from "@/lib/archive/statistics";
 import { trailData } from "@/lib/archive/trail";
 
@@ -19,12 +19,13 @@ export const metadata: Metadata = {
 
 export default async function GuidesPage() {
   const html = fillStatistics(await readContent("statistics"), "index");
+  const questions = await guideQuestions(TOPICS.map((topic) => topic.slug));
   return (
     <>
       <StructuredData data={trailData(TRAIL)} />
       <PageTrail steps={TRAIL} />
       <Article html={html} widgets={{}} />
-      <TopicList topics={TOPICS} />
+      <TopicList topics={TOPICS} questions={questions} />
     </>
   );
 }

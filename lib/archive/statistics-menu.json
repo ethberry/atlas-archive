@@ -10,6 +10,7 @@
         "title": "Where to look"
       }
     ],
+    "slug": "galaxies",
     "title": "Galaxies"
   },
   {
@@ -27,6 +28,7 @@
         "title": "Races"
       }
     ],
+    "slug": "systems",
     "title": "Systems"
   },
   {
@@ -36,11 +38,34 @@
         "title": "Space stations"
       },
       {
-        "slug": "station-upgrades",
-        "title": "Station upgrade modules"
+        "slug": "technology-merchants",
+        "title": "Station technology merchants"
       }
     ],
+    "slug": "stations",
     "title": "Stations"
+  },
+  {
+    "pages": [
+      {
+        "slug": "sources-by-size",
+        "title": "Sources by planet size"
+      },
+      {
+        "slug": "sources-by-type",
+        "title": "Sources by planet type"
+      },
+      {
+        "slug": "empty-worlds",
+        "title": "Empty worlds"
+      },
+      {
+        "slug": "sentinels-and-dissonance",
+        "title": "Sentinels and dissonance"
+      }
+    ],
+    "slug": "planets",
+    "title": "Planets"
   },
   {
     "pages": [
@@ -67,63 +92,14 @@
       {
         "slug": "sentinel-capital-ship",
         "title": "Sentinel capital ship"
+      },
+      {
+        "slug": "freighter-technology",
+        "title": "Freighter technology"
       }
     ],
+    "slug": "freighters",
     "title": "Freighters"
-  },
-  {
-    "pages": [
-      {
-        "slug": "sources-by-size",
-        "title": "Sources by planet size"
-      },
-      {
-        "slug": "sources-by-type",
-        "title": "Sources by planet type"
-      },
-      {
-        "slug": "empty-worlds",
-        "title": "Empty worlds"
-      },
-      {
-        "slug": "sentinels-and-dissonance",
-        "title": "Sentinels and dissonance"
-      }
-    ],
-    "title": "Planets"
-  },
-  {
-    "pages": [
-      {
-        "slug": "multitool-types",
-        "title": "Multitool types"
-      },
-      {
-        "slug": "multitool-classes",
-        "title": "Multitool classes"
-      },
-      {
-        "slug": "multitool-stats",
-        "title": "Multitool stats"
-      },
-      {
-        "slug": "multitool-upgrades",
-        "title": "How to upgrade a multitool"
-      },
-      {
-        "slug": "figures",
-        "title": "Tetris figures"
-      },
-      {
-        "slug": "square",
-        "title": "The square on a multitool"
-      },
-      {
-        "slug": "staffs",
-        "title": "Staffs"
-      }
-    ],
-    "title": "Multitools"
   },
   {
     "pages": [
@@ -158,9 +134,100 @@
       {
         "slug": "living-ships",
         "title": "Living ships"
+      },
+      {
+        "slug": "starship-modules",
+        "title": "Starship modules"
+      },
+      {
+        "slug": "corvette-modules",
+        "title": "Corvette modules"
       }
     ],
+    "slug": "ships",
     "title": "Ships"
+  },
+  {
+    "pages": [
+      {
+        "slug": "roamer-modules",
+        "title": "Roamer modules"
+      },
+      {
+        "slug": "nomad-modules",
+        "title": "Nomad modules"
+      },
+      {
+        "slug": "pilgrim-modules",
+        "title": "Pilgrim modules"
+      },
+      {
+        "slug": "colossus-modules",
+        "title": "Colossus modules"
+      },
+      {
+        "slug": "nautilon-modules",
+        "title": "Nautilon modules"
+      },
+      {
+        "slug": "minotaur-modules",
+        "title": "Minotaur modules"
+      }
+    ],
+    "slug": "exocraft",
+    "title": "Exocraft"
+  },
+  {
+    "pages": [
+      {
+        "slug": "multitool-types",
+        "title": "Multitool types"
+      },
+      {
+        "slug": "multitool-classes",
+        "title": "Multitool classes"
+      },
+      {
+        "slug": "multitool-stats",
+        "title": "Multitool stats"
+      },
+      {
+        "slug": "multitool-upgrades",
+        "title": "How to upgrade a multitool"
+      },
+      {
+        "slug": "figures",
+        "title": "Tetris figures"
+      },
+      {
+        "slug": "square",
+        "title": "The square on a multitool"
+      },
+      {
+        "slug": "supercharged-slots",
+        "title": "Supercharged slots"
+      },
+      {
+        "slug": "staffs",
+        "title": "Staffs"
+      },
+      {
+        "slug": "multitool-modules",
+        "title": "Multitool modules"
+      }
+    ],
+    "slug": "multitools",
+    "title": "Multitools"
+  },
+  {
+    "pages": [
+      {
+        "slug": "exosuit-modules",
+        "title": "Exosuit modules"
+      }
+    ],
+    "slug": "exosuit",
+    "title": "Exosuit"
   },
   {
     "pages": [
@@ -181,6 +248,7 @@
         "title": "Creature affinity"
       }
     ],
+    "slug": "creatures",
     "title": "Creatures"
   }
 ]

@@ -1,9 +1,10 @@
 import type { MetadataRoute } from "next";
 
-import { pathShown } from "@/lib/archive/features";
+import { GUIDE_MENU, pathShown } from "@/lib/archive/features";
 import { FEED_KINDS, STATION_BUILDING } from "@/lib/archive/kinds";
 import { TOPICS } from "@/lib/archive/statistics";
 import { createArchiveClient } from "@/lib/db/supabase.server";
+import { groupPath, guidePath } from "@/lib/archive/guides";
 
 const BATCH = 1000;
 // The showcase star's galaxy stays off the map: a reader finds it, Google does not.
@@ -107,8 +108,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "monthly",
       priority: 0.6,
     },
+    ...GUIDE_MENU.map((group) => ({
+      url: `${base}${groupPath(group.slug)}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.5,
+    })),
     ...TOPICS.map((topic) => ({
-      url: `${base}/guides/${topic.slug}`,
+      url: `${base}${guidePath(topic.slug)}`,
       lastModified: new Date(),
       changeFrequency: "monthly" as const,
       priority: 0.5,

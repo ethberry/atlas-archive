@@ -5,7 +5,7 @@ import { FreighterFinder } from "@/components/archive/FreighterFinder";
 import { PageTrail } from "@/components/archive/PageTrail";
 import { StructuredData } from "@/components/archive/StructuredData";
 import { readContent } from "@/lib/archive/content";
-import { FINDERS_ENABLED } from "@/lib/archive/features";
+import { CAPITAL_FREIGHTER_FINDER_ENABLED } from "@/lib/archive/features";
 import { trailData } from "@/lib/archive/trail";
 
 const TRAIL = [
@@ -21,9 +21,9 @@ export const metadata: Metadata = {
     "Pick the hull, length, and parts of a capital freighter and get the portal glyphs of a No Man's Sky system whose space battle saves that ship.",
 };
 
-// Hidden while the finders flag is off: the page answers 404.
+// Hidden while its finder flag is off: the page answers 404.
 export default async function CapitalFreighterFinderPage() {
-  if (!FINDERS_ENABLED) {
+  if (!CAPITAL_FREIGHTER_FINDER_ENABLED) {
     notFound();
   }
   return (

@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { Controller, useForm, useWatch } from "react-hook-form";
 import Alert from "@mui/material/Alert";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
@@ -669,7 +670,10 @@ function Finder(props: { kind: FreighterKind }) {
   const { kind } = props;
   const { user } = useAuth();
   const [here, setHere] = useState<Parts | null>(null);
-  const [choice, setChoice] = useState<PartChoice>({});
+  const { control, handleSubmit, reset } = useForm<{ choice: PartChoice }>({
+    defaultValues: { choice: {} },
+  });
+  const choice = useWatch({ control, name: "choice" });
   const { groups } = FREIGHTER_KINDS[kind];
   const [active, setActive] = useState(groups[0].id);
   const [state, setState] = useState<State>({ status: "idle" });
@@ -716,7 +720,12 @@ function Finder(props: { kind: FreighterKind }) {
 
   return (
     <Card variant="outlined" sx={{ p: 2, bgcolor: SURFACE, color: INK }}>
-      <Stack spacing={2}>
+      <Stack
+        component="form"
+        noValidate
+        spacing={2}
+        onSubmit={handleSubmit(search)}
+      >
         {kind === "capital" ? (
           <Alert severity="info">
             <FormattedMessage id="archive.finderOneADay" />
@@ -748,29 +757,35 @@ function Finder(props: { kind: FreighterKind }) {
             />
           ))}
         </Stack>
-        <PartTiles
-          key={group.id}
-          kind={kind}
-          parts={here}
-          group={group}
-          choice={choice}
-          onChange={(option) => {
-            setChoice(pick(kind, choice, group, option));
-            setState({ status: "idle" });
-          }}
+        <Controller
+          name="choice"
+          control={control}
+          render={({ field }) => (
+            <PartTiles
+              key={group.id}
+              kind={kind}
+              parts={here}
+              group={group}
+              choice={field.value}
+              onChange={(option) => {
+                field.onChange(pick(kind, field.value, group, option));
+                setState({ status: "idle" });
+              }}
+            />
+          )}
         />
         <Stack direction="row" spacing={1}>
           <Button
+            type="submit"
             variant="contained"
             disabled={state.status === "busy"}
-            onClick={search}
           >
             <FormattedMessage id={TEXT[kind].button} />
           </Button>
           <Button
             disabled={key === ""}
             onClick={() => {
-              setChoice({});
+              reset();
               setState({ status: "idle" });
             }}
           >

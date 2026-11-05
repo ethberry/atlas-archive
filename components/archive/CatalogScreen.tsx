@@ -13,7 +13,7 @@ import { CatalogFilters } from "@/components/archive/CatalogFilters";
 import { CatalogList } from "@/components/archive/CatalogList";
 import { CatalogPagination } from "@/components/archive/CatalogPagination";
 import { SHIP_GUIDES, GUIDES } from "@/components/archive/RecordNote";
-import { FINDERS_ENABLED } from "@/lib/archive/features";
+import { INTERCEPTOR_FINDER_ENABLED } from "@/lib/archive/features";
 import { catalogKey, isFiltered, type CatalogQuery } from "@/lib/archive/query";
 import { readCatalog } from "@/lib/archive/read";
 import { getBrowserSupabase } from "@/lib/db/supabase.browser";
@@ -70,7 +70,7 @@ export function CatalogScreen(props: {
           </Typography>
           <Typography color="text.secondary">
             <FormattedMessage
-              id={`kindLead.${query.kinds[0]}${FINDERS_ENABLED && query.kinds[0] === "ship" ? "Finders" : ""}`}
+              id={`kindLead.${query.kinds[0]}${INTERCEPTOR_FINDER_ENABLED && query.kinds[0] === "ship" ? "Finders" : ""}`}
               values={query.kinds[0] === "ship" ? SHIP_GUIDES : GUIDES}
             />
           </Typography>

@@ -40,4 +40,4 @@ A living ship takes its own technology, eleven organs such as the Pulsing Heart 
 
 Your freighter's fleet can hold living frigates too, and they come from a cosmic whale: [organic frigates](/guides/organic-frigates).
 
-What is left to claim on a planet is alive: [creature roles](/guides/creature-roles).
+Every other ship plugs in the modules of [starship modules](/guides/starship-modules).

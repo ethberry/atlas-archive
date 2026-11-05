@@ -1,6 +1,6 @@
 # Ship figures
 
-**Which figure will a ship's four supercharged slots form?** Most often a corner, {{corner}}, when they are adjacent at all. [How it works](/about) explains why that matters. A ship's grid is ten slots wide and three tall, so the grid itself rules one turn out: an upright line never fits.
+**Which figure will a ship's four supercharged slots form?** Most often a corner, {{corner}}, when they are adjacent at all. [How it works](/about) explains why that matters, and [supercharged slots](/guides/supercharged-slots) how much each figure adds and where the weapon goes on it. A ship's grid is ten slots wide and three tall, so the grid itself rules one turn out: an upright line never fits.
 
 ## By figure
 

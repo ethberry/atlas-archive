@@ -2,7 +2,7 @@
 
 **How rare is a square on a ship?** About {{oneIn}} wrecks. {{best}}s land on one most often: {{bestOneIn}}. Crashed and sunken ships read alike, and class changes nothing. Once the slots are adjacent, about {{share}} of them make a square.
 
-A square fits {{places}} places on a ship.
+A square fits {{places}} places on a ship. What it is worth against the other figures, and how to fill it, is on [supercharged slots](/guides/supercharged-slots).
 
 Each wreck is counted with the four slots it holds at class S, in [Euclid](/galaxy/b7e59a53-13de-521b-af6b-dcbf6280eb9d).
 

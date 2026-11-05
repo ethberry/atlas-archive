@@ -6,8 +6,9 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import { FormattedMessage } from "react-intl";
 
-import { FINDERS_ENABLED, pathShown } from "@/lib/archive/features";
+import { INTERCEPTOR_FINDER_ENABLED, pathShown } from "@/lib/archive/features";
 import type { AssetCard } from "@/lib/archive/read";
+import { guidePath } from "@/lib/archive/guides";
 
 // A link for a rich message of react-intl: <tag>words</tag>. A page a feature
 // flag hides leaves its words plain.
@@ -31,25 +32,25 @@ const TOOLS = {
 
 // Every guide a note can lead to, by the tag its messages use.
 export const GUIDES = {
-  classes: link("/guides/multitool-classes"),
-  upgrade: link("/guides/multitool-upgrades"),
-  staffs: link("/guides/staffs"),
-  grades: link("/guides/creature-grades"),
-  roles: link("/guides/creature-roles"),
-  galaxies: link("/guides/galaxies"),
-  systems: link("/guides/systems"),
-  economy: link("/guides/economy"),
-  types: link("/guides/sources-by-type"),
-  dissonance: link("/guides/sentinels-and-dissonance"),
-  stations: link("/guides/space-stations"),
-  upgrades: link("/guides/station-upgrades"),
-  interceptors: link("/guides/interceptors"),
+  classes: link(guidePath("multitool-classes")),
+  upgrade: link(guidePath("multitool-upgrades")),
+  staffs: link(guidePath("staffs")),
+  grades: link(guidePath("creature-grades")),
+  roles: link(guidePath("creature-roles")),
+  galaxies: link(guidePath("galaxies")),
+  systems: link(guidePath("systems")),
+  economy: link(guidePath("economy")),
+  types: link(guidePath("sources-by-type")),
+  dissonance: link(guidePath("sentinels-and-dissonance")),
+  stations: link(guidePath("space-stations")),
+  upgrades: link(guidePath("technology-merchants")),
+  interceptors: link(guidePath("interceptors")),
 };
 
 export const SHIP_GUIDES = {
   ...GUIDES,
-  classes: link("/guides/ship-classes"),
-  upgrade: link("/guides/ship-upgrades"),
+  classes: link(guidePath("ship-classes")),
+  upgrade: link(guidePath("ship-upgrades")),
   finder: TOOLS.finder,
 };
 
@@ -97,7 +98,7 @@ export function RecordNote(props: { asset: AssetCard }) {
     case "ship":
       if (termValue(asset, "archive.hull") === "interceptor") {
         ids.push(["archive.noteInterceptor", GUIDES]);
-        if (FINDERS_ENABLED) {
+        if (INTERCEPTOR_FINDER_ENABLED) {
           ids.push(["archive.noteFinder", TOOLS]);
         }
       }

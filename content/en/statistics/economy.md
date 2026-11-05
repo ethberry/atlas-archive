@@ -4,7 +4,7 @@
 
 ## Wealth
 
-A system offers about the same number of tools at any wealth, and a pirate one a little fewer. What wealth changes is what those tools are: class S is {{lowS}} of tools at low wealth, {{highS}} at high, and {{pirateS}} in a pirate system, and {{lowTouch}} of tools hold adjacent slots at low wealth against {{highTouch}} at high. Pirate systems sit apart, with only {{pirateTouch}}. [Multitool classes](/guides/multitool-classes) shows why. Wealth does not move the [upgrade modules](/guides/station-upgrades) a station sells.
+A system offers about the same number of tools at any wealth, and a pirate one a little fewer. What wealth changes is what those tools are: class S is {{lowS}} of tools at low wealth, {{highS}} at high, and {{pirateS}} in a pirate system, and {{lowTouch}} of tools hold adjacent slots at low wealth against {{highTouch}} at high. Pirate systems sit apart, with only {{pirateTouch}}. [Multitool classes](/guides/multitool-classes) shows why. Wealth does not move the [technology merchants](/guides/technology-merchants) a station sells.
 
 Wrecks barely notice: a medium wealth system holds {{mediumShips}}, a pirate one {{pirateShips}}.
 

@@ -18,8 +18,13 @@ import { galaxyHref } from "@/lib/archive/galaxies";
 type Row = { key: string; cells: ReactNode[] };
 
 // Four cells of an inventory grid, drawn small.
-export function CellMark(props: { cells: [number, number][] }) {
-  const { cells } = props;
+// A figure of cells; `accent`, when given, is one cell drawn in the second
+// colour, such as the weapon's place among its modules.
+export function CellMark(props: {
+  cells: [number, number][];
+  accent?: [number, number];
+}) {
+  const { cells, accent } = props;
   const columns = Math.max(...cells.map((cell) => cell[0])) + 1;
   const rows = Math.max(...cells.map((cell) => cell[1])) + 1;
   return (
@@ -38,7 +43,10 @@ export function CellMark(props: { cells: [number, number][] }) {
           sx={{
             gridColumn: column + 1,
             gridRow: row + 1,
-            bgcolor: "primary.main",
+            bgcolor:
+              accent && accent[0] === column && accent[1] === row
+                ? "secondary.main"
+                : "primary.main",
             borderRadius: "2px",
           }}
         />
@@ -102,6 +110,8 @@ export function DataTable(props: {
                   <TableCell
                     key={index}
                     align={index < textColumns ? "left" : "right"}
+                    // A cell of several shares puts one on each line.
+                    sx={{ whiteSpace: "pre-line" }}
                   >
                     {cell}
                   </TableCell>

@@ -14,9 +14,15 @@ export type StatTable = {
   rows: string[][];
   note: string;
   marks?: [number, number][][];
+  // One cell of each row's figure drawn apart, such as a weapon's.
+  accents?: [number, number][];
   upright?: boolean;
   // How many columns from the start hold words.
   text?: number;
+  // Each row's tile in the page's sprite, or null for a row with no picture.
+  icons?: (number | null)[];
+  // The sprite: a grid of square tiles, `columns` to a row.
+  sprite?: { src: string; columns: number };
 };
 
 export type Topic = { slug: string; title: string; fact: string };
@@ -43,7 +49,18 @@ export function topicOf(slug: string) {
 }
 
 function printed(table: RawTable): StatTable {
-  const { head, kinds, rows, note, marks, upright, text } = table;
+  const {
+    head,
+    kinds,
+    rows,
+    note,
+    marks,
+    accents,
+    upright,
+    text,
+    icons,
+    sprite,
+  } = table;
   return {
     head,
     note,
@@ -51,8 +68,10 @@ function printed(table: RawTable): StatTable {
       row.map((cell, at) => printCell(cell, kinds?.[at] ?? "text")),
     ),
     ...(marks ? { marks } : {}),
+    ...(accents ? { accents } : {}),
     ...(upright ? { upright } : {}),
     ...(text ? { text } : {}),
+    ...(icons && sprite ? { icons, sprite } : {}),
   };
 }
 

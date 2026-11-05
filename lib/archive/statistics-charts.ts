@@ -59,7 +59,15 @@ const RULES: Record<string, Record<string, Plan>> = {
     wealth: { columns: ["Class S tools", "Adjacent tools"] },
   },
   "space-stations": { kinds: NONE, merchants: NONE },
-  "station-upgrades": {
+  "supercharged-slots": {
+    ceiling: NONE,
+    figures: NONE,
+    helpers: NONE,
+    layouts: { columns: ["Times the Boltcaster alone"] },
+    rules: NONE,
+    shipCards: NONE,
+  },
+  "technology-merchants": {
     count: { kind: "line" },
     sets: NONE,
   },

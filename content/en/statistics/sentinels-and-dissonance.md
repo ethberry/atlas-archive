@@ -1,6 +1,6 @@
 # Sentinels and dissonance
 
-**Where do you find dissonance?** On {{dissonant}} of planets, and only a dissonant world holds [Sentinel tools](/guides/multitool-types) and [Interceptors](/guides/interceptors). Look on Red, Green, and Blue worlds, {{red}} of them, and on moons, {{moon}}, against {{medium}} of medium planets. A Harsh galaxy nearly doubles the odds<!-- finders -->, and the [Interceptor finder](/interceptor-finder) gives you such a planet by the ship you want<!-- /finders -->.
+**Where do you find dissonance?** On {{dissonant}} of planets, and only a dissonant world holds [Sentinel tools](/guides/multitool-types) and [Interceptors](/guides/interceptors). Look on Red, Green, and Blue worlds, {{red}} of them, and on moons, {{moon}}, against {{medium}} of medium planets. A Harsh galaxy nearly doubles the odds<!-- interceptor-finder -->, and the [Interceptor finder](/interceptor-finder) gives you such a planet by the ship you want<!-- /interceptor-finder -->.
 
 ## By planet type
 
@@ -22,4 +22,4 @@ A Harsh galaxy is the one that changes the picture: {{harshDissonant}} of planet
 
 <!-- widget:galaxies -->
 
-That is the map of where to land. What you pick up once you do starts with [multitool types](/guides/multitool-types).
+That is the map of where to land. Above the planets, a system's next prize is in its sky: the freighter you save from a battle, and [freighters](/guides/freighters) says where to farm one.

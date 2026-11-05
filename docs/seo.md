@@ -1,24 +1,19 @@
 # Search: the semantic core and the links
 
-How Atlas Archive is built for search, set on 2026-11-03 before release 1.1. Read this before a review of the site's
-text, and change it here when a rule changes, so the next review checks against it instead of starting over.
-
-## The one question
-
-The site answers one question: **how to get the best item in No Man's Sky.** Every page is a cut of it, first by item
-(multitool, ship, freighter, frigate, creature, upgrade module), then by where (galaxy, system, station, planet). A page
-that answers no part of that question does not belong on the site.
+How Atlas Archive is built for search, set on 2026-11-03 before release 1.1: the sections, the semantic core, the
+link map, and the review before a release. The rules of the text itself (the one question, titles, words, links) are
+`.claude/rules/site-text.md`; change them there.
 
 ## Sections
 
-| Section      | Path                                                                                                              | What it is                                                                                     |
-| ------------ | ----------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| How it works | `/about`                                                                                                          | the method, as a funnel from the galaxy down to the one square on show                         |
-| Catalog      | `/galaxy`, `/system`, `/planet`, `/ship`, `/tool`, `/creature`, and a page a record                               | finds with their portal glyphs                                                                 |
-| Guides       | `/guides`, `/guides/<slug>`                                                                                       | one question a page, with the numbers as proof; built by `conveyor pages` in crimson-orb       |
-| Tools        | `/interceptor-finder`, `/capital-freighter-finder`, `/freighter-finder`, `/living-ship-finder`, `/how-lucky-am-i` | finders give a system; the freighter and living ship pages are builders that give a shape only |
+| Section      | Path                                                                                                              | What it is                                                                                                   |
+| ------------ | ----------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| How it works | `/about`                                                                                                          | the method, as a funnel from the galaxy down to the one square on show                                       |
+| Catalog      | `/galaxy`, `/system`, `/planet`, `/ship`, `/tool`, `/creature`, and a page a record                               | finds with their portal glyphs                                                                               |
+| Guides       | `/guides`, `/guides/<group>`, `/guides/<group>/<slug>`                                                            | one question a page, with the numbers as proof; built by `conveyor pages` in crimson-orb                     |
+| Tools        | `/interceptor-finder`, `/capital-freighter-finder`, `/freighter-finder`, `/living-ship-finder`, `/how-lucky-am-i` | finders give a system; the Interceptor, freighter, and living ship pages are builders that give a shape only |
 
-**Hidden finders.** `FINDERS_ENABLED` in `lib/archive/features.ts` is false (the owner, 2026-11-05): `/interceptor-finder`, `/capital-freighter-finder`, and `/freighter-finder` answer 404 and leave Tools, the menu, the footer, and the sitemap, so How lucky am I? is the one tool. In the Markdown a link to them renders as plain words, and `<!-- finders -->…<!-- /finders -->` (with `not-finders` for the other way) holds each sentence about them. A rich message that names them has a `…Finders` twin in `lib/i18n/en.json` (`homeLeadFinders`, `kindLead.shipFinders`, `tourToolsFinders`), shown while the flag is on, and the Interceptor note on a ship page drops `noteFinder`. Setting the flag to true brings it all back.
+**Finder flags.** Each finder has its own flag in `lib/archive/features.ts` (the owner, 2026-11-05): `INTERCEPTOR_FINDER_ENABLED` is false since 2026-11-06 (it was true), `CAPITAL_FREIGHTER_FINDER_ENABLED` and `FREIGHTER_FINDER_ENABLED` are false. A finder whose flag is off answers 404 and leaves Tools, the menu, the footer, and the sitemap. In the Markdown a link to it renders as plain words, and a block named after its path, `<!-- interceptor-finder -->…<!-- /interceptor-finder -->` (with `not-interceptor-finder` for the other way), holds each sentence about it. A rich message that names finders has twins (the Interceptor page is a builder since 2026-11-05, but keeps its URL and flag) in `lib/i18n/en.json`, picked by `FINDER_MESSAGE`: `…Interceptor` names the Interceptor builder alone, `…Finders` it and the capital freighter finder (`homeLead`, `tourTools`); `kindLead.shipFinders` and the ship page's `noteFinder` follow the Interceptor flag.
 
 **Hidden until 3.0.** Living ships and organic frigates wait for version 3.0. `LIVING_SHIPS_ENABLED` in
 `lib/archive/features.ts` is false: the `living-ships` and `organic-frigates` guides and `/living-ship-finder` answer
@@ -28,30 +23,23 @@ flag on, and `<!-- not-living -->…<!-- /not-living -->` only with it off (the 
 instead). Files and data stay; setting the flag to true brings every page and link back. The rows of these pages
 below stay for 3.0.
 
+The corvette module guide has a flag, `CORVETTE_GUIDE_ENABLED`, off until the corvette is checked in the game after the
+living ships; `<!-- corvette -->` and `<!-- not-corvette -->` work as the living blocks, so starship-modules leads to
+the Roamer while it is off. The other module guides have no flag since 2026-11-06 (the owner).
+
 The Guides were Statistics and the Catalog was the Encyclopedia until 2026-11-03. `/statistics` and
 `/statistics/<slug>` redirect permanently to `/guides` (`next.config.ts`). The code keeps the old names
 (`statistics.json`, `content/en/statistics/`, `StatisticsScreen`); only what a visitor reads changed.
 
-## Titles, headings, descriptions
-
-- Every page has one `<h1>`. Catalog lists and records render it in `CatalogScreen` and `AssetCard`, the home page in
-  `HomeScreen`, a guide from the `#` line of its text.
-- A guide's `<title>` is `<title> in No Man's Sky — Atlas Archive`, or its question for the pages worth the most
-  (`TITLES` in `app/guides/[slug]/page.tsx`); its description is
-  the page's `fact` from crimson-orb `generator/store/src/pages/*.rs`, which leads with the answer.
-- A tool's `<title>` names No Man's Sky and the thing found, e.g. "No Man's Sky Interceptor finder: find a Sentinel
-  Interceptor by its parts and colour".
-- Each page opens with its question in bold, in the words a player types, and answers it in the first sentences.
-- A menu label equals the `<h1>` of the page it opens.
-- No page links to itself in its own text; the site-wide header and footer are the only exception.
-
-## Spelling and terms
-
-- **multitool**, one word, everywhere in site text; "Multi-Tool" only when a game item name is quoted.
-- Terms as in the game or the community: class S, supercharged slots, crashed ship, Sentinel Interceptor, capital
-  freighter, dreadnought, living ship, Void Egg, organic frigate, Dream Aerial, upgrade module, portal glyphs.
-- Never on the site: generator, seed, code; sample sizes, counts of systems, "none of N". Guides name no system or
-  coordinates, with one exception: the players' farm table on `freighter-modules`.
+Since 2026-11-05 each group of the menu is a page of its own, `/guides/<group>` (the group's title in lower case), and
+its guides sit under it at `/guides/<group>/<slug>`. A group's page is a contents list: each guide's title, the bold
+question its text opens with, and its `fact`; it tells nothing of its own and stands outside the trail of the guides,
+so the last guide of a group leads straight to the first of the next. A guide's breadcrumb is Home › Guides › group ›
+guide. The text of the pages keeps short `/guides/<slug>` links, and `longGuideLinks` in `lib/archive/guides.ts` makes
+them long when a page is read, so a guide moved to another group needs no edit of the text; code builds the paths with
+`guidePath` and `groupPath`. `next.config.ts` redirects every old `/guides/<slug>` and `/statistics/<slug>` to the long
+path, from the menu file, except `galaxies`, `systems`, and `freighters`: there a group and its first guide share a
+word, so the short path is now the group's page, which links to the guide.
 
 ## The semantic core
 
@@ -67,7 +55,7 @@ ship-upgrades, organic-frigates, how-lucky-am-i.
 | `/tool`                                                            | multitools with adjacent supercharged slots (not "S-class": most listed tools are A or B) | multitool glyphs; staff locations                                      |
 | `/ship`                                                            | crashed ships with adjacent supercharged slots                                            | S-class crashed ship; exotic crashed ship; Sentinel Interceptor wreck  |
 | `/creature`                                                        | best creature to adopt                                                                    | all-S creature; companion stats                                        |
-| `/interceptor-finder`                                              | Sentinel Interceptor locations                                                            | Interceptor glyphs; crashed Sentinel ship                              |
+| `/interceptor-finder`                                              | Sentinel Interceptor builder, Interceptor parts                                           | Interceptor parts; Interceptor colours                                 |
 | `/capital-freighter-finder`                                        | capital freighter locations                                                               | best capital freighter; freighter battle system                        |
 | `/freighter-finder`                                                | freighter shapes                                                                          | regular freighter; freighter parts                                     |
 | `/living-ship-finder`                                              | living ship parts                                                                         | living ship types; Void Egg ship shapes                                |
@@ -92,6 +80,8 @@ ship-upgrades, organic-frigates, how-lucky-am-i.
 | multitool-stats                                                    | best multitool stats                                                                      | max damage; scanner                                                    |
 | multitool-upgrades                                                 | upgrade multitool to S                                                                    | upgrade or find at S                                                   |
 | figures, square                                                    | adjacent supercharged slots                                                               | 2×2 square; slot layouts                                               |
+| supercharged-slots                                                 | supercharged slots                                                                        | adjacency bonus; best module placement; max multitool damage           |
+| roamer-, nomad-, pilgrim-, colossus-modules                        | Roamer modules (and each exocraft's name)                                                 | exocraft upgrades; exocraft slots; Colossus build                      |
 | staffs                                                             | best staff head                                                                           | Autophage staff; staff terminal                                        |
 | ship-types                                                         | ship types                                                                                | exotic, solar, hauler, fighter, explorer, shuttle                      |
 | ship-classes                                                       | S-class crashed ship                                                                      | class by wealth                                                        |
@@ -104,16 +94,11 @@ ship-upgrades, organic-frigates, how-lucky-am-i.
 
 ## The links
 
-- **Rules.** Links stand inside sentences; the anchor text appears on the target page (its `<h1>`, lead, or title); no
-  "See also" or "See more" rows; no links to Reddit (they leak rank); external links only where a page cites a rule
-  (Google's data policy on the privacy page).
-- **Menus.** Header items are real links (`ArchiveBar.tsx`); the drawer is the same list on a phone.
+- **External.** The one external link cites a rule: Google's data policy on the privacy page.
+- **Menus.** Header items are real links (`ArchiveBar.tsx`). The word Guides is a link to `/guides` and the arrow beside it opens the menu, where a group's name opens the group's page; there is no All guides item. The drawer is the same list on a phone, an accordion inside the Guides one: each name opens its page, the arrow beside it what lies under it.
 - **Footer.** `ArchiveShell.tsx`: four columns, the legal pages first, then the Catalog lists, one link a group of
-  guides (to the group's first page), and the tools from `lib/archive/tools.ts`. It does not repeat the whole menu.
-- **Guides.** Each guide ends with a sentence leading to the next one in the menu order, and links in its text to the
-  guides it relies on, to the tool that acts on it, and to the catalog list it describes. Every guide is reached from at
-  least two other pages.
-- **Tools and guides.** Interceptor finder ↔ interceptors, ship-classes, ship-square; capital freighter finder ↔
+  guides (to the group's own page), and the tools from `lib/archive/tools.ts`. It does not repeat the whole menu.
+- **Tools and guides.** Interceptor builder ↔ interceptors, ship-classes, ship-square; capital freighter finder ↔
   freighters, dreadnoughts, freighter-modules; freighter finder ↔ freighters, frigates; living ship finder ↔
   living-ships, organic-frigates; How lucky am I? ↔ multitool-classes, multitool-stats, staffs, figures, ship-stats,
   ship-upgrades, ship-figures.
@@ -124,8 +109,8 @@ ship-upgrades, organic-frigates, how-lucky-am-i.
 1. Read the served HTML, not the source: `curl -s localhost:3000/<path>` shows what a crawler gets (the `<title>`, the
    `<h1>`, the links). A link that only a click on a menu opens does not count.
 2. Check each page against its row in the core: the primary query in the title, the lead, and the description.
-3. Check links against the rules above: count the incoming links of each guide and tool; none should have fewer than
+3. Check links against the link rules (`.claude/rules/site-text.md`): count the incoming links of each guide and tool; none should have fewer than
    two from text.
-4. Check the text rules: the forbidden words, sample sizes, places on guides, and that every claim is proven in
-   crimson-orb `docs` or said to be not researched yet.
-5. Change this file when a rule changes; add a page's row when a page is added.
+4. Check the text rules (`.claude/rules/site-text.md`): the forbidden words, sample sizes, places on guides, and that
+   every claim is proven.
+5. Add a page's row to the core when a page is added.

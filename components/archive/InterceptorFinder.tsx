@@ -1,17 +1,10 @@
 "use client";
 
-import {
-  useCallback,
-  useEffect,
-  useMemo,
-  useRef,
-  useState,
-  type ReactNode,
-} from "react";
+import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
+import { Controller, useForm, useWatch } from "react-hook-form";
 import Link from "next/link";
 import Alert from "@mui/material/Alert";
 import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
 import Card from "@mui/material/Card";
 import Chip from "@mui/material/Chip";
 import MuiLink from "@mui/material/Link";
@@ -24,21 +17,21 @@ import { FormattedMessage } from "react-intl";
 import { Article } from "@/components/archive/Article";
 import { useAuth } from "@/components/providers/AuthProvider";
 import {
-  FAMILIES,
   NO_PAINT,
   PART_GROUPS,
   SCHEMES,
   bandsOf,
-  choiceExists,
-  choiceKey,
-  lookOf,
-  looksOf,
+  firstOf,
+  paintedOf,
   optionOf,
   settled,
+  PAINT,
   type Paint,
+  type Painted,
   type PartChoice,
   type PartGroup,
 } from "@/lib/archive/interceptor-parts";
+import { guidePath } from "@/lib/archive/guides";
 
 type TreePart = { name: string; groups: TreePart[][] };
 
@@ -48,15 +41,6 @@ type Parts = {
   layers: Record<string, [number, number, number, number]>;
   tree: TreePart[][];
 };
-
-type Reply = { found: string };
-
-type State =
-  | { status: "idle" }
-  | { status: "busy" }
-  | { status: "signIn" }
-  | { status: "failed"; limited: boolean }
-  | { status: "done"; reply: Reply };
 
 // The stage: the shade of each pixel and the form group that stands there.
 type Stage = {
@@ -94,68 +78,78 @@ const TILE = {
   "&.Mui-disabled": { color: "#70747b", opacity: 0.55 },
 };
 const NOT_A_GROUP = -1;
+// The landing gear stands on every ship but one on the walker legs: they take its
+// place (the owner, 2026-11-05). Its layer is cut from `base` by crimson-orb
+// `utils/tools/interceptor_art.py` (`LANDING_GEAR`).
+const LANDING_GEAR = "_LandGear";
+const WALKER_LEGS = "_WingsU_Legs";
 const HIDDEN = -2;
 
-// The picks after `option` is set in `group`: what it needs comes in, and what
-// no longer fits goes out, down to the empty option where a group has one.
+// The picks after `option` is set in `group`: the parts it hangs on come in, the
+// groups that hung on the old option go out, and the groups of the new one start
+// on their empty or first option.
 function pick(
   choice: PartChoice,
   group: PartGroup,
-  option: string | null,
-  looks: number[] | null,
-) {
-  const next = { ...choice };
-  if (option === null) {
-    delete next[group.id];
-  } else {
-    next[group.id] = option;
-    // What it needs, and what that needs in turn: Upper wings of a Pod need the
-    // Pod, and the Pod needs the Carriage wing set.
-    for (
-      let needs = group.requires;
-      needs;
-      needs = PART_GROUPS.find((row) => row.id === needs?.group)?.requires
-    ) {
-      next[needs.group] = needs.option;
-    }
+  option: string,
+): PartChoice {
+  const next = { ...choice, [group.id]: option };
+  // What it hangs on, and what that hangs on in turn: the upper wings of a Pod
+  // need the Pod, and the Pod needs the Carriage wing set.
+  for (
+    let needs = group.requires;
+    needs;
+    needs = PART_GROUPS.find((row) => row.id === needs?.group)?.requires
+  ) {
+    next[needs.group] = needs.option;
   }
-  const fits = settled(next);
-  for (const row of PART_GROUPS) {
-    if (choiceExists(fits, looks)) {
-      break;
-    }
-    const empty = row.options.find((part) => part.empty);
-    if (empty && row.id !== group.id && fits[row.id]) {
-      fits[row.id] = empty.id;
-    }
-  }
-  return fits;
+  return opened(settled(next), group, option);
 }
 
-const START = settled({});
-
-// A set of parts with all its own parts empty looks like every other set, so the
-// first of them starts on its first real variant. The player can still empty it.
-function opened(choice: PartChoice, group: PartGroup, looks: number[] | null) {
-  for (const row of PART_GROUPS) {
-    if (row.requires?.group !== group.id) {
-      continue;
+// Two options of one group that can both vanish draw one picture, nothing, as
+// Stacked and Spread with no wings. So when the player picks one of them and all
+// its groups stand empty, the first of them takes `firstOf`, and the pick shows on
+// the ship. Frame vanishes too, but Plated beside it never does: leaving the plates
+// already shows.
+function opened(choice: PartChoice, group: PartGroup, option: string) {
+  const twins = group.options.filter((row) => row.vanishes);
+  if (!twins.some((row) => row.id === option) || twins.length < 2) {
+    return choice;
+  }
+  const children = PART_GROUPS.filter(
+    (row) => row.requires?.group === group.id && row.requires.option === option,
+  );
+  if (children.some((row) => !optionOf(row, choice[row.id])?.empty)) {
+    return choice;
+  }
+  for (const row of children) {
+    const first = firstOf(row);
+    if (first) {
+      return pick(choice, row, first.id);
     }
-    const empty = row.options.find((option) => option.empty);
-    if (
-      row.requires.option !== choice[group.id] ||
-      choice[row.id] !== empty?.id
-    ) {
-      continue;
-    }
-    const first = row.options.find(
-      (option) =>
-        !option.empty &&
-        choiceExists({ ...choice, [row.id]: option.id }, looks),
-    );
-    return first ? { ...choice, [row.id]: first.id } : choice;
   }
   return choice;
+}
+
+// The ship before any pick: every group on its empty or first option, opened where
+// that option vanishes beside another that does.
+const START = PART_GROUPS.reduce(
+  (choice, row) =>
+    choice[row.id] === undefined ? choice : opened(choice, row, choice[row.id]),
+  settled({}),
+);
+
+// The groups that hang on `group`, at any depth, and `group` itself, by index.
+// Groups come parent first, so one pass finds them all.
+function branchOf(group: PartGroup) {
+  const out = new Set([PART_GROUPS.indexOf(group)]);
+  PART_GROUPS.forEach((row, index) => {
+    const parent = PART_GROUPS.findIndex((up) => up.id === row.requires?.group);
+    if (out.has(parent)) {
+      out.add(index);
+    }
+  });
+  return out;
 }
 
 // The form group of each part name.
@@ -167,14 +161,28 @@ const GROUP_OF = new Map(
   ),
 );
 
-// One chip a title: each hull has its own Skirting, and the one that fits the
-// picks stands for both.
-function chipsOf(fits: PartGroup[]) {
-  return PART_GROUPS.filter((row) => {
-    const twins = PART_GROUPS.filter((other) => other.title === row.title);
-    const fitting = twins.find((other) => fits.includes(other));
-    return (fitting ?? twins[0]) === row;
-  });
+// The name of each chip: its title, and where another group that applies has the
+// same title (each set of wings has its own Plate shade), the title of the group it
+// hangs on, then a number.
+function chipNames(fits: PartGroup[]) {
+  const title = (row: PartGroup) => {
+    const same = fits.filter((other) => other.title === row.title);
+    const parent = PART_GROUPS.find((up) => up.id === row.requires?.group);
+    return same.length > 1 && parent
+      ? `${row.title} · ${parent.title}`
+      : row.title;
+  };
+  const names = new Map(fits.map((row) => [row.id, title(row)]));
+  const seen = new Map<string, number>();
+  for (const row of fits) {
+    const name = names.get(row.id) as string;
+    if (fits.filter((other) => names.get(other.id) === name).length > 1) {
+      const count = (seen.get(name) ?? 0) + 1;
+      seen.set(name, count);
+      names.set(row.id, `${name} ${count}`);
+    }
+  }
+  return names;
 }
 
 // The first part that shows anything stands in for a group nobody picked.
@@ -200,6 +208,9 @@ function layersOf(tree: TreePart[][], choice: PartChoice) {
     ),
   );
   const out: [string, number][] = [["base", NOT_A_GROUP]];
+  if (!wanted.has(WALKER_LEGS)) {
+    out.push([LANDING_GEAR, NOT_A_GROUP]);
+  }
   const walk = (groups: TreePart[][], owner: number) => {
     for (const group of groups) {
       // One pick may name an empty part of a group another pick fills, here or
@@ -259,63 +270,28 @@ function layerImage(name: string) {
   return image;
 }
 
-// The part `name` with what stands on it: its children, as the ship shows them.
-// The sets of wings: their tiles show the set, not what hangs on it.
-const WING_SETS = new Set(["wings", "carriage"]);
-
-// What a tile shows: the layers of a ship with only this option picked, as the
-// ship would build it, kept to this group and the groups that hang on it. A set
-// of wings shows its own mesh alone: its child groups have tiles of their own,
-// and drawn here they made Stacked and Pod look like Rings, whose rails
-// (`_WingsO_oFlip`, `_NWTop_Flip`) belong to the Rings option alone. A set with
-// no mesh of its own (Stacked, Spread) shows each child group on its first real
-// option other than Rings.
+// What a tile shows: the ship with this option picked, kept to the group and the
+// groups that hang on it.
 function optionLayers(
   parts: Parts,
   group: PartGroup,
   option: string,
 ): [string, number][] {
-  const own = PART_GROUPS.indexOf(group);
-  const base = pick(START, group, option, null);
-  if (!WING_SETS.has(group.id)) {
-    const choice = opened(base, group, null);
-    const shown = new Set(
-      PART_GROUPS.flatMap((row, index) =>
-        index === own || row.requires?.group === group.id ? [index] : [],
-      ),
-    );
-    return layersOf(parts.tree, choice)
-      .filter(([, owner]) => shown.has(owner))
-      .map(([name]) => [name, NOT_A_GROUP]);
-  }
-  const frame = layersOf(parts.tree, base).filter(
-    ([name, owner]) => owner === own && parts.layers[name],
+  const branch = branchOf(group);
+  const layers = layersOf(parts.tree, pick(START, group, option)).filter(
+    ([name]) => parts.layers[name],
   );
-  if (frame.length) {
-    return frame.map(([name]) => [name, NOT_A_GROUP]);
-  }
-  const children = PART_GROUPS.flatMap((row, index) =>
-    row.requires?.group === group.id && row.requires.option === option
-      ? [index]
-      : [],
-  );
-  const choice = { ...base };
-  for (const index of children) {
-    const row = PART_GROUPS[index];
-    const first = row.options.find(
-      (item) =>
-        !item.empty &&
-        item.id !== "rings" &&
-        choiceExists({ ...choice, [row.id]: item.id }, null),
-    );
-    if (first) {
-      choice[row.id] = first.id;
-    }
-  }
-  const shown = new Set([own, ...children]);
-  return layersOf(parts.tree, choice)
-    .filter(([, owner]) => shown.has(owner))
-    .map(([name]) => [name, NOT_A_GROUP]);
+  const own = layers.filter(([, owner]) => branch.has(owner));
+  // An option that draws nothing in its branch, as Frame, shows the ship it
+  // leaves: the parts every Interceptor carries, without the landing gear, which
+  // both hulls carry.
+  return (
+    own.length
+      ? own
+      : layers.filter(
+          ([name, owner]) => owner === NOT_A_GROUP && name !== LANDING_GEAR,
+        )
+  ).map(([name]) => [name, NOT_A_GROUP]);
 }
 
 // Lays the layers over each other: the nearest pixel wins, as on the ship.
@@ -358,38 +334,114 @@ async function buildStage(
   return { shade, group, textureU, textureV, width, height };
 }
 
-const looks = new Map<number, Promise<ImageData>>();
+// An image of the site as pixels.
+async function pixels(name: string) {
+  const response = await fetch(`${LAYERS}/${name}`);
+  const bitmap = await createImageBitmap(await response.blob(), {
+    colorSpaceConversion: "none",
+    premultiplyAlpha: "none",
+  });
+  const canvas = new OffscreenCanvas(bitmap.width, bitmap.height);
+  const context = canvas.getContext("2d", { willReadFrequently: true });
+  if (!context) {
+    throw new Error("No canvas.");
+  }
+  context.drawImage(bitmap, 0, 0);
+  return context.getImageData(0, 0, bitmap.width, bitmap.height);
+}
 
-function lookTexture(look: number) {
-  let image = looks.get(look);
-  if (!image) {
-    image = (async () => {
-      const response = await fetch(`${LAYERS}/look-${look}.jpg`);
-      const bitmap = await createImageBitmap(await response.blob(), {
-        colorSpaceConversion: "none",
-      });
-      const canvas = new OffscreenCanvas(bitmap.width, bitmap.height);
-      const context = canvas.getContext("2d", { willReadFrequently: true });
-      if (!context) {
-        throw new Error("No canvas.");
-      }
-      context.drawImage(bitmap, 0, 0);
-      return context.getImageData(0, 0, bitmap.width, bitmap.height);
-    })().catch((error: unknown) => {
-      looks.delete(look);
+// The maps of each overlay: `paint-N.png` holds what the colours multiply (the base
+// light and the overlay light, both over LIGHT_RANGE, and how much of the base
+// shows), `paint-N.rest.png` what stays, and `paint-4.cover.png` how much of the
+// hull colour shows on overlay 4; written by crimson-orb `interceptor_art.py`
+// (`paint_maps`).
+const maps = new Map<number, Promise<ImageData[]>>();
+const LIGHT_RANGE = 2;
+// The overlay with a hull colour and a trim colour.
+const OVERLAY_TWO = 4;
+
+function mapsOf(option: number) {
+  let found = maps.get(option);
+  if (!found) {
+    found = Promise.all([
+      pixels(`paint-${option}.png`),
+      pixels(`paint-${option}.rest.png`),
+      ...(option === OVERLAY_TWO ? [pixels("paint-4.cover.png")] : []),
+    ]).catch((error: unknown) => {
+      maps.delete(option);
       throw error;
     });
-    looks.set(look, image);
+    maps.set(option, found);
+  }
+  return found;
+}
+
+const rgb = (hex: string) =>
+  [1, 3, 5].map((at) => parseInt(hex.slice(at, at + 2), 16) / 255);
+
+const textures = new Map<string, Promise<ImageData>>();
+
+// The texture of a paint: per texel, the primary times the base light where the
+// overlay leaves the base, the secondary times the overlay light where overlay 4
+// covers it, and what stays (`painted` in `interceptor_art.py`).
+function paintTexture(painted: Painted) {
+  const key = `${painted.option}:${painted.primary}:${painted.secondary}`;
+  let image = textures.get(key);
+  if (!image) {
+    image = mapsOf(painted.option).then(([weights, rest, cover]) => {
+      const primary = rgb(painted.primary);
+      const secondary = painted.secondary ? rgb(painted.secondary) : null;
+      const out = new ImageData(weights.width, weights.height);
+      const { data: w } = weights;
+      for (let at = 0; at < w.length; at += 4) {
+        const base = (w[at] / 255) * LIGHT_RANGE;
+        const over = (w[at + 1] / 255) * LIGHT_RANGE;
+        for (let channel = 0; channel < 3; channel += 1) {
+          let value =
+            Math.min(1, base * primary[channel]) * (w[at + 2] / 255) +
+            rest.data[at + channel] / 255;
+          if (secondary && cover) {
+            value +=
+              Math.min(1, over * secondary[channel]) * (cover.data[at] / 255);
+          }
+          out.data[at + channel] = Math.min(255, value * 255);
+        }
+        out.data[at + 3] = 255;
+      }
+      return out;
+    });
+    image.catch(() => textures.delete(key));
+    textures.set(key, image);
   }
   return image;
+}
+
+// The paint whose light darkens a tile or a grey ship where the ship is black: a
+// white hull and white trim, so black and light plates of one shape tell apart.
+const TONE: Painted = { option: 2, primary: PAINT[0], secondary: null };
+
+// The light of the White paint at `at`, 1 where the pixel reads no texture: black
+// plates come out dark and light ones light, so a grey ship and a tile still tell
+// the plate shades apart.
+function toneAt(stage: Stage, tone: ImageData | null, at: number) {
+  if (!tone || !stage.textureU[at]) {
+    return 1;
+  }
+  const column = Math.floor(((stage.textureU[at] - 1) * tone.width) / 254);
+  const line = Math.floor((stage.textureV[at] * tone.height) / 65536);
+  const from = (line * tone.width + column) * 4;
+  const [red, green, blue] = tone.data.subarray(from, from + 3);
+  const light = (0.3 * red + 0.59 * green + 0.11 * blue) / 255;
+  return TILE_FLOOR + (1 - TILE_FLOOR) * light;
 }
 
 function paint(
   canvas: HTMLCanvasElement,
   stage: Stage,
-  active: number,
+  lit: Set<number>,
   hover: number,
   texture: ImageData | null,
+  tone: ImageData | null,
 ) {
   const context = canvas.getContext("2d");
   if (!context) {
@@ -403,13 +455,13 @@ function paint(
       continue;
     }
     const value = shade[at];
-    // Only the open group, or the one under the pointer, lights up: the other
-    // picked groups stay grey, so a set never seems to own its children's wings.
-    // Parts every ship carries belong to no group and never light up.
-    const lit = owner >= 0 && (owner === active || owner === hover);
+    // The open groups, or the one under the pointer, light up: the other picked
+    // groups stay grey. Parts every ship carries belong to no group and never
+    // light up.
+    const bright = owner >= 0 && (lit.has(owner) || owner === hover);
     const to = at * 4;
     if (texture) {
-      const light = ((lit ? 1.25 : 1) * value) / 255;
+      const light = ((bright ? 1.25 : 1) * value) / 255;
       const column = Math.floor(((textureU[at] - 1) * texture.width) / 254);
       const row = Math.floor((textureV[at] * texture.height) / 65536);
       const from = (row * texture.width + column) * 4;
@@ -418,9 +470,10 @@ function paint(
         image.data[to + channel] = Math.min(255, lightless * light);
       }
     } else {
-      image.data[to] = value * (lit ? 1 : 0.72);
-      image.data[to + 1] = value * (lit ? 0.62 : 0.76);
-      image.data[to + 2] = value * (lit ? 0.36 : 0.82);
+      const grey = value * toneAt(stage, tone, at);
+      image.data[to] = grey * (bright ? 1 : 0.72);
+      image.data[to + 1] = grey * (bright ? 0.62 : 0.76);
+      image.data[to + 2] = grey * (bright ? 0.36 : 0.82);
     }
     image.data[to + 3] = 255;
   }
@@ -431,17 +484,35 @@ function Ship(props: {
   parts: Parts;
   choice: PartChoice;
   active: string;
-  look: number | null;
+  painted: Painted | null;
   onSelect: (group: string) => void;
 }) {
-  const { parts, choice, active, look, onSelect } = props;
+  const { parts, choice, active, painted, onSelect } = props;
   const canvas = useRef<HTMLCanvasElement>(null);
   const [stage, setStage] = useState<Stage | null>(null);
   const [hover, setHover] = useState(NOT_A_GROUP);
-  const [texture, setTexture] = useState<[number, ImageData] | null>(null);
+  const [texture, setTexture] = useState<ImageData | null>(null);
+  const [tone, setTone] = useState<ImageData | null>(null);
   const activeIndex = PART_GROUPS.findIndex((row) => row.id === active);
-  // The last look stays until the next one has loaded.
-  const shown = look === null ? null : (texture?.[1] ?? null);
+  // The last paint stays until the next one is made.
+  const shown = painted === null ? null : texture;
+  // The open group lights up; where it draws nothing of its own on this ship, as
+  // the Plated upper wings of a Pod, whose wings belong to the group under it,
+  // the groups that hang on it light up instead.
+  const lit = useMemo(() => {
+    if (!stage || stage.group.includes(activeIndex)) {
+      return new Set([activeIndex]);
+    }
+    return branchOf(PART_GROUPS[activeIndex]);
+  }, [stage, activeIndex]);
+
+  useEffect(() => {
+    void paintTexture(TONE)
+      .then(setTone)
+      .catch(() => {
+        // Without it the grey ship shows no plate shades.
+      });
+  }, []);
 
   useEffect(() => {
     let current = true;
@@ -460,14 +531,14 @@ function Ship(props: {
   }, [parts, choice]);
 
   useEffect(() => {
-    if (look === null) {
+    if (painted === null) {
       return;
     }
     let current = true;
-    void lookTexture(look)
+    void paintTexture(painted)
       .then((image) => {
         if (current) {
-          setTexture([look, image]);
+          setTexture(image);
         }
       })
       .catch(() => {
@@ -476,13 +547,13 @@ function Ship(props: {
     return () => {
       current = false;
     };
-  }, [look]);
+  }, [painted]);
 
   useEffect(() => {
     if (canvas.current && stage) {
-      paint(canvas.current, stage, activeIndex, hover, shown);
+      paint(canvas.current, stage, lit, hover, shown, tone);
     }
-  }, [stage, activeIndex, hover, shown]);
+  }, [stage, lit, hover, shown, tone]);
 
   const groupAt = (event: React.MouseEvent<HTMLCanvasElement>) => {
     if (!stage) {
@@ -525,9 +596,6 @@ function Ship(props: {
   );
 }
 
-// The look whose texture darkens a tile where the ship is black: White, so black
-// and light plates of one shape tell apart.
-const TILE_LOOK = 1;
 // How dark a black band leaves a tile, against a white one.
 const TILE_FLOOR = 0.35;
 
@@ -540,25 +608,14 @@ function Thumb(props: { parts: Parts; group: PartGroup; option: string }) {
     let current = true;
     void Promise.all([
       buildStage(parts, optionLayers(parts, row, option)),
-      lookTexture(TILE_LOOK).catch(() => null),
+      paintTexture(TONE).catch(() => null),
     ]).then(([stage, texture]) => {
       const context = canvas.current?.getContext("2d");
       if (!current || !context || !canvas.current) {
         return;
       }
-      const { shade, group, textureU, textureV, width, height } = stage;
-      // The light of the texture at `at`, 1 where it reads none.
-      const tone = (at: number) => {
-        if (!texture || !textureU[at]) {
-          return 1;
-        }
-        const column = Math.floor(((textureU[at] - 1) * texture.width) / 254);
-        const line = Math.floor((textureV[at] * texture.height) / 65536);
-        const from = (line * texture.width + column) * 4;
-        const [red, green, blue] = texture.data.subarray(from, from + 3);
-        const light = (0.3 * red + 0.59 * green + 0.11 * blue) / 255;
-        return TILE_FLOOR + (1 - TILE_FLOOR) * light;
-      };
+      const { shade, group, width, height } = stage;
+      const tone = (at: number) => toneAt(stage, texture, at);
       let [left, top, right, bottom] = [width, height, -1, -1];
       group.forEach((owner, at) => {
         if (owner !== HIDDEN) {
@@ -610,32 +667,29 @@ function PartTiles(props: {
   parts: Parts | null;
   group: PartGroup;
   choice: PartChoice;
-  looks: number[] | null;
-  onChange: (option: string | null) => void;
+  title: string;
+  onChange: (option: string) => void;
 }) {
-  const { parts, group, choice, looks, onChange } = props;
+  const { parts, group, choice, title, onChange } = props;
   const value = choice[group.id];
   return (
     <Stack spacing={1}>
-      <Typography variant="subtitle2">{group.title}</Typography>
+      <Typography variant="subtitle2">{title}</Typography>
       <ToggleButtonGroup
         exclusive
         size="small"
         value={value ?? null}
-        onChange={(_event, option: string | null) => onChange(option)}
-        aria-label={group.title}
+        // A click on the picked option leaves it: a list always holds a part.
+        onChange={(_event, option: string | null) => {
+          if (option !== null) {
+            onChange(option);
+          }
+        }}
+        aria-label={title}
         sx={{ flexWrap: "wrap", gap: 1 }}
       >
         {group.options.map((option) => (
-          <ToggleButton
-            key={option.id}
-            value={option.id}
-            disabled={
-              option.id !== value &&
-              !choiceExists(pick(choice, group, option.id, looks), looks)
-            }
-            sx={TILE}
-          >
+          <ToggleButton key={option.id} value={option.id} sx={TILE}>
             <Box sx={{ height: 72, display: "flex", alignItems: "center" }}>
               {parts && !option.empty ? (
                 <Thumb parts={parts} group={group} option={option.id} />
@@ -649,8 +703,12 @@ function PartTiles(props: {
   );
 }
 
-// Where a band takes a colour the player has not picked yet: every family.
-const ANY_COLOUR = `linear-gradient(90deg, ${FAMILIES.map((row) => row.colour).join(", ")})`;
+// The game's palette has eight rows of eight colours.
+const ROW = 8;
+
+// Where a band takes a colour the player has not picked yet: the first colour of
+// each row of the palette.
+const ANY_COLOUR = `linear-gradient(90deg, ${PAINT.filter((_, cell) => cell % ROW === 0).join(", ")})`;
 
 // The two bands as they stand on the ship: the hull above the trim.
 function Bands(props: { bands: [string | null, string | null] }) {
@@ -684,63 +742,64 @@ const SWATCH = {
   textTransform: "none",
 };
 
-// A row of colour families for one band.
-function FamilyTiles(props: {
+// One swatch of the colour grid, in px, on a phone and wider.
+const SWATCH_SIZE = { xs: 28, sm: 32 };
+
+// Every colour the game paints a band with, as the game holds them: eight rows of
+// eight, a few colours twice.
+function PaintTiles(props: {
   label: ReactNode;
   value: number | null;
-  exists: (family: number) => boolean;
-  onChange: (family: number | null) => void;
+  onChange: (cell: number | null) => void;
 }) {
-  const { label, value, exists, onChange } = props;
+  const { label, value, onChange } = props;
   return (
     <Stack spacing={1}>
       <Typography variant="subtitle2">{label}</Typography>
-      <ToggleButtonGroup
-        exclusive
-        size="small"
-        value={value}
-        onChange={(_event, family: number | null) => onChange(family)}
+      <Box
+        role="radiogroup"
         sx={{
           display: "grid",
-          gridTemplateColumns: {
-            xs: "repeat(3, 1fr)",
-            sm: `repeat(${FAMILIES.length}, 1fr)`,
-          },
-          gap: 0.5,
+          gridTemplateColumns: `repeat(${ROW}, max-content)`,
+          gap: { xs: 0.5, sm: 0.75 },
         }}
       >
-        {FAMILIES.map((row, index) => (
-          <ToggleButton
-            key={row.label}
-            value={index}
-            disabled={index !== value && !exists(index)}
-            sx={SWATCH}
-          >
-            <Box
-              sx={{
-                width: "100%",
-                height: 18,
-                borderRadius: 0.5,
-                bgcolor: row.colour,
-              }}
-            />
-            {row.label}
-          </ToggleButton>
+        {PAINT.map((hex, cell) => (
+          <Box
+            key={cell}
+            component="button"
+            type="button"
+            role="radio"
+            aria-checked={cell === value}
+            aria-label={hex}
+            title={hex}
+            onClick={() => onChange(cell === value ? null : cell)}
+            sx={{
+              width: SWATCH_SIZE,
+              height: SWATCH_SIZE,
+              p: 0,
+              cursor: "pointer",
+              borderRadius: 0.5,
+              bgcolor: hex,
+              border: "1px solid #c4c7cc",
+              outline: cell === value ? `3px solid ${MARK}` : "none",
+              outlineOffset: 1,
+            }}
+          />
         ))}
-      </ToggleButtonGroup>
+      </Box>
     </Stack>
   );
 }
 
-// The colour: a scheme of the two bands, then a family for each band it leaves open.
+// The colour: a scheme of the two bands, then a colour of the game for each band it
+// leaves open. Every form comes in every colour.
 function ColourTiles(props: {
-  choice: PartChoice;
   paint: Paint;
   onChange: (paint: Paint) => void;
 }) {
-  const { choice, paint, onChange } = props;
+  const { paint, onChange } = props;
   const scheme = paint.scheme === null ? null : SCHEMES[paint.scheme];
-  const exists = (next: Paint) => choiceExists(choice, looksOf(next));
   return (
     <Stack spacing={2}>
       <Stack spacing={1}>
@@ -756,15 +815,9 @@ function ColourTiles(props: {
               onChange(NO_PAINT);
               return;
             }
-            // A family stays when the new scheme still uses its band and a ship
-            // holds it.
-            const keep = (band: "hull" | "trim") => {
-              const family = SCHEMES[value][band] ? paint[band] : null;
-              return family !== null &&
-                exists({ ...NO_PAINT, scheme: value, [band]: family })
-                ? family
-                : null;
-            };
+            // A colour stays when the new scheme still uses its band.
+            const keep = (band: "hull" | "trim") =>
+              SCHEMES[value][band] ? paint[band] : null;
             onChange({ scheme: value, hull: keep("hull"), trim: keep("trim") });
           }}
           aria-label="Colour scheme"
@@ -778,15 +831,7 @@ function ColourTiles(props: {
           }}
         >
           {SCHEMES.map((row, index) => (
-            <ToggleButton
-              key={row.id}
-              value={index}
-              disabled={
-                index !== paint.scheme &&
-                !exists({ ...NO_PAINT, scheme: index })
-              }
-              sx={SWATCH}
-            >
+            <ToggleButton key={row.id} value={index} sx={SWATCH}>
               <Bands
                 bands={bandsOf({
                   scheme: index,
@@ -800,20 +845,23 @@ function ColourTiles(props: {
         </ToggleButtonGroup>
       </Stack>
       {scheme?.hull ? (
-        <FamilyTiles
+        <PaintTiles
           label={<FormattedMessage id="archive.finderHull" />}
           value={paint.hull}
-          exists={(family) => exists({ ...paint, hull: family })}
-          onChange={(family) => onChange({ ...paint, hull: family })}
+          onChange={(cell) => onChange({ ...paint, hull: cell })}
         />
       ) : null}
       {scheme?.trim ? (
-        <FamilyTiles
+        <PaintTiles
           label={<FormattedMessage id="archive.finderTrim" />}
           value={paint.trim}
-          exists={(family) => exists({ ...paint, trim: family })}
-          onChange={(family) => onChange({ ...paint, trim: family })}
+          onChange={(cell) => onChange({ ...paint, trim: cell })}
         />
+      ) : null}
+      {scheme?.hull || scheme?.trim ? (
+        <Typography variant="caption">
+          <FormattedMessage id="archive.finderPalette" />
+        </Typography>
       ) : null}
     </Stack>
   );
@@ -852,7 +900,7 @@ export function Answer(props: { code: string; note?: ReactNode }) {
             id="archive.finderNoS"
             values={{
               a: (chunks) => (
-                <MuiLink component={Link} href="/guides/economy">
+                <MuiLink component={Link} href={guidePath("economy")}>
                   {chunks}
                 </MuiLink>
               ),
@@ -886,50 +934,29 @@ export function SignIn() {
   );
 }
 
-function Results(props: { state: State }) {
-  const { state } = props;
-  if (state.status === "signIn") {
-    return <SignIn />;
-  }
-  if (state.status === "failed") {
-    return (
-      <Alert severity="warning">
-        <FormattedMessage
-          id={state.limited ? "archive.finderLimited" : "archive.finderFailed"}
-        />
-      </Alert>
-    );
-  }
-  return state.status === "done" ? <Answer code={state.reply.found} /> : null;
-}
+type BuilderValues = { choice: PartChoice; paint: Paint };
 
-function Finder() {
-  const { user } = useAuth();
+// The builder is a form of two values, the parts and the paint; it is never
+// sent: every pick is a ship that exists.
+function Builder() {
   const [parts, setParts] = useState<Parts | null>(null);
-  const [choice, setChoice] = useState<PartChoice>(START);
-  const [paint, setPaint] = useState<Paint>(NO_PAINT);
-  // The looks the colour pick allows, or null for any.
-  const looks = paint.scheme === null ? null : looksOf(paint);
-  const look = lookOf(paint);
+  const { control } = useForm<BuilderValues>({
+    defaultValues: { choice: START, paint: NO_PAINT },
+  });
+  const choice = useWatch({ control, name: "choice" });
+  const paint = useWatch({ control, name: "paint" });
+  const painted = useMemo(() => paintedOf(paint), [paint]);
   const [active, setActive] = useState(PART_GROUPS[0].id);
-  const [state, setState] = useState<State>({ status: "idle" });
-  // Once signed in, the picks stand and the button works.
-  const shown: State =
-    user && state.status === "signIn" ? { status: "idle" } : state;
-  const key = choiceKey(choice);
   const fits = useMemo(
-    () =>
-      PART_GROUPS.filter(
-        (row) =>
-          !row.requires || choice[row.requires.group] === row.requires.option,
-      ),
+    () => PART_GROUPS.filter((row) => choice[row.id] !== undefined),
     [choice],
   );
+  const names = useMemo(() => chipNames(fits), [fits]);
   const picked = PART_GROUPS.find((row) => row.id === active) ?? PART_GROUPS[0];
-  // The Skirting of the other hull stands for the one picked before.
+  // A group that no longer applies hands over to the one of its title that does.
   const group = fits.includes(picked)
     ? picked
-    : (fits.find((row) => row.title === picked.title) ?? picked);
+    : (fits.find((row) => row.title === picked.title) ?? fits[0]);
 
   useEffect(() => {
     void fetch(`${LAYERS}/parts.json`)
@@ -937,102 +964,66 @@ function Finder() {
       .then((value: Parts) => setParts(value));
   }, []);
 
-  const search = useCallback(async () => {
-    if (!user) {
-      setState({ status: "signIn" });
-      return;
-    }
-    setState({ status: "busy" });
-    const response = await fetch(
-      `/api/interceptor-finder?parts=${encodeURIComponent(key)}&look=${look}`,
-    ).catch(() => null);
-    if (response?.status === 401) {
-      setState({ status: "signIn" });
-      return;
-    }
-    if (!response?.ok) {
-      setState({ status: "failed", limited: response?.status === 429 });
-      return;
-    }
-    setState({ status: "done", reply: (await response.json()) as Reply });
-  }, [key, look, user]);
-
   return (
     <Card variant="outlined" sx={{ p: 2, bgcolor: SURFACE, color: INK }}>
-      <Stack spacing={2}>
-        <Alert severity="info">
-          <FormattedMessage id="archive.finderOneADay" />
-        </Alert>
-        <Alert severity="info">
-          <FormattedMessage id="archive.finderNoClassS" />
-        </Alert>
+      <Stack
+        component="form"
+        noValidate
+        spacing={2}
+        onSubmit={(event) => event.preventDefault()}
+      >
         <Box sx={{ minHeight: 200 }}>
           {parts ? (
             <Ship
               parts={parts}
               choice={choice}
               active={group.id}
-              look={look}
+              painted={painted}
               onSelect={setActive}
             />
           ) : null}
         </Box>
         <Stack direction="row" sx={{ flexWrap: "wrap", gap: 1 }}>
-          {chipsOf(fits).map((row) => (
+          {fits.map((row) => (
             <Chip
               key={row.id}
-              label={row.title}
+              label={names.get(row.id)}
               clickable
               color={row.id === group.id ? "primary" : "default"}
-              variant={choice[row.id] ? "filled" : "outlined"}
-              disabled={!fits.includes(row) && row.id !== group.id}
+              variant={
+                optionOf(row, choice[row.id])?.empty ? "outlined" : "filled"
+              }
               onClick={() => setActive(row.id)}
             />
           ))}
         </Stack>
-        <PartTiles
-          parts={parts}
-          group={group}
-          choice={choice}
-          looks={looks}
-          onChange={(option) => {
-            setChoice(opened(pick(choice, group, option, looks), group, looks));
-            setState({ status: "idle" });
-          }}
+        <Controller
+          name="choice"
+          control={control}
+          render={({ field }) => (
+            <PartTiles
+              parts={parts}
+              group={group}
+              choice={field.value}
+              title={names.get(group.id) ?? group.title}
+              onChange={(option) =>
+                field.onChange(pick(field.value, group, option))
+              }
+            />
+          )}
         />
-        <ColourTiles
-          choice={choice}
-          paint={paint}
-          onChange={(value) => {
-            setPaint(value);
-            setState({ status: "idle" });
-          }}
+        <Controller
+          name="paint"
+          control={control}
+          render={({ field }) => (
+            <ColourTiles paint={field.value} onChange={field.onChange} />
+          )}
         />
-        <Stack direction="row" spacing={1}>
-          <Button
-            variant="contained"
-            disabled={state.status === "busy" || look === null}
-            onClick={search}
-          >
-            <FormattedMessage id="archive.finderSearch" />
-          </Button>
-          <Button
-            disabled={key === choiceKey(START) && paint.scheme === null}
-            onClick={() => {
-              setChoice(START);
-              setPaint(NO_PAINT);
-              setState({ status: "idle" });
-            }}
-          >
-            <FormattedMessage id="archive.finderClear" />
-          </Button>
-        </Stack>
-        <Results state={shown} />
       </Stack>
     </Card>
   );
 }
 
 export function InterceptorFinder(props: { html: string }) {
-  return <Article html={props.html} widgets={{ finder: Finder }} />;
+  return <Article html={props.html} widgets={{ finder: Builder }} />;
 }

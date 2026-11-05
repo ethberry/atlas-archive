@@ -30,10 +30,16 @@ export type RawTable = {
   note: string;
   // Where a row names a figure: its four cells.
   marks?: [number, number][][];
+  // One cell of each row's figure drawn apart, such as a weapon's.
+  accents?: [number, number][];
   // Column heads set upright, for a table with many narrow columns.
   upright?: boolean;
   // How many columns from the start hold words.
   text?: number;
+  // Each row's tile in the page's sprite, or null for a row with no picture.
+  icons?: (number | null)[];
+  // The sprite: a grid of square tiles, `columns` to a row.
+  sprite?: { src: string; columns: number };
 };
 
 export const DASH = "—";

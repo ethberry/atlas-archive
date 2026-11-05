@@ -28,6 +28,7 @@
     "react": "19.3.1",
     "react-dom": "19.3.1",
     "react-dropzone": "20.1.4",
+    "react-hook-form": "7.54.2",
     "react-intl": "12.1.5",
     "swiper": "14.3.0",
     "zod": "4.6.7"

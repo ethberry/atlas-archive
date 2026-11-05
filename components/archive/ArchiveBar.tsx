@@ -14,9 +14,9 @@ import Collapse from "@mui/material/Collapse";
 import Drawer from "@mui/material/Drawer";
 import IconButton from "@mui/material/IconButton";
 import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
-import ListSubheader from "@mui/material/ListSubheader";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import Toolbar from "@mui/material/Toolbar";
@@ -27,6 +27,7 @@ import { FormattedMessage, useIntl } from "react-intl";
 import { useAuth } from "@/components/providers/AuthProvider";
 import { PAGE_KINDS } from "@/lib/archive/kinds";
 import { GUIDE_MENU as statisticsMenu } from "@/lib/archive/features";
+import { groupPath, guidePath } from "@/lib/archive/guides";
 import { TOOLS } from "@/lib/archive/tools";
 
 // The header's links stand in the drawer below this width.
@@ -63,6 +64,11 @@ export function ArchiveBar() {
   const [section, setSection] = useState<Section | null>(null);
   const toggleSection = (next: Section) =>
     setSection((open) => (open === next ? null : next));
+  // Inside the guides, one open group at a time too: the group's name opens
+  // its own page, the arrow beside it its guides.
+  const [guideGroup, setGuideGroup] = useState<string | null>(null);
+  const toggleGroup = (next: string) =>
+    setGuideGroup((open) => (open === next ? null : next));
   const drawerLink = (href: string, id: string, nested = false) => (
     <ListItemButton
       key={href}
@@ -115,29 +121,79 @@ export function ArchiveBar() {
                   drawerLink(`/${kind}`, `kinds.${kind}`, true),
                 )}
               </Collapse>
-              <ListItemButton onClick={() => toggleSection("statistics")}>
-                <ListItemText
-                  primary={<FormattedMessage id="archive.statistics" />}
-                />
-                {section === "statistics" ? <ExpandLess /> : <ExpandMore />}
-              </ListItemButton>
+              {/* The name opens the guides page, the arrow its groups, as a
+                  group's name opens its page and the arrow its guides. */}
+              <ListItem
+                disablePadding
+                secondaryAction={
+                  <IconButton
+                    edge="end"
+                    aria-label={intl.formatMessage({
+                      id: "archive.guidesMenu",
+                    })}
+                    aria-expanded={section === "statistics"}
+                    onClick={() => toggleSection("statistics")}
+                  >
+                    {section === "statistics" ? <ExpandLess /> : <ExpandMore />}
+                  </IconButton>
+                }
+              >
+                <ListItemButton
+                  component={Link}
+                  href="/guides"
+                  onClick={() => setDrawer(false)}
+                >
+                  <ListItemText
+                    primary={<FormattedMessage id="archive.statistics" />}
+                  />
+                </ListItemButton>
+              </ListItem>
               <Collapse in={section === "statistics"} unmountOnExit>
-                {drawerLink("/guides", "archive.statsAll", true)}
                 {statisticsMenu.flatMap((group) => [
-                  <ListSubheader key={group.title} disableSticky sx={{ pl: 4 }}>
-                    {group.title}
-                  </ListSubheader>,
-                  ...group.pages.map((page) => (
+                  <ListItem
+                    key={group.slug}
+                    disablePadding
+                    secondaryAction={
+                      <IconButton
+                        edge="end"
+                        aria-label={group.title}
+                        aria-expanded={guideGroup === group.slug}
+                        onClick={() => toggleGroup(group.slug)}
+                      >
+                        {guideGroup === group.slug ? (
+                          <ExpandLess />
+                        ) : (
+                          <ExpandMore />
+                        )}
+                      </IconButton>
+                    }
+                  >
                     <ListItemButton
-                      key={page.slug}
                       component={Link}
-                      href={`/guides/${page.slug}`}
+                      href={groupPath(group.slug)}
                       onClick={() => setDrawer(false)}
-                      sx={{ pl: 6 }}
+                      sx={{ pl: 4 }}
                     >
-                      <ListItemText primary={page.title} />
+                      <ListItemText primary={group.title} />
                     </ListItemButton>
-                  )),
+                  </ListItem>,
+                  <Collapse
+                    key={`${group.slug}-pages`}
+                    in={guideGroup === group.slug}
+                    unmountOnExit
+                  >
+                    {group.pages.map((page) => (
+                      <ListItemButton
+                        key={page.slug}
+                        component={Link}
+                        href={guidePath(page.slug)}
+                        onClick={() => setDrawer(false)}
+                        sx={{ pl: 6 }}
+                      >
+                        <ListItemText primary={page.title} />
+                      </ListItemButton>
+                    ))}
+                  </Collapse>,
                 ])}
               </Collapse>
               <ListItemButton onClick={() => toggleSection("tools")}>
@@ -185,18 +241,30 @@ export function ArchiveBar() {
             </MenuItem>
           ))}
         </Menu>
-        <Button
-          color="inherit"
-          onClick={(event) => setStatsMenu(event.currentTarget)}
-          id="statistics-button"
-          data-tour="statistics"
-          aria-haspopup="true"
-          aria-controls={statsMenu ? "statistics-menu" : undefined}
-          aria-expanded={statsMenu ? "true" : undefined}
-          sx={DESKTOP}
-        >
-          <FormattedMessage id="archive.statistics" />
-        </Button>
+        {/* The word is a link to the guides page, the arrow beside it opens
+            the menu of the groups. */}
+        <Box data-tour="statistics" sx={{ ...DESKTOP, alignItems: "center" }}>
+          <Button
+            component={Link}
+            href="/guides"
+            color="inherit"
+            sx={{ minWidth: 0, pr: 0.5 }}
+          >
+            <FormattedMessage id="archive.statistics" />
+          </Button>
+          <IconButton
+            color="inherit"
+            size="small"
+            onClick={(event) => setStatsMenu(event.currentTarget.parentElement)}
+            id="statistics-button"
+            aria-label={intl.formatMessage({ id: "archive.guidesMenu" })}
+            aria-haspopup="true"
+            aria-controls={statsMenu ? "statistics-menu" : undefined}
+            aria-expanded={statsMenu ? "true" : undefined}
+          >
+            {statsMenu ? <ExpandLess /> : <ExpandMore />}
+          </IconButton>
+        </Box>
         <Menu
           id="statistics-menu"
           anchorEl={statsMenu}
@@ -204,31 +272,21 @@ export function ArchiveBar() {
           onClose={() => setStatsMenu(null)}
           slotProps={{ list: { "aria-labelledby": "statistics-button" } }}
         >
-          <MenuItem
-            component={Link}
-            href="/guides"
-            onClick={() => setStatsMenu(null)}
-          >
-            <FormattedMessage id="archive.statsAll" />
-          </MenuItem>
           {statisticsMenu.flatMap((group) => [
-            <ListSubheader
-              key={group.title}
-              disableSticky
-              sx={{
-                bgcolor: "transparent",
-                color: "text.primary",
-                fontWeight: 700,
-                lineHeight: "36px",
-              }}
+            <MenuItem
+              key={group.slug}
+              component={Link}
+              href={groupPath(group.slug)}
+              onClick={() => setStatsMenu(null)}
+              sx={{ fontWeight: 700 }}
             >
               {group.title}
-            </ListSubheader>,
+            </MenuItem>,
             ...group.pages.map((page) => (
               <MenuItem
                 key={page.slug}
                 component={Link}
-                href={`/guides/${page.slug}`}
+                href={guidePath(page.slug)}
                 onClick={() => setStatsMenu(null)}
                 sx={{ pl: 4 }}
               >

@@ -18,6 +18,6 @@ An ordinary ship draws all its slots from one list, so every class of one ship e
 
 Not measured yet. [Ship stats](/guides/ship-stats) holds ships found at class S and nothing else, so its numbers say nothing about an upgraded ship. A multitool's upgrade is measured, as [how to upgrade a multitool](/guides/multitool-upgrades) shows, but a ship's stats come from two rolls, so that rule does not tell us what happens here.
 
-So if the stats are what you want, find the ship at class S. If the slots are what you want, any class will do. Modules add on top of either, and [station upgrade modules](/guides/station-upgrades) says where class S ones are sold.
+So if the stats are what you want, find the ship at class S. If the slots are what you want, any class will do. Modules add on top of either, and [station technology merchants](/guides/technology-merchants) says where class S ones are sold.
 
 An upgrade fills the empty supercharged slots, and you cannot choose where they land. [Ship figures](/guides/ship-figures) shows where they fall.

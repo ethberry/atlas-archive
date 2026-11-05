@@ -18,4 +18,4 @@ The building makes no difference to the staff. It only changes how many there ar
 
 <!-- widget:classes -->
 
-That covers everything you carry in your hand. The next find is one you fly: [ship types](/guides/ship-types).
+That covers every tool you carry in your hand. What you plug into one, family by family, is on [multitool modules](/guides/multitool-modules).

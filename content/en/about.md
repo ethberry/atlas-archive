@@ -14,7 +14,7 @@ This site is an item finder for No Man's Sky. It lists three things, each with t
 - **[Crashed ships](/ship)** you can claim where they lie.
 - **[Creatures](/creature)** you can adopt, each with its [grades](/guides/creature-grades).
 
-The [guides](/guides) say where each kind of item comes from, from the galaxy down to the planet.<!-- finders --> The [Sentinel Interceptor finder](/interceptor-finder) and the [capital freighter finder](/capital-freighter-finder) give you a system with the ship you want.<!-- /finders --> Already holding one? [How lucky am I?](/how-lucky-am-i) scores it from 0 to 100.
+The [guides](/guides) say where each kind of item comes from, from the galaxy down to the planet.<!-- interceptor-finder --> The [Sentinel Interceptor builder](/interceptor-finder) shows every Interceptor the game can build, part by part.<!-- /interceptor-finder --><!-- capital-freighter-finder --> The [capital freighter finder](/capital-freighter-finder) gives you a system with the capital freighter you want.<!-- /capital-freighter-finder --> Already holding one? [How lucky am I?](/how-lucky-am-i) scores it from 0 to 100.
 
 Everything below turns on **supercharged slots**. A class S multitool or ship has four. A module in one of them is worth far more than the same module next door, and modules of one kind boost each other when they sit side by side. Put both effects together and the best build is a block of four adjacent supercharged slots, all one kind of technology. Scattered slots cannot do that, so where the four slots lie matters more than the class, the name, or the colour.
 
@@ -91,7 +91,7 @@ Ships are simpler. The same rule of sea level and slope comes first: a crashed s
 
 <!-- widget:shipFunnel -->
 
-Note the drop from adjacent to kept, across all the [ship types](/guides/ship-types). Wrecks of one system share a small set of layouts, so a system with one good ship tends to hold many copies of it: about {{wrecksPerShip}} adjacent wrecks for each ship we keep. Interceptors make up {{interceptorAll}} of wrecks and {{interceptorKept}} of what we keep, because each one has a layout of its own.<!-- finders --> The [Sentinel Interceptor finder](/interceptor-finder) gives a system by the parts you want.<!-- /finders -->
+Note the drop from adjacent to kept, across all the [ship types](/guides/ship-types). Wrecks of one system share a small set of layouts, so a system with one good ship tends to hold many copies of it: about {{wrecksPerShip}} adjacent wrecks for each ship we keep. Interceptors make up {{interceptorAll}} of wrecks and {{interceptorKept}} of what we keep, because each one has a layout of its own.<!-- interceptor-finder --> The [Sentinel Interceptor finder](/interceptor-finder) gives a system by the parts you want.<!-- /interceptor-finder -->
 
 <!-- widget:hulls -->
 

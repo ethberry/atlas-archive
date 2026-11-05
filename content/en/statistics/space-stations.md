@@ -24,4 +24,4 @@ The system's wealth, economy type, conflict level, and race change nothing a tec
 
 A pirate station's technology merchant shows {{pirateShown}} of {{pirateAll}} suspicious modules, and its black market sells Starshield Batteries and Suspicious Packets.
 
-The odds of each module at each class, and how rare a station that sells everything at S is, are on [station upgrade modules](/guides/station-upgrades).
+The odds of each module at each class, and how rare a station that sells everything at S is, are on [station technology merchants](/guides/technology-merchants).

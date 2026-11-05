@@ -2,7 +2,7 @@
 
 **Which ship types lie in wrecks?** Seven ship types, mostly four of them. Shuttles are {{shuttle}} of them, Haulers {{hauler}}, Fighters {{fighter}}, and Explorers {{explorer}}. Solars are {{solar}} and Interceptors {{interceptor}}. An Exotic is {{exoticOneIn}}.
 
-A wreck is not the only way. You can also buy a ship from its pilot wherever it lands: on a space station, on the pads of a trading post or a Colossal Archive, or out in the open on a planet. Pilots do not land at a shop.
+A wreck is not the only way. You can also buy a ship from its pilot wherever it lands: on a space station, on the pads of a trading post or a Colossal Archive, or out in the open on a planet. Pilots do not land at a shop.<!-- corvette --> A corvette is the ship you build yourself, and it takes [corvette modules](/guides/corvette-modules).<!-- /corvette -->
 
 What each ship type does best is under [ship stats](/guides/ship-stats).
 

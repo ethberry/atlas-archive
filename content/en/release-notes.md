@@ -1,5 +1,10 @@
 # Release notes
 
+## 6 November 2026: version 2.1
+
+- Added the modules of every item: what each upgrade module can raise at each class, and how often an install rolls each stat. They are on [multitool modules](/guides/multitool-modules), [starship modules](/guides/starship-modules), [exosuit modules](/guides/exosuit-modules), [freighter technology](/guides/freighter-technology), the modules of each exocraft from the [Roamer](/guides/roamer-modules) to the [Minotaur](/guides/minotaur-modules), and [supercharged slots](/guides/supercharged-slots), which says where each module goes.
+- [How lucky am I?](/how-lucky-am-i) now weighs supercharged slots by what their figure is worth in damage: a square above every other figure, and a T below.
+
 ## 5 November 2026: version 2.0
 
 - Added the [guides](/guides).

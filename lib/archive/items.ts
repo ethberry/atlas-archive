@@ -10,6 +10,8 @@ export type ItemClass = {
   stats: (Stat | null)[];
   adjacent: number;
   square: number;
+  // The share of each group of `figureTiers`, worst first.
+  figures: number[];
 };
 
 export type ItemRow = {
@@ -35,6 +37,9 @@ export const ITEMS = values as unknown as {
   staffHeads: string[];
   staffUpgraded: number[][];
   classRoll: [number, number][][][];
+  // The figures of four supercharged slots by what they are worth, worst first.
+  figureTiers: string[][];
+  figureShapes: { figure: string; cells: [number, number][] }[];
   card: {
     beamPoints: number;
     beamRate: number;

@@ -1,23 +1,23 @@
-# Sentinel Interceptor finder
+# Sentinel Interceptor builder
 
-**Where do you find a Sentinel Interceptor with the parts you want?** In a system that holds that form, because every Sentinel wreck of a system is built the same way. Pick the parts and a colour here, sign in, and you get the portal glyphs of one system in [Euclid](/galaxy/b7e59a53-13de-521b-af6b-dcbf6280eb9d).
+**What can a Sentinel Interceptor look like?** Any ship you can put together here. The builder holds every part the game can give an Interceptor, and every set of parts you pick, in every colour, is a ship the game builds somewhere.
 
 <!-- widget:finder -->
 
 ## How to use it
 
-Click a part of the ship and choose a variant. Leave a part alone and any variant will do. A part with an empty variant starts on it, so a ship shows no extras until you add them. A pick that does not fit the rest of the ship clears what it rules out, and a variant or a colour no ship can hold with your picks is switched off.
+Click a part of the ship or a name under it, then choose a variant. Some parts carry parts of their own: the Pod wing set carries its upper and lower wings, and the Fork its top and bottom trunks, so their names appear once you pick it. Wing set None leaves the hull bare. A part with an empty variant starts on it, so a ship shows no extras until you add them. When a variant has nothing of its own to show, the first part on it comes with it, so the ship never looks unchanged.
 
-The skirting under the hull comes in four shapes, each in black or light plates, and a frame hull can also go without it. Side fins along the skirting come black, light, or not at all.
+Every list of parts here is a fork of the game's own tree, and two parts that look the same on the ship are one variant. Plate shades tell the same plate apart in black, white, or Sentinel paint.
 
-The Carriage wing set comes as a Fork, with a plate or blades above and below it or neither, or as a Pod, with long or short wings above and below, plated or bare, and rings on top in place of the upper wings.
+Colour lies on two bands of the ship: the hull, which is the upper hull, the wing tops, and the closed wings, and the trim, which is the padded top of the cockpit, the edges and tips of the wings, and the light skirting. Pick the scheme first: Sentinel orange, a colour with white trim, black with colour trim, or two colours, one on the hull and one on the trim. Then pick the colour of each band the scheme leaves open. The palette is the game's own: the 64 colours it paints an Interceptor with, in its order, eight rows of eight, so a pale teal or an amber looks on the builder as it does in the game. The black panels and engines are the same on every Interceptor.
 
-Colour lies on two bands of the ship: the hull, which is the upper hull, the wing tops, and the closed wings, and the trim, which is the padded top of the cockpit, the edges and tips of the wings, and the light skirting. Pick the scheme first: Sentinel orange, a colour with white trim, black with colour trim, or two colours, one on the hull and one on the trim. Then pick the colour of each band the scheme leaves open, by family: white, orange, yellow, red, blue, or green. The black panels and engines are the same on every Interceptor. Then press the button for one system.
+## How many Interceptors there are
 
-The answer is the portal address of a dissonant planet in a low [wealth](/guides/economy) system, so the ship has your form and colour, but no wreck there is class S. Crashed [Interceptors](/guides/interceptors) lie only on such planets, and [Sentinels and dissonance](/guides/sentinels-and-dissonance) explains what waits for you there.
+The game builds a Sentinel Interceptor from 80 choices of parts, and every one of them is here: 297,278,208 different ships, each in 3,721 colour schemes, over a trillion in all. We could look for a system for each of them and give you its portal glyphs. We don't, because most of those ships differ only in a cockpit light, an antenna, or the shade of a plate you will not tell apart standing next to the wreck, and a list with one system for each would run to terabytes.
 
-## What stays the same in a system
+## Where to find one
 
-The shape of the ship is the same on every wreck of a system. Its name, its class, and its supercharged slots change from wreck to wreck, so keep looking if the first one is not the one you want. [Ship classes](/guides/ship-classes) shows which class you can expect, [ship stats](/guides/ship-stats) what a claimed Interceptor can do, and [the square on a ship](/guides/ship-square) how rare a square of supercharged slots is. The [crashed ships](/ship) in the catalog come with their portal glyphs.
+Every Sentinel wreck of a system shows the same ship: the same parts and the same colours. Its name, its class, and its supercharged slots change from wreck to wreck. Crashed [Interceptors](/guides/interceptors) lie only on dissonant planets, and [Sentinels and dissonance](/guides/sentinels-and-dissonance) explains what waits for you there. [Ship classes](/guides/ship-classes) shows which class you can expect, [ship stats](/guides/ship-stats) what a claimed Interceptor can do, and [the square on a ship](/guides/ship-square) how rare a square of supercharged slots is. The [crashed ships](/ship) in the catalog come with their portal glyphs.
 
-Freighters have their own search: the [capital freighter finder](/capital-freighter-finder) gives a system by the shape of the freighter its space battle saves, and the [freighter finder](/freighter-finder) shows the shapes of regular freighters. Once you claim one, [How lucky am I?](/how-lucky-am-i) scores your ship.
+Freighters have their own pages: the [capital freighter finder](/capital-freighter-finder) gives a system by the shape of the freighter its space battle saves, and the [freighter finder](/freighter-finder) shows the shapes of regular freighters. Once you claim one, [How lucky am I?](/how-lucky-am-i) scores your ship.

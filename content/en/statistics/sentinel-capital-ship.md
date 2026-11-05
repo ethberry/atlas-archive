@@ -28,4 +28,4 @@ The big balls hanging under its hull are cargo. Shoot the balls and each one spi
 
 You can also just leave. Every warp into a system sets the wanted level back to zero.
 
-The ships of the sky end here. Below them wait the planets, and the first thing to read is their size: [sources by planet size](/guides/sources-by-size).
+The capital ships of the sky end here. What your own freighter plugs into its slots, and who gives each module, is on [freighter technology](/guides/freighter-technology).

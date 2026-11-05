@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import MuiLink from "@mui/material/Link";
+import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 
@@ -22,8 +23,50 @@ import {
   SentinelShields,
 } from "@/components/archive/ShipRender";
 import { GUIDE_MENU as statisticsMenu } from "@/lib/archive/features";
+import { groupPath, guidePath } from "@/lib/archive/guides";
 import type { StatTable, Topic } from "@/lib/archive/statistics";
 import type { ChartSpec } from "@/lib/archive/chart-spec";
+
+const TILE = 44;
+
+// A module's picture from the game, then its name: one tile of the page's
+// sprite, framed as an inventory slot. A row with no picture keeps the room,
+// so the names stay in one column.
+function iconCell(
+  cell: string,
+  tile: number | null | undefined,
+  sprite: { src: string; columns: number },
+) {
+  return (
+    <Stack
+      key="icon"
+      direction="row"
+      spacing={1.5}
+      sx={{ alignItems: "center", minHeight: 52 }}
+    >
+      {tile === null || tile === undefined ? (
+        <Box sx={{ width: TILE + 4, height: TILE + 4, flexShrink: 0 }} />
+      ) : (
+        <Box
+          role="img"
+          aria-hidden
+          sx={{
+            width: TILE,
+            height: TILE,
+            flexShrink: 0,
+            boxSizing: "content-box",
+            border: "2px solid #fff",
+            boxShadow: "0 0 0 1px rgba(0, 0, 0, 0.35)",
+            backgroundImage: `url(${sprite.src})`,
+            backgroundSize: `${sprite.columns * TILE}px auto`,
+            backgroundPosition: `-${(tile % sprite.columns) * TILE}px -${Math.floor(tile / sprite.columns) * TILE}px`,
+          }}
+        />
+      )}
+      <Typography variant="body2">{cell}</Typography>
+    </Stack>
+  );
+}
 
 function galaxyCell(cell: string) {
   const [name, ...rest] = cell.split(" ");
@@ -62,19 +105,27 @@ function StatisticsTable(props: { table: StatTable; noted?: boolean }) {
                   spacing={1.5}
                   sx={{ alignItems: "center", minHeight: 52 }}
                 >
-                  <CellMark cells={table.marks[index]} />
+                  <CellMark
+                    cells={table.marks[index]}
+                    accent={table.accents?.[index]}
+                  />
                   {row[0] ? (
                     <Typography variant="body2">{row[0]}</Typography>
                   ) : null}
                 </Stack>,
                 ...row.slice(1),
               ]
-            : table.head[0] === "Galaxy"
-              ? [galaxyCell(row[0]), ...row.slice(1)]
-              : row,
+            : table.icons && table.sprite
+              ? [
+                  iconCell(row[0], table.icons[index], table.sprite),
+                  ...row.slice(1),
+                ]
+              : table.head[0] === "Galaxy"
+                ? [galaxyCell(row[0]), ...row.slice(1)]
+                : row,
         }))}
       />
-      {noted ? <TableNote note={table.note} /> : null}
+      {noted && table.note ? <TableNote note={table.note} /> : null}
     </Stack>
   );
 }
@@ -128,23 +179,52 @@ export function TopicScreen(props: {
   );
 }
 
-export function TopicList(props: { topics: Topic[] }) {
+// The guides of each group with the question and the short answer of each.
+// The guides page lists every group under a link to the group's own page; a
+// group's page lists its own guides alone, under its title.
+export function TopicList(props: {
+  topics: Topic[];
+  questions: Record<string, string | undefined>;
+  group?: string;
+}) {
   const factOf = new Map(props.topics.map((row) => [row.slug, row.fact]));
+  const groups = statisticsMenu.filter(
+    (group) => !props.group || group.slug === props.group,
+  );
   return (
     <Stack spacing={3} sx={{ maxWidth: 760 }}>
-      {statisticsMenu.map((group) => (
-        <Stack key={group.title} spacing={1.5}>
-          <Typography variant="h4">{group.title}</Typography>
+      {groups.map((group) => (
+        <Stack key={group.slug} spacing={1.5}>
+          {props.group ? (
+            <Typography variant="h3" component="h1">
+              {group.title}
+            </Typography>
+          ) : (
+            <MuiLink
+              component={Link}
+              href={groupPath(group.slug)}
+              variant="h4"
+              underline="hover"
+              color="text.primary"
+            >
+              {group.title}
+            </MuiLink>
+          )}
           <Stack component="ul" spacing={2} sx={{ p: 0, m: 0 }}>
             {group.pages.map((page) => (
               <Stack key={page.slug} component="li" sx={{ listStyle: "none" }}>
                 <MuiLink
                   component={Link}
-                  href={`/guides/${page.slug}`}
+                  href={guidePath(page.slug)}
                   variant="h6"
                 >
                   {page.title}
                 </MuiLink>
+                {props.questions[page.slug] && (
+                  <Typography variant="body2" sx={{ fontWeight: 700 }}>
+                    {props.questions[page.slug]}
+                  </Typography>
+                )}
                 <Typography variant="body2" color="text.secondary">
                   {factOf.get(page.slug)}
                 </Typography>

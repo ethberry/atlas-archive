@@ -13,6 +13,7 @@ import { ArchiveBar } from "@/components/archive/ArchiveBar";
 import { PAGE_KINDS } from "@/lib/archive/kinds";
 import { GUIDE_MENU as statisticsMenu } from "@/lib/archive/features";
 import { TOOLS } from "@/lib/archive/tools";
+import { groupPath } from "@/lib/archive/guides";
 
 type Column = { title: ReactNode; links: { href: string; label: ReactNode }[] };
 
@@ -38,11 +39,11 @@ const COLUMNS: Column[] = [
       label: <FormattedMessage id={`kinds.${kind}`} />,
     })),
   },
-  // One link a group of guides, to its first page.
+  // One link a group of guides, to the group's own page.
   {
     title: <FormattedMessage id="archive.statistics" />,
     links: statisticsMenu.map((group) => ({
-      href: `/guides/${group.pages[0].slug}`,
+      href: groupPath(group.slug),
       label: group.title,
     })),
   },

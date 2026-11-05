@@ -17,7 +17,7 @@ import Link from "next/link";
 import { DonationBlock } from "@/components/archive/DonationBlock";
 import { LikeButton } from "@/components/archive/LikeButton";
 import { link } from "@/components/archive/RecordNote";
-import { FINDERS_ENABLED } from "@/lib/archive/features";
+import { FINDER_MESSAGE } from "@/lib/archive/features";
 import {
   readFeed,
   type CatalogRow,
@@ -52,9 +52,7 @@ export function HomeScreen(props: { confession: string }) {
         </Typography>
         <Typography color="text.secondary">
           <FormattedMessage
-            id={
-              FINDERS_ENABLED ? "archive.homeLeadFinders" : "archive.homeLead"
-            }
+            id={`archive.homeLead${FINDER_MESSAGE}`}
             values={LEAD}
           />
         </Typography>

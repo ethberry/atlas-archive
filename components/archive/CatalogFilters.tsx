@@ -12,7 +12,7 @@ import Select from "@mui/material/Select";
 import Stack from "@mui/material/Stack";
 import TextField from "@mui/material/TextField";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { Controller, useForm, type Control } from "react-hook-form";
 import { FormattedMessage, useIntl } from "react-intl";
 
 import {
@@ -41,7 +41,9 @@ function CatalogFiltersForm(props: { pathname: string; query: CatalogQuery }) {
   const router = useRouter();
   const intl = useIntl();
   const fields = filtersFor(query.kinds);
-  const [draft, setDraft] = useState(query);
+  const { control, getValues, handleSubmit } = useForm<CatalogQuery>({
+    defaultValues: query,
+  });
 
   function submit(next: CatalogQuery) {
     const cleared = { ...next, page: 1 };
@@ -50,33 +52,31 @@ function CatalogFiltersForm(props: { pathname: string; query: CatalogQuery }) {
   }
 
   return (
-    <Stack
-      component="form"
-      spacing={2}
-      onSubmit={(event) => {
-        event.preventDefault();
-        submit(draft);
-      }}
-    >
-      <TextField
-        value={draft.name}
-        onChange={(event) => setDraft({ ...draft, name: event.target.value })}
-        label={intl.formatMessage({ id: "archive.name" })}
-        fullWidth
-        slotProps={{
-          input: {
-            endAdornment: (
-              <InputAdornment position="end">
-                <IconButton
-                  type="submit"
-                  aria-label={intl.formatMessage({ id: "archive.search" })}
-                >
-                  <SearchIcon />
-                </IconButton>
-              </InputAdornment>
-            ),
-          },
-        }}
+    <Stack component="form" spacing={2} onSubmit={handleSubmit(submit)}>
+      <Controller
+        name="name"
+        control={control}
+        render={({ field }) => (
+          <TextField
+            {...field}
+            label={intl.formatMessage({ id: "archive.name" })}
+            fullWidth
+            slotProps={{
+              input: {
+                endAdornment: (
+                  <InputAdornment position="end">
+                    <IconButton
+                      type="submit"
+                      aria-label={intl.formatMessage({ id: "archive.search" })}
+                    >
+                      <SearchIcon />
+                    </IconButton>
+                  </InputAdornment>
+                ),
+              },
+            }}
+          />
+        )}
       />
       {fields.length > 0 ? (
         <Stack
@@ -89,12 +89,9 @@ function CatalogFiltersForm(props: { pathname: string; query: CatalogQuery }) {
             <FilterControl
               key={field.param}
               field={field}
-              query={draft}
+              control={control}
               // A list or a box applies at once; the name waits for Enter.
-              onChange={(next) => {
-                setDraft(next);
-                submit(next);
-              }}
+              onApply={() => submit(getValues())}
             />
           ))}
         </Stack>
@@ -105,53 +102,67 @@ function CatalogFiltersForm(props: { pathname: string; query: CatalogQuery }) {
 
 function FilterControl(props: {
   field: FilterField;
-  query: CatalogQuery;
-  onChange: (query: CatalogQuery) => void;
+  control: Control<CatalogQuery>;
+  onApply: () => void;
 }) {
-  const { field, query, onChange } = props;
+  const { field, control, onApply } = props;
   const intl = useIntl();
   if (field.type === "check") {
     return (
-      <FormControlLabel
-        control={
-          <Checkbox
-            checked={query[field.param]}
-            onChange={(event) =>
-              onChange({ ...query, [field.param]: event.target.checked })
+      <Controller
+        name={field.param}
+        control={control}
+        render={({ field: input }) => (
+          <FormControlLabel
+            control={
+              <Checkbox
+                checked={input.value}
+                onChange={(event) => {
+                  input.onChange(event.target.checked);
+                  onApply();
+                }}
+              />
             }
+            label={<FormattedMessage id={`archive.${field.param}`} />}
           />
-        }
-        label={<FormattedMessage id={`archive.${field.param}`} />}
+        )}
       />
     );
   }
   const label = intl.formatMessage({ id: `archive.${field.param}` });
   return (
-    <FormControl sx={{ minWidth: 180 }} size="small">
-      <InputLabel id={`${field.param}-label`} shrink>
-        {label}
-      </InputLabel>
-      <Select
-        labelId={`${field.param}-label`}
-        label={label}
-        value={query[field.param]}
-        displayEmpty
-        onChange={(event) =>
-          onChange({ ...query, [field.param]: event.target.value })
-        }
-      >
-        <MenuItem value="">
-          <FormattedMessage id="archive.any" />
-        </MenuItem>
-        {field.options.map((option) => (
-          <MenuItem key={option} value={option}>
-            <FormattedMessage
-              id={`${field.group}.${option}`}
-              defaultMessage={option}
-            />
-          </MenuItem>
-        ))}
-      </Select>
-    </FormControl>
+    <Controller
+      name={field.param}
+      control={control}
+      render={({ field: input }) => (
+        <FormControl sx={{ minWidth: 180 }} size="small">
+          <InputLabel id={`${field.param}-label`} shrink>
+            {label}
+          </InputLabel>
+          <Select
+            labelId={`${field.param}-label`}
+            label={label}
+            value={input.value}
+            displayEmpty
+            onChange={(event) => {
+              input.onChange(event.target.value);
+              onApply();
+            }}
+          >
+            <MenuItem value="">
+              <FormattedMessage id="archive.any" />
+            </MenuItem>
+            {field.options.map((option) => (
+              <MenuItem key={option} value={option}>
+                <FormattedMessage
+                  id={`${field.group}.${option}`}
+                  defaultMessage={option}
+                />
+              </MenuItem>
+            ))}
+          </Select>
+        </FormControl>
+      )}
+    />
   );
 }

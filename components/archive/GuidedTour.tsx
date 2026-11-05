@@ -11,7 +11,7 @@ import Typography from "@mui/material/Typography";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { FormattedMessage } from "react-intl";
 
-import { FINDERS_ENABLED } from "@/lib/archive/features";
+import { FINDER_MESSAGE } from "@/lib/archive/features";
 
 const SEEN = "atlas-tour-about";
 const CRAWLER = /bot|crawl|spider|slurp/i;
@@ -210,7 +210,7 @@ export function GuidedTour() {
                 </Typography>
                 <Typography id={textId} variant="body2">
                   <FormattedMessage
-                    id={`archive.tour${step.id}${FINDERS_ENABLED && step.id === "Tools" ? "Finders" : ""}`}
+                    id={`archive.tour${step.id}${step.id === "Tools" ? FINDER_MESSAGE : ""}`}
                   />
                   {usesMenu ? (
                     <>
