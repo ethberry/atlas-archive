@@ -1,8 +1,8 @@
 # Nautilon modules
 
-**What can a Nautilon upgrade module raise?** The submarine has two families, from C to S: an S-Class Humboldt Drive upgrade raises all three of its stats. The land exocraft each have a page: the [Roamer](/guides/roamer-modules), [Nomad](/guides/nomad-modules), [Pilgrim](/guides/pilgrim-modules), and [Colossus](/guides/colossus-modules).
+**What can a Nautilon upgrade module raise?** The submarine has two families, from C to S: the Humboldt Drive and the Nautilon Cannon, and an S-Class Humboldt Drive upgrade raises all three of its stats.
 
-Each stat reads as the module's card prints it.
+Each stat reads as the module's card prints it. The land exocraft share a set of their own, with a page each: the [Roamer](/guides/roamer-modules), [Nomad](/guides/nomad-modules), [Pilgrim](/guides/pilgrim-modules), and [Colossus](/guides/colossus-modules).
 
 ## Every Nautilon module
 
@@ -10,7 +10,7 @@ Each stat reads as the module's card prints it.
 
 ## Supercharged slots
 
-The Nautilon has three supercharged slots, and they stand in the same places for every player: slot 5 of the top row, slot 2 of the middle row, slot 8 of the bottom row, counting from the left. There is nothing to roll. None of the three touches another, and the Nautilon has only two kinds of upgrade module: give one slot to the Humboldt Drive and one to the Nautilon Cannon, set the rest of each kind and its own technology around it, touching, and give the third slot to one more module of the kind you use most. Standing apart, that module loses the bonus of touching its own kind but keeps the supercharge, which is worth more.
+The Nautilon has three supercharged slots, and they stand in the same places for every player: slot 5 of the top row, slot 2 of the middle row, slot 8 of the bottom row, counting from the left. There is nothing to roll. None of the three is adjacent to another, and the Nautilon has only two kinds of upgrade module: give one slot to the Humboldt Drive and one to the Nautilon Cannon, set the rest of each kind and its own technology around it, adjacent, and give the third slot to one more module of the kind you use most. Standing apart, that module loses the adjacency bonus of its own kind but keeps the supercharge, which is worth more.
 
 ## Upgrade modules
 

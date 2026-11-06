@@ -30,6 +30,10 @@ const COLUMNS: Column[] = [
         href: "/release-notes",
         label: <FormattedMessage id="archive.releaseNotes" />,
       },
+      {
+        href: "/game-bugs",
+        label: <FormattedMessage id="archive.gameBugs" />,
+      },
     ],
   },
   {

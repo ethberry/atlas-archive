@@ -34,4 +34,10 @@ Lists run about the same length on most types, with a median of {{lushMedian}} o
 
 <!-- widget:lists -->
 
+## Two bodies, one species
+
+We have seen two species of [mechanical creatures](/guides/creature-affinity) show two bodies each, under one name and with one set of grades. The Gender line changes with the body, and so do base weight and height. The game picks those three by the body, so they follow it, and no gender decides a body. The name and the grades never look at the body.
+
+Both are the same kind of walking machine. How a body gets picked, and whether other kinds do the same, is not known.
+
 Every creature on a list rolls three grades, and [creature grades](/guides/creature-grades) shows where the best ones turn up.

@@ -2,7 +2,7 @@
   "numbers": {
     "census": { "k": "count", "v": 63360 },
     "systems": { "k": "count", "v": 63360 },
-    "topics": "48",
+    "topics": "52",
     "voxels": "1056"
   },
   "order": [
@@ -17,29 +17,8 @@
     "sources-by-type",
     "empty-worlds",
     "sentinels-and-dissonance",
-    "freighters",
-    "dreadnoughts",
-    "freighter-modules",
-    "frigates",
-    "organic-frigates",
-    "sentinel-capital-ship",
-    "freighter-technology",
-    "ship-types",
-    "ship-classes",
-    "ship-stats",
-    "ship-upgrades",
-    "ship-figures",
-    "ship-square",
-    "interceptors",
-    "living-ships",
-    "starship-modules",
-    "corvette-modules",
-    "roamer-modules",
-    "nomad-modules",
-    "pilgrim-modules",
-    "colossus-modules",
-    "nautilon-modules",
-    "minotaur-modules",
+    "fishing",
+    "excavation-finds",
     "multitool-types",
     "multitool-classes",
     "multitool-stats",
@@ -49,13 +28,1752 @@
     "supercharged-slots",
     "staffs",
     "multitool-modules",
+    "ship-types",
+    "ship-classes",
+    "ship-stats",
+    "ship-upgrades",
+    "ship-figures",
+    "ship-square",
+    "interceptors",
+    "living-ships",
+    "starship-modules",
+    "corvettes",
+    "corvette-modules",
+    "freighters",
+    "dreadnoughts",
+    "freighter-modules",
+    "frigates",
+    "organic-frigates",
+    "sentinel-capital-ship",
+    "freighter-technology",
     "exosuit-modules",
+    "roamer-modules",
+    "nomad-modules",
+    "pilgrim-modules",
+    "colossus-modules",
+    "nautilon-modules",
+    "minotaur-modules",
     "creature-roles",
     "creature-grades",
     "creature-stats",
-    "creature-affinity"
+    "creature-affinity",
+    "battle-moves"
   ],
   "pages": {
+    "battle-moves": {
+      "fact": "A creature holds five battle moves. Once each stat reaches level 10, a gene edit rerolls one slot, and the reroll never gives back the move it replaces.",
+      "numbers": {
+        "battleWins": { "k": "plain", "v": 220 },
+        "challengerPellet": { "k": "share", "v": 0.03 },
+        "challengers": { "k": "plain", "v": 3 },
+        "championPellet": { "k": "share", "v": 0.6 },
+        "championWins": { "k": "plain", "v": 60 },
+        "dailyPellet": { "k": "share", "v": 0.75 },
+        "dailyWins": { "k": "plain", "v": 30 },
+        "eggHours": { "k": "plain", "v": 24 },
+        "eggMood": { "k": "share", "v": 0.1000000015 },
+        "firstEdit": { "k": "plain", "v": 350 },
+        "fullPotential": { "k": "plain", "v": 30 },
+        "growDays": { "k": "plain", "v": 3.5 },
+        "hatchHours": { "k": "plain", "v": 24 },
+        "hatchMedal": { "k": "plain", "v": 30 },
+        "lastEdit": { "k": "plain", "v": 1250 },
+        "lastFrom": { "k": "plain", "v": 29 },
+        "moves": { "k": "plain", "v": 57 },
+        "ownHit": { "k": "share", "v": 0.7446808494 },
+        "statCap": { "k": "plain", "v": 10 },
+        "stationPellet": { "k": "share", "v": 0.08 }
+      },
+      "tables": {
+        "edits": {
+          "head": ["Gene edit", "Mutation progress"],
+          "kinds": ["plain", "plain"],
+          "note": "Each edit counts every edit earned before it, spent or not.",
+          "rows": [
+            [
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 1 },
+                  { "k": "plain", "v": 2 }
+                ]
+              },
+              350
+            ],
+            [3, 400],
+            [4, 450],
+            [
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 5 },
+                  { "k": "plain", "v": 11 }
+                ]
+              },
+              500
+            ],
+            [
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 12 },
+                  { "k": "plain", "v": 18 }
+                ]
+              },
+              650
+            ],
+            [
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 19 },
+                  { "k": "plain", "v": 25 }
+                ]
+              },
+              800
+            ],
+            [
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 26 },
+                  { "k": "plain", "v": 28 }
+                ]
+              },
+              950
+            ],
+            [{ "t": "{0} and on", "v": [{ "k": "plain", "v": 29 }] }, 1250]
+          ]
+        },
+        "kits": {
+          "head": [
+            "Creature",
+            "Slot 1",
+            "Slot 2",
+            "Slot 3",
+            "Slot 4",
+            "Slot 5"
+          ],
+          "kinds": ["text", "text", "text", "text", "text", "text"],
+          "note": "Species that always hold the same five moves.",
+          "rows": [
+            [
+              "Geno-Prawn",
+              "Hit and wound",
+              "Lower accuracy",
+              "Lower damage",
+              "Heal",
+              "Trap"
+            ],
+            [
+              "Wandering Shrimp Tank",
+              "Hit both",
+              "Self-wounding hit",
+              "Purge",
+              "Sacrifice for defence",
+              "Absorbing barrier"
+            ],
+            [
+              "Corrupted Quadruped",
+              "Hit",
+              "Reset",
+              "Raise dodge",
+              "Stun",
+              "Ramping hit"
+            ],
+            [
+              "Boundary Horror",
+              "Hit on its agility",
+              "Raise agility",
+              "Shield",
+              "Barrage",
+              "Burst of speed"
+            ],
+            [
+              "Aeron Crab",
+              "Hit",
+              "Multi-turn hit",
+              "Cleanse",
+              "Change affinity",
+              "Shield"
+            ]
+          ],
+          "text": 6
+        },
+        "medals": {
+          "head": ["Medal", "Counts", "For the egg", "Top rank", "Egg"],
+          "kinds": ["text", "text", "plain", "text", "text"],
+          "note": "The Arena League Rewards Iteration: Oceanus hands out, each free at the top rank of its medal.",
+          "rows": [
+            [
+              "Apex Companions",
+              "Creatures at full potential",
+              20,
+              "Morphogeneticist",
+              "Boundary Horror"
+            ],
+            [
+              "Iteration: Oceanus",
+              "Daily challenges won",
+              30,
+              "Grandmaster",
+              "Wandering Shrimp Tank"
+            ],
+            [
+              "Hatch Eggs",
+              "Eggs hatched",
+              30,
+              "Egg Expert",
+              "Corrupted Quadruped"
+            ],
+            [
+              "Champions Defeated",
+              "System champions beaten",
+              60,
+              "Galactic Champion",
+              "Aeron Crab"
+            ],
+            [
+              "Holo-Arena Victories",
+              "Battles won",
+              220,
+              "Gold Crest",
+              "Geno-Prawn"
+            ]
+          ],
+          "text": 2
+        },
+        "moves1": {
+          "head": [
+            "Move",
+            "What it does",
+            "Chance",
+            "On a mutation",
+            "Cooldown"
+          ],
+          "kinds": ["text", "text", "share", "text", "plain"],
+          "note": "Chance is the draw of a new creature. A mutation skips the move the slot holds, so its chance depends on that move. Cooldown in turns.",
+          "rows": [
+            [
+              "Hit",
+              "One hit of the creature's own affinity.",
+              0.7446808494,
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "share", "v": 0.7608695637 },
+                  { "k": "share", "v": 0.8333333313 }
+                ]
+              },
+              0
+            ],
+            [
+              "Physical hit",
+              "One physical hit, strong and weak against nothing.",
+              0.1063829785,
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "share", "v": 0.108695652 },
+                  { "k": "share", "v": 0.416666663 }
+                ]
+              },
+              0
+            ],
+            [
+              "Frost hit",
+              "One Frost hit, whatever the creature's own affinity.",
+              0.02127659601,
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "share", "v": 0.02173913072 },
+                  { "k": "share", "v": 0.08333333385 }
+                ]
+              },
+              0
+            ],
+            [
+              "Fire hit",
+              "One Fire hit, whatever the creature's own affinity.",
+              0.02127659601,
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "share", "v": 0.02173913072 },
+                  { "k": "share", "v": 0.08333333385 }
+                ]
+              },
+              0
+            ],
+            [
+              "Desert hit",
+              "One Desert hit, whatever the creature's own affinity.",
+              0.02127659601,
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "share", "v": 0.02173913072 },
+                  { "k": "share", "v": 0.08333333385 }
+                ]
+              },
+              0
+            ],
+            [
+              "Tropical hit",
+              "One Tropical hit, whatever the creature's own affinity.",
+              0.02127659601,
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "share", "v": 0.02173913072 },
+                  { "k": "share", "v": 0.08333333385 }
+                ]
+              },
+              0
+            ],
+            [
+              "Anomalous hit",
+              "One Anomalous hit, whatever the creature's own affinity.",
+              0.02127659601,
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "share", "v": 0.02173913072 },
+                  { "k": "share", "v": 0.08333333385 }
+                ]
+              },
+              0
+            ],
+            [
+              "Radioactive hit",
+              "One Radioactive hit, whatever the creature's own affinity.",
+              0.02127659601,
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "share", "v": 0.02173913072 },
+                  { "k": "share", "v": 0.08333333385 }
+                ]
+              },
+              0
+            ],
+            [
+              "Toxic hit",
+              "One Toxic hit, whatever the creature's own affinity.",
+              0.02127659601,
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "share", "v": 0.02173913072 },
+                  { "k": "share", "v": 0.08333333385 }
+                ]
+              },
+              0
+            ]
+          ],
+          "text": 2
+        },
+        "moves2": {
+          "head": [
+            "Move",
+            "What it does",
+            "Chance",
+            "On a mutation",
+            "Cooldown"
+          ],
+          "kinds": ["text", "text", "share", "text", "text"],
+          "note": "Chance is the draw of a new creature. A mutation skips the move the slot holds, so its chance depends on that move. Cooldown in turns.",
+          "rows": [
+            [
+              "Barrage",
+              "Three hits of its own affinity in one turn, each heavier than the last.",
+              0.2303263007,
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "share", "v": 0.2348336647 },
+                  { "k": "share", "v": 0.2850356347 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 1 },
+                  { "k": "plain", "v": 2 }
+                ]
+              }
+            ],
+            [
+              "Hit and wound",
+              "A hit of its own affinity, then more damage of it at the start of the next turns.",
+              0.1919385763,
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "share", "v": 0.1956947128 },
+                  { "k": "share", "v": 0.249376556 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 1 },
+                  { "k": "plain", "v": 2 }
+                ]
+              }
+            ],
+            [
+              "Multi-turn hit",
+              "Hits of its own affinity on three turns in a row, heavier each turn.",
+              0.1439539322,
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "share", "v": 0.1467710346 },
+                  { "k": "share", "v": 0.187032417 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 3 },
+                  { "k": "plain", "v": 5 }
+                ]
+              }
+            ],
+            [
+              "Ramping hit",
+              "A hit of its own affinity that grows each time it is used.",
+              0.1343570011,
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "share", "v": 0.1369862967 },
+                  { "k": "share", "v": 0.1745635862 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 0 },
+                  { "k": "plain", "v": 1 }
+                ]
+              }
+            ],
+            [
+              "Wild charge",
+              "A physical hit with an extra half chance to miss, as the wild hit.",
+              0.1266794654,
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "share", "v": 0.1291585156 },
+                  { "k": "share", "v": 0.1645885335 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 1 },
+                  { "k": "plain", "v": 2 }
+                ]
+              }
+            ],
+            [
+              "Hit on their agility",
+              "A hit of its own affinity that grows with the enemy's agility.",
+              0.05758157519,
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "share", "v": 0.05870841619 },
+                  { "k": "share", "v": 0.07481296976 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 1 },
+                  { "k": "plain", "v": 2 }
+                ]
+              }
+            ],
+            [
+              "Hit on its agility",
+              "A hit of its own affinity that grows with its own agility.",
+              0.05758157519,
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "share", "v": 0.05870841619 },
+                  { "k": "share", "v": 0.07481296976 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 1 },
+                  { "k": "plain", "v": 2 }
+                ]
+              }
+            ],
+            [
+              "Physical hit and wound",
+              "A physical hit, then more physical damage at the start of the next turns.",
+              0.03838771584,
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "share", "v": 0.03913894315 },
+                  { "k": "share", "v": 0.04987531193 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 1 },
+                  { "k": "plain", "v": 2 }
+                ]
+              }
+            ],
+            [
+              "Wild hit",
+              "A physical hit with an extra half chance to miss.",
+              0.01919385792,
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "share", "v": 0.01996007979 },
+                  { "k": "share", "v": 0.02493765597 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 1 },
+                  { "k": "plain", "v": 2 }
+                ]
+              }
+            ]
+          ],
+          "text": 2
+        },
+        "moves3": {
+          "head": [
+            "Move",
+            "What it does",
+            "Chance",
+            "On a mutation",
+            "Cooldown"
+          ],
+          "kinds": ["text", "text", "share", "share", "plain"],
+          "note": "Chance is the draw of a new creature. A mutation skips the move the slot holds, so its chance depends on that move. Cooldown in turns.",
+          "rows": [
+            [
+              "Wound",
+              "Damage of its own affinity at the start of each turn for a few turns.",
+              0.09090909091,
+              0.1,
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 1 },
+                  { "k": "plain", "v": 3 }
+                ]
+              }
+            ],
+            [
+              "Delayed blast",
+              "Damage of its own affinity that lands three turns later.",
+              0.09090909091,
+              0.1,
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 3 },
+                  { "k": "plain", "v": 4 }
+                ]
+              }
+            ],
+            [
+              "Reckless hit, crit",
+              "A hit that seldom misses, but the enemy's critical hit chance rises.",
+              0.09090909091,
+              0.1,
+              2
+            ],
+            [
+              "Reckless hit, damage",
+              "A hit that seldom misses, but the enemy's damage rises.",
+              0.09090909091,
+              0.1,
+              2
+            ],
+            [
+              "Reckless hit, heal",
+              "A hit that seldom misses, but the enemy heals over the next turns.",
+              0.09090909091,
+              0.1,
+              2
+            ],
+            [
+              "Self-wounding hit",
+              "A hit that seldom misses, and damage over time on itself.",
+              0.09090909091,
+              0.1,
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 3 },
+                  { "k": "plain", "v": 5 }
+                ]
+              }
+            ],
+            [
+              "Hit both",
+              "Hits the enemy and itself.",
+              0.09090909091,
+              0.1,
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 3 },
+                  { "k": "plain", "v": 5 }
+                ]
+              }
+            ],
+            [
+              "Ticking wound",
+              "Damage of its own affinity that bursts four turns later.",
+              0.09090909091,
+              0.1,
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 3 },
+                  { "k": "plain", "v": 4 }
+                ]
+              }
+            ],
+            [
+              "Purge",
+              "Removes the enemy's good effects.",
+              0.09090909091,
+              0.1,
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 2 },
+                  { "k": "plain", "v": 3 }
+                ]
+              }
+            ],
+            [
+              "Charged hit",
+              "Lowers its own damage reduction for a turn, then hits twice as hard.",
+              0.09090909091,
+              0.1,
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 3 },
+                  { "k": "plain", "v": 5 }
+                ]
+              }
+            ],
+            [
+              "Powered hit",
+              "Raises its own damage over two turns, then hits twice as hard.",
+              0.09090909091,
+              0.1,
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 2 },
+                  { "k": "plain", "v": 4 }
+                ]
+              }
+            ]
+          ],
+          "text": 2
+        },
+        "moves4": {
+          "head": [
+            "Move",
+            "What it does",
+            "Chance",
+            "On a mutation",
+            "Cooldown"
+          ],
+          "kinds": ["text", "text", "share", "text", "text"],
+          "note": "Chance is the draw of a new creature. A mutation skips the move the slot holds, so its chance depends on that move. Cooldown in turns.",
+          "rows": [
+            [
+              "Delayed heal",
+              "Heals itself three turns later.",
+              0.1773049612,
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "share", "v": 0.1883239139 },
+                  { "k": "share", "v": 0.2155172365 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 1 },
+                  { "k": "plain", "v": 3 }
+                ]
+              }
+            ],
+            [
+              "Heal",
+              "Heals itself at once.",
+              0.1773049612,
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "share", "v": 0.1883239139 },
+                  { "k": "share", "v": 0.2155172365 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 1 },
+                  { "k": "plain", "v": 3 }
+                ]
+              }
+            ],
+            [
+              "Heal over time",
+              "Heals itself at the end of each turn for a few turns.",
+              0.1773049612,
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "share", "v": 0.1883239139 },
+                  { "k": "share", "v": 0.2155172365 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 1 },
+                  { "k": "plain", "v": 4 }
+                ]
+              }
+            ],
+            [
+              "Cleanse",
+              "Removes its own bad effects.",
+              0.1170212791,
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "share", "v": 0.1242937881 },
+                  { "k": "share", "v": 0.1422413817 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 1 },
+                  { "k": "plain", "v": 2 }
+                ]
+              }
+            ],
+            [
+              "Absorb",
+              "For a few turns part of the damage it takes heals it.",
+              0.05851063953,
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "share", "v": 0.06214689405 },
+                  { "k": "share", "v": 0.07112069087 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 2 },
+                  { "k": "plain", "v": 5 }
+                ]
+              }
+            ],
+            [
+              "Reflect",
+              "For a few turns part of the damage it takes goes back to the enemy.",
+              0.05851063953,
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "share", "v": 0.06214689405 },
+                  { "k": "share", "v": 0.07112069087 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 2 },
+                  { "k": "plain", "v": 5 }
+                ]
+              }
+            ],
+            [
+              "Shield",
+              "For a few turns part of the damage it takes is blocked.",
+              0.05851063953,
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "share", "v": 0.06214689405 },
+                  { "k": "share", "v": 0.07112069087 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 2 },
+                  { "k": "plain", "v": 5 }
+                ]
+              }
+            ],
+            [
+              "Absorbing barrier",
+              "A barrier that turns all damage into health until it breaks.",
+              0.05851063953,
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "share", "v": 0.06214689405 },
+                  { "k": "share", "v": 0.07112069087 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 2 },
+                  { "k": "plain", "v": 5 }
+                ]
+              }
+            ],
+            [
+              "Barrier",
+              "A barrier that blocks all damage until it breaks.",
+              0.05851063953,
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "share", "v": 0.06214689405 },
+                  { "k": "share", "v": 0.07112069087 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 2 },
+                  { "k": "plain", "v": 5 }
+                ]
+              }
+            ],
+            [
+              "Mirror barrier",
+              "A barrier that sends all damage back until it breaks.",
+              0.05851063953,
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "share", "v": 0.06214689405 },
+                  { "k": "share", "v": 0.07112069087 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 2 },
+                  { "k": "plain", "v": 5 }
+                ]
+              }
+            ]
+          ],
+          "text": 2
+        },
+        "moves5": {
+          "head": [
+            "Move",
+            "What it does",
+            "Chance",
+            "On a mutation",
+            "Cooldown"
+          ],
+          "kinds": ["text", "text", "share", "text", "plain"],
+          "note": "Chance is the draw of a new creature. A mutation skips the move the slot holds, so its chance depends on that move. Cooldown in turns.",
+          "rows": [
+            [
+              "Trap",
+              "Lowers the enemy's damage, and bursts if the enemy removes it.",
+              0.1360544215,
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "share", "v": 0.1379310342 },
+                  { "k": "share", "v": 0.1574803146 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 3 },
+                  { "k": "plain", "v": 4 }
+                ]
+              }
+            ],
+            [
+              "Change affinity",
+              "Turns the enemy into the affinity its own is strong against, for a few turns.",
+              0.1360544215,
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "share", "v": 0.1379310342 },
+                  { "k": "share", "v": 0.1574803146 }
+                ]
+              },
+              5
+            ],
+            [
+              "Reset",
+              "Clears all its cooldowns.",
+              0.1360544215,
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "share", "v": 0.1379310342 },
+                  { "k": "share", "v": 0.1574803146 }
+                ]
+              },
+              3
+            ],
+            [
+              "Burrow",
+              "A certain dodge for one turn.",
+              0.06802721073,
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "share", "v": 0.0689655171 },
+                  { "k": "share", "v": 0.07874015728 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 2 },
+                  { "k": "plain", "v": 3 }
+                ]
+              }
+            ],
+            [
+              "Stun",
+              "The enemy loses a turn.",
+              0.06802721073,
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "share", "v": 0.0689655171 },
+                  { "k": "share", "v": 0.07874015728 }
+                ]
+              },
+              2
+            ],
+            [
+              "Sacrifice for damage",
+              "A heavy hit on itself, and the team's damage rises.",
+              0.06802721073,
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "share", "v": 0.0689655171 },
+                  { "k": "share", "v": 0.07874015728 }
+                ]
+              },
+              4
+            ],
+            [
+              "Sacrifice for defence",
+              "A heavy hit on itself, and the team's damage reduction rises.",
+              0.06802721073,
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "share", "v": 0.0689655171 },
+                  { "k": "share", "v": 0.07874015728 }
+                ]
+              },
+              4
+            ],
+            [
+              "Burst of speed",
+              "A large rise in agility for one turn.",
+              0.03401360537,
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "share", "v": 0.03448275855 },
+                  { "k": "share", "v": 0.03937007864 }
+                ]
+              },
+              1
+            ],
+            [
+              "Raise crit",
+              "Raises its critical hit chance for a few turns.",
+              0.03401360537,
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "share", "v": 0.03448275855 },
+                  { "k": "share", "v": 0.03937007864 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 2 },
+                  { "k": "plain", "v": 5 }
+                ]
+              }
+            ],
+            [
+              "Raise damage",
+              "Raises its damage for a few turns.",
+              0.03401360537,
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "share", "v": 0.03448275855 },
+                  { "k": "share", "v": 0.03937007864 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 2 },
+                  { "k": "plain", "v": 5 }
+                ]
+              }
+            ],
+            [
+              "Lower accuracy",
+              "Lowers the enemy's accuracy for a few turns.",
+              0.03401360537,
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "share", "v": 0.03448275855 },
+                  { "k": "share", "v": 0.03937007864 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 2 },
+                  { "k": "plain", "v": 5 }
+                ]
+              }
+            ],
+            [
+              "Lower defence",
+              "Lowers the enemy's damage reduction for a few turns.",
+              0.03401360537,
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "share", "v": 0.03448275855 },
+                  { "k": "share", "v": 0.03937007864 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 2 },
+                  { "k": "plain", "v": 5 }
+                ]
+              }
+            ],
+            [
+              "Lower damage and accuracy",
+              "Lowers the enemy's damage and accuracy for a few turns.",
+              0.03401360537,
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "share", "v": 0.03448275855 },
+                  { "k": "share", "v": 0.03937007864 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 2 },
+                  { "k": "plain", "v": 5 }
+                ]
+              }
+            ],
+            [
+              "Lower damage",
+              "Lowers the enemy's damage for a few turns.",
+              0.03401360537,
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "share", "v": 0.03448275855 },
+                  { "k": "share", "v": 0.03937007864 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 2 },
+                  { "k": "plain", "v": 5 }
+                ]
+              }
+            ],
+            [
+              "Revive",
+              "Named a revive, it acts as the sacrifice for defence: a heavy hit on itself, and the team's damage reduction rises.",
+              0.0272108847,
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "share", "v": 0.02758620725 },
+                  { "k": "share", "v": 0.03149606338 }
+                ]
+              },
+              6
+            ],
+            [
+              "Raise accuracy",
+              "Raises its accuracy for a few turns.",
+              0.02040816403,
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "share", "v": 0.02068965595 },
+                  { "k": "share", "v": 0.02362204812 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 2 },
+                  { "k": "plain", "v": 5 }
+                ]
+              }
+            ],
+            [
+              "Raise agility",
+              "Raises its agility for a few turns.",
+              0.02040816403,
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "share", "v": 0.02068965595 },
+                  { "k": "share", "v": 0.02362204812 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 2 },
+                  { "k": "plain", "v": 5 }
+                ]
+              }
+            ],
+            [
+              "Raise dodge",
+              "Raises its dodge chance for a few turns.",
+              0.01360544235,
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "share", "v": 0.01388888908 },
+                  { "k": "share", "v": 0.01574803169 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 2 },
+                  { "k": "plain", "v": 5 }
+                ]
+              }
+            ]
+          ],
+          "text": 2
+        },
+        "names": {
+          "head": [
+            "Kind",
+            "Tropical",
+            "Frost",
+            "Fire",
+            "Toxic",
+            "Desert",
+            "Radioactive",
+            "Anomalous",
+            "Mechanical",
+            "Physical"
+          ],
+          "kinds": [
+            "text",
+            "text",
+            "text",
+            "text",
+            "text",
+            "text",
+            "text",
+            "text",
+            "text",
+            "text"
+          ],
+          "note": "The names a move shows by the creature's affinity. Physical names belong to the physical moves.",
+          "rows": [
+            [
+              "Hit",
+              "Lash, Razorleaf, Pester",
+              "Freeze, Frostburn, Icy Blast",
+              "Burn, Scorch, Sear",
+              "Sting, Spit",
+              "Landslide",
+              "Alpha Strike, Ion Stream",
+              "Phase Beam, Graviton Beam",
+              "Laser Cannon, Plasma Beam, Laser-Eyes",
+              "Swipe, Lunge, Bite"
+            ],
+            [
+              "Barrage, hit on agility",
+              "Thunderstorm, Barrage",
+              "Flurry, Blizzard",
+              "Firestorm, Lava Surge, Incinerate",
+              "Corrosive Jet, Poison Flurry",
+              "Mudslide, Sandblast",
+              "Irradiate, Megaton Beam",
+              "Supernova",
+              "Arcstorm",
+              null
+            ],
+            [
+              "Hit and wound",
+              "Barbed Lash, Spawn Pests, Grasping Tendrils",
+              "Snowfall, Marrowfreeze",
+              "Immolate, Instant Ignition",
+              "Toxic Spit, Burrowing Worms, Diseased Bite",
+              "Rockfall",
+              "Half-Life, Deep Wound",
+              "Void Egg",
+              "Biological Suppression",
+              "Serrated Claws, Mangle, Flurry"
+            ],
+            [
+              "Wild hit or charge",
+              "Apex Predator",
+              "Frostshock, Shardspear",
+              "Wildfire",
+              "Acid Spray, Slime Spray",
+              "Pound",
+              "Gamma Burst, Blast Wave",
+              "Starfall, Meteor Shower",
+              "Shockbolt, Shockwave",
+              "Wild Charge, Roar, Wild Swing"
+            ],
+            [
+              "Multi-turn or ramping hit",
+              "Rampage, Pack Hunter",
+              "Howling Wind, Shrieking Gale",
+              "Pillar of Flame, Conflagration",
+              "Envenom",
+              "Relentless",
+              "Chain Reaction, Hellfire",
+              "Leviathan Beam, Resonance Frequency",
+              "Electron-Storm",
+              null
+            ],
+            [
+              "Wound",
+              "Throw Spores, Spore Cloud, Thorns",
+              "Frostbite, Needle",
+              "Ignite, Flame Spit, Spit Fire",
+              "Necrosis, Rot, Infestation",
+              "Wither, Creeping Dust",
+              "Slow Decay, Beta Decay",
+              "Crumble",
+              "Delta Wave Corruption, Nagging Pain, Rust",
+              null
+            ],
+            [
+              "Delayed blast",
+              "Bug Bomb",
+              "Fractal Pain",
+              "Magma Bomb",
+              "Inject Larvae, Parasitic Larvae",
+              "Boulder",
+              "Nuclear Blast, Poisoned Water",
+              "Boundary Failure, Spacetime Corruption",
+              "Detonate, Core Detonation",
+              null
+            ],
+            [
+              "Reckless hit",
+              "Enraging Blow, Thunderstruck, Primal Rage",
+              "Voidfrost",
+              "Flashpoint, Inferno",
+              "Infect, Release Spores",
+              "Sulphurous Touch",
+              "Fallout",
+              "Crimson Rage",
+              "Dissonance",
+              null
+            ],
+            [
+              "Self-wounding hit",
+              "Plague, Backlash",
+              "Cold Snap",
+              "Eruption, Scorched Earth, Self Immolation",
+              "Parasitic Growth, Novel Pathogen",
+              "Curse of Bones",
+              "Contaminate, Splash Damage",
+              "Dark Energy, Plasmic Accident",
+              "Dereference Reality",
+              null
+            ],
+            [
+              "Hit both",
+              "Cyclone, Boiling Rain, Chaos",
+              "Hailstorm, Drown",
+              "Thermal Runaway, Volcano, Pyroclasm",
+              "Fetid Cloud, Swamp Gas",
+              "Undermine, Tremor",
+              "Free Radical, Meltdown",
+              "Gravity Overload",
+              "EMP Pulse, Haywire",
+              null
+            ],
+            [
+              "Ticking wound",
+              "Solar Ray",
+              "Deep Freeze",
+              "White Hot",
+              "Fester, Bonerot",
+              "Cactus Flesh",
+              "Supercritical",
+              "Tick Tock, Doom",
+              "Neutron Bomb, Countdown",
+              null
+            ],
+            [
+              "Purge",
+              "Purge, Sunbleached",
+              "Sleet",
+              "Purged by Fire, Melt",
+              "Acid Wash",
+              "Desert Wind",
+              "Genetic Collapse",
+              "Mindwipe",
+              "Data Harvest",
+              null
+            ],
+            [
+              "Charged or powered hit",
+              "Bubbling Rage",
+              "Absolute Zero",
+              "Solar Flare",
+              "Outbreak",
+              "Sandstorm",
+              "Containment Breach",
+              "Resonate",
+              "Aeron Protocol",
+              null
+            ],
+            [
+              "Delayed heal",
+              "Lifeblood, Emeril Dream, Paradise Waits",
+              "Glacial Energy",
+              "Await the Dawn",
+              "Produce Larvae",
+              "Nightfall",
+              "Cellular Fusion",
+              "Tap Leyline",
+              "Matter Transfer",
+              null
+            ],
+            [
+              "Heal",
+              "Restoration, Downpour",
+              "Transfusion",
+              "Cauterise, Warm Blooded",
+              "Wallow, Antivenom",
+              "Oasis",
+              "Knit Flesh",
+              "Fractal Growth",
+              "Repair, Reconstruction",
+              null
+            ],
+            [
+              "Heal over time",
+              "Regrowth, Photosynthesis, Overgrowth",
+              "Icy Veins",
+              "Inner Fire",
+              "Regenerate Blood",
+              "Fresh Breeze",
+              "Transfuse, Rejuvenate",
+              "Harmonise, Reinforce Boundary",
+              "Living Metal, Self-Assembly",
+              null
+            ],
+            [
+              "Cleanse",
+              "Purify, Cleanse",
+              "Fresh Snow",
+              "Cleansing Fire",
+              "Sterilise",
+              "Bleached Bones",
+              "Transmute",
+              "Anomaly Ward",
+              "Debugging Agent",
+              null
+            ],
+            [
+              "Absorb, absorbing barrier",
+              "Siphon, Leech Shield",
+              "Supercooled",
+              "Thermal Transfer, Shadowburn",
+              "Mucal Field",
+              "Consuming Echo, Lithosphere",
+              "Absorb Energy, Extremophile",
+              "Atlas Touched",
+              "Dynamo, Failsafe",
+              null
+            ],
+            [
+              "Reflect, mirror barrier",
+              "Spiny Carapace, Reflective Bubble",
+              "Prismatic Shield",
+              "Mirrorlight",
+              "Caustic Skin, Caustic Blood",
+              "Mirage",
+              "Forcefield",
+              "Skin of Glass, Terrorsphere",
+              "Magnetosphere, Encrypt Self",
+              null
+            ],
+            [
+              "Shield, barrier",
+              "Ironbark, Hardened Shell, Thick Plating",
+              "Crystal Barrier, Ice Wall",
+              "Firewall, Fire Shield",
+              "Impenetrable Slime",
+              "Stonewall, Heart of Stone, Ferrite Skin",
+              "Plasma Shield",
+              "Cocoon, Boundary Wall",
+              "Barricade, Bulwark, Heavy Armour",
+              null
+            ],
+            [
+              "Burst of speed",
+              "Zephyr, Uncoil",
+              "Antifreeze Blood, Thaw",
+              "Boiling Point",
+              "Hormone Sacs",
+              "Blistering Speed",
+              "Feedback Loop",
+              "Frameshift",
+              "Apply Oil, Lubricate, Self-Greasing",
+              null
+            ],
+            [
+              "Trap",
+              "Nagging Itch, Swarm of Flies, Warning Growl",
+              "Permafrost",
+              "Parch",
+              "Gelatinous Mass, Suspicious Fluid",
+              "Burning Lungs",
+              "Genemelt",
+              "<IMG>PR_10<>",
+              "Overload",
+              null
+            ],
+            [
+              "Burrow",
+              "Burrow, Camouflage",
+              "Hibernate, Burrow",
+              "Evaporate",
+              "Limb Drop",
+              "Fissure",
+              "Shelter",
+              "Wormhole, Reality Tear",
+              "Phase Shift, Decoy",
+              null
+            ],
+            [
+              "Stun",
+              "Snaring Roots, Rootbound, Entangle",
+              "Icy Chains, Entomb, Crystalise",
+              "Heatstroke, Thermal Shock",
+              "Paralyse, Sticky Web",
+              "Petrify, Fossilize",
+              "Stun, Terrify",
+              "Banish, Somnal Dust",
+              "Containment Field, Signal Jammer",
+              null
+            ],
+            [
+              "Change affinity",
+              "Call of the Wild",
+              "Deep Blue Void",
+              "Called by the Sun",
+              "Swamp Thing",
+              "Dessicate",
+              "Mutate",
+              "<IMG>PR_0<><IMG>PR_5<>",
+              "Clockwork Heart",
+              null
+            ],
+            [
+              "Raise accuracy",
+              "Hawkeye",
+              "Sharpened Vision",
+              "Fire Eater",
+              "Precision Delivery",
+              "Viper's Fangs",
+              "Deadeye",
+              "Quicksilver",
+              "Overclock, Amplitude",
+              null
+            ],
+            [
+              "Raise dodge or agility",
+              "Butterfly Wings, Mistwalker",
+              "Well Insulated",
+              "Shimmer, Hot Feet",
+              "Scuttle",
+              "Shifting Sands",
+              "Twisted Helix",
+              "Polyrhythm",
+              "Dislocation, Servo-Boost",
+              null
+            ],
+            [
+              "Raise crit",
+              "Precision, Piercing Claws, Sharpened Talons",
+              "Indium Heart",
+              "Consume Phosphorus, Stoke Up",
+              "Limb Breaker",
+              "Cold-Blooded",
+              "Temporary Eyes",
+              "Aeron's Blessing",
+              "Spring-Loaded, High-Voltage",
+              null
+            ],
+            [
+              "Raise damage",
+              "Growth Hormone, Dominance, Heavy Hitter",
+              "Frostbloom",
+              "Flameclaw",
+              "Biological Horror",
+              "Swell Up",
+              "Gene Cleaver, Grow Limbs",
+              "Drink the Water",
+              "Supercharge",
+              null
+            ],
+            [
+              "Lower accuracy",
+              "Throw Dust, Mistveil, Sticky Sap",
+              "Snowblind",
+              "Heatblind, Blinding Light",
+              "Sticky Ooze, Carrion Flies",
+              "Quicksand, Dustbowl",
+              "Lose Focus",
+              "Haunt, [ REDACTED ]",
+              "Anomaly Suppression, Oil Spill",
+              null
+            ],
+            [
+              "Lower defence, or damage and accuracy",
+              "Leafmold, Snaring Vines, Rot",
+              "Cold Feet, Numb Heart, Frozen Bones",
+              "Dehydrate",
+              "Enslime",
+              "Blind, Sandtrap",
+              "Catastrophe",
+              "Bewilder",
+              "X-Ray Blast",
+              null
+            ],
+            [
+              "Lower damage",
+              "Declaw",
+              "Freezing Fog",
+              "Baked",
+              "Morass, Lockjaw",
+              "Haunting Wail, Whispering Echoes",
+              "Corrupting Touch",
+              "Consume Sentience",
+              "Safety Valve",
+              null
+            ],
+            [
+              "Reset",
+              "Recharge, Wild Growth",
+              "Refresh",
+              "Phoenix Feather",
+              "Self-Consumption",
+              "Shed Skin",
+              "Hydra, Immortality",
+              "Iteration Reset",
+              "Protocol Override",
+              null
+            ],
+            [
+              "Sacrifice, revive",
+              "Sacrifice",
+              "Storm-born",
+              "Phoenix Kiss, From Ashes",
+              "Recycle Flesh",
+              "To Dust",
+              "Next Generation",
+              "Rebirth",
+              "Self-Destruct, Killswitch",
+              null
+            ]
+          ],
+          "text": 10
+        },
+        "pellets": {
+          "head": ["Battle", "Retroviral Pellet", "Nanites", "Invitation"],
+          "kinds": ["text", "share", "text", "text"],
+          "note": "What a won battle gives besides its mutation progress.",
+          "rows": [
+            ["Against another player", "none", "none", null],
+            [
+              "Iteration: Oceanus, training battle",
+              "none",
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 5 },
+                  { "k": "plain", "v": 10 }
+                ]
+              },
+              "Challenger's Invitation"
+            ],
+            [
+              "Settlement table",
+              "none",
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 5 },
+                  { "k": "plain", "v": 10 }
+                ]
+              },
+              null
+            ],
+            [
+              "Challenger, from a Challenger's Invitation",
+              0.03,
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 12 },
+                  { "k": "plain", "v": 20 }
+                ]
+              },
+              null
+            ],
+            [
+              "Large building table",
+              0.03,
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 10 },
+                  { "k": "plain", "v": 20 }
+                ]
+              },
+              null
+            ],
+            [
+              "Pirate station table",
+              0.03,
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 10 },
+                  { "k": "plain", "v": 20 }
+                ]
+              },
+              null
+            ],
+            [
+              "System table",
+              0.08,
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 15 },
+                  { "k": "plain", "v": 30 }
+                ]
+              },
+              null
+            ],
+            [
+              "Outpost table",
+              0.08,
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 15 },
+                  { "k": "plain", "v": 30 }
+                ]
+              },
+              null
+            ],
+            [
+              "System champion, from a Champion's Invitation",
+              0.6,
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 30 },
+                  { "k": "plain", "v": 50 }
+                ]
+              },
+              "Challenger's Invitation"
+            ],
+            [
+              "Iteration: Oceanus, daily challenge",
+              0.75,
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 175 },
+                  { "k": "plain", "v": 250 }
+                ]
+              },
+              null
+            ]
+          ],
+          "text": 1
+        }
+      },
+      "title": "Battle moves"
+    },
     "colossus-modules": {
       "fact": "The Colossus has the most room of the land exocraft, 30 technology slots, and two modules no other takes: the Excavation Blade and the Mineral Processing Rig.",
       "numbers": {},
@@ -386,575 +2104,390 @@
       "fact": "A corvette's flight control upgrades raise both stats their card shows at every class: the class only moves how far each one rises.",
       "numbers": {},
       "tables": {
-        "crFight": {
-          "head": ["Module", "Stats raised", "Manoeuvrability", "Boost"],
-          "kinds": ["text", "text", "text", "text"],
-          "note": "Flight control systems upgrade modules, their limits as the game's card prints them. Stats raised is how many stats one install shows on its card.",
-          "rows": [
-            ["C-Class", "2", "+1% to +8%", "+1% to +11%"],
-            ["B-Class", "2", "+1% to +12%", "+11% to +15%"],
-            ["A-Class", "2", "+5% to +16%", "+11% to +21%"],
-            ["S-Class", "2", "+5% to +18%", "+11% to +25%"]
-          ],
-          "text": 2
-        },
-        "crFightRolls": {
-          "head": [
-            "Module",
-            "Stats raised",
-            "Near best Boost",
-            "Manoeuvrability",
-            "Boost"
-          ],
-          "kinds": ["text", "text", "text", "text", "text"],
-          "note": "What one install of each Flight control systems upgrade module rolls, exact over every install. Stats raised: how often its card shows each number of stats. Near best: how often it adds at least nine tenths of the most Boost any install of its kind adds, a dash where Boost has one value. Each stat: how often an install raises it.",
-          "rows": [
-            ["C-Class", "2", "5.6%", "100%", "100%"],
-            ["B-Class", "2", "16.2%", "100%", "100%"],
-            ["A-Class", "2", "10.3%", "100%", "100%"],
-            ["S-Class", "2", "8.5%", "100%", "100%"]
-          ],
-          "text": 5
-        },
-        "crFightTop": {
-          "head": ["Module", "Manoeuvrability", "Boost"],
+        "partsCockpits": {
+          "head": ["Part", "Module", "What it can add"],
+          "icons": [0, 1, 2, 3, 4, 5, 6],
           "kinds": ["text", "text", "text"],
-          "note": "How often a raised stat of each Flight control systems upgrade module lands in the top tenth of its limits, a dash where the module has no such stat or the stat has one value.",
+          "note": "Each part by its name, the upgrade module it brings, and the weakest and the strongest card of that module.",
           "rows": [
-            ["C-Class", "2.5%", "5%"],
-            ["B-Class", "2.5%", "5%"],
-            ["A-Class", "2.5%", "5%"],
-            ["S-Class", "5%", "5%"]
+            [
+              "Titan-Class Cockpit",
+              "C-Class flight control systems",
+              "Boost +1 to +10%\nManoeuvrability +1 to +8%"
+            ],
+            [
+              "Ambassador-Class Cockpit",
+              "C-Class flight control systems",
+              "Boost +1 to +10%\nManoeuvrability +1 to +8%"
+            ],
+            [
+              "Hornet-I-Class Cockpit",
+              "C-Class flight control systems",
+              "Boost +1 to +10%\nManoeuvrability +1 to +8%"
+            ],
+            [
+              "Viper-I-Class Cockpit",
+              "C-Class flight control systems",
+              "Boost +1 to +10%\nManoeuvrability +1 to +8%"
+            ],
+            [
+              "Mantis-I-Class Cockpit",
+              "C-Class flight control systems",
+              "Boost +1 to +10%\nManoeuvrability +1 to +8%"
+            ],
+            [
+              "Thunderbird-Class Cockpit",
+              "C-Class flight control systems",
+              "Boost +1 to +10%\nManoeuvrability +1 to +8%"
+            ],
+            [
+              "Vantage-Class Cockpit",
+              "C-Class flight control systems",
+              "Boost +1 to +10%\nManoeuvrability +1 to +8%"
+            ]
           ],
+          "sprite": { "columns": 16, "src": "/modules/corvette-modules.webp" },
           "text": 3
         },
-        "crInv": {
-          "head": ["Module", "Stats raised", "Cargo Slots"],
+        "partsEngines": {
+          "head": ["Part", "Module", "What it can add"],
+          "icons": [
+            18, 20, 21, 25, 26, 27, 28, 29, 43, 22, 23, 24, 41, 42, 44, 45, 46,
+            47, 48, 49
+          ],
           "kinds": ["text", "text", "text"],
-          "note": "Cargo systems upgrade modules, their limits as the game's card prints them. Stats raised is how many stats one install shows on its card.",
+          "note": "Each part by its name, the upgrade module it brings, and the weakest and the strongest card of that module.",
           "rows": [
-            ["C-Class", "1", "+1"],
-            ["B-Class", "1", "+3"],
-            ["A-Class", "1", "+6"],
-            ["S-Class", "1", "+8"]
+            [
+              "Titan Heavy Booster",
+              "A-Class Pulse Engine",
+              "Manoeuvrability +5 to +16%\nBoost +11 to +20%\nPulse Drive Fuel Efficiency +15 to +20%"
+            ],
+            [
+              "Ambassador Heavy Booster",
+              "A-Class Pulse Engine",
+              "Manoeuvrability +5 to +16%\nBoost +11 to +20%\nPulse Drive Fuel Efficiency +15 to +20%"
+            ],
+            [
+              "Thunderbird Heavy Booster",
+              "A-Class Pulse Engine",
+              "Manoeuvrability +5 to +16%\nBoost +11 to +20%\nPulse Drive Fuel Efficiency +15 to +20%"
+            ],
+            [
+              "Arcadia Heavy Booster",
+              "A-Class Pulse Engine",
+              "Manoeuvrability +5 to +16%\nBoost +11 to +20%\nPulse Drive Fuel Efficiency +15 to +20%"
+            ],
+            [
+              "Aeron Drive",
+              "A-Class Pulse Engine",
+              "Manoeuvrability +5 to +16%\nBoost +11 to +20%\nPulse Drive Fuel Efficiency +15 to +20%"
+            ],
+            [
+              "Gorgon Thruster",
+              "A-Class Pulse Engine",
+              "Manoeuvrability +5 to +16%\nBoost +11 to +20%\nPulse Drive Fuel Efficiency +15 to +20%"
+            ],
+            [
+              "Eldritch Thruster",
+              "A-Class Pulse Engine",
+              "Manoeuvrability +5 to +16%\nBoost +11 to +20%\nPulse Drive Fuel Efficiency +15 to +20%"
+            ],
+            [
+              "Plated Thruster",
+              "A-Class Pulse Engine",
+              "Manoeuvrability +5 to +16%\nBoost +11 to +20%\nPulse Drive Fuel Efficiency +15 to +20%"
+            ],
+            [
+              "Kineostream Thruster",
+              "A-Class Pulse Engine",
+              "Manoeuvrability +5 to +16%\nBoost +11 to +20%\nPulse Drive Fuel Efficiency +15 to +20%"
+            ],
+            [
+              "Ambassador Sublight Thruster",
+              "B-Class Pulse Engine",
+              "Manoeuvrability +1 to +12%\nBoost +11 to +15%\nPulse Drive Fuel Efficiency +11 to +15%"
+            ],
+            [
+              "Titan Sublight Thruster",
+              "B-Class Pulse Engine",
+              "Manoeuvrability +1 to +12%\nBoost +11 to +15%\nPulse Drive Fuel Efficiency +11 to +15%"
+            ],
+            [
+              "Arcadia Sublight Thruster",
+              "B-Class Pulse Engine",
+              "Manoeuvrability +1 to +12%\nBoost +11 to +15%\nPulse Drive Fuel Efficiency +11 to +15%"
+            ],
+            [
+              "Twin Echo Jets",
+              "B-Class Pulse Engine",
+              "Manoeuvrability +1 to +12%\nBoost +11 to +15%\nPulse Drive Fuel Efficiency +11 to +15%"
+            ],
+            [
+              "Twin Dynamo Jets",
+              "B-Class Pulse Engine",
+              "Manoeuvrability +1 to +12%\nBoost +11 to +15%\nPulse Drive Fuel Efficiency +11 to +15%"
+            ],
+            [
+              "Pyrodrive Booster",
+              "B-Class Pulse Engine",
+              "Manoeuvrability +1 to +12%\nBoost +11 to +15%\nPulse Drive Fuel Efficiency +11 to +15%"
+            ],
+            [
+              "Widebody Thruster",
+              "B-Class Pulse Engine",
+              "Manoeuvrability +1 to +12%\nBoost +11 to +15%\nPulse Drive Fuel Efficiency +11 to +15%"
+            ],
+            [
+              "Twin Sublight Jets",
+              "B-Class Pulse Engine",
+              "Manoeuvrability +1 to +12%\nBoost +11 to +15%\nPulse Drive Fuel Efficiency +11 to +15%"
+            ],
+            [
+              "Firebox Thruster",
+              "B-Class Pulse Engine",
+              "Manoeuvrability +1 to +12%\nBoost +11 to +15%\nPulse Drive Fuel Efficiency +11 to +15%"
+            ],
+            [
+              "Longshore Thruster",
+              "B-Class Pulse Engine",
+              "Manoeuvrability +1 to +12%\nBoost +11 to +15%\nPulse Drive Fuel Efficiency +11 to +15%"
+            ],
+            [
+              "Razor Jet",
+              "B-Class Pulse Engine",
+              "Manoeuvrability +1 to +12%\nBoost +11 to +15%\nPulse Drive Fuel Efficiency +11 to +15%"
+            ]
           ],
-          "text": 2
-        },
-        "crInvRolls": {
-          "head": [
-            "Module",
-            "Stats raised",
-            "Near best Cargo Slots",
-            "Cargo Slots"
-          ],
-          "kinds": ["text", "text", "text", "text"],
-          "note": "What one install of each Cargo systems upgrade module rolls, exact over every install. Stats raised: how often its card shows each number of stats. Near best: how often it adds at least nine tenths of the most Cargo Slots any install of its kind adds, a dash where Cargo Slots has one value. Each stat: how often an install raises it.",
-          "rows": [
-            ["C-Class", "1", null, "100%"],
-            ["B-Class", "1", null, "100%"],
-            ["A-Class", "1", null, "100%"],
-            ["S-Class", "1", null, "100%"]
-          ],
-          "text": 4
-        },
-        "crInvTop": {
-          "head": ["Module", "Cargo Slots"],
-          "kinds": ["text", "text"],
-          "note": "How often a raised stat of each Cargo systems upgrade module lands in the top tenth of its limits, a dash where the module has no such stat or the stat has one value.",
-          "rows": [
-            ["C-Class", null],
-            ["B-Class", null],
-            ["A-Class", null],
-            ["S-Class", null]
-          ],
-          "text": 2
-        },
-        "crSci": {
-          "head": [
-            "Module",
-            "Stats raised",
-            "Launch Cost",
-            "Automatic Recharging",
-            "Pulse Drive Fuel Efficiency"
-          ],
-          "kinds": ["text", "text", "text", "text", "text"],
-          "note": "Navigation systems upgrade modules, their limits as the game's card prints them. Stats raised is how many stats one install shows on its card.",
-          "rows": [
-            ["C-Class", "3", "-6% to -11%", "+100%", "+6% to +11%"],
-            ["B-Class", "3", "-11% to -15%", "+100%", "+11% to +15%"],
-            ["A-Class", "3", "-15% to -20%", "+100%", "+15% to +20%"],
-            ["S-Class", "3", "-20%", "+100%", "+20%"]
-          ],
-          "text": 2
-        },
-        "crSciRolls": {
-          "head": [
-            "Module",
-            "Stats raised",
-            "Near best Launch Cost",
-            "Launch Cost",
-            "Automatic Recharging",
-            "Pulse Drive Fuel Efficiency"
-          ],
-          "kinds": ["text", "text", "text", "text", "text", "text"],
-          "note": "What one install of each Navigation systems upgrade module rolls, exact over every install. Stats raised: how often its card shows each number of stats. Near best: how often it adds at least nine tenths of the most Launch Cost any install of its kind adds, a dash where Launch Cost has one value. Each stat: how often an install raises it.",
-          "rows": [
-            ["C-Class", "3", "3.2%", "100%", "100%", "100%"],
-            ["B-Class", "3", "8.5%", "100%", "100%", "100%"],
-            ["A-Class", "3", "12%", "100%", "100%", "100%"],
-            ["S-Class", "3", null, "100%", "100%", "100%"]
-          ],
-          "text": 6
-        },
-        "crSciTop": {
-          "head": [
-            "Module",
-            "Launch Cost",
-            "Automatic Recharging",
-            "Pulse Drive Fuel Efficiency"
-          ],
-          "kinds": ["text", "text", "text", "text"],
-          "note": "How often a raised stat of each Navigation systems upgrade module lands in the top tenth of its limits, a dash where the module has no such stat or the stat has one value.",
-          "rows": [
-            ["C-Class", "1.5%", null, "5.1%"],
-            ["B-Class", "2.6%", null, "5.1%"],
-            ["A-Class", "2.6%", null, "5.1%"],
-            ["S-Class", null, null, null]
-          ],
-          "text": 4
-        },
-        "crTrade": {
-          "head": ["Module", "Stats raised", "Shield Strength"],
-          "kinds": ["text", "text", "text"],
-          "note": "Defensive systems upgrade modules, their limits as the game's card prints them. Stats raised is how many stats one install shows on its card.",
-          "rows": [
-            ["C-Class", "1", "+5% to +10%"],
-            ["B-Class", "1", "+5% to +10%"],
-            ["A-Class", "1", "+10% to +20%"],
-            ["S-Class", "1", "+20%"]
-          ],
-          "text": 2
-        },
-        "crTradeRolls": {
-          "head": [
-            "Module",
-            "Stats raised",
-            "Near best Shield Strength",
-            "Shield Strength"
-          ],
-          "kinds": ["text", "text", "text", "text"],
-          "note": "What one install of each Defensive systems upgrade module rolls, exact over every install. Stats raised: how often its card shows each number of stats. Near best: how often it adds at least nine tenths of the most Shield Strength any install of its kind adds, a dash where Shield Strength has one value. Each stat: how often an install raises it. C-Class and B-Class print the same limits, but the higher class lands near the top more often.",
-          "rows": [
-            ["C-Class", "1", "3.3%", "100%"],
-            ["B-Class", "1", "10.7%", "100%"],
-            ["A-Class", "1", "10.7%", "100%"],
-            ["S-Class", "1", null, "100%"]
-          ],
-          "text": 4
-        },
-        "crTradeTop": {
-          "head": ["Module", "Shield Strength"],
-          "kinds": ["text", "text"],
-          "note": "How often a raised stat of each Defensive systems upgrade module lands in the top tenth of its limits, a dash where the module has no such stat or the stat has one value.",
-          "rows": [
-            ["C-Class", "1.5%"],
-            ["B-Class", "5.2%"],
-            ["A-Class", "5.2%"],
-            ["S-Class", null]
-          ],
-          "text": 2
-        },
-        "crTrt": {
-          "head": ["Module", "Stats raised", "Tractor Beam"],
-          "kinds": ["text", "text", "text"],
-          "note": "Salvage Recovery System upgrade modules, their limits as the game's card prints them. Stats raised is how many stats one install shows on its card.",
-          "rows": [["A-Class", "1", "Enabled"]],
-          "text": 2
-        },
-        "crTrtRolls": {
-          "head": [
-            "Module",
-            "Stats raised",
-            "Near best Tractor Beam",
-            "Tractor Beam"
-          ],
-          "kinds": ["text", "text", "text", "text"],
-          "note": "What one install of each Salvage Recovery System upgrade module rolls, exact over every install. Stats raised: how often its card shows each number of stats. Near best: how often it adds at least nine tenths of the most Tractor Beam any install of its kind adds, a dash where Tractor Beam has one value. Each stat: how often an install raises it.",
-          "rows": [["A-Class", "1", null, "100%"]],
-          "text": 4
-        },
-        "crTrtTop": {
-          "head": ["Module", "Tractor Beam"],
-          "kinds": ["text", "text"],
-          "note": "How often a raised stat of each Salvage Recovery System upgrade module lands in the top tenth of its limits, a dash where the module has no such stat or the stat has one value.",
-          "rows": [["A-Class", null]],
-          "text": 2
-        },
-        "hdrive": {
-          "head": [
-            "Module",
-            "Stats raised",
-            "Hyperdrive Range",
-            "Warp Cell Efficiency"
-          ],
-          "kinds": ["text", "text", "text", "text"],
-          "note": "Hyperdrive upgrade modules, their limits as the game's card prints them. Stats raised is how many stats one install shows on its card.",
-          "rows": [
-            ["B-Class", "1", "115 ly to 165 ly", null],
-            ["A-Class", "2", "165 ly to 220 ly", "+100%"]
-          ],
-          "text": 2
-        },
-        "hdriveRolls": {
-          "head": [
-            "Module",
-            "Stats raised",
-            "Near best Hyperdrive Range",
-            "Hyperdrive Range",
-            "Warp Cell Efficiency"
-          ],
-          "kinds": ["text", "text", "text", "text", "text"],
-          "note": "What one install of each Hyperdrive upgrade module rolls, exact over every install. Stats raised: how often its card shows each number of stats. Near best: how often it adds at least nine tenths of the most Hyperdrive Range any install of its kind adds, a dash where Hyperdrive Range has one value. Each stat: how often an install raises it.",
-          "rows": [
-            ["B-Class", "1", "18.3%", "100%", null],
-            ["A-Class", "2", "22.5%", "100%", "100%"]
-          ],
-          "text": 5
-        },
-        "hdriveTop": {
-          "head": ["Module", "Hyperdrive Range", "Warp Cell Efficiency"],
-          "kinds": ["text", "text", "text"],
-          "note": "How often a raised stat of each Hyperdrive upgrade module lands in the top tenth of its limits, a dash where the module has no such stat or the stat has one value.",
-          "rows": [
-            ["B-Class", "5.2%", null],
-            ["A-Class", "5%", null]
-          ],
+          "sprite": { "columns": 16, "src": "/modules/corvette-modules.webp" },
           "text": 3
         },
-        "launcher": {
-          "head": ["Module", "Stats raised", "Launch Cost", "Boost"],
-          "kinds": ["text", "text", "text", "text"],
-          "note": "Launch Thruster upgrade modules, their limits as the game's card prints them. Stats raised is how many stats one install shows on its card.",
-          "rows": [
-            ["B-Class", "2", "-11% to -15%, always", "+2% to +5%"],
-            ["A-Class", "2", "-15% to -20%, always", "+5% to +9%"]
-          ],
-          "text": 2
-        },
-        "launcherRolls": {
-          "head": [
-            "Module",
-            "Stats raised",
-            "Near best Launch Cost",
-            "Launch Cost",
-            "Boost"
-          ],
-          "kinds": ["text", "text", "text", "text", "text"],
-          "note": "What one install of each Launch Thruster upgrade module rolls, exact over every install. Stats raised: how often its card shows each number of stats. Near best: how often it adds at least nine tenths of the most Launch Cost any install of its kind adds, a dash where Launch Cost has one value. Each stat: how often an install raises it.",
-          "rows": [
-            ["B-Class", "2", "16.4%", "100%", "100%"],
-            ["A-Class", "2", "22.6%", "100%", "100%"]
-          ],
-          "text": 5
-        },
-        "launcherTop": {
-          "head": ["Module", "Launch Cost", "Boost"],
+        "partsHabs": {
+          "head": ["Part", "Module", "What it can add"],
+          "icons": [7, 8, 9, 10, 11, 12, 13, 14, 56, 57, 58],
           "kinds": ["text", "text", "text"],
-          "note": "How often a raised stat of each Launch Thruster upgrade module lands in the top tenth of its limits, a dash where the module has no such stat or the stat has one value.",
+          "note": "Each part by its name, the upgrade module it brings, and the weakest and the strongest card of that module.",
           "rows": [
-            ["B-Class", "5.2%", "5.1%"],
-            ["A-Class", "5.2%", "5.1%"]
+            ["Titan-Class Hab", "B-Class cargo systems", "Cargo Slots +3"],
+            [
+              "Thunderbird-Class Hab",
+              "B-Class cargo systems",
+              "Cargo Slots +3"
+            ],
+            ["Ambassador-Class Hab", "B-Class cargo systems", "Cargo Slots +3"],
+            ["Legion-Class Hab", "B-Class cargo systems", "Cargo Slots +3"],
+            ["Titan-Class Walkway", "C-Class cargo systems", "Cargo Slots +1"],
+            [
+              "Thunderbird-Class Walkway",
+              "C-Class cargo systems",
+              "Cargo Slots +1"
+            ],
+            [
+              "Ambassador-Class Walkway",
+              "C-Class cargo systems",
+              "Cargo Slots +1"
+            ],
+            ["Legion-Class Walkway", "C-Class cargo systems", "Cargo Slots +1"],
+            ["Cargo Capsule", "C-Class cargo systems", "Cargo Slots +1"],
+            ["Cargo Pod", "C-Class cargo systems", "Cargo Slots +1"],
+            ["Cargo Sphere", "C-Class cargo systems", "Cargo Slots +1"]
           ],
+          "sprite": { "columns": 16, "src": "/modules/corvette-modules.webp" },
           "text": 3
         },
-        "shipblob": {
-          "head": [
-            "Module",
-            "Stats raised",
-            "Damage",
-            "Fire Rate",
-            "Heat Dispersion"
-          ],
-          "kinds": ["text", "text", "text", "text", "text"],
-          "note": "Cyclotron Ballista upgrade modules, their limits as the game's card prints them. Stats raised is how many stats one install shows on its card.",
-          "rows": [
-            ["A-Class", "3", "+1% to +2%", "+5% to +11%", "+25% to +30%"]
-          ],
-          "text": 2
-        },
-        "shipblobRolls": {
-          "head": [
-            "Module",
-            "Stats raised",
-            "Near best Damage",
-            "Damage",
-            "Fire Rate",
-            "Heat Dispersion"
-          ],
-          "kinds": ["text", "text", "text", "text", "text", "text"],
-          "note": "What one install of each Cyclotron Ballista upgrade module rolls, exact over every install. Stats raised: how often its card shows each number of stats. Near best: how often it adds at least nine tenths of the most Damage any install of its kind adds, a dash where Damage has one value. Each stat: how often an install raises it.",
-          "rows": [["A-Class", "3", "16.5%", "100%", "100%", "100%"]],
-          "text": 6
-        },
-        "shipblobTop": {
-          "head": ["Module", "Damage", "Fire Rate", "Heat Dispersion"],
-          "kinds": ["text", "text", "text", "text"],
-          "note": "How often a raised stat of each Cyclotron Ballista upgrade module lands in the top tenth of its limits, a dash where the module has no such stat or the stat has one value.",
-          "rows": [["A-Class", "5.2%", "5.1%", "5.1%"]],
-          "text": 4
-        },
-        "shipgun": {
-          "head": [
-            "Module",
-            "Stats raised",
-            "Damage",
-            "Fire Rate",
-            "Heat Dispersion"
-          ],
-          "kinds": ["text", "text", "text", "text", "text"],
-          "note": "Photon Cannon upgrade modules, their limits as the game's card prints them. Stats raised is how many stats one install shows on its card.",
-          "rows": [["A-Class", "3", "+5% to +7%", "+2% to +3%", "+2% to +3%"]],
-          "text": 2
-        },
-        "shipgunRolls": {
-          "head": [
-            "Module",
-            "Stats raised",
-            "Near best damage per second",
-            "Damage",
-            "Fire Rate",
-            "Heat Dispersion"
-          ],
-          "kinds": ["text", "text", "text", "text", "text", "text"],
-          "note": "What one install of each Photon Cannon upgrade module rolls, exact over every install. Stats raised: how often its card shows each number of stats. Near best: how often it adds at least nine tenths of the most damage per second any install of its kind adds, a dash where damage per second has one value. Each stat: how often an install raises it.",
-          "rows": [["A-Class", "3", "13%", "100%", "100%", "100%"]],
-          "text": 6
-        },
-        "shipgunTop": {
-          "head": ["Module", "Damage", "Fire Rate", "Heat Dispersion"],
-          "kinds": ["text", "text", "text", "text"],
-          "note": "How often a raised stat of each Photon Cannon upgrade module lands in the top tenth of its limits, a dash where the module has no such stat or the stat has one value.",
-          "rows": [["A-Class", "5.2%", "5.1%", "5.1%"]],
-          "text": 4
-        },
-        "shipjump": {
-          "head": [
-            "Module",
-            "Stats raised",
-            "Pulse Drive Fuel Efficiency",
-            "Boost",
-            "Manoeuvrability"
-          ],
-          "kinds": ["text", "text", "text", "text", "text"],
-          "note": "Pulse Engine upgrade modules, their limits as the game's card prints them. Stats raised is how many stats one install shows on its card.",
-          "rows": [
-            ["B-Class", "3", "+11% to +15%", "+11% to +15%", "+1% to +12%"],
-            ["A-Class", "3", "+15% to +20%", "+11% to +21%", "+5% to +16%"]
-          ],
-          "text": 2
-        },
-        "shipjumpRolls": {
-          "head": [
-            "Module",
-            "Stats raised",
-            "Near best Boost",
-            "Pulse Drive Fuel Efficiency",
-            "Boost",
-            "Manoeuvrability"
-          ],
-          "kinds": ["text", "text", "text", "text", "text", "text"],
-          "note": "What one install of each Pulse Engine upgrade module rolls, exact over every install. Stats raised: how often its card shows each number of stats. Near best: how often it adds at least nine tenths of the most Boost any install of its kind adds, a dash where Boost has one value. Each stat: how often an install raises it.",
-          "rows": [
-            ["B-Class", "3", "16.2%", "100%", "100%", "100%"],
-            ["A-Class", "3", "10.5%", "100%", "100%", "100%"]
-          ],
-          "text": 6
-        },
-        "shipjumpTop": {
-          "head": [
-            "Module",
-            "Pulse Drive Fuel Efficiency",
-            "Boost",
-            "Manoeuvrability"
-          ],
-          "kinds": ["text", "text", "text", "text"],
-          "note": "How often a raised stat of each Pulse Engine upgrade module lands in the top tenth of its limits, a dash where the module has no such stat or the stat has one value.",
-          "rows": [
-            ["B-Class", "5.1%", "5.1%", "2.7%"],
-            ["A-Class", "5.1%", "5.1%", "2.7%"]
-          ],
-          "text": 4
-        },
-        "shiplas": {
-          "head": ["Module", "Stats raised", "Heat Dispersion", "Damage"],
-          "kinds": ["text", "text", "text", "text"],
-          "note": "Phase Beam upgrade modules, their limits as the game's card prints them. Stats raised is how many stats one install shows on its card.",
-          "rows": [["A-Class", "2", "+55% to +75%", "+20% to +24%"]],
-          "text": 2
-        },
-        "shiplasRolls": {
-          "head": [
-            "Module",
-            "Stats raised",
-            "Near best Damage",
-            "Heat Dispersion",
-            "Damage"
-          ],
-          "kinds": ["text", "text", "text", "text", "text"],
-          "note": "What one install of each Phase Beam upgrade module rolls, exact over every install. Stats raised: how often its card shows each number of stats. Near best: how often it adds at least nine tenths of the most Damage any install of its kind adds, a dash where Damage has one value. Each stat: how often an install raises it.",
-          "rows": [["A-Class", "2", "36.9%", "100%", "100%"]],
-          "text": 5
-        },
-        "shiplasTop": {
-          "head": ["Module", "Heat Dispersion", "Damage"],
+        "partsLanding": {
+          "head": ["Part", "Module", "What it can add"],
+          "icons": [15, 16, 17, 19],
           "kinds": ["text", "text", "text"],
-          "note": "How often a raised stat of each Phase Beam upgrade module lands in the top tenth of its limits, a dash where the module has no such stat or the stat has one value.",
-          "rows": [["A-Class", "5%", "5.1%"]],
+          "note": "Each part by its name, the upgrade module it brings, and the weakest and the strongest card of that module.",
+          "rows": [
+            [
+              "Landing Gear",
+              "B-Class Launch Thruster",
+              "Launch Cost −11 to −15%\nBoost +2 to +5%"
+            ],
+            [
+              "Mag-Field Landing Thrusters",
+              "B-Class Launch Thruster",
+              "Launch Cost −11 to −15%\nBoost +2 to +5%"
+            ],
+            [
+              "Hydraulic Legs",
+              "B-Class Launch Thruster",
+              "Launch Cost −11 to −15%\nBoost +2 to +5%"
+            ],
+            [
+              "Thunderbird Landing Thrusters",
+              "B-Class Launch Thruster",
+              "Launch Cost −11 to −15%\nBoost +2 to +5%"
+            ]
+          ],
+          "sprite": { "columns": 16, "src": "/modules/corvette-modules.webp" },
           "text": 3
         },
-        "shipmini": {
-          "head": [
-            "Module",
-            "Stats raised",
-            "Damage",
-            "Fire Rate",
-            "Heat Dispersion"
-          ],
-          "kinds": ["text", "text", "text", "text", "text"],
-          "note": "Infra-Knife Accelerator upgrade modules, their limits as the game's card prints them. Stats raised is how many stats one install shows on its card.",
-          "rows": [["A-Class", "3", "+3% to +5%", "+5% to +11%", "+5% to +8%"]],
-          "text": 2
-        },
-        "shipminiRolls": {
-          "head": [
-            "Module",
-            "Stats raised",
-            "Near best Damage",
-            "Damage",
-            "Fire Rate",
-            "Heat Dispersion"
-          ],
-          "kinds": ["text", "text", "text", "text", "text", "text"],
-          "note": "What one install of each Infra-Knife Accelerator upgrade module rolls, exact over every install. Stats raised: how often its card shows each number of stats. Near best: how often it adds at least nine tenths of the most Damage any install of its kind adds, a dash where Damage has one value. Each stat: how often an install raises it.",
-          "rows": [["A-Class", "3", "16.5%", "100%", "100%", "100%"]],
-          "text": 6
-        },
-        "shipminiTop": {
-          "head": ["Module", "Damage", "Fire Rate", "Heat Dispersion"],
-          "kinds": ["text", "text", "text", "text"],
-          "note": "How often a raised stat of each Infra-Knife Accelerator upgrade module lands in the top tenth of its limits, a dash where the module has no such stat or the stat has one value.",
-          "rows": [["A-Class", "5.2%", "2.5%", "5.1%"]],
-          "text": 4
-        },
-        "shiproc": {
-          "head": [
-            "Module",
-            "Stats raised",
-            "Damage",
-            "Heat Recovery",
-            "Range"
-          ],
-          "kinds": ["text", "text", "text", "text", "text"],
-          "note": "Rocket batteries upgrade modules, their limits as the game's card prints them. Stats raised is how many stats one install shows on its card.",
-          "rows": [
-            ["A-Class", "3", "+6% to +7%", "+20% to +25%", "+5% to +11%"]
-          ],
-          "text": 2
-        },
-        "shiprocRolls": {
-          "head": [
-            "Module",
-            "Stats raised",
-            "Near best Damage",
-            "Damage",
-            "Heat Recovery",
-            "Range"
-          ],
-          "kinds": ["text", "text", "text", "text", "text", "text"],
-          "note": "What one install of each Rocket batteries upgrade module rolls, exact over every install. Stats raised: how often its card shows each number of stats. Near best: how often it adds at least nine tenths of the most Damage any install of its kind adds, a dash where Damage has one value. Each stat: how often an install raises it.",
-          "rows": [["A-Class", "3", "29.4%", "100%", "100%", "100%"]],
-          "text": 6
-        },
-        "shiprocTop": {
-          "head": ["Module", "Damage", "Heat Recovery", "Range"],
-          "kinds": ["text", "text", "text", "text"],
-          "note": "How often a raised stat of each Rocket batteries upgrade module lands in the top tenth of its limits, a dash where the module has no such stat or the stat has one value.",
-          "rows": [["A-Class", "5.2%", "5.1%", "5.1%"]],
-          "text": 4
-        },
-        "shipshld": {
-          "head": ["Module", "Stats raised", "Shield Strength"],
+        "partsReactors": {
+          "head": ["Part", "Module", "What it can add"],
+          "icons": [51, 55, 50, 52, 54, 53],
           "kinds": ["text", "text", "text"],
-          "note": "Deflector Shield upgrade modules, their limits as the game's card prints them. Stats raised is how many stats one install shows on its card.",
+          "note": "Each part by its name, the upgrade module it brings, and the weakest and the strongest card of that module.",
           "rows": [
-            ["B-Class", "1", "+7% to +15%"],
-            ["A-Class", "1", "+15% to +30%"]
+            [
+              "Medusa-Class Reactor",
+              "A-Class flight control systems",
+              "Boost +11 to +20%\nManoeuvrability +5 to +16%"
+            ],
+            [
+              "Chelone-Class Generator",
+              "A-Class flight control systems",
+              "Boost +11 to +20%\nManoeuvrability +5 to +16%"
+            ],
+            [
+              "Zenith-Class Reactor",
+              "A-Class Hyperdrive",
+              "Warp Cell Efficiency +100%\nHyperdrive Range 165 to 220 ly"
+            ],
+            [
+              "Azimuth-Class Reactor",
+              "A-Class navigation systems",
+              "Pulse Drive Fuel Efficiency +15 to +20%\nAutomatic Recharging +100%\nLaunch Cost −15 to −20%"
+            ],
+            [
+              "Limos-Class Generator",
+              "A-Class navigation systems",
+              "Pulse Drive Fuel Efficiency +15 to +20%\nAutomatic Recharging +100%\nLaunch Cost −15 to −20%"
+            ],
+            [
+              "Ceto-Class Reactor",
+              "A-Class defensive systems",
+              "Shield Strength +10 to +19%"
+            ]
           ],
-          "text": 2
+          "sprite": { "columns": 16, "src": "/modules/corvette-modules.webp" },
+          "text": 3
         },
-        "shipshldRolls": {
-          "head": [
-            "Module",
-            "Stats raised",
-            "Near best Shield Strength",
-            "Shield Strength"
-          ],
-          "kinds": ["text", "text", "text", "text"],
-          "note": "What one install of each Deflector Shield upgrade module rolls, exact over every install. Stats raised: how often its card shows each number of stats. Near best: how often it adds at least nine tenths of the most Shield Strength any install of its kind adds, a dash where Shield Strength has one value. Each stat: how often an install raises it.",
+        "partsShields": {
+          "head": ["Part", "Module", "What it can add"],
+          "icons": [36, 37, 38, 39, 40],
+          "kinds": ["text", "text", "text"],
+          "note": "Each part by its name, the upgrade module it brings, and the weakest and the strongest card of that module.",
           "rows": [
-            ["B-Class", "1", "10.7%", "100%"],
-            ["A-Class", "1", "10.7%", "100%"]
+            [
+              "Deflector Shield",
+              "B-Class Deflector Shield",
+              "Shield Strength +7 to +15%"
+            ],
+            [
+              "Ion Barrier",
+              "B-Class Deflector Shield",
+              "Shield Strength +7 to +15%"
+            ],
+            [
+              "High-Energy Shield",
+              "B-Class Deflector Shield",
+              "Shield Strength +7 to +15%"
+            ],
+            [
+              "Defence Field",
+              "B-Class Deflector Shield",
+              "Shield Strength +7 to +15%"
+            ],
+            [
+              "Aeron Powershield",
+              "B-Class Deflector Shield",
+              "Shield Strength +7 to +15%"
+            ]
           ],
-          "text": 4
+          "sprite": { "columns": 16, "src": "/modules/corvette-modules.webp" },
+          "text": 3
         },
-        "shipshldTop": {
-          "head": ["Module", "Shield Strength"],
-          "kinds": ["text", "text"],
-          "note": "How often a raised stat of each Deflector Shield upgrade module lands in the top tenth of its limits, a dash where the module has no such stat or the stat has one value.",
+        "partsTractor": {
+          "head": ["Part", "Module", "What it can add"],
+          "icons": [60],
+          "kinds": ["text", "text", "text"],
+          "note": "Each part by its name, the upgrade module it brings, and the weakest and the strongest card of that module.",
           "rows": [
-            ["B-Class", "5.2%"],
-            ["A-Class", "5.2%"]
+            ["Tractor Beam", "A-Class Salvage Recovery System", "Tractor Beam"]
           ],
-          "text": 2
+          "sprite": { "columns": 16, "src": "/modules/corvette-modules.webp" },
+          "text": 3
         },
-        "shipshot": {
-          "head": [
-            "Module",
-            "Stats raised",
-            "Damage",
-            "Fire Rate",
-            "Heat Dispersion"
-          ],
-          "kinds": ["text", "text", "text", "text", "text"],
-          "note": "Positron Ejector upgrade modules, their limits as the game's card prints them. Stats raised is how many stats one install shows on its card.",
+        "partsWeapons": {
+          "head": ["Part", "Module", "What it can add"],
+          "icons": [30, 31, 32, 33, 34, 35, 59],
+          "kinds": ["text", "text", "text"],
+          "note": "Each part by its name, the upgrade module it brings, and the weakest and the strongest card of that module.",
           "rows": [
-            ["A-Class", "3", "+1% to +2%", "+6% to +11%", "+6% to +11%"]
+            [
+              "Photon Cannon Array",
+              "A-Class Photon Cannon",
+              "Heat Dispersion +2 to +3%\nFire Rate +2 to +3%\nDamage +5 to +7%"
+            ],
+            [
+              "Deadeye Cannon",
+              "A-Class Positron Ejector",
+              "Heat Dispersion +7 to +10%\nFire Rate +7 to +10%\nDamage +1 to +2%"
+            ],
+            [
+              "Phase Beam Array",
+              "A-Class Phase Beam",
+              "Damage +20 to +23%\nHeat Dispersion +55 to +75%"
+            ],
+            [
+              "Cyclotron Defence Cannon",
+              "A-Class Cyclotron Ballista",
+              "Heat Dispersion +25 to +30%\nFire Rate +5 to +10%\nDamage +1%"
+            ],
+            [
+              "Infra-Knife Platform",
+              "A-Class Infra-Knife Accelerator",
+              "Heat Dispersion +5 to +7%\nFire Rate +5 to +10%\nDamage +3 to +5%"
+            ],
+            [
+              "Dematerialisation Ray",
+              "A-Class Infra-Knife Accelerator",
+              "Heat Dispersion +5 to +7%\nFire Rate +5 to +10%\nDamage +3 to +5%"
+            ],
+            [
+              "Torpedo Launcher",
+              "A-Class rocket batteries",
+              "Range +5 to +10%\nHeat Recovery +20 to +25%\nDamage +6 to +7%"
+            ]
           ],
-          "text": 2
-        },
-        "shipshotRolls": {
-          "head": [
-            "Module",
-            "Stats raised",
-            "Near best Damage",
-            "Damage",
-            "Fire Rate",
-            "Heat Dispersion"
-          ],
-          "kinds": ["text", "text", "text", "text", "text", "text"],
-          "note": "What one install of each Positron Ejector upgrade module rolls, exact over every install. Stats raised: how often its card shows each number of stats. Near best: how often it adds at least nine tenths of the most Damage any install of its kind adds, a dash where Damage has one value. Each stat: how often an install raises it.",
-          "rows": [["A-Class", "3", "20.6%", "100%", "100%", "100%"]],
-          "text": 6
-        },
-        "shipshotTop": {
-          "head": ["Module", "Damage", "Fire Rate", "Heat Dispersion"],
-          "kinds": ["text", "text", "text", "text"],
-          "note": "How often a raised stat of each Positron Ejector upgrade module lands in the top tenth of its limits, a dash where the module has no such stat or the stat has one value.",
-          "rows": [["A-Class", "2.7%", "1.5%", "1.5%"]],
-          "text": 4
+          "sprite": { "columns": 16, "src": "/modules/corvette-modules.webp" },
+          "text": 3
         }
       },
       "title": "Corvette modules"
+    },
+    "corvettes": {
+      "fact": "Build the best corvette: finalise a small one, raise it to S, fill its technology slots with your own modules, and add compact parts last.",
+      "numbers": {
+        "barrels": { "k": "plain", "v": 12 },
+        "cargo_most": { "k": "plain", "v": 9 },
+        "caution": { "k": "plain", "v": 80 },
+        "class_boost_max": { "k": "plain", "v": 15 },
+        "class_boost_min": { "k": "plain", "v": 5 },
+        "class_c_boost": { "k": "plain", "v": 5 },
+        "complexity": { "k": "plain", "v": 100 },
+        "exit_max": { "k": "count", "v": 1200 },
+        "exit_min": { "k": "plain", "v": 200 },
+        "hab_cargo": { "k": "plain", "v": 3 },
+        "hud_boost": { "k": "plain", "v": 10 },
+        "landing_turn": { "k": "plain", "v": 3 },
+        "limit": { "k": "plain", "v": 3 },
+        "nanites": { "k": "count", "v": 85000 },
+        "planet_boost": { "k": "plain", "v": 185 },
+        "planet_speed": { "k": "plain", "v": 130 },
+        "size_loss": { "k": "share", "v": 0.8 },
+        "space_boost": { "k": "count", "v": 1100 },
+        "space_readout": { "k": "plain", "v": 2 },
+        "space_speed": { "k": "plain", "v": 180 },
+        "supercharged": { "k": "plain", "v": 4 },
+        "tech_slots": { "k": "plain", "v": 60 },
+        "walkway_cargo": { "k": "plain", "v": 1 }
+      },
+      "tables": {},
+      "title": "Corvettes"
     },
     "creature-affinity": {
       "fact": "A planet gives its creatures one affinity. Mechanical is the exception: one in ten full-life planets of Uncharted systems, and nothing else lives there.",
@@ -2269,6 +3802,252 @@
       },
       "title": "Empty worlds"
     },
+    "excavation-finds": {
+      "fact": "A planet with Ancient Bones holds bone piles of four kinds. Digging one up gives a fossil of its kind: a skull, limbs, a torso, or a tail, 138 in all.",
+      "numbers": {
+        "boneValue": { "k": "plain", "v": 72000 },
+        "displaySlots": { "k": "plain", "v": 5 },
+        "displays": { "k": "plain", "v": 5 },
+        "dug": { "k": "plain", "v": 138 },
+        "fossils": { "k": "plain", "v": 143 },
+        "limbs": { "k": "plain", "v": 10 },
+        "notDug": { "k": "plain", "v": 5 },
+        "skulls": { "k": "plain", "v": 108 },
+        "tails": { "k": "plain", "v": 8 },
+        "torsos": { "k": "plain", "v": 12 }
+      },
+      "tables": {
+        "displays": {
+          "head": ["Display", "Bones it takes"],
+          "icons": [143, 144, 145, 146, 147],
+          "kinds": ["text", "text"],
+          "note": "Each skeleton display base part and its slots, one bone in each; any limb fits any limb or wing slot.",
+          "rows": [
+            [
+              "Quadruped Fossil Display",
+              "Skull, Torso, Forelegs, Hind legs, Tail"
+            ],
+            [
+              "Biped Fossil Display",
+              "Skull, Torso, Upper limbs, Lower limbs, Tail"
+            ],
+            [
+              "Reptilian Fossil Display",
+              "Skull, Torso, Wings, Forelegs, Hind legs"
+            ],
+            ["Avian Fossil Display", "Skull, Torso, Wings, Lower limbs, Tail"],
+            [
+              "Protoform Fossil Display",
+              "Skull, Torso, Upper limbs, Lower limbs, Tail"
+            ]
+          ],
+          "sprite": { "columns": 16, "src": "/creatures/fossils.webp" },
+          "text": 2
+        },
+        "elsewhere": {
+          "head": ["Fossil"],
+          "icons": [138, 139, 140, 141, 142],
+          "kinds": ["text"],
+          "note": "Fossils of the game that no bone pile gives.",
+          "rows": [
+            ["Moustachioed Skull"],
+            ["Snapbeak Skull"],
+            ["Upturned Tailfan"],
+            ["Downturned Tailfan"],
+            ["Stubtail"]
+          ],
+          "sprite": { "columns": 16, "src": "/creatures/fossils.webp" },
+          "text": 1
+        },
+        "limbs": {
+          "head": ["Fossilised Limbs"],
+          "icons": [108, 109, 110, 111, 112, 113, 114, 115, 116, 117],
+          "kinds": ["text"],
+          "note": "Each fossil a pile of this kind can give.",
+          "rows": [
+            ["Hunter's Forearms"],
+            ["Ungulate Fossil"],
+            ["Dangling Forearms"],
+            ["Grasping Forearms"],
+            ["Stalking Leg Bones"],
+            ["Fossilised Biped Legs"],
+            ["Swift Leg Bones"],
+            ["Fossilised Flippers"],
+            ["Fossilised Fins"],
+            ["Fossilised Wing Stubs"]
+          ],
+          "sprite": { "columns": 16, "src": "/creatures/fossils.webp" },
+          "text": 1
+        },
+        "skulls": {
+          "head": ["Fossilised Skull"],
+          "icons": [
+            0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,
+            19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35,
+            36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52,
+            53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69,
+            70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86,
+            87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102,
+            103, 104, 105, 106, 107
+          ],
+          "kinds": ["text"],
+          "note": "Each fossil a pile of this kind can give.",
+          "rows": [
+            ["Predator Skull"],
+            ["Mono-Horn Predator Skull"],
+            ["Horned Predator Skull"],
+            ["Diabolic Skull"],
+            ["Vicious Predator Skull"],
+            ["Herbivore Skull"],
+            ["Forest Warrior Skull"],
+            ["Skull of the Cursed Doe"],
+            ["Pachyovine Skull"],
+            ["Armoured Ovine Skull"],
+            ["Ovine Skull"],
+            ["Skull of the Golden Hart"],
+            ["Crown of Bones"],
+            ["Longhorn Skull"],
+            ["Grazer Skull"],
+            ["Skull of the Watcher"],
+            ["Rodent Skull"],
+            ["Spiked Rodent Skull"],
+            ["Gnarled Rodent Skull"],
+            ["Flared Rodent Skull"],
+            ["Armoured Rodent Skull"],
+            ["Magnificent Rodent Skull"],
+            ["Statuesque Rodent Skull"],
+            ["Midnight Nibbler Skull"],
+            ["Skull of the Forest King"],
+            ["Longhorn Rodent Skull"],
+            ["Glorious Rodent Skull"],
+            ["Boar Skull"],
+            ["Wattlehog Skull"],
+            ["Saddleback Skull"],
+            ["Bullhog Skull"],
+            ["Warthog Skull"],
+            ["Swinehorn Skull"],
+            ["Hornboare Skull"],
+            ["Hammerhead Skull"],
+            ["Charger Skull"],
+            ["Flathead Skull"],
+            ["Canine Skull"],
+            ["Warhound Skull"],
+            ["Fearsome Canine Skull"],
+            ["Armoured Canine Skull"],
+            ["Scavenger Skull"],
+            ["Skull of the Bone Thief"],
+            ["Carbuncle Skull"],
+            ["Infernal Skull"],
+            ["Malevolent Skull"],
+            ["Skull of the Wild Hunter"],
+            ["Haunted Skull"],
+            ["Megafauna Skull"],
+            ["Skull of the Goring Wall"],
+            ["Colossal Skull"],
+            ["Mammoth Skull"],
+            ["Behemoth Skull"],
+            ["Styrax Skull"],
+            ["\"Dragon\" Skull"],
+            ["Monstrous Skull"],
+            ["Oceanid Skull"],
+            ["Vy'keen Spirit Skull"],
+            ["Giganto-Skull"],
+            ["Elephantine Skull"],
+            ["Cyclopean Skull"],
+            ["Gargantuan Skull"],
+            ["Protoform Skull"],
+            ["Masked Skull"],
+            ["Warrior Skull"],
+            ["Bonehair Skull"],
+            ["Unnameable Skull"],
+            ["Nightmare Skull"],
+            ["Skull of the Midnight Visitor"],
+            ["Skull of the Ocean King"],
+            ["Leviathan Skull"],
+            ["Worm Lord Skull"],
+            ["Titanworm Skull"],
+            ["Skull of the Consumer"],
+            ["Feasting Skull"],
+            ["Cetenid Skull"],
+            ["Skull of the Master"],
+            ["Blunted Skull"],
+            ["Fleshripper Skull"],
+            ["Avian Skull"],
+            ["Divewing Skull"],
+            ["Pterosaur Skull"],
+            ["Hookbeak Skull"],
+            ["Proto-Parrot Skull"],
+            ["Crocodilian Skull"],
+            ["Swamp Dweller Skull"],
+            ["Mega-Newt Skull"],
+            ["Pond Beast Skull"],
+            ["Bogsnapper Skull"],
+            ["Marshdipper Skull"],
+            ["Mudskipper Skull"],
+            ["Sarco-Skull"],
+            ["Sawtooth Skull"],
+            ["Reptile Skull"],
+            ["Skull of the Legsnapper"],
+            ["Equuleus Skull"],
+            ["Pincer Skull"],
+            ["Monoceros Skull"],
+            ["Direhorn Skull"],
+            ["Broadbore Skull"],
+            ["Skull of the Plains Menace"],
+            ["Skull of the Untameable"],
+            ["Skull of the Unbroken"],
+            ["Gnawing Skull"],
+            ["Pegasus Skull"],
+            ["Longtooth Skull"],
+            ["Horned Bounder Skull"],
+            ["Drayflare Skull"]
+          ],
+          "sprite": { "columns": 16, "src": "/creatures/fossils.webp" },
+          "text": 1
+        },
+        "tails": {
+          "head": ["Fossilised Tail"],
+          "icons": [130, 131, 132, 133, 134, 135, 136, 137],
+          "kinds": ["text"],
+          "note": "Each fossil a pile of this kind can give.",
+          "rows": [
+            ["Fearsome Lashbone"],
+            ["Flailing Tailbone"],
+            ["Plated Tailbone"],
+            ["Slashing Springtail"],
+            ["Ancient Tailbone"],
+            ["Mace-like Tailbone"],
+            ["Lengthy Tailbone"],
+            ["Coiled Tailbone"]
+          ],
+          "sprite": { "columns": 16, "src": "/creatures/fossils.webp" },
+          "text": 1
+        },
+        "torsos": {
+          "head": ["Fossilised Torso"],
+          "icons": [118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129],
+          "kinds": ["text"],
+          "note": "Each fossil a pile of this kind can give.",
+          "rows": [
+            ["Lengthy Ribcage"],
+            ["Lengthy Plated Ribcage"],
+            ["Gargantuan Ribcage"],
+            ["Mighty Ribcage"],
+            ["Lengthy Flared Ribcage"],
+            ["Lengthy Finned Ribcage"],
+            ["Ancient Ribcage"],
+            ["Plated Ribcage"],
+            ["Spiked Ribcage"],
+            ["Armoured Ribcage"],
+            ["Flared Ribcage"],
+            ["Finned Ribcage"]
+          ],
+          "sprite": { "columns": 16, "src": "/creatures/fossils.webp" },
+          "text": 1
+        }
+      },
+      "title": "Excavation finds"
+    },
     "exosuit-modules": {
       "fact": "An S-Class Movement System upgrade always raises jetpack tanks and initial boost power, and two more of four other stats.",
       "numbers": {},
@@ -3104,6 +4883,7 @@
       },
       "numbers": {
         "commonestShare": { "k": "share", "v": 0.1206092697 },
+        "cornerGap": { "k": "about", "v": 21 },
         "rarest": "flat line",
         "rarestShare": { "k": "share", "v": 0.003638514039 },
         "rifleLine": { "k": "share", "v": 0.06236417564 },
@@ -3550,6 +5330,771 @@
         }
       },
       "title": "Tetris figures"
+    },
+    "fishing": {
+      "fact": "Each planet type has its own fish, and a shared set bites on all but gas giants. Some bite only by day, at night, or in a storm; big fish need deep water.",
+      "numbers": {
+        "baitDay": { "k": "plain", "v": 8 },
+        "baitNight": { "k": "plain", "v": 8 },
+        "baitStorm": { "k": "plain", "v": 5.2 },
+        "common": { "k": "share", "v": 0.5377358491 },
+        "commonCount": { "k": "plain", "v": 70 },
+        "day": { "k": "plain", "v": 18 },
+        "deep": { "k": "plain", "v": 90 },
+        "fish": { "k": "plain", "v": 222 },
+        "fishSizeHigh": { "k": "plain", "v": 3 },
+        "fishSizeLow": { "k": "plain", "v": 1.3 },
+        "flotsamCount": { "k": "plain", "v": 9 },
+        "junk": { "k": "share", "v": 0.1886792453 },
+        "legendary": { "k": "share", "v": 0.009433962264 },
+        "legendaryCount": { "k": "plain", "v": 41 },
+        "night": { "k": "plain", "v": 26 },
+        "rareCount": { "k": "plain", "v": 40 },
+        "specialCount": { "k": "plain", "v": 2 },
+        "storm": { "k": "plain", "v": 17 },
+        "uncommonCount": { "k": "plain", "v": 60 },
+        "waterworldDeep": { "k": "plain", "v": 900 }
+      },
+      "tables": {
+        "baits": {
+          "head": ["Bait", "Kinds", "When"],
+          "icons": [170, 171, 172, 173, 174, 175],
+          "kinds": ["text", "text", "text"],
+          "note": "What each bait multiplies a fish's weight by. A kind it leaves out keeps its weight; no bait here changes size.",
+          "rows": [
+            [
+              "Mealworms",
+              {
+                "t": "no Collected Flotsam, Common Fish ×{0}, Uncommon Fish ×{1}, Rare Fish ×{2}, Legendary Fish ×{3}",
+                "v": [
+                  { "k": "plain", "v": 0.9 },
+                  { "k": "plain", "v": 2 },
+                  { "k": "plain", "v": 1.5 },
+                  { "k": "plain", "v": 1.2 }
+                ]
+              },
+              null
+            ],
+            [
+              "Spicy Chum",
+              {
+                "t": "no Collected Flotsam, Common Fish ×{0}, Uncommon Fish ×{1}, Rare Fish ×{2}, Legendary Fish ×{3}",
+                "v": [
+                  { "k": "plain", "v": 0.35 },
+                  { "k": "plain", "v": 1.1 },
+                  { "k": "plain", "v": 5 },
+                  { "k": "plain", "v": 1.5 }
+                ]
+              },
+              null
+            ],
+            [
+              "Bionic Lure",
+              {
+                "t": "no Collected Flotsam, Common Fish ×{0}, Uncommon Fish ×{1}, Rare Fish ×{2}, Legendary Fish ×{3}",
+                "v": [
+                  { "k": "plain", "v": 0.1 },
+                  { "k": "plain", "v": 0.66 },
+                  { "k": "plain", "v": 5 },
+                  { "k": "plain", "v": 2.5 }
+                ]
+              },
+              null
+            ],
+            [
+              "Dangling Orb",
+              {
+                "t": "no Collected Flotsam, Uncommon Fish ×{0}, Rare Fish ×{1}, Legendary Fish ×{2}",
+                "v": [
+                  { "k": "plain", "v": 1.3 },
+                  { "k": "plain", "v": 2 },
+                  { "k": "plain", "v": 1.5 }
+                ]
+              },
+              { "t": "day fish ×{0}", "v": [{ "k": "plain", "v": 8 }] }
+            ],
+            [
+              "Shadow Lure",
+              {
+                "t": "no Collected Flotsam, Uncommon Fish ×{0}, Rare Fish ×{1}, Legendary Fish ×{2}",
+                "v": [
+                  { "k": "plain", "v": 1.3 },
+                  { "k": "plain", "v": 2 },
+                  { "k": "plain", "v": 1.5 }
+                ]
+              },
+              { "t": "night fish ×{0}", "v": [{ "k": "plain", "v": 8 }] }
+            ],
+            [
+              "Magpulse Lure",
+              {
+                "t": "no Collected Flotsam, Uncommon Fish ×{0}, Rare Fish ×{1}, Legendary Fish ×{2}",
+                "v": [
+                  { "k": "plain", "v": 1.3 },
+                  { "k": "plain", "v": 2 },
+                  { "k": "plain", "v": 1.5 }
+                ]
+              },
+              { "t": "storm fish ×{0}", "v": [{ "k": "plain", "v": 5.2 }] }
+            ]
+          ],
+          "sprite": { "columns": 16, "src": "/creatures/fish.webp" },
+          "text": 3
+        },
+        "common": {
+          "head": ["Fish", "Size", "Planet type", "When"],
+          "icons": [
+            4, 5, 6, 7, 8, 9, 10, 25, 26, 27, 28, 29, 30, 31, 45, 6, 46, 4, 31,
+            47, 48, 60, 8, 61, 62, 6, 63, 64, 74, 75, 76, 77, 78, 79, 80, 95,
+            45, 6, 96, 60, 26, 7, 6, 95, 27, 31, 8, 105, 106, 115, 46, 116, 117,
+            118, 119, 120, 95, 133, 6, 134, 135, 136, 137, 27, 150, 151, 62, 25,
+            152, 28
+          ],
+          "kinds": ["text", "text", "text", "text"],
+          "note": "Every fish the game calls Common Fish.",
+          "rows": [
+            ["Tiny Scuttlefish", "Small", "Any but gas giants", "Any time"],
+            ["Mud Crab", "Small", "Any but gas giants", "Any time"],
+            ["Pondskipper", "Small", "Any but gas giants", "Any time"],
+            ["Reef Eel", "Medium-sized", "Any but gas giants", "Any time"],
+            ["Rockfin", "Medium-sized", "Any but gas giants", "Any time"],
+            ["Greenscale Bloater", "Large", "Any but gas giants", "Any time"],
+            ["Stonescale Shark", "Colossal", "Any but gas giants", "Any time"],
+            ["Bileworm", "Small", "Toxic, Swamp", "Any time"],
+            ["Venomous Triggerfin", "Small", "Toxic, Swamp", "Any time"],
+            ["Sea Cucumber", "Small", "Toxic, Swamp", "Any time"],
+            ["Blistering Eel", "Medium-sized", "Toxic, Swamp", "Any time"],
+            ["Toxic Jelly", "Medium-sized", "Toxic, Swamp", "At night"],
+            ["Green-Ring Octopus", "Large", "Toxic, Swamp", "Any time"],
+            ["Giant Whiskerfish", "Colossal", "Toxic, Swamp", "Any time"],
+            ["Bulging Snapper", "Small", "Radioactive", "Any time"],
+            ["Spotted Protofin", "Small", "Radioactive", "Any time"],
+            ["Field's Dartfish", "Small", "Radioactive", "Any time"],
+            ["Forktailed Splicer", "Medium-sized", "Radioactive", "In a storm"],
+            ["Inverted Snapper", "Medium-sized", "Radioactive", "At night"],
+            ["Glowing Catfish", "Large", "Radioactive", "At night"],
+            ["Polyscale Bloater", "Colossal", "Radioactive", "Any time"],
+            ["Oilfin", "Small", "Scorched, Lava", "At night"],
+            ["Common Sunfish", "Small", "Scorched, Lava", "By day"],
+            ["Ash Snail", "Small", "Scorched, Lava", "Any time"],
+            ["Boiled Snapper", "Medium-sized", "Scorched, Lava", "Any time"],
+            ["Lavascale Trout", "Medium-sized", "Scorched, Lava", "Any time"],
+            ["Sulphurfish", "Large", "Scorched, Lava", "In a storm"],
+            ["Basalt-Tooth Bloater", "Colossal", "Scorched, Lava", "Any time"],
+            ["Ice Darter", "Small", "Frozen", "Any time"],
+            ["Frozen Whelk", "Small", "Frozen", "Any time"],
+            ["Frostscale Trout", "Small", "Frozen", "Any time"],
+            ["Midnight Eel", "Medium-sized", "Frozen", "At night"],
+            ["Thawed Diamondfin", "Medium-sized", "Frozen", "By day"],
+            ["Glacier Carp", "Large", "Frozen", "Any time"],
+            ["Giant Hairy Crab", "Colossal", "Frozen", "Any time"],
+            ["Shadowfin", "Small", "Lush", "At night"],
+            ["Warty Frogfish", "Small", "Lush", "By day"],
+            ["Common Shimmertail", "Small", "Lush", "Any time"],
+            ["Wandering Kelpfin", "Medium-sized", "Lush", "At night"],
+            ["Clearwater Skipper", "Medium-sized", "Lush", "By day"],
+            ["Flourishing Shalefish", "Large", "Lush", "Any time"],
+            ["Warden Eel", "Colossal", "Lush", "Any time"],
+            ["Fool's Goldfish", "Small", "Barren", "Any time"],
+            ["Lesser Dustfin", "Small", "Barren", "Any time"],
+            ["Briny Worm", "Small", "Barren", "In a storm"],
+            ["Chalkscale Nibber", "Medium-sized", "Barren", "Any time"],
+            ["Sweeperfish", "Medium-sized", "Barren", "Any time"],
+            ["Twilight Cavefish", "Large", "Barren", "At night"],
+            ["Greater Rocktooth", "Colossal", "Barren", "Any time"],
+            ["Vectorfin", "Small", "Weird, Red, Green, Blue", "Any time"],
+            ["Hexscale Minnow", "Small", "Weird, Red, Green, Blue", "Any time"],
+            [
+              "Aurora Jellyfish",
+              "Small",
+              "Weird, Red, Green, Blue",
+              "At night"
+            ],
+            [
+              "Murmurfish",
+              "Medium-sized",
+              "Weird, Red, Green, Blue",
+              "Any time"
+            ],
+            [
+              "Inverted Brainfish",
+              "Medium-sized",
+              "Weird, Red, Green, Blue",
+              "In a storm"
+            ],
+            [
+              "Shimmering Lashtail",
+              "Large",
+              "Weird, Red, Green, Blue",
+              "Any time"
+            ],
+            [
+              "Breach Crawler",
+              "Colossal",
+              "Weird, Red, Green, Blue",
+              "In a storm"
+            ],
+            ["De-pressurised Blob", "Small", "Waterworld", "Any time"],
+            ["Deepwater Minnow", "Small", "Waterworld", "Any time"],
+            ["Sac-fish", "Small", "Waterworld", "At night"],
+            ["Silent Angler", "Medium-sized", "Waterworld", "At night"],
+            ["Whispering Jelly", "Medium-sized", "Waterworld", "In a storm"],
+            ["Wandering Shellback", "Large", "Waterworld", "Any time"],
+            ["Bleached Octopus", "Colossal", "Waterworld", "By day"],
+            ["Gas-Worm", "Small", "Gas Giant", "Any time"],
+            ["Pressurised Clam", "Small", "Gas Giant", "Any time"],
+            ["Inert Whelk", "Small", "Gas Giant", "At night"],
+            ["Jelly Prawn", "Medium-sized", "Gas Giant", "By day"],
+            ["Encrusted Worm", "Medium-sized", "Gas Giant", "Any time"],
+            ["Plasmatic Squid", "Large", "Gas Giant", "Any time"],
+            ["Cyclonic Eel", "Colossal", "Gas Giant", "In a storm"]
+          ],
+          "sprite": { "columns": 16, "src": "/creatures/fish.webp" },
+          "text": 4
+        },
+        "fishBait": {
+          "head": ["Bait fish", "Raises", "By"],
+          "kinds": ["text", "text", "text"],
+          "note": "A fish used as bait: the kind it raises and the least and most it raises it by; each fish has its own fixed factor. It also keeps flotsam off the hook.",
+          "rows": [
+            [
+              "Collected Flotsam",
+              "Common Fish",
+              {
+                "t": "×{0} to ×{1}",
+                "v": [
+                  { "k": "plain", "v": 1 },
+                  { "k": "plain", "v": 1.2 }
+                ]
+              }
+            ],
+            [
+              "Common Fish",
+              "Uncommon Fish",
+              {
+                "t": "×{0} to ×{1}",
+                "v": [
+                  { "k": "plain", "v": 1.2 },
+                  { "k": "plain", "v": 2 }
+                ]
+              }
+            ],
+            [
+              "Uncommon Fish",
+              "Rare Fish",
+              {
+                "t": "×{0} to ×{1}",
+                "v": [
+                  { "k": "plain", "v": 1.2 },
+                  { "k": "plain", "v": 3 }
+                ]
+              }
+            ],
+            [
+              "Rare Fish",
+              "Legendary Fish",
+              {
+                "t": "×{0} to ×{1}",
+                "v": [
+                  { "k": "plain", "v": 1.2 },
+                  { "k": "plain", "v": 4 }
+                ]
+              }
+            ],
+            [
+              "Legendary Fish",
+              "Legendary Fish",
+              {
+                "t": "×{0} to ×{1}",
+                "v": [
+                  { "k": "plain", "v": 1.2 },
+                  { "k": "plain", "v": 4 }
+                ]
+              }
+            ]
+          ],
+          "text": 2
+        },
+        "flotsam": {
+          "head": ["Fish", "Size", "Planet type", "When"],
+          "icons": [162, 163, 164, 165, 166, 167, 168, 169, 3],
+          "kinds": ["text", "text", "text", "text"],
+          "note": "Every fish the game calls Collected Flotsam.",
+          "rows": [
+            ["Kelp Strand", "Colossal", "Any but gas giants", "Any time"],
+            ["Tangleweed", "Small", "Any but gas giants", "Any time"],
+            ["Sea Sponge", "Large", "Any but gas giants", "Any time"],
+            ["Bleached Coral", "Large", "Any but gas giants", "Any time"],
+            ["Expired Braincoral", "Large", "Any but gas giants", "Any time"],
+            ["Ossified Coral", "Large", "Any but gas giants", "Any time"],
+            ["Old Boot", "Small", "Any but gas giants", "Any time"],
+            ["Rusted Technology", "Small", "Any but gas giants", "Any time"],
+            ["Message in a Bottle", "Small", "Any but gas giants", "Any time"]
+          ],
+          "sprite": { "columns": 16, "src": "/creatures/fish.webp" },
+          "text": 4
+        },
+        "kinds": {
+          "head": ["Kind", "Weight"],
+          "kinds": ["text", "share"],
+          "note": "Each kind's share of the weight; the fish of a kind that can bite share it evenly.",
+          "rows": [
+            ["Collected Flotsam", 0.1886792453],
+            ["Common Fish", 0.5377358491],
+            ["Uncommon Fish", 0.2358490566],
+            ["Rare Fish", 0.02830188679],
+            ["Legendary Fish", 0.009433962264]
+          ]
+        },
+        "legendary": {
+          "head": ["Fish", "Size", "Planet type", "When"],
+          "icons": [
+            2, 21, 22, 23, 24, 42, 43, 24, 44, 56, 57, 58, 59, 71, 72, 73, 23,
+            91, 92, 93, 94, 73, 103, 104, 44, 113, 23, 24, 114, 130, 131, 73,
+            132, 146, 147, 148, 149, 159, 160, 161, 44
+          ],
+          "kinds": ["text", "text", "text", "text"],
+          "note": "Every fish the game calls Legendary Fish.",
+          "rows": [
+            ["The Angler", "Large", "Any but gas giants", "During its mission"],
+            ["Singing Sea-Snail", "Small", "Any but gas giants", "Any time"],
+            [
+              "Golden Jellyfish",
+              "Medium-sized",
+              "Any but gas giants",
+              "Any time"
+            ],
+            ["Dragonfish", "Large", "Any but gas giants", "Any time"],
+            ["The Lunker", "Colossal", "Any but gas giants", "Any time"],
+            ["Emeril Sunstar", "Small", "Toxic, Swamp", "Any time"],
+            ["Vampire Squid", "Medium-sized", "Toxic, Swamp", "At night"],
+            ["Bleached Bonefish", "Large", "Toxic, Swamp", "Any time"],
+            ["Translucent Gulper", "Colossal", "Toxic, Swamp", "Any time"],
+            ["Many-Eyed Jellyfish", "Small", "Radioactive", "Any time"],
+            ["Aberrant Duskfin", "Medium-sized", "Radioactive", "At night"],
+            ["Gamma Squid", "Large", "Radioactive", "Any time"],
+            ["Helix Sawfish", "Colossal", "Radioactive", "Any time"],
+            ["Starshell Crab", "Small", "Scorched, Lava", "Any time"],
+            [
+              "Mirrorscale Skipper",
+              "Medium-sized",
+              "Scorched, Lava",
+              "Any time"
+            ],
+            ["Jelly of the Veil", "Large", "Scorched, Lava", "At night"],
+            ["Ancient Irontail", "Colossal", "Scorched, Lava", "Any time"],
+            ["Crystal Jelly", "Small", "Frozen", "Any time"],
+            ["Ghostfin", "Medium-sized", "Frozen", "At night"],
+            ["Iceblood Gulper", "Large", "Frozen", "Any time"],
+            ["Nautilia", "Colossal", "Frozen", "Any time"],
+            ["Glass Angel", "Small", "Lush", "Any time"],
+            ["Mist Serpent", "Medium-sized", "Lush", "Any time"],
+            ["Reef Guardian", "Large", "Lush", "Any time"],
+            ["Blind Titancore", "Colossal", "Lush", "Any time"],
+            ["Fragile Icthyoscale", "Small", "Barren", "Any time"],
+            ["Titanworm Larva", "Medium-sized", "Barren", "Any time"],
+            ["Ossified Deinosuchus", "Large", "Barren", "Any time"],
+            ["Megalodon", "Colossal", "Barren", "Any time"],
+            [
+              "Abyssal Horror Egg",
+              "Small",
+              "Weird, Red, Green, Blue",
+              "Any time"
+            ],
+            [
+              "Atlantidian Crab",
+              "Medium-sized",
+              "Weird, Red, Green, Blue",
+              "Any time"
+            ],
+            ["Child of Helios", "Large", "Weird, Red, Green, Blue", "Any time"],
+            [
+              "Many-Mouthed Lunker",
+              "Colossal",
+              "Weird, Red, Green, Blue",
+              "Any time"
+            ],
+            ["Sentient Crab", "Small", "Waterworld", "Any time"],
+            ["Brain Eel", "Medium-sized", "Waterworld", "Any time"],
+            ["The Hunter Below", "Large", "Waterworld", "Any time"],
+            ["Leviathan Spawn", "Colossal", "Waterworld", "Any time"],
+            ["Mandelbrot Worm", "Small", "Gas Giant", "Any time"],
+            ["Mother-of-Quicksilver", "Medium-sized", "Gas Giant", "Any time"],
+            ["Hyper-cockle", "Large", "Gas Giant", "By day"],
+            ["The Maw of Titan", "Colossal", "Gas Giant", "Any time"]
+          ],
+          "sprite": { "columns": 16, "src": "/creatures/fish.webp" },
+          "text": 4
+        },
+        "rare": {
+          "head": ["Fish", "Size", "Planet type", "When"],
+          "icons": [
+            17, 18, 19, 20, 38, 39, 40, 41, 54, 20, 41, 55, 17, 69, 70, 38, 87,
+            88, 89, 90, 99, 100, 101, 102, 110, 20, 111, 112, 126, 127, 128,
+            129, 142, 143, 144, 145, 156, 127, 157, 158
+          ],
+          "kinds": ["text", "text", "text", "text"],
+          "note": "Every fish the game calls Rare Fish.",
+          "rows": [
+            ["Shrieking Oyster", "Small", "Any but gas giants", "Any time"],
+            ["Moon Turtle", "Medium-sized", "Any but gas giants", "At night"],
+            ["Colossal Shrimp", "Large", "Any but gas giants", "Any time"],
+            ["Thunderfin", "Colossal", "Any but gas giants", "In a storm"],
+            ["Waspfish", "Small", "Toxic, Swamp", "By day"],
+            ["Scorpionfish", "Medium-sized", "Toxic, Swamp", "Any time"],
+            ["Shrieking Venttail", "Large", "Toxic, Swamp", "Any time"],
+            ["Viper Eel", "Colossal", "Toxic, Swamp", "Any time"],
+            ["Geno-Prawn", "Small", "Radioactive", "Any time"],
+            ["Immortal Flatfish", "Medium-sized", "Radioactive", "Any time"],
+            ["Cyclopic Eel", "Large", "Radioactive", "Any time"],
+            ["Alpha Squid", "Colossal", "Radioactive", "Any time"],
+            ["Cadmium Pearlcase", "Small", "Scorched, Lava", "Any time"],
+            [
+              "Candelabra Octopus",
+              "Medium-sized",
+              "Scorched, Lava",
+              "Any time"
+            ],
+            ["Magma Shark", "Large", "Scorched, Lava", "Any time"],
+            ["Hellion Bass", "Colossal", "Scorched, Lava", "Any time"],
+            ["Rimescale Snapper", "Small", "Frozen", "Any time"],
+            ["Iceshell Turtle", "Medium-sized", "Frozen", "In a storm"],
+            ["Frostbite Ray", "Large", "Frozen", "Any time"],
+            ["Black-Eyed Shark", "Colossal", "Frozen", "Any time"],
+            ["Wispscale Darter", "Small", "Lush", "Any time"],
+            ["Deepwater Angler", "Medium-sized", "Lush", "Any time"],
+            ["Sunspine Basker", "Large", "Lush", "By day"],
+            ["Colossal Mossback", "Colossal", "Lush", "Any time"],
+            ["Golden Urchin", "Small", "Barren", "By day"],
+            ["Bewitching Candlefish", "Medium-sized", "Barren", "At night"],
+            ["Ferrite Bowfin", "Large", "Barren", "Any time"],
+            ["Cave Prowler", "Colossal", "Barren", "Any time"],
+            ["All-Seeing Worm", "Small", "Weird, Red, Green, Blue", "Any time"],
+            [
+              "Screaming Crab",
+              "Medium-sized",
+              "Weird, Red, Green, Blue",
+              "Any time"
+            ],
+            ["Giant Witchfin", "Large", "Weird, Red, Green, Blue", "Any time"],
+            ["Void Squid", "Colossal", "Weird, Red, Green, Blue", "At night"],
+            ["Ghost Skipper", "Small", "Waterworld", "At night"],
+            ["Abyssal Crab", "Medium-sized", "Waterworld", "Any time"],
+            ["Ocean's Star", "Large", "Waterworld", "By day"],
+            ["Colossal Jawfish", "Colossal", "Waterworld", "Any time"],
+            ["Evaporating Snail", "Small", "Gas Giant", "Any time"],
+            ["Quartzshell Crab", "Medium-sized", "Gas Giant", "Any time"],
+            ["Tendrilla", "Large", "Gas Giant", "In a storm"],
+            ["Wrackjaw", "Colossal", "Gas Giant", "Any time"]
+          ],
+          "sprite": { "columns": 16, "src": "/creatures/fish.webp" },
+          "text": 4
+        },
+        "sizes": {
+          "head": [
+            "Size",
+            "Shallow water",
+            "Deep water",
+            "Grows from",
+            "Gas giant"
+          ],
+          "kinds": ["text", "share", "share", "text", "share"],
+          "note": "Each size's share of the weight on any planet type but Waterworld and gas giants. Deep water is past the deepest range; depth is from the surface down to the ground under the float.",
+          "rows": [
+            ["Small", 0.8196721311, 0.1808510638, null, 0.5128205128],
+            [
+              "Medium-sized",
+              0.1639344262,
+              0.1773049645,
+              {
+                "t": "{0} to {1} m",
+                "v": [
+                  { "k": "plain", "v": 5 },
+                  { "k": "plain", "v": 15 }
+                ]
+              },
+              0.2564102564
+            ],
+            [
+              "Large",
+              0.01639344262,
+              0.2872340426,
+              {
+                "t": "{0} to {1} m",
+                "v": [
+                  { "k": "plain", "v": 30 },
+                  { "k": "plain", "v": 65 }
+                ]
+              },
+              0.1282051282
+            ],
+            [
+              "Colossal",
+              0,
+              0.3546099291,
+              {
+                "t": "{0} to {1} m",
+                "v": [
+                  { "k": "plain", "v": 45 },
+                  { "k": "plain", "v": 90 }
+                ]
+              },
+              0.1025641026
+            ]
+          ],
+          "text": 1
+        },
+        "special": {
+          "head": ["Fish", "Size", "Planet type", "When"],
+          "icons": [0, 1],
+          "kinds": ["text", "text", "text", "text"],
+          "note": "Fish with a tile of another colour than their grade's: special catches.",
+          "rows": [
+            ["Child of Aquarius", "Small", "Any but gas giants", "Any time"],
+            [
+              "Spawn of Arcadia",
+              "Small",
+              "Any but gas giants",
+              "During its mission"
+            ]
+          ],
+          "sprite": { "columns": 16, "src": "/creatures/fish.webp" },
+          "text": 4
+        },
+        "uncommon": {
+          "head": ["Fish", "Size", "Planet type", "When"],
+          "icons": [
+            11, 12, 13, 14, 15, 16, 32, 33, 34, 35, 36, 37, 49, 50, 51, 52, 11,
+            53, 16, 65, 66, 14, 67, 68, 81, 82, 83, 84, 85, 86, 15, 97, 14, 36,
+            98, 16, 34, 107, 108, 109, 67, 11, 121, 122, 123, 124, 125, 66, 138,
+            139, 14, 140, 67, 141, 122, 153, 154, 155, 51, 86
+          ],
+          "kinds": ["text", "text", "text", "text"],
+          "note": "Every fish the game calls Uncommon Fish.",
+          "rows": [
+            ["Needlefish", "Small", "Any but gas giants", "Any time"],
+            ["Spiny Starfish", "Small", "Any but gas giants", "Any time"],
+            [
+              "Hypnotic Octopus",
+              "Medium-sized",
+              "Any but gas giants",
+              "Any time"
+            ],
+            [
+              "Longjaw Snapper",
+              "Medium-sized",
+              "Any but gas giants",
+              "Any time"
+            ],
+            ["Whispering Bonefish", "Large", "Any but gas giants", "At night"],
+            ["Giant Ray", "Colossal", "Any but gas giants", "Any time"],
+            ["Caustic Urchin", "Small", "Toxic, Swamp", "By day"],
+            ["Weltscale Clam", "Small", "Toxic, Swamp", "Any time"],
+            ["Acidic Pufferfish", "Medium-sized", "Toxic, Swamp", "In a storm"],
+            ["Toxic Stonefish", "Medium-sized", "Toxic, Swamp", "Any time"],
+            ["Venomtooth Wriggler", "Large", "Toxic, Swamp", "Any time"],
+            ["Bitterscale Ray", "Colossal", "Toxic, Swamp", "Any time"],
+            ["Ionised Clam", "Small", "Radioactive", "Any time"],
+            ["Nucleic Skipper", "Small", "Radioactive", "By day"],
+            ["Twisted Gulper", "Medium-sized", "Radioactive", "Any time"],
+            ["Depleted Razorjaw", "Medium-sized", "Radioactive", "Any time"],
+            ["Radiant Sunfish", "Large", "Radioactive", "By day"],
+            ["Boiling Shark", "Colossal", "Radioactive", "In a storm"],
+            ["Lamptip Ray", "Small", "Scorched, Lava", "At night"],
+            ["Pyrefin", "Small", "Scorched, Lava", "Any time"],
+            ["Flashfire Eel", "Medium-sized", "Scorched, Lava", "In a storm"],
+            ["Solar Roach", "Medium-sized", "Scorched, Lava", "By day"],
+            ["Fumarole Gulper", "Large", "Scorched, Lava", "Any time"],
+            ["Colossal Meltfin", "Colossal", "Scorched, Lava", "Any time"],
+            ["Frostshell Clam", "Small", "Frozen", "Any time"],
+            ["Frozen Isopod", "Small", "Frozen", "Any time"],
+            ["Brineskipper", "Medium-sized", "Frozen", "Any time"],
+            ["Pale Snowtail", "Medium-sized", "Frozen", "In a storm"],
+            ["Frozen Knifejaw", "Large", "Frozen", "Any time"],
+            ["Giant Icefin", "Colossal", "Frozen", "Any time"],
+            ["Sweetwater Minnow", "Small", "Lush", "Any time"],
+            ["Mellifluous Jellyfish", "Small", "Lush", "Any time"],
+            ["Blue Ribbontail", "Medium-sized", "Lush", "In a storm"],
+            ["Jungle Redfin", "Medium-sized", "Lush", "Any time"],
+            ["Marrow Shark", "Large", "Lush", "Any time"],
+            ["Giant Sunray", "Colossal", "Lush", "By day"],
+            ["Bladdersac", "Small", "Barren", "Any time"],
+            ["Shalebound Starfish", "Small", "Barren", "Any time"],
+            ["Electric Eel", "Medium-sized", "Barren", "Any time"],
+            ["Silicate Crab", "Medium-sized", "Barren", "Any time"],
+            ["Mantis Ray", "Large", "Barren", "Any time"],
+            ["Saltscale Bloater", "Colossal", "Barren", "Any time"],
+            ["Anemone Anomaly", "Small", "Weird, Red, Green, Blue", "Any time"],
+            ["Erased Clam", "Small", "Weird, Red, Green, Blue", "Any time"],
+            [
+              "Writhing Brainworm",
+              "Medium-sized",
+              "Weird, Red, Green, Blue",
+              "Any time"
+            ],
+            [
+              "Stargazer",
+              "Medium-sized",
+              "Weird, Red, Green, Blue",
+              "At night"
+            ],
+            [
+              "Non-Euclidean Flatfish",
+              "Large",
+              "Weird, Red, Green, Blue",
+              "Any time"
+            ],
+            ["Sunspot Eel", "Colossal", "Weird, Red, Green, Blue", "By day"],
+            ["Spratfin", "Small", "Waterworld", "Any time"],
+            ["Marine Glowworm", "Small", "Waterworld", "At night"],
+            ["Bloated Eel", "Medium-sized", "Waterworld", "Any time"],
+            ["Luminescent Coral", "Medium-sized", "Waterworld", "At night"],
+            ["Shrieking Flatfish", "Large", "Waterworld", "In a storm"],
+            ["Colossal Squid", "Colossal", "Waterworld", "Any time"],
+            ["Ionised Oyster", "Small", "Gas Giant", "In a storm"],
+            ["Pulp Urchin", "Small", "Gas Giant", "Any time"],
+            ["Metallic Shrimp", "Medium-sized", "Gas Giant", "Any time"],
+            ["Mineralised Jellyfish", "Medium-sized", "Gas Giant", "Any time"],
+            ["Vapourfin", "Large", "Gas Giant", "At night"],
+            ["Crystalfin Shark", "Colossal", "Gas Giant", "By day"]
+          ],
+          "sprite": { "columns": 16, "src": "/creatures/fish.webp" },
+          "text": 4
+        },
+        "values": {
+          "head": ["Kind", "Value", "Cooked"],
+          "kinds": ["text", "text", "text"],
+          "note": "Units on the item card, the least and the most of the kind, mission fish left out; Cooked is the dish the fish cooks into on its own. A station pays by its own market.",
+          "rows": [
+            [
+              "Collected Flotsam",
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 10 },
+                  { "k": "plain", "v": 500 }
+                ]
+              },
+              null
+            ],
+            [
+              "Common Fish",
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 1000 },
+                  { "k": "plain", "v": 5000 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 28000 },
+                  { "k": "plain", "v": 39000 }
+                ]
+              }
+            ],
+            [
+              "Uncommon Fish",
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 3000 },
+                  { "k": "plain", "v": 20000 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 28000 },
+                  { "k": "plain", "v": 39000 }
+                ]
+              }
+            ],
+            [
+              "Rare Fish",
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 10000 },
+                  { "k": "plain", "v": 50000 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 28000 },
+                  { "k": "plain", "v": 39000 }
+                ]
+              }
+            ],
+            [
+              "Legendary Fish",
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 50000 },
+                  { "k": "plain", "v": 200000 }
+                ]
+              },
+              {
+                "t": "{0} to {1}",
+                "v": [
+                  { "k": "plain", "v": 28000 },
+                  { "k": "plain", "v": 90000 }
+                ]
+              }
+            ]
+          ],
+          "text": 3
+        },
+        "waterworld": {
+          "head": ["Size", "Shallow water", "Deep water", "Grows from"],
+          "kinds": ["text", "share", "share", "text"],
+          "note": "Each size's share of the weight on a Waterworld, whose sea runs deeper.",
+          "rows": [
+            ["Small", 0.8196721311, 0.1808510638, null],
+            [
+              "Medium-sized",
+              0.1639344262,
+              0.1773049645,
+              {
+                "t": "{0} to {1} m",
+                "v": [
+                  { "k": "plain", "v": 50 },
+                  { "k": "plain", "v": 250 }
+                ]
+              }
+            ],
+            [
+              "Large",
+              0.01639344262,
+              0.2872340426,
+              {
+                "t": "{0} to {1} m",
+                "v": [
+                  { "k": "plain", "v": 200 },
+                  { "k": "plain", "v": 600 }
+                ]
+              }
+            ],
+            [
+              "Colossal",
+              0,
+              0.3546099291,
+              {
+                "t": "{0} to {1} m",
+                "v": [
+                  { "k": "plain", "v": 450 },
+                  { "k": "plain", "v": 900 }
+                ]
+              }
+            ]
+          ],
+          "text": 1
+        }
+      },
+      "title": "Fishing"
     },
     "freighter-modules": {
       "fact": "Destroy pirate dreadnoughts: each gives one class S freighter module, and a system's dreadnought always gives the same one, so you farm one system per module.",
@@ -3999,6 +6544,14 @@
         ]
       },
       "numbers": {
+        "bonusA": { "k": "share", "v": 0.6 },
+        "bonusB": { "k": "share", "v": 0.4 },
+        "bonusS": { "k": "share", "v": 1 },
+        "costBase": { "k": "plain", "v": 5 },
+        "costPower": { "k": "plain", "v": 3.52 },
+        "costSlots": { "k": "plain", "v": 15 },
+        "generalC": { "k": "plain", "v": 60 },
+        "generalS": { "k": "plain", "v": 120 },
         "highHalf": { "k": "plain", "v": 35 },
         "highS": { "k": "share", "v": 0.02 },
         "hours": { "k": "plain", "v": 3 },
@@ -4025,6 +6578,8 @@
             { "k": "plain", "v": 23 }
           ]
         },
+        "techC": { "k": "plain", "v": 30 },
+        "techS": { "k": "plain", "v": 60 },
         "warps": { "k": "plain", "v": 5 }
       },
       "tables": {
@@ -4273,15 +6828,58 @@
       },
       "numbers": {
         "atMostS": { "k": "share", "v": 0.09834496 },
+        "badHigh": { "k": "plain", "v": 6 },
+        "balanced": { "k": "share", "v": 0.4 },
+        "boost": { "k": "plain", "v": 10 },
         "combatS": { "k": "share", "v": 0.0253574373 },
+        "damageLow": { "k": "plain", "v": 3 },
+        "damageRamp": { "k": "plain", "v": 10 },
+        "easyUntil": { "k": "plain", "v": 3 },
+        "eventHours": { "k": "plain", "v": 1.5 },
         "extra": { "k": "share", "v": 0.56 },
+        "faces": { "k": "plain", "v": 26 },
         "fleet": { "k": "plain", "v": 30 },
+        "fleetHigh": { "k": "plain", "v": 150 },
+        "goodHigh": { "k": "plain", "v": 6 },
+        "goodLow": { "k": "plain", "v": 1 },
+        "levelPoints": { "k": "plain", "v": 5 },
         "levels": "4, 8, 15, 25, 30, 35, 40, 45, 50, 55",
+        "longest": { "k": "plain", "v": 18 },
+        "noise": { "k": "plain", "v": 5 },
+        "offKind": { "k": "share", "v": 0.25 },
         "organicS": { "k": "share", "v": 0.09834496 },
+        "own": { "k": "plain", "v": 15 },
+        "ownHigh": { "k": "share", "v": 0.8 },
+        "ownLow": { "k": "share", "v": 0.75 },
         "raiderS": { "k": "share", "v": 0.03549986154 },
-        "sale": { "k": "share", "v": 0.6 }
+        "rollTop": { "k": "plain", "v": 25 },
+        "sale": { "k": "share", "v": 0.6 },
+        "shortest": { "k": "plain", "v": 4 },
+        "startDifficulty": { "k": "plain", "v": 10 },
+        "statHigh": { "k": "plain", "v": 50 },
+        "statLow": { "k": "plain", "v": -10 },
+        "stepDifficulty": { "k": "plain", "v": 2 },
+        "tiers": "0, 15, 30, 45"
       },
       "tables": {
+        "damage": {
+          "head": [
+            "Expeditions you have finished",
+            "Chance a failed event damages a frigate"
+          ],
+          "kinds": ["text", "share"],
+          "note": "Counted over all your expeditions.",
+          "rows": [
+            ["3 or fewer", 0],
+            ["4", 0.02857142857],
+            ["5", 0.05714285714],
+            ["6", 0.08571428571],
+            ["7", 0.1142857143],
+            ["8", 0.1428571429],
+            ["9", 0.1714285714],
+            ["10 or more", 0.2]
+          ]
+        },
         "kinds": {
           "head": ["Frigate", "Where you get it"],
           "kinds": ["text", "text"],
@@ -4299,6 +6897,28 @@
             ["Cursed", "A reward of Expedition 13"]
           ],
           "text": 2
+        },
+        "levels": {
+          "head": [
+            "Level",
+            "After finished expeditions",
+            "Ring one expedition before",
+            "Ring when the level comes"
+          ],
+          "kinds": ["plain", "plain", "share", "share"],
+          "note": "The ring under the frigate's card, as the game fills it.",
+          "rows": [
+            [1, 4, 0.75, 1],
+            [2, 8, 0.375, 0.5],
+            [3, 15, 0.4, 0.4666666667],
+            [4, 25, 0.36, 0.4],
+            [5, 30, 0.1333333333, 0.1666666667],
+            [6, 35, 0.1142857143, 0.1428571429],
+            [7, 40, 0.1, 0.125],
+            [8, 45, 0.08888888889, 0.1111111111],
+            [9, 50, 0.08, 0.1],
+            [10, 55, 0.07272727273, 0.09090909091]
+          ]
         },
         "odds": {
           "head": ["Frigate", "C", "B", "A", "S"],
@@ -4438,6 +7058,140 @@
             ]
           ],
           "text": 1
+        },
+        "rewardTraits": {
+          "head": ["Trait", "Kind", "Stat", "What it does", "Who has it"],
+          "kinds": ["text", "text", "text", "text", "text"],
+          "note": "The five traits each of the three reward frigates always comes with.",
+          "rows": [
+            [
+              "Deep Scout Prototype",
+              "Own",
+              "Combat",
+              "+15",
+              "Always on the Stealth Reconnaissance"
+            ],
+            [
+              "Tantalus Drive",
+              "Own",
+              "Exploration",
+              "+15",
+              "Always on the Stealth Reconnaissance"
+            ],
+            [
+              "Mass Accelerator Cannon",
+              "Good",
+              "Combat",
+              "+6",
+              "Always on the Stealth Reconnaissance"
+            ],
+            [
+              "Internal Emission Sink",
+              "Good",
+              "Damage",
+              "Never damaged",
+              "Always on the Stealth Reconnaissance"
+            ],
+            [
+              "Long-Range FTL Capacity",
+              "Good",
+              "Duration",
+              "-3% duration",
+              "Always on the Stealth Reconnaissance"
+            ],
+            [
+              "Cursed to Roam",
+              "Own",
+              "Exploration",
+              "+15",
+              "Always on the Cursed"
+            ],
+            [
+              "Phantasmic Cannons",
+              "Own",
+              "Combat",
+              "+15",
+              "Always on the Cursed"
+            ],
+            [
+              "Powered by souls",
+              "Good",
+              "Fuel",
+              "-9 fuel",
+              "Always on the Cursed"
+            ],
+            [
+              "Undying",
+              "Good",
+              "Damage",
+              "Never damaged",
+              "Always on the Cursed"
+            ],
+            [
+              "Driven by the bells",
+              "Good",
+              "Duration",
+              "-3% duration",
+              "Always on the Cursed"
+            ],
+            [
+              "Transcendent Vision",
+              "Own",
+              "Exploration",
+              "+15",
+              "Always on the Organic Vessel"
+            ],
+            [
+              "Siren Song",
+              "Own",
+              "Trade",
+              "+15",
+              "Always on the Organic Vessel"
+            ],
+            [
+              "Hungering Beak",
+              "Good",
+              "Combat",
+              "+6",
+              "Always on the Organic Vessel"
+            ],
+            [
+              "Time Loop",
+              "Good",
+              "Damage",
+              "Never damaged",
+              "Always on the Organic Vessel"
+            ],
+            [
+              "Nourishing Oils",
+              "Good",
+              "Fuel",
+              "-9 fuel",
+              "Always on the Organic Vessel"
+            ]
+          ],
+          "text": 5
+        },
+        "rewards": {
+          "head": ["Event", "One success brings"],
+          "kinds": ["text", "text"],
+          "note": "One of these per event that goes well, whatever the stat.",
+          "rows": [
+            [
+              "Combat",
+              "200,000 to 400,000 units, or 500 Chromatic Metal, Indium, or Magnetised Ferrite, or a Carrier AI Fragment"
+            ],
+            [
+              "Exploration",
+              "200 to 250 nanites or a procedural product, or 5 to 10 curiosities, or 250,000 to 400,000 units"
+            ],
+            [
+              "Industrial",
+              "250 to 750 of one activated metal (Copper, Cadmium, Emeril, or Indium), 2 to 10 alloys, 5 to 20 trade goods, a cargo or frigate token, or 250,000 to 400,000 units"
+            ],
+            ["Trade", "250,000 to 400,000 units, or 5 to 10 curiosities"]
+          ],
+          "text": 2
         },
         "starts": {
           "head": ["Frigate", "Combat", "Exploration", "Industrial", "Trade"],
@@ -4667,14 +7421,699 @@
         "strengths": {
           "head": ["Trait", "Small", "Medium", "Large"],
           "kinds": ["text", "text", "text", "text"],
-          "note": "What a trait adds to a main stat. A stat stays between -10 and 50.",
+          "note": "What a trait adds to Combat, Exploration, Industrial, or Trade.",
           "rows": [
-            ["Primary, the trait of its type", "+15", "+15", "+15"],
+            ["Own, the trait of its type", "+15", "+15", "+15"],
             ["Secondary, good", "+2", "+4", "+6"],
             ["Tertiary, good", "+1", "+2", "+3"],
             ["Bad", "-2", "-4", "-6"]
           ],
-          "text": 1
+          "text": 4
+        },
+        "success": {
+          "head": [
+            "Hidden difficulty",
+            "Frigates",
+            "Their stat",
+            "4 events, about 6 h",
+            "6 events, about 9 h",
+            "10 events, about 15 h",
+            "14 events, about 21 h",
+            "18 events, about 27 h"
+          ],
+          "kinds": [
+            "plain",
+            "plain",
+            "plain",
+            "tenths",
+            "tenths",
+            "tenths",
+            "tenths",
+            "tenths"
+          ],
+          "note": "Expected events that go well, when every event is of the fleet's own kind. Their stat is the fleet's sum in that kind.",
+          "rows": [
+            [0, 1, 15, 3.838461538, 5.451923077, 7.759615385, 8.838461538, 9],
+            [
+              0, 1, 20, 3.992307692, 5.892307692, 8.961538462, 10.80769231,
+              11.46153846
+            ],
+            [0, 1, 30, 4, 6, 9.961538462, 13.30769231, 15.46153846],
+            [0, 1, 50, 4, 6, 10, 14, 18],
+            [0, 3, 90, 4, 6, 10, 14, 18],
+            [0, 5, 150, 4, 6, 10, 14, 18],
+            [
+              15, 1, 15, 1.846153846, 2.307692308, 2.538461538, 2.538461538,
+              2.538461538
+            ],
+            [
+              15, 1, 20, 2.615384615, 3.461538462, 4.25, 4.317307692,
+              4.317307692
+            ],
+            [15, 1, 30, 3.838461538, 5.451923077, 7.759615385, 8.838461538, 9],
+            [15, 1, 50, 4, 6, 10, 13.83846154, 16.75961538],
+            [15, 3, 90, 4, 6, 10, 14, 18],
+            [15, 5, 150, 4, 6, 10, 14, 18],
+            [
+              30, 1, 15, 0.06730769231, 0.06730769231, 0.06730769231,
+              0.06730769231, 0.06730769231
+            ],
+            [
+              30, 1, 20, 0.4153846154, 0.4230769231, 0.4230769231, 0.4230769231,
+              0.4230769231
+            ],
+            [
+              30, 1, 30, 1.846153846, 2.307692308, 2.538461538, 2.538461538,
+              2.538461538
+            ],
+            [
+              30, 1, 50, 3.992307692, 5.892307692, 8.961538462, 10.80769231,
+              11.46153846
+            ],
+            [30, 3, 90, 4, 6, 10, 14, 18],
+            [30, 5, 150, 4, 6, 10, 14, 18],
+            [45, 1, 15, 0, 0, 0, 0, 0],
+            [45, 1, 20, 0, 0, 0, 0, 0],
+            [
+              45, 1, 30, 0.06730769231, 0.06730769231, 0.06730769231,
+              0.06730769231, 0.06730769231
+            ],
+            [
+              45, 1, 50, 2.615384615, 3.461538462, 4.25, 4.317307692,
+              4.317307692
+            ],
+            [45, 3, 90, 4, 6, 10, 14, 17.83846154],
+            [45, 5, 150, 4, 6, 10, 14, 18]
+          ]
+        },
+        "traits": {
+          "head": ["Trait", "Kind", "Stat", "What it does", "Who can draw it"],
+          "kinds": ["text", "text", "text", "text", "text"],
+          "note": "Every trait of the frigates bought from fleets. The number after a type is its weight in the draw: the higher, the more often that type draws the trait.",
+          "rows": [
+            [
+              "Support Specialist",
+              "Own",
+              "Fuel",
+              "-15 fuel",
+              "Every Support frigate"
+            ],
+            ["Large Tanks", "Good", "Fuel", "-3 fuel", "Support 15"],
+            ["Oversized Fuel Scoop", "Good", "Fuel", "-6 fuel", "Support 15"],
+            ["Generator Grid", "Good", "Fuel", "-9 fuel", "Support 15"],
+            ["Antimatter Cycler", "Good", "Fuel", "-3 fuel", "Support 15"],
+            [
+              "Advanced Power Distributor",
+              "Good",
+              "Fuel",
+              "-6 fuel",
+              "Support 15"
+            ],
+            [
+              "Portable Fusion Ignitor",
+              "Good",
+              "Fuel",
+              "-9 fuel",
+              "Support 15"
+            ],
+            [
+              "Oxygen Recycler",
+              "Good",
+              "Fuel",
+              "-2 fuel",
+              "Combat 5, Exploration 5, Industrial 5, Trade 5, Raider 10"
+            ],
+            [
+              "Tuned Engines",
+              "Good",
+              "Fuel",
+              "-4 fuel",
+              "Combat 5, Exploration 5, Industrial 5, Trade 5, Raider 10"
+            ],
+            [
+              "Robot Crew",
+              "Good",
+              "Fuel",
+              "-6 fuel",
+              "Combat 5, Exploration 5, Industrial 5, Trade 5, Raider 10"
+            ],
+            [
+              "Photon Sails",
+              "Good",
+              "Fuel",
+              "-2 fuel",
+              "Combat 5, Exploration 5, Industrial 5, Trade 5, Raider 10"
+            ],
+            [
+              "Overclocked Power Distributor",
+              "Good",
+              "Fuel",
+              "-4 fuel",
+              "Combat 5, Exploration 5, Industrial 5, Trade 5, Raider 10"
+            ],
+            [
+              "Solar Panels",
+              "Good",
+              "Fuel",
+              "-6 fuel",
+              "Combat 5, Exploration 5, Industrial 5, Trade 5, Raider 10"
+            ],
+            [
+              "Efficient Warp Drive",
+              "Good",
+              "Fuel",
+              "-4 fuel",
+              "Combat 5, Exploration 5, Industrial 5, Trade 5, Raider 10"
+            ],
+            [
+              "Thirsty Crew",
+              "Bad",
+              "Fuel",
+              "+1 fuel",
+              "Combat 5, Exploration 5, Industrial 5, Trade 5"
+            ],
+            [
+              "Inefficient Engine",
+              "Bad",
+              "Fuel",
+              "+2 fuel",
+              "Combat 5, Exploration 5, Industrial 5, Trade 5"
+            ],
+            [
+              "Leaky Fuel Tubes",
+              "Bad",
+              "Fuel",
+              "+4 fuel",
+              "Combat 5, Exploration 5, Industrial 5, Trade 5"
+            ],
+            [
+              "Poorly-Aligned Ballast",
+              "Bad",
+              "Fuel",
+              "+2 fuel",
+              "Combat 5, Exploration 5, Industrial 5, Trade 5"
+            ],
+            [
+              "Oil Burner",
+              "Bad",
+              "Fuel",
+              "+1 fuel",
+              "Combat 5, Exploration 5, Industrial 5, Trade 5"
+            ],
+            [
+              "Combat Specialist",
+              "Own",
+              "Combat",
+              "+15",
+              "Every Combat frigate"
+            ],
+            [
+              "Raiding Specialist",
+              "Own",
+              "Combat",
+              "+15",
+              "Every Raider frigate"
+            ],
+            ["Massive Guns", "Good", "Combat", "+2", "Combat 15, Raider 15"],
+            ["Ablative Armour", "Good", "Combat", "+4", "Combat 15, Raider 15"],
+            ["Cloaking Device", "Good", "Combat", "+6", "Combat 15, Raider 15"],
+            [
+              "Ultrasonic Weapons",
+              "Good",
+              "Combat",
+              "+2",
+              "Combat 15, Raider 5"
+            ],
+            [
+              "Experimental Weaponry",
+              "Good",
+              "Combat",
+              "+4",
+              "Combat 15, Raider 5"
+            ],
+            [
+              "Tremendous Cannons",
+              "Good",
+              "Combat",
+              "+6",
+              "Combat 5, Raider 5"
+            ],
+            [
+              "Hidden Weaponry",
+              "Good",
+              "Combat",
+              "+1",
+              "Exploration 5, Industrial 5, Trade 5, Support 5"
+            ],
+            [
+              "Ammo Fabricators",
+              "Good",
+              "Combat",
+              "+2",
+              "Exploration 5, Industrial 5, Trade 5, Support 5"
+            ],
+            [
+              "Reinforced Hull",
+              "Good",
+              "Combat",
+              "+3",
+              "Exploration 5, Industrial 5, Trade 5, Support 5"
+            ],
+            [
+              "Aggressive Probes",
+              "Good",
+              "Combat",
+              "+1",
+              "Exploration 5, Industrial 5, Trade 5, Support 5"
+            ],
+            [
+              "Angry Captain",
+              "Good",
+              "Combat",
+              "+2",
+              "Exploration 5, Industrial 5, Trade 5, Support 5"
+            ],
+            [
+              "Retrofitted Turrets",
+              "Good",
+              "Combat",
+              "+3",
+              "Exploration 5, Industrial 5, Trade 5, Support 5"
+            ],
+            [
+              "Cowardly Gunners",
+              "Bad",
+              "Combat",
+              "-2",
+              "Exploration 5, Industrial 5, Trade 5, Support 5"
+            ],
+            [
+              "Second-Hand Rockets",
+              "Bad",
+              "Combat",
+              "-4",
+              "Exploration 5, Industrial 5, Trade 5, Support 5"
+            ],
+            [
+              "Faulty Torpedoes",
+              "Bad",
+              "Combat",
+              "-6",
+              "Exploration 5, Industrial 5, Trade 5, Support 5"
+            ],
+            [
+              "Fragile Hull",
+              "Bad",
+              "Combat",
+              "-2",
+              "Exploration 5, Industrial 5, Trade 5, Support 5"
+            ],
+            [
+              "Low-Energy Shields",
+              "Bad",
+              "Combat",
+              "-4",
+              "Exploration 5, Industrial 5, Trade 5, Support 5"
+            ],
+            [
+              "Industrial Specialist",
+              "Own",
+              "Industrial",
+              "+15",
+              "Every Industrial frigate"
+            ],
+            ["Laser Drill Array", "Good", "Industrial", "+2", "Industrial 15"],
+            ["Tractor Beam", "Good", "Industrial", "+4", "Industrial 15"],
+            ["Ultrasonic Welders", "Good", "Industrial", "+6", "Industrial 15"],
+            [
+              "Ore Processing Unit",
+              "Good",
+              "Industrial",
+              "+2",
+              "Industrial 15"
+            ],
+            ["Terraforming Beams", "Good", "Industrial", "+4", "Industrial 15"],
+            ["Asteroid Vaporizer", "Good", "Industrial", "+6", "Industrial 15"],
+            [
+              "Mineral Extractors",
+              "Good",
+              "Industrial",
+              "+1",
+              "Combat 5, Exploration 5, Trade 5, Support 5, Raider 10"
+            ],
+            [
+              "Extendable Drills",
+              "Good",
+              "Industrial",
+              "+2",
+              "Combat 5, Exploration 5, Trade 5, Support 5, Raider 10"
+            ],
+            [
+              "Asteroid Scanner",
+              "Good",
+              "Industrial",
+              "+3",
+              "Combat 5, Exploration 5, Trade 5, Support 5, Raider 10"
+            ],
+            [
+              "Harvester Drones",
+              "Good",
+              "Industrial",
+              "+1",
+              "Combat 5, Exploration 5, Trade 5, Support 5, Raider 10"
+            ],
+            [
+              "Metal Detector",
+              "Good",
+              "Industrial",
+              "+2",
+              "Combat 5, Exploration 5, Trade 5, Support 5, Raider 10"
+            ],
+            [
+              "Remote Mining Unit",
+              "Good",
+              "Industrial",
+              "+3",
+              "Combat 5, Exploration 5, Trade 5, Support 5, Raider 10"
+            ],
+            [
+              "Lazy Crew",
+              "Bad",
+              "Industrial",
+              "-2",
+              "Combat 5, Exploration 5, Trade 5, Support 5, Raider 5"
+            ],
+            [
+              "Small Hoppers",
+              "Bad",
+              "Industrial",
+              "-4",
+              "Combat 5, Exploration 5, Trade 5, Support 5, Raider 5"
+            ],
+            [
+              "Clumsy Drill Operator",
+              "Bad",
+              "Industrial",
+              "-6",
+              "Combat 5, Exploration 5, Trade 5, Support 5, Raider 5"
+            ],
+            [
+              "Underpowered Lasers",
+              "Bad",
+              "Industrial",
+              "-4",
+              "Combat 5, Exploration 5, Trade 5, Support 5, Raider 5"
+            ],
+            [
+              "Malfunctioning Drones",
+              "Bad",
+              "Industrial",
+              "-2",
+              "Combat 5, Exploration 5, Trade 5, Support 5, Raider 5"
+            ],
+            ["Trade Specialist", "Own", "Trade", "+15", "Every Trade frigate"],
+            ["Trade Analysis Computer", "Good", "Trade", "+2", "Trade 15"],
+            ["Automatic Investment Engine", "Good", "Trade", "+4", "Trade 15"],
+            ["Mind Control Device", "Good", "Trade", "+6", "Trade 15"],
+            ["HypnoDrones", "Good", "Trade", "+2", "Trade 15"],
+            ["Propaganda Device", "Good", "Trade", "+4", "Trade 15"],
+            ["Teleportation Device", "Good", "Trade", "+6", "Trade 15"],
+            [
+              "Economy Scanner",
+              "Good",
+              "Trade",
+              "+1",
+              "Combat 5, Exploration 5, Industrial 5, Support 5, Raider 10"
+            ],
+            [
+              "Remote Market Analyser",
+              "Good",
+              "Trade",
+              "+2",
+              "Combat 5, Exploration 5, Industrial 5, Support 5, Raider 10"
+            ],
+            [
+              "Robot Butlers",
+              "Good",
+              "Trade",
+              "+3",
+              "Combat 5, Exploration 5, Industrial 5, Support 5, Raider 10"
+            ],
+            [
+              "AutoTranslator",
+              "Good",
+              "Trade",
+              "+1",
+              "Combat 5, Exploration 5, Industrial 5, Support 5, Raider 10"
+            ],
+            [
+              "Negotiation Module",
+              "Good",
+              "Trade",
+              "+2",
+              "Combat 5, Exploration 5, Industrial 5, Support 5, Raider 10"
+            ],
+            [
+              "Well-Groomed Crew",
+              "Good",
+              "Trade",
+              "+3",
+              "Combat 5, Exploration 5, Industrial 5, Support 5, Raider 10"
+            ],
+            [
+              "Rude Captain",
+              "Bad",
+              "Trade",
+              "-2",
+              "Combat 5, Exploration 5, Industrial 5, Support 5, Raider 5"
+            ],
+            [
+              "Small Hold",
+              "Bad",
+              "Trade",
+              "-4",
+              "Combat 5, Exploration 5, Industrial 5, Support 5, Raider 5"
+            ],
+            [
+              "Roach Infestation",
+              "Bad",
+              "Trade",
+              "-6",
+              "Combat 5, Exploration 5, Industrial 5, Support 5, Raider 5"
+            ],
+            [
+              "Thief On Board",
+              "Bad",
+              "Trade",
+              "-4",
+              "Combat 5, Exploration 5, Industrial 5, Support 5, Raider 5"
+            ],
+            [
+              "Badly Painted",
+              "Bad",
+              "Trade",
+              "-2",
+              "Combat 5, Exploration 5, Industrial 5, Support 5, Raider 5"
+            ],
+            [
+              "Exploration Specialist",
+              "Own",
+              "Exploration",
+              "+15",
+              "Every Exploration frigate"
+            ],
+            ["Anomaly Scanner", "Good", "Exploration", "+2", "Exploration 15"],
+            [
+              "Interstellar Signal Array",
+              "Good",
+              "Exploration",
+              "+4",
+              "Exploration 15"
+            ],
+            [
+              "Cartography Drones",
+              "Good",
+              "Exploration",
+              "+6",
+              "Exploration 15"
+            ],
+            [
+              "Realtime Archival Device",
+              "Good",
+              "Exploration",
+              "+2",
+              "Exploration 15"
+            ],
+            [
+              "Gravitational Visualiser",
+              "Good",
+              "Exploration",
+              "+4",
+              "Exploration 15"
+            ],
+            [
+              "Spacetime Anomaly Shielding",
+              "Good",
+              "Exploration",
+              "+6",
+              "Exploration 15"
+            ],
+            [
+              "Planetary Data Scoop",
+              "Good",
+              "Exploration",
+              "+1",
+              "Combat 5, Industrial 5, Trade 5, Support 5, Raider 5"
+            ],
+            [
+              "Stowaway Botanist",
+              "Good",
+              "Exploration",
+              "+2",
+              "Combat 5, Industrial 5, Trade 5, Support 5, Raider 5"
+            ],
+            [
+              "Radio Telescopes",
+              "Good",
+              "Exploration",
+              "+3",
+              "Combat 5, Industrial 5, Trade 5, Support 5, Raider 5"
+            ],
+            [
+              "Fauna Analysis Device",
+              "Good",
+              "Exploration",
+              "+1",
+              "Combat 5, Industrial 5, Trade 5, Support 5, Raider 5"
+            ],
+            [
+              "Holographic Displays",
+              "Good",
+              "Exploration",
+              "+2",
+              "Combat 5, Industrial 5, Trade 5, Support 5, Raider 5"
+            ],
+            [
+              "Long-Distance Sensors",
+              "Good",
+              "Exploration",
+              "+3",
+              "Combat 5, Industrial 5, Trade 5, Support 5, Raider 5"
+            ],
+            [
+              "Wandering Compass",
+              "Bad",
+              "Exploration",
+              "-2",
+              "Combat 5, Industrial 5, Trade 5, Support 5, Raider 10"
+            ],
+            [
+              "Outdated Maps",
+              "Bad",
+              "Exploration",
+              "-4",
+              "Combat 5, Industrial 5, Trade 5, Support 5, Raider 10"
+            ],
+            [
+              "Uncalibrated Warp Drive",
+              "Bad",
+              "Exploration",
+              "-6",
+              "Combat 5, Industrial 5, Trade 5, Support 5, Raider 10"
+            ],
+            [
+              "Misaligned Sensors",
+              "Bad",
+              "Exploration",
+              "-4",
+              "Combat 5, Industrial 5, Trade 5, Support 5, Raider 10"
+            ],
+            [
+              "Haunted Radar",
+              "Bad",
+              "Exploration",
+              "-2",
+              "Combat 5, Industrial 5, Trade 5, Support 5, Raider 10"
+            ],
+            [
+              "Local Time Dilator",
+              "Good",
+              "Duration",
+              "-1% duration",
+              "Combat 5, Exploration 5, Industrial 5, Trade 5, Support 5, Raider 10"
+            ],
+            [
+              "Mass Driver",
+              "Good",
+              "Duration",
+              "-1% duration",
+              "Combat 5, Exploration 5, Industrial 5, Trade 5, Support 5, Raider 10"
+            ],
+            [
+              "Expert Navigator",
+              "Good",
+              "Duration",
+              "-2% duration",
+              "Combat 5, Exploration 5, Industrial 5, Trade 5, Support 5, Raider 10"
+            ],
+            [
+              "Alcubierre Drive",
+              "Good",
+              "Duration",
+              "-2% duration",
+              "Combat 5, Exploration 5, Industrial 5, Trade 5, Support 5, Raider 10"
+            ],
+            [
+              "Wormhole Generator",
+              "Good",
+              "Duration",
+              "-3% duration",
+              "Combat 5, Exploration 5, Industrial 5, Trade 5, Support 5, Raider 10"
+            ],
+            [
+              "Experimental Impulse Drive",
+              "Good",
+              "Duration",
+              "-3% duration",
+              "Combat 5, Exploration 5, Industrial 5, Trade 5, Support 5, Raider 10"
+            ],
+            [
+              "Motivated Crew",
+              "Good",
+              "Duration",
+              "-2% duration",
+              "Combat 5, Exploration 5, Industrial 5, Trade 5, Support 5, Raider 10"
+            ],
+            [
+              "Dynamic Ballast",
+              "Good",
+              "Duration",
+              "-2% duration",
+              "Combat 5, Exploration 5, Industrial 5, Trade 5, Support 5, Raider 10"
+            ],
+            [
+              "Self-Repairing Hull",
+              "Good",
+              "Damage",
+              "Never damaged",
+              "Combat 5, Exploration 5, Industrial 5, Trade 5, Support 5"
+            ],
+            [
+              "Advanced Maintenance Drones",
+              "Good",
+              "Damage",
+              "Never damaged",
+              "Combat 5, Exploration 5, Industrial 5, Trade 5, Support 5"
+            ],
+            [
+              "Holographic Components",
+              "Good",
+              "Damage",
+              "Never damaged",
+              "Combat 5, Exploration 5, Industrial 5, Trade 5, Support 5"
+            ]
+          ],
+          "text": 5
         }
       },
       "title": "Frigates"
@@ -7596,6 +11035,158 @@
             ["", "Pause only to refuel", "Support"]
           ],
           "text": 3
+        },
+        "traits": {
+          "head": ["Trait", "Kind", "Stat", "What it does", "Who has it"],
+          "kinds": ["text", "text", "text", "text", "text"],
+          "note": "The traits of an organic frigate. It never draws a bad trait.",
+          "rows": [
+            [
+              "Bitter Memories",
+              "Own",
+              "Combat",
+              "+15",
+              "An organic frigate, picked by its dream"
+            ],
+            ["Muscular Tentacles", "Good", "Combat", "+6", "Organic 15"],
+            ["Superluminal Strike", "Good", "Combat", "+6", "Organic 15"],
+            ["Intimidating Visage", "Good", "Combat", "+4", "Organic 15"],
+            ["Unsettling Visions", "Good", "Combat", "+4", "Organic 15"],
+            ["Flight Pattern Analysis", "Good", "Combat", "+2", "Organic 15"],
+            ["Hardened Flesh", "Good", "Combat", "+2", "Organic 15"],
+            ["Disorienting Wail", "Good", "Combat", "+3", "Organic 15"],
+            ["Blinding Miasma", "Good", "Combat", "+2", "Organic 15"],
+            ["Unforgiving", "Good", "Combat", "+1", "Organic 15"],
+            [
+              "Echolocation",
+              "Own",
+              "Exploration",
+              "+15",
+              "An organic frigate, picked by its dream"
+            ],
+            ["Ancient Knowledge", "Good", "Exploration", "+6", "Organic 15"],
+            ["Retrocognition", "Good", "Exploration", "+6", "Organic 15"],
+            ["Fauna Empathy", "Good", "Exploration", "+4", "Organic 15"],
+            ["Galactic Wisdom", "Good", "Exploration", "+4", "Organic 15"],
+            ["Migratory Insight", "Good", "Exploration", "+2", "Organic 15"],
+            ["Star Memorisation", "Good", "Exploration", "+2", "Organic 15"],
+            ["Deep Space Native", "Good", "Exploration", "+3", "Organic 15"],
+            ["Remote Pod Uplink", "Good", "Combat", "+2", "Organic 15"],
+            [
+              "Trans-Reality Recollection",
+              "Good",
+              "Exploration",
+              "+1",
+              "Organic 15"
+            ],
+            [
+              "Seismic Song",
+              "Own",
+              "Industrial",
+              "+15",
+              "An organic frigate, picked by its dream"
+            ],
+            ["Baleen Plates", "Good", "Industrial", "+6", "Organic 15"],
+            ["Asteroid Digestion", "Good", "Industrial", "+6", "Organic 15"],
+            ["Leaching Bile", "Good", "Industrial", "+4", "Organic 15"],
+            ["Metallurgic Microbes", "Good", "Industrial", "+4", "Organic 15"],
+            ["Stardust Expertise", "Good", "Industrial", "+2", "Organic 15"],
+            ["Sonic Comminution", "Good", "Industrial", "+2", "Organic 15"],
+            ["Probing Tendrils", "Good", "Industrial", "+3", "Organic 15"],
+            ["Superheated Stomach", "Good", "Industrial", "+2", "Organic 15"],
+            ["Nebula Painter", "Good", "Industrial", "+1", "Organic 15"],
+            [
+              "Mesmerising Voice",
+              "Own",
+              "Trade",
+              "+15",
+              "An organic frigate, picked by its dream"
+            ],
+            ["Counterfeit Detection", "Good", "Trade", "+6", "Organic 15"],
+            ["Market Foresight", "Good", "Trade", "+6", "Organic 15"],
+            ["Dream Manipulation", "Good", "Trade", "+4", "Organic 15"],
+            ["Hypnotic Melody", "Good", "Trade", "+4", "Organic 15"],
+            ["Mind Weaver", "Good", "Trade", "+2", "Organic 15"],
+            ["Overwhelming Presence", "Good", "Trade", "+2", "Organic 15"],
+            ["Legendary Reputation", "Good", "Trade", "+3", "Organic 15"],
+            ["Peaceful Negotiator", "Good", "Trade", "+2", "Organic 15"],
+            ["Persuasive Verse", "Good", "Trade", "+1", "Organic 15"],
+            [
+              "Slow Metabolism",
+              "Own",
+              "Fuel",
+              "-15 fuel",
+              "An organic frigate, picked by its dream"
+            ],
+            ["Reality Skimming", "Good", "Fuel", "-9 fuel", "Organic 15"],
+            ["Gliding Movement", "Good", "Fuel", "-9 fuel", "Organic 15"],
+            ["Effortless Propulsion", "Good", "Combat", "+4", "Organic 15"],
+            ["Efficient Forager", "Good", "Fuel", "-6 fuel", "Organic 15"],
+            ["Stellar Wind Drifter", "Good", "Fuel", "-3 fuel", "Organic 15"],
+            ["Blubber Reserves", "Good", "Fuel", "-3 fuel", "Organic 15"],
+            ["Stoic Endurance", "Good", "Fuel", "-6 fuel", "Organic 15"],
+            ["Fleet Mascot", "Good", "Combat", "+2", "Organic 15"],
+            ["Long-Distance Nomad", "Good", "Fuel", "-2 fuel", "Organic 15"],
+            [
+              "Wormhole Navigation",
+              "Own",
+              "Duration",
+              "-10% duration",
+              "An organic frigate, picked by its dream"
+            ],
+            [
+              "Homing Instincts",
+              "Good",
+              "Duration",
+              "-3% duration",
+              "Organic 15"
+            ],
+            [
+              "Black Hole Diver",
+              "Good",
+              "Duration",
+              "-3% duration",
+              "Organic 15"
+            ],
+            [
+              "Cosmic Swimmer",
+              "Good",
+              "Duration",
+              "-2% duration",
+              "Organic 15"
+            ],
+            [
+              "Streamlined Form",
+              "Good",
+              "Duration",
+              "-2% duration",
+              "Organic 15"
+            ],
+            ["Colossal Fins", "Good", "Duration", "-1% duration", "Organic 15"],
+            ["Slick Flesh", "Good", "Duration", "-1% duration", "Organic 15"],
+            [
+              "Cosmic Slipstream",
+              "Good",
+              "Duration",
+              "-3% duration",
+              "Organic 15"
+            ],
+            [
+              "Graceful Agility",
+              "Good",
+              "Duration",
+              "-2% duration",
+              "Organic 15"
+            ],
+            [
+              "Route Optimisation",
+              "Good",
+              "Duration",
+              "-1% duration",
+              "Organic 15"
+            ]
+          ],
+          "text": 5
         }
       },
       "title": "Organic frigates"
@@ -10233,6 +13824,8 @@
       "numbers": {
         "best": "Atlantid, plain",
         "bestOneIn": { "k": "oneIn", "v": 977.2981854 },
+        "classHigh": { "k": "share", "v": 0.07832772952 },
+        "classLow": { "k": "share", "v": 0.06820384672 },
         "listNoStaff": { "k": "share", "v": 0.570503286 },
         "listShare": { "k": "share", "v": 0.7646262118 },
         "places": { "k": "about", "v": 18 },
@@ -10241,6 +13834,8 @@
         "staffA": { "k": "oneIn", "v": 55204.45331 },
         "staffB": { "k": "oneIn", "v": 285.3400989 },
         "systems": { "k": "about", "v": 63360 },
+        "typeHigh": { "k": "share", "v": 0.07800696385 },
+        "typeLow": { "k": "share", "v": 0.06304572804 },
         "worst": "Experimental",
         "worstOneIn": { "k": "oneIn", "v": 1993.070112 }
       },

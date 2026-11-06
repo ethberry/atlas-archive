@@ -4,11 +4,13 @@
 
 What each module raises once installed, class by class, is on the page of its item; this page says where and how often you find it.
 
+A module's stats are rolled when you install it, not when you buy it. Hover over it before you install: its card shows what it will give, as long as nothing else goes in first.
+
 ## Starship technology merchant
 
 <!-- widget:starship -->
 
-Every station sells the class C Launch Thrusters, Pulse Engine, Hyperdrive, and Starship Shield modules, and all four reactors. Every other module, at every class, is a pick of the station, and each has the same chance. There is no class roll: a Hyperdrive Module at S is its own item on the list, beside the one at B and the one at A. What each of them raises, and the figurines and drives that do not come from a merchant, are on [starship modules](/guides/starship-modules).
+Apart from the class C core modules and the reactors every station sells, each module at each class is a pick of the station, and each has the same chance. There is no class roll: a Hyperdrive Module at S is its own item on the list, beside the one at B and the one at A. What each of them raises, and the figurines and drives that do not come from a merchant, are on [starship modules](/guides/starship-modules).
 
 ## Multitool technology merchant
 

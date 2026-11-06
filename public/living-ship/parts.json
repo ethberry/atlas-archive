@@ -4,13 +4,31 @@
   "layers": {
     "_TopAcc_A": [422, 12, 496, 244],
     "_TopHat_A2LOD0": [59, 254, 286, 123],
+    "_TopHat_A2LOD1": [59, 254, 286, 123],
+    "_TopHat_A2LOD2": [59, 254, 286, 123],
+    "_TopHat_A2LOD3": [59, 254, 286, 123],
     "_TopMid_B3LOD0": [325, 94, 627, 170],
     "_backfeet_ALOD0": [520, 277, 296, 227],
     "_backpedals_A1LOD0": [520, 277, 296, 227],
+    "_backpedals_A1LOD1": [520, 277, 296, 227],
+    "_backpedals_A1LOD2": [520, 277, 296, 227],
+    "_backpedals_A1LOD3": [520, 277, 296, 227],
     "_cockpit_ALOD0": [229, 158, 678, 339],
+    "_cockpit_ALOD1": [229, 158, 678, 339],
+    "_cockpit_ALOD2": [229, 158, 678, 339],
+    "_cockpit_ALOD3": [229, 158, 678, 339],
     "_cockpit_B1LOD0": [116, 158, 791, 339],
+    "_cockpit_B1LOD1": [116, 158, 791, 339],
+    "_cockpit_B1LOD2": [116, 158, 791, 339],
+    "_cockpit_B1LOD3": [116, 158, 791, 339],
     "_cockpit_BLOD0": [15, 158, 892, 340],
+    "_cockpit_BLOD1": [15, 158, 892, 340],
+    "_cockpit_BLOD2": [15, 158, 892, 340],
+    "_cockpit_BLOD3": [15, 158, 892, 340],
     "_cockpit_C5LOD0": [118, 158, 789, 339],
+    "_cockpit_C5LOD1": [118, 158, 789, 339],
+    "_cockpit_C5LOD2": [118, 158, 789, 339],
+    "_cockpit_C5LOD3": [118, 158, 789, 339],
     "_engine_aREF": [601, 208, 195, 137],
     "_engine_bREF": [598, 211, 209, 136],
     "_feet_ALOD0": [260, 272, 565, 280],
@@ -18,6 +36,9 @@
     "_feet_CLOD0": [425, 207, 389, 339],
     "_feet_DLOD0": [215, 393, 427, 195],
     "_frontfeet_BLOD0": [111, 289, 578, 293],
+    "_frontfeet_BLOD1": [111, 289, 578, 293],
+    "_frontfeet_BLOD2": [111, 289, 578, 293],
+    "_frontfeet_BLOD3": [111, 289, 578, 293],
     "_wings_ALOD0": [263, 177, 604, 298],
     "_wings_B3LOD0": [87, 177, 898, 333],
     "base": [298, 185, 487, 329]
@@ -65,6 +86,21 @@
               "groups": []
             },
             {
+              "name": "_frontfeet_BLOD1",
+              "layer": "_frontfeet_BLOD1",
+              "groups": []
+            },
+            {
+              "name": "_frontfeet_BLOD2",
+              "layer": "_frontfeet_BLOD2",
+              "groups": []
+            },
+            {
+              "name": "_frontfeet_BLOD3",
+              "layer": "_frontfeet_BLOD3",
+              "groups": []
+            },
+            {
               "name": "_frontfeet_Null",
               "layer": "_frontfeet_Null",
               "groups": []
@@ -74,6 +110,21 @@
             {
               "name": "_backpedals_A1LOD0",
               "layer": "_backpedals_A1LOD0",
+              "groups": []
+            },
+            {
+              "name": "_backpedals_A1LOD1",
+              "layer": "_backpedals_A1LOD1",
+              "groups": []
+            },
+            {
+              "name": "_backpedals_A1LOD2",
+              "layer": "_backpedals_A1LOD2",
+              "groups": []
+            },
+            {
+              "name": "_backpedals_A1LOD3",
+              "layer": "_backpedals_A1LOD3",
               "groups": []
             },
             { "name": "_backpedals_B", "layer": "_backpedals_B", "groups": [] }
@@ -93,13 +144,58 @@
               "groups": []
             },
             {
+              "name": "_cockpit_ALOD1",
+              "layer": "_cockpit_ALOD1",
+              "groups": []
+            },
+            {
+              "name": "_cockpit_ALOD2",
+              "layer": "_cockpit_ALOD2",
+              "groups": []
+            },
+            {
+              "name": "_cockpit_ALOD3",
+              "layer": "_cockpit_ALOD3",
+              "groups": []
+            },
+            {
               "name": "_cockpit_BLOD0",
               "layer": "_cockpit_BLOD0",
               "groups": []
             },
             {
+              "name": "_cockpit_BLOD1",
+              "layer": "_cockpit_BLOD1",
+              "groups": []
+            },
+            {
+              "name": "_cockpit_BLOD2",
+              "layer": "_cockpit_BLOD2",
+              "groups": []
+            },
+            {
+              "name": "_cockpit_BLOD3",
+              "layer": "_cockpit_BLOD3",
+              "groups": []
+            },
+            {
               "name": "_cockpit_B1LOD0",
               "layer": "_cockpit_B1LOD0",
+              "groups": []
+            },
+            {
+              "name": "_cockpit_B1LOD1",
+              "layer": "_cockpit_B1LOD1",
+              "groups": []
+            },
+            {
+              "name": "_cockpit_B1LOD2",
+              "layer": "_cockpit_B1LOD2",
+              "groups": []
+            },
+            {
+              "name": "_cockpit_B1LOD3",
+              "layer": "_cockpit_B1LOD3",
               "groups": []
             },
             {
@@ -115,6 +211,60 @@
                   {
                     "name": "_TopHat_A2LOD0",
                     "layer": "_TopHat_A2LOD0",
+                    "groups": []
+                  }
+                ]
+              ]
+            },
+            {
+              "name": "_cockpit_C5LOD1",
+              "layer": "_cockpit_C5LOD1",
+              "groups": [
+                [
+                  {
+                    "name": "_TopHat_NullLOD1",
+                    "layer": "_TopHat_NullLOD1",
+                    "groups": []
+                  },
+                  {
+                    "name": "_TopHat_A2LOD1",
+                    "layer": "_TopHat_A2LOD1",
+                    "groups": []
+                  }
+                ]
+              ]
+            },
+            {
+              "name": "_cockpit_C5LOD2",
+              "layer": "_cockpit_C5LOD2",
+              "groups": [
+                [
+                  {
+                    "name": "_TopHat_NullLOD2",
+                    "layer": "_TopHat_NullLOD2",
+                    "groups": []
+                  },
+                  {
+                    "name": "_TopHat_A2LOD2",
+                    "layer": "_TopHat_A2LOD2",
+                    "groups": []
+                  }
+                ]
+              ]
+            },
+            {
+              "name": "_cockpit_C5LOD3",
+              "layer": "_cockpit_C5LOD3",
+              "groups": [
+                [
+                  {
+                    "name": "_TopHat_NullLOD3",
+                    "layer": "_TopHat_NullLOD3",
+                    "groups": []
+                  },
+                  {
+                    "name": "_TopHat_A2LOD3",
+                    "layer": "_TopHat_A2LOD3",
                     "groups": []
                   }
                 ]

@@ -1,0 +1,172 @@
+[
+  {
+    "id": "FrontAcc_0",
+    "options": [
+      {
+        "id": "FrontAcc_1",
+        "label": "Shape 1",
+        "names": ["_FrontAcc_1"],
+        "tile": ["_FrontAcc_1"]
+      },
+      {
+        "id": "FrontAcc_2",
+        "label": "Shape 2",
+        "names": ["_FrontAcc_2"],
+        "tile": ["_FrontAcc_2"]
+      },
+      {
+        "id": "FrontAcc_3",
+        "label": "Shape 3",
+        "names": ["_FrontAcc_3"],
+        "tile": ["_FrontAcc_3"]
+      },
+      {
+        "id": "FrontAcc_4",
+        "label": "Shape 4",
+        "names": ["_FrontAcc_4"],
+        "tile": ["_FrontAcc_4"]
+      },
+      {
+        "id": "FrontAcc_5",
+        "label": "Shape 5",
+        "names": ["_FrontAcc_5"],
+        "tile": ["_FrontAcc_5"]
+      },
+      {
+        "empty": true,
+        "id": "FrontAcc_0",
+        "label": "None",
+        "names": ["_FrontAcc_0"],
+        "tile": []
+      }
+    ],
+    "title": "Front accessory"
+  },
+  {
+    "id": "Tail_1",
+    "options": [
+      {
+        "id": "Tail_1",
+        "label": "Shape 1",
+        "names": ["_Tail_1"],
+        "tile": ["_Tail_1"]
+      },
+      {
+        "id": "Tail_2",
+        "label": "Shape 2",
+        "names": ["_Tail_2"],
+        "tile": ["_Tail_2"]
+      },
+      {
+        "id": "Tail_3",
+        "label": "Shape 3",
+        "names": ["_Tail_3"],
+        "tile": ["_Tail_3"]
+      },
+      {
+        "id": "Tail_4",
+        "label": "Shape 4",
+        "names": ["_Tail_4"],
+        "tile": ["_Tail_4"]
+      },
+      {
+        "id": "Tail_5",
+        "label": "Shape 5",
+        "names": ["_Tail_5"],
+        "tile": ["_Tail_5"]
+      },
+      {
+        "id": "Tail_7",
+        "label": "Shape 7",
+        "names": ["_Tail_7"],
+        "tile": ["_Tail_7"]
+      },
+      {
+        "id": "Tail_8",
+        "label": "Shape 8",
+        "names": ["_Tail_8"],
+        "tile": ["_Tail_8"]
+      },
+      {
+        "empty": true,
+        "id": "Tail_6",
+        "label": "None",
+        "names": ["_Tail_6"],
+        "tile": []
+      }
+    ],
+    "title": "Tail"
+  },
+  {
+    "id": "Wings_1",
+    "options": [
+      {
+        "id": "Wings_1",
+        "label": "Shape 1",
+        "names": ["_Wings_1"],
+        "tile": ["_Wings_1"]
+      },
+      {
+        "id": "Wings_2",
+        "label": "Shape 2",
+        "names": ["_Wings_2"],
+        "tile": ["_Wings_2"]
+      },
+      {
+        "id": "Wings_3",
+        "label": "Shape 3",
+        "names": ["_Wings_3"],
+        "tile": ["_Wings_3"]
+      }
+    ],
+    "title": "Wings"
+  },
+  {
+    "id": "SideDetail_1",
+    "options": [
+      {
+        "id": "SideDetail_1",
+        "label": "Shape 1",
+        "names": ["_SideDetail_1"],
+        "tile": ["_SideDetail_1"]
+      },
+      {
+        "id": "SideDetail_2",
+        "label": "Shape 2",
+        "names": ["_SideDetail_2"],
+        "tile": ["_SideDetail_2"]
+      },
+      {
+        "id": "SideDetail_3",
+        "label": "Shape 3",
+        "names": ["_SideDetail_3"],
+        "tile": ["_SideDetail_3"]
+      }
+    ],
+    "title": "Side detail"
+  },
+  {
+    "id": "FrontWings_1",
+    "options": [
+      {
+        "id": "FrontWings_1",
+        "label": "Shape 1",
+        "names": ["_FrontWings_1"],
+        "tile": ["_FrontWings_1"]
+      },
+      {
+        "id": "FrontWings_2",
+        "label": "Shape 2",
+        "names": ["_FrontWings_2"],
+        "tile": ["_FrontWings_2"]
+      },
+      {
+        "id": "FrontWings_3",
+        "label": "Shape 3",
+        "names": ["_FrontWings_3"],
+        "tile": ["_FrontWings_3"]
+      }
+    ],
+    "title": "Front wings"
+  }
+]

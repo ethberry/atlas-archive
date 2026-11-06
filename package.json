@@ -64,7 +64,8 @@
     "start": "next start",
     "supabase:generate": "supabase gen types --lang=typescript --local > ./lib/db/supabase.types.ts",
     "supabase:login": "supabase login",
-    "supabase:logout": "supabase logout"
+    "supabase:logout": "supabase logout",
+    "builder:check": "npx -y tsx scripts/builder-check.ts"
   },
   "version": "1.0.0"
 }

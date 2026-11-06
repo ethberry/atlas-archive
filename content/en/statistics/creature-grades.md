@@ -4,7 +4,7 @@
 
 ## The odds
 
-Each grade is rolled apart, with S at 15%. Nothing about the planet enters that roll, so these odds hold everywhere.
+Each grade is rolled apart, with S at 15%. Nothing about the planet enters that roll, so these odds hold everywhere. The grades are fixed for life; what a creature can still change are its [battle moves](/guides/battle-moves).
 
 <!-- widget:odds -->
 

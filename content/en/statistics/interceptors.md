@@ -10,7 +10,7 @@ A planet that holds them holds a median of {{median}} spots. They are {{wrecks}}
 
 ## One form in a system
 
-Every Sentinel wreck of a system shows the same ship: the same parts and the same colours. Its name, class, and supercharged slots change from wreck to wreck. So when you want a form, you want a system<!-- interceptor-finder -->, and the [Interceptor builder](/interceptor-finder) shows every form there is<!-- /interceptor-finder -->.
+Every Sentinel wreck of a system shows the same ship: the same parts and the same colours. Its name, class, and supercharged slots change from wreck to wreck. So when you want a form, you want a system<!-- interceptor-finder -->, and the [Sentinel Interceptors](/interceptor-finder) page shows every form there is<!-- /interceptor-finder -->.
 
 ## Wealth and class
 

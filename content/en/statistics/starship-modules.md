@@ -4,26 +4,6 @@
 
 Each stat reads as the module's card prints it. Illegal modules come from the black market, and Rusted ones are sea salvage.
 
-## Every starship module
-
-The modules you build or receive, apart from upgrade modules and the cosmetics. How to raise the ship itself to S is [how to upgrade a ship](/guides/ship-upgrades).
-
-<!-- widget:built -->
-
-### Interceptor only
-
-A Sentinel Interceptor flies on its own core technology, and no other ship takes it; the [Interceptors](/guides/interceptors) guide says where to find one.
-
-<!-- widget:onlyInterceptor -->
-<!-- living -->
-
-### Living ship only
-
-A living ship grows organs in the place of a starship's technology: none of these fits another ship, and of the starship modules it takes only the figurines, the trails, and the Atlantid Drive.
-
-<!-- widget:onlyLiving -->
-<!-- /living -->
-
 ## Upgrade modules
 
 One table per family: each class, how many stats one install raises, and the limits of each stat. Below each table a second one shows what one install rolls: how many stats it raises, how often it comes near the best its kind can add to the stat it names, and how often each stat is raised; a third shows how often a raised stat lands in the top tenth of its limits, where the Illegal modules stand out by a one-in-ten draw that raises the most stats their kind allows. Where to put them for the most damage is on [supercharged slots](/guides/supercharged-slots).
@@ -102,6 +82,26 @@ The colour drives are not upgrade modules. A Cadmium, Emeril, or Indium Drive le
 
 <!-- widget:shipblobTop -->
 
+## Every starship module
+
+The modules you build or receive, apart from upgrade modules and the cosmetics. How to upgrade the ship itself to class S is on [how to upgrade a ship](/guides/ship-upgrades).
+
+<!-- widget:built -->
+
+### Interceptor only
+
+A Sentinel Interceptor flies on its own core technology, and no other ship takes it; the [Interceptors](/guides/interceptors) guide says where to find one.
+
+<!-- widget:onlyInterceptor -->
+<!-- living -->
+
+### Living ship only
+
+A [living ship](/guides/living-ships) grows organs in the place of a starship's technology: none of these fits another ship, and of the starship modules it takes only the figurines, the trails, and the Atlantid Drive.
+
+<!-- widget:onlyLiving -->
+<!-- /living -->
+
 ## Figurines
 
 A figurine sits in the cockpit, takes a technology slot, and changes a stat. Six are sold for Quicksilver, the rest are expedition rewards.
@@ -114,4 +114,4 @@ A trail colours the exhaust and adds 1% to boost. It is not a drive: the Cadmium
 
 <!-- widget:trails -->
 
-<!-- corvette -->A corvette you build yourself takes these modules and a set of its own: [corvette modules](/guides/corvette-modules).<!-- /corvette --><!-- not-corvette -->On the ground, an exocraft takes modules of its own, and the first of them is the [Roamer](/guides/roamer-modules).<!-- /not-corvette -->
+<!-- corvette -->A corvette you build yourself takes these modules, and each part it is built from brings one more, as [corvettes](/guides/corvettes) shows and [corvette modules](/guides/corvette-modules) lists.<!-- /corvette --><!-- not-corvette -->Above your ship, a system's next prize is in its sky: the freighter you save from a battle, and [freighters](/guides/freighters) says where to farm one.<!-- /not-corvette -->

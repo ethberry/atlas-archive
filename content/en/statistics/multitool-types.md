@@ -1,6 +1,6 @@
 # Multitool types
 
-**Which types of multitools can you find?** Mostly pistols and rifles: {{plainShare}} of all you find. A {{rareName}} is {{rareOneIn}}, and {{rareName}} is the one type that is mostly class A.
+**Which types of multitools can you find?** Mostly pistols and rifles, like the one you wake up with: {{plainShare}} of all you find. A {{rareName}} is {{rareOneIn}}, and {{rareName}} is the one type that is mostly class A.
 
 Each tool is counted once, as you find it, in [Euclid](/galaxy/b7e59a53-13de-521b-af6b-dcbf6280eb9d). [Staffs](/guides/staffs) have a page of their own, and the numbers of each type are under [multitool stats](/guides/multitool-stats).
 
@@ -17,6 +17,10 @@ Atlantid colours and Sentinel forms come up in equal shares. The colour matters 
 Shops and space stations pay the same mix. Monoliths pay only Atlantid tools, and camps only Sentinel tools.
 
 <!-- widget:sources -->
+
+## Same cabinet, another type
+
+A cabinet keeps its class and its supercharged slots, but the type inside depends on where you started the session: every planet of the system and the space station give a different tool. So if a shop, a monolith, or a camp holds a good class but not the type you want, save on another planet or aboard the station, load that save, and fly back. The same cabinet now holds another tool, at the same class and on the same slots. A staff does not change this way: it depends on the head you fit, as [staffs](/guides/staffs) shows.
 
 ## By wealth
 

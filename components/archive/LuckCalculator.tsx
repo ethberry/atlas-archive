@@ -304,6 +304,15 @@ function ItemForm(props: { ship: boolean; rows: ItemRow[]; hidden: boolean }) {
   const held = heldBy(type, klass);
   const names = ship ? ITEMS.shipStats : TOOL_FIELDS;
   const open = names.filter((name) => limitOf(held, ship, name, type));
+  const statOf = (name: string) =>
+    held.stats[(ship ? ITEMS.shipStats : ITEMS.toolStats).indexOf(name)];
+  // A type and class with no base stats has no field; one with fields but no
+  // find at that class has nothing to score them against. Each says so.
+  const empty = !open.length
+    ? "luck.noStats"
+    : open.every((name) => !statOf(name))
+      ? "luck.noFinds"
+      : null;
   const score = (data: FormValues) => {
     const field = (name: string) =>
       open.includes(name) ? parsed(data.fields[name]) : null;
@@ -469,6 +478,17 @@ function ItemForm(props: { ship: boolean; rows: ItemRow[]; hidden: boolean }) {
           </Stack>
         )}
       />
+      {empty ? (
+        <Typography variant="body2" color="text.secondary">
+          <FormattedMessage
+            id={empty}
+            values={{
+              type: intl.formatMessage({ id: typeName(ship, type) }),
+              klass: ITEMS.classes[klass],
+            }}
+          />
+        </Typography>
+      ) : null}
       <Grid container spacing={2}>
         {open.map((name) => {
           const limit = limitOf(held, ship, name, type) as Limit;

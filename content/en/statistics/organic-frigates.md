@@ -14,10 +14,17 @@ The first whale you meet asks {{questions}} questions in a dream. Every answer f
 
 <!-- widget:dream -->
 
-The game's table points the Speed answers at the Support count, so the Speed count never grows, and the Speed frigate looks out of reach through the dream. This may well be a bug in the game rather than a choice.
+The game's table points the Speed answers at the Support count, so the Speed count never grows, and the Speed frigate looks out of reach through the dream. This may well be one of the [game bugs](/game-bugs) rather than a choice.
 
 ## Later whales
 
-Later whales sell their frigates like any fleet. Each system has a whale of its own: everyone who calls it there meets the same creature, with the same name, kind, traits, class, and price. Its kind is one of six, Combat, Exploration, Industrial, Trade, Support, or Speed, one as likely as the next. Only the first whale's kind comes from your dream; its name is still the system's. An organic frigate never draws a bad trait, and [frigates](/guides/frigates) has how traits and classes work.
+Later whales sell their frigates like any fleet. Each system has a whale of its own: everyone who calls it there meets the same creature, with the same name, kind, traits, class, and price. Its kind is one of six, Combat, Exploration, Industrial, Trade, Support, or Speed, one as likely as the next. Only the first whale's kind comes from your dream; its name is still the system's. An organic frigate never draws a bad trait, and draws only from a list of its own; how traits and classes work, and the traits of the frigates bought from fleets, is on [frigates](/guides/frigates#frigate-traits).
+
+<!-- widget:traits -->
+
+<!-- living -->
+
+The ship you fly that grows the same way comes from a Void Egg: [living ships](/guides/living-ships).
+<!-- /living -->
 
 The last capital ship of the sky is not yours to take: the [Sentinel capital ship](/guides/sentinel-capital-ship).

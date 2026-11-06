@@ -1,6 +1,6 @@
 # Ship classes
 
-**How do you find a class S crashed ship?** Look for an Exotic: they are class S {{exoticS}} of the time. Haulers are {{haulerS}} of the time, and Explorers almost never: {{explorerOneIn}}. One roll sets both a ship's type and its class, so each type leans to the classes that share its part of the roll. The catalog's [crashed ships](/ship) come with the portal glyphs of each wreck.
+**How do you find a class S crashed ship?** Search a pirate system: {{pirateS}} of its wrecks are class S, against {{highS}} at high wealth and none at low. Or look for an Exotic: they are class S {{exoticS}} of the time. Haulers are {{haulerS}} of the time, and Explorers almost never: {{explorerOneIn}}. One roll sets both a ship's type and its class, so each type leans to the classes that share its part of the roll. The catalog's [crashed ships](/ship) come with the portal glyphs of each wreck.
 
 ## What sets the class
 

@@ -38,6 +38,16 @@ const nextConfig: NextConfig = {
         destination: long("technology-merchants"),
         permanent: true,
       })),
+      // Frigate traits became a section of Frigates on 2026-11-07.
+      ...[
+        "/statistics/frigate-traits",
+        "/guides/frigate-traits",
+        "/guides/freighters/frigate-traits",
+      ].map((source) => ({
+        source,
+        destination: `${long("frigates")}#frigate-traits`,
+        permanent: true,
+      })),
       ...guides.map((slug) => ({
         source: `/statistics/${slug}`,
         destination: long(slug),

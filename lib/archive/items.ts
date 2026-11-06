@@ -50,6 +50,17 @@ export const ITEMS = values as unknown as {
     boltStep: number;
     scanner: number;
   };
+  // The terms of a ship's bare Manoeuvrability (`CalculateShipStatEngines`):
+  // the hull term by type key, `otherHull` for the rest, and by class the class
+  // term and the constant and weights of the two draws.
+  agile: {
+    hulls: Record<string, number>;
+    otherHull: number;
+    robotScale: number;
+    curve: number;
+    classes: number[];
+    offsets: [number, number, number][];
+  };
 };
 
 const MEDIAN = ITEMS.quantiles.indexOf(0.5);

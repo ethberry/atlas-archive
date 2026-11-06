@@ -1,12 +1,182 @@
 [
   {
-    "id": "cockpit",
-    "title": "Head",
+    "id": "TopMid_B3LOD0",
     "options": [
       {
-        "id": "round",
+        "id": "TopMid_B3LOD0",
+        "label": "Ridge",
+        "names": ["_TopMid_B3LOD0"],
+        "tile": ["_TopMid_B3LOD0"]
+      },
+      {
+        "empty": true,
+        "id": "TopMid_Null1",
+        "label": "None",
+        "names": ["_TopMid_Null1"],
+        "tile": []
+      }
+    ],
+    "title": "Back ridge"
+  },
+  {
+    "id": "TopAcc_A",
+    "options": [
+      {
+        "id": "TopAcc_A",
+        "label": "Feelers",
+        "names": ["_TopAcc_A"],
+        "tile": ["_TopAcc_A"]
+      },
+      {
+        "empty": true,
+        "id": "TopAcc_Null",
+        "label": "None",
+        "names": ["_TopAcc_Null", "_TopAcc_Null1"],
+        "tile": []
+      }
+    ],
+    "title": "Feelers"
+  },
+  {
+    "id": "feet_ALOD0",
+    "options": [
+      {
+        "id": "feet_ALOD0",
+        "label": "Arch",
+        "names": ["_feet_ALOD0"],
+        "tile": ["_feet_ALOD0"]
+      },
+      {
+        "id": "feet_BLOD0",
+        "label": "Sweep",
+        "names": ["_feet_BLOD0"],
+        "tile": ["_feet_BLOD0"]
+      },
+      {
+        "id": "feet_CLOD0",
+        "label": "Claws",
+        "names": ["_feet_CLOD0"],
+        "tile": ["_feet_CLOD0"]
+      },
+      {
+        "id": "feet_DLOD0",
+        "label": "Small fins",
+        "names": ["_feet_DLOD0"],
+        "tile": ["_feet_DLOD0"]
+      },
+      {
+        "id": "feet_E",
+        "label": "Open",
+        "names": ["_feet_E"],
+        "tile": ["_feet_E"]
+      }
+    ],
+    "title": "Underside"
+  },
+  {
+    "id": "backfeet_NullLOD0",
+    "options": [
+      {
+        "id": "backfeet_ALOD0",
+        "label": "Pedals",
+        "names": ["_backfeet_ALOD0"],
+        "shared": true,
+        "tile": ["_backfeet_ALOD0"]
+      },
+      {
+        "empty": true,
+        "id": "backfeet_NullLOD0",
+        "label": "None",
+        "names": ["_backfeet_NullLOD0"],
+        "tile": []
+      }
+    ],
+    "requires": {
+      "group": "feet_ALOD0",
+      "option": "feet_DLOD0"
+    },
+    "title": "Rear pedals"
+  },
+  {
+    "id": "frontfeet_BLOD0",
+    "options": [
+      {
+        "id": "frontfeet_BLOD0",
+        "label": "Belly",
+        "names": [
+          "_frontfeet_BLOD0",
+          "_frontfeet_BLOD1",
+          "_frontfeet_BLOD2",
+          "_frontfeet_BLOD3"
+        ],
+        "tile": [
+          "_frontfeet_BLOD0",
+          "_frontfeet_BLOD1",
+          "_frontfeet_BLOD2",
+          "_frontfeet_BLOD3"
+        ]
+      },
+      {
+        "empty": true,
+        "id": "frontfeet_Null",
+        "label": "None",
+        "names": ["_frontfeet_Null"],
+        "tile": []
+      }
+    ],
+    "requires": {
+      "group": "feet_ALOD0",
+      "option": "feet_E"
+    },
+    "title": "Belly"
+  },
+  {
+    "id": "backpedals_A1LOD0",
+    "options": [
+      {
+        "id": "backpedals_A1LOD0",
+        "label": "Pedals",
+        "names": [
+          "_backpedals_A1LOD0",
+          "_backpedals_A1LOD1",
+          "_backpedals_A1LOD2",
+          "_backpedals_A1LOD3"
+        ],
+        "shared": true,
+        "tile": [
+          "_backpedals_A1LOD0",
+          "_backpedals_A1LOD1",
+          "_backpedals_A1LOD2",
+          "_backpedals_A1LOD3"
+        ]
+      },
+      {
+        "empty": true,
+        "id": "backpedals_B",
+        "label": "None",
+        "names": ["_backpedals_B"],
+        "tile": []
+      }
+    ],
+    "requires": {
+      "group": "feet_ALOD0",
+      "option": "feet_E"
+    },
+    "title": "Pedals"
+  },
+  {
+    "id": "cockpit_ALOD0",
+    "options": [
+      {
+        "id": "cockpit_ALOD0",
         "label": "Round",
         "names": [
+          "_cockpit_ALOD0",
+          "_cockpit_ALOD1",
+          "_cockpit_ALOD2",
+          "_cockpit_ALOD3"
+        ],
+        "tile": [
           "_cockpit_ALOD0",
           "_cockpit_ALOD1",
           "_cockpit_ALOD2",
@@ -14,9 +184,15 @@
         ]
       },
       {
-        "id": "jaw",
+        "id": "cockpit_BLOD0",
         "label": "Jaw",
         "names": [
+          "_cockpit_BLOD0",
+          "_cockpit_BLOD1",
+          "_cockpit_BLOD2",
+          "_cockpit_BLOD3"
+        ],
+        "tile": [
           "_cockpit_BLOD0",
           "_cockpit_BLOD1",
           "_cockpit_BLOD2",
@@ -24,9 +200,15 @@
         ]
       },
       {
-        "id": "pointed",
+        "id": "cockpit_B1LOD0",
         "label": "Pointed",
         "names": [
+          "_cockpit_B1LOD0",
+          "_cockpit_B1LOD1",
+          "_cockpit_B1LOD2",
+          "_cockpit_B1LOD3"
+        ],
+        "tile": [
           "_cockpit_B1LOD0",
           "_cockpit_B1LOD1",
           "_cockpit_B1LOD2",
@@ -34,216 +216,103 @@
         ]
       },
       {
-        "id": "flat",
+        "id": "cockpit_C5LOD0",
         "label": "Flat",
         "names": [
           "_cockpit_C5LOD0",
           "_cockpit_C5LOD1",
           "_cockpit_C5LOD2",
           "_cockpit_C5LOD3"
+        ],
+        "tile": [
+          "_cockpit_C5LOD0",
+          "_cockpit_C5LOD1",
+          "_cockpit_C5LOD2",
+          "_cockpit_C5LOD3"
         ]
       }
-    ]
+    ],
+    "title": "Head"
   },
   {
-    "id": "crest",
-    "title": "On the head",
-    "requires": {
-      "group": "cockpit",
-      "option": "flat"
-    },
+    "id": "TopHat_NullLOD0",
     "options": [
       {
-        "id": "none",
-        "label": "None",
-        "names": [
-          "_TopHat_NullLOD0",
-          "_TopHat_NullLOD1",
-          "_TopHat_NullLOD2",
-          "_TopHat_NullLOD3"
-        ]
-      },
-      {
-        "id": "fin",
+        "id": "TopHat_A2LOD0",
         "label": "Fin",
         "names": [
           "_TopHat_A2LOD0",
           "_TopHat_A2LOD1",
           "_TopHat_A2LOD2",
           "_TopHat_A2LOD3"
+        ],
+        "tile": [
+          "_TopHat_A2LOD0",
+          "_TopHat_A2LOD1",
+          "_TopHat_A2LOD2",
+          "_TopHat_A2LOD3"
         ]
-      }
-    ]
-  },
-  {
-    "id": "ridge",
-    "title": "Back ridge",
-    "options": [
+      },
       {
-        "id": "none",
+        "empty": true,
+        "id": "TopHat_NullLOD0",
         "label": "None",
-        "names": ["_TopMid_Null1"]
-      },
-      {
-        "id": "ridge",
-        "label": "Ridge",
-        "names": ["_TopMid_B3LOD0"]
-      }
-    ]
-  },
-  {
-    "id": "feelers",
-    "title": "Feelers",
-    "options": [
-      {
-        "id": "none",
-        "label": "None",
-        "names": ["_TopAcc_Null", "_TopAcc_Null1"]
-      },
-      {
-        "id": "feelers",
-        "label": "Feelers",
-        "names": ["_TopAcc_A"]
-      }
-    ]
-  },
-  {
-    "id": "underside",
-    "title": "Underside",
-    "options": [
-      {
-        "id": "arch",
-        "label": "Arch",
-        "names": ["_feet_ALOD0"]
-      },
-      {
-        "id": "sweep",
-        "label": "Sweep",
-        "names": ["_feet_BLOD0"]
-      },
-      {
-        "id": "claws",
-        "label": "Claws",
-        "names": ["_feet_CLOD0"]
-      },
-      {
-        "id": "fins",
-        "label": "Small fins",
-        "names": ["_feet_DLOD0"]
-      },
-      {
-        "id": "open",
-        "label": "Open",
-        "whole": true,
-        "names": ["_feet_E"]
-      }
-    ]
-  },
-  {
-    "id": "rear",
-    "title": "Rear pedals",
-    "requires": {
-      "group": "underside",
-      "option": "fins"
-    },
-    "options": [
-      {
-        "id": "none",
-        "label": "None",
-        "names": ["_backfeet_NullLOD0"]
-      },
-      {
-        "id": "pedals",
-        "label": "Pedals",
-        "names": ["_backfeet_ALOD0"]
-      }
-    ]
-  },
-  {
-    "id": "belly",
-    "title": "Belly",
-    "requires": {
-      "group": "underside",
-      "option": "open"
-    },
-    "options": [
-      {
-        "id": "none",
-        "label": "None",
-        "names": ["_frontfeet_Null"]
-      },
-      {
-        "id": "belly",
-        "label": "Belly",
         "names": [
-          "_frontfeet_BLOD0",
-          "_frontfeet_BLOD1",
-          "_frontfeet_BLOD2",
-          "_frontfeet_BLOD3"
-        ]
+          "_TopHat_NullLOD0",
+          "_TopHat_NullLOD1",
+          "_TopHat_NullLOD2",
+          "_TopHat_NullLOD3"
+        ],
+        "tile": []
       }
-    ]
-  },
-  {
-    "id": "pedals",
-    "title": "Pedals",
+    ],
     "requires": {
-      "group": "underside",
-      "option": "open"
+      "group": "cockpit_ALOD0",
+      "option": "cockpit_C5LOD0"
     },
-    "options": [
-      {
-        "id": "none",
-        "label": "None",
-        "names": ["_backpedals_B"]
-      },
-      {
-        "id": "pedals",
-        "label": "Pedals",
-        "names": [
-          "_backpedals_A1LOD0",
-          "_backpedals_A1LOD1",
-          "_backpedals_A1LOD2",
-          "_backpedals_A1LOD3"
-        ]
-      }
-    ]
+    "title": "On the head"
   },
   {
-    "id": "engine",
-    "title": "Engine",
+    "id": "engine_aREF",
     "options": [
       {
-        "id": "a",
+        "id": "engine_aREF",
         "label": "Bell",
-        "names": ["_engine_aREF"]
+        "names": ["_engine_aREF"],
+        "tile": ["_engine_aREF"]
       },
       {
-        "id": "b",
+        "id": "engine_bREF",
         "label": "Cone",
-        "names": ["_engine_bREF"]
+        "names": ["_engine_bREF"],
+        "tile": ["_engine_bREF"]
       }
-    ]
+    ],
+    "title": "Engine"
   },
   {
-    "id": "wings",
-    "title": "Wings",
+    "id": "wings_ALOD0",
     "options": [
       {
-        "id": "none",
-        "label": "None",
-        "names": ["_wings_Null"]
-      },
-      {
-        "id": "short",
+        "id": "wings_ALOD0",
         "label": "Short",
-        "names": ["_wings_ALOD0"]
+        "names": ["_wings_ALOD0"],
+        "tile": ["_wings_ALOD0"]
       },
       {
-        "id": "long",
+        "id": "wings_B3LOD0",
         "label": "Long",
-        "names": ["_wings_B3LOD0"]
+        "names": ["_wings_B3LOD0"],
+        "tile": ["_wings_B3LOD0"]
+      },
+      {
+        "empty": true,
+        "id": "wings_Null",
+        "label": "None",
+        "names": ["_wings_Null"],
+        "tile": []
       }
-    ]
+    ],
+    "title": "Wings"
   }
 ]

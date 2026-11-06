@@ -96,6 +96,16 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
           },
         ]
       : []),
+    ...(pathShown("/living-frigate-finder")
+      ? [
+          {
+            url: `${base}/living-frigate-finder`,
+            lastModified: new Date(),
+            changeFrequency: "monthly" as const,
+            priority: 0.6,
+          },
+        ]
+      : []),
     {
       url: `${base}/how-lucky-am-i`,
       lastModified: new Date(),
@@ -120,6 +130,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "monthly" as const,
       priority: 0.5,
     })),
+    {
+      url: `${base}/game-bugs`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.4,
+    },
     {
       url: `${base}/release-notes`,
       lastModified: new Date(),

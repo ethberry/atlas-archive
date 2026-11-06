@@ -14,7 +14,7 @@ With every module on it the Pilgrim has 8 slots left for upgrade modules, not th
 
 ## Supercharged slots
 
-The Pilgrim has three supercharged slots, and they stand in the same places for every player: slot 4 of the top row, slot 10 of the middle row, slot 2 of the bottom row, counting from the left. There is nothing to roll. None of the three touches another, so each can lift one kind: give them to the Fusion Engine, the Exocraft Boosters, and the Exocraft Mining Laser, one module of each, and set the rest of that kind and its own technology around it, touching.
+The Pilgrim has three supercharged slots, and they stand in the same places for every player: slot 4 of the top row, slot 10 of the middle row, slot 2 of the bottom row, counting from the left. There is nothing to roll. None of the three is adjacent to another, so each can lift one kind: give them to the Fusion Engine, the Exocraft Boosters, and the Exocraft Mining Laser, one module of each, and set the rest of that kind and its own technology around it, adjacent.
 
 ## Upgrade modules
 

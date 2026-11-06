@@ -1,0 +1,761 @@
+[
+  {
+    "echo": {
+      "_C2A_4._CargoLarge_AccA._Container_B": [
+        "_CargoC1_B1._CB_A._Refs_A",
+        "_C2A_4._CargoLarge_AccA",
+        "_C2_3._CargoLarge_AccA",
+        "_C2B_4._CargoLarge_AccA",
+        "_S1_AccB._CargoLarge_AccA",
+        "_S4_AccB._CargoLarge_AccA"
+      ],
+      "_C2B_4._CargoLarge_AccA._Container_B": [
+        "_CargoC1_B1._CB_A._Refs_A",
+        "_C2A_4._CargoLarge_AccA",
+        "_C2_3._CargoLarge_AccA",
+        "_C2B_4._CargoLarge_AccA",
+        "_S1_AccB._CargoLarge_AccA",
+        "_S4_AccB._CargoLarge_AccA"
+      ],
+      "_C2_3._CargoLarge_AccA._Container_B": [
+        "_CargoC1_B1._CB_A._Refs_A",
+        "_C2A_4._CargoLarge_AccA",
+        "_C2_3._CargoLarge_AccA",
+        "_C2B_4._CargoLarge_AccA",
+        "_S1_AccB._CargoLarge_AccA",
+        "_S4_AccB._CargoLarge_AccA"
+      ],
+      "_CargoC1_B1._CB_A._Refs_A._Container_B": [
+        "_CargoC1_B1._CB_A._Refs_A",
+        "_C2A_4._CargoLarge_AccA",
+        "_C2_3._CargoLarge_AccA",
+        "_C2B_4._CargoLarge_AccA",
+        "_S1_AccB._CargoLarge_AccA",
+        "_S4_AccB._CargoLarge_AccA"
+      ],
+      "_CargoC1_B2._CB_A._Refs_A._Container_B": [
+        "_CargoC1_B1._CB_A._Refs_A",
+        "_C2A_4._CargoLarge_AccA",
+        "_C2_3._CargoLarge_AccA",
+        "_C2B_4._CargoLarge_AccA",
+        "_S1_AccB._CargoLarge_AccA",
+        "_S4_AccB._CargoLarge_AccA"
+      ],
+      "_CargoC1_B3._CB_A._Refs_A._Container_B": [
+        "_CargoC1_B1._CB_A._Refs_A",
+        "_C2A_4._CargoLarge_AccA",
+        "_C2_3._CargoLarge_AccA",
+        "_C2B_4._CargoLarge_AccA",
+        "_S1_AccB._CargoLarge_AccA",
+        "_S4_AccB._CargoLarge_AccA"
+      ],
+      "_CargoC2_B1._CB_A._Refs_A._Container_B": [
+        "_CargoC1_B1._CB_A._Refs_A",
+        "_C2A_4._CargoLarge_AccA",
+        "_C2_3._CargoLarge_AccA",
+        "_C2B_4._CargoLarge_AccA",
+        "_S1_AccB._CargoLarge_AccA",
+        "_S4_AccB._CargoLarge_AccA"
+      ],
+      "_CargoC2_B2._CB_A._Refs_A._Container_B": [
+        "_CargoC1_B1._CB_A._Refs_A",
+        "_C2A_4._CargoLarge_AccA",
+        "_C2_3._CargoLarge_AccA",
+        "_C2B_4._CargoLarge_AccA",
+        "_S1_AccB._CargoLarge_AccA",
+        "_S4_AccB._CargoLarge_AccA"
+      ],
+      "_CargoC2_B3._CB_A._Refs_A._Container_B": [
+        "_CargoC1_B1._CB_A._Refs_A",
+        "_C2A_4._CargoLarge_AccA",
+        "_C2_3._CargoLarge_AccA",
+        "_C2B_4._CargoLarge_AccA",
+        "_S1_AccB._CargoLarge_AccA",
+        "_S4_AccB._CargoLarge_AccA"
+      ],
+      "_S1_AccB._CargoLarge_AccA._Container_B": [
+        "_CargoC1_B1._CB_A._Refs_A",
+        "_C2A_4._CargoLarge_AccA",
+        "_C2_3._CargoLarge_AccA",
+        "_C2B_4._CargoLarge_AccA",
+        "_S1_AccB._CargoLarge_AccA",
+        "_S4_AccB._CargoLarge_AccA"
+      ],
+      "_S4_AccB._CargoLarge_AccA._Container_B": [
+        "_CargoC1_B1._CB_A._Refs_A",
+        "_C2A_4._CargoLarge_AccA",
+        "_C2_3._CargoLarge_AccA",
+        "_C2B_4._CargoLarge_AccA",
+        "_S1_AccB._CargoLarge_AccA",
+        "_S4_AccB._CargoLarge_AccA"
+      ]
+    },
+    "id": "Hull_A1",
+    "options": [
+      {
+        "id": "Hull_A1",
+        "label": "Wedge",
+        "names": ["_Hull_A1"],
+        "tile": [
+          "_Hull_A1",
+          "_HullSide_C1",
+          "_HullWings_CLOD0",
+          "_Base_A",
+          "_Base_A._Hull_BLOD0",
+          "_Base_A._Hull_BLOD0._logo1_A1",
+          "_Base_A._Hull_BLOD0._Letter2_A2",
+          "_Base_A._Hull_BLOD0._logo2_A2",
+          "_Base_A._Hull_BLOD0._Number2_A2",
+          "_Base_A._Hull_BLOD0._Letter1_A1",
+          "_Base_A._Hull_BLOD0._Number1_A1",
+          "_CargoC_A1",
+          "_CargoC1_B1",
+          "_CargoC1_B1._CB_A",
+          "_CargoC1_B1._CB_A._Refs_A",
+          "_CargoC1_B1._CB_A._Refs_A._Container_B",
+          "_CargoC1_B1._CB_A._DA_1",
+          "_CargoC1_B1._CB_A._DA_1._D5_SSign",
+          "_CargoC1_B1._CB_A._DA_1._D4_Let",
+          "_CargoC1_B1._CB_A._DA_1._D6_SSign",
+          "_CargoC1_B1._CB_A._DA_1._D2_Rect",
+          "_CargoC1_B1._CB_A._DA_1._D3_Let",
+          "_CargoC1_B1._CB_A._DA_1._D1_Rect",
+          "_CargoC2_B1",
+          "_CargoC2_B1._CB_A",
+          "_CargoC2_B1._CB_A._Refs_A",
+          "_CargoC2_B1._CB_A._Refs_A._Container_B",
+          "_CargoC2_B1._CB_A._DA_1",
+          "_CargoC2_B1._CB_A._DA_1._D5_SSign",
+          "_CargoC2_B1._CB_A._DA_1._D4_Let",
+          "_CargoC2_B1._CB_A._DA_1._D6_SSign",
+          "_CargoC2_B1._CB_A._DA_1._D2_Rect",
+          "_CargoC2_B1._CB_A._DA_1._D3_Let",
+          "_CargoC2_B1._CB_A._DA_1._D1_Rect"
+        ]
+      },
+      {
+        "id": "Hull_A2",
+        "label": "Block",
+        "names": ["_Hull_A2"],
+        "tile": [
+          "_Hull_A2",
+          "_Base_A2",
+          "_Base_A2._Hull_BLOD0",
+          "_Base_A2._Hull_BLOD0._logo1_A1",
+          "_Base_A2._Hull_BLOD0._Letter2_A2",
+          "_Base_A2._Hull_BLOD0._logo2_A2",
+          "_Base_A2._Hull_BLOD0._Number2_A2",
+          "_Base_A2._Hull_BLOD0._Letter1_A1",
+          "_Base_A2._Hull_BLOD0._Number1_A1",
+          "_HullBTop_A2",
+          "_HullBTop_A2._HullTop_ALOD0",
+          "_CargoC_A2",
+          "_CargoC_S1",
+          "_CargoC_S2",
+          "_CargoC_S1._Decals_1LOD0",
+          "_CargoC_S1._Decals_1LOD0._DA_1",
+          "_CargoC_S1._Decals_1LOD0._DA_1._D8_SSign",
+          "_CargoC_S1._Decals_1LOD0._DA_1._D4_Num",
+          "_CargoC_S1._Decals_1LOD0._DA_1._D11_Rect",
+          "_CargoC_S1._Decals_1LOD0._DA_1._D9_SSign",
+          "_CargoC_S1._Decals_1LOD0._DA_1._D12_Rect",
+          "_CargoC_S1._Decals_1LOD0._DA_1._D2_Let",
+          "_CargoC_S1._Decals_1LOD0._DA_1._D3_Num",
+          "_CargoC_S1._Decals_1LOD0._DA_1._D1_Letter",
+          "_CargoC_S1._CLarge_B",
+          "_CargoC_S1._CLarge_B._Refs_A",
+          "_JointPiece_A",
+          "_CLarge_JP",
+          "_HullBBot_A2",
+          "_HullBBot_A2._HullTop_ALOD0"
+        ]
+      }
+    ],
+    "title": "Hull"
+  },
+  {
+    "id": "HullBTop_C2",
+    "options": [
+      {
+        "id": "HullBTop_C2",
+        "label": "Thrusters",
+        "names": ["_HullBTop_C2"],
+        "tile": ["_HullBTop_C2"]
+      },
+      {
+        "id": "HullTop_A",
+        "label": "Rounded",
+        "names": ["_HullTop_A"],
+        "tile": ["_HullTop_A"]
+      },
+      {
+        "id": "HullTop_B",
+        "label": "Flat",
+        "names": ["_HullTop_B"],
+        "tile": ["_HullTop_B"]
+      }
+    ],
+    "requires": {
+      "group": "Hull_A1",
+      "option": "Hull_A1"
+    },
+    "title": "Top"
+  },
+  {
+    "id": "VerticalFinC_B",
+    "options": [
+      {
+        "id": "VerticalFinC_B",
+        "label": "Box bridge",
+        "names": ["_VerticalFinC_B"],
+        "tile": ["_VerticalFinC_B"]
+      },
+      {
+        "id": "VerticalFinC_C",
+        "label": "Dome bridge",
+        "names": ["_VerticalFinC_C"],
+        "tile": ["_VerticalFinC_C"]
+      },
+      {
+        "id": "VerticalFinC_A",
+        "label": "Fin",
+        "names": ["_VerticalFinC_A"],
+        "tile": ["_VerticalFinC_A"]
+      },
+      {
+        "empty": true,
+        "id": "VerticalFinC_None",
+        "label": "Nothing",
+        "names": ["_VerticalFinC_None"],
+        "tile": []
+      }
+    ],
+    "requires": {
+      "group": "HullBTop_C2",
+      "option": "HullBTop_C2"
+    },
+    "title": "On the thrusters"
+  },
+  {
+    "chain": true,
+    "id": "CargoEnd1_B1",
+    "options": [
+      {
+        "id": "CargoEnd1_B1",
+        "label": "2 sections",
+        "names": ["_CargoEnd1_B1"],
+        "tile": [
+          "_CargoEnd1_B1",
+          "_CargoEnd1_B1._LargeCap_A._DA_1",
+          "_CargoEnd1_B1._LargeCap_A._DA_1._D10_Num",
+          "_CargoEnd1_B1._LargeCap_A._DA_1._D5_Num",
+          "_CargoEnd1_B1._LargeCap_A._DA_1._D8_SSign",
+          "_CargoEnd1_B1._LargeCap_A._DA_1._D4_SSign",
+          "_CargoEnd1_B1._LargeCap_A._DA_1._D11_Logo",
+          "_CargoEnd1_B1._LargeCap_A._DA_1._D15_Num",
+          "_CargoEnd1_B1._LargeCap_A._DA_1._D6_SSign",
+          "_CargoEnd1_B1._LargeCap_A._DA_1._D9_SSign",
+          "_CargoEnd1_B1._LargeCap_A._DA_1._D12_Logo",
+          "_CargoEnd1_B1._LargeCap_A._DA_1._D7_SSign",
+          "_CargoEnd1_B1._LargeCap_A._DA_1._D3_SSign",
+          "_CargoEnd1_B1._LargeCap_A._DA_1._D14_Letter",
+          "_CargoEnd1_B1._LargeCap_A._DA_1._D13_Num",
+          "_CargoC_A1",
+          "_CargoC1_B1",
+          "_CargoC1_B1._CB_A",
+          "_CargoC1_B1._CB_A._Refs_A",
+          "_CargoC1_B1._CB_A._Refs_A._Container_B",
+          "_CargoC1_B1._CB_A._DA_1",
+          "_CargoC1_B1._CB_A._DA_1._D5_SSign",
+          "_CargoC1_B1._CB_A._DA_1._D4_Let",
+          "_CargoC1_B1._CB_A._DA_1._D6_SSign",
+          "_CargoC1_B1._CB_A._DA_1._D2_Rect",
+          "_CargoC1_B1._CB_A._DA_1._D3_Let",
+          "_CargoC1_B1._CB_A._DA_1._D1_Rect",
+          "_CargoC2_B1",
+          "_CargoC2_B1._CB_A",
+          "_CargoC2_B1._CB_A._Refs_A",
+          "_CargoC2_B1._CB_A._Refs_A._Container_B",
+          "_CargoC2_B1._CB_A._DA_1",
+          "_CargoC2_B1._CB_A._DA_1._D5_SSign",
+          "_CargoC2_B1._CB_A._DA_1._D4_Let",
+          "_CargoC2_B1._CB_A._DA_1._D6_SSign",
+          "_CargoC2_B1._CB_A._DA_1._D2_Rect",
+          "_CargoC2_B1._CB_A._DA_1._D3_Let",
+          "_CargoC2_B1._CB_A._DA_1._D1_Rect"
+        ]
+      },
+      {
+        "id": "CargoEnd2_B1",
+        "label": "4 sections",
+        "names": ["_CargoEnd1_B2", "_CargoEnd2_B1"],
+        "tile": [
+          "_CargoEnd1_B2",
+          "_CargoC1_B2",
+          "_CargoC1_B2._CB_A",
+          "_CargoC1_B2._CB_A._Refs_A",
+          "_CargoC1_B2._CB_A._Refs_A._Container_B",
+          "_CargoC1_B2._CB_A._DA_1",
+          "_CargoC1_B2._CB_A._DA_1._D5_SSign",
+          "_CargoC1_B2._CB_A._DA_1._D4_Let",
+          "_CargoC1_B2._CB_A._DA_1._D6_SSign",
+          "_CargoC1_B2._CB_A._DA_1._D2_Rect",
+          "_CargoC1_B2._CB_A._DA_1._D3_Let",
+          "_CargoC1_B2._CB_A._DA_1._D1_Rect",
+          "_CargoC2_B2",
+          "_C2A_4",
+          "_C2A_4._CargoLarge_AccA",
+          "_C2A_4._CargoLarge_AccA._Container_B",
+          "_C2_3",
+          "_C2_3._CargoLarge_AccA",
+          "_C2_3._CargoLarge_AccA._Container_B",
+          "_C2B_4",
+          "_C2B_4._CargoLarge_AccA",
+          "_C2B_4._CargoLarge_AccA._Container_B",
+          "_CargoC2_B2._CB_A",
+          "_CargoC2_B2._CB_A._Refs_A",
+          "_CargoC2_B2._CB_A._Refs_A._Container_B",
+          "_CargoC2_B2._CB_A._DA_1",
+          "_CargoC2_B2._CB_A._DA_1._D5_SSign",
+          "_CargoC2_B2._CB_A._DA_1._D4_Let",
+          "_CargoC2_B2._CB_A._DA_1._D6_SSign",
+          "_CargoC2_B2._CB_A._DA_1._D2_Rect",
+          "_CargoC2_B2._CB_A._DA_1._D3_Let",
+          "_CargoC2_B2._CB_A._DA_1._D1_Rect",
+          "_CargoEnd2_B1",
+          "_CargoEnd2_B1._LargeCap_A._DA_1",
+          "_CargoEnd2_B1._LargeCap_A._DA_1._D10_Num",
+          "_CargoEnd2_B1._LargeCap_A._DA_1._D5_Num",
+          "_CargoEnd2_B1._LargeCap_A._DA_1._D8_SSign",
+          "_CargoEnd2_B1._LargeCap_A._DA_1._D4_SSign",
+          "_CargoEnd2_B1._LargeCap_A._DA_1._D11_Logo",
+          "_CargoEnd2_B1._LargeCap_A._DA_1._D15_Num",
+          "_CargoEnd2_B1._LargeCap_A._DA_1._D6_SSign",
+          "_CargoEnd2_B1._LargeCap_A._DA_1._D9_SSign",
+          "_CargoEnd2_B1._LargeCap_A._DA_1._D12_Logo",
+          "_CargoEnd2_B1._LargeCap_A._DA_1._D7_SSign",
+          "_CargoEnd2_B1._LargeCap_A._DA_1._D3_SSign",
+          "_CargoEnd2_B1._LargeCap_A._DA_1._D14_Letter",
+          "_CargoEnd2_B1._LargeCap_A._DA_1._D13_Num",
+          "_CargoC_A1",
+          "_CargoC1_B1",
+          "_CargoC1_B1._CB_A",
+          "_CargoC1_B1._CB_A._Refs_A",
+          "_CargoC1_B1._CB_A._Refs_A._Container_B",
+          "_CargoC1_B1._CB_A._DA_1",
+          "_CargoC1_B1._CB_A._DA_1._D5_SSign",
+          "_CargoC1_B1._CB_A._DA_1._D4_Let",
+          "_CargoC1_B1._CB_A._DA_1._D6_SSign",
+          "_CargoC1_B1._CB_A._DA_1._D2_Rect",
+          "_CargoC1_B1._CB_A._DA_1._D3_Let",
+          "_CargoC1_B1._CB_A._DA_1._D1_Rect",
+          "_CargoC2_B1",
+          "_CargoC2_B1._CB_A",
+          "_CargoC2_B1._CB_A._Refs_A",
+          "_CargoC2_B1._CB_A._Refs_A._Container_B",
+          "_CargoC2_B1._CB_A._DA_1",
+          "_CargoC2_B1._CB_A._DA_1._D5_SSign",
+          "_CargoC2_B1._CB_A._DA_1._D4_Let",
+          "_CargoC2_B1._CB_A._DA_1._D6_SSign",
+          "_CargoC2_B1._CB_A._DA_1._D2_Rect",
+          "_CargoC2_B1._CB_A._DA_1._D3_Let",
+          "_CargoC2_B1._CB_A._DA_1._D1_Rect"
+        ]
+      },
+      {
+        "id": "CargoEnd2_B2",
+        "label": "6 sections",
+        "names": ["_CargoEnd1_B2", "_CargoEnd2_B2"],
+        "tile": [
+          "_CargoEnd1_B2",
+          "_CargoC1_B2",
+          "_CargoC1_B2._CB_A",
+          "_CargoC1_B2._CB_A._Refs_A",
+          "_CargoC1_B2._CB_A._Refs_A._Container_B",
+          "_CargoC1_B2._CB_A._DA_1",
+          "_CargoC1_B2._CB_A._DA_1._D5_SSign",
+          "_CargoC1_B2._CB_A._DA_1._D4_Let",
+          "_CargoC1_B2._CB_A._DA_1._D6_SSign",
+          "_CargoC1_B2._CB_A._DA_1._D2_Rect",
+          "_CargoC1_B2._CB_A._DA_1._D3_Let",
+          "_CargoC1_B2._CB_A._DA_1._D1_Rect",
+          "_CargoC2_B2",
+          "_C2A_4",
+          "_C2A_4._CargoLarge_AccA",
+          "_C2A_4._CargoLarge_AccA._Container_B",
+          "_C2_3",
+          "_C2_3._CargoLarge_AccA",
+          "_C2_3._CargoLarge_AccA._Container_B",
+          "_C2B_4",
+          "_C2B_4._CargoLarge_AccA",
+          "_C2B_4._CargoLarge_AccA._Container_B",
+          "_CargoC2_B2._CB_A",
+          "_CargoC2_B2._CB_A._Refs_A",
+          "_CargoC2_B2._CB_A._Refs_A._Container_B",
+          "_CargoC2_B2._CB_A._DA_1",
+          "_CargoC2_B2._CB_A._DA_1._D5_SSign",
+          "_CargoC2_B2._CB_A._DA_1._D4_Let",
+          "_CargoC2_B2._CB_A._DA_1._D6_SSign",
+          "_CargoC2_B2._CB_A._DA_1._D2_Rect",
+          "_CargoC2_B2._CB_A._DA_1._D3_Let",
+          "_CargoC2_B2._CB_A._DA_1._D1_Rect",
+          "_CargoEnd2_B2",
+          "_CargoC1_B3",
+          "_CargoC1_B3._CB_A",
+          "_CargoC1_B3._CB_A._Refs_A",
+          "_CargoC1_B3._CB_A._Refs_A._Container_B",
+          "_CargoC1_B3._CB_A._DA_1",
+          "_CargoC1_B3._CB_A._DA_1._D5_SSign",
+          "_CargoC1_B3._CB_A._DA_1._D4_Let",
+          "_CargoC1_B3._CB_A._DA_1._D6_SSign",
+          "_CargoC1_B3._CB_A._DA_1._D2_Rect",
+          "_CargoC1_B3._CB_A._DA_1._D3_Let",
+          "_CargoC1_B3._CB_A._DA_1._D1_Rect",
+          "_CargoC2_B3",
+          "_CargoC2_B3._CB_A",
+          "_CargoC2_B3._CB_A._Refs_A",
+          "_CargoC2_B3._CB_A._Refs_A._Container_B",
+          "_CargoC2_B3._CB_A._DA_1",
+          "_CargoC2_B3._CB_A._DA_1._D5_SSign",
+          "_CargoC2_B3._CB_A._DA_1._D4_Let",
+          "_CargoC2_B3._CB_A._DA_1._D6_SSign",
+          "_CargoC2_B3._CB_A._DA_1._D2_Rect",
+          "_CargoC2_B3._CB_A._DA_1._D3_Let",
+          "_CargoC2_B3._CB_A._DA_1._D1_Rect",
+          "_CargoEnd3_B1",
+          "_CargoEnd3_B1._LargeCap_A._DA_1",
+          "_CargoEnd3_B1._LargeCap_A._DA_1._D10_Num",
+          "_CargoEnd3_B1._LargeCap_A._DA_1._D5_Num",
+          "_CargoEnd3_B1._LargeCap_A._DA_1._D8_SSign",
+          "_CargoEnd3_B1._LargeCap_A._DA_1._D4_SSign",
+          "_CargoEnd3_B1._LargeCap_A._DA_1._D11_Logo",
+          "_CargoEnd3_B1._LargeCap_A._DA_1._D15_Num",
+          "_CargoEnd3_B1._LargeCap_A._DA_1._D6_SSign",
+          "_CargoEnd3_B1._LargeCap_A._DA_1._D9_SSign",
+          "_CargoEnd3_B1._LargeCap_A._DA_1._D12_Logo",
+          "_CargoEnd3_B1._LargeCap_A._DA_1._D7_SSign",
+          "_CargoEnd3_B1._LargeCap_A._DA_1._D3_SSign",
+          "_CargoEnd3_B1._LargeCap_A._DA_1._D14_Letter",
+          "_CargoEnd3_B1._LargeCap_A._DA_1._D13_Num",
+          "_CargoC_A1",
+          "_CargoC1_B1",
+          "_CargoC1_B1._CB_A",
+          "_CargoC1_B1._CB_A._Refs_A",
+          "_CargoC1_B1._CB_A._Refs_A._Container_B",
+          "_CargoC1_B1._CB_A._DA_1",
+          "_CargoC1_B1._CB_A._DA_1._D5_SSign",
+          "_CargoC1_B1._CB_A._DA_1._D4_Let",
+          "_CargoC1_B1._CB_A._DA_1._D6_SSign",
+          "_CargoC1_B1._CB_A._DA_1._D2_Rect",
+          "_CargoC1_B1._CB_A._DA_1._D3_Let",
+          "_CargoC1_B1._CB_A._DA_1._D1_Rect",
+          "_CargoC2_B1",
+          "_CargoC2_B1._CB_A",
+          "_CargoC2_B1._CB_A._Refs_A",
+          "_CargoC2_B1._CB_A._Refs_A._Container_B",
+          "_CargoC2_B1._CB_A._DA_1",
+          "_CargoC2_B1._CB_A._DA_1._D5_SSign",
+          "_CargoC2_B1._CB_A._DA_1._D4_Let",
+          "_CargoC2_B1._CB_A._DA_1._D6_SSign",
+          "_CargoC2_B1._CB_A._DA_1._D2_Rect",
+          "_CargoC2_B1._CB_A._DA_1._D3_Let",
+          "_CargoC2_B1._CB_A._DA_1._D1_Rect"
+        ]
+      }
+    ],
+    "requires": {
+      "group": "Hull_A1",
+      "option": "Hull_A1"
+    },
+    "title": "Length",
+    "unlit": [
+      "_CargoEnd1_B1._LargeCap_A",
+      "_CargoEnd2_B1._LargeCap_A",
+      "_CargoEnd3_B1._LargeCap_A"
+    ]
+  },
+  {
+    "id": "HullBBot_C1",
+    "options": [
+      {
+        "id": "HullBBot_C1",
+        "label": "Thrusters",
+        "names": ["_HullBBot_C1"],
+        "tile": ["_HullBBot_C1"]
+      },
+      {
+        "id": "HullBBot_C2",
+        "label": "Curved",
+        "names": ["_HullBBot_C2"],
+        "tile": ["_HullBBot_C2", "_HullBot_ALOD0"]
+      }
+    ],
+    "requires": {
+      "group": "Hull_A1",
+      "option": "Hull_A1"
+    },
+    "title": "Keel"
+  },
+  {
+    "id": "VertFinC1_A",
+    "options": [
+      {
+        "id": "VertFinC1_A",
+        "label": "Fin",
+        "names": ["_VertFinC1_A"],
+        "tile": ["_VertFinC1_A"]
+      },
+      {
+        "empty": true,
+        "id": "VertFinC1_None",
+        "label": "Nothing",
+        "names": ["_VertFinC1_None"],
+        "tile": []
+      }
+    ],
+    "requires": {
+      "group": "HullBBot_C1",
+      "option": "HullBBot_C1"
+    },
+    "title": "Under the thrusters"
+  },
+  {
+    "id": "S1_AccA",
+    "options": [
+      {
+        "id": "S1_AccB",
+        "label": "Pod",
+        "names": ["_S1_AccB"],
+        "tile": [
+          "_S1_AccB",
+          "_S1_AccB._CargoLarge_AccA",
+          "_S1_AccB._CargoLarge_AccA._Container_B"
+        ]
+      },
+      {
+        "empty": true,
+        "id": "S1_AccA",
+        "label": "None",
+        "names": ["_S1_AccA"],
+        "tile": []
+      }
+    ],
+    "requires": {
+      "group": "Hull_A1",
+      "option": "Hull_A2"
+    },
+    "title": "Rear pod"
+  },
+  {
+    "chain": true,
+    "id": "Cap_1",
+    "options": [
+      {
+        "id": "Cap_1",
+        "label": "3 sections",
+        "names": ["_Cap_1"],
+        "tile": [
+          "_Cap_1",
+          "_Cap_1._LCap_B1._DA_1",
+          "_Cap_1._LCap_B1._DA_1._D10_SSign",
+          "_Cap_1._LCap_B1._DA_1._D5_Letter",
+          "_Cap_1._LCap_B1._DA_1._D8_Num",
+          "_Cap_1._LCap_B1._DA_1._D4_Num",
+          "_Cap_1._LCap_B1._DA_1._D11_SSign",
+          "_Cap_1._LCap_B1._DA_1._D15_Lett",
+          "_Cap_1._LCap_B1._DA_1._D6_Letter",
+          "_Cap_1._LCap_B1._DA_1._D9_SSign",
+          "_Cap_1._LCap_B1._DA_1._D12_Num",
+          "_Cap_1._LCap_B1._DA_1._D7_Logo",
+          "_Cap_1._LCap_B1._DA_1._D2_Logo",
+          "_Cap_1._LCap_B1._DA_1._D3_Num",
+          "_Cap_1._LCap_B1._DA_1._D14_Letter",
+          "_Cap_1._LCap_B1._DA_1._D1_Logo",
+          "_Cap_1._LCap_B1._DA_1._D13_SSign",
+          "_CargoC_S2",
+          "_CargoC_S1",
+          "_CargoC_A2"
+        ]
+      },
+      {
+        "id": "Cap_3",
+        "label": "5 sections",
+        "names": ["_Cap_2", "_Cap_3"],
+        "tile": [
+          "_Cap_2",
+          "_Cap_2._Decals_1LOD0",
+          "_Cap_2._Decals_1LOD0._DA_1",
+          "_Cap_2._Decals_1LOD0._DA_1._D8_SSign",
+          "_Cap_2._Decals_1LOD0._DA_1._D4_Num",
+          "_Cap_2._Decals_1LOD0._DA_1._D11_Rect",
+          "_Cap_2._Decals_1LOD0._DA_1._D9_SSign",
+          "_Cap_2._Decals_1LOD0._DA_1._D12_Rect",
+          "_Cap_2._Decals_1LOD0._DA_1._D2_Let",
+          "_Cap_2._Decals_1LOD0._DA_1._D3_Num",
+          "_Cap_2._Decals_1LOD0._DA_1._D1_Letter",
+          "_Cap_2._CLarge_B",
+          "_Cap_2._CLarge_B._Refs_A",
+          "_Cap_3",
+          "_Cap_3._LCap_B1._DA_1",
+          "_Cap_3._LCap_B1._DA_1._D10_SSign",
+          "_Cap_3._LCap_B1._DA_1._D5_Letter",
+          "_Cap_3._LCap_B1._DA_1._D8_Num",
+          "_Cap_3._LCap_B1._DA_1._D4_Num",
+          "_Cap_3._LCap_B1._DA_1._D11_SSign",
+          "_Cap_3._LCap_B1._DA_1._D15_Lett",
+          "_Cap_3._LCap_B1._DA_1._D6_Letter",
+          "_Cap_3._LCap_B1._DA_1._D9_SSign",
+          "_Cap_3._LCap_B1._DA_1._D12_Num",
+          "_Cap_3._LCap_B1._DA_1._D7_Logo",
+          "_Cap_3._LCap_B1._DA_1._D2_Logo",
+          "_Cap_3._LCap_B1._DA_1._D3_Num",
+          "_Cap_3._LCap_B1._DA_1._D14_Letter",
+          "_Cap_3._LCap_B1._DA_1._D1_Logo",
+          "_Cap_3._LCap_B1._DA_1._D13_SSign",
+          "_CargoC_S2",
+          "_CargoC_S1",
+          "_CargoC_A2"
+        ]
+      },
+      {
+        "id": "Cap_4",
+        "label": "7 sections",
+        "names": ["_Cap_2", "_Cap_4"],
+        "tile": [
+          "_Cap_2",
+          "_Cap_2._Decals_1LOD0",
+          "_Cap_2._Decals_1LOD0._DA_1",
+          "_Cap_2._Decals_1LOD0._DA_1._D8_SSign",
+          "_Cap_2._Decals_1LOD0._DA_1._D4_Num",
+          "_Cap_2._Decals_1LOD0._DA_1._D11_Rect",
+          "_Cap_2._Decals_1LOD0._DA_1._D9_SSign",
+          "_Cap_2._Decals_1LOD0._DA_1._D12_Rect",
+          "_Cap_2._Decals_1LOD0._DA_1._D2_Let",
+          "_Cap_2._Decals_1LOD0._DA_1._D3_Num",
+          "_Cap_2._Decals_1LOD0._DA_1._D1_Letter",
+          "_Cap_2._CLarge_B",
+          "_Cap_2._CLarge_B._Refs_A",
+          "_Cap_4",
+          "_Cap_5",
+          "_Cap_5._LCap_B1._DA_1",
+          "_Cap_5._LCap_B1._DA_1._D10_SSign",
+          "_Cap_5._LCap_B1._DA_1._D5_Letter",
+          "_Cap_5._LCap_B1._DA_1._D8_Num",
+          "_Cap_5._LCap_B1._DA_1._D4_Num",
+          "_Cap_5._LCap_B1._DA_1._D11_SSign",
+          "_Cap_5._LCap_B1._DA_1._D15_Lett",
+          "_Cap_5._LCap_B1._DA_1._D6_Letter",
+          "_Cap_5._LCap_B1._DA_1._D9_SSign",
+          "_Cap_5._LCap_B1._DA_1._D12_Num",
+          "_Cap_5._LCap_B1._DA_1._D7_Logo",
+          "_Cap_5._LCap_B1._DA_1._D2_Logo",
+          "_Cap_5._LCap_B1._DA_1._D3_Num",
+          "_Cap_5._LCap_B1._DA_1._D14_Letter",
+          "_Cap_5._LCap_B1._DA_1._D1_Logo",
+          "_Cap_5._LCap_B1._DA_1._D13_SSign",
+          "_Cap_4._Decals_1LOD0",
+          "_Cap_4._Decals_1LOD0._DA_1",
+          "_Cap_4._Decals_1LOD0._DA_1._D8_SSign",
+          "_Cap_4._Decals_1LOD0._DA_1._D4_Num",
+          "_Cap_4._Decals_1LOD0._DA_1._D11_Rect",
+          "_Cap_4._Decals_1LOD0._DA_1._D9_SSign",
+          "_Cap_4._Decals_1LOD0._DA_1._D12_Rect",
+          "_Cap_4._Decals_1LOD0._DA_1._D2_Let",
+          "_Cap_4._Decals_1LOD0._DA_1._D3_Num",
+          "_Cap_4._Decals_1LOD0._DA_1._D1_Letter",
+          "_Cap_4._CLarge_B",
+          "_Cap_4._CLarge_B._Refs_A",
+          "_CargoC_S2",
+          "_CargoC_S1",
+          "_CargoC_A2"
+        ]
+      }
+    ],
+    "requires": {
+      "group": "Hull_A1",
+      "option": "Hull_A2"
+    },
+    "title": "Length",
+    "unlit": ["_Cap_1._LCap_B1", "_Cap_3._LCap_B1", "_Cap_5._LCap_B1"]
+  },
+  {
+    "id": "S4_AccA",
+    "options": [
+      {
+        "id": "S4_AccB",
+        "label": "Pod",
+        "names": ["_S4_AccB"],
+        "tile": [
+          "_S4_AccB",
+          "_S4_AccB._CargoLarge_AccA",
+          "_S4_AccB._CargoLarge_AccA._Container_B"
+        ]
+      },
+      {
+        "empty": true,
+        "id": "S4_AccA",
+        "label": "None",
+        "names": ["_S4_AccA"],
+        "tile": []
+      }
+    ],
+    "requires": {
+      "group": "Cap_1",
+      "option": "Cap_4"
+    },
+    "title": "Front pod"
+  },
+  {
+    "first": true,
+    "id": "CargoC_S1._CLarge_B._Refs_A._Container_H",
+    "options": [
+      {
+        "id": "CargoC_S1._CLarge_B._Refs_A._Container_H",
+        "label": "Spheres",
+        "names": [
+          "_CargoC_S1._CLarge_B._Refs_A._Container_H",
+          "_Cap_2._CLarge_B._Refs_A._Container_H",
+          "_Cap_4._CLarge_B._Refs_A._Container_H"
+        ],
+        "tile": ["_CargoC_S1._CLarge_B._Refs_A._Container_H"]
+      },
+      {
+        "id": "CargoC_S1._CLarge_B._Refs_A._Container_F",
+        "label": "Boxes",
+        "names": [
+          "_CargoC_S1._CLarge_B._Refs_A._Container_F",
+          "_Cap_2._CLarge_B._Refs_A._Container_F",
+          "_Cap_4._CLarge_B._Refs_A._Container_F"
+        ],
+        "tile": ["_CargoC_S1._CLarge_B._Refs_A._Container_F"]
+      }
+    ],
+    "requires": {
+      "group": "Hull_A1",
+      "option": "Hull_A2"
+    },
+    "title": "Containers"
+  },
+  {
+    "id": "HA2B_1",
+    "options": [
+      {
+        "id": "HA2B_1",
+        "label": "Box bridge",
+        "names": ["_HA2B_1"],
+        "tile": ["_HA2B_1"]
+      },
+      {
+        "id": "HA2B_2",
+        "label": "Dome bridge",
+        "names": ["_HA2B_2"],
+        "tile": ["_HA2B_2"]
+      }
+    ],
+    "requires": {
+      "group": "Hull_A1",
+      "option": "Hull_A2"
+    },
+    "title": "Bridge"
+  }
+]

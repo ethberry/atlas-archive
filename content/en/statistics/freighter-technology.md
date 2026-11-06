@@ -76,4 +76,4 @@ One table per family: each class, how many stats one install raises, and the lim
 
 <!-- widget:frMineTop -->
 
-A freighter carries you between stars, but the ship you fly yourself is a find of its own, and it starts with [ship types](/guides/ship-types).
+That covers the freighter. What is left is the gear you never find and only upgrade, starting with the suit you wear: [exosuit modules](/guides/exosuit-modules).

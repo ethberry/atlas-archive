@@ -1,6 +1,6 @@
 # Tetris figures
 
-**Which figure will a multitool's four supercharged slots form?** Most often a corner, when they are adjacent at all. [How it works](/about) explains why that matters, and [supercharged slots](/guides/supercharged-slots) how much each figure adds to damage and where the weapon goes on it. A staff and a tool do not land on the same figures, and turns of one figure do not come out equal: a corner can be 20 times rarer than the same corner turned.
+**Which figure will a multitool's four supercharged slots form?** Most often a corner, when they are adjacent at all. [How it works](/about) explains why that matters, and [supercharged slots](/guides/supercharged-slots) how much each figure adds to damage and where the weapon goes on it. A staff and a tool do not land on the same figures, and turns of one figure do not come out equal: a corner can be {{cornerGap}} times rarer than the same corner turned.
 
 ## All 19, by type
 

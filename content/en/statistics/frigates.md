@@ -12,7 +12,7 @@ Five types fly in the fleets of any system, one as likely as the next: Combat, E
 
 Your fleet holds {{fleet}} frigates. {{sale}} of the frigates flying with a fleet are for sale. The frigates that roam a system in groups of their own never are.
 
-The game builds a frigate from a number it takes from the frigate's place in space. So the same system shows different frigates each time a fleet arrives, and you can keep looking without leaving.
+The same system shows different frigates each time a fleet arrives, so you can keep looking without leaving.
 
 ## Raiders
 
@@ -24,11 +24,11 @@ Every frigate starts with the trait of its type, such as Combat Specialist, and 
 
 <!-- widget:starts -->
 
-Then it may draw more traits: each round goes on {{extra}} of the time, and a trait can be good or bad. A frigate has five trait slots, its own trait and four more. A trait adds to one stat, and a bad one takes away; no stat goes below -10 or above 50.
+Then it may draw more traits: each round goes on {{extra}} of the time, and a trait can be good or bad. A frigate has five trait slots, its own trait and four more. A trait adds to one stat, and a bad one takes away; no stat goes below {{statLow}} or above {{statHigh}}. Every trait, with what it does and which types draw it, is under Frigate traits below.
 
 <!-- widget:strengths -->
 
-The class letter counts the traits: good ones, its own included, minus bad ones, minus two. So class S means its own trait and four good ones; class A its own and three good; class B its own and two good, or three good and one bad. Everything else is C.
+The class letter counts the traits: good ones, its own included, minus bad ones, minus two. So class S means its own trait and four good ones, and a bad trait cancels a good one in the letter.
 
 <!-- widget:odds -->
 
@@ -36,46 +36,78 @@ A Combat frigate appears at class S {{combatS}} of the time, a Raider {{raiderS}
 
 ## A good frigate
 
-Each type works on the stat of its own name: a Combat frigate on Combat, an Exploration frigate on Exploration, an Industrial frigate on Industrial, a Trade frigate on Trade. A frigate starts with that stat between 1 and 5 and the others lower, as in the table above, and its own trait adds 15. That +15 belongs only to the one trait of its type, given when the frigate appears; no other trait and no level ever gives a second one. So two new frigates of one type differ by four points at most where it counts.
+A frigate works on the stat of its own type, and its own trait is the only one that gives the big boost. So two new frigates of one type start close, and the other traits make the difference. Look for, in this order:
 
-The other traits make the difference, up to four of them beside its own. An ordinary good trait on the frigate's own stat adds 2, 4, or 6; one on another stat adds 1, 2, or 3; a bad one takes 2, 4, or 6 away. Fuel works the other way: Combat, Exploration, Industrial, and Trade frigates start using 8 to 12 fuel, Support frigates 2 to 5, and a bad fuel trait adds 1, 2, or 4 more. A Support frigate's own trait is about fuel, and it starts with 1 to 5 of fuel capacity.
-
-So look for, in this order:
-
-- no bad trait: a bad trait stays until a level takes it away, and that level brings nothing new;
+- no bad trait: it stays until a level takes it away, and that level brings nothing new;
 - good traits on its own stat, the larger the better;
-- its own stat near 5 and little fuel, which matter least.
+- the letter last: a class C can arrive with three or four traits, a good one cancelled by a bad one.
 
-Levels add five points each, and no stat goes above 50, so after enough expeditions the start fades and the traits stay. The letter alone does not show this: a class C can arrive with three or four traits, its own with one good and one bad, or its own, two good, and one bad. That is because all of a shop frigate's traits are drawn together when it appears, and a bad one cancels a good one in the letter.
+## Frigate traits
+
+The good traits are those on the frigate's own stat: a Combat frigate wants Combat traits, an Industrial frigate Industrial ones. A good trait adds {{goodLow}} to {{goodHigh}}, a bad one takes up to {{badHigh}} away, and only the trait of the frigate's type gives {{own}}.
+
+The largest good traits come only to the type they belong to: Combat traits of the largest kind to Combat frigates and Raiders, Industrial ones to Industrial frigates, and so on. A type draws the small traits of the other stats more rarely. Fuel traits save fuel, Speed traits shorten an expedition, and a trait that says Never damaged keeps the frigate safe on every expedition. A Support frigate never draws a bad fuel trait, and a Raider draws its bad traits only on Industrial, Trade, and Exploration.
+
+<!-- widget:traits -->
+
+A level never gives a frigate the trait of its type, so the big boost comes only with the type.
+
+### Reward frigates
+
+The three reward frigates always come with the same five traits.
+
+<!-- widget:rewardTraits -->
+
+## Sending them out
+
+Send frigates of the expedition's kind. Most of its events, {{ownLow}} to {{ownHigh}}, are of that kind, and on those the whole fleet's stat counts. On the other events it counts at {{offKind}}, and on a Balanced expedition at {{balanced}} on every event. Each frigate adds its stat up to {{statHigh}}, each matching boost adds {{boost}}, and the fleet modules of your freighter multiply the sum, up to {{fleetHigh}}.
+
+Every event rolls 0 to {{rollTop}} and adds the fleet's stat; it goes well if it reaches the event's difficulty. The first event starts near {{startDifficulty}}, each later one is {{stepDifficulty}} harder, every frigate you send adds one, and each expedition adds a hidden difficulty of {{tiers}} to all its events. When the fleet's stat reaches the difficulty, the event always goes well; each point short takes one chance in {{faces}} away. So the late events of a long expedition fail whatever you send, and a strong fleet pays most on the long ones.
+
+<!-- widget:success -->
+
+The stat decides only how many events go well, not what they bring. Each event that goes well pays one reward of its kind; one that fails pays nothing. Until you have bought {{easyUntil}} frigates, expeditions are easy and pay far less.
+
+<!-- widget:rewards -->
+
+A Speed trait cuts the time: each event takes about {{eventHours}} hours, less a share for each point of Speed.
+
+## Damage and loss
+
+Only a failed event damages a frigate, and only once you have finished more than {{damageLow}} expeditions; the chance grows until {{damageRamp}}.
+
+<!-- widget:damage -->
+
+The weakest frigate in the event's kind is the likeliest to be hit. A frigate with a trait that says Never damaged, and an organic frigate, is never hit.
+
+The first hit damages the frigate, and you choose to let it go on or send it home; sent home, it still counts the expedition. A second hit while it is damaged destroys it: it is gone from your fleet for good. So send a damaged frigate home. If no frigate is left, the expedition ends at once. You always keep the rewards it won.
+
+Damage is not a bad trait. You repair it for resources, and it never adds or removes a trait.
 
 ## Levels
 
-A frigate gains a level when it has finished {{levels}} expeditions, whether they went well or not. A level does not let you choose, and it changes one trait at most, never two:
+A frigate gains a level when it has finished {{levels}} expeditions, whether they went well or not. The number of Successful Encounters on its card is only a tally of events that went well; it does not move the level.
+
+Each level gives {{levelPoints}} stat points on Combat, Exploration, Industrial, and Trade, and changes one trait at most:
 
 - if the frigate holds a bad trait, one of them goes, picked at random, and nothing takes its place in that level;
-- if it holds none and has a free slot, it gains one ordinary good trait: +2, +4, or +6 on its own stat, or +1, +2, or +3 on another, never a second +15.
+- if it holds none and has a free slot, it gains one good trait of its type's list, never a second trait of its type.
 
-Either way it gains five stat points: one each on Combat, Exploration, Industrial, and Trade, and one more on one of them.
+So a frigate keeps its bad traits until levels remove them, one a level, and the free slot is filled by a later level. A frigate can reach S if its bad traits and the good traits it lacks fit in the levels it has left; a frigate you buy has already spent some, one for every trait it drew beyond its own.
 
-So a bad trait never turns good. A frigate keeps its bad traits until levels remove them, one a level, so a frigate that was never levelled still holds every bad trait it came with. The slot a bad trait leaves is free again, and a later level fills it with a good trait, so such a frigate can still reach S: it only needs one more level for each bad trait. Levels stop after the last count above, so a frigate that came with four bad traits never gets there. A class C frigate with only its own trait reaches S after four levels. A frigate you buy has already spent some levels: every trait it drew in the shop counts as one. So look at the traits, not only the letter. A class B with two good traits and no bad one gets to S sooner than a class B whose bad trait has to go first.
+The ring on the card fills short: it counts the expeditions since the last level against the whole count of the next. Trust the count of expeditions, not the ring.
 
-## Damage and bad traits
-
-These are two different things. Damage comes from an expedition that goes wrong: the frigate comes home with broken parts, and you repair them for resources. Repairing changes nothing else, and damage never adds or removes a trait.
-
-A bad trait, such as a lazy crew that brings home less, is part of the frigate. Repairs do not touch it. Only a level takes it away, one bad trait per level, and until all of them are gone the frigate gains no new good trait. So do not send out a frigate with bad traits hoping they turn good: they go, and nothing comes in their place until they are all gone.
+<!-- widget:levels -->
 
 ## Price
 
-A frigate's price is set by its type and class: a base with a spread, times 1 for class C, 2 for B, 3.5 for A, and 5 for S.
+A frigate's price is set by its type and class: a base with a spread, times a multiplier of its class.
 
 <!-- widget:prices -->
 
 <!-- living -->
 
-## Organic frigates
-
-One more kind comes from a cosmic whale, not from a fleet, and never draws a bad trait. How to call the whale and how its dream picks the kind is on [organic frigates](/guides/organic-frigates).
+An organic frigate draws from a list of its own and never a bad trait: [organic frigates](/guides/organic-frigates) says how to call a whale and pick the kind of its frigate.
 <!-- /living -->
 <!-- not-living -->
 

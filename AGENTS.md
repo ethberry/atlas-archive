@@ -36,3 +36,14 @@ npm run supabase:generate      # types from the local database
 npm run lint
 npm run build
 ```
+
+## Rules
+
+- No one-off scripts in any language or disguise: no `node -e`, `node -p`, `python -c`, `ruby -e`, `perl -e` scripts,
+  `awk` programs, a heredoc fed to any interpreter, a script file written to a scratch folder and run once, or a chain
+  of shell tools that rebuilds what a command already does. Run the existing `npm run …` scripts and checks; a plain `grep` or `rg` search
+  of the text is fine. Do not add scripts to `package.json` or new checks unless the owner asks for them (the owner,
+  2026-11-07: `package.json` is not to swell with scripts). A one-line edit of a file with `perl -pi` or `sed -i` is an edit, not a script,
+  and stays allowed. Why (the owner): a one-off script is written in full every time, costs many times the tokens of a
+  command line, is debugged again each session, and leaves nothing behind; written in the moment and untested, it can
+  also break what it touches. A command added once is paid for once and gets tested by every run.

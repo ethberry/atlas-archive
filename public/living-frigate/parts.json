@@ -1,0 +1,127 @@
+{
+  "width": 1000,
+  "height": 656,
+  "layers": {
+    "_FrontAcc_1": [107, 361, 204, 185],
+    "_FrontAcc_2": [71, 389, 246, 209],
+    "_FrontAcc_3": [36, 336, 300, 258],
+    "_FrontAcc_4": [75, 293, 290, 265],
+    "_FrontAcc_5": [65, 320, 253, 271],
+    "_FrontWings_1": [51, 468, 239, 136],
+    "_FrontWings_2": [15, 482, 365, 116],
+    "_FrontWings_3": [98, 473, 270, 172],
+    "_SideDetail_1": [147, 376, 162, 147],
+    "_SideDetail_2": [157, 418, 111, 94],
+    "_SideDetail_3": [170, 400, 110, 99],
+    "_Tail_1": [257, 11, 728, 446],
+    "_Tail_2": [254, 123, 535, 343],
+    "_Tail_3": [214, 338, 247, 164],
+    "_Tail_4": [246, 265, 274, 213],
+    "_Tail_5": [249, 63, 631, 402],
+    "_Tail_7": [244, 40, 418, 410],
+    "_Tail_8": [244, 308, 233, 166],
+    "_Type_WhaleSquid": [94, 354, 260, 213],
+    "_Wings_1": [125, 437, 407, 141],
+    "_Wings_2": [126, 433, 310, 112],
+    "_Wings_3": [155, 398, 327, 170]
+  },
+  "tree": [
+    [
+      {
+        "name": "_LivingFrigate_1",
+        "layer": "_LivingFrigate_1",
+        "groups": [
+          [
+            {
+              "name": "_Type_WhaleSquid",
+              "layer": "_Type_WhaleSquid",
+              "groups": [
+                [
+                  {
+                    "name": "_FrontAcc_0",
+                    "layer": "_FrontAcc_0",
+                    "groups": []
+                  },
+                  {
+                    "name": "_FrontAcc_1",
+                    "layer": "_FrontAcc_1",
+                    "groups": []
+                  },
+                  {
+                    "name": "_FrontAcc_2",
+                    "layer": "_FrontAcc_2",
+                    "groups": []
+                  },
+                  {
+                    "name": "_FrontAcc_3",
+                    "layer": "_FrontAcc_3",
+                    "groups": []
+                  },
+                  {
+                    "name": "_FrontAcc_4",
+                    "layer": "_FrontAcc_4",
+                    "groups": []
+                  },
+                  {
+                    "name": "_FrontAcc_5",
+                    "layer": "_FrontAcc_5",
+                    "groups": []
+                  }
+                ],
+                [
+                  { "name": "_Tail_1", "layer": "_Tail_1", "groups": [] },
+                  { "name": "_Tail_2", "layer": "_Tail_2", "groups": [] },
+                  { "name": "_Tail_3", "layer": "_Tail_3", "groups": [] },
+                  { "name": "_Tail_4", "layer": "_Tail_4", "groups": [] },
+                  { "name": "_Tail_5", "layer": "_Tail_5", "groups": [] },
+                  { "name": "_Tail_6", "layer": "_Tail_6", "groups": [] },
+                  { "name": "_Tail_7", "layer": "_Tail_7", "groups": [] },
+                  { "name": "_Tail_8", "layer": "_Tail_8", "groups": [] }
+                ],
+                [
+                  { "name": "_Wings_1", "layer": "_Wings_1", "groups": [] },
+                  { "name": "_Wings_2", "layer": "_Wings_2", "groups": [] },
+                  { "name": "_Wings_3", "layer": "_Wings_3", "groups": [] }
+                ],
+                [
+                  {
+                    "name": "_SideDetail_1",
+                    "layer": "_SideDetail_1",
+                    "groups": []
+                  },
+                  {
+                    "name": "_SideDetail_2",
+                    "layer": "_SideDetail_2",
+                    "groups": []
+                  },
+                  {
+                    "name": "_SideDetail_3",
+                    "layer": "_SideDetail_3",
+                    "groups": []
+                  }
+                ],
+                [
+                  {
+                    "name": "_FrontWings_1",
+                    "layer": "_FrontWings_1",
+                    "groups": []
+                  },
+                  {
+                    "name": "_FrontWings_2",
+                    "layer": "_FrontWings_2",
+                    "groups": []
+                  },
+                  {
+                    "name": "_FrontWings_3",
+                    "layer": "_FrontWings_3",
+                    "groups": []
+                  }
+                ]
+              ]
+            }
+          ]
+        ]
+      }
+    ]
+  ]
+}

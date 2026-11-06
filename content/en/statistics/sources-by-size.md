@@ -6,7 +6,7 @@ A spot is a place on a planet's grid that holds a building; [where a multitool c
 
 ## Tools
 
-Monoliths and harmonic camps show 0 because most planets hold none. The last table of this group shows them where they stand.
+Monoliths and Harmonic Camps show 0 because most planets hold none. The table under sources that skip most planets shows them where they stand.
 
 <!-- widget:tools -->
 

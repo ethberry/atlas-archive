@@ -1,8 +1,8 @@
 # Minotaur modules
 
-**What can a Minotaur upgrade module raise?** The Minotaur has four families, and none has a C-Class module: they run from B to S. The Minotaur Flamethrower is one of them. The land exocraft each have a page: the [Roamer](/guides/roamer-modules), [Nomad](/guides/nomad-modules), [Pilgrim](/guides/pilgrim-modules), and [Colossus](/guides/colossus-modules).
+**What can a Minotaur upgrade module raise?** Its laser, flamethrower, cannon, and Daedalus Engine each have a family, and none has a C-Class module: they run from B to S.
 
-Each stat reads as the module's card prints it.
+Each stat reads as the module's card prints it. The land exocraft share a set of their own, with a page each: the [Roamer](/guides/roamer-modules), [Nomad](/guides/nomad-modules), [Pilgrim](/guides/pilgrim-modules), and [Colossus](/guides/colossus-modules).
 
 ## Every Minotaur module
 
@@ -12,7 +12,7 @@ The modules you build or receive, apart from upgrade modules. The Hardframe body
 
 ## Supercharged slots
 
-The Minotaur has three supercharged slots, and they stand in the same places for every player: slot 8 of the top row, slot 1 of the middle row, slot 5 of the bottom row, counting from the left. There is nothing to roll. None of the three touches another, so each can lift one kind: give them to the Daedalus Engine, the Minotaur Laser, and the Minotaur Cannon, one module of each, and set the rest of that kind and its own technology around it, touching.
+The Minotaur has three supercharged slots, and they stand in the same places for every player: slot 8 of the top row, slot 1 of the middle row, slot 5 of the bottom row, counting from the left. There is nothing to roll. None of the three is adjacent to another, so each can lift one kind: give them to the Daedalus Engine, the Minotaur Laser, and the Minotaur Cannon, one module of each, and set the rest of that kind and its own technology around it, adjacent.
 
 ## Upgrade modules
 
@@ -50,4 +50,4 @@ One table per family: each class, how many stats one install raises, and the lim
 
 <!-- widget:mcengTop -->
 
-That covers what you drive. The tool in your hand is a find of its own, and it starts with [multitool types](/guides/multitool-types).
+That covers everything you wear and drive. What is left to claim on a planet is alive: [creature roles](/guides/creature-roles).

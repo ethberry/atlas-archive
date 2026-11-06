@@ -37,15 +37,15 @@ export const FINDER_MESSAGE =
 
 // The guides and the tool the living ship flag hides.
 const LIVING_GUIDES = ["living-ships", "organic-frigates"];
-const LIVING_PATHS = ["/living-ship-finder"];
+const LIVING_PATHS = ["/living-ship-finder", "/living-frigate-finder"];
 
-// The corvette guide has a flag of its own: it waits for the checks of the
+// The corvette guides have a flag of their own: it waits for the checks of the
 // corvette in the game, after the living ships (the owner, 2026-11-05). With it
 // off the guide answers 404 and leaves the menu, the sitemap, and every link, as
 // the living ship guides do. The other module guides have no flag (the owner,
 // 2026-11-06).
 export const CORVETTE_GUIDE_ENABLED = false;
-const CORVETTE_GUIDES = ["corvette-modules"];
+const CORVETTE_GUIDES = ["corvettes", "corvette-modules"];
 
 function flaggedGuide(slug: string) {
   return (

@@ -1,6 +1,6 @@
 # Economy
 
-**Which system pays best?** A three-star one. A system's economy has a type and a wealth, shown as one, two, or three stars. Wealth decides what a system pays, and the type changes nothing you could plan on. Pirate systems, marked Pirate Controlled on the galaxy map, hold more class S tools, but weak ones.
+**Which system pays best?** One of high wealth. A system's economy has a type and a wealth, low, medium, or high, shown as one, two, or three stars on the galaxy map. Wealth decides what a system pays, and the type changes nothing you could plan on. Pirate systems, marked Pirate Controlled on the galaxy map, hold more class S tools, but weak ones.
 
 ## Wealth
 

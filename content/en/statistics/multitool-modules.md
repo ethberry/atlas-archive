@@ -1,26 +1,8 @@
 # Multitool modules
 
-**What can a multitool upgrade module raise?** Each weapon and the scanner has its own family of upgrade modules. A module's class sets how many of its stats one install raises, and how far each one goes: an S-Class Mining Beam upgrade raises all four of its stats, a C-Class one only one or two. You buy the classes at the multitool merchant of a station, as [station technology merchants](/guides/technology-merchants) shows.
+**What can a multitool upgrade module raise?** As many as four stats of one weapon or the scanner, and the class sets how many and how far: an S-Class Mining Beam upgrade raises all four of its stats, a C-Class one only one or two. Each weapon and the scanner has its own family. You buy the classes at the multitool merchant of a station, as [station technology merchants](/guides/technology-merchants) shows.
 
 Each stat reads as the module's card prints it. Illegal modules come from the black market, Rusted ones are sea salvage, and the Forbidden module is a Sentinel one.
-
-## Every multitool module
-
-The modules you build or receive, apart from upgrade modules. A blueprint is bought at the Space Anomaly. How to raise the multitool itself to S is [how to upgrade a multitool](/guides/multitool-upgrades).
-
-<!-- widget:built -->
-
-### Sentinel multitool only
-
-A Sentinel multitool comes with its own beam in the place of the Mining Beam, and no other multitool takes it.
-
-<!-- widget:onlySentinel -->
-
-### Atlantid multitool only
-
-An Atlantid multitool's Runic Lens mines like a Mining Beam with more heat to spare, and hides you as it does.
-
-<!-- widget:onlyAtlantid -->
 
 ## Upgrade modules
 
@@ -106,4 +88,22 @@ One table per family: each class, how many stats one install raises, and the lim
 
 <!-- widget:sentgunTop -->
 
-The suit you wear takes modules of its own: [exosuit modules](/guides/exosuit-modules).
+## Every multitool module
+
+The modules you build or receive, apart from upgrade modules. A blueprint is bought at the Space Anomaly. How to upgrade the multitool itself to S is [how to upgrade a multitool](/guides/multitool-upgrades).
+
+<!-- widget:built -->
+
+### Sentinel multitool only
+
+A Sentinel multitool comes with its own beam in the place of the Mining Beam, and no other multitool takes it.
+
+<!-- widget:onlySentinel -->
+
+### Atlantid multitool only
+
+An Atlantid multitool's Runic Lens mines like a Mining Beam with more heat to spare, and hides you as it does.
+
+<!-- widget:onlyAtlantid -->
+
+The tool covered, the next find is the ship you fly, and it starts with [ship types](/guides/ship-types).

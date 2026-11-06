@@ -122,7 +122,7 @@ const RULES: Record<string, Record<string, Plan>> = {
     hulls: { columns: ["Share"] },
     sources: { columns: ["Share"] },
   },
-  "ship-classes": { classBands: NONE, hullBands: ROLL },
+  "ship-classes": { classBands: ROLL, hullBands: ROLL },
   "ship-stats": {
     agile: STAT,
     damage: STAT,
@@ -164,6 +164,39 @@ const RULES: Record<string, Record<string, Plan>> = {
     trait: { columns: ["Chance"] },
   },
   "creature-affinity": { chart: NONE },
+  fishing: {
+    baits: NONE,
+    common: NONE,
+    fishBait: NONE,
+    flotsam: NONE,
+    legendary: NONE,
+    rare: NONE,
+    sizes: { columns: ["Shallow water", "Deep water"] },
+    special: NONE,
+    uncommon: NONE,
+    values: NONE,
+    waterworld: { columns: ["Shallow water", "Deep water"] },
+  },
+  "excavation-finds": {
+    displays: NONE,
+    elsewhere: NONE,
+    limbs: NONE,
+    skulls: NONE,
+    tails: NONE,
+    torsos: NONE,
+  },
+  "battle-moves": {
+    edits: NONE,
+    kits: NONE,
+    medals: NONE,
+    moves1: NONE,
+    moves2: NONE,
+    moves3: NONE,
+    moves4: NONE,
+    moves5: NONE,
+    names: NONE,
+    pellets: { columns: ["Retroviral Pellet"] },
+  },
 };
 
 // These pages keep their tables in the item values, printed.
@@ -268,15 +301,29 @@ function spanOf(text: string): [number, number] | null {
   return [numbers[0], numbers[numbers.length - 1]];
 }
 
+// Where a raw cell runs: the two numbers of a `{0} to {1}` cell as the file
+// holds them, or else what its printed text reads.
+function rawSpanOf(cell: Cell | undefined, text: string) {
+  if (cell !== null && typeof cell === "object" && "t" in cell) {
+    const [low, high] = cell.v;
+    if (cell.v.length === 2) {
+      return [low.v, high.v] as [number, number];
+    }
+  }
+  return spanOf(text);
+}
+
 // A range chart: one panel per column, each on its own scale.
-function rangeSpec(printed: StatTable): ChartSpec {
+function rangeSpec(printed: StatTable, raw: RawTable | undefined): ChartSpec {
   return chartSpec({
     kind: "range",
     labels: printed.rows.map((row) => row[0]),
     series: printed.head.slice(1).map((label, index) => ({
       label,
       values: [],
-      spans: printed.rows.map((row) => spanOf(row[index + 1])),
+      spans: printed.rows.map((row, at) =>
+        rawSpanOf(raw?.rows[at]?.[index + 1], row[index + 1]),
+      ),
       exact: printed.rows.map((row) => row[index + 1]),
     })),
     format: "number",
@@ -364,7 +411,10 @@ export function chartsOf(slug: string) {
       continue;
     }
     if (rule === RANGE || rule === ROLL) {
-      out[name] = rule === RANGE ? rangeSpec(printed) : rollSpec(printed);
+      out[name] =
+        rule === RANGE
+          ? rangeSpec(printed, rawTableOf(slug, name))
+          : rollSpec(printed);
       continue;
     }
     const spec =

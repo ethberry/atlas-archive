@@ -1,3 +1,4 @@
+import { ITEMS } from "@/lib/archive/items";
 import { type Field, text } from "@/lib/archive/read/common";
 
 // The numbers that close an item's card: what it reads bare, with nothing
@@ -36,28 +37,10 @@ export function toolStats(tool: Record<string, unknown>): Field[] {
   ];
 }
 
-// Hull and class constants of `CalculateShipStatEngines`. An interceptor runs
-// the Robot rows. The last table is the constant and the weights of the two
-// draws.
-const AGILE_HULL: Record<string, number> = {
-  hauler: 157.5,
-  interceptor: 210,
-  shuttle: 237.5,
-};
-
-const AGILE_CLASS: Record<string, number> = { C: 5, B: 10, A: 15, S: 20 };
-
-const AGILE_OFFSET: Record<string, [number, number, number]> = {
-  C: [7.5, 0, -15],
-  B: [-17.5, 35, 15],
-  A: [-17.5, 35, 22.5],
-  S: [15, 35, 22.5],
-};
-
 // The card of a bare claimed ship, from `CalculateShipStat*`. The game draws
 // from the seed of the ship being flown, and here that is the ship itself, so
 // the two draws are its own model seed's. A row without them holds no claimed
-// base, and stays off.
+// base, and stays off. The terms of Manoeuvrability come with the item values.
 export function shipStats(ship: Record<string, unknown>): Field[] {
   const hull = text(ship.hull) ?? "";
   const rank = text(ship.class) ?? "C";
@@ -84,11 +67,13 @@ export function shipStats(ship: Record<string, unknown>): Field[] {
       "archive.baseAgile",
       of(ship.base_agile, (base) => {
         const x = 1 + base / 100;
-        const [offset, first, second] = AGILE_OFFSET[rank];
+        const { agile } = ITEMS;
+        const grade = ITEMS.classes.indexOf(rank);
+        const [offset, first, second] = agile.offsets[grade];
         return (
-          (AGILE_HULL[hull] ?? 352.5) +
-          AGILE_CLASS[rank] +
-          90 * ((robot ? 1.5 : 1) * x * x - 1) +
+          (agile.hulls[hull] ?? agile.otherHull) +
+          agile.classes[grade] +
+          agile.curve * ((robot ? agile.robotScale : 1) * x * x - 1) +
           offset +
           first * u1 +
           second * u2

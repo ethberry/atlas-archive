@@ -62,120 +62,18 @@
       {
         "slug": "sentinels-and-dissonance",
         "title": "Sentinels and dissonance"
+      },
+      {
+        "slug": "fishing",
+        "title": "Fishing"
+      },
+      {
+        "slug": "excavation-finds",
+        "title": "Excavation finds"
       }
     ],
     "slug": "planets",
     "title": "Planets"
-  },
-  {
-    "pages": [
-      {
-        "slug": "freighters",
-        "title": "Freighters"
-      },
-      {
-        "slug": "dreadnoughts",
-        "title": "Dreadnoughts"
-      },
-      {
-        "slug": "freighter-modules",
-        "title": "Freighter modules"
-      },
-      {
-        "slug": "frigates",
-        "title": "Frigates"
-      },
-      {
-        "slug": "organic-frigates",
-        "title": "Organic frigates"
-      },
-      {
-        "slug": "sentinel-capital-ship",
-        "title": "Sentinel capital ship"
-      },
-      {
-        "slug": "freighter-technology",
-        "title": "Freighter technology"
-      }
-    ],
-    "slug": "freighters",
-    "title": "Freighters"
-  },
-  {
-    "pages": [
-      {
-        "slug": "ship-types",
-        "title": "Ship types"
-      },
-      {
-        "slug": "ship-classes",
-        "title": "Ship classes"
-      },
-      {
-        "slug": "ship-stats",
-        "title": "Ship stats"
-      },
-      {
-        "slug": "ship-upgrades",
-        "title": "How to upgrade a ship"
-      },
-      {
-        "slug": "ship-figures",
-        "title": "Ship figures"
-      },
-      {
-        "slug": "ship-square",
-        "title": "The square on a ship"
-      },
-      {
-        "slug": "interceptors",
-        "title": "Interceptors"
-      },
-      {
-        "slug": "living-ships",
-        "title": "Living ships"
-      },
-      {
-        "slug": "starship-modules",
-        "title": "Starship modules"
-      },
-      {
-        "slug": "corvette-modules",
-        "title": "Corvette modules"
-      }
-    ],
-    "slug": "ships",
-    "title": "Ships"
-  },
-  {
-    "pages": [
-      {
-        "slug": "roamer-modules",
-        "title": "Roamer modules"
-      },
-      {
-        "slug": "nomad-modules",
-        "title": "Nomad modules"
-      },
-      {
-        "slug": "pilgrim-modules",
-        "title": "Pilgrim modules"
-      },
-      {
-        "slug": "colossus-modules",
-        "title": "Colossus modules"
-      },
-      {
-        "slug": "nautilon-modules",
-        "title": "Nautilon modules"
-      },
-      {
-        "slug": "minotaur-modules",
-        "title": "Minotaur modules"
-      }
-    ],
-    "slug": "exocraft",
-    "title": "Exocraft"
   },
   {
     "pages": [
@@ -222,12 +120,126 @@
   {
     "pages": [
       {
+        "slug": "ship-types",
+        "title": "Ship types"
+      },
+      {
+        "slug": "ship-classes",
+        "title": "Ship classes"
+      },
+      {
+        "slug": "ship-stats",
+        "title": "Ship stats"
+      },
+      {
+        "slug": "ship-upgrades",
+        "title": "How to upgrade a ship"
+      },
+      {
+        "slug": "ship-figures",
+        "title": "Ship figures"
+      },
+      {
+        "slug": "ship-square",
+        "title": "The square on a ship"
+      },
+      {
+        "slug": "interceptors",
+        "title": "Interceptors"
+      },
+      {
+        "slug": "living-ships",
+        "title": "Living ships"
+      },
+      {
+        "slug": "starship-modules",
+        "title": "Starship modules"
+      },
+      {
+        "slug": "corvettes",
+        "title": "Corvettes"
+      },
+      {
+        "slug": "corvette-modules",
+        "title": "Corvette modules"
+      }
+    ],
+    "slug": "ships",
+    "title": "Ships"
+  },
+  {
+    "pages": [
+      {
+        "slug": "freighters",
+        "title": "Freighters"
+      },
+      {
+        "slug": "dreadnoughts",
+        "title": "Dreadnoughts"
+      },
+      {
+        "slug": "freighter-modules",
+        "title": "Freighter modules"
+      },
+      {
+        "slug": "frigates",
+        "title": "Frigates"
+      },
+      {
+        "slug": "organic-frigates",
+        "title": "Organic frigates"
+      },
+      {
+        "slug": "sentinel-capital-ship",
+        "title": "Sentinel capital ship"
+      },
+      {
+        "slug": "freighter-technology",
+        "title": "Freighter technology"
+      }
+    ],
+    "slug": "freighters",
+    "title": "Freighters"
+  },
+  {
+    "pages": [
+      {
         "slug": "exosuit-modules",
         "title": "Exosuit modules"
       }
     ],
     "slug": "exosuit",
     "title": "Exosuit"
+  },
+  {
+    "pages": [
+      {
+        "slug": "roamer-modules",
+        "title": "Roamer modules"
+      },
+      {
+        "slug": "nomad-modules",
+        "title": "Nomad modules"
+      },
+      {
+        "slug": "pilgrim-modules",
+        "title": "Pilgrim modules"
+      },
+      {
+        "slug": "colossus-modules",
+        "title": "Colossus modules"
+      },
+      {
+        "slug": "nautilon-modules",
+        "title": "Nautilon modules"
+      },
+      {
+        "slug": "minotaur-modules",
+        "title": "Minotaur modules"
+      }
+    ],
+    "slug": "exocraft",
+    "title": "Exocraft"
   },
   {
     "pages": [
@@ -246,6 +258,10 @@
       {
         "slug": "creature-affinity",
         "title": "Creature affinity"
+      },
+      {
+        "slug": "battle-moves",
+        "title": "Battle moves"
       }
     ],
     "slug": "creatures",

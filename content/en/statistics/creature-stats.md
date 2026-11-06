@@ -4,12 +4,6 @@
 
 Trait Potential, the large letter above the three grades, is no fourth roll. It adds up the other three.
 
-## The letter
-
-All three grades roll from the same odds, each apart from the others. Where to find the top ones is under [creature grades](/guides/creature-grades).
-
-<!-- widget:chance -->
-
 ## The number behind it
 
 A wild creature starts inside these bands.
@@ -24,9 +18,15 @@ The name, the grades, and that roll belong to the species. Size belongs to each 
 
 The bars on the card show the number, not the letter. We have seen a creature 6.6 m tall with an S in Agility whose bar is shorter than the A of one 1.1 m tall.
 
+## The letter
+
+All three grades roll from the same odds, each apart from the others. Where to find the top ones is under [creature grades](/guides/creature-grades).
+
+<!-- widget:chance -->
+
 ## Levels
 
-A wild creature stands at level 0 in each grade. Each grade rises to level 10, thirty levels in all, and a level adds a fixed amount by its letter, so the gap between letters widens as you go.
+A wild creature stands at level 0 in each grade, and each [gene edit](/guides/battle-moves) raises one grade a level. Each grade rises to level 10, thirty levels in all, and a level adds a fixed amount by its letter, so the gap between letters widens as you go.
 
 <!-- widget:growth -->
 

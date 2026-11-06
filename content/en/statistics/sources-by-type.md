@@ -2,7 +2,7 @@
 
 **Which type of planet, or biome, holds the most?** Among rocky planets, {{runner}} worlds: a median of {{runnerSpots}} spots. {{poorest}} worlds come last with {{poorestSpots}}, because {{redUncharted}} of them sit in Uncharted systems. Gas giants read {{richestSpots}}, but we have not stood on one to check.
 
-Dead and Weird worlds hold no shop and no pillar at all. Lush worlds hold fewer shops than barren ones, since their seas take part of the grid.
+Dead and Weird worlds hold no shop and no pillar at all. Lush worlds hold fewer shops than barren ones, since their seas take part of the grid. The type also decides which fish bite in those seas, as [fishing](/guides/fishing) lists.
 
 A spot is a place on a planet's grid that holds a building; [where a multitool comes from](/about#where-a-multitool-comes-from) lists the kinds. Spots count above sea level. Uncharted systems are in these medians.
 

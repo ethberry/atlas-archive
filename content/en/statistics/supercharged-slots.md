@@ -1,6 +1,6 @@
 # Supercharged slots
 
-**How do you place modules for the most damage?** Put a weapon's three upgrade modules on the supercharged slots, and the weapon on the one that touches the fewest of them. The rule is the same for every weapon, on a multitool and on a starship, and a square of four supercharged slots is the best figure for any of them.
+**How do you place modules for the most damage?** Put a weapon's three upgrade modules on the supercharged slots, and the weapon on the one adjacent to the fewest of them. The rule is the same for every weapon, on a multitool and on a starship, and a square of four supercharged slots is the best figure for any of them.
 
 The numbers on this page are the Boltcaster's, because it is the weapon we measured: that does not make it the best weapon. Another weapon can hit harder, or hit an area rather than one target, and its Damage Potential does not compare with the Boltcaster's single shots. Read each number against the same weapon placed another way.
 
@@ -20,13 +20,13 @@ Some technology adds nothing to the number it stands beside and still matters, b
 
 So the best Boltcaster takes six slots, not four. Here it is cell by cell, the square on the right:
 
-|  | Left | Middle | Right |
-| --- | --- | --- | --- |
-| Top |  |  | Ricochet Module |
-| Middle |  | Module, supercharged | Module, supercharged |
+|        | Left           | Middle               | Right                    |
+| ------ | -------------- | -------------------- | ------------------------ |
+| Top    |                |                      | Ricochet Module          |
+| Middle |                | Module, supercharged | Module, supercharged     |
 | Bottom | Barrel Ioniser | Module, supercharged | Boltcaster, supercharged |
 
-Each of the two helpers touches one of the modules beside the Boltcaster, and the third module, on the far corner, already touches two.
+Each of the two helpers is adjacent to one of the modules beside the Boltcaster, and the third module, on the far corner, already has two.
 
 ## How to place them
 
@@ -40,7 +40,7 @@ Any figure more than triples the damage, and the square adds only {{squareEdge}}
 
 <!-- widget:rules -->
 
-The weapon gains only from the slot under it. A module gains from its slot and from every neighbour, and more from another module than from the weapon. So a supercharged slot under a module raises everything that module adds, and the modules should touch each other more than they touch the weapon. That is why the weapon goes where it has the fewest neighbours.
+The weapon gains only from the slot under it. A module gains from its slot and from every neighbour, and more from another module than from the weapon. So a supercharged slot under a module raises everything that module adds, and the modules should be adjacent to each other more than to the weapon. That is why the weapon goes where it has the fewest neighbours.
 
 ## The proof
 
@@ -48,26 +48,22 @@ One class S Royal multitool, the Boltcaster, and the same three S-Class Boltcast
 
 <!-- widget:layouts -->
 
-The steps are plain. Modules with no supercharged slot stay under two times the Boltcaster alone: three apart give {{apart}}, a touching 2×2 block {{block}}. A supercharged slot under the Boltcaster alone gives {{boltSuper}}. The big step comes only when the modules take the supercharged slots, and the square, with all four on them, gives {{square}} times. How often a multitool has a square is on [the square](/guides/square).
+The steps are plain. Modules with no supercharged slot stay under two times the Boltcaster alone: three apart give {{apart}}, an adjacent 2×2 block {{block}}. A supercharged slot under the Boltcaster alone gives {{boltSuper}}. The big step comes only when the modules take the supercharged slots, and the square, with all four on them, gives {{square}} times. How often a multitool has a square is on [the square](/guides/square).
 
 ## On a starship
 
-A starship follows the same rule, so place its modules the same way: a weapon and its three modules, the modules on the supercharged slots, the weapon where it touches the fewest of them. On a class S [Interceptor](/guides/interceptors), Photon Cannon modules raise its Sentinel Cannon, and a supercharged slot raises each card by the same 1.25:
+A starship follows the same rule, so place its modules the same way: a weapon and its three modules, the modules on the supercharged slots, the weapon where it is adjacent to the fewest of them. A square is the best figure here too: [ship figures](/guides/ship-figures) shows which figures a ship's slots form, and [the square on a ship](/guides/ship-square) how rare one is. On a class S [Interceptor](/guides/interceptors), Photon Cannon modules raise its Sentinel Cannon, and a supercharged slot raises each card by the same 1.25:
 
 <!-- widget:shipCards -->
 
 A fire rate of +3% becomes +28% because the card prints how far the stat moves from its base, and the supercharge acts on the whole stat.
 
-The hyperdrive is where the most technology touches: the Hyperdrive itself, the four colour drives, and three modules, and the inventory frames them as one group. Keep the supercharged slots for the three modules and the Hyperdrive, and set the colour drives around them, as the table of helpers above says: a colour drive adds no range of its own, and on a supercharged slot it gains nothing you can see.
+The hyperdrive is where the most technology stands adjacent: the Hyperdrive itself, the four colour drives, and three modules, and the inventory frames them as one group. Keep the supercharged slots for the three modules and the Hyperdrive, and set the colour drives around them, as the table of helpers above says: a colour drive adds no range of its own, and on a supercharged slot it gains nothing you can see.
 
 The starship's own Damage Potential works differently. Each of its seven weapons adds up to 50 and stops once its damage per second reaches a cap, so the screen can never show more than {{shipCeiling}}: a class S Fighter at its best damage with all seven weapons at their caps. A Sentinel Cannon with its three modules, or alone on a supercharged slot, already reached its cap in the measurement, so the starship screen cannot rank layouts the way the multitool screen does; the placement that wins on the multitool still wins in a fight. The modules themselves, class by class, are on [multitool modules](/guides/multitool-modules) and [starship modules](/guides/starship-modules).
 
-## On the exosuit
+## On the exosuit, the exocraft, and a freighter
 
-The exosuit has three supercharged slots in its technology inventory, and they stand in the same places for every player: slot 5 of the top row, slot 9 of the second row, slot 3 of the third row, counting from the left. There is nothing to roll and nothing to farm. None of the three touches another, so there is no figure to make: each slot can lift one system of the suit. Put one module of a kind on it, and set the other modules of that kind and the technology they upgrade around it, touching, as on the exocraft. How much each placement adds on the suit is not researched yet. The modules themselves are on [exosuit modules](/guides/exosuit-modules).
-
-## On a freighter
-
-A freighter's supercharged slots lie in its technology inventory: one at class C, up to four at class S. Their places belong to the freighter itself, the same on every try, and they never move. A Cargo Bulkhead opens a slot without moving a supercharged one, so a supercharged slot can wait in a closed slot until a bulkhead opens it. How many and where are on [freighters](/guides/freighters). Whether freighter technology gains from its neighbours the way a weapon's modules do is not researched yet.
+The exosuit and each exocraft have three supercharged slots, none adjacent to another, so there is no figure to make: put one module of a kind on each and set the rest of that kind around it, as [exosuit modules](/guides/exosuit-modules) says. A freighter's slots belong to the freighter, as [freighters](/guides/freighters) shows; whether its technology gains from its neighbours the way a weapon's modules do is not researched yet.
 
 The ceiling above needs a tool with 50% damage, and a staff is one you build yourself: [staffs](/guides/staffs) says how.

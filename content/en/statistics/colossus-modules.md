@@ -14,7 +14,7 @@ With every module on it the Colossus has 10 slots left for upgrade modules: room
 
 ## Supercharged slots
 
-The Colossus has three supercharged slots, and they stand in the same places for every player: slot 9 of the top row, slot 8 of the middle row, slot 6 of the bottom row, counting from the left. There is nothing to roll. None of the three touches another, so each can lift one kind: give them to the Fusion Engine, the Exocraft Boosters, and the Exocraft Mining Laser, one module of each, and set the rest of that kind and its own technology around it, touching.
+The Colossus has three supercharged slots, and they stand in the same places for every player: slot 9 of the top row, slot 8 of the middle row, slot 6 of the bottom row, counting from the left. There is nothing to roll. None of the three is adjacent to another, so each can lift one kind: give them to the Fusion Engine, the Exocraft Boosters, and the Exocraft Mining Laser, one module of each, and set the rest of that kind and its own technology around it, adjacent.
 
 ## Upgrade modules
 

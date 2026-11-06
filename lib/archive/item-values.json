@@ -1,4 +1,17 @@
 {
+  "agile": {
+    "classes": [5.0, 10.0, 15.0, 20.0],
+    "curve": 90.0,
+    "hulls": { "hauler": 157.5, "interceptor": 210.0, "shuttle": 237.5 },
+    "offsets": [
+      [7.5, 0.0, -15.0],
+      [-17.5, 35.0, 15.0],
+      [-17.5, 35.0, 22.5],
+      [15.0, 35.0, 22.5]
+    ],
+    "otherHull": 352.5,
+    "robotScale": 1.5
+  },
   "card": {
     "beamCool": 1.6,
     "beamHeat": 8,

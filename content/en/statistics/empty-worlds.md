@@ -5,6 +5,8 @@
 - In charted systems, {{noToolCharted}} of planets hold no tool source. Nearly all of those are Dead and Weird worlds and gas giants, and they still hold staff terminals.
 - In Uncharted systems, planets hold neither. A median one holds {{unchartedMedian}} spots, all wrecks.
 
+Beyond the spots, any planet with water has fish to catch, as [fishing](/guides/fishing) lists by planet type, and one whose card shows Ancient Bones holds the bone piles of the [excavation finds](/guides/excavation-finds).
+
 ## What each kind of planet can hold
 
 No kind of planet is ruled out whole: every column has a yes. Gas giants hold no shop, monolith, or pillar, so they have no tool source. They are not empty, though: {{gasMedian}} spots at the median, because the grid of a 523 km body is huge. Those spots follow the same rules as all the others, and we have not stood on a gas giant to check them.

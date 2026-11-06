@@ -16,21 +16,11 @@ Some systems bring a dreadnought on every arrival, battle due or not: {{highArri
 
 <!-- widget:outcomes -->
 
-You cannot hurt the dreadnought from far away: its shields are too strong. Fly in under them and shoot the hull from close up. Meanwhile it fires lasers and torpedoes at the civilian freighter. Leave the torpedoes alone: shooting them down changes nothing.
+You cannot hurt the dreadnought from far away: its shields are too strong. Fly in under them and shoot the hull from close up. Meanwhile it fires lasers and torpedoes at the civilian freighter. Leave the torpedoes alone: shooting them down changes nothing. Even if the civilian freighter is lost, a kill still pays the module: only a dreadnought that warps out takes it away.
 
 ### To destroy it
 
-Destroy it and you get a freighter module, not the ship. The best place to fight from is a trench along the deck, where the shield generators stand. There are ten, five in each of the two trenches, under the arches that span them.
-
-<!-- widget:dreadnoughtShields -->
-
-1. Leave the engines whole. With all four broken and the hull low, it gives up instead of dying.
-2. Fly into the start of a trench. There is room inside, but steering is awkward: fly very slowly, since a little more speed makes your ship shake hard. The S key that slows you down also locks onto the nearest fighter.
-3. Stay at the start of the trench and shoot along it. Break the first shield generator, then the second, then the third. When one breaks, fuel rods come up out of it: shoot those too. The far end is hard to see, so go back to the first rods once they are up, then on down the trench.
-4. Clear the second trench the same way.
-5. Shoot straight into the trench wall until the dreadnought goes down.
-
-Do not fight from the engines: there you are not close enough to what you need to hit.
+Destroy it and you get a freighter module, not the ship. [Freighter modules](/guides/freighter-modules) shows the trench to fight it from, step by step.
 
 ### To make it surrender
 

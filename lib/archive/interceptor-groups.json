@@ -5,17 +5,20 @@
       {
         "id": "Pit_A",
         "label": "Low",
-        "names": ["_Pit_A"]
+        "names": ["_Pit_A"],
+        "tile": ["_Pit_A"]
       },
       {
         "id": "Pit_B",
         "label": "Stepped",
-        "names": ["_Pit_B"]
+        "names": ["_Pit_B"],
+        "tile": ["_Pit_B"]
       },
       {
         "id": "Pit_C",
         "label": "Tall",
-        "names": ["_Pit_C"]
+        "names": ["_Pit_C"],
+        "tile": ["_Pit_C"]
       }
     ],
     "title": "Cockpit"
@@ -24,65 +27,77 @@
     "id": "Lights_NULL1",
     "options": [
       {
-        "empty": true,
-        "id": "Lights_NULL1",
-        "label": "None",
-        "names": ["_Lights_NULL1"]
-      },
-      {
         "id": "Lights_A1",
         "label": "Variant 1",
-        "names": ["_Lights_A1"]
+        "names": ["_Lights_A1"],
+        "tile": ["_Lights_A1"]
       },
       {
         "id": "Lights_B1",
         "label": "Variant 2",
-        "names": ["_Lights_B1"]
+        "names": ["_Lights_B1"],
+        "tile": ["_Lights_B1"]
       },
       {
         "id": "Lights_C1",
         "label": "Variant 3",
-        "names": ["_Lights_C1"]
+        "names": ["_Lights_C1"],
+        "tile": ["_Lights_C1"]
       },
       {
         "id": "Lights_D1",
         "label": "Variant 4",
-        "names": ["_Lights_D1"]
+        "names": ["_Lights_D1"],
+        "tile": ["_Lights_D1"]
       },
       {
         "id": "Lights_E1",
         "label": "Variant 5",
-        "names": ["_Lights_E1"]
+        "names": ["_Lights_E1"],
+        "tile": ["_Lights_E1"]
       },
       {
         "id": "Lights_F1",
         "label": "Variant 6",
-        "names": ["_Lights_F1"]
+        "names": ["_Lights_F1"],
+        "tile": ["_Lights_F1"]
       },
       {
         "id": "Lights_G1",
         "label": "Variant 7",
-        "names": ["_Lights_G1"]
+        "names": ["_Lights_G1"],
+        "tile": ["_Lights_G1"]
       },
       {
         "id": "Lights_H1",
         "label": "Variant 8",
-        "names": ["_Lights_H1"]
+        "names": ["_Lights_H1"],
+        "tile": ["_Lights_H1"]
       },
       {
         "id": "Lights_I1",
         "label": "Variant 9",
-        "names": ["_Lights_I1"]
+        "names": ["_Lights_I1"],
+        "tile": ["_Lights_I1"]
       },
       {
         "id": "Lights_J2",
         "label": "Variant 10",
-        "names": ["_Lights_J2"]
+        "names": ["_Lights_J2"],
+        "tile": ["_Lights_J2"]
       },
       {
         "id": "Lights_G8",
         "label": "Variant 11",
-        "names": ["_Lights_G8"]
+        "names": ["_Lights_G8"],
+        "tile": ["_Lights_G8"]
+      },
+      {
+        "empty": true,
+        "id": "Lights_NULL1",
+        "label": "None",
+        "names": ["_Lights_NULL1"],
+        "tile": []
       }
     ],
     "requires": {
@@ -95,60 +110,71 @@
     "id": "Lights_NULL",
     "options": [
       {
-        "empty": true,
-        "id": "Lights_NULL",
-        "label": "None",
-        "names": ["_Lights_NULL"]
-      },
-      {
         "id": "Lights_A",
         "label": "Variant 1",
-        "names": ["_Lights_A"]
+        "names": ["_Lights_A"],
+        "tile": ["_Lights_A"]
       },
       {
         "id": "Lights_B",
         "label": "Variant 2",
-        "names": ["_Lights_B"]
+        "names": ["_Lights_B"],
+        "tile": ["_Lights_B"]
       },
       {
         "id": "Lights_C",
         "label": "Variant 3",
-        "names": ["_Lights_C"]
+        "names": ["_Lights_C"],
+        "tile": ["_Lights_C"]
       },
       {
         "id": "Lights_D",
         "label": "Variant 4",
-        "names": ["_Lights_D"]
+        "names": ["_Lights_D"],
+        "tile": ["_Lights_D"]
       },
       {
         "id": "Lights_E",
         "label": "Variant 5",
-        "names": ["_Lights_E"]
+        "names": ["_Lights_E"],
+        "tile": ["_Lights_E"]
       },
       {
         "id": "Lights_F",
         "label": "Variant 6",
-        "names": ["_Lights_F"]
+        "names": ["_Lights_F"],
+        "tile": ["_Lights_F"]
       },
       {
         "id": "Lights_G",
         "label": "Variant 7",
-        "names": ["_Lights_G"]
+        "names": ["_Lights_G"],
+        "tile": ["_Lights_G"]
       },
       {
         "id": "Lights_H",
         "label": "Variant 8",
-        "names": ["_Lights_H"]
+        "names": ["_Lights_H"],
+        "tile": ["_Lights_H"]
       },
       {
         "id": "Lights_I",
         "label": "Variant 9",
-        "names": ["_Lights_I"]
+        "names": ["_Lights_I"],
+        "tile": ["_Lights_I"]
       },
       {
         "id": "Lights_J",
         "label": "Variant 10",
-        "names": ["_Lights_J"]
+        "names": ["_Lights_J"],
+        "tile": ["_Lights_J"]
+      },
+      {
+        "empty": true,
+        "id": "Lights_NULL",
+        "label": "None",
+        "names": ["_Lights_NULL"],
+        "tile": []
       }
     ],
     "requires": {
@@ -163,13 +189,15 @@
       {
         "id": "TopFlap_A",
         "label": "With",
-        "names": ["_TopFlap_A"]
+        "names": ["_TopFlap_A"],
+        "tile": ["_TopFlap_A"]
       },
       {
         "empty": true,
         "id": "TopFlap_Null",
         "label": "Without",
-        "names": ["_TopFlap_Null"]
+        "names": ["_TopFlap_Null"],
+        "tile": []
       }
     ],
     "title": "Top flap"
@@ -181,30 +209,33 @@
         "id": "Wings_V",
         "label": "Stacked",
         "names": ["_Wings_V"],
-        "vanishes": true
+        "tile": ["_Wings_V"]
       },
       {
         "id": "Wings_H",
         "label": "Spread",
         "names": ["_Wings_H"],
-        "vanishes": true
+        "tile": ["_Wings_H"]
       },
       {
         "id": "Carriage_A",
         "label": "Fork",
-        "names": ["_Carriage_A"]
+        "names": ["_Carriage_A"],
+        "tile": ["_Carriage_A", "_FrontTips_NULL"]
       },
       {
         "id": "Carriage_B",
         "label": "Pod",
-        "names": ["_Carriage_B"]
+        "names": ["_Carriage_B"],
+        "tile": ["_Carriage_B"]
       },
       {
         "empty": true,
         "id": "none",
         "label": "None",
         "names": ["_Wings_V", "_WingsO_NULL", "_WingsU_NULL"],
-        "nothing": true
+        "nothing": true,
+        "tile": []
       }
     ],
     "title": "Wing set"
@@ -213,26 +244,30 @@
     "id": "WingsO_NULL",
     "options": [
       {
-        "empty": true,
-        "id": "WingsO_NULL",
-        "label": "None",
-        "names": ["_WingsO_NULL"]
-      },
-      {
         "id": "WingsO_oFlip",
         "label": "Rings",
         "names": ["_WingsO_oFlip"],
-        "shared": true
+        "shared": true,
+        "tile": ["_WingsO_oFlip", "_var_1"]
       },
       {
         "id": "WingsO_oTop",
         "label": "Open",
-        "names": ["_WingsO_oTop"]
+        "names": ["_WingsO_oTop"],
+        "tile": ["_WingsO_oTop"]
       },
       {
         "id": "WingsO_cTop",
         "label": "Closed",
-        "names": ["_WingsO_cTop"]
+        "names": ["_WingsO_cTop"],
+        "tile": ["_WingsO_cTop"]
+      },
+      {
+        "empty": true,
+        "id": "WingsO_NULL",
+        "label": "None",
+        "names": ["_WingsO_NULL"],
+        "tile": []
       }
     ],
     "requires": {
@@ -245,15 +280,17 @@
     "id": "extrawings_NULLq",
     "options": [
       {
+        "id": "extrawings_tops4q",
+        "label": "With",
+        "names": ["_extrawings_tops4q"],
+        "tile": ["_extrawings_tops4q"]
+      },
+      {
         "empty": true,
         "id": "extrawings_NULLq",
         "label": "None",
-        "names": ["_extrawings_NULLq"]
-      },
-      {
-        "id": "extrawings_tops4q",
-        "label": "With",
-        "names": ["_extrawings_tops4q"]
+        "names": ["_extrawings_NULLq"],
+        "tile": []
       }
     ],
     "requires": {
@@ -268,17 +305,20 @@
       {
         "id": "Type_Black1q",
         "label": "Black",
-        "names": ["_Type_Black1q"]
+        "names": ["_Type_Black1q"],
+        "tile": ["_Type_Black1q"]
       },
       {
         "id": "Type_White1q",
         "label": "White",
-        "names": ["_Type_White1q"]
+        "names": ["_Type_White1q"],
+        "tile": ["_Type_White1q"]
       },
       {
         "id": "Type_Sentinel1q",
         "label": "Sentinel",
-        "names": ["_Type_Sentinel1q"]
+        "names": ["_Type_Sentinel1q"],
+        "tile": ["_Type_Sentinel1q"]
       }
     ],
     "requires": {
@@ -291,15 +331,17 @@
     "id": "axWingss_11",
     "options": [
       {
+        "id": "axWingss_12",
+        "label": "With",
+        "names": ["_axWingss_12"],
+        "tile": ["_axWingss_12"]
+      },
+      {
         "empty": true,
         "id": "axWingss_11",
         "label": "None",
-        "names": ["_axWingss_11"]
-      },
-      {
-        "id": "axWingss_12",
-        "label": "With",
-        "names": ["_axWingss_12"]
+        "names": ["_axWingss_11"],
+        "tile": []
       }
     ],
     "requires": {
@@ -312,15 +354,17 @@
     "id": "JetTop_NULL",
     "options": [
       {
+        "id": "JetTop_A",
+        "label": "With",
+        "names": ["_JetTop_A"],
+        "tile": ["_JetTop_A"]
+      },
+      {
         "empty": true,
         "id": "JetTop_NULL",
         "label": "None",
-        "names": ["_JetTop_NULL"]
-      },
-      {
-        "id": "JetTop_A",
-        "label": "With",
-        "names": ["_JetTop_A"]
+        "names": ["_JetTop_NULL"],
+        "tile": []
       }
     ],
     "requires": {
@@ -333,25 +377,29 @@
     "id": "Type_Non",
     "options": [
       {
-        "empty": true,
-        "id": "Type_Non",
-        "label": "None",
-        "names": ["_Type_Non"]
-      },
-      {
         "id": "Type_Black1",
         "label": "Black",
-        "names": ["_Type_Black1"]
+        "names": ["_Type_Black1"],
+        "tile": ["_Type_Black1"]
       },
       {
         "id": "Type_White1",
         "label": "White",
-        "names": ["_Type_White1"]
+        "names": ["_Type_White1"],
+        "tile": ["_Type_White1"]
       },
       {
         "id": "Type_Sentinel1",
         "label": "Sentinel",
-        "names": ["_Type_Sentinel1"]
+        "names": ["_Type_Sentinel1"],
+        "tile": ["_Type_Sentinel1"]
+      },
+      {
+        "empty": true,
+        "id": "Type_Non",
+        "label": "None",
+        "names": ["_Type_Non"],
+        "tile": []
       }
     ],
     "requires": {
@@ -364,15 +412,17 @@
     "id": "exWings_non",
     "options": [
       {
+        "id": "exWings_5s436",
+        "label": "With",
+        "names": ["_exWings_5s436"],
+        "tile": ["_exWings_5s436", "_tipLights4_a"]
+      },
+      {
         "empty": true,
         "id": "exWings_non",
         "label": "None",
-        "names": ["_exWings_non"]
-      },
-      {
-        "id": "exWings_5s436",
-        "label": "With",
-        "names": ["_exWings_5s436"]
+        "names": ["_exWings_non"],
+        "tile": []
       }
     ],
     "requires": {
@@ -385,15 +435,17 @@
     "id": "TopJets_NULL",
     "options": [
       {
+        "id": "TopJets_A",
+        "label": "With",
+        "names": ["_TopJets_A"],
+        "tile": ["_TopJets_A"]
+      },
+      {
         "empty": true,
         "id": "TopJets_NULL",
         "label": "None",
-        "names": ["_TopJets_NULL"]
-      },
-      {
-        "id": "TopJets_A",
-        "label": "With",
-        "names": ["_TopJets_A"]
+        "names": ["_TopJets_NULL"],
+        "tile": []
       }
     ],
     "requires": {
@@ -406,25 +458,29 @@
     "id": "WingsU_NULL",
     "options": [
       {
-        "empty": true,
-        "id": "WingsU_NULL",
-        "label": "None",
-        "names": ["_WingsU_NULL"]
-      },
-      {
         "id": "WingsU_oBot",
         "label": "Open",
-        "names": ["_WingsU_oBot"]
+        "names": ["_WingsU_oBot"],
+        "tile": ["_WingsU_oBot"]
       },
       {
         "id": "WingsU_cBot",
         "label": "Closed",
-        "names": ["_WingsU_cBot"]
+        "names": ["_WingsU_cBot"],
+        "tile": ["_WingsU_cBot"]
       },
       {
         "id": "WingsU_Legs",
         "label": "Legs",
-        "names": ["_WingsU_Legs"]
+        "names": ["_WingsU_Legs"],
+        "tile": ["_WingsU_Legs"]
+      },
+      {
+        "empty": true,
+        "id": "WingsU_NULL",
+        "label": "None",
+        "names": ["_WingsU_NULL"],
+        "tile": []
       }
     ],
     "requires": {
@@ -437,15 +493,17 @@
     "id": "JetBots_NULL",
     "options": [
       {
+        "id": "JetBots_A",
+        "label": "With",
+        "names": ["_JetBots_A"],
+        "tile": ["_JetBots_A"]
+      },
+      {
         "empty": true,
         "id": "JetBots_NULL",
         "label": "None",
-        "names": ["_JetBots_NULL"]
-      },
-      {
-        "id": "JetBots_A",
-        "label": "With",
-        "names": ["_JetBots_A"]
+        "names": ["_JetBots_NULL"],
+        "tile": []
       }
     ],
     "requires": {
@@ -458,25 +516,29 @@
     "id": "Type_non1",
     "options": [
       {
-        "empty": true,
-        "id": "Type_non1",
-        "label": "None",
-        "names": ["_Type_non1"]
-      },
-      {
         "id": "Type_Sentinel2",
         "label": "Sentinel",
-        "names": ["_Type_Sentinel2"]
+        "names": ["_Type_Sentinel2"],
+        "tile": ["_Type_Sentinel2"]
       },
       {
         "id": "Type_White2",
         "label": "White",
-        "names": ["_Type_White2"]
+        "names": ["_Type_White2"],
+        "tile": ["_Type_White2"]
       },
       {
         "id": "Type_Black2",
         "label": "Black",
-        "names": ["_Type_Black2"]
+        "names": ["_Type_Black2"],
+        "tile": ["_Type_Black2"]
+      },
+      {
+        "empty": true,
+        "id": "Type_non1",
+        "label": "None",
+        "names": ["_Type_non1"],
+        "tile": []
       }
     ],
     "requires": {
@@ -489,15 +551,17 @@
     "id": "JetBot_NULL",
     "options": [
       {
+        "id": "JetBot_A",
+        "label": "With",
+        "names": ["_JetBot_A"],
+        "tile": ["_JetBot_A"]
+      },
+      {
         "empty": true,
         "id": "JetBot_NULL",
         "label": "None",
-        "names": ["_JetBot_NULL"]
-      },
-      {
-        "id": "JetBot_A",
-        "label": "With",
-        "names": ["_JetBot_A"]
+        "names": ["_JetBot_NULL"],
+        "tile": []
       }
     ],
     "requires": {
@@ -510,40 +574,47 @@
     "id": "Wings1_NULL",
     "options": [
       {
-        "empty": true,
-        "id": "Wings1_NULL",
-        "label": "None",
-        "names": ["_Wings1_NULL"]
-      },
-      {
         "id": "Wings1_O",
         "label": "Open",
-        "names": ["_Wings1_O"]
+        "names": ["_Wings1_O"],
+        "tile": ["_Wings1_O"]
       },
       {
         "id": "Wings1_C",
         "label": "Closed",
-        "names": ["_Wings1_C"]
+        "names": ["_Wings1_C"],
+        "tile": ["_Wings1_C"]
       },
       {
         "id": "Wings1_oBot",
         "label": "Open, low",
-        "names": ["_Wings1_oBot"]
+        "names": ["_Wings1_oBot"],
+        "tile": ["_Wings1_oBot"]
       },
       {
         "id": "Wings1_cBot",
         "label": "Closed, low",
-        "names": ["_Wings1_cBot"]
+        "names": ["_Wings1_cBot"],
+        "tile": ["_Wings1_cBot"]
       },
       {
         "id": "Wings1H_oTop",
         "label": "Open, high",
-        "names": ["_Wings1H_oTop"]
+        "names": ["_Wings1H_oTop"],
+        "tile": ["_Wings1H_oTop"]
       },
       {
         "id": "Wings1H_cTop",
         "label": "Closed, high",
-        "names": ["_Wings1H_cTop"]
+        "names": ["_Wings1H_cTop"],
+        "tile": ["_Wings1H_cTop"]
+      },
+      {
+        "empty": true,
+        "id": "Wings1_NULL",
+        "label": "None",
+        "names": ["_Wings1_NULL"],
+        "tile": []
       }
     ],
     "requires": {
@@ -556,21 +627,24 @@
     "id": "SWings_NULL",
     "options": [
       {
-        "empty": true,
-        "id": "SWings_NULL",
-        "label": "None",
-        "names": ["_SWings_NULL"]
-      },
-      {
         "id": "SWings_A2",
         "label": "Variant 1",
-        "names": ["_SWings_A2"]
+        "names": ["_SWings_A2"],
+        "tile": ["_SWings_A2"]
       },
       {
         "id": "SWings_A3",
         "label": "Variant 2",
         "names": ["_SWings_A3"],
-        "shared": true
+        "shared": true,
+        "tile": ["_SWings_A3"]
+      },
+      {
+        "empty": true,
+        "id": "SWings_NULL",
+        "label": "None",
+        "names": ["_SWings_NULL"],
+        "tile": []
       }
     ],
     "requires": {
@@ -583,15 +657,17 @@
     "id": "TipLight_NULL",
     "options": [
       {
+        "id": "TipLight_A",
+        "label": "With",
+        "names": ["_TipLight_A"],
+        "tile": ["_TipLight_A"]
+      },
+      {
         "empty": true,
         "id": "TipLight_NULL",
         "label": "None",
-        "names": ["_TipLight_NULL"]
-      },
-      {
-        "id": "TipLight_A",
-        "label": "With",
-        "names": ["_TipLight_A"]
+        "names": ["_TipLight_NULL"],
+        "tile": []
       }
     ],
     "requires": {
@@ -604,16 +680,18 @@
     "id": "HorTopW_NULL",
     "options": [
       {
-        "empty": true,
-        "id": "HorTopW_NULL",
-        "label": "None",
-        "names": ["_HorTopW_NULL"]
-      },
-      {
         "id": "HorTopW_A",
         "label": "With",
         "names": ["_HorTopW_A"],
-        "shared": true
+        "shared": true,
+        "tile": ["_HorTopW_A"]
+      },
+      {
+        "empty": true,
+        "id": "HorTopW_NULL",
+        "label": "None",
+        "names": ["_HorTopW_NULL"],
+        "tile": []
       }
     ],
     "requires": {
@@ -626,25 +704,29 @@
     "id": "Engines_Null",
     "options": [
       {
-        "empty": true,
-        "id": "Engines_Null",
-        "label": "None",
-        "names": ["_Engines_Null"]
-      },
-      {
         "id": "Jets_A",
         "label": "Jets 1",
-        "names": ["_Jets_A"]
+        "names": ["_Jets_A"],
+        "tile": ["_Jets_A"]
       },
       {
         "id": "Jets_B",
         "label": "Jets 2",
-        "names": ["_Jets_B"]
+        "names": ["_Jets_B"],
+        "tile": ["_Jets_B"]
       },
       {
         "id": "Jets_C",
         "label": "Jets 3",
-        "names": ["_Jets_C"]
+        "names": ["_Jets_C"],
+        "tile": ["_Jets_C"]
+      },
+      {
+        "empty": true,
+        "id": "Engines_Null",
+        "label": "None",
+        "names": ["_Engines_Null"],
+        "tile": []
       }
     ],
     "requires": {
@@ -657,15 +739,17 @@
     "id": "exWingsb_NULL4",
     "options": [
       {
+        "id": "exWingsb_5sts3",
+        "label": "With",
+        "names": ["_exWingsb_5sts3"],
+        "tile": ["_exWingsb_5sts3"]
+      },
+      {
         "empty": true,
         "id": "exWingsb_NULL4",
         "label": "None",
-        "names": ["_exWingsb_NULL4"]
-      },
-      {
-        "id": "exWingsb_5sts3",
-        "label": "With",
-        "names": ["_exWingsb_5sts3"]
+        "names": ["_exWingsb_NULL4"],
+        "tile": []
       }
     ],
     "requires": {
@@ -678,16 +762,18 @@
     "id": "SWings_A444",
     "options": [
       {
-        "empty": true,
-        "id": "SWings_A444",
-        "label": "None",
-        "names": ["_SWings_A444"]
-      },
-      {
         "id": "SWings_A4",
         "label": "With",
         "names": ["_SWings_A4"],
-        "shared": true
+        "shared": true,
+        "tile": ["_SWings_A4"]
+      },
+      {
+        "empty": true,
+        "id": "SWings_A444",
+        "label": "None",
+        "names": ["_SWings_A444"],
+        "tile": []
       }
     ],
     "requires": {
@@ -700,15 +786,17 @@
     "id": "TipLight_LL",
     "options": [
       {
+        "id": "TipLight_A3",
+        "label": "With",
+        "names": ["_TipLight_A3"],
+        "tile": ["_TipLight_A3"]
+      },
+      {
         "empty": true,
         "id": "TipLight_LL",
         "label": "None",
-        "names": ["_TipLight_LL"]
-      },
-      {
-        "id": "TipLight_A3",
-        "label": "With",
-        "names": ["_TipLight_A3"]
+        "names": ["_TipLight_LL"],
+        "tile": []
       }
     ],
     "requires": {
@@ -721,15 +809,17 @@
     "id": "Wings1b_NULL",
     "options": [
       {
+        "id": "Wings1b_closedTop",
+        "label": "Closed",
+        "names": ["_Wings1b_closedTop"],
+        "tile": ["_Wings1b_closedTop"]
+      },
+      {
         "empty": true,
         "id": "Wings1b_NULL",
         "label": "None",
-        "names": ["_Wings1b_NULL"]
-      },
-      {
-        "id": "Wings1b_closedTop",
-        "label": "Closed",
-        "names": ["_Wings1b_closedTop"]
+        "names": ["_Wings1b_NULL"],
+        "tile": []
       }
     ],
     "requires": {
@@ -742,15 +832,17 @@
     "id": "Wings1c_NULL",
     "options": [
       {
+        "id": "Wings1c_openTop",
+        "label": "Open",
+        "names": ["_Wings1c_openTop"],
+        "tile": ["_Wings1c_openTop"]
+      },
+      {
         "empty": true,
         "id": "Wings1c_NULL",
         "label": "None",
-        "names": ["_Wings1c_NULL"]
-      },
-      {
-        "id": "Wings1c_openTop",
-        "label": "Open",
-        "names": ["_Wings1c_openTop"]
+        "names": ["_Wings1c_NULL"],
+        "tile": []
       }
     ],
     "requires": {
@@ -763,16 +855,18 @@
     "id": "HorTopW_NULL56",
     "options": [
       {
-        "empty": true,
-        "id": "HorTopW_NULL56",
-        "label": "None",
-        "names": ["_HorTopW_NULL56"]
-      },
-      {
         "id": "HorTopW_A1",
         "label": "With",
         "names": ["_HorTopW_A1"],
-        "shared": true
+        "shared": true,
+        "tile": ["_HorTopW_A1"]
+      },
+      {
+        "empty": true,
+        "id": "HorTopW_NULL56",
+        "label": "None",
+        "names": ["_HorTopW_NULL56"],
+        "tile": []
       }
     ],
     "requires": {
@@ -785,22 +879,25 @@
     "id": "exWings_443",
     "options": [
       {
-        "empty": true,
-        "id": "exWings_443",
-        "label": "None",
-        "names": ["_exWings_443"]
-      },
-      {
         "id": "exWings_5s1",
         "label": "Variant 1",
         "names": ["_exWings_5s1"],
-        "shared": true
+        "shared": true,
+        "tile": ["_exWings_5s1"]
       },
       {
         "id": "exWings_5s432",
         "label": "Variant 2",
         "names": ["_exWings_5s432"],
-        "shared": true
+        "shared": true,
+        "tile": ["_exWings_5s432"]
+      },
+      {
+        "empty": true,
+        "id": "exWings_443",
+        "label": "None",
+        "names": ["_exWings_443"],
+        "tile": []
       }
     ],
     "requires": {
@@ -813,15 +910,17 @@
     "id": "TipLight_U",
     "options": [
       {
+        "id": "TipLight_A4",
+        "label": "With",
+        "names": ["_TipLight_A4"],
+        "tile": ["_TipLight_A4"]
+      },
+      {
         "empty": true,
         "id": "TipLight_U",
         "label": "None",
-        "names": ["_TipLight_U"]
-      },
-      {
-        "id": "TipLight_A4",
-        "label": "With",
-        "names": ["_TipLight_A4"]
+        "names": ["_TipLight_U"],
+        "tile": []
       }
     ],
     "requires": {
@@ -834,15 +933,17 @@
     "id": "Wings1H_NULL",
     "options": [
       {
+        "id": "Wings1H_closedBot",
+        "label": "Closed",
+        "names": ["_Wings1H_closedBot"],
+        "tile": ["_Wings1H_closedBot"]
+      },
+      {
         "empty": true,
         "id": "Wings1H_NULL",
         "label": "None",
-        "names": ["_Wings1H_NULL"]
-      },
-      {
-        "id": "Wings1H_closedBot",
-        "label": "Closed",
-        "names": ["_Wings1H_closedBot"]
+        "names": ["_Wings1H_NULL"],
+        "tile": []
       }
     ],
     "requires": {
@@ -855,16 +956,18 @@
     "id": "HorBotW_NULL33",
     "options": [
       {
-        "empty": true,
-        "id": "HorBotW_NULL33",
-        "label": "None",
-        "names": ["_HorBotW_NULL33"]
-      },
-      {
         "id": "HorBotW_A2",
         "label": "With",
         "names": ["_HorBotW_A2"],
-        "shared": true
+        "shared": true,
+        "tile": ["_HorBotW_A2"]
+      },
+      {
+        "empty": true,
+        "id": "HorBotW_NULL33",
+        "label": "None",
+        "names": ["_HorBotW_NULL33"],
+        "tile": []
       }
     ],
     "requires": {
@@ -877,22 +980,25 @@
     "id": "exWings_422",
     "options": [
       {
-        "empty": true,
-        "id": "exWings_422",
-        "label": "None",
-        "names": ["_exWings_422"]
-      },
-      {
         "id": "exWings_422f",
         "label": "Variant 1",
         "names": ["_exWings_422f"],
-        "shared": true
+        "shared": true,
+        "tile": ["_exWings_422f"]
       },
       {
         "id": "exWings_444",
         "label": "Variant 2",
         "names": ["_exWings_444"],
-        "shared": true
+        "shared": true,
+        "tile": ["_exWings_444"]
+      },
+      {
+        "empty": true,
+        "id": "exWings_422",
+        "label": "None",
+        "names": ["_exWings_422"],
+        "tile": []
       }
     ],
     "requires": {
@@ -905,15 +1011,17 @@
     "id": "TipLight_N",
     "options": [
       {
+        "id": "TipLight_A5",
+        "label": "With",
+        "names": ["_TipLight_A5"],
+        "tile": ["_TipLight_A5"]
+      },
+      {
         "empty": true,
         "id": "TipLight_N",
         "label": "None",
-        "names": ["_TipLight_N"]
-      },
-      {
-        "id": "TipLight_A5",
-        "label": "With",
-        "names": ["_TipLight_A5"]
+        "names": ["_TipLight_N"],
+        "tile": []
       }
     ],
     "requires": {
@@ -926,15 +1034,17 @@
     "id": "Wings1H_NULL1",
     "options": [
       {
+        "id": "Wings1H_openBot",
+        "label": "Open",
+        "names": ["_Wings1H_openBot"],
+        "tile": ["_Wings1H_openBot"]
+      },
+      {
         "empty": true,
         "id": "Wings1H_NULL1",
         "label": "None",
-        "names": ["_Wings1H_NULL1"]
-      },
-      {
-        "id": "Wings1H_openBot",
-        "label": "Open",
-        "names": ["_Wings1H_openBot"]
+        "names": ["_Wings1H_NULL1"],
+        "tile": []
       }
     ],
     "requires": {
@@ -947,16 +1057,18 @@
     "id": "SWings_Nu3",
     "options": [
       {
-        "empty": true,
-        "id": "SWings_Nu3",
-        "label": "None",
-        "names": ["_SWings_Nu3"]
-      },
-      {
         "id": "SWings_A7",
         "label": "With",
         "names": ["_SWings_A7"],
-        "shared": true
+        "shared": true,
+        "tile": ["_SWings_A7"]
+      },
+      {
+        "empty": true,
+        "id": "SWings_Nu3",
+        "label": "None",
+        "names": ["_SWings_Nu3"],
+        "tile": []
       }
     ],
     "requires": {
@@ -969,15 +1081,17 @@
     "id": "TipLight_L",
     "options": [
       {
+        "id": "TipLight_A2",
+        "label": "With",
+        "names": ["_TipLight_A2"],
+        "tile": ["_TipLight_A2"]
+      },
+      {
         "empty": true,
         "id": "TipLight_L",
         "label": "None",
-        "names": ["_TipLight_L"]
-      },
-      {
-        "id": "TipLight_A2",
-        "label": "With",
-        "names": ["_TipLight_A2"]
+        "names": ["_TipLight_L"],
+        "tile": []
       }
     ],
     "requires": {
@@ -990,21 +1104,24 @@
     "id": "TrunkTOP_NULL",
     "options": [
       {
-        "empty": true,
-        "id": "TrunkTOP_NULL",
-        "label": "Without",
-        "names": ["_TrunkTOP_NULL"]
-      },
-      {
         "id": "TrunkTOP_A",
         "label": "Plate",
-        "names": ["_TrunkTOP_A"]
+        "names": ["_TrunkTOP_A"],
+        "tile": ["_TrunkTOP_A"]
       },
       {
         "id": "TrunkTOP_B",
         "label": "Blades",
         "names": ["_TrunkTOP_B"],
-        "shared": true
+        "shared": true,
+        "tile": ["_TrunkTOP_B"]
+      },
+      {
+        "empty": true,
+        "id": "TrunkTOP_NULL",
+        "label": "Without",
+        "names": ["_TrunkTOP_NULL"],
+        "tile": []
       }
     ],
     "requires": {
@@ -1020,19 +1137,22 @@
         "id": "TypeA_Sentinel4x",
         "label": "Sentinel",
         "names": ["_TypeA_Sentinel4x"],
-        "shared": true
+        "shared": true,
+        "tile": ["_TypeA_Sentinel4x"]
       },
       {
         "id": "TypeA_White4x",
         "label": "White",
         "names": ["_TypeA_White4x"],
-        "shared": true
+        "shared": true,
+        "tile": ["_TypeA_White4x"]
       },
       {
         "id": "TypeA_Black4x",
         "label": "Black",
         "names": ["_TypeA_Black4x"],
-        "shared": true
+        "shared": true,
+        "tile": ["_TypeA_Black4x"]
       }
     ],
     "requires": {
@@ -1048,13 +1168,15 @@
         "id": "antsb_16",
         "label": "With",
         "names": ["_antsb_16"],
-        "shared": true
+        "shared": true,
+        "tile": ["_antsb_16"]
       },
       {
         "empty": true,
         "id": "antsb_15",
         "label": "None",
-        "names": ["_antsb_15"]
+        "names": ["_antsb_15"],
+        "tile": []
       }
     ],
     "requires": {
@@ -1070,19 +1192,22 @@
         "id": "Type_Sentinel4e",
         "label": "Sentinel",
         "names": ["_Type_Sentinel4e"],
-        "shared": true
+        "shared": true,
+        "tile": ["_Type_Sentinel4e"]
       },
       {
         "id": "Type_White4e",
         "label": "White",
         "names": ["_Type_White4e"],
-        "shared": true
+        "shared": true,
+        "tile": ["_Type_White4e"]
       },
       {
         "id": "Type_Black4e",
         "label": "Black",
         "names": ["_Type_Black4e"],
-        "shared": true
+        "shared": true,
+        "tile": ["_Type_Black4e"]
       }
     ],
     "requires": {
@@ -1098,13 +1223,15 @@
         "id": "ants_15u",
         "label": "With",
         "names": ["_ants_15u"],
-        "shared": true
+        "shared": true,
+        "tile": ["_ants_15u"]
       },
       {
         "empty": true,
         "id": "ants_15",
         "label": "None",
-        "names": ["_ants_15"]
+        "names": ["_ants_15"],
+        "tile": []
       }
     ],
     "requires": {
@@ -1117,21 +1244,24 @@
     "id": "TrunkBOT_NULL",
     "options": [
       {
-        "empty": true,
-        "id": "TrunkBOT_NULL",
-        "label": "Without",
-        "names": ["_TrunkBOT_NULL"]
-      },
-      {
         "id": "TrunkBOT_A",
         "label": "Plate",
-        "names": ["_TrunkBOT_A"]
+        "names": ["_TrunkBOT_A"],
+        "tile": ["_TrunkBOT_A"]
       },
       {
         "id": "TrunkBOT_B",
         "label": "Blades",
         "names": ["_TrunkBOT_B"],
-        "shared": true
+        "shared": true,
+        "tile": ["_TrunkBOT_B"]
+      },
+      {
+        "empty": true,
+        "id": "TrunkBOT_NULL",
+        "label": "Without",
+        "names": ["_TrunkBOT_NULL"],
+        "tile": []
       }
     ],
     "requires": {
@@ -1147,19 +1277,22 @@
         "id": "Type_Black5",
         "label": "Black",
         "names": ["_Type_Black5"],
-        "shared": true
+        "shared": true,
+        "tile": ["_Type_Black5"]
       },
       {
         "id": "Type_Sentinel5",
         "label": "Sentinel",
         "names": ["_Type_Sentinel5"],
-        "shared": true
+        "shared": true,
+        "tile": ["_Type_Sentinel5"]
       },
       {
         "id": "Type_White5",
         "label": "White",
         "names": ["_Type_White5"],
-        "shared": true
+        "shared": true,
+        "tile": ["_Type_White5"]
       }
     ],
     "requires": {
@@ -1175,19 +1308,22 @@
         "id": "Type_White6",
         "label": "White",
         "names": ["_Type_White6"],
-        "shared": true
+        "shared": true,
+        "tile": ["_Type_White6"]
       },
       {
         "id": "Type_Sentinel6",
         "label": "Sentinel",
         "names": ["_Type_Sentinel6"],
-        "shared": true
+        "shared": true,
+        "tile": ["_Type_Sentinel6"]
       },
       {
         "id": "Type_Black6",
         "label": "Black",
         "names": ["_Type_Black6"],
-        "shared": true
+        "shared": true,
+        "tile": ["_Type_Black6"]
       }
     ],
     "requires": {
@@ -1202,22 +1338,26 @@
       {
         "id": "NWBot_Full",
         "label": "Long",
-        "names": ["_NWBot_Full"]
+        "names": ["_NWBot_Full"],
+        "tile": ["_NWBot_Full"]
       },
       {
         "id": "NWBot_Half",
         "label": "Short",
-        "names": ["_NWBot_Half"]
+        "names": ["_NWBot_Half"],
+        "tile": ["_NWBot_Half"]
       },
       {
         "id": "Carriage_FullBot",
         "label": "Long, plated",
-        "names": ["_Carriage_FullBot"]
+        "names": ["_Carriage_FullBot"],
+        "tile": ["_Carriage_FullBot"]
       },
       {
         "id": "Carriage_HalfBot",
         "label": "Short, plated",
-        "names": ["_Carriage_HalfBot"]
+        "names": ["_Carriage_HalfBot"],
+        "tile": ["_Carriage_HalfBot"]
       }
     ],
     "requires": {
@@ -1230,16 +1370,18 @@
     "id": "ExtensionsBot_NULL",
     "options": [
       {
-        "empty": true,
-        "id": "ExtensionsBot_NULL",
-        "label": "None",
-        "names": ["_ExtensionsBot_NULL"]
-      },
-      {
         "id": "ExtensionsBot_A",
         "label": "With",
         "names": ["_ExtensionsBot_A"],
-        "shared": true
+        "shared": true,
+        "tile": ["_ExtensionsBot_A"]
+      },
+      {
+        "empty": true,
+        "id": "ExtensionsBot_NULL",
+        "label": "None",
+        "names": ["_ExtensionsBot_NULL"],
+        "tile": []
       }
     ],
     "requires": {
@@ -1255,19 +1397,22 @@
         "id": "Type_White6b",
         "label": "White",
         "names": ["_Type_White6b"],
-        "shared": true
+        "shared": true,
+        "tile": ["_Type_White6b"]
       },
       {
         "id": "Type_Sentinel6b",
         "label": "Sentinel",
         "names": ["_Type_Sentinel6b"],
-        "shared": true
+        "shared": true,
+        "tile": ["_Type_Sentinel6b"]
       },
       {
         "id": "Type_Black6b",
         "label": "Black",
         "names": ["_Type_Black6b"],
-        "shared": true
+        "shared": true,
+        "tile": ["_Type_Black6b"]
       }
     ],
     "requires": {
@@ -1280,16 +1425,18 @@
     "id": "ExtensionsBot_NULL1",
     "options": [
       {
-        "empty": true,
-        "id": "ExtensionsBot_NULL1",
-        "label": "None",
-        "names": ["_ExtensionsBot_NULL1"]
-      },
-      {
         "id": "ExtensionsBot_A1",
         "label": "With",
         "names": ["_ExtensionsBot_A1"],
-        "shared": true
+        "shared": true,
+        "tile": ["_ExtensionsBot_A1"]
+      },
+      {
+        "empty": true,
+        "id": "ExtensionsBot_NULL1",
+        "label": "None",
+        "names": ["_ExtensionsBot_NULL1"],
+        "tile": []
       }
     ],
     "requires": {
@@ -1305,19 +1452,22 @@
         "id": "Type_White6b1",
         "label": "White",
         "names": ["_Type_White6b1"],
-        "shared": true
+        "shared": true,
+        "tile": ["_Type_White6b1"]
       },
       {
         "id": "Type_Sentinel6b1",
         "label": "Sentinel",
         "names": ["_Type_Sentinel6b1"],
-        "shared": true
+        "shared": true,
+        "tile": ["_Type_Sentinel6b1"]
       },
       {
         "id": "Type_Black6b1",
         "label": "Black",
         "names": ["_Type_Black6b1"],
-        "shared": true
+        "shared": true,
+        "tile": ["_Type_Black6b1"]
       }
     ],
     "requires": {
@@ -1333,19 +1483,22 @@
         "id": "Type_White6b5",
         "label": "White",
         "names": ["_Type_White6b5"],
-        "shared": true
+        "shared": true,
+        "tile": ["_Type_White6b5"]
       },
       {
         "id": "Type_Sentinel6b5",
         "label": "Sentinel",
         "names": ["_Type_Sentinel6b5"],
-        "shared": true
+        "shared": true,
+        "tile": ["_Type_Sentinel6b5"]
       },
       {
         "id": "Type_Black6b5",
         "label": "Black",
         "names": ["_Type_Black6b5"],
-        "shared": true
+        "shared": true,
+        "tile": ["_Type_Black6b5"]
       }
     ],
     "requires": {
@@ -1361,19 +1514,22 @@
         "id": "Type_White6b15",
         "label": "White",
         "names": ["_Type_White6b15"],
-        "shared": true
+        "shared": true,
+        "tile": ["_Type_White6b15"]
       },
       {
         "id": "Type_Sentinel6b15",
         "label": "Sentinel",
         "names": ["_Type_Sentinel6b15"],
-        "shared": true
+        "shared": true,
+        "tile": ["_Type_Sentinel6b15"]
       },
       {
         "id": "Type_Black6b15",
         "label": "Black",
         "names": ["_Type_Black6b15"],
-        "shared": true
+        "shared": true,
+        "tile": ["_Type_Black6b15"]
       }
     ],
     "requires": {
@@ -1389,27 +1545,32 @@
         "id": "NWTop_Flip",
         "label": "Rings",
         "names": ["_NWTop_Flip"],
-        "shared": true
+        "shared": true,
+        "tile": ["_NWTop_Flip", "_Var_Aa"]
       },
       {
         "id": "NWTop_Full",
         "label": "Long",
-        "names": ["_NWTop_Full"]
+        "names": ["_NWTop_Full"],
+        "tile": ["_NWTop_Full"]
       },
       {
         "id": "NWTop_Half",
         "label": "Short",
-        "names": ["_NWTop_Half"]
+        "names": ["_NWTop_Half"],
+        "tile": ["_NWTop_Half"]
       },
       {
         "id": "Carriage_Full",
         "label": "Long, plated",
-        "names": ["_Carriage_Full"]
+        "names": ["_Carriage_Full"],
+        "tile": ["_Carriage_Full"]
       },
       {
         "id": "Carriage_Half",
         "label": "Short, plated",
-        "names": ["_Carriage_Half"]
+        "names": ["_Carriage_Half"],
+        "tile": ["_Carriage_Half"]
       }
     ],
     "requires": {
@@ -1422,15 +1583,17 @@
     "id": "extrawings_NULLzz",
     "options": [
       {
+        "id": "extrawings_tops4zz",
+        "label": "With",
+        "names": ["_extrawings_tops4zz"],
+        "tile": ["_extrawings_tops4zz"]
+      },
+      {
         "empty": true,
         "id": "extrawings_NULLzz",
         "label": "None",
-        "names": ["_extrawings_NULLzz"]
-      },
-      {
-        "id": "extrawings_tops4zz",
-        "label": "With",
-        "names": ["_extrawings_tops4zz"]
+        "names": ["_extrawings_NULLzz"],
+        "tile": []
       }
     ],
     "requires": {
@@ -1445,17 +1608,20 @@
       {
         "id": "Type_Black1qz",
         "label": "Black",
-        "names": ["_Type_Black1qz"]
+        "names": ["_Type_Black1qz"],
+        "tile": ["_Type_Black1qz"]
       },
       {
         "id": "Type_White1qz",
         "label": "White",
-        "names": ["_Type_White1qz"]
+        "names": ["_Type_White1qz"],
+        "tile": ["_Type_White1qz"]
       },
       {
         "id": "Type_Sentinel1qz",
         "label": "Sentinel",
-        "names": ["_Type_Sentinel1qz"]
+        "names": ["_Type_Sentinel1qz"],
+        "tile": ["_Type_Sentinel1qz"]
       }
     ],
     "requires": {
@@ -1468,16 +1634,18 @@
     "id": "ExtensionsTop_NULL",
     "options": [
       {
-        "empty": true,
-        "id": "ExtensionsTop_NULL",
-        "label": "None",
-        "names": ["_ExtensionsTop_NULL"]
-      },
-      {
         "id": "ExtensionsTop_A",
         "label": "With",
         "names": ["_ExtensionsTop_A"],
-        "shared": true
+        "shared": true,
+        "tile": ["_ExtensionsTop_A"]
+      },
+      {
+        "empty": true,
+        "id": "ExtensionsTop_NULL",
+        "label": "None",
+        "names": ["_ExtensionsTop_NULL"],
+        "tile": []
       }
     ],
     "requires": {
@@ -1493,19 +1661,22 @@
         "id": "Type_Sentinel4eb",
         "label": "Sentinel",
         "names": ["_Type_Sentinel4eb"],
-        "shared": true
+        "shared": true,
+        "tile": ["_Type_Sentinel4eb"]
       },
       {
         "id": "Type_White4eb",
         "label": "White",
         "names": ["_Type_White4eb"],
-        "shared": true
+        "shared": true,
+        "tile": ["_Type_White4eb"]
       },
       {
         "id": "Type_Black4eb",
         "label": "Black",
         "names": ["_Type_Black4eb"],
-        "shared": true
+        "shared": true,
+        "tile": ["_Type_Black4eb"]
       }
     ],
     "requires": {
@@ -1521,13 +1692,15 @@
         "id": "ants_14b",
         "label": "With",
         "names": ["_ants_14b"],
-        "shared": true
+        "shared": true,
+        "tile": ["_ants_14b"]
       },
       {
         "empty": true,
         "id": "ants_15b",
         "label": "None",
-        "names": ["_ants_15b"]
+        "names": ["_ants_15b"],
+        "tile": []
       }
     ],
     "requires": {
@@ -1540,16 +1713,18 @@
     "id": "ExtensionsTop_NULL1",
     "options": [
       {
-        "empty": true,
-        "id": "ExtensionsTop_NULL1",
-        "label": "None",
-        "names": ["_ExtensionsTop_NULL1"]
-      },
-      {
         "id": "ExtensionsTop_A1",
         "label": "With",
         "names": ["_ExtensionsTop_A1"],
-        "shared": true
+        "shared": true,
+        "tile": ["_ExtensionsTop_A1"]
+      },
+      {
+        "empty": true,
+        "id": "ExtensionsTop_NULL1",
+        "label": "None",
+        "names": ["_ExtensionsTop_NULL1"],
+        "tile": []
       }
     ],
     "requires": {
@@ -1565,19 +1740,22 @@
         "id": "Type_Sentinel4eb1",
         "label": "Sentinel",
         "names": ["_Type_Sentinel4eb1"],
-        "shared": true
+        "shared": true,
+        "tile": ["_Type_Sentinel4eb1"]
       },
       {
         "id": "Type_White4eb1",
         "label": "White",
         "names": ["_Type_White4eb1"],
-        "shared": true
+        "shared": true,
+        "tile": ["_Type_White4eb1"]
       },
       {
         "id": "Type_Black4eb1",
         "label": "Black",
         "names": ["_Type_Black4eb1"],
-        "shared": true
+        "shared": true,
+        "tile": ["_Type_Black4eb1"]
       }
     ],
     "requires": {
@@ -1593,13 +1771,15 @@
         "id": "ants_14b1",
         "label": "With",
         "names": ["_ants_14b1"],
-        "shared": true
+        "shared": true,
+        "tile": ["_ants_14b1"]
       },
       {
         "empty": true,
         "id": "ants_15b1",
         "label": "None",
-        "names": ["_ants_15b1"]
+        "names": ["_ants_15b1"],
+        "tile": []
       }
     ],
     "requires": {
@@ -1615,19 +1795,22 @@
         "id": "Type_Sentinel4eb2",
         "label": "Sentinel",
         "names": ["_Type_Sentinel4eb2"],
-        "shared": true
+        "shared": true,
+        "tile": ["_Type_Sentinel4eb2"]
       },
       {
         "id": "Type_White4eb2",
         "label": "White",
         "names": ["_Type_White4eb2"],
-        "shared": true
+        "shared": true,
+        "tile": ["_Type_White4eb2"]
       },
       {
         "id": "Type_Black4eb2",
         "label": "Black",
         "names": ["_Type_Black4eb2"],
-        "shared": true
+        "shared": true,
+        "tile": ["_Type_Black4eb2"]
       }
     ],
     "requires": {
@@ -1643,13 +1826,15 @@
         "id": "ants_14b2",
         "label": "With",
         "names": ["_ants_14b2"],
-        "shared": true
+        "shared": true,
+        "tile": ["_ants_14b2"]
       },
       {
         "empty": true,
         "id": "ants_15b2",
         "label": "None",
-        "names": ["_ants_15b2"]
+        "names": ["_ants_15b2"],
+        "tile": []
       }
     ],
     "requires": {
@@ -1665,19 +1850,22 @@
         "id": "Type_Sentinel4eb11",
         "label": "Sentinel",
         "names": ["_Type_Sentinel4eb11"],
-        "shared": true
+        "shared": true,
+        "tile": ["_Type_Sentinel4eb11"]
       },
       {
         "id": "Type_White4eb11",
         "label": "White",
         "names": ["_Type_White4eb11"],
-        "shared": true
+        "shared": true,
+        "tile": ["_Type_White4eb11"]
       },
       {
         "id": "Type_Black4eb11",
         "label": "Black",
         "names": ["_Type_Black4eb11"],
-        "shared": true
+        "shared": true,
+        "tile": ["_Type_Black4eb11"]
       }
     ],
     "requires": {
@@ -1693,13 +1881,15 @@
         "id": "ants_14b11",
         "label": "With",
         "names": ["_ants_14b11"],
-        "shared": true
+        "shared": true,
+        "tile": ["_ants_14b11"]
       },
       {
         "empty": true,
         "id": "ants_15b11",
         "label": "None",
-        "names": ["_ants_15b11"]
+        "names": ["_ants_15b11"],
+        "tile": []
       }
     ],
     "requires": {
@@ -1713,32 +1903,35 @@
     "options": [
       {
         "id": "Skirt_A",
-        "label": "Plated",
-        "names": ["_Skirt_A"]
+        "label": "With",
+        "names": ["_Skirt_A"],
+        "tile": ["_Skirt_A", "_EngineFlame_1"]
       },
       {
         "id": "Skirt_B",
-        "label": "Frame",
+        "label": "Without",
         "names": ["_Skirt_B"],
-        "vanishes": true
+        "tile": ["_Skirt_B"]
       }
     ],
-    "title": "Hull"
+    "title": "Hull plates"
   },
   {
     "id": "sideEngines_NULL",
     "options": [
       {
-        "empty": true,
-        "id": "sideEngines_NULL",
-        "label": "Without",
-        "names": ["_sideEngines_NULL"]
-      },
-      {
         "id": "sideEngines_A2",
         "label": "With",
         "names": ["_sideEngines_A2"],
-        "shared": true
+        "shared": true,
+        "tile": ["_sideEngines_A2"]
+      },
+      {
+        "empty": true,
+        "id": "sideEngines_NULL",
+        "label": "Without",
+        "names": ["_sideEngines_NULL"],
+        "tile": []
       }
     ],
     "requires": {
@@ -1751,15 +1944,17 @@
     "id": "Underwing_NULL",
     "options": [
       {
+        "id": "Underwing_A",
+        "label": "With",
+        "names": ["_Underwing_A"],
+        "tile": ["_Underwing_A"]
+      },
+      {
         "empty": true,
         "id": "Underwing_NULL",
         "label": "None",
-        "names": ["_Underwing_NULL"]
-      },
-      {
-        "id": "Underwing_A",
-        "label": "With",
-        "names": ["_Underwing_A"]
+        "names": ["_Underwing_NULL"],
+        "tile": []
       }
     ],
     "requires": {
@@ -1772,22 +1967,25 @@
     "id": "asides_A2",
     "options": [
       {
-        "empty": true,
-        "id": "asides_A2",
-        "label": "None",
-        "names": ["_asides_A2"]
-      },
-      {
         "id": "asides_A4",
         "label": "Variant 1",
         "names": ["_asides_A4"],
-        "shared": true
+        "shared": true,
+        "tile": ["_asides_A4"]
       },
       {
         "id": "asides_Ae",
         "label": "Variant 2",
         "names": ["_asides_Ae"],
-        "shared": true
+        "shared": true,
+        "tile": ["_asides_Ae"]
+      },
+      {
+        "empty": true,
+        "id": "asides_A2",
+        "label": "None",
+        "names": ["_asides_A2"],
+        "tile": []
       }
     ],
     "requires": {
@@ -1800,15 +1998,17 @@
     "id": "aFront_snout1",
     "options": [
       {
+        "id": "aFront_snout2",
+        "label": "Wedge",
+        "names": ["_aFront_snout2"],
+        "tile": ["_aFront_snout2"]
+      },
+      {
         "empty": true,
         "id": "aFront_snout1",
         "label": "Plain",
-        "names": ["_aFront_snout1"]
-      },
-      {
-        "id": "aFront_snout2",
-        "label": "Wedge",
-        "names": ["_aFront_snout2"]
+        "names": ["_aFront_snout1"],
+        "tile": []
       }
     ],
     "requires": {
@@ -1821,50 +2021,59 @@
     "id": "grill_NULL1",
     "options": [
       {
-        "empty": true,
-        "id": "grill_NULL1",
-        "label": "None",
-        "names": ["_grill_NULL1"]
-      },
-      {
         "id": "grill_snout10s3",
         "label": "Variant 1",
-        "names": ["_grill_snout10s3"]
+        "names": ["_grill_snout10s3"],
+        "tile": ["_grill_snout10s3"]
       },
       {
         "id": "grill_snout3",
         "label": "Variant 2",
-        "names": ["_grill_snout3"]
+        "names": ["_grill_snout3"],
+        "tile": ["_grill_snout3"]
       },
       {
         "id": "grill_snout11",
         "label": "Variant 3",
-        "names": ["_grill_snout11"]
+        "names": ["_grill_snout11"],
+        "tile": ["_grill_snout11"]
       },
       {
         "id": "grill_snout10s6",
         "label": "Variant 4",
-        "names": ["_grill_snout10s6"]
+        "names": ["_grill_snout10s6"],
+        "tile": ["_grill_snout10s6"]
       },
       {
         "id": "Teeth_A",
         "label": "Teeth 1",
-        "names": ["_Teeth_A"]
+        "names": ["_Teeth_A"],
+        "tile": ["_Teeth_A"]
       },
       {
         "id": "Teeth_B",
         "label": "Teeth 2",
-        "names": ["_Teeth_B"]
+        "names": ["_Teeth_B"],
+        "tile": ["_Teeth_B"]
       },
       {
         "id": "Teeth_C",
         "label": "Teeth 3",
-        "names": ["_Teeth_C"]
+        "names": ["_Teeth_C"],
+        "tile": ["_Teeth_C"]
       },
       {
         "id": "Teeth_D",
         "label": "Teeth 4",
-        "names": ["_Teeth_D"]
+        "names": ["_Teeth_D"],
+        "tile": ["_Teeth_D"]
+      },
+      {
+        "empty": true,
+        "id": "grill_NULL1",
+        "label": "None",
+        "names": ["_grill_NULL1"],
+        "tile": []
       }
     ],
     "requires": {
@@ -1877,21 +2086,24 @@
     "id": "aAltSkirt_Null",
     "options": [
       {
-        "empty": true,
-        "id": "aAltSkirt_Null",
-        "label": "None",
-        "names": ["_aAltSkirt_Null"]
-      },
-      {
         "id": "Var_A7",
         "label": "Black",
         "names": ["_Var_A7"],
-        "shared": true
+        "shared": true,
+        "tile": ["_Var_A7"]
       },
       {
         "id": "Var_A8",
         "label": "Light",
-        "names": ["_Var_A8"]
+        "names": ["_Var_A8"],
+        "tile": ["_Var_A8"]
+      },
+      {
+        "empty": true,
+        "id": "aAltSkirt_Null",
+        "label": "None",
+        "names": ["_aAltSkirt_Null"],
+        "tile": []
       }
     ],
     "requires": {
@@ -1904,15 +2116,17 @@
     "id": "aEndWings_NULL",
     "options": [
       {
+        "id": "aEndWings_Ant",
+        "label": "With",
+        "names": ["_aEndWings_Ant"],
+        "tile": ["_aEndWings_Ant"]
+      },
+      {
         "empty": true,
         "id": "aEndWings_NULL",
         "label": "None",
-        "names": ["_aEndWings_NULL"]
-      },
-      {
-        "id": "aEndWings_Ant",
-        "label": "With",
-        "names": ["_aEndWings_Ant"]
+        "names": ["_aEndWings_NULL"],
+        "tile": []
       }
     ],
     "requires": {
@@ -1927,42 +2141,50 @@
       {
         "id": "askirting_A6",
         "label": "Box, black",
-        "names": ["_askirting_A6"]
+        "names": ["_askirting_A6"],
+        "tile": ["_askirting_A6"]
       },
       {
         "id": "askirting_A1s6",
         "label": "Long, black",
-        "names": ["_askirting_A1s6"]
+        "names": ["_askirting_A1s6"],
+        "tile": ["_askirting_A1s6"]
       },
       {
         "id": "askirting_A1s3",
         "label": "Thin, black",
-        "names": ["_askirting_A1s3"]
+        "names": ["_askirting_A1s3"],
+        "tile": ["_askirting_A1s3"]
       },
       {
         "id": "askirting_A1s",
         "label": "Broad, black",
-        "names": ["_askirting_A1s"]
+        "names": ["_askirting_A1s"],
+        "tile": ["_askirting_A1s"]
       },
       {
         "id": "askirting_A8",
         "label": "Box, light",
-        "names": ["_askirting_A8"]
+        "names": ["_askirting_A8"],
+        "tile": ["_askirting_A8"]
       },
       {
         "id": "askirting_A1s10",
         "label": "Long, light",
-        "names": ["_askirting_A1s10"]
+        "names": ["_askirting_A1s10"],
+        "tile": ["_askirting_A1s10"]
       },
       {
         "id": "askirting_A1s11",
         "label": "Thin, light",
-        "names": ["_askirting_A1s11"]
+        "names": ["_askirting_A1s11"],
+        "tile": ["_askirting_A1s11"]
       },
       {
         "id": "askirting_A1s12",
         "label": "Broad, light",
-        "names": ["_askirting_A1s12"]
+        "names": ["_askirting_A1s12"],
+        "tile": ["_askirting_A1s12"]
       }
     ],
     "requires": {
@@ -1975,16 +2197,18 @@
     "id": "AltSkirting_NULL",
     "options": [
       {
-        "empty": true,
-        "id": "AltSkirting_NULL",
-        "label": "None",
-        "names": ["_AltSkirting_NULL", "_SkirtWings_NULL"]
-      },
-      {
         "id": "AltSkirting_A",
         "label": "Black",
         "names": ["_AltSkirting_A"],
-        "shared": true
+        "shared": true,
+        "tile": ["_AltSkirting_A"]
+      },
+      {
+        "empty": true,
+        "id": "AltSkirting_NULL",
+        "label": "None",
+        "names": ["_AltSkirting_NULL", "_SkirtWings_NULL"],
+        "tile": []
       }
     ],
     "requires": {
@@ -1997,50 +2221,59 @@
     "id": "askirting_NULL3",
     "options": [
       {
-        "empty": true,
-        "id": "askirting_NULL3",
-        "label": "None",
-        "names": ["_askirting_NULL3", "_SkirtWings_NULL"]
-      },
-      {
         "id": "askirting_A7",
         "label": "Box, black",
-        "names": ["_askirting_A7"]
+        "names": ["_askirting_A7"],
+        "tile": ["_askirting_A7"]
       },
       {
         "id": "askirting_A1s7",
         "label": "Long, black",
-        "names": ["_askirting_A1s7"]
+        "names": ["_askirting_A1s7"],
+        "tile": ["_askirting_A1s7"]
       },
       {
         "id": "askirting_A1s8",
         "label": "Thin, black",
-        "names": ["_askirting_A1s8"]
+        "names": ["_askirting_A1s8"],
+        "tile": ["_askirting_A1s8"]
       },
       {
         "id": "askirting_A1s9",
         "label": "Broad, black",
-        "names": ["_askirting_A1s9"]
+        "names": ["_askirting_A1s9"],
+        "tile": ["_askirting_A1s9"]
       },
       {
         "id": "askirting_A9",
         "label": "Box, light",
-        "names": ["_askirting_A9"]
+        "names": ["_askirting_A9"],
+        "tile": ["_askirting_A9"]
       },
       {
         "id": "askirting_A1s13",
         "label": "Long, light",
-        "names": ["_askirting_A1s13"]
+        "names": ["_askirting_A1s13"],
+        "tile": ["_askirting_A1s13"]
       },
       {
         "id": "askirting_A1s14",
         "label": "Thin, light",
-        "names": ["_askirting_A1s14"]
+        "names": ["_askirting_A1s14"],
+        "tile": ["_askirting_A1s14"]
       },
       {
         "id": "askirting_A1s15",
         "label": "Broad, light",
-        "names": ["_askirting_A1s15"]
+        "names": ["_askirting_A1s15"],
+        "tile": ["_askirting_A1s15"]
+      },
+      {
+        "empty": true,
+        "id": "askirting_NULL3",
+        "label": "None",
+        "names": ["_askirting_NULL3", "_SkirtWings_NULL"],
+        "tile": []
       }
     ],
     "requires": {
@@ -2053,15 +2286,17 @@
     "id": "Engine_NULL2",
     "options": [
       {
+        "id": "Engine_A",
+        "label": "With",
+        "names": ["_Engine_A"],
+        "tile": ["_Engine_A"]
+      },
+      {
         "empty": true,
         "id": "Engine_NULL2",
         "label": "Without",
-        "names": ["_Engine_NULL2"]
-      },
-      {
-        "id": "Engine_A",
-        "label": "With",
-        "names": ["_Engine_A"]
+        "names": ["_Engine_NULL2"],
+        "tile": []
       }
     ],
     "requires": {
@@ -2074,15 +2309,17 @@
     "id": "BodyA_Null",
     "options": [
       {
+        "id": "BodyA_1n",
+        "label": "With",
+        "names": ["_BodyA_1n"],
+        "tile": ["_BodyA_1n", "_EngineFlame_1b"]
+      },
+      {
         "empty": true,
         "id": "BodyA_Null",
         "label": "Without",
-        "names": ["_BodyA_Null"]
-      },
-      {
-        "id": "BodyA_1n",
-        "label": "With",
-        "names": ["_BodyA_1n"]
+        "names": ["_BodyA_Null"],
+        "tile": []
       }
     ],
     "requires": {
@@ -2095,22 +2332,25 @@
     "id": "asides_A5",
     "options": [
       {
-        "empty": true,
-        "id": "asides_A5",
-        "label": "None",
-        "names": ["_asides_A5"]
-      },
-      {
         "id": "asides_A6",
         "label": "Variant 1",
         "names": ["_asides_A6"],
-        "shared": true
+        "shared": true,
+        "tile": ["_asides_A6"]
       },
       {
         "id": "asides_Ae1",
         "label": "Variant 2",
         "names": ["_asides_Ae1"],
-        "shared": true
+        "shared": true,
+        "tile": ["_asides_Ae1"]
+      },
+      {
+        "empty": true,
+        "id": "asides_A5",
+        "label": "None",
+        "names": ["_asides_A5"],
+        "tile": []
       }
     ],
     "requires": {
@@ -2123,16 +2363,18 @@
     "id": "sideEngines_NULL1",
     "options": [
       {
-        "empty": true,
-        "id": "sideEngines_NULL1",
-        "label": "Without",
-        "names": ["_sideEngines_NULL1"]
-      },
-      {
         "id": "sideEngines_A3",
         "label": "With",
         "names": ["_sideEngines_A3"],
-        "shared": true
+        "shared": true,
+        "tile": ["_sideEngines_A3"]
+      },
+      {
+        "empty": true,
+        "id": "sideEngines_NULL1",
+        "label": "Without",
+        "names": ["_sideEngines_NULL1"],
+        "tile": []
       }
     ],
     "requires": {

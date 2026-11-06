@@ -241,6 +241,20 @@ isOneToOne: true
       referencedColumns: ["id"]
     }
                   ]
+                },"search_requests": {
+                  Row: {
+                    "choice": NonNullable<Json>,"created_at": string,"form_key": string | null,"id": string,"kind": string,"paint": NonNullable<Json>,"user_id": string
+                  }
+                  ComputedFields: never
+                  Insert: {
+                    "choice": NonNullable<Json>,"created_at"?: string,"form_key"?: never,"id"?: string,"kind": string,"paint": NonNullable<Json>,"user_id": string
+                  }
+                  Update: {
+                    "choice"?: NonNullable<Json>,"created_at"?: string,"form_key"?: never,"id"?: string,"kind"?: string,"paint"?: NonNullable<Json>,"user_id"?: string
+                  }
+                  Relationships: [
+                    
+                  ]
                 },"ships": {
                   Row: {
                     "base_agile": number | null,"base_damage": number | null,"base_hyperdrive": number | null,"base_shield": number | null,"class": string,"hull": string,"id": string,"model_draw_1": number | null,"model_draw_2": number | null,"natural_supercharged": Json | null,"supercharged": NonNullable<Json>,"verified": boolean

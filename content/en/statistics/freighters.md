@@ -12,17 +12,7 @@ Everything else follows the class, and a freighter keeps its class for good: no 
 
 <!-- widget:limits -->
 
-So a small regular class C freighter and a giant capital class C both stop at 60 slots and 30 for technology, and only a class S of either kind reaches 120 and 60. The hyperdrive and fleet bonus come from the class too, and every freighter holds 6 ships in its hangar. If you want the most a freighter can do, you want class S; if you want the giant, you want a capital one.
-
-## Can you buy a class S?
-
-Yes, a regular one. A system has three regular freighter hulls, and its fleets fly those.<!-- freighter-finder --> The [freighter finder](/freighter-finder) shows every shape a regular freighter can take.<!-- /freighter-finder --> Each freighter's class is rolled from the [wealth](/guides/economy) of the system every time a fleet arrives: class S is {{pirateS}} of them in a pirate system, {{highS}} at high wealth, {{mediumS}} at medium, and never at low. So a fleet is not the same on every visit, and coming back to one system shows new classes.
-
-The price grows with the slots and the class. The game starts at 5 million units for 15 slots, multiplies by the slots over 15 to the power 3.52, and adds 40% for class B, 60% for A, and 100% for S. A small class S costs {{smallS}} million units, a large one {{largeS}} million.
-
-<!-- widget:prices -->
-
-A capital freighter is never for sale in a fleet. It comes only from a battle, for free while you own no freighter, and you can try again from a save. So unless you want the look of a regular one, farm the battle.
+So a small regular class C freighter and a giant capital class C both stop at {{generalC}} slots and {{techC}} for technology, and only a class S of either kind reaches {{generalS}} and {{techS}}. The hyperdrive and fleet bonus come from the class too, and every freighter holds 6 ships in its hangar. If you want the most a freighter can do, you want class S; if you want the giant, you want a capital one.
 
 ## The battle on arrival
 
@@ -32,31 +22,11 @@ Who attacks depends on you and on the system. Without a freighter of your own th
 
 <!-- widget:battles -->
 
-Your first two battles save a regular freighter. From the third on, the freighter you save is a capital one. Owning a freighter in a pirate system skips that rule: even the first battle there is a dreadnought.
+Your first two battles save a regular freighter. From the third on, the freighter you save is a capital one. A battle counts the moment it starts: win it and turn the freighter down, and it is still one of your two, and so is a dreadnought battle. Owning a freighter in a pirate system skips that rule: even the first battle there is a dreadnought.
 
 ## One ship, many classes
 
-A system holds one capital freighter: every battle there saves the same ship, the same shape and the same size. Only its class is rolled again on every try, from a number the game hands the ship as it appears, not from the system. No one can tell the class before the battle. So find a shape you like<!-- capital-freighter-finder --> with the [capital freighter finder](/capital-freighter-finder)<!-- /capital-freighter-finder -->, save the game in a neighbouring system with the battle due, warp in, and load that save again until the ship comes at S.
-
-## Supercharged slots
-
-A freighter's supercharged slots lie in its technology inventory. The class sets how many: one at C, up to four at S.
-
-<!-- widget:supercharged -->
-
-They all lie in the top three rows of the technology inventory, and where they lie belongs to the ship, not to the try. Every try at a system's capital freighter puts them in the same places: class C shows the first of four places, B the first two, A the first three, and S all four. A regular freighter keeps its places the same way, each of the three hulls of a system its own.
-
-The places never move. A Cargo Bulkhead opens a slot but does not move a supercharged one, and since the class never changes, neither does the count. A supercharged slot can lie in a slot that is still closed; it works once a Cargo Bulkhead opens it.
-
-## Upgrade modules
-
-No merchant sells a freighter upgrade module. Three things give one, and which of them sets the class:
-
-- **A destroyed pirate dreadnought** gives one at class S, and now and then a starship reactor instead.
-- **The Hive of Glass,** the boss of the Swarm expedition, gave one at class S too; it fought only in that expedition, which has ended.
-- **A derelict freighter** gives one of any class: C 55 times in 100, B 25, A 15, and S 5, or now and then a starship reactor. A merchant behind the galactic trade terminal of a station sells the place of one, 5,000,000 units the first time and 10,000,000 the second. Walk it to the end, and at the engineering control panel pick Fabricate Items, then Fabricate Technology Upgrade.
-
-What each module raises at each class is on [freighter technology](/guides/freighter-technology), and how to farm the class S ones from dreadnoughts on [freighter modules](/guides/freighter-modules).
+A system holds one capital freighter: every battle there saves the same ship, the same shape and the same size. Only its class is rolled again on every try, from a number the game hands the ship as it appears, not from the system. No one can tell the class before the battle. So find a shape you like<!-- capital-freighter-finder --> with the [capital freighters page](/capital-freighter-finder)<!-- /capital-freighter-finder -->, save the game in a neighbouring system with the battle due, warp in, and load that save again until the ship comes at S.
 
 ## Wealth and class
 
@@ -67,5 +37,29 @@ In a pirate system a try comes at S {{pirateS}} of the time and at C {{pirateC}}
 <!-- widget:tries -->
 
 A high wealth system gives S only {{highS}} of the time, so half the players need {{highHalf}} tries, and a low wealth system never gives S. So fly to a pirate system first: about {{pirateOneIn}} systems is one, marked with a skull on the galaxy map.
+
+## Can you buy a class S?
+
+Yes, a regular one. A system has three regular freighters of its own, and its fleets fly those three.<!-- freighter-finder --> The [regular freighters](/freighter-finder) page shows every shape a regular freighter can take.<!-- /freighter-finder --> Each freighter's class is rolled from the [wealth](/guides/economy) of the system every time a fleet arrives: class S is {{pirateS}} of them in a pirate system, {{highS}} at high wealth, {{mediumS}} at medium, and never at low. So a fleet is not the same on every visit, and coming back to one system shows new classes.
+
+The price grows with the slots and the class. The game starts at {{costBase}} million units for {{costSlots}} slots, multiplies by the slots over {{costSlots}} to the power {{costPower}}, and adds {{bonusB}} for class B, {{bonusA}} for A, and {{bonusS}} for S. A small class S costs {{smallS}} million units, a large one {{largeS}} million.
+
+<!-- widget:prices -->
+
+A capital freighter is never for sale in a fleet. It comes only from a battle, for free while you own no freighter, and you can try again from a save. So unless you want the look of a regular one, farm the battle.
+
+## Supercharged slots
+
+A freighter's supercharged slots lie in its technology inventory. The class sets how many: one at C, up to four at S.
+
+<!-- widget:supercharged -->
+
+They all lie in the top three rows of the technology inventory, and where they lie belongs to the ship, not to the try. Every try at a system's capital freighter puts them in the same places: class C shows the first of four places, B the first two, A the first three, and S all four. A regular freighter keeps its places the same way, each of the three of a system its own.
+
+The places never move. A Cargo Bulkhead opens a slot but does not move a supercharged one, and since the class never changes, neither does the count. A supercharged slot can lie in a slot that is still closed; it works once a Cargo Bulkhead opens it.
+
+## Upgrade modules
+
+No merchant sells a freighter upgrade module. A destroyed pirate dreadnought gives one at class S, and a derelict freighter one of any class. What each module raises, and every place that gives one, is on [freighter technology](/guides/freighter-technology); how to farm the class S ones from dreadnoughts is on [freighter modules](/guides/freighter-modules).
 
 Once you own a freighter, a pirate system brings another battle: [dreadnoughts](/guides/dreadnoughts).

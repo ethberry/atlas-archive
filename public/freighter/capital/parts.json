@@ -1,55 +1,80 @@
 {
   "width": 1200,
-  "height": 448,
+  "height": 440,
   "layers": {
-    "_Base_A": [108, 199, 186, 109],
-    "_Base_A2": [108, 199, 186, 109],
-    "_C2A_4": [496, 228, 150, 54],
-    "_C2B_4": [317, 248, 150, 53],
-    "_C2_3": [409, 133, 237, 123],
-    "_Cap_1": [517, 66, 242, 356],
-    "_Cap_2": [480, 7, 260, 313],
-    "_Cap_2._CLarge_B": [551, 179, 159, 40],
-    "_Cap_2._CLarge_B._Refs_A._Container_F": [519, 264, 222, 57],
-    "_Cap_2._CLarge_B._Refs_A._Container_H": [524, 260, 211, 65],
-    "_Cap_3": [695, 45, 236, 357],
-    "_Cap_4": [656, 34, 263, 267],
-    "_Cap_4._CLarge_B": [729, 159, 160, 40],
-    "_Cap_4._CLarge_B._Refs_A._Container_F": [697, 244, 222, 57],
-    "_Cap_4._CLarge_B._Refs_A._Container_H": [702, 241, 212, 64],
-    "_Cap_5": [872, 28, 240, 355],
-    "_CargoC1_B1": [104, 184, 286, 117],
-    "_CargoC1_B2": [309, 162, 287, 116],
-    "_CargoC1_B3": [515, 139, 287, 116],
-    "_CargoC2_B1": [205, 156, 288, 142],
-    "_CargoC2_B2": [412, 48, 286, 231],
-    "_CargoC2_B3": [618, 128, 286, 116],
-    "_CargoC_S1": [210, 44, 352, 397],
-    "_CargoC_S1._CLarge_B": [284, 199, 248, 49],
-    "_CargoC_S1._CLarge_B._Refs_A._Container_F": [252, 283, 311, 67],
-    "_CargoC_S1._CLarge_B._Refs_A._Container_H": [257, 280, 300, 75],
-    "_CargoEnd1_B1": [321, 124, 448, 250],
-    "_CargoEnd2_B1": [527, 99, 450, 252],
-    "_CargoEnd2_B2": [513, 140, 334, 105],
-    "_CargoEnd3_B1": [733, 73, 444, 256],
-    "_HA2B_1": [160, 84, 71, 44],
-    "_HA2B_2": [191, 70, 27, 59],
-    "_HullBBot_A2": [125, 277, 146, 116],
-    "_HullBBot_C1": [155, 268, 115, 56],
-    "_HullBBot_C2": [159, 248, 229, 127],
-    "_HullBTop_A2": [125, 119, 146, 112],
-    "_HullBTop_C2": [143, 180, 115, 57],
-    "_HullSide_C1": [22, 192, 296, 114],
-    "_HullTop_A": [145, 44, 115, 184],
-    "_HullTop_B": [145, 146, 95, 80],
-    "_Hull_A1": [275, 126, 88, 210],
-    "_JointPiece_A": [178, 138, 119, 225],
-    "_S1_AccB": [325, 322, 150, 53],
-    "_S4_AccB": [601, 291, 150, 54],
-    "_VertFinC1_A": [183, 306, 45, 128],
-    "_VerticalFinC_A": [167, 71, 49, 126],
-    "_VerticalFinC_B": [154, 138, 95, 60],
-    "_VerticalFinC_C": [167, 120, 36, 82]
+    "_Base_A": [106, 220, 110, 79],
+    "_Base_A._Hull_BLOD0": [116, 199, 170, 106],
+    "_Base_A2": [106, 220, 110, 79],
+    "_Base_A2._Hull_BLOD0": [116, 199, 170, 106],
+    "_C2A_4._CargoLarge_AccA": [482, 227, 146, 44],
+    "_C2A_4._CargoLarge_AccA._Container_B": [513, 233, 85, 46],
+    "_C2B_4._CargoLarge_AccA": [309, 246, 145, 44],
+    "_C2B_4._CargoLarge_AccA._Container_B": [339, 252, 86, 47],
+    "_C2_3": [398, 164, 224, 90],
+    "_C2_3._CargoLarge_AccA": [482, 143, 146, 44],
+    "_C2_3._CargoLarge_AccA._Container_B": [512, 135, 86, 46],
+    "_CLarge_JP": [173, 140, 116, 218],
+    "_Cap_1._LCap_B1": [502, 75, 239, 342],
+    "_Cap_2": [469, 12, 252, 305],
+    "_Cap_2._CLarge_B": [537, 180, 154, 38],
+    "_Cap_2._CLarge_B._Refs_A._Container_F": [505, 262, 216, 56],
+    "_Cap_2._CLarge_B._Refs_A._Container_H": [510, 259, 206, 63],
+    "_Cap_3._LCap_B1": [675, 56, 239, 344],
+    "_Cap_4": [640, 31, 254, 267],
+    "_Cap_4._CLarge_B": [710, 161, 154, 38],
+    "_Cap_4._CLarge_B._Refs_A._Container_F": [678, 243, 216, 56],
+    "_Cap_4._CLarge_B._Refs_A._Container_H": [683, 240, 206, 63],
+    "_Cap_5._LCap_B1": [848, 37, 238, 342],
+    "_CargoC1_B1": [254, 192, 66, 84],
+    "_CargoC1_B1._CB_A": [101, 185, 267, 113],
+    "_CargoC1_B1._CB_A._Refs_A._Container_B": [160, 189, 219, 98],
+    "_CargoC1_B2": [454, 169, 66, 85],
+    "_CargoC1_B2._CB_A": [301, 163, 267, 113],
+    "_CargoC1_B2._CB_A._Refs_A._Container_B": [360, 167, 219, 98],
+    "_CargoC1_B3": [654, 148, 66, 83],
+    "_CargoC1_B3._CB_A": [501, 141, 267, 113],
+    "_CargoC1_B3._CB_A._Refs_A._Container_B": [559, 145, 220, 98],
+    "_CargoC2_B1": [200, 128, 224, 186],
+    "_CargoC2_B1._CB_A": [201, 174, 267, 113],
+    "_CargoC2_B1._CB_A._Refs_A._Container_B": [260, 178, 219, 98],
+    "_CargoC2_B2": [513, 90, 106, 208],
+    "_CargoC2_B2._CB_A": [401, 152, 267, 113],
+    "_CargoC2_B2._CB_A._Refs_A._Container_B": [459, 156, 220, 98],
+    "_CargoC2_B3": [753, 137, 66, 83],
+    "_CargoC2_B3._CB_A": [600, 130, 267, 113],
+    "_CargoC2_B3._CB_A._Refs_A._Container_B": [659, 134, 220, 98],
+    "_CargoC_S1": [206, 53, 342, 378],
+    "_CargoC_S1._CLarge_B": [278, 199, 240, 48],
+    "_CargoC_S1._CLarge_B._Refs_A._Container_F": [246, 281, 302, 65],
+    "_CargoC_S1._CLarge_B._Refs_A._Container_F@1": [246, 300, 129, 46],
+    "_CargoC_S1._CLarge_B._Refs_A._Container_H": [251, 278, 292, 72],
+    "_CargoC_S1._CLarge_B._Refs_A._Container_H@1": [251, 297, 119, 53],
+    "_CargoC_S1._CLarge_B@1": [278, 218, 67, 29],
+    "_CargoC_S1@1": [206, 133, 169, 213],
+    "_CargoEnd1_B1._LargeCap_A": [312, 143, 467, 199],
+    "_CargoEnd2_B1._LargeCap_A": [513, 119, 465, 201],
+    "_CargoEnd2_B2": [498, 141, 325, 102],
+    "_CargoEnd3_B1._LargeCap_A": [712, 100, 465, 198],
+    "_HA2B_1": [156, 87, 69, 43],
+    "_HA2B_2": [186, 63, 27, 68],
+    "_HullBBot_A2._HullTop_ALOD0": [121, 274, 142, 113],
+    "_HullBBot_C1": [151, 265, 112, 56],
+    "_HullBBot_C2": [231, 358, 23, 15],
+    "_HullBTop_A2._HullTop_ALOD0": [121, 121, 142, 109],
+    "_HullBTop_C2": [139, 180, 112, 55],
+    "_HullBot_ALOD0": [155, 247, 222, 121],
+    "_HullTop_A": [141, 52, 112, 175],
+    "_HullTop_B": [141, 148, 92, 77],
+    "_HullWings_CLOD0": [20, 183, 289, 121],
+    "_Hull_A1": [254, 91, 73, 257],
+    "_S1_AccB._CargoLarge_AccA": [317, 318, 146, 44],
+    "_S1_AccB._CargoLarge_AccA._Container_B": [348, 325, 85, 46],
+    "_S4_AccB._CargoLarge_AccA": [585, 289, 145, 43],
+    "_S4_AccB._CargoLarge_AccA._Container_B": [615, 295, 86, 46],
+    "_VertFinC1_A": [175, 303, 46, 127],
+    "_VerticalFinC_A": [167, 82, 43, 115],
+    "_VerticalFinC_B": [150, 140, 92, 58],
+    "_VerticalFinC_C": [162, 113, 35, 89]
   },
   "tree": [
     [
@@ -66,10 +91,81 @@
                   {
                     "name": "_HullSide_C1",
                     "layer": "_HullSide_C1",
-                    "groups": []
+                    "groups": [
+                      [
+                        {
+                          "name": "_HullWings_CLOD0",
+                          "layer": "_HullWings_CLOD0",
+                          "groups": []
+                        }
+                      ]
+                    ]
                   }
                 ],
-                [{ "name": "_Base_A", "layer": "_Base_A", "groups": [] }],
+                [
+                  {
+                    "name": "_Base_A",
+                    "layer": "_Base_A",
+                    "groups": [
+                      [
+                        {
+                          "name": "_Hull_BLOD0",
+                          "layer": "_Base_A._Hull_BLOD0",
+                          "groups": [
+                            [
+                              {
+                                "name": "_logo1_A1",
+                                "layer": "_Base_A._Hull_BLOD0._logo1_A1",
+                                "decal": true,
+                                "groups": []
+                              }
+                            ],
+                            [
+                              {
+                                "name": "_Letter2_A2",
+                                "layer": "_Base_A._Hull_BLOD0._Letter2_A2",
+                                "decal": true,
+                                "groups": []
+                              }
+                            ],
+                            [
+                              {
+                                "name": "_logo2_A2",
+                                "layer": "_Base_A._Hull_BLOD0._logo2_A2",
+                                "decal": true,
+                                "groups": []
+                              }
+                            ],
+                            [
+                              {
+                                "name": "_Number2_A2",
+                                "layer": "_Base_A._Hull_BLOD0._Number2_A2",
+                                "decal": true,
+                                "groups": []
+                              }
+                            ],
+                            [
+                              {
+                                "name": "_Letter1_A1",
+                                "layer": "_Base_A._Hull_BLOD0._Letter1_A1",
+                                "decal": true,
+                                "groups": []
+                              }
+                            ],
+                            [
+                              {
+                                "name": "_Number1_A1",
+                                "layer": "_Base_A._Hull_BLOD0._Number1_A1",
+                                "decal": true,
+                                "groups": []
+                              }
+                            ]
+                          ]
+                        }
+                      ]
+                    ]
+                  }
+                ],
                 [
                   {
                     "name": "_HullBTop_C2",
@@ -135,14 +231,217 @@
                         {
                           "name": "_CargoC1_B1",
                           "layer": "_CargoC1_B1",
-                          "groups": []
+                          "groups": [
+                            [
+                              {
+                                "name": "_CB_A",
+                                "layer": "_CargoC1_B1._CB_A",
+                                "groups": [
+                                  [
+                                    {
+                                      "name": "_Refs_A",
+                                      "layer": "_CargoC1_B1._CB_A._Refs_A",
+                                      "groups": [
+                                        [
+                                          {
+                                            "name": "_Container_B",
+                                            "layer": "_CargoC1_B1._CB_A._Refs_A._Container_B",
+                                            "groups": []
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ],
+                                  [
+                                    {
+                                      "name": "_DA_1",
+                                      "layer": "_CargoC1_B1._CB_A._DA_1",
+                                      "decal": true,
+                                      "groups": [
+                                        [
+                                          {
+                                            "name": "_D5_SSign",
+                                            "layer": "_CargoC1_B1._CB_A._DA_1._D5_SSign",
+                                            "decal": true,
+                                            "groups": []
+                                          }
+                                        ],
+                                        [
+                                          {
+                                            "name": "_D4_Let",
+                                            "layer": "_CargoC1_B1._CB_A._DA_1._D4_Let",
+                                            "decal": true,
+                                            "groups": []
+                                          }
+                                        ],
+                                        [
+                                          {
+                                            "name": "_D6_SSign",
+                                            "layer": "_CargoC1_B1._CB_A._DA_1._D6_SSign",
+                                            "decal": true,
+                                            "groups": []
+                                          }
+                                        ],
+                                        [
+                                          {
+                                            "name": "_D2_Rect",
+                                            "layer": "_CargoC1_B1._CB_A._DA_1._D2_Rect",
+                                            "decal": true,
+                                            "groups": []
+                                          }
+                                        ],
+                                        [
+                                          {
+                                            "name": "_D3_Let",
+                                            "layer": "_CargoC1_B1._CB_A._DA_1._D3_Let",
+                                            "decal": true,
+                                            "groups": []
+                                          }
+                                        ],
+                                        [
+                                          {
+                                            "name": "_D1_Rect",
+                                            "layer": "_CargoC1_B1._CB_A._DA_1._D1_Rect",
+                                            "decal": true,
+                                            "groups": []
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ]
+                                ]
+                              }
+                            ]
+                          ]
                         }
                       ],
                       [
                         {
                           "name": "_CargoEnd1_B1",
                           "layer": "_CargoEnd1_B1",
-                          "groups": []
+                          "groups": [
+                            [
+                              {
+                                "name": "_LargeCap_A",
+                                "layer": "_CargoEnd1_B1._LargeCap_A",
+                                "groups": [
+                                  [
+                                    {
+                                      "name": "_DA_1",
+                                      "layer": "_CargoEnd1_B1._LargeCap_A._DA_1",
+                                      "decal": true,
+                                      "groups": [
+                                        [
+                                          {
+                                            "name": "_D10_Num",
+                                            "layer": "_CargoEnd1_B1._LargeCap_A._DA_1._D10_Num",
+                                            "decal": true,
+                                            "groups": []
+                                          }
+                                        ],
+                                        [
+                                          {
+                                            "name": "_D5_Num",
+                                            "layer": "_CargoEnd1_B1._LargeCap_A._DA_1._D5_Num",
+                                            "decal": true,
+                                            "groups": []
+                                          }
+                                        ],
+                                        [
+                                          {
+                                            "name": "_D8_SSign",
+                                            "layer": "_CargoEnd1_B1._LargeCap_A._DA_1._D8_SSign",
+                                            "decal": true,
+                                            "groups": []
+                                          }
+                                        ],
+                                        [
+                                          {
+                                            "name": "_D4_SSign",
+                                            "layer": "_CargoEnd1_B1._LargeCap_A._DA_1._D4_SSign",
+                                            "decal": true,
+                                            "groups": []
+                                          }
+                                        ],
+                                        [
+                                          {
+                                            "name": "_D11_Logo",
+                                            "layer": "_CargoEnd1_B1._LargeCap_A._DA_1._D11_Logo",
+                                            "decal": true,
+                                            "groups": []
+                                          }
+                                        ],
+                                        [
+                                          {
+                                            "name": "_D15_Num",
+                                            "layer": "_CargoEnd1_B1._LargeCap_A._DA_1._D15_Num",
+                                            "decal": true,
+                                            "groups": []
+                                          }
+                                        ],
+                                        [
+                                          {
+                                            "name": "_D6_SSign",
+                                            "layer": "_CargoEnd1_B1._LargeCap_A._DA_1._D6_SSign",
+                                            "decal": true,
+                                            "groups": []
+                                          }
+                                        ],
+                                        [
+                                          {
+                                            "name": "_D9_SSign",
+                                            "layer": "_CargoEnd1_B1._LargeCap_A._DA_1._D9_SSign",
+                                            "decal": true,
+                                            "groups": []
+                                          }
+                                        ],
+                                        [
+                                          {
+                                            "name": "_D12_Logo",
+                                            "layer": "_CargoEnd1_B1._LargeCap_A._DA_1._D12_Logo",
+                                            "decal": true,
+                                            "groups": []
+                                          }
+                                        ],
+                                        [
+                                          {
+                                            "name": "_D7_SSign",
+                                            "layer": "_CargoEnd1_B1._LargeCap_A._DA_1._D7_SSign",
+                                            "decal": true,
+                                            "groups": []
+                                          }
+                                        ],
+                                        [
+                                          {
+                                            "name": "_D3_SSign",
+                                            "layer": "_CargoEnd1_B1._LargeCap_A._DA_1._D3_SSign",
+                                            "decal": true,
+                                            "groups": []
+                                          }
+                                        ],
+                                        [
+                                          {
+                                            "name": "_D14_Letter",
+                                            "layer": "_CargoEnd1_B1._LargeCap_A._DA_1._D14_Letter",
+                                            "decal": true,
+                                            "groups": []
+                                          }
+                                        ],
+                                        [
+                                          {
+                                            "name": "_D13_Num",
+                                            "layer": "_CargoEnd1_B1._LargeCap_A._DA_1._D13_Num",
+                                            "decal": true,
+                                            "groups": []
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ]
+                                ]
+                              }
+                            ]
+                          ]
                         },
                         {
                           "name": "_CargoEnd1_B2",
@@ -152,7 +451,88 @@
                               {
                                 "name": "_CargoC1_B2",
                                 "layer": "_CargoC1_B2",
-                                "groups": []
+                                "groups": [
+                                  [
+                                    {
+                                      "name": "_CB_A",
+                                      "layer": "_CargoC1_B2._CB_A",
+                                      "groups": [
+                                        [
+                                          {
+                                            "name": "_Refs_A",
+                                            "layer": "_CargoC1_B2._CB_A._Refs_A",
+                                            "groups": [
+                                              [
+                                                {
+                                                  "name": "_Container_B",
+                                                  "layer": "_CargoC1_B2._CB_A._Refs_A._Container_B",
+                                                  "groups": []
+                                                }
+                                              ]
+                                            ]
+                                          }
+                                        ],
+                                        [
+                                          {
+                                            "name": "_DA_1",
+                                            "layer": "_CargoC1_B2._CB_A._DA_1",
+                                            "decal": true,
+                                            "groups": [
+                                              [
+                                                {
+                                                  "name": "_D5_SSign",
+                                                  "layer": "_CargoC1_B2._CB_A._DA_1._D5_SSign",
+                                                  "decal": true,
+                                                  "groups": []
+                                                }
+                                              ],
+                                              [
+                                                {
+                                                  "name": "_D4_Let",
+                                                  "layer": "_CargoC1_B2._CB_A._DA_1._D4_Let",
+                                                  "decal": true,
+                                                  "groups": []
+                                                }
+                                              ],
+                                              [
+                                                {
+                                                  "name": "_D6_SSign",
+                                                  "layer": "_CargoC1_B2._CB_A._DA_1._D6_SSign",
+                                                  "decal": true,
+                                                  "groups": []
+                                                }
+                                              ],
+                                              [
+                                                {
+                                                  "name": "_D2_Rect",
+                                                  "layer": "_CargoC1_B2._CB_A._DA_1._D2_Rect",
+                                                  "decal": true,
+                                                  "groups": []
+                                                }
+                                              ],
+                                              [
+                                                {
+                                                  "name": "_D3_Let",
+                                                  "layer": "_CargoC1_B2._CB_A._DA_1._D3_Let",
+                                                  "decal": true,
+                                                  "groups": []
+                                                }
+                                              ],
+                                              [
+                                                {
+                                                  "name": "_D1_Rect",
+                                                  "layer": "_CargoC1_B2._CB_A._DA_1._D1_Rect",
+                                                  "decal": true,
+                                                  "groups": []
+                                                }
+                                              ]
+                                            ]
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ]
+                                ]
                               }
                             ],
                             [
@@ -164,21 +544,149 @@
                                     {
                                       "name": "_C2A_4",
                                       "layer": "_C2A_4",
-                                      "groups": []
+                                      "groups": [
+                                        [
+                                          {
+                                            "name": "_CargoLarge_AccA",
+                                            "layer": "_C2A_4._CargoLarge_AccA",
+                                            "groups": [
+                                              [
+                                                {
+                                                  "name": "_Container_B",
+                                                  "layer": "_C2A_4._CargoLarge_AccA._Container_B",
+                                                  "groups": []
+                                                }
+                                              ]
+                                            ]
+                                          }
+                                        ]
+                                      ]
                                     }
                                   ],
                                   [
                                     {
                                       "name": "_C2_3",
                                       "layer": "_C2_3",
-                                      "groups": []
+                                      "groups": [
+                                        [
+                                          {
+                                            "name": "_CargoLarge_AccA",
+                                            "layer": "_C2_3._CargoLarge_AccA",
+                                            "groups": [
+                                              [
+                                                {
+                                                  "name": "_Container_B",
+                                                  "layer": "_C2_3._CargoLarge_AccA._Container_B",
+                                                  "groups": []
+                                                }
+                                              ]
+                                            ]
+                                          }
+                                        ]
+                                      ]
                                     }
                                   ],
                                   [
                                     {
                                       "name": "_C2B_4",
                                       "layer": "_C2B_4",
-                                      "groups": []
+                                      "groups": [
+                                        [
+                                          {
+                                            "name": "_CargoLarge_AccA",
+                                            "layer": "_C2B_4._CargoLarge_AccA",
+                                            "groups": [
+                                              [
+                                                {
+                                                  "name": "_Container_B",
+                                                  "layer": "_C2B_4._CargoLarge_AccA._Container_B",
+                                                  "groups": []
+                                                }
+                                              ]
+                                            ]
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ],
+                                  [
+                                    {
+                                      "name": "_CB_A",
+                                      "layer": "_CargoC2_B2._CB_A",
+                                      "groups": [
+                                        [
+                                          {
+                                            "name": "_Refs_A",
+                                            "layer": "_CargoC2_B2._CB_A._Refs_A",
+                                            "groups": [
+                                              [
+                                                {
+                                                  "name": "_Container_B",
+                                                  "layer": "_CargoC2_B2._CB_A._Refs_A._Container_B",
+                                                  "groups": []
+                                                }
+                                              ]
+                                            ]
+                                          }
+                                        ],
+                                        [
+                                          {
+                                            "name": "_DA_1",
+                                            "layer": "_CargoC2_B2._CB_A._DA_1",
+                                            "decal": true,
+                                            "groups": [
+                                              [
+                                                {
+                                                  "name": "_D5_SSign",
+                                                  "layer": "_CargoC2_B2._CB_A._DA_1._D5_SSign",
+                                                  "decal": true,
+                                                  "groups": []
+                                                }
+                                              ],
+                                              [
+                                                {
+                                                  "name": "_D4_Let",
+                                                  "layer": "_CargoC2_B2._CB_A._DA_1._D4_Let",
+                                                  "decal": true,
+                                                  "groups": []
+                                                }
+                                              ],
+                                              [
+                                                {
+                                                  "name": "_D6_SSign",
+                                                  "layer": "_CargoC2_B2._CB_A._DA_1._D6_SSign",
+                                                  "decal": true,
+                                                  "groups": []
+                                                }
+                                              ],
+                                              [
+                                                {
+                                                  "name": "_D2_Rect",
+                                                  "layer": "_CargoC2_B2._CB_A._DA_1._D2_Rect",
+                                                  "decal": true,
+                                                  "groups": []
+                                                }
+                                              ],
+                                              [
+                                                {
+                                                  "name": "_D3_Let",
+                                                  "layer": "_CargoC2_B2._CB_A._DA_1._D3_Let",
+                                                  "decal": true,
+                                                  "groups": []
+                                                }
+                                              ],
+                                              [
+                                                {
+                                                  "name": "_D1_Rect",
+                                                  "layer": "_CargoC2_B2._CB_A._DA_1._D1_Rect",
+                                                  "decal": true,
+                                                  "groups": []
+                                                }
+                                              ]
+                                            ]
+                                          }
+                                        ]
+                                      ]
                                     }
                                   ]
                                 ]
@@ -188,7 +696,129 @@
                               {
                                 "name": "_CargoEnd2_B1",
                                 "layer": "_CargoEnd2_B1",
-                                "groups": []
+                                "groups": [
+                                  [
+                                    {
+                                      "name": "_LargeCap_A",
+                                      "layer": "_CargoEnd2_B1._LargeCap_A",
+                                      "groups": [
+                                        [
+                                          {
+                                            "name": "_DA_1",
+                                            "layer": "_CargoEnd2_B1._LargeCap_A._DA_1",
+                                            "decal": true,
+                                            "groups": [
+                                              [
+                                                {
+                                                  "name": "_D10_Num",
+                                                  "layer": "_CargoEnd2_B1._LargeCap_A._DA_1._D10_Num",
+                                                  "decal": true,
+                                                  "groups": []
+                                                }
+                                              ],
+                                              [
+                                                {
+                                                  "name": "_D5_Num",
+                                                  "layer": "_CargoEnd2_B1._LargeCap_A._DA_1._D5_Num",
+                                                  "decal": true,
+                                                  "groups": []
+                                                }
+                                              ],
+                                              [
+                                                {
+                                                  "name": "_D8_SSign",
+                                                  "layer": "_CargoEnd2_B1._LargeCap_A._DA_1._D8_SSign",
+                                                  "decal": true,
+                                                  "groups": []
+                                                }
+                                              ],
+                                              [
+                                                {
+                                                  "name": "_D4_SSign",
+                                                  "layer": "_CargoEnd2_B1._LargeCap_A._DA_1._D4_SSign",
+                                                  "decal": true,
+                                                  "groups": []
+                                                }
+                                              ],
+                                              [
+                                                {
+                                                  "name": "_D11_Logo",
+                                                  "layer": "_CargoEnd2_B1._LargeCap_A._DA_1._D11_Logo",
+                                                  "decal": true,
+                                                  "groups": []
+                                                }
+                                              ],
+                                              [
+                                                {
+                                                  "name": "_D15_Num",
+                                                  "layer": "_CargoEnd2_B1._LargeCap_A._DA_1._D15_Num",
+                                                  "decal": true,
+                                                  "groups": []
+                                                }
+                                              ],
+                                              [
+                                                {
+                                                  "name": "_D6_SSign",
+                                                  "layer": "_CargoEnd2_B1._LargeCap_A._DA_1._D6_SSign",
+                                                  "decal": true,
+                                                  "groups": []
+                                                }
+                                              ],
+                                              [
+                                                {
+                                                  "name": "_D9_SSign",
+                                                  "layer": "_CargoEnd2_B1._LargeCap_A._DA_1._D9_SSign",
+                                                  "decal": true,
+                                                  "groups": []
+                                                }
+                                              ],
+                                              [
+                                                {
+                                                  "name": "_D12_Logo",
+                                                  "layer": "_CargoEnd2_B1._LargeCap_A._DA_1._D12_Logo",
+                                                  "decal": true,
+                                                  "groups": []
+                                                }
+                                              ],
+                                              [
+                                                {
+                                                  "name": "_D7_SSign",
+                                                  "layer": "_CargoEnd2_B1._LargeCap_A._DA_1._D7_SSign",
+                                                  "decal": true,
+                                                  "groups": []
+                                                }
+                                              ],
+                                              [
+                                                {
+                                                  "name": "_D3_SSign",
+                                                  "layer": "_CargoEnd2_B1._LargeCap_A._DA_1._D3_SSign",
+                                                  "decal": true,
+                                                  "groups": []
+                                                }
+                                              ],
+                                              [
+                                                {
+                                                  "name": "_D14_Letter",
+                                                  "layer": "_CargoEnd2_B1._LargeCap_A._DA_1._D14_Letter",
+                                                  "decal": true,
+                                                  "groups": []
+                                                }
+                                              ],
+                                              [
+                                                {
+                                                  "name": "_D13_Num",
+                                                  "layer": "_CargoEnd2_B1._LargeCap_A._DA_1._D13_Num",
+                                                  "decal": true,
+                                                  "groups": []
+                                                }
+                                              ]
+                                            ]
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ]
+                                ]
                               },
                               {
                                 "name": "_CargoEnd2_B2",
@@ -198,21 +828,305 @@
                                     {
                                       "name": "_CargoC1_B3",
                                       "layer": "_CargoC1_B3",
-                                      "groups": []
+                                      "groups": [
+                                        [
+                                          {
+                                            "name": "_CB_A",
+                                            "layer": "_CargoC1_B3._CB_A",
+                                            "groups": [
+                                              [
+                                                {
+                                                  "name": "_Refs_A",
+                                                  "layer": "_CargoC1_B3._CB_A._Refs_A",
+                                                  "groups": [
+                                                    [
+                                                      {
+                                                        "name": "_Container_B",
+                                                        "layer": "_CargoC1_B3._CB_A._Refs_A._Container_B",
+                                                        "groups": []
+                                                      }
+                                                    ]
+                                                  ]
+                                                }
+                                              ],
+                                              [
+                                                {
+                                                  "name": "_DA_1",
+                                                  "layer": "_CargoC1_B3._CB_A._DA_1",
+                                                  "decal": true,
+                                                  "groups": [
+                                                    [
+                                                      {
+                                                        "name": "_D5_SSign",
+                                                        "layer": "_CargoC1_B3._CB_A._DA_1._D5_SSign",
+                                                        "decal": true,
+                                                        "groups": []
+                                                      }
+                                                    ],
+                                                    [
+                                                      {
+                                                        "name": "_D4_Let",
+                                                        "layer": "_CargoC1_B3._CB_A._DA_1._D4_Let",
+                                                        "decal": true,
+                                                        "groups": []
+                                                      }
+                                                    ],
+                                                    [
+                                                      {
+                                                        "name": "_D6_SSign",
+                                                        "layer": "_CargoC1_B3._CB_A._DA_1._D6_SSign",
+                                                        "decal": true,
+                                                        "groups": []
+                                                      }
+                                                    ],
+                                                    [
+                                                      {
+                                                        "name": "_D2_Rect",
+                                                        "layer": "_CargoC1_B3._CB_A._DA_1._D2_Rect",
+                                                        "decal": true,
+                                                        "groups": []
+                                                      }
+                                                    ],
+                                                    [
+                                                      {
+                                                        "name": "_D3_Let",
+                                                        "layer": "_CargoC1_B3._CB_A._DA_1._D3_Let",
+                                                        "decal": true,
+                                                        "groups": []
+                                                      }
+                                                    ],
+                                                    [
+                                                      {
+                                                        "name": "_D1_Rect",
+                                                        "layer": "_CargoC1_B3._CB_A._DA_1._D1_Rect",
+                                                        "decal": true,
+                                                        "groups": []
+                                                      }
+                                                    ]
+                                                  ]
+                                                }
+                                              ]
+                                            ]
+                                          }
+                                        ]
+                                      ]
                                     }
                                   ],
                                   [
                                     {
                                       "name": "_CargoC2_B3",
                                       "layer": "_CargoC2_B3",
-                                      "groups": []
+                                      "groups": [
+                                        [
+                                          {
+                                            "name": "_CB_A",
+                                            "layer": "_CargoC2_B3._CB_A",
+                                            "groups": [
+                                              [
+                                                {
+                                                  "name": "_Refs_A",
+                                                  "layer": "_CargoC2_B3._CB_A._Refs_A",
+                                                  "groups": [
+                                                    [
+                                                      {
+                                                        "name": "_Container_B",
+                                                        "layer": "_CargoC2_B3._CB_A._Refs_A._Container_B",
+                                                        "groups": []
+                                                      }
+                                                    ]
+                                                  ]
+                                                }
+                                              ],
+                                              [
+                                                {
+                                                  "name": "_DA_1",
+                                                  "layer": "_CargoC2_B3._CB_A._DA_1",
+                                                  "decal": true,
+                                                  "groups": [
+                                                    [
+                                                      {
+                                                        "name": "_D5_SSign",
+                                                        "layer": "_CargoC2_B3._CB_A._DA_1._D5_SSign",
+                                                        "decal": true,
+                                                        "groups": []
+                                                      }
+                                                    ],
+                                                    [
+                                                      {
+                                                        "name": "_D4_Let",
+                                                        "layer": "_CargoC2_B3._CB_A._DA_1._D4_Let",
+                                                        "decal": true,
+                                                        "groups": []
+                                                      }
+                                                    ],
+                                                    [
+                                                      {
+                                                        "name": "_D6_SSign",
+                                                        "layer": "_CargoC2_B3._CB_A._DA_1._D6_SSign",
+                                                        "decal": true,
+                                                        "groups": []
+                                                      }
+                                                    ],
+                                                    [
+                                                      {
+                                                        "name": "_D2_Rect",
+                                                        "layer": "_CargoC2_B3._CB_A._DA_1._D2_Rect",
+                                                        "decal": true,
+                                                        "groups": []
+                                                      }
+                                                    ],
+                                                    [
+                                                      {
+                                                        "name": "_D3_Let",
+                                                        "layer": "_CargoC2_B3._CB_A._DA_1._D3_Let",
+                                                        "decal": true,
+                                                        "groups": []
+                                                      }
+                                                    ],
+                                                    [
+                                                      {
+                                                        "name": "_D1_Rect",
+                                                        "layer": "_CargoC2_B3._CB_A._DA_1._D1_Rect",
+                                                        "decal": true,
+                                                        "groups": []
+                                                      }
+                                                    ]
+                                                  ]
+                                                }
+                                              ]
+                                            ]
+                                          }
+                                        ]
+                                      ]
                                     }
                                   ],
                                   [
                                     {
                                       "name": "_CargoEnd3_B1",
                                       "layer": "_CargoEnd3_B1",
-                                      "groups": []
+                                      "groups": [
+                                        [
+                                          {
+                                            "name": "_LargeCap_A",
+                                            "layer": "_CargoEnd3_B1._LargeCap_A",
+                                            "groups": [
+                                              [
+                                                {
+                                                  "name": "_DA_1",
+                                                  "layer": "_CargoEnd3_B1._LargeCap_A._DA_1",
+                                                  "decal": true,
+                                                  "groups": [
+                                                    [
+                                                      {
+                                                        "name": "_D10_Num",
+                                                        "layer": "_CargoEnd3_B1._LargeCap_A._DA_1._D10_Num",
+                                                        "decal": true,
+                                                        "groups": []
+                                                      }
+                                                    ],
+                                                    [
+                                                      {
+                                                        "name": "_D5_Num",
+                                                        "layer": "_CargoEnd3_B1._LargeCap_A._DA_1._D5_Num",
+                                                        "decal": true,
+                                                        "groups": []
+                                                      }
+                                                    ],
+                                                    [
+                                                      {
+                                                        "name": "_D8_SSign",
+                                                        "layer": "_CargoEnd3_B1._LargeCap_A._DA_1._D8_SSign",
+                                                        "decal": true,
+                                                        "groups": []
+                                                      }
+                                                    ],
+                                                    [
+                                                      {
+                                                        "name": "_D4_SSign",
+                                                        "layer": "_CargoEnd3_B1._LargeCap_A._DA_1._D4_SSign",
+                                                        "decal": true,
+                                                        "groups": []
+                                                      }
+                                                    ],
+                                                    [
+                                                      {
+                                                        "name": "_D11_Logo",
+                                                        "layer": "_CargoEnd3_B1._LargeCap_A._DA_1._D11_Logo",
+                                                        "decal": true,
+                                                        "groups": []
+                                                      }
+                                                    ],
+                                                    [
+                                                      {
+                                                        "name": "_D15_Num",
+                                                        "layer": "_CargoEnd3_B1._LargeCap_A._DA_1._D15_Num",
+                                                        "decal": true,
+                                                        "groups": []
+                                                      }
+                                                    ],
+                                                    [
+                                                      {
+                                                        "name": "_D6_SSign",
+                                                        "layer": "_CargoEnd3_B1._LargeCap_A._DA_1._D6_SSign",
+                                                        "decal": true,
+                                                        "groups": []
+                                                      }
+                                                    ],
+                                                    [
+                                                      {
+                                                        "name": "_D9_SSign",
+                                                        "layer": "_CargoEnd3_B1._LargeCap_A._DA_1._D9_SSign",
+                                                        "decal": true,
+                                                        "groups": []
+                                                      }
+                                                    ],
+                                                    [
+                                                      {
+                                                        "name": "_D12_Logo",
+                                                        "layer": "_CargoEnd3_B1._LargeCap_A._DA_1._D12_Logo",
+                                                        "decal": true,
+                                                        "groups": []
+                                                      }
+                                                    ],
+                                                    [
+                                                      {
+                                                        "name": "_D7_SSign",
+                                                        "layer": "_CargoEnd3_B1._LargeCap_A._DA_1._D7_SSign",
+                                                        "decal": true,
+                                                        "groups": []
+                                                      }
+                                                    ],
+                                                    [
+                                                      {
+                                                        "name": "_D3_SSign",
+                                                        "layer": "_CargoEnd3_B1._LargeCap_A._DA_1._D3_SSign",
+                                                        "decal": true,
+                                                        "groups": []
+                                                      }
+                                                    ],
+                                                    [
+                                                      {
+                                                        "name": "_D14_Letter",
+                                                        "layer": "_CargoEnd3_B1._LargeCap_A._DA_1._D14_Letter",
+                                                        "decal": true,
+                                                        "groups": []
+                                                      }
+                                                    ],
+                                                    [
+                                                      {
+                                                        "name": "_D13_Num",
+                                                        "layer": "_CargoEnd3_B1._LargeCap_A._DA_1._D13_Num",
+                                                        "decal": true,
+                                                        "groups": []
+                                                      }
+                                                    ]
+                                                  ]
+                                                }
+                                              ]
+                                            ]
+                                          }
+                                        ]
+                                      ]
                                     }
                                   ]
                                 ]
@@ -225,7 +1139,88 @@
                         {
                           "name": "_CargoC2_B1",
                           "layer": "_CargoC2_B1",
-                          "groups": []
+                          "groups": [
+                            [
+                              {
+                                "name": "_CB_A",
+                                "layer": "_CargoC2_B1._CB_A",
+                                "groups": [
+                                  [
+                                    {
+                                      "name": "_Refs_A",
+                                      "layer": "_CargoC2_B1._CB_A._Refs_A",
+                                      "groups": [
+                                        [
+                                          {
+                                            "name": "_Container_B",
+                                            "layer": "_CargoC2_B1._CB_A._Refs_A._Container_B",
+                                            "groups": []
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ],
+                                  [
+                                    {
+                                      "name": "_DA_1",
+                                      "layer": "_CargoC2_B1._CB_A._DA_1",
+                                      "decal": true,
+                                      "groups": [
+                                        [
+                                          {
+                                            "name": "_D5_SSign",
+                                            "layer": "_CargoC2_B1._CB_A._DA_1._D5_SSign",
+                                            "decal": true,
+                                            "groups": []
+                                          }
+                                        ],
+                                        [
+                                          {
+                                            "name": "_D4_Let",
+                                            "layer": "_CargoC2_B1._CB_A._DA_1._D4_Let",
+                                            "decal": true,
+                                            "groups": []
+                                          }
+                                        ],
+                                        [
+                                          {
+                                            "name": "_D6_SSign",
+                                            "layer": "_CargoC2_B1._CB_A._DA_1._D6_SSign",
+                                            "decal": true,
+                                            "groups": []
+                                          }
+                                        ],
+                                        [
+                                          {
+                                            "name": "_D2_Rect",
+                                            "layer": "_CargoC2_B1._CB_A._DA_1._D2_Rect",
+                                            "decal": true,
+                                            "groups": []
+                                          }
+                                        ],
+                                        [
+                                          {
+                                            "name": "_D3_Let",
+                                            "layer": "_CargoC2_B1._CB_A._DA_1._D3_Let",
+                                            "decal": true,
+                                            "groups": []
+                                          }
+                                        ],
+                                        [
+                                          {
+                                            "name": "_D1_Rect",
+                                            "layer": "_CargoC2_B1._CB_A._DA_1._D1_Rect",
+                                            "decal": true,
+                                            "groups": []
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ]
+                                ]
+                              }
+                            ]
+                          ]
                         }
                       ]
                     ]
@@ -253,7 +1248,15 @@
                   {
                     "name": "_HullBBot_C2",
                     "layer": "_HullBBot_C2",
-                    "groups": []
+                    "groups": [
+                      [
+                        {
+                          "name": "_HullBot_ALOD0",
+                          "layer": "_HullBot_ALOD0",
+                          "groups": []
+                        }
+                      ]
+                    ]
                   }
                 ]
               ]
@@ -262,12 +1265,83 @@
               "name": "_Hull_A2",
               "layer": "_Hull_A2",
               "groups": [
-                [{ "name": "_Base_A2", "layer": "_Base_A2", "groups": [] }],
+                [
+                  {
+                    "name": "_Base_A2",
+                    "layer": "_Base_A2",
+                    "groups": [
+                      [
+                        {
+                          "name": "_Hull_BLOD0",
+                          "layer": "_Base_A2._Hull_BLOD0",
+                          "groups": [
+                            [
+                              {
+                                "name": "_logo1_A1",
+                                "layer": "_Base_A2._Hull_BLOD0._logo1_A1",
+                                "decal": true,
+                                "groups": []
+                              }
+                            ],
+                            [
+                              {
+                                "name": "_Letter2_A2",
+                                "layer": "_Base_A2._Hull_BLOD0._Letter2_A2",
+                                "decal": true,
+                                "groups": []
+                              }
+                            ],
+                            [
+                              {
+                                "name": "_logo2_A2",
+                                "layer": "_Base_A2._Hull_BLOD0._logo2_A2",
+                                "decal": true,
+                                "groups": []
+                              }
+                            ],
+                            [
+                              {
+                                "name": "_Number2_A2",
+                                "layer": "_Base_A2._Hull_BLOD0._Number2_A2",
+                                "decal": true,
+                                "groups": []
+                              }
+                            ],
+                            [
+                              {
+                                "name": "_Letter1_A1",
+                                "layer": "_Base_A2._Hull_BLOD0._Letter1_A1",
+                                "decal": true,
+                                "groups": []
+                              }
+                            ],
+                            [
+                              {
+                                "name": "_Number1_A1",
+                                "layer": "_Base_A2._Hull_BLOD0._Number1_A1",
+                                "decal": true,
+                                "groups": []
+                              }
+                            ]
+                          ]
+                        }
+                      ]
+                    ]
+                  }
+                ],
                 [
                   {
                     "name": "_HullBTop_A2",
                     "layer": "_HullBTop_A2",
-                    "groups": []
+                    "groups": [
+                      [
+                        {
+                          "name": "_HullTop_ALOD0",
+                          "layer": "_HullBTop_A2._HullTop_ALOD0",
+                          "groups": []
+                        }
+                      ]
+                    ]
                   }
                 ],
                 [
@@ -289,7 +1363,23 @@
                               {
                                 "name": "_S1_AccB",
                                 "layer": "_S1_AccB",
-                                "groups": []
+                                "groups": [
+                                  [
+                                    {
+                                      "name": "_CargoLarge_AccA",
+                                      "layer": "_S1_AccB._CargoLarge_AccA",
+                                      "groups": [
+                                        [
+                                          {
+                                            "name": "_Container_B",
+                                            "layer": "_S1_AccB._CargoLarge_AccA._Container_B",
+                                            "groups": []
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ]
+                                ]
                               }
                             ],
                             [
@@ -301,7 +1391,145 @@
                                     {
                                       "name": "_Cap_1",
                                       "layer": "_Cap_1",
-                                      "groups": []
+                                      "groups": [
+                                        [
+                                          {
+                                            "name": "_LCap_B1",
+                                            "layer": "_Cap_1._LCap_B1",
+                                            "groups": [
+                                              [
+                                                {
+                                                  "name": "_DA_1",
+                                                  "layer": "_Cap_1._LCap_B1._DA_1",
+                                                  "decal": true,
+                                                  "groups": [
+                                                    [
+                                                      {
+                                                        "name": "_D10_SSign",
+                                                        "layer": "_Cap_1._LCap_B1._DA_1._D10_SSign",
+                                                        "decal": true,
+                                                        "groups": []
+                                                      }
+                                                    ],
+                                                    [
+                                                      {
+                                                        "name": "_D5_Letter",
+                                                        "layer": "_Cap_1._LCap_B1._DA_1._D5_Letter",
+                                                        "decal": true,
+                                                        "groups": []
+                                                      }
+                                                    ],
+                                                    [
+                                                      {
+                                                        "name": "_D8_Num",
+                                                        "layer": "_Cap_1._LCap_B1._DA_1._D8_Num",
+                                                        "decal": true,
+                                                        "groups": []
+                                                      }
+                                                    ],
+                                                    [
+                                                      {
+                                                        "name": "_D4_Num",
+                                                        "layer": "_Cap_1._LCap_B1._DA_1._D4_Num",
+                                                        "decal": true,
+                                                        "groups": []
+                                                      }
+                                                    ],
+                                                    [
+                                                      {
+                                                        "name": "_D11_SSign",
+                                                        "layer": "_Cap_1._LCap_B1._DA_1._D11_SSign",
+                                                        "decal": true,
+                                                        "groups": []
+                                                      }
+                                                    ],
+                                                    [
+                                                      {
+                                                        "name": "_D15_Lett",
+                                                        "layer": "_Cap_1._LCap_B1._DA_1._D15_Lett",
+                                                        "decal": true,
+                                                        "groups": []
+                                                      }
+                                                    ],
+                                                    [
+                                                      {
+                                                        "name": "_D6_Letter",
+                                                        "layer": "_Cap_1._LCap_B1._DA_1._D6_Letter",
+                                                        "decal": true,
+                                                        "groups": []
+                                                      }
+                                                    ],
+                                                    [
+                                                      {
+                                                        "name": "_D9_SSign",
+                                                        "layer": "_Cap_1._LCap_B1._DA_1._D9_SSign",
+                                                        "decal": true,
+                                                        "groups": []
+                                                      }
+                                                    ],
+                                                    [
+                                                      {
+                                                        "name": "_D12_Num",
+                                                        "layer": "_Cap_1._LCap_B1._DA_1._D12_Num",
+                                                        "decal": true,
+                                                        "groups": []
+                                                      }
+                                                    ],
+                                                    [
+                                                      {
+                                                        "name": "_D7_Logo",
+                                                        "layer": "_Cap_1._LCap_B1._DA_1._D7_Logo",
+                                                        "decal": true,
+                                                        "groups": []
+                                                      }
+                                                    ],
+                                                    [
+                                                      {
+                                                        "name": "_D2_Logo",
+                                                        "layer": "_Cap_1._LCap_B1._DA_1._D2_Logo",
+                                                        "decal": true,
+                                                        "groups": []
+                                                      }
+                                                    ],
+                                                    [
+                                                      {
+                                                        "name": "_D3_Num",
+                                                        "layer": "_Cap_1._LCap_B1._DA_1._D3_Num",
+                                                        "decal": true,
+                                                        "groups": []
+                                                      }
+                                                    ],
+                                                    [
+                                                      {
+                                                        "name": "_D14_Letter",
+                                                        "layer": "_Cap_1._LCap_B1._DA_1._D14_Letter",
+                                                        "decal": true,
+                                                        "groups": []
+                                                      }
+                                                    ],
+                                                    [
+                                                      {
+                                                        "name": "_D1_Logo",
+                                                        "layer": "_Cap_1._LCap_B1._DA_1._D1_Logo",
+                                                        "decal": true,
+                                                        "groups": []
+                                                      }
+                                                    ],
+                                                    [
+                                                      {
+                                                        "name": "_D13_SSign",
+                                                        "layer": "_Cap_1._LCap_B1._DA_1._D13_SSign",
+                                                        "decal": true,
+                                                        "groups": []
+                                                      }
+                                                    ]
+                                                  ]
+                                                }
+                                              ]
+                                            ]
+                                          }
+                                        ]
+                                      ]
                                     },
                                     {
                                       "name": "_Cap_2",
@@ -311,7 +1539,145 @@
                                           {
                                             "name": "_Cap_3",
                                             "layer": "_Cap_3",
-                                            "groups": []
+                                            "groups": [
+                                              [
+                                                {
+                                                  "name": "_LCap_B1",
+                                                  "layer": "_Cap_3._LCap_B1",
+                                                  "groups": [
+                                                    [
+                                                      {
+                                                        "name": "_DA_1",
+                                                        "layer": "_Cap_3._LCap_B1._DA_1",
+                                                        "decal": true,
+                                                        "groups": [
+                                                          [
+                                                            {
+                                                              "name": "_D10_SSign",
+                                                              "layer": "_Cap_3._LCap_B1._DA_1._D10_SSign",
+                                                              "decal": true,
+                                                              "groups": []
+                                                            }
+                                                          ],
+                                                          [
+                                                            {
+                                                              "name": "_D5_Letter",
+                                                              "layer": "_Cap_3._LCap_B1._DA_1._D5_Letter",
+                                                              "decal": true,
+                                                              "groups": []
+                                                            }
+                                                          ],
+                                                          [
+                                                            {
+                                                              "name": "_D8_Num",
+                                                              "layer": "_Cap_3._LCap_B1._DA_1._D8_Num",
+                                                              "decal": true,
+                                                              "groups": []
+                                                            }
+                                                          ],
+                                                          [
+                                                            {
+                                                              "name": "_D4_Num",
+                                                              "layer": "_Cap_3._LCap_B1._DA_1._D4_Num",
+                                                              "decal": true,
+                                                              "groups": []
+                                                            }
+                                                          ],
+                                                          [
+                                                            {
+                                                              "name": "_D11_SSign",
+                                                              "layer": "_Cap_3._LCap_B1._DA_1._D11_SSign",
+                                                              "decal": true,
+                                                              "groups": []
+                                                            }
+                                                          ],
+                                                          [
+                                                            {
+                                                              "name": "_D15_Lett",
+                                                              "layer": "_Cap_3._LCap_B1._DA_1._D15_Lett",
+                                                              "decal": true,
+                                                              "groups": []
+                                                            }
+                                                          ],
+                                                          [
+                                                            {
+                                                              "name": "_D6_Letter",
+                                                              "layer": "_Cap_3._LCap_B1._DA_1._D6_Letter",
+                                                              "decal": true,
+                                                              "groups": []
+                                                            }
+                                                          ],
+                                                          [
+                                                            {
+                                                              "name": "_D9_SSign",
+                                                              "layer": "_Cap_3._LCap_B1._DA_1._D9_SSign",
+                                                              "decal": true,
+                                                              "groups": []
+                                                            }
+                                                          ],
+                                                          [
+                                                            {
+                                                              "name": "_D12_Num",
+                                                              "layer": "_Cap_3._LCap_B1._DA_1._D12_Num",
+                                                              "decal": true,
+                                                              "groups": []
+                                                            }
+                                                          ],
+                                                          [
+                                                            {
+                                                              "name": "_D7_Logo",
+                                                              "layer": "_Cap_3._LCap_B1._DA_1._D7_Logo",
+                                                              "decal": true,
+                                                              "groups": []
+                                                            }
+                                                          ],
+                                                          [
+                                                            {
+                                                              "name": "_D2_Logo",
+                                                              "layer": "_Cap_3._LCap_B1._DA_1._D2_Logo",
+                                                              "decal": true,
+                                                              "groups": []
+                                                            }
+                                                          ],
+                                                          [
+                                                            {
+                                                              "name": "_D3_Num",
+                                                              "layer": "_Cap_3._LCap_B1._DA_1._D3_Num",
+                                                              "decal": true,
+                                                              "groups": []
+                                                            }
+                                                          ],
+                                                          [
+                                                            {
+                                                              "name": "_D14_Letter",
+                                                              "layer": "_Cap_3._LCap_B1._DA_1._D14_Letter",
+                                                              "decal": true,
+                                                              "groups": []
+                                                            }
+                                                          ],
+                                                          [
+                                                            {
+                                                              "name": "_D1_Logo",
+                                                              "layer": "_Cap_3._LCap_B1._DA_1._D1_Logo",
+                                                              "decal": true,
+                                                              "groups": []
+                                                            }
+                                                          ],
+                                                          [
+                                                            {
+                                                              "name": "_D13_SSign",
+                                                              "layer": "_Cap_3._LCap_B1._DA_1._D13_SSign",
+                                                              "decal": true,
+                                                              "groups": []
+                                                            }
+                                                          ]
+                                                        ]
+                                                      }
+                                                    ]
+                                                  ]
+                                                }
+                                              ]
+                                            ]
                                           },
                                           {
                                             "name": "_Cap_4",
@@ -326,30 +1692,187 @@
                                                 {
                                                   "name": "_S4_AccB",
                                                   "layer": "_S4_AccB",
-                                                  "groups": []
+                                                  "groups": [
+                                                    [
+                                                      {
+                                                        "name": "_CargoLarge_AccA",
+                                                        "layer": "_S4_AccB._CargoLarge_AccA",
+                                                        "groups": [
+                                                          [
+                                                            {
+                                                              "name": "_Container_B",
+                                                              "layer": "_S4_AccB._CargoLarge_AccA._Container_B",
+                                                              "groups": []
+                                                            }
+                                                          ]
+                                                        ]
+                                                      }
+                                                    ]
+                                                  ]
                                                 }
                                               ],
                                               [
                                                 {
                                                   "name": "_Cap_5",
                                                   "layer": "_Cap_5",
-                                                  "groups": []
+                                                  "groups": [
+                                                    [
+                                                      {
+                                                        "name": "_LCap_B1",
+                                                        "layer": "_Cap_5._LCap_B1",
+                                                        "groups": [
+                                                          [
+                                                            {
+                                                              "name": "_DA_1",
+                                                              "layer": "_Cap_5._LCap_B1._DA_1",
+                                                              "decal": true,
+                                                              "groups": [
+                                                                [
+                                                                  {
+                                                                    "name": "_D10_SSign",
+                                                                    "layer": "_Cap_5._LCap_B1._DA_1._D10_SSign",
+                                                                    "decal": true,
+                                                                    "groups": []
+                                                                  }
+                                                                ],
+                                                                [
+                                                                  {
+                                                                    "name": "_D5_Letter",
+                                                                    "layer": "_Cap_5._LCap_B1._DA_1._D5_Letter",
+                                                                    "decal": true,
+                                                                    "groups": []
+                                                                  }
+                                                                ],
+                                                                [
+                                                                  {
+                                                                    "name": "_D8_Num",
+                                                                    "layer": "_Cap_5._LCap_B1._DA_1._D8_Num",
+                                                                    "decal": true,
+                                                                    "groups": []
+                                                                  }
+                                                                ],
+                                                                [
+                                                                  {
+                                                                    "name": "_D4_Num",
+                                                                    "layer": "_Cap_5._LCap_B1._DA_1._D4_Num",
+                                                                    "decal": true,
+                                                                    "groups": []
+                                                                  }
+                                                                ],
+                                                                [
+                                                                  {
+                                                                    "name": "_D11_SSign",
+                                                                    "layer": "_Cap_5._LCap_B1._DA_1._D11_SSign",
+                                                                    "decal": true,
+                                                                    "groups": []
+                                                                  }
+                                                                ],
+                                                                [
+                                                                  {
+                                                                    "name": "_D15_Lett",
+                                                                    "layer": "_Cap_5._LCap_B1._DA_1._D15_Lett",
+                                                                    "decal": true,
+                                                                    "groups": []
+                                                                  }
+                                                                ],
+                                                                [
+                                                                  {
+                                                                    "name": "_D6_Letter",
+                                                                    "layer": "_Cap_5._LCap_B1._DA_1._D6_Letter",
+                                                                    "decal": true,
+                                                                    "groups": []
+                                                                  }
+                                                                ],
+                                                                [
+                                                                  {
+                                                                    "name": "_D9_SSign",
+                                                                    "layer": "_Cap_5._LCap_B1._DA_1._D9_SSign",
+                                                                    "decal": true,
+                                                                    "groups": []
+                                                                  }
+                                                                ],
+                                                                [
+                                                                  {
+                                                                    "name": "_D12_Num",
+                                                                    "layer": "_Cap_5._LCap_B1._DA_1._D12_Num",
+                                                                    "decal": true,
+                                                                    "groups": []
+                                                                  }
+                                                                ],
+                                                                [
+                                                                  {
+                                                                    "name": "_D7_Logo",
+                                                                    "layer": "_Cap_5._LCap_B1._DA_1._D7_Logo",
+                                                                    "decal": true,
+                                                                    "groups": []
+                                                                  }
+                                                                ],
+                                                                [
+                                                                  {
+                                                                    "name": "_D2_Logo",
+                                                                    "layer": "_Cap_5._LCap_B1._DA_1._D2_Logo",
+                                                                    "decal": true,
+                                                                    "groups": []
+                                                                  }
+                                                                ],
+                                                                [
+                                                                  {
+                                                                    "name": "_D3_Num",
+                                                                    "layer": "_Cap_5._LCap_B1._DA_1._D3_Num",
+                                                                    "decal": true,
+                                                                    "groups": []
+                                                                  }
+                                                                ],
+                                                                [
+                                                                  {
+                                                                    "name": "_D14_Letter",
+                                                                    "layer": "_Cap_5._LCap_B1._DA_1._D14_Letter",
+                                                                    "decal": true,
+                                                                    "groups": []
+                                                                  }
+                                                                ],
+                                                                [
+                                                                  {
+                                                                    "name": "_D1_Logo",
+                                                                    "layer": "_Cap_5._LCap_B1._DA_1._D1_Logo",
+                                                                    "decal": true,
+                                                                    "groups": []
+                                                                  }
+                                                                ],
+                                                                [
+                                                                  {
+                                                                    "name": "_D13_SSign",
+                                                                    "layer": "_Cap_5._LCap_B1._DA_1._D13_SSign",
+                                                                    "decal": true,
+                                                                    "groups": []
+                                                                  }
+                                                                ]
+                                                              ]
+                                                            }
+                                                          ]
+                                                        ]
+                                                      }
+                                                    ]
+                                                  ]
                                                 }
                                               ],
                                               [
                                                 {
                                                   "name": "_Decals_1LOD0",
                                                   "layer": "_Cap_4._Decals_1LOD0",
+                                                  "decal": true,
                                                   "groups": [
                                                     [
                                                       {
                                                         "name": "_DA_1",
                                                         "layer": "_Cap_4._Decals_1LOD0._DA_1",
+                                                        "decal": true,
                                                         "groups": [
                                                           [
                                                             {
                                                               "name": "_D8_SSign",
                                                               "layer": "_Cap_4._Decals_1LOD0._DA_1._D8_SSign",
+                                                              "decal": true,
                                                               "groups": []
                                                             }
                                                           ],
@@ -357,6 +1880,7 @@
                                                             {
                                                               "name": "_D4_Num",
                                                               "layer": "_Cap_4._Decals_1LOD0._DA_1._D4_Num",
+                                                              "decal": true,
                                                               "groups": []
                                                             }
                                                           ],
@@ -364,6 +1888,7 @@
                                                             {
                                                               "name": "_D11_Rect",
                                                               "layer": "_Cap_4._Decals_1LOD0._DA_1._D11_Rect",
+                                                              "decal": true,
                                                               "groups": []
                                                             }
                                                           ],
@@ -371,6 +1896,7 @@
                                                             {
                                                               "name": "_D9_SSign",
                                                               "layer": "_Cap_4._Decals_1LOD0._DA_1._D9_SSign",
+                                                              "decal": true,
                                                               "groups": []
                                                             }
                                                           ],
@@ -378,6 +1904,7 @@
                                                             {
                                                               "name": "_D12_Rect",
                                                               "layer": "_Cap_4._Decals_1LOD0._DA_1._D12_Rect",
+                                                              "decal": true,
                                                               "groups": []
                                                             }
                                                           ],
@@ -385,6 +1912,7 @@
                                                             {
                                                               "name": "_D2_Let",
                                                               "layer": "_Cap_4._Decals_1LOD0._DA_1._D2_Let",
+                                                              "decal": true,
                                                               "groups": []
                                                             }
                                                           ],
@@ -392,6 +1920,7 @@
                                                             {
                                                               "name": "_D3_Num",
                                                               "layer": "_Cap_4._Decals_1LOD0._DA_1._D3_Num",
+                                                              "decal": true,
                                                               "groups": []
                                                             }
                                                           ],
@@ -399,6 +1928,7 @@
                                                             {
                                                               "name": "_D1_Letter",
                                                               "layer": "_Cap_4._Decals_1LOD0._DA_1._D1_Letter",
+                                                              "decal": true,
                                                               "groups": []
                                                             }
                                                           ]
@@ -443,16 +1973,19 @@
                                           {
                                             "name": "_Decals_1LOD0",
                                             "layer": "_Cap_2._Decals_1LOD0",
+                                            "decal": true,
                                             "groups": [
                                               [
                                                 {
                                                   "name": "_DA_1",
                                                   "layer": "_Cap_2._Decals_1LOD0._DA_1",
+                                                  "decal": true,
                                                   "groups": [
                                                     [
                                                       {
                                                         "name": "_D8_SSign",
                                                         "layer": "_Cap_2._Decals_1LOD0._DA_1._D8_SSign",
+                                                        "decal": true,
                                                         "groups": []
                                                       }
                                                     ],
@@ -460,6 +1993,7 @@
                                                       {
                                                         "name": "_D4_Num",
                                                         "layer": "_Cap_2._Decals_1LOD0._DA_1._D4_Num",
+                                                        "decal": true,
                                                         "groups": []
                                                       }
                                                     ],
@@ -467,6 +2001,7 @@
                                                       {
                                                         "name": "_D11_Rect",
                                                         "layer": "_Cap_2._Decals_1LOD0._DA_1._D11_Rect",
+                                                        "decal": true,
                                                         "groups": []
                                                       }
                                                     ],
@@ -474,6 +2009,7 @@
                                                       {
                                                         "name": "_D9_SSign",
                                                         "layer": "_Cap_2._Decals_1LOD0._DA_1._D9_SSign",
+                                                        "decal": true,
                                                         "groups": []
                                                       }
                                                     ],
@@ -481,6 +2017,7 @@
                                                       {
                                                         "name": "_D12_Rect",
                                                         "layer": "_Cap_2._Decals_1LOD0._DA_1._D12_Rect",
+                                                        "decal": true,
                                                         "groups": []
                                                       }
                                                     ],
@@ -488,6 +2025,7 @@
                                                       {
                                                         "name": "_D2_Let",
                                                         "layer": "_Cap_2._Decals_1LOD0._DA_1._D2_Let",
+                                                        "decal": true,
                                                         "groups": []
                                                       }
                                                     ],
@@ -495,6 +2033,7 @@
                                                       {
                                                         "name": "_D3_Num",
                                                         "layer": "_Cap_2._Decals_1LOD0._DA_1._D3_Num",
+                                                        "decal": true,
                                                         "groups": []
                                                       }
                                                     ],
@@ -502,6 +2041,7 @@
                                                       {
                                                         "name": "_D1_Letter",
                                                         "layer": "_Cap_2._Decals_1LOD0._DA_1._D1_Letter",
+                                                        "decal": true,
                                                         "groups": []
                                                       }
                                                     ]
@@ -549,16 +2089,19 @@
                               {
                                 "name": "_Decals_1LOD0",
                                 "layer": "_CargoC_S1._Decals_1LOD0",
+                                "decal": true,
                                 "groups": [
                                   [
                                     {
                                       "name": "_DA_1",
                                       "layer": "_CargoC_S1._Decals_1LOD0._DA_1",
+                                      "decal": true,
                                       "groups": [
                                         [
                                           {
                                             "name": "_D8_SSign",
                                             "layer": "_CargoC_S1._Decals_1LOD0._DA_1._D8_SSign",
+                                            "decal": true,
                                             "groups": []
                                           }
                                         ],
@@ -566,6 +2109,7 @@
                                           {
                                             "name": "_D4_Num",
                                             "layer": "_CargoC_S1._Decals_1LOD0._DA_1._D4_Num",
+                                            "decal": true,
                                             "groups": []
                                           }
                                         ],
@@ -573,6 +2117,7 @@
                                           {
                                             "name": "_D11_Rect",
                                             "layer": "_CargoC_S1._Decals_1LOD0._DA_1._D11_Rect",
+                                            "decal": true,
                                             "groups": []
                                           }
                                         ],
@@ -580,6 +2125,7 @@
                                           {
                                             "name": "_D9_SSign",
                                             "layer": "_CargoC_S1._Decals_1LOD0._DA_1._D9_SSign",
+                                            "decal": true,
                                             "groups": []
                                           }
                                         ],
@@ -587,6 +2133,7 @@
                                           {
                                             "name": "_D12_Rect",
                                             "layer": "_CargoC_S1._Decals_1LOD0._DA_1._D12_Rect",
+                                            "decal": true,
                                             "groups": []
                                           }
                                         ],
@@ -594,6 +2141,7 @@
                                           {
                                             "name": "_D2_Let",
                                             "layer": "_CargoC_S1._Decals_1LOD0._DA_1._D2_Let",
+                                            "decal": true,
                                             "groups": []
                                           }
                                         ],
@@ -601,6 +2149,7 @@
                                           {
                                             "name": "_D3_Num",
                                             "layer": "_CargoC_S1._Decals_1LOD0._DA_1._D3_Num",
+                                            "decal": true,
                                             "groups": []
                                           }
                                         ],
@@ -608,6 +2157,7 @@
                                           {
                                             "name": "_D1_Letter",
                                             "layer": "_CargoC_S1._Decals_1LOD0._DA_1._D1_Letter",
+                                            "decal": true,
                                             "groups": []
                                           }
                                         ]
@@ -652,7 +2202,15 @@
                         {
                           "name": "_JointPiece_A",
                           "layer": "_JointPiece_A",
-                          "groups": []
+                          "groups": [
+                            [
+                              {
+                                "name": "_CLarge_JP",
+                                "layer": "_CLarge_JP",
+                                "groups": []
+                              }
+                            ]
+                          ]
                         }
                       ]
                     ]
@@ -662,7 +2220,15 @@
                   {
                     "name": "_HullBBot_A2",
                     "layer": "_HullBBot_A2",
-                    "groups": []
+                    "groups": [
+                      [
+                        {
+                          "name": "_HullTop_ALOD0",
+                          "layer": "_HullBBot_A2._HullTop_ALOD0",
+                          "groups": []
+                        }
+                      ]
+                    ]
                   }
                 ],
                 [
