@@ -21,6 +21,15 @@ that answers no part of that question does not belong on the site.
 - A guide's `<title>` is `<title> in No Man's Sky — Atlas Archive`, or its question for the pages worth the most
   (`TITLES` in `app/guides/[group]/[slug]/page.tsx`); a group's is `<group> guides for No Man's Sky — Atlas Archive`.
   A guide's description is its `fact`. A tool's `<title>` names No Man's Sky and the thing found.
+- The game's name stands once a page, in its `<title>`. The bold question, the headings, and the `fact` of a guide or
+  a quest do not repeat it (the owner, 2026-11-11; `docs/seo.md`, "The game's name").
+- A quest (`/quests/<slug>`) follows the guide's rules of text, title, and description: `<title> in No Man's Sky —
+  Atlas Archive`, its `fact` as the description; `/quests` is `Quests in No Man's Sky — Atlas Archive`. A quest stands
+  outside the trail of the guides: it ends with a sentence that links the guides, not a next guide.
+- A quest page answers what the quest gives and how to pass it: its steps, and every item it hands over with the
+  game's description and picture, quest-only items included. An item's stats live only on the guide of its item. The
+  quest page links that guide for them, and the guide names the quest in the item's source, linked back (the owner,
+  2026-11-11).
 - A guide ends with a sentence that links the next guide of the menu; the last leads back to `/about`. It links in its
   text to the guides it relies on, the tool that acts on it, and the catalog list it describes. Every guide is reached
   from at least two other pages.
@@ -29,7 +38,7 @@ that answers no part of that question does not belong on the site.
   on `freighter-modules`). Formulas stay: they show why a page says what it says.
 - No number of a guide is typed into its text: the numbers of its own line go through `{{name}}`, so a recount moves
   them.
-- Every claim is proven in crimson-orb `docs`, or said to be not researched yet.
+- Every claim is proven in crimson-orb `docs`. A page states what is known and is silent on the rest: never "not researched yet". What is not known yet is researched, or, when only the game can answer, it stays in crimson-orb `docs/missing.md` and off the page.
 
 ## Links
 

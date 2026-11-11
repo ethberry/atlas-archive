@@ -2,7 +2,7 @@
 
 **What can a starship upgrade module raise?** Each system of a starship has its own family of upgrade modules, and the class sets how many stats one install raises and how far: an S-Class Pulse Engine upgrade raises three of its stats, a C-Class one one or two. The starship merchant of a station sells them, as [station technology merchants](/guides/technology-merchants) shows.
 
-Each stat reads as the module's card prints it. Illegal modules come from the black market, and Rusted ones are sea salvage.
+Each stat reads as the module's card prints it. Illegal modules are sold at an [Outlaw Station](/guides/outlaw-station) and now and then by the [Scrap Dealer](/guides/scrap-dealer), and Rusted ones are sea salvage.
 
 ## Upgrade modules
 
@@ -16,7 +16,7 @@ One table per family: each class, how many stats one install raises, and the lim
 
 <!-- widget:hdriveTop -->
 
-The colour drives are not upgrade modules. A Cadmium, Emeril, or Indium Drive lets the hyperdrive reach red, green, or blue stars, and each is a blueprint of the Space Anomaly; they are in the table of every starship module.
+The colour drives are not upgrade modules. A Cadmium, Emeril, or Indium Drive lets the hyperdrive reach red, green, or blue stars, and each is a blueprint of the Space Anomaly; they are in the table of every starship module. The Atlantid Drive, which reaches the purple stars, is a blueprint of the Space Anomaly too, and the quest [In Stellar Multitudes](/quests/in-stellar-multitudes) gives it.
 
 ### Pulse Engine
 
@@ -84,7 +84,7 @@ The colour drives are not upgrade modules. A Cadmium, Emeril, or Indium Drive le
 
 ## Every starship module
 
-The modules you build or receive, apart from upgrade modules and the cosmetics. How to upgrade the ship itself to class S is on [how to upgrade a ship](/guides/ship-upgrades).
+The modules you build or receive, apart from upgrade modules and the cosmetics. How to upgrade the ship itself to class S is on [how to upgrade a ship](/guides/ship-upgrades). The [Base Computer Archives](/quests/base-computer-archives) of your base give the Teleport Receiver and the Efficient Thrusters, and the armourer's quest [Weapons Research](/quests/weapons-research) the Positron Ejector, the Infra-Knife Accelerator, and the Cyclotron Ballista.
 
 <!-- widget:built -->
 
@@ -114,4 +114,4 @@ A trail colours the exhaust and adds 1% to boost. It is not a drive: the Cadmium
 
 <!-- widget:trails -->
 
-<!-- corvette -->A corvette you build yourself takes these modules, and each part it is built from brings one more, as [corvettes](/guides/corvettes) shows and [corvette modules](/guides/corvette-modules) lists.<!-- /corvette --><!-- not-corvette -->Above your ship, a system's next prize is in its sky: the freighter you save from a battle, and [freighters](/guides/freighters) says where to farm one.<!-- /not-corvette -->
+A corvette you build yourself takes these modules, and each part it is built from brings one more, as [corvettes](/guides/corvettes) shows and [corvette modules](/guides/corvette-modules) lists.

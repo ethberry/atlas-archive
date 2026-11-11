@@ -181,21 +181,35 @@ export function TopicScreen(props: {
 
 // The guides of each group with the question and the short answer of each.
 // The guides page lists every group under a link to the group's own page; a
-// group's page lists its own guides alone, under its title.
+// group's page lists its own guides alone, under its title. A section outside
+// the guides (Quests) passes its own title and pages, each with its path.
 export function TopicList(props: {
   topics: Topic[];
   questions: Record<string, string | undefined>;
   group?: string;
+  section?: {
+    title: string;
+    pages: { slug: string; title: string; href: string }[];
+  };
 }) {
   const factOf = new Map(props.topics.map((row) => [row.slug, row.fact]));
-  const groups = statisticsMenu.filter(
-    (group) => !props.group || group.slug === props.group,
-  );
+  const groups = props.section
+    ? [{ slug: "", ...props.section }]
+    : statisticsMenu
+        .filter((group) => !props.group || group.slug === props.group)
+        .map((group) => ({
+          ...group,
+          pages: group.pages.map((page) => ({
+            ...page,
+            href: guidePath(page.slug),
+          })),
+        }));
+  const own = Boolean(props.group || props.section);
   return (
     <Stack spacing={3} sx={{ maxWidth: 760 }}>
       {groups.map((group) => (
-        <Stack key={group.slug} spacing={1.5}>
-          {props.group ? (
+        <Stack key={group.slug || group.title} spacing={1.5}>
+          {own ? (
             <Typography variant="h3" component="h1">
               {group.title}
             </Typography>
@@ -213,11 +227,7 @@ export function TopicList(props: {
           <Stack component="ul" spacing={2} sx={{ p: 0, m: 0 }}>
             {group.pages.map((page) => (
               <Stack key={page.slug} component="li" sx={{ listStyle: "none" }}>
-                <MuiLink
-                  component={Link}
-                  href={guidePath(page.slug)}
-                  variant="h6"
-                >
+                <MuiLink component={Link} href={page.href} variant="h6">
                   {page.title}
                 </MuiLink>
                 {props.questions[page.slug] && (

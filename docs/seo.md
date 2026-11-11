@@ -6,12 +6,13 @@ link map, and the review before a release. The rules of the text itself (the one
 
 ## Sections
 
-| Section      | Path                                                                                                              | What it is                                                                                                   |
-| ------------ | ----------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
-| How it works | `/about`                                                                                                          | the method, as a funnel from the galaxy down to the one square on show                                       |
-| Catalog      | `/galaxy`, `/system`, `/planet`, `/ship`, `/tool`, `/creature`, and a page a record                               | finds with their portal glyphs                                                                               |
-| Guides       | `/guides`, `/guides/<group>`, `/guides/<group>/<slug>`                                                            | one question a page, with the numbers as proof; built by `conveyor pages` in crimson-orb                     |
-| Tools        | `/interceptor-finder`, `/capital-freighter-finder`, `/freighter-finder`, `/living-ship-finder`, `/how-lucky-am-i` | finders give a system; the Interceptor, freighter, and living ship pages are builders that give a shape only |
+| Section      | Path                                                                                                              | What it is                                                                                                                                     |
+| ------------ | ----------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| How it works | `/about`                                                                                                          | the method, as a funnel from the galaxy down to the one square on show                                                                         |
+| Catalog      | `/galaxy`, `/system`, `/planet`, `/ship`, `/tool`, `/creature`, and a page a record                               | finds with their portal glyphs                                                                                                                 |
+| Guides       | `/guides`, `/guides/<group>`, `/guides/<group>/<slug>`                                                            | one question a page, with the numbers as proof; built by `conveyor pages` in crimson-orb                                                       |
+| Quests       | `/quests`, `/quests/<slug>`                                                                                       | the game's quests and puzzles with their answers, read whole from the game's files; built by `conveyor pages` in crimson-orb beside the guides |
+| Tools        | `/interceptor-finder`, `/capital-freighter-finder`, `/freighter-finder`, `/living-ship-finder`, `/how-lucky-am-i` | finders give a system; the Interceptor, freighter, and living ship pages are builders that give a shape only                                   |
 
 **Finder flags.** Each finder has its own flag in `lib/archive/features.ts` (the owner, 2026-11-05): `INTERCEPTOR_FINDER_ENABLED` is false since 2026-11-06 (it was true), `CAPITAL_FREIGHTER_FINDER_ENABLED` and `FREIGHTER_FINDER_ENABLED` are false. A finder whose flag is off answers 404 and leaves Tools, the menu, the footer, and the sitemap. In the Markdown a link to it renders as plain words, and a block named after its path, `<!-- interceptor-finder -->…<!-- /interceptor-finder -->` (with `not-interceptor-finder` for the other way), holds each sentence about it. A rich message that names finders has twins (the Interceptor page is a builder since 2026-11-05, but keeps its URL and flag) in `lib/i18n/en.json`, picked by `FINDER_MESSAGE`: `…Interceptor` names the Interceptor builder alone, `…Finders` it and the capital freighter finder (`homeLead`, `tourTools`); `kindLead.shipFinders` and the ship page's `noteFinder` follow the Interceptor flag.
 
@@ -23,9 +24,8 @@ flag on, and `<!-- not-living -->…<!-- /not-living -->` only with it off (the 
 instead). Files and data stay; setting the flag to true brings every page and link back. The rows of these pages
 below stay for 3.0.
 
-The corvette module guide has a flag, `CORVETTE_GUIDE_ENABLED`, off until the corvette is checked in the game after the
-living ships; `<!-- corvette -->` and `<!-- not-corvette -->` work as the living blocks, so starship-modules leads to
-the Roamer while it is off. The other module guides have no flag since 2026-11-06 (the owner).
+The corvette guides had a flag, `CORVETTE_GUIDE_ENABLED`; the owner removed it on 2026-11-11, when the corvette
+questions were answered from the code, and its `<!-- corvette -->` blocks were unwrapped. No module guide has a flag.
 
 The Guides were Statistics and the Catalog was the Encyclopedia until 2026-11-03. `/statistics` and
 `/statistics/<slug>` redirect permanently to `/guides` (`next.config.ts`). The code keeps the old names
@@ -40,6 +40,8 @@ them long when a page is read, so a guide moved to another group needs no edit o
 `guidePath` and `groupPath`. `next.config.ts` redirects every old `/guides/<slug>` and `/statistics/<slug>` to the long
 path, from the menu file, except `galaxies`, `systems`, and `freighters`: there a group and its first guide share a
 word, so the short path is now the group's page, which links to the guide.
+
+**Quests** (the owner, 2026-11-08) is a section of its own beside the Guides, the Catalog, and the Tools, not a group of the guides menu: its contents page `/quests` lists each quest with its question and `fact`, as a group page does, and each quest stands at `/quests/<slug>` (breadcrumb Home › Quests › quest). It has a header item between Guides and Tools, an item in the phone drawer, a footer column, and its rows in the sitemap. Its pages stay off the guides menu and their trail: no guide leads into one, and battle-moves still leads back to `/about`. `pages` writes them into `statistics.json` beside the guides, listed under `quests` (`QUESTS` in crimson-orb `pages/mod.rs`), so a quest is drawn as a guide is (`TopicScreen`, `{{name}}`, `<!-- widget:KEY -->`); its text is `content/en/quests/<slug>.md`. The paths are `QUESTS_PATH` and `questPath` in `lib/archive/guides.ts`, the pages `QUESTS` in `lib/archive/quests.ts`. Its first page is `puzzles`, the right answer to every puzzle of a building: the number sequences in one table by their numbers, the questions in words in another by their text.
 
 ## The site map (2026-11-07)
 
@@ -187,7 +189,7 @@ Canary: the menu file and MENU_GROUPS match the brief. All 11 pages exist, and e
 - ship-types → ship-classes → ship-stats → ship-upgrades → ship-figures → ship-square → interceptors
 - interceptors → living-ships (`<!-- living -->`), or starship-modules (`<!-- not-living -->`)
 - living-ships → starship-modules
-- starship-modules → corvettes (`<!-- corvette -->`), or freighters (`<!-- not-corvette -->`)
+- starship-modules → corvettes
 - corvettes → corvette-modules → freighters
 
 Boundaries: multitool-modules closes into ship-types ("The tool covered, the next find is the ship you fly…"). The group closes into freighters from corvette-modules, or from starship-modules when the corvette flag is off. The trail stays whole with either flag off.
@@ -268,57 +270,83 @@ Primary and secondary queries by page. The order is judgement, not measured sear
 multitool-classes, ship-classes, freighters, interceptors, living-ships, station-upgrades, staffs, multitool-upgrades,
 ship-upgrades, organic-frigates, how-lucky-am-i.
 
-| Page                                                               | Primary query                                                                             | Secondary                                                              |
-| ------------------------------------------------------------------ | ----------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
-| `/`                                                                | best items no man's sky                                                                   | where to find S-class multitool; crashed ship locations; portal glyphs |
-| `/about`                                                           | how supercharged slots work                                                               | adjacent supercharged slots; multitool sources                         |
-| `/guides`                                                          | no man's sky guides                                                                       | where to find class S; farming guide                                   |
-| `/tool`                                                            | multitools with adjacent supercharged slots (not "S-class": most listed tools are A or B) | multitool glyphs; staff locations                                      |
-| `/ship`                                                            | crashed ships with adjacent supercharged slots                                            | S-class crashed ship; exotic crashed ship; Sentinel Interceptor wreck  |
-| `/creature`                                                        | best creature to adopt                                                                    | all-S creature; companion stats                                        |
-| `/interceptor-finder`                                              | Sentinel Interceptor builder, Interceptor parts                                           | Interceptor parts; Interceptor colours                                 |
-| `/capital-freighter-finder`                                        | capital freighter locations                                                               | best capital freighter; freighter battle system                        |
-| `/freighter-finder`                                                | freighter shapes                                                                          | regular freighter; freighter parts                                     |
-| `/living-ship-finder`                                              | living ship parts                                                                         | living ship types; Void Egg ship shapes                                |
-| `/how-lucky-am-i`                                                  | multitool rating                                                                          | is my multitool good; ship stats calculator; best staff stats          |
-| galaxies                                                           | best galaxy                                                                               | harsh, lush galaxy; galaxy types                                       |
-| where-to-look                                                      | where to find multitools                                                                  | galaxy core or rim; uncharted systems                                  |
-| systems                                                            | star system types                                                                         | star colour; how many planets                                          |
-| economy                                                            | wealthy system                                                                            | economy and class S; pirate system                                     |
-| races                                                              | Gek, Korvax, Vy'keen systems                                                              | Atlantid multitool; race and ship type                                 |
-| space-stations                                                     | space station merchants                                                                   | technology merchant; pirate station; abandoned station                 |
-| station-upgrades                                                   | S-class upgrade modules                                                                   | where to buy S modules; station stock                                  |
-| freighters                                                         | S-class capital freighter                                                                 | free capital freighter; freighter battle                               |
-| dreadnoughts                                                       | pirate dreadnought                                                                        | seize a dreadnought                                                    |
-| freighter-modules                                                  | S-class freighter modules farm                                                            | dreadnought modules; hyperdrive module                                 |
-| frigates                                                           | S-class frigate                                                                           | frigate traits; frigate levels; Raider                                 |
-| organic-frigates                                                   | organic frigate                                                                           | Dream Aerial; cosmic whale; dream answers                              |
-| sentinel-capital-ship                                              | Sentinel capital ship                                                                     | Carrier AI Fragment; wanted level 5                                    |
-| sources-by-size, sources-by-type, empty-worlds                     | best planet for multitools and wrecks                                                     | planet size; biome; sea level                                          |
-| sentinels-and-dissonance                                           | dissonant planet                                                                          | dissonance resonator; corrupted Sentinels                              |
-| multitool-types                                                    | multitool types                                                                           | Royal, Sentinel, Atlantid, Alien, staff                                |
-| multitool-classes                                                  | S-class multitool                                                                         | class by wealth                                                        |
-| multitool-stats                                                    | best multitool stats                                                                      | max damage; scanner                                                    |
-| multitool-upgrades                                                 | upgrade multitool to S                                                                    | upgrade or find at S                                                   |
-| figures, square                                                    | adjacent supercharged slots                                                               | 2×2 square; slot layouts                                               |
-| supercharged-slots                                                 | supercharged slots                                                                        | adjacency bonus; best module placement; max multitool damage           |
-| roamer-, nomad-, pilgrim-, colossus-modules                        | Roamer modules (and each exocraft's name)                                                 | exocraft upgrades; exocraft slots; Colossus build                      |
-| staffs                                                             | best staff head                                                                           | Autophage staff; staff terminal                                        |
-| ship-types                                                         | ship types                                                                                | exotic, solar, hauler, fighter, explorer, shuttle                      |
-| ship-classes                                                       | S-class crashed ship                                                                      | class by wealth                                                        |
-| ship-stats                                                         | best ship stats                                                                           | max hyperdrive; damage; shield                                         |
-| ship-upgrades                                                      | upgrade ship to S                                                                         | do upgrades change stats; ship supercharged slots                      |
-| ship-figures, ship-square                                          | ship supercharged slots                                                                   | adjacent; square                                                       |
-| interceptors                                                       | how to get a Sentinel Interceptor                                                         | Interceptor class S; dissonant planet                                  |
-| living-ships                                                       | how to get a living ship                                                                  | Void Egg; living ship quest                                            |
-| creature-roles, creature-grades, creature-stats, creature-affinity | all-S creature                                                                            | companion; Trait Potential; affinity                                   |
+| Page                                                               | Primary query                                                                             | Secondary                                                                |
+| ------------------------------------------------------------------ | ----------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| `/`                                                                | best items no man's sky                                                                   | where to find S-class multitool; crashed ship locations; portal glyphs   |
+| `/about`                                                           | how supercharged slots work                                                               | adjacent supercharged slots; multitool sources                           |
+| `/guides`                                                          | no man's sky guides                                                                       | where to find class S; farming guide                                     |
+| `/tool`                                                            | multitools with adjacent supercharged slots (not "S-class": most listed tools are A or B) | multitool glyphs; staff locations                                        |
+| `/ship`                                                            | crashed ships with adjacent supercharged slots                                            | S-class crashed ship; exotic crashed ship; Sentinel Interceptor wreck    |
+| `/creature`                                                        | best creature to adopt                                                                    | all-S creature; companion stats                                          |
+| `/interceptor-finder`                                              | Sentinel Interceptor builder, Interceptor parts                                           | Interceptor parts; Interceptor colours                                   |
+| `/capital-freighter-finder`                                        | capital freighter locations                                                               | best capital freighter; freighter battle system                          |
+| `/freighter-finder`                                                | freighter shapes                                                                          | regular freighter; freighter parts                                       |
+| `/living-ship-finder`                                              | living ship parts                                                                         | living ship types; Void Egg ship shapes                                  |
+| `/how-lucky-am-i`                                                  | multitool rating                                                                          | is my multitool good; ship stats calculator; best staff stats            |
+| galaxies                                                           | best galaxy                                                                               | harsh, lush galaxy; galaxy types                                         |
+| where-to-look                                                      | where to find multitools                                                                  | galaxy core or rim; uncharted systems                                    |
+| systems                                                            | star system types                                                                         | star colour; how many planets                                            |
+| economy                                                            | wealthy system                                                                            | economy and class S; pirate system                                       |
+| races                                                              | Gek, Korvax, Vy'keen systems                                                              | Atlantid multitool; race and ship type                                   |
+| space-stations                                                     | space station merchants                                                                   | technology merchant; pirate station; abandoned station                   |
+| station-upgrades                                                   | S-class upgrade modules                                                                   | where to buy S modules; station stock                                    |
+| freighters                                                         | S-class capital freighter                                                                 | free capital freighter; freighter battle                                 |
+| dreadnoughts                                                       | pirate dreadnought                                                                        | seize a dreadnought                                                      |
+| freighter-modules                                                  | S-class freighter modules farm                                                            | dreadnought modules; hyperdrive module                                   |
+| frigates                                                           | S-class frigate                                                                           | frigate traits; frigate levels; Raider                                   |
+| organic-frigates                                                   | organic frigate                                                                           | Dream Aerial; cosmic whale; dream answers                                |
+| sentinel-capital-ship                                              | Sentinel capital ship                                                                     | Carrier AI Fragment; wanted level 5                                      |
+| sources-by-size, sources-by-type, empty-worlds                     | best planet for multitools and wrecks                                                     | planet size; biome; sea level                                            |
+| sentinels-and-dissonance                                           | dissonant planet                                                                          | dissonance resonator; corrupted Sentinels                                |
+| multitool-types                                                    | multitool types                                                                           | Royal, Sentinel, Atlantid, Alien, staff                                  |
+| multitool-classes                                                  | S-class multitool                                                                         | class by wealth                                                          |
+| multitool-stats                                                    | best multitool stats                                                                      | max damage; scanner                                                      |
+| multitool-upgrades                                                 | upgrade multitool to S                                                                    | upgrade or find at S                                                     |
+| figures, square                                                    | adjacent supercharged slots                                                               | 2×2 square; slot layouts                                                 |
+| supercharged-slots                                                 | supercharged slots                                                                        | adjacency bonus; best module placement; max multitool damage             |
+| roamer-, nomad-, pilgrim-, colossus-modules                        | Roamer modules (and each exocraft's name)                                                 | exocraft upgrades; exocraft slots; Colossus build                        |
+| staffs                                                             | best staff head                                                                           | Autophage staff; staff terminal                                          |
+| ship-types                                                         | ship types                                                                                | exotic, solar, hauler, fighter, explorer, shuttle                        |
+| ship-classes                                                       | S-class crashed ship                                                                      | class by wealth                                                          |
+| ship-stats                                                         | best ship stats                                                                           | max hyperdrive; damage; shield                                           |
+| ship-upgrades                                                      | upgrade ship to S                                                                         | do upgrades change stats; ship supercharged slots                        |
+| ship-figures, ship-square                                          | ship supercharged slots                                                                   | adjacent; square                                                         |
+| interceptors                                                       | how to get a Sentinel Interceptor                                                         | Interceptor class S; dissonant planet                                    |
+| living-ships                                                       | how to get a living ship                                                                  | Void Egg; living ship quest                                              |
+| creature-roles, creature-grades, creature-stats, creature-affinity | all-S creature                                                                            | companion; Trait Potential; affinity                                     |
+| `/quests`                                                          | no man's sky quests                                                                       | puzzles and answers                                                      |
+| puzzles (`/quests/puzzles`)                                        | no man's sky puzzle answers                                                               | number sequence puzzle; manufacturing facility answers; monolith answers |
+| each quest (`/quests/<slug>`)                                      | the quest's name and "rewards"                                                            | the quest's steps; the item it gives                                     |
+| the merchant guides of Stations (forsaken-trader … anomaly-module-merchant) | what the merchant sells                                                          | its stock; what it takes in trade; where it stands                       |
+
+### The game's name (2026-11-11)
+
+The owner found "No Man's Sky" repeated on the quest and merchant pages: in the browser title, again in the bold
+opening question ("What does the Cartographer sell in No Man's Sky?"), and again in the `fact` ("What the Cartographer
+sells in No Man's Sky: …"), which is the page's description in search. The decision: the name stands **once a page, in
+the `<title>`**, the one place a search engine needs it, since a bare "Cartographer" or "Lost in Space" names nothing
+outside the game; the template `<title> in No Man's Sky — Atlas Archive` (`app/guides/[group]/[slug]/page.tsx`,
+`app/quests/[slug]/page.tsx`) stays as it is. The question and the `fact` drop it: a search result shows the title above
+the description, so the description repeating it was duplication, and the guides written before these pages never named
+the game in their question or `fact` (fishing did; it was brought in line). The facts are now an answer each, written
+in `FACTS` of crimson-orb `pages/merchants.rs` and `pages/quests.rs` (a test keeps each at 160 characters and free of the
+name), in place of the one template that described the page ("its N items, each with its picture…, read from the game's
+files"). No template outside these two groups changed: the catalog, tools, the group pages, and the home page name the
+game once in their own title or description, which is not a repetition. The rule is in `.claude/rules/site-text.md`.
+
+**Quest and merchant pages outside the read-on chain** (the owner, 2026-11-11). Their closing sentence links the guide
+of what the page gives or sells, or a related merchant or quest, not the next page of the menu. The chain of the other
+guides stays whole: Station technology merchants still leads to the Forsaken Trader, and the Space Anomaly Module
+Merchant still hands on to Sources by planet size, so the Planets group is reached from Stations. A guide that names a
+merchant or a quest item links that page in its sentence (corvettes, freighter technology, the module guides' Illegal
+modules, ship types, frigates' boosts, space stations' other merchants).
 
 ## The links
 
 - **External.** The one external link cites a rule: Google's data policy on the privacy page.
-- **Menus.** Header items are real links (`ArchiveBar.tsx`). The word Guides is a link to `/guides` and the arrow beside it opens the menu, where a group's name opens the group's page; there is no All guides item. The drawer is the same list on a phone, an accordion inside the Guides one: each name opens its page, the arrow beside it what lies under it.
-- **Footer.** `ArchiveShell.tsx`: four columns, the legal pages first, then the Catalog lists, one link a group of
-  guides (to the group's own page), and the tools from `lib/archive/tools.ts`. It does not repeat the whole menu.
+- **Menus.** Header items are real links (`ArchiveBar.tsx`). The word Guides is a link to `/guides` and the arrow beside it opens the menu, where a group's name opens the group's page; there is no All guides item. Quests is a plain link to `/quests`, in the header and in the drawer. The drawer is the same list on a phone, an accordion inside the Guides one: each name opens its page, the arrow beside it what lies under it.
+- **Footer.** `ArchiveShell.tsx`: five columns, the legal pages first, then the Catalog lists, one link a group of
+  guides (to the group's own page), the Quests page, and the tools from `lib/archive/tools.ts`. It does not repeat the whole menu.
 - **Tools and guides.** Interceptor builder ↔ interceptors, ship-classes, ship-square; capital freighter finder ↔
   freighters, dreadnoughts, freighter-modules; freighter finder ↔ freighters, frigates; living ship finder ↔
   living-ships, organic-frigates; How lucky am I? ↔ multitool-classes, multitool-stats, staffs, figures, ship-stats,

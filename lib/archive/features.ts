@@ -39,19 +39,8 @@ export const FINDER_MESSAGE =
 const LIVING_GUIDES = ["living-ships", "organic-frigates"];
 const LIVING_PATHS = ["/living-ship-finder", "/living-frigate-finder"];
 
-// The corvette guides have a flag of their own: it waits for the checks of the
-// corvette in the game, after the living ships (the owner, 2026-11-05). With it
-// off the guide answers 404 and leaves the menu, the sitemap, and every link, as
-// the living ship guides do. The other module guides have no flag (the owner,
-// 2026-11-06).
-export const CORVETTE_GUIDE_ENABLED = false;
-const CORVETTE_GUIDES = ["corvettes", "corvette-modules"];
-
 function flaggedGuide(slug: string) {
-  return (
-    (!LIVING_SHIPS_ENABLED && LIVING_GUIDES.includes(slug)) ||
-    (!CORVETTE_GUIDE_ENABLED && CORVETTE_GUIDES.includes(slug))
-  );
+  return !LIVING_SHIPS_ENABLED && LIVING_GUIDES.includes(slug);
 }
 
 export function guideShown(slug: string) {
@@ -80,7 +69,7 @@ export const GUIDE_MENU = statisticsMenu
   .filter((group) => group.pages.length > 0);
 
 // A page's text with the flags applied: `<!-- living -->…<!-- /living -->` stays
-// only while the flag is on (and `corvette` by the corvette flag), `<!-- not-living -->…<!-- /not-living -->` only
+// only while the flag is on, `<!-- not-living -->…<!-- /not-living -->` only
 // while it is off, each finder's blocks the same by its own flag, and a link
 // to a hidden page becomes its plain words.
 export function livingText(markdown: string) {
@@ -96,8 +85,6 @@ export function livingText(markdown: string) {
   const blocks = [
     keep("living", LIVING_SHIPS_ENABLED),
     keep("not-living", !LIVING_SHIPS_ENABLED),
-    keep("corvette", CORVETTE_GUIDE_ENABLED),
-    keep("not-corvette", !CORVETTE_GUIDE_ENABLED),
     ...finderSteps,
   ].reduce((text, step) => step(text), markdown);
   return blocks.replace(

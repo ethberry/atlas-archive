@@ -14,5 +14,5 @@ The same ship can carry a different name on another platform. Most ship names en
 
 ## The Speed organic frigate
 
-The first cosmic whale asks you questions in a dream, and the count your answers raise most picks the kind of your first organic frigate. The game's table points the Speed answers at the Support count, so the Speed count never grows and the dream cannot give a Speed frigate. Later whales still sell Speed frigates. Whether any dream at all gives one has not been researched yet in the game; the dream's answers are on [organic frigates](/guides/organic-frigates).
+The first cosmic whale asks you questions in a dream, and the count your answers raise most picks the kind of your first organic frigate. The game's table points the Speed answers at the Support count, so the Speed count never grows and the dream cannot give a Speed frigate. Later whales still sell Speed frigates. The dream's answers are on [organic frigates](/guides/organic-frigates).
 <!-- /living -->

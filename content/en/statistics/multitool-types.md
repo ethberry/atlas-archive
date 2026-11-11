@@ -14,7 +14,7 @@ Atlantid colours and Sentinel forms come up in equal shares. The colour matters 
 
 ## By source
 
-Shops and space stations pay the same mix. Monoliths pay only Atlantid tools, and camps only Sentinel tools.
+Shops and space stations pay the same mix. Monoliths pay only Atlantid tools, and camps only Sentinel tools. A monolith asks a question first, and its right answer is in [puzzle answers](/quests/puzzles).
 
 <!-- widget:sources -->
 

@@ -177,13 +177,8 @@ const RULES: Record<string, Record<string, Plan>> = {
     values: NONE,
     waterworld: { columns: ["Shallow water", "Deep water"] },
   },
-  "excavation-finds": {
+  "fossil-collector": {
     displays: NONE,
-    elsewhere: NONE,
-    limbs: NONE,
-    skulls: NONE,
-    tails: NONE,
-    torsos: NONE,
   },
   "battle-moves": {
     edits: NONE,

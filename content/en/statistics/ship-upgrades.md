@@ -1,6 +1,6 @@
 # How to upgrade a ship
 
-**Should you upgrade a ship or find one at S?** Upgrade for the slots, and find one at S for the stats. The slots an upgrade gives are known before you pay. What it does to a ship's stats is not measured yet.
+**Should you upgrade a ship or find one at S?** Upgrade for the slots, and find one at S for the stats. The slots an upgrade gives are known before you pay. Its stats are one roll for the new class, where a ship found at S keeps the better of two.
 
 ## What an upgrade changes
 
@@ -16,7 +16,7 @@ Any inhabited or abandoned [space station](/guides/space-stations) will do. An a
 
 ## Stats after an upgrade
 
-Not measured yet. [Ship stats](/guides/ship-stats) holds ships found at class S and nothing else, so its numbers say nothing about an upgraded ship. A multitool's upgrade is measured, as [how to upgrade a multitool](/guides/multitool-upgrades) shows, but a ship's stats come from two rolls, so that rule does not tell us what happens here.
+Each step of an upgrade rolls the ship's stats again for the new class and replaces the old ones. The roll belongs to the ship, so a ship raised to S ends on the same stats from C or from B. A ship found at a class rolls twice and keeps the better of the two, as [ship stats](/guides/ship-stats) shows; an upgraded ship holds only one of those rolls, so its stats are usually lower than those of a ship found at that class. A multitool's upgrade also rolls again from the item itself, as [how to upgrade a multitool](/guides/multitool-upgrades) shows.
 
 So if the stats are what you want, find the ship at class S. If the slots are what you want, any class will do. Modules add on top of either, and [station technology merchants](/guides/technology-merchants) says where class S ones are sold.
 

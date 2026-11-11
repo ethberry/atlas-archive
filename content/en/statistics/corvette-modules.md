@@ -6,7 +6,7 @@
 
 Each working part by its name, with its picture, the upgrade module it brings, and the weakest and the strongest card of that module. The class belongs to the module, not to the part: every part of one kind brings the same class, so a Titan and an Ambassador heavy booster add within the same limits, and a cockpit is always class C. Among the small thrusters, the heavy boosters, the shields, or the habs you can pick by look and then read the card.
 
-The kinds differ in the class of their module. A heavy booster brings a class A module of the Pulse Engine and a small thruster a class B one, so a heavy booster adds more boost and pulse drive fuel efficiency. A Medusa reactor raises the same two stats as the cockpit, at class A where the cockpit's module is class C. The Torpedo Launcher's module raises the Rocket Launcher: its Damage line prints small because the rocket's own damage is large.
+The kinds differ in the class of their module. A heavy booster brings a class A module of the Pulse Engine and a small thruster a class B one, so a heavy booster adds more boost and pulse drive fuel efficiency. A Medusa reactor raises the same two stats as the cockpit, at class A where the cockpit's module is class C. The Torpedo Launcher's module raises the Rocket Launcher, as its card says: its Damage line prints small only because the card measures it against the rocket's much larger damage.
 
 ### Cockpits
 

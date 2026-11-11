@@ -30,15 +30,19 @@ function anchorHeadings(html: string) {
 }
 
 // The bold question that opens each guide, by its slug, for the lists of the
-// guides.
-export async function guideQuestions(slugs: string[], locale = "en") {
+// guides; `folder` is `quests` for the pages of the Quests section.
+export async function guideQuestions(
+  slugs: string[],
+  folder = "statistics",
+  locale = "en",
+) {
   const entries = await Promise.all(
     slugs.map(async (slug) => {
       const file = path.join(
         process.cwd(),
         "content",
         locale,
-        "statistics",
+        folder,
         `${slug}.md`,
       );
       return [slug, questionOf(await readFile(file, "utf8"))] as const;

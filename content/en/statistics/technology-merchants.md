@@ -44,11 +44,11 @@ The four modules every ship needs, Launch Thrusters, Pulse Engine, Hyperdrive, a
 
 A merchant's stock has a fixed size range and draws from one list, and no part of that reads the system's wealth, economy type, conflict, or race. Wealth only sets how many of an item a merchant holds, and for an upgrade module that is one at every wealth. A wealthy system pays more class S ships and multitools, as [economy](/guides/economy) shows, but not more class S modules.
 
-Each station keeps its stock for good. These odds hold for any station; which stations sell everything at class S is not researched yet.
+Each station keeps its stock for good. Which modules a station sells follows from the station itself, so a station sells the same to every player, and the odds above say how rare one that sells everything at class S is.
 
 ## Pirate stations
 
-A pirate station has one technology merchant, and it sells only suspicious modules: Illegal ones for the starship, the multitool, and the exosuit, nothing for the exocraft. It shows {{pirateShown}} of {{pirateAll}}: nine for the starship (Launch Thrusters, Pulse Engine, Hyperdrive, Starship Shield, and the five weapons), nine for the multitool (Mining Beam, Scanner, and the seven weapons), and four for the exosuit (Life Support, Hazard Protection, Movement, and Shield). Each is drawn with the same chance, so every one is on sale at {{pirateOne}} of pirate stations, whichever you want. There are no classes to wait for: each suspicious module is one item.
+A pirate station, the [Outlaw Station](/guides/outlaw-station), has one technology merchant, and it sells only suspicious modules: Illegal ones for the starship, the multitool, and the exosuit, nothing for the exocraft. It shows {{pirateShown}} of {{pirateAll}}: nine for the starship (Launch Thrusters, Pulse Engine, Hyperdrive, Starship Shield, and the five weapons), nine for the multitool (Mining Beam, Scanner, and the seven weapons), and four for the exosuit (Life Support, Hazard Protection, Movement, and Shield). Each is drawn with the same chance, so every one is on sale at {{pirateOne}} of pirate stations, whichever you want. There are no classes to wait for: each suspicious module is one item.
 
 A whole set is a different matter. The four modules every ship needs are all on one pirate merchant at about one pirate station in 15, and all nine of one item almost never.
 
@@ -58,4 +58,4 @@ An Illegal module is a gamble. A class S Mining Beam module always raises all fo
 
 ## What no merchant sells
 
-Freighter modules never stand on a merchant's list: a derelict freighter or a pirate dreadnought gives them, and the Hive of Glass of the Swarm expedition did, as [freighter technology](/guides/freighter-technology) shows. After the shops, the next prize of a system lies on its planets, and the first thing to read is their size: [sources by planet size](/guides/sources-by-size).
+Freighter modules never stand on a merchant's list: a derelict freighter or a pirate dreadnought gives them, and the Hive of Glass of the Swarm expedition did, as [freighter technology](/guides/freighter-technology) shows. Out in deep space, at the edge of an outpost, another merchant waits: the [Forsaken Trader](/guides/forsaken-trader).

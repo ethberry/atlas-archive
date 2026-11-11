@@ -17,7 +17,7 @@ The site of the finds of crimson-orb, live at https://atlas-archive-tau.vercel.a
 
 | Part | What it is |
 |---|---|
-| `app` | Next.js routes: the catalog (`[kind]`), `guides`, the tools, `about`, the legal pages, `api` |
+| `app` | Next.js routes: the catalog (`[kind]`), `guides`, `quests`, the tools, `about`, the legal pages, `api` |
 | `components` | `archive` (screens and widgets), `legal`, `providers` (theme, intl, auth) |
 | `lib` | `archive` (queries, statistics, features, guides), `db` (Supabase client and generated types), `i18n` (messages) |
 | `content` | Markdown of every long text, one folder a locale |

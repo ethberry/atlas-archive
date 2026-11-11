@@ -36,13 +36,18 @@ type Page = {
 
 const pages = data.pages as unknown as Record<string, Page>;
 
-// The pages in reading order. A page missing from the data stays out, and so
+// A page of the file by its slug: its title and its fact.
+export function pageTopic(slug: string): Topic {
+  return {
+    slug,
+    title: pages[slug].title,
+    fact: printValue(pages[slug].fact),
+  };
+}
+
+// The guides in reading order. A page missing from the data stays out, and so
 // does a guide the feature flag hides.
-export const TOPICS: Topic[] = data.order.filter(guideShown).map((slug) => ({
-  slug,
-  title: pages[slug].title,
-  fact: printValue(pages[slug].fact),
-}));
+export const TOPICS: Topic[] = data.order.filter(guideShown).map(pageTopic);
 
 export function topicOf(slug: string) {
   return TOPICS.find((topic) => topic.slug === slug);

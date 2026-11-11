@@ -1,6 +1,6 @@
 # Fishing
 
-**Where do you catch each fish in No Man's Sky?** It depends on the planet type: each type has its own fish, and a shared set bites on every type but gas giants. The time of day, a storm, how deep the water is, and your bait decide the rest.
+**Where do you catch each fish?** It depends on the planet type: each type has its own fish, and a shared set bites on every type but gas giants. The time of day, a storm, how deep the water is, and your bait decide the rest.
 
 ## Why fish
 
@@ -60,7 +60,7 @@ Bait multiplies the weight of the fish it favours. Every bait keeps flotsam off 
 
 <!-- widget:baits -->
 
-A fish works as bait too. It raises the kind one above its own, each fish by its own fixed factor, and the size one above its own by {{fishSizeLow}} to {{fishSizeHigh}} times. It keeps flotsam away as well, but only a rare or a legendary fish as bait lets a legendary fish bite. Other food in the bait slot gets boosts of its own, which are not researched yet.
+A fish works as bait too. It raises the kind one above its own, each fish by its own fixed factor, and the size one above its own by {{fishSizeLow}} to {{fishSizeHigh}} times. It keeps flotsam away as well, but only a rare or a legendary fish as bait lets a legendary fish bite. Any other food works as bait as well. Each food raises one thing of its own, picked once for that food and the same every cast: a kind above common, a size, or the day, night, or storm boost. How much depends on the food: the game gives each food a cooking value, and the lower it is, the less the food raises that one thing. Every food also makes common fish and flotsam bite less, and with any food on the hook a legendary fish can bite.
 
 <!-- widget:fishBait -->
 
@@ -78,4 +78,4 @@ A Waterworld's sea runs deeper, so its ranges do too, out to {{waterworldDeep}} 
 
 <!-- widget:waterworld -->
 
-A planet with Ancient Bones has a find of its own, dug from the ground rather than the water: the [excavation finds](/guides/excavation-finds).
+A planet with Ancient Bones has a find of its own, dug from the ground rather than the water: fossils, which the [Fossil Collector](/guides/fossil-collector) trades. That covers what a planet gives. The first thing you upgrade is the multitool already in your hand, and judging one starts with [multitool types](/guides/multitool-types).

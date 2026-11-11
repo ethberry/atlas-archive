@@ -62,3 +62,13 @@ export function longGuideLinks(markdown: string) {
 export function questionOf(markdown: string) {
   return markdown.match(/^\*\*([^*]+\?)\*\*/m)?.[1];
 }
+
+// Quests is a section of its own beside the Guides (the owner, 2026-11-08): its
+// contents page at /quests and each quest at /quests/<slug>. The paths stand
+// here, beside the guides' paths, so the header and the footer reach them
+// without the pages' data.
+export const QUESTS_PATH = "/quests";
+
+export function questPath(slug: string) {
+  return `${QUESTS_PATH}/${slug}`;
+}

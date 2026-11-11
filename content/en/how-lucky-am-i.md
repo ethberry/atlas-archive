@@ -12,7 +12,7 @@ For a multitool or a [staff](/guides/staffs), enter Damage Potential and Scanner
 
 For a ship, enter only one you have claimed, and fly it while you read the card, because the numbers move with the ship you are flying. All four are the numbers on the card, the same as [ship stats](/guides/ship-stats). A working starter cannon adds 20 to 41 damage, so a ship that has one reads a little luckier on damage than it is.
 
-A ship upgraded at a station is scored as if it had been found at that class. What an upgrade does to a ship's stats is not researched yet, as [how to upgrade a ship](/guides/ship-upgrades) says, so the score of an upgraded ship's stats may not mean luck.
+A ship upgraded at a station is scored as if it had been found at that class. An upgrade rolls a ship's stats once for the new class, where a ship found at that class keeps the better of two rolls, as [how to upgrade a ship](/guides/ship-upgrades) says, so an upgraded ship's stats usually score lower than a found one's.
 
 ## How the score works
 

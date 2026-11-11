@@ -48,6 +48,16 @@ const nextConfig: NextConfig = {
         destination: `${long("frigates")}#frigate-traits`,
         permanent: true,
       })),
+      // Excavation finds became the Fossil Collector's guide on 2026-11-11.
+      ...[
+        "/statistics/excavation-finds",
+        "/guides/excavation-finds",
+        "/guides/planets/excavation-finds",
+      ].map((source) => ({
+        source,
+        destination: long("fossil-collector"),
+        permanent: true,
+      })),
       ...guides.map((slug) => ({
         source: `/statistics/${slug}`,
         destination: long(slug),

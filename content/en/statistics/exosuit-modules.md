@@ -2,7 +2,7 @@
 
 **What can an exosuit upgrade module raise?** Each system of the suit has its own family, and the class sets how many stats one install raises and how far: an S-Class Movement System upgrade always raises jetpack tanks and initial boost power, and two more of four other stats. The exosuit merchant of a station sells them, as [station technology merchants](/guides/technology-merchants) shows.
 
-Each stat reads as the module's card prints it. A protection module's card shows no numbers, so its table lists only the classes. Illegal modules come from the black market, Rusted ones are sea salvage, the Forbidden module is a Sentinel one, and the salvaged components are Autophage.
+Each stat reads as the module's card prints it. A protection module's card shows no numbers, so its table lists only the classes. Illegal modules are sold at an [Outlaw Station](/guides/outlaw-station) and now and then by the [Scrap Dealer](/guides/scrap-dealer), Rusted ones are sea salvage, the Forbidden module is a Sentinel one, and the salvaged components are Autophage.
 
 ## Upgrade modules
 
@@ -78,11 +78,11 @@ One table per family: each class, how many stats one install raises, and the lim
 
 ## Supercharged slots
 
-The exosuit has three supercharged slots, and they stand in the same places for every player: slot 5 of the top row of its technology inventory, slot 9 of the second row, slot 3 of the third row, counting from the left. There is nothing to roll and nothing to farm. None of the three is adjacent to another, so there is no figure to make: each can lift one system of the suit. Put one module of a kind on it, and set the other modules of that kind and the technology they upgrade around it, adjacent, as on the exocraft. How much each placement adds on the suit is not researched yet; the rule it follows on a multitool is on [supercharged slots](/guides/supercharged-slots).
+The exosuit has three supercharged slots, and they stand in the same places for every player: slot 5 of the top row of its technology inventory, slot 9 of the second row, slot 3 of the third row, counting from the left. There is nothing to roll and nothing to farm. None of the three is adjacent to another, so there is no figure to make: each can lift one system of the suit. Put one module of a kind on it, and set the other modules of that kind and the technology they upgrade around it, adjacent, as on the exocraft. Each placement adds as much on the suit as on a multitool, by the rule on [supercharged slots](/guides/supercharged-slots): the supercharged slot lifts the module on it, and each adjacent module of its kind, and the technology it upgrades, add a little more.
 
 ## Every exosuit module
 
-The modules you build or receive, apart from upgrade modules.
+The modules you build or receive, apart from upgrade modules. The [Base Computer Archives](/quests/base-computer-archives) of your base give the Shield Lattice and the Neural Stimulator, and the story, [The Artemis Path](/quests/the-artemis-path), gives Artemis' Translator and, at its end, Remembrance. [The Atlas Path](/quests/the-atlas-path) ends with the Star Seed or the Mark of the Denier, by the choice you make at its last interface.
 
 <!-- widget:built -->
 

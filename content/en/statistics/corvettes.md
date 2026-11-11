@@ -17,11 +17,11 @@ A corvette needs exactly one cockpit and at least one thruster, one landing gear
 
 ## Where to find corvette parts
 
-The corvette workshop's attendant sells a basic set for a first build: a cockpit, a hab, landing gear, a thruster, a reactor, a cannon, and a tractor beam. The same attendant's Salvage Exchange trades better parts for the ones you bring.
+The Corvette Workshop of a space station sells the plain parts of a first build for units: a cockpit, a hab, landing gear, a landing bay, thrusters and a booster, a reactor, a cannon, a tractor beam, wings, plating, and two decorations. Its other option, the [Salvage Exchange](/guides/salvage-exchange), trades better parts for the ones you bring.
 
 Most parts come from salvage and loot, each a random part of one shared list: salvage dug up on planets that show salvageable scrap, corvette debris drifting in space, pirates, smugglers, and freighters you raid, a crashed freighter's containers, corvette missions on the mission boards, frigate expeditions, and a derelict freighter's engineering control panel. Its Fabricate Corvette Modules gives parts to build with, not upgrade modules: always two or three of one hull part (plating, wings, joints, or a decoration), and often one working part as well (a cockpit, hab, engine, thruster, reactor, weapon, landing gear, or shield).
 
-A few cockpits, thrusters, and reactors, the Hornet, Viper, Mantis, and Vantage cockpits among them, come only from the Forsaken Trader, summoned at a space outpost's terminal. Some parts were expedition rewards: the Deadeye Cannon, the Aeron Drive, and the Aeron Powershield. A handful of parts are in the game's files but in no reward, shop, or expedition, so this page leaves them out.
+A few cockpits, thrusters, and reactors, the Hornet, Viper, Mantis, and Vantage cockpits among them, come only from the [Forsaken Trader](/guides/forsaken-trader), summoned at a [Deep-Space Outpost](/guides/deep-space-outpost). Some parts were expedition rewards: the Deadeye Cannon, the Aeron Drive, and the Aeron Powershield. A handful of parts are in the game's files but in no reward, shop, or expedition, so this page leaves them out.
 
 ## How many parts count
 
@@ -46,7 +46,7 @@ A corvette fires the ordinary starship weapons. A weapon part brings an upgrade 
 
 The weapon you fire shoots from the barrels of every weapon part on the corvette, up to {{barrels}}. Most weapons fire from one barrel after another, so more barrels add no damage. The Phase Beam fires a beam from every barrel at once, each at full damage, so a corvette built for damage is built on the Phase Beam: Phase Beam Arrays for the modules, and other weapon parts for more barrels. The Infra-Knife has the most barrels, twice a Phase Beam Array's, so two Infra-Knives beside {{limit}} Phase Beam Arrays fill the {{barrels}}. The Torpedo Launcher has none. The build screen's damage counts two beams, so it shows less than such a corvette deals.
 
-Your own Phase Beam upgrade modules count beside the modules of the parts. How many beams each weapon part adds in the game has not been researched yet.
+Your own Phase Beam upgrade modules count beside the modules of the parts. Each weapon part adds one beam for each of its barrels: the Infra-Knife {{knife_barrels}}; the Photon Cannon Array, the Phase Beam Array, and the Cyclotron Defence Cannon {{pair_barrels}} each; the Deadeye Cannon, the Venom Spitter, and the Dematerialisation Ray {{single_barrel}} each.
 
 ## Size and maneuverability
 
@@ -74,7 +74,7 @@ Every new corvette starts at class C. Its supercharged slots and its base stats 
 
 A part's module is an install like any [starship upgrade module](/guides/starship-modules): the install fixes its stats, and the tables on [corvette modules](/guides/corvette-modules) give the weakest and the strongest card each part's module can print. Trust the module in the ship's technology slots, not the build menu's card. The card counts the parts of its group already on the corvette, the module counts only those before it in the order above: for a Medusa reactor, a Cyclotron, and a Torpedo Launcher the two counts were the same and the card was the module, but a cockpit's card counts the cockpit already on the ship and shows the module of a second one. A cockpit swapped for another keeps the module the corvette already has, and only the name on the module changes.
 
-Which install a part gets depends on three things: the part itself, so two parts of one kind can roll differently; how many parts of its group stand before it, so the first, the second, and the third differ; and a value the game keeps for your game, which is why another player sees other numbers. The side a part is fixed to does not enter on its own, only where the part then stands in the order. What that value of your game is has not been researched yet.
+Which install a part gets depends on three things: the part itself, so two parts of one kind can roll differently; how many parts of its group stand before it, so the first, the second, and the third differ; and a value the game keeps for your game, which is why another player sees other numbers. The side a part is fixed to does not enter on its own, only where the part then stands in the order. That value is where your starship stood when your game began, and the game holds it with your character: another space station, another corvette, or a death does not change it.
 
 So in your game a part has a fixed bonus, and there is no reroll. The same part at the same place in its group brings the same module on every corvette you build, at every space station, and after a death; building again or elsewhere gives the same numbers.
 

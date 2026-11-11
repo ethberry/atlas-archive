@@ -1,5 +1,13 @@
 # Release notes
 
+## 11 November 2026: version 2.3
+
+- Added [quests](/quests): from [The Artemis Path](/quests/the-artemis-path) to [Lost in Space](/quests/lost-in-space), each with its steps, their hints, and every item it gives, and [puzzle answers](/quests/puzzles) for the terminals and monoliths.
+- Added a guide to every merchant with a stock: the [Galactic Trade Terminal](/guides/galactic-trade-terminal), the [Cartographer](/guides/cartographer), the [Salvage Exchange](/guides/salvage-exchange), the [Scrap Dealer](/guides/scrap-dealer), the [Forsaken Trader](/guides/forsaken-trader), the [Outlaw Station](/guides/outlaw-station), starship pilots and alien traders, and more. Each lists everything it sells, with pictures and prices, and a barter merchant shows how likely it is to take your offer.
+- The fossils moved to the [Fossil Collector](/guides/fossil-collector), who trades them.
+- Added the [corvettes](/guides/corvettes) and [corvette modules](/guides/corvette-modules) guides: how to build a corvette, where its parts come from, and what each part adds.
+- Smaller corrections across the guides: illegal modules come from an Outlaw Station and the Scrap Dealer, an upgraded ship's stats are rolled again at its new class, and every guide now links the merchants and quests it names.
+
 ## 8 November 2026: version 2.2
 
 - Added [fishing](/guides/fishing): every fish, where and when it bites, what bait does, and why a fish is worth catching.

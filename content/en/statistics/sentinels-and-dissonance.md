@@ -8,7 +8,7 @@ Waterworlds lead by far, {{water}}, and the coloured worlds of purple stars foll
 
 <!-- widget:biomes -->
 
-Dissonant planets list low activity, but corrupted Sentinels guard them, so low does not mean safe there. Sentinel activity and Dissonance detected are lines of the planet card, beside its resources; another line there, Ancient Bones, marks a planet with [excavation finds](/guides/excavation-finds).
+Dissonant planets list low activity, but corrupted Sentinels guard them, so low does not mean safe there. Sentinel activity and Dissonance detected are lines of the planet card, beside its resources; another line there, Ancient Bones, marks a planet with bone piles, whose fossils the [Fossil Collector](/guides/fossil-collector) trades.
 
 ## By size
 

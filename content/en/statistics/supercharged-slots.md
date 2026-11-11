@@ -64,6 +64,6 @@ The starship's own Damage Potential works differently. Each of its seven weapons
 
 ## On the exosuit, the exocraft, and a freighter
 
-The exosuit and each exocraft have three supercharged slots, none adjacent to another, so there is no figure to make: put one module of a kind on each and set the rest of that kind around it, as [exosuit modules](/guides/exosuit-modules) says. A freighter's slots belong to the freighter, as [freighters](/guides/freighters) shows; whether its technology gains from its neighbours the way a weapon's modules do is not researched yet.
+The exosuit and each exocraft have three supercharged slots, none adjacent to another, so there is no figure to make: put one module of a kind on each and set the rest of that kind around it, as [exosuit modules](/guides/exosuit-modules) says. A freighter's slots belong to the freighter, as [freighters](/guides/freighters) shows. Its technology gains from adjacent technology of its kind by the same rule as a weapon's modules: the freighter's hyperdrive range grows when its hyperdrive upgrades sit adjacent to each other and to the hyperdrive itself, and the hyperdrive itself gains nothing from them.
 
 The ceiling above needs a tool with 50% damage, and a staff is one you build yourself: [staffs](/guides/staffs) says how.

@@ -40,6 +40,58 @@
       {
         "slug": "technology-merchants",
         "title": "Station technology merchants"
+      },
+      {
+        "slug": "forsaken-trader",
+        "title": "Forsaken Trader"
+      },
+      {
+        "slug": "fossil-collector",
+        "title": "Fossil Collector"
+      },
+      {
+        "slug": "scrap-dealer",
+        "title": "Scrap Dealer"
+      },
+      {
+        "slug": "salvage-exchange",
+        "title": "Salvage Exchange"
+      },
+      {
+        "slug": "cartographer",
+        "title": "Cartographer"
+      },
+      {
+        "slug": "autophage-merchant",
+        "title": "Autophage Synthesis Terminal"
+      },
+      {
+        "slug": "galactic-trade-terminal",
+        "title": "Galactic Trade Terminal"
+      },
+      {
+        "slug": "starship-pilots",
+        "title": "Starship Pilot"
+      },
+      {
+        "slug": "outlaw-station",
+        "title": "Outlaw Station"
+      },
+      {
+        "slug": "deep-space-outpost",
+        "title": "Deep-Space Outpost"
+      },
+      {
+        "slug": "alien-traders",
+        "title": "Alien Trader"
+      },
+      {
+        "slug": "settlement-technology-merchant",
+        "title": "Settlement Technology Merchant"
+      },
+      {
+        "slug": "anomaly-module-merchant",
+        "title": "Space Anomaly Module Merchant"
       }
     ],
     "slug": "stations",
@@ -66,10 +118,6 @@
       {
         "slug": "fishing",
         "title": "Fishing"
-      },
-      {
-        "slug": "excavation-finds",
-        "title": "Excavation finds"
       }
     ],
     "slug": "planets",

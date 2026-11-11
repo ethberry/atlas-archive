@@ -6,6 +6,8 @@ The Roamer, Nomad, Pilgrim, and Colossus share their upgrade modules and most of
 
 ## Every Nomad module
 
+The quest [Exocraft Technician](/quests/exocraft-technician) gives the blueprints of the Exocraft Radar and its two upgrades, the Mounted Cannon, the Exocraft Boosters, and both mining lasers, and the Nomad Geobay, where the Nomad is parked and summoned.
+
 <!-- widget:built -->
 
 ## How much fits

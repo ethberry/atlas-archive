@@ -2,7 +2,7 @@
 
 **What can a multitool upgrade module raise?** As many as four stats of one weapon or the scanner, and the class sets how many and how far: an S-Class Mining Beam upgrade raises all four of its stats, a C-Class one only one or two. Each weapon and the scanner has its own family. You buy the classes at the multitool merchant of a station, as [station technology merchants](/guides/technology-merchants) shows.
 
-Each stat reads as the module's card prints it. Illegal modules come from the black market, Rusted ones are sea salvage, and the Forbidden module is a Sentinel one.
+Each stat reads as the module's card prints it. Illegal modules are sold at an [Outlaw Station](/guides/outlaw-station) and now and then by the [Scrap Dealer](/guides/scrap-dealer), Rusted ones are sea salvage, and the Forbidden module is a Sentinel one.
 
 ## Upgrade modules
 
@@ -90,7 +90,7 @@ One table per family: each class, how many stats one install raises, and the lim
 
 ## Every multitool module
 
-The modules you build or receive, apart from upgrade modules. A blueprint is bought at the Space Anomaly. How to upgrade the multitool itself to S is [how to upgrade a multitool](/guides/multitool-upgrades).
+The modules you build or receive, apart from upgrade modules. A blueprint is bought at the Space Anomaly. How to upgrade the multitool itself to S is [how to upgrade a multitool](/guides/multitool-upgrades). The quest [They Who Returned](/quests/they-who-returned) gives the Scan Harmoniser and the Polyphonic Core, which let the scanner decode the cloaked Autophage, and the armourer's quest [Weapons Research](/quests/weapons-research) gives the Advanced Mining Laser. The story, [The Artemis Path](/quests/the-artemis-path), gives the Personal Forcefield, and the living ship's quest [Starbirth](/quests/starbirth) the Solar Ray and the Animus Beam.
 
 <!-- widget:built -->
 

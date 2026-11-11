@@ -28,6 +28,7 @@ import { useAuth } from "@/components/providers/AuthProvider";
 import { PAGE_KINDS } from "@/lib/archive/kinds";
 import { GUIDE_MENU as statisticsMenu } from "@/lib/archive/features";
 import { groupPath, guidePath } from "@/lib/archive/guides";
+import { QUESTS_PATH } from "@/lib/archive/guides";
 import { TOOLS } from "@/lib/archive/tools";
 
 // The header's links stand in the drawer below this width.
@@ -196,6 +197,7 @@ export function ArchiveBar() {
                   </Collapse>,
                 ])}
               </Collapse>
+              {drawerLink(QUESTS_PATH, "archive.quests")}
               <ListItemButton onClick={() => toggleSection("tools")}>
                 <ListItemText
                   primary={<FormattedMessage id="archive.tools" />}
@@ -295,6 +297,14 @@ export function ArchiveBar() {
             )),
           ])}
         </Menu>
+        <Button
+          component={Link}
+          href={QUESTS_PATH}
+          color="inherit"
+          sx={DESKTOP}
+        >
+          <FormattedMessage id="archive.quests" />
+        </Button>
         <Button
           color="inherit"
           onClick={(event) => setToolsMenu(event.currentTarget)}

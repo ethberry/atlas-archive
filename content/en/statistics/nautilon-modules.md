@@ -6,6 +6,8 @@ Each stat reads as the module's card prints it. The land exocraft share a set of
 
 ## Every Nautilon module
 
+The quest [Dreams of the Deep](/quests/dreams-of-the-deep) gives the Nautilon Chamber, where the submarine is built, and the High-Power Sonar, which is also a blueprint of the Space Anomaly.
+
 <!-- widget:built -->
 
 ## Supercharged slots

@@ -2,7 +2,7 @@
 
 **Which ship types lie in wrecks?** Seven ship types, mostly four of them. Shuttles are {{shuttle}} of them, Haulers {{hauler}}, Fighters {{fighter}}, and Explorers {{explorer}}. Solars are {{solar}} and Interceptors {{interceptor}}. An Exotic is {{exoticOneIn}}.
 
-A wreck is not the only way. You can also buy a ship from its pilot wherever it lands: on a space station, on the pads of a trading post or a Colossal Archive, or out in the open on a planet. Pilots do not land at a shop.<!-- corvette --> A corvette is the ship you build yourself, and every part of it brings a module of its own: [corvettes](/guides/corvettes).<!-- /corvette -->
+A wreck is not the only way. You can also buy a ship from its pilot wherever it lands: on a space station, on the pads of a trading post or a Colossal Archive, or out in the open on a planet; the same pilot trades goods and frigate modules, as [Starship Pilot](/guides/starship-pilots) lists. Pilots do not land at a shop. A corvette is the ship you build yourself, and every part of it brings a module of its own: [corvettes](/guides/corvettes).
 
 What each ship type does best is under [ship stats](/guides/ship-stats).
 
@@ -16,7 +16,7 @@ Each type in the catalog: {{catalogShips}}.
 
 ## By source
 
-Crashed ships stand on {{crashedPlanets}} of planets. Sunken ones need a sea and reach {{sunkenPlanets}}. Both pay the same mix of ships. Sentinel wrecks stand on dissonant planets only, {{sentinelPlanets}} of all planets, and every one is an [Interceptor](/guides/interceptors). No other source gives one.
+Crashed ships stand on {{crashedPlanets}} of planets. Sunken ones need a sea and reach {{sunkenPlanets}}. Both pay the same mix of ships. Sentinel wrecks stand on dissonant planets only, {{sentinelPlanets}} of all planets, and every one is an [Interceptor](/guides/interceptors). No other source gives one. A Planetary Chart from the [Cartographer](/guides/cartographer) can mark the distress signal of one.
 
 <!-- widget:sources -->
 

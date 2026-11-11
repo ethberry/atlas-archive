@@ -1,8 +1,8 @@
 # Freighter technology
 
-**What can a freighter upgrade module raise?** The hyperdrive and each kind of frigate expedition have their own family, from C to S, and most raise one stat: an S-Class freighter hyperdrive upgrade adds 200 to 250 light years. No merchant sells them. They come from three places:
+**What can a freighter upgrade module raise?** The hyperdrive and each kind of frigate expedition have their own family, from C to S, and most raise one stat: an S-Class freighter hyperdrive upgrade adds {{hyperdriveS}} of range. No merchant sells them. They come from three places:
 
-- **A derelict freighter.** A merchant behind the galactic trade terminal of a station sells the place of one, 5,000,000 units the first time and 10,000,000 the second. At its engineering control panel, pick Fabricate Items, then Fabricate Technology Upgrade. It gives one freighter module of any class, C to S, or now and then a starship reactor instead. A freighter module from it is class C 55 times in 100, B 25, A 15, and S 5.
+- **A derelict freighter.** The [Scrap Dealer](/guides/scrap-dealer), behind the Galactic Trade Terminal of a station, sells the place of one, {{derelictFirst}} units the first time and {{derelictSecond}} the second. At its engineering control panel, pick Fabricate Items, then Fabricate Technology Upgrade. It gives one freighter module of any class, C to S, or now and then a starship reactor instead. A freighter module from it is class C {{derelictC}} of the time, B {{derelictB}}, A {{derelictA}}, and S {{derelictS}}. Its walk from the hangar to that panel is the quest [Lost in Space](/quests/lost-in-space).
 - **A destroyed pirate dreadnought.** It gives one module, always at class S, as [freighter modules](/guides/freighter-modules) shows. The rare class A item it gives instead is a starship reactor, not a freighter module.
 - **The Hive of Glass.** The boss of the Swarm expedition gave a class S module too; it fought only in that expedition, which has ended.
 
@@ -12,7 +12,7 @@ Each stat reads as the module's card prints it.
 
 ## Every freighter module
 
-The modules you build or receive, apart from upgrade modules.
+The modules you build or receive, apart from upgrade modules. The Resonance Matrix, which takes the freighter to the purple stars, is a Capital Ship Research blueprint, bought for Salvaged Frigate Modules, and the quest [In Stellar Multitudes](/quests/in-stellar-multitudes) gives it too.
 
 <!-- widget:built -->
 

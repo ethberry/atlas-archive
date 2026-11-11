@@ -60,7 +60,7 @@ The three reward frigates always come with the same five traits.
 
 ## Sending them out
 
-Send frigates of the expedition's kind. Most of its events, {{ownLow}} to {{ownHigh}}, are of that kind, and on those the whole fleet's stat counts. On the other events it counts at {{offKind}}, and on a Balanced expedition at {{balanced}} on every event. Each frigate adds its stat up to {{statHigh}}, each matching boost adds {{boost}}, and the fleet modules of your freighter multiply the sum, up to {{fleetHigh}}.
+Send frigates of the expedition's kind. Most of its events, {{ownLow}} to {{ownHigh}}, are of that kind, and on those the whole fleet's stat counts. On the other events it counts at {{offKind}}, and on a Balanced expedition at {{balanced}} on every event. Each frigate adds its stat up to {{statHigh}}, each matching boost, a frigate module a [Starship Pilot](/guides/starship-pilots) sells, adds {{boost}}, and the fleet modules of your freighter multiply the sum, up to {{fleetHigh}}.
 
 Every event rolls 0 to {{rollTop}} and adds the fleet's stat; it goes well if it reaches the event's difficulty. The first event starts near {{startDifficulty}}, each later one is {{stepDifficulty}} harder, every frigate you send adds one, and each expedition adds a hidden difficulty of {{tiers}} to all its events. When the fleet's stat reaches the difficulty, the event always goes well; each point short takes one chance in {{faces}} away. So the late events of a long expedition fail whatever you send, and a strong fleet pays most on the long ones.
 

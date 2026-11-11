@@ -4,7 +4,13 @@ import { GUIDE_MENU, pathShown } from "@/lib/archive/features";
 import { FEED_KINDS, STATION_BUILDING } from "@/lib/archive/kinds";
 import { TOPICS } from "@/lib/archive/statistics";
 import { createArchiveClient } from "@/lib/db/supabase.server";
-import { groupPath, guidePath } from "@/lib/archive/guides";
+import {
+  groupPath,
+  guidePath,
+  QUESTS_PATH,
+  questPath,
+} from "@/lib/archive/guides";
+import { QUESTS } from "@/lib/archive/quests";
 
 const BATCH = 1000;
 // The showcase star's galaxy stays off the map: a reader finds it, Google does not.
@@ -126,6 +132,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     })),
     ...TOPICS.map((topic) => ({
       url: `${base}${guidePath(topic.slug)}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.5,
+    })),
+    {
+      url: `${base}${QUESTS_PATH}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.6,
+    },
+    ...QUESTS.map((quest) => ({
+      url: `${base}${questPath(quest.slug)}`,
       lastModified: new Date(),
       changeFrequency: "monthly" as const,
       priority: 0.5,

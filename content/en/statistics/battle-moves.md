@@ -31,7 +31,7 @@ Pet battles are fought at Holo-Arenas, and the Arena League runs them. A player 
 
 <!-- widget:pellets -->
 
-The other tables of the list need no invitation. A challenger gives a pellet {{challengerPellet}} of the time, a system or outpost table {{stationPellet}}. Which building holds which table is not researched yet.
+The other tables of the list need no invitation: each stands in a building of its own. A space station or a [Deep-Space Outpost](/guides/deep-space-outpost) gives a pellet {{stationPellet}} of the time, a trading post the same {{challengerPellet}} as a challenger, and a settlement none.
 
 ### Medals and their eggs
 
@@ -49,7 +49,7 @@ A companion can lay an egg, a Companion Egg, and the egg carries its parent's ba
 
 The egg hatches {{hatchHours}} hours later. Before that the Egg Sequencer on the Space Anomaly can re-sequence it with ingredients: size, temperament, colour, and accessories can shift, and the body can change, but the battle grades and moves stay out of its reach.
 
-The battle grades come from the species, and the egg copies them, so a hatchling has its parent's letters: an all-S creature lays all-S eggs, and a medal egg's creature, the Wandering Shrimp Tank among them, keeps its three S in its eggs. Its five moves are drawn again on hatching, from the same species roll, so a hatchling starts with the moves its parent first had, not the ones mutated since. Whether a hatchling keeps its parent's gene edits is not researched yet.
+The battle grades come from the species, and the egg copies them, so a hatchling has its parent's letters: an all-S creature lays all-S eggs, and a medal egg's creature, the Wandering Shrimp Tank among them, keeps its three S in its eggs. Its five moves are drawn again on hatching, from the same species roll, so a hatchling starts with the moves its parent first had, not the ones mutated since.
 
 Every egg you hatch counts toward the Hatch Eggs medal: {{hatchMedal}} hatched bring the Corrupted Quadruped.
 
@@ -91,13 +91,13 @@ Players rate Stun, which costs the enemy a turn, and Change affinity, which turn
 
 ## Names
 
-The game names a move by its kind and the creature's affinity, so one move shows a different name on a Fire creature than on a Frost one. A kind can have up to three names; which of them a creature shows is not researched yet.
+The game names a move by its kind and the creature's affinity, so one move shows a different name on a Fire creature than on a Frost one. A kind can have more than one name, and which one a creature shows is fixed for that creature: it keeps its names for good, and two creatures of one affinity can show different ones.
 
 <!-- widget:names -->
 
 ## Fixed kits
 
-The five medal eggs always hold the same five moves, one in each slot, with no list to draw from. What a mutation does to them is not researched yet.
+The five medal eggs always hold the same five moves, one in each slot, with no list to draw from. A mutation of one of their slots swaps the kit move for the plain hit of the creature's own affinity, and the next mutation of that slot brings the kit move back, so a slot of theirs only ever swaps between the two. Where the kit move already is that plain hit, as in the first slot of the Aeron Crab and the Corrupted Quadruped, a mutation spends the edit and leaves the move as it was.
 
 <!-- widget:kits -->
 
