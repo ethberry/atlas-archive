@@ -5,7 +5,7 @@
     "url": "https://ethberry.io/"
   },
   "bugs": {
-    "url": "https://github.com/ethberry/atlas-archive/issues"
+    "url": "https://github.com/seed-archive/atlas-archive/issues"
   },
   "dependencies": {
     "@emotion/cache": "11.14.0",
@@ -54,7 +54,7 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/ethberry/atlas-archive"
+    "url": "https://github.com/seed-archive/atlas-archive"
   },
   "scripts": {
     "build": "next build",
