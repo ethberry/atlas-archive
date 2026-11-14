@@ -5,7 +5,7 @@ import { PageTrail } from "@/components/archive/PageTrail";
 import { TopicList } from "@/components/archive/StatisticsScreen";
 import { StructuredData } from "@/components/archive/StructuredData";
 import { guideQuestions } from "@/lib/archive/content";
-import { GUIDE_MENU } from "@/lib/archive/features";
+import statisticsMenu from "@/lib/archive/statistics-menu.json";
 import { groupPath } from "@/lib/archive/guides";
 import { TOPICS } from "@/lib/archive/statistics";
 import { trailData } from "@/lib/archive/trail";
@@ -19,10 +19,11 @@ type Props = { params: Promise<{ group: string }> };
 
 export const dynamicParams = false;
 
-const groupOf = (slug: string) => GUIDE_MENU.find((one) => one.slug === slug);
+const groupOf = (slug: string) =>
+  statisticsMenu.find((one) => one.slug === slug);
 
 export function generateStaticParams() {
-  return GUIDE_MENU.map((group) => ({ group: group.slug }));
+  return statisticsMenu.map((group) => ({ group: group.slug }));
 }
 
 export async function generateMetadata(props: Props): Promise<Metadata> {

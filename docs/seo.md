@@ -12,20 +12,9 @@ link map, and the review before a release. The rules of the text itself (the one
 | Catalog      | `/galaxy`, `/system`, `/planet`, `/ship`, `/tool`, `/creature`, and a page a record                               | finds with their portal glyphs                                                                                                                 |
 | Guides       | `/guides`, `/guides/<group>`, `/guides/<group>/<slug>`                                                            | one question a page, with the numbers as proof; built by `conveyor pages` in crimson-orb                                                       |
 | Quests       | `/quests`, `/quests/<slug>`                                                                                       | the game's quests and puzzles with their answers, read whole from the game's files; built by `conveyor pages` in crimson-orb beside the guides |
-| Tools        | `/interceptor-finder`, `/capital-freighter-finder`, `/freighter-finder`, `/living-ship-finder`, `/how-lucky-am-i` | finders give a system; the Interceptor, freighter, and living ship pages are builders that give a shape only                                   |
+| Tools        | `/interceptor-finder`, `/capital-freighter-finder`, `/freighter-finder`, `/living-ship-finder`, `/living-frigate-finder`, `/how-lucky-am-i` | finders give a system; the Interceptor, freighter, and living ship pages are builders that give a shape only                                   |
 
-**Finder flags.** Each finder has its own flag in `lib/archive/features.ts` (the owner, 2026-11-05): `INTERCEPTOR_FINDER_ENABLED` is false since 2026-11-06 (it was true), `CAPITAL_FREIGHTER_FINDER_ENABLED` and `FREIGHTER_FINDER_ENABLED` are false. A finder whose flag is off answers 404 and leaves Tools, the menu, the footer, and the sitemap. In the Markdown a link to it renders as plain words, and a block named after its path, `<!-- interceptor-finder -->…<!-- /interceptor-finder -->` (with `not-interceptor-finder` for the other way), holds each sentence about it. A rich message that names finders has twins (the Interceptor page is a builder since 2026-11-05, but keeps its URL and flag) in `lib/i18n/en.json`, picked by `FINDER_MESSAGE`: `…Interceptor` names the Interceptor builder alone, `…Finders` it and the capital freighter finder (`homeLead`, `tourTools`); `kindLead.shipFinders` and the ship page's `noteFinder` follow the Interceptor flag.
-
-**Hidden until 3.0.** Living ships and organic frigates wait for version 3.0. `LIVING_SHIPS_ENABLED` in
-`lib/archive/features.ts` is false: the `living-ships` and `organic-frigates` guides and `/living-ship-finder` answer
-404, and every link to them leaves the menu, the footer, Tools, the sitemap, and the text of other pages. In the
-Markdown, a link to a hidden page renders as its plain words, `<!-- living -->…<!-- /living -->` shows only with the
-flag on, and `<!-- not-living -->…<!-- /not-living -->` only with it off (the sentence that leads to the next guide
-instead). Files and data stay; setting the flag to true brings every page and link back. The rows of these pages
-below stay for 3.0.
-
-The corvette guides had a flag, `CORVETTE_GUIDE_ENABLED`; the owner removed it on 2026-11-11, when the corvette
-questions were answered from the code, and its `<!-- corvette -->` blocks were unwrapped. No module guide has a flag.
+**No flags.** The site has no feature flags since 2026-11-14 (the owner, for the last release): the finders and builders, the living ship and organic frigate guides, and every link to them are shown, and the Markdown blocks the flags kept (`<!-- living -->`, `<!-- interceptor-finder -->` and the other finders, with their `not-` twins) were unwrapped or dropped. `lib/archive/features.ts` is gone. The corvette guides lost their flag the same way on 2026-11-11.
 
 The Guides were Statistics and the Catalog was the Encyclopedia until 2026-11-03. `/statistics` and
 `/statistics/<slug>` redirect permanently to `/guides` (`next.config.ts`). The code keeps the old names

@@ -93,14 +93,12 @@ The modules you build or receive, apart from upgrade modules and the cosmetics. 
 A Sentinel Interceptor flies on its own core technology, and no other ship takes it; the [Interceptors](/guides/interceptors) guide says where to find one.
 
 <!-- widget:onlyInterceptor -->
-<!-- living -->
 
 ### Living ship only
 
 A [living ship](/guides/living-ships) grows organs in the place of a starship's technology: none of these fits another ship, and of the starship modules it takes only the figurines, the trails, and the Atlantid Drive.
 
 <!-- widget:onlyLiving -->
-<!-- /living -->
 
 ## Figurines
 

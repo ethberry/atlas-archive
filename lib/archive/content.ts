@@ -3,7 +3,6 @@ import path from "node:path";
 
 import { marked } from "marked";
 
-import { livingText } from "@/lib/archive/features";
 import { longGuideLinks, questionOf } from "@/lib/archive/guides";
 
 // Long text lives in content/LOCALE/NAME.md, not in the message files. These
@@ -11,9 +10,7 @@ import { longGuideLinks, questionOf } from "@/lib/archive/guides";
 export async function readContent(name: string, locale = "en") {
   const file = path.join(process.cwd(), "content", locale, `${name}.md`);
   return anchorHeadings(
-    await marked.parse(
-      longGuideLinks(livingText(await readFile(file, "utf8"))),
-    ),
+    await marked.parse(longGuideLinks(await readFile(file, "utf8"))),
   );
 }
 

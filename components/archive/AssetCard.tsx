@@ -24,6 +24,15 @@ import type {
 // A creature's battle grades stand under its picture.
 const BATTLE = new Set(["archive.combat", "archive.agility", "archive.health"]);
 
+// What a system holds in its space, beside what the system is: the right
+// column of a system, which has no picture.
+const SPACE = new Set([
+  "archive.hulks",
+  "archive.asteroidBelts",
+  "archive.iceFields",
+  "archive.relicGate",
+]);
+
 // The label column of a text row: one width, so every value starts at the
 // same distance from its label.
 const LABEL = { flex: "0 0 180px" };
@@ -36,8 +45,13 @@ export function AssetCard(props: { asset: AssetCardData }) {
     (field) =>
       field.type !== "steps" &&
       field.type !== "slots" &&
-      !BATTLE.has(field.label),
+      !BATTLE.has(field.label) &&
+      !SPACE.has(field.label),
   );
+  const space = asset.fields.filter((field) => SPACE.has(field.label));
+  // Two columns of fields need more room than fields beside a picture: a
+  // system lays its space beside the rest only from the medium width on.
+  const wide = space.length > 0 ? "md" : "sm";
   const slots = asset.fields.filter((field) => field.type === "slots");
   const battle = asset.fields.filter((field) => BATTLE.has(field.label));
   // Systems, planets, and stations take no pictures yet, so they show none.
@@ -73,13 +87,17 @@ export function AssetCard(props: { asset: AssetCardData }) {
           </Stack>
           {/* The text keeps its place on the left; the picture and the slots
               share one column on the right that shrinks first. On a narrow
-              screen that column comes first, under the title. */}
+              screen that column comes first, under the title. A system's
+              space takes that column and stays below on a narrow screen. */}
           <Stack
-            direction={{ xs: "column-reverse", sm: "row" }}
+            direction={{
+              xs: pictured ? "column-reverse" : "column",
+              [wide]: "row",
+            }}
             spacing={3}
-            sx={{ alignItems: { xs: "center", sm: "flex-start" } }}
+            sx={{ alignItems: { xs: "center", [wide]: "flex-start" } }}
           >
-            <Box sx={{ flex: { sm: "2 1 0" }, minWidth: 0, width: "100%" }}>
+            <Box sx={{ flex: { [wide]: "2 1 0" }, minWidth: 0, width: "100%" }}>
               <Stack spacing={1}>
                 <Stack direction="row" spacing={2}>
                   <Typography sx={LABEL} color="text.secondary">
@@ -147,6 +165,20 @@ export function AssetCard(props: { asset: AssetCardData }) {
                     </Typography>
                     <FieldValue field={field} />
                   </Stack>
+                ))}
+              </Stack>
+            ) : null}
+            {space.length > 0 ? (
+              <Stack
+                spacing={1}
+                sx={{ flex: { [wide]: "1 1 0" }, minWidth: 0, width: "100%" }}
+              >
+                {space.map((field) => (
+                  <FieldLine
+                    key={field.label}
+                    field={field}
+                    kind={asset.kind}
+                  />
                 ))}
               </Stack>
             ) : null}

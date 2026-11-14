@@ -48,8 +48,6 @@ that answers no part of that question does not belong on the site.
 - No links to Reddit (they leak rank). External links only where a page cites a rule.
 - A galaxy's name links to its page; in a sentence, only the first Euclid of a page links.
 - A link to a guide is the short `/guides/<slug>`; the site makes it long.
-- A sentence about a page a flag hides sits in its block, `<!-- living -->…<!-- /living -->` or
-  `<!-- interceptor-finder -->…<!-- /interceptor-finder -->`, with `not-…` for the other way.
 
 ## Words
 

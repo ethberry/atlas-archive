@@ -105,11 +105,5 @@ A frigate's price is set by its type and class: a base with a spread, times a mu
 
 <!-- widget:prices -->
 
-<!-- living -->
-
 An organic frigate draws from a list of its own and never a bad trait: [organic frigates](/guides/organic-frigates) says how to call a whale and pick the kind of its frigate.
-<!-- /living -->
-<!-- not-living -->
 
-The last capital ship of the sky is not yours to take: the [Sentinel capital ship](/guides/sentinel-capital-ship).
-<!-- /not-living -->

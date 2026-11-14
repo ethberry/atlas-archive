@@ -26,7 +26,7 @@ Your first two battles save a regular freighter. From the third on, the freighte
 
 ## One ship, many classes
 
-A system holds one capital freighter: every battle there saves the same ship, the same shape and the same size. Only its class is rolled again on every try, from a number the game hands the ship as it appears, not from the system. No one can tell the class before the battle. So find a shape you like<!-- capital-freighter-finder --> with the [capital freighters page](/capital-freighter-finder)<!-- /capital-freighter-finder -->, save the game in a neighbouring system with the battle due, warp in, and load that save again until the ship comes at S.
+A system holds one capital freighter: every battle there saves the same ship, the same shape and the same size. Only its class is rolled again on every try, from a number the game hands the ship as it appears, not from the system. No one can tell the class before the battle. So find a shape you like with the [capital freighters page](/capital-freighter-finder), save the game in a neighbouring system with the battle due, warp in, and load that save again until the ship comes at S.
 
 ## Wealth and class
 
@@ -40,7 +40,7 @@ A high wealth system gives S only {{highS}} of the time, so half the players nee
 
 ## Can you buy a class S?
 
-Yes, a regular one. A system has three regular freighters of its own, and its fleets fly those three.<!-- freighter-finder --> The [regular freighters](/freighter-finder) page shows every shape a regular freighter can take.<!-- /freighter-finder --> Each freighter's class is rolled from the [wealth](/guides/economy) of the system every time a fleet arrives: class S is {{pirateS}} of them in a pirate system, {{highS}} at high wealth, {{mediumS}} at medium, and never at low. So a fleet is not the same on every visit, and coming back to one system shows new classes.
+Yes, a regular one. A system has three regular freighters of its own, and its fleets fly those three. The [regular freighters](/freighter-finder) page shows every shape a regular freighter can take. Each freighter's class is rolled from the [wealth](/guides/economy) of the system every time a fleet arrives: class S is {{pirateS}} of them in a pirate system, {{highS}} at high wealth, {{mediumS}} at medium, and never at low. So a fleet is not the same on every visit, and coming back to one system shows new classes.
 
 The price grows with the slots and the class. The game starts at {{costBase}} million units for {{costSlots}} slots, multiplies by the slots over {{costSlots}} to the power {{costPower}}, and adds {{bonusB}} for class B, {{bonusA}} for A, and {{bonusS}} for S. A small class S costs {{smallS}} million units, a large one {{largeS}} million.
 

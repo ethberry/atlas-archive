@@ -277,14 +277,14 @@ isOneToOne: true
                   ]
                 },"systems": {
                   Row: {
-                    "address": string,"conflict": string | null,"dissonance": boolean,"economy": string | null,"gas_giant": boolean,"id": string,"light_years": number,"population": string,"star": string,"station": string,"water": boolean,"wealth": string | null
+                    "address": string,"asteroid_belts": number,"conflict": string | null,"dissonance": boolean,"economy": string | null,"gas_giant": boolean,"hulks": number,"ice_fields": number,"id": string,"light_years": number,"population": string,"relic_gate": boolean,"star": string,"station": string,"water": boolean,"wealth": string | null
                   }
                   ComputedFields: never
                   Insert: {
-                    "address": string,"conflict"?: string | null,"dissonance": boolean,"economy"?: string | null,"gas_giant": boolean,"id": string,"light_years": number,"population": string,"star": string,"station": string,"water": boolean,"wealth"?: string | null
+                    "address": string,"asteroid_belts"?: number,"conflict"?: string | null,"dissonance": boolean,"economy"?: string | null,"gas_giant": boolean,"hulks"?: number,"ice_fields"?: number,"id": string,"light_years": number,"population": string,"relic_gate"?: boolean,"star": string,"station": string,"water": boolean,"wealth"?: string | null
                   }
                   Update: {
-                    "address"?: string,"conflict"?: string | null,"dissonance"?: boolean,"economy"?: string | null,"gas_giant"?: boolean,"id"?: string,"light_years"?: number,"population"?: string,"star"?: string,"station"?: string,"water"?: boolean,"wealth"?: string | null
+                    "address"?: string,"asteroid_belts"?: number,"conflict"?: string | null,"dissonance"?: boolean,"economy"?: string | null,"gas_giant"?: boolean,"hulks"?: number,"ice_fields"?: number,"id"?: string,"light_years"?: number,"population"?: string,"relic_gate"?: boolean,"star"?: string,"station"?: string,"water"?: boolean,"wealth"?: string | null
                   }
                   Relationships: [
                     {

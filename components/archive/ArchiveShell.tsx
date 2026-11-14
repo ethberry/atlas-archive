@@ -11,11 +11,20 @@ import { FormattedMessage } from "react-intl";
 
 import { ArchiveBar } from "@/components/archive/ArchiveBar";
 import { PAGE_KINDS } from "@/lib/archive/kinds";
-import { GUIDE_MENU as statisticsMenu } from "@/lib/archive/features";
+import statisticsMenu from "@/lib/archive/statistics-menu.json";
 import { TOOLS } from "@/lib/archive/tools";
-import { groupPath, QUESTS_PATH } from "@/lib/archive/guides";
+import { groupPath, QUESTS_PATH, questPath } from "@/lib/archive/guides";
 
 type Column = { title: ReactNode; links: { href: string; label: ReactNode }[] };
+
+// The quest pages the footer names by slug and message id, so this client
+// component does not load the guides' data for their titles.
+const FOOTER_QUESTS = [
+  ["puzzles", "archive.puzzleAnswers"],
+  ["the-artemis-path", "archive.artemisPath"],
+  ["the-atlas-path", "archive.atlasPath"],
+  ["starbirth", "archive.starbirth"],
+] as const;
 
 // The sections in plain links, one column each, so a crawler reaches what the
 // menus hold.
@@ -51,11 +60,16 @@ const COLUMNS: Column[] = [
       label: group.title,
     })),
   },
-  // The Quests section, by its own page, as a group of guides is.
+  // The Quests section: the puzzle answers and the main story chains, then the
+  // section's own page with every quest (the owner, 2026-11-14).
   {
     title: <FormattedMessage id="archive.quests" />,
     links: [
-      { href: QUESTS_PATH, label: <FormattedMessage id="archive.quests" /> },
+      ...FOOTER_QUESTS.map(([slug, id]) => ({
+        href: questPath(slug),
+        label: <FormattedMessage id={id} />,
+      })),
+      { href: QUESTS_PATH, label: <FormattedMessage id="archive.allQuests" /> },
     ],
   },
   {

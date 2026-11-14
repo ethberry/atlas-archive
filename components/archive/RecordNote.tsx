@@ -6,17 +6,12 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import { FormattedMessage } from "react-intl";
 
-import { INTERCEPTOR_FINDER_ENABLED, pathShown } from "@/lib/archive/features";
 import type { AssetCard } from "@/lib/archive/read";
 import { guidePath } from "@/lib/archive/guides";
 
-// A link for a rich message of react-intl: <tag>words</tag>. A page a feature
-// flag hides leaves its words plain.
+// A link for a rich message of react-intl: <tag>words</tag>.
 export function link(href: string) {
   return function NoteLink(chunks: ReactNode) {
-    if (!pathShown(href)) {
-      return <>{chunks}</>;
-    }
     return (
       <MuiLink component={Link} href={href}>
         {chunks}
@@ -98,9 +93,7 @@ export function RecordNote(props: { asset: AssetCard }) {
     case "ship":
       if (termValue(asset, "archive.hull") === "interceptor") {
         ids.push(["archive.noteInterceptor", GUIDES]);
-        if (INTERCEPTOR_FINDER_ENABLED) {
-          ids.push(["archive.noteFinder", TOOLS]);
-        }
+        ids.push(["archive.noteFinder", TOOLS]);
       }
       if (below) {
         ids.push(["archive.noteShipBelow", SHIP_GUIDES]);
