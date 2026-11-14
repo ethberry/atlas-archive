@@ -17,7 +17,6 @@ import Link from "next/link";
 import { DonationBlock } from "@/components/archive/DonationBlock";
 import { LikeButton } from "@/components/archive/LikeButton";
 import { link } from "@/components/archive/RecordNote";
-import { FINDER_MESSAGE } from "@/lib/archive/features";
 import {
   readFeed,
   type CatalogRow,
@@ -51,10 +50,7 @@ export function HomeScreen(props: { confession: string }) {
           <FormattedMessage id="archive.homeTitle" />
         </Typography>
         <Typography color="text.secondary">
-          <FormattedMessage
-            id={`archive.homeLead${FINDER_MESSAGE}`}
-            values={LEAD}
-          />
+          <FormattedMessage id="archive.homeLead" values={LEAD} />
         </Typography>
       </Stack>
       {SECTIONS.map((section) => (

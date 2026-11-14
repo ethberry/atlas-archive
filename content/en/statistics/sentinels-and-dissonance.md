@@ -1,6 +1,6 @@
 # Sentinels and dissonance
 
-**Where do you find dissonance?** On {{dissonant}} of planets, and only a dissonant world holds [Sentinel tools](/guides/multitool-types) and [Interceptors](/guides/interceptors). Look on Red, Green, and Blue worlds, {{red}} of them, and on moons, {{moon}}, against {{medium}} of medium planets. A Harsh galaxy nearly doubles the odds<!-- interceptor-finder -->, and the [Sentinel Interceptors](/interceptor-finder) page shows the ships they hold<!-- /interceptor-finder -->.
+**Where do you find dissonance?** On {{dissonant}} of planets, and only a dissonant world holds [Sentinel tools](/guides/multitool-types) and [Interceptors](/guides/interceptors). Look on Red, Green, and Blue worlds, {{red}} of them, and on moons, {{moon}}, against {{medium}} of medium planets. A Harsh galaxy nearly doubles the odds, and the [Sentinel Interceptors](/interceptor-finder) page shows the ships they hold.
 
 ## By planet type
 

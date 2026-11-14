@@ -10,7 +10,7 @@ A planet that holds them holds a median of {{median}} spots. They are {{wrecks}}
 
 ## One form in a system
 
-Every Sentinel wreck of a system shows the same ship: the same parts and the same colours. Its name, class, and supercharged slots change from wreck to wreck. So when you want a form, you want a system<!-- interceptor-finder -->, and the [Sentinel Interceptors](/interceptor-finder) page shows every form there is<!-- /interceptor-finder -->.
+Every Sentinel wreck of a system shows the same ship: the same parts and the same colours. Its name, class, and supercharged slots change from wreck to wreck. So when you want a form, you want a system, and the [Sentinel Interceptors](/interceptor-finder) page shows every form there is.
 
 ## Wealth and class
 
@@ -26,4 +26,4 @@ Every Sentinel wreck of a system shows the same ship: the same parts and the sam
 
 Most of that gain goes to class C and B, as [how to upgrade a ship](/guides/ship-upgrades) shows.
 
-Destroy the [Sentinel capital ship](/guides/sentinel-capital-ship) and its Carrier AI Fragment points you to one more Interceptor wreck. <!-- living -->One more ship waits to be claimed, and it is alive: [living ships](/guides/living-ships).<!-- /living --><!-- not-living -->Whatever ship you claim, what it plugs into its slots is on [starship modules](/guides/starship-modules).<!-- /not-living -->
+Destroy the [Sentinel capital ship](/guides/sentinel-capital-ship) and its Carrier AI Fragment points you to one more Interceptor wreck. What a claimed Interceptor sells for is set by its cargo slots, as [Interceptor prices](/guides/interceptor-prices) shows.

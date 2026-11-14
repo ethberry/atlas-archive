@@ -6,7 +6,6 @@ import {
   type Value,
 } from "@/lib/archive/statistics-format";
 import data from "@/lib/archive/statistics.json";
-import { guideShown } from "@/lib/archive/features";
 
 // A table as the page prints it.
 export type StatTable = {
@@ -45,9 +44,8 @@ export function pageTopic(slug: string): Topic {
   };
 }
 
-// The guides in reading order. A page missing from the data stays out, and so
-// does a guide the feature flag hides.
-export const TOPICS: Topic[] = data.order.filter(guideShown).map(pageTopic);
+// The guides in reading order.
+export const TOPICS: Topic[] = data.order.map(pageTopic);
 
 export function topicOf(slug: string) {
   return TOPICS.find((topic) => topic.slug === slug);

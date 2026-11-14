@@ -22,9 +22,6 @@ Later whales sell their frigates like any fleet. Each system has a whale of its 
 
 <!-- widget:traits -->
 
-<!-- living -->
-
 The ship you fly that grows the same way comes from a Void Egg: [living ships](/guides/living-ships).
-<!-- /living -->
 
 The last capital ship of the sky is not yours to take: the [Sentinel capital ship](/guides/sentinel-capital-ship).

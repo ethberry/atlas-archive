@@ -26,7 +26,7 @@ import { FormattedMessage, useIntl } from "react-intl";
 
 import { useAuth } from "@/components/providers/AuthProvider";
 import { PAGE_KINDS } from "@/lib/archive/kinds";
-import { GUIDE_MENU as statisticsMenu } from "@/lib/archive/features";
+import statisticsMenu from "@/lib/archive/statistics-menu.json";
 import { groupPath, guidePath } from "@/lib/archive/guides";
 import { QUESTS_PATH } from "@/lib/archive/guides";
 import { TOOLS } from "@/lib/archive/tools";

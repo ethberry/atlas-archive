@@ -283,6 +283,19 @@ async function fieldsFor(
       flag("archive.water", bool(system.water)),
       flag("archive.dissonance", bool(system.dissonance)),
       flag("archive.gasGiant", bool(system.gas_giant)),
+      // The space points the system map shows, drawn from the address.
+      ...(
+        [
+          ["archive.hulks", system.hulks],
+          ["archive.asteroidBelts", system.asteroid_belts],
+          ["archive.iceFields", system.ice_fields],
+        ] as const
+      ).map(([label, value]) => ({
+        type: "text" as const,
+        label,
+        text: numberText(value),
+      })),
+      flag("archive.relicGate", bool(system.relic_gate)),
       {
         type: "text",
         label: "archive.planetsCount",

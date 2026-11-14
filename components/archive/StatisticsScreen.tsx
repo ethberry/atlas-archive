@@ -22,7 +22,7 @@ import {
   SentinelRender,
   SentinelShields,
 } from "@/components/archive/ShipRender";
-import { GUIDE_MENU as statisticsMenu } from "@/lib/archive/features";
+import statisticsMenu from "@/lib/archive/statistics-menu.json";
 import { groupPath, guidePath } from "@/lib/archive/guides";
 import type { StatTable, Topic } from "@/lib/archive/statistics";
 import type { ChartSpec } from "@/lib/archive/chart-spec";

@@ -37,9 +37,6 @@ before using an API (`01-app/01-getting-started` covers server and client compon
 
 - Supabase types (`lib/db/supabase.types.ts`) are generated with `npm run supabase:generate`, then formatted with
   prettier, never edited by hand.
-- A page or a link a flag hides goes through `lib/archive/features.ts` (`pathShown`, `livingText`, `FINDER_MESSAGE`):
-  with its flag off a page answers 404 and leaves the menu, the footer, Tools, the sitemap, and the text. Files and
-  data stay.
 - Paths of guides are built with `guidePath` and `groupPath`, never typed.
 - Statistics numbers print only through `lib/archive/statistics-format.ts`. A galaxy in a table goes through
   `GalaxyLink`; a new galaxy on a page needs a line in `lib/archive/galaxies.ts`.

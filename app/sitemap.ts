@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-import { GUIDE_MENU, pathShown } from "@/lib/archive/features";
+import statisticsMenu from "@/lib/archive/statistics-menu.json";
 import { FEED_KINDS, STATION_BUILDING } from "@/lib/archive/kinds";
 import { TOPICS } from "@/lib/archive/statistics";
 import { createArchiveClient } from "@/lib/db/supabase.server";
@@ -82,36 +82,19 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "monthly",
       priority: 0.6,
     },
-    // The finders, while their feature flag is on.
-    ...["/interceptor-finder", "/capital-freighter-finder", "/freighter-finder"]
-      .filter((path) => pathShown(path))
-      .map((path) => ({
-        url: `${base}${path}`,
-        lastModified: new Date(),
-        changeFrequency: "monthly" as const,
-        priority: 0.6,
-      })),
-    // Hidden until 3.0 while the feature flag is off.
-    ...(pathShown("/living-ship-finder")
-      ? [
-          {
-            url: `${base}/living-ship-finder`,
-            lastModified: new Date(),
-            changeFrequency: "monthly" as const,
-            priority: 0.6,
-          },
-        ]
-      : []),
-    ...(pathShown("/living-frigate-finder")
-      ? [
-          {
-            url: `${base}/living-frigate-finder`,
-            lastModified: new Date(),
-            changeFrequency: "monthly" as const,
-            priority: 0.6,
-          },
-        ]
-      : []),
+    // The finders and builders.
+    ...[
+      "/interceptor-finder",
+      "/capital-freighter-finder",
+      "/freighter-finder",
+      "/living-ship-finder",
+      "/living-frigate-finder",
+    ].map((path) => ({
+      url: `${base}${path}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
+    })),
     {
       url: `${base}/how-lucky-am-i`,
       lastModified: new Date(),
@@ -124,7 +107,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "monthly",
       priority: 0.6,
     },
-    ...GUIDE_MENU.map((group) => ({
+    ...statisticsMenu.map((group) => ({
       url: `${base}${groupPath(group.slug)}`,
       lastModified: new Date(),
       changeFrequency: "monthly" as const,
