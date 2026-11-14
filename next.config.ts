@@ -4,6 +4,8 @@ import path from "node:path";
 
 import type { NextConfig } from "next";
 
+import { BASE_PATH, LEGACY_HOST } from "./lib/site";
+
 // The guides menu the generator writes: each group and its guides.
 const MENU: { slug: string; pages: { slug: string }[] }[] = JSON.parse(
   readFileSync(
@@ -12,7 +14,54 @@ const MENU: { slug: string; pages: { slug: string }[] }[] = JSON.parse(
   ),
 );
 
+// Paths outside this section: the old address, the domain's root, and any path
+// without the prefix. They go first, so a page reaches its new address before
+// the older redirects of the guides below apply to it.
+const SECTION_REDIRECTS = [
+  // The site from before the move: every path to the same page on the new
+  // domain. Built in only when the deploy sets LEGACY_HOST_REDIRECT, so the old
+  // address keeps working until seedarchive.gg answers.
+  ...(process.env.LEGACY_HOST_REDIRECT
+    ? [
+        {
+          source: `${BASE_PATH}/:path*`,
+          has: [{ type: "host" as const, value: LEGACY_HOST }],
+          destination: `https://seedarchive.gg${BASE_PATH}/:path*`,
+          basePath: false as const,
+          permanent: true,
+        },
+        {
+          source: "/:path*",
+          has: [{ type: "host" as const, value: LEGACY_HOST }],
+          destination: `https://seedarchive.gg${BASE_PATH}/:path*`,
+          basePath: false as const,
+          permanent: true,
+        },
+      ]
+    : []),
+  // The root becomes the page of Seed Archive itself once there is more than
+  // one game, so it leads to this section only for now.
+  {
+    source: "/",
+    destination: BASE_PATH,
+    basePath: false as const,
+    permanent: false,
+  },
+  // Every other path without the prefix: the old links of the site, the 469
+  // links written into content/ and the pictures of public/ named by plain
+  // paths in HTML, stylesheets and statistics.json. Next.js prefixes only its
+  // own links (next/link, redirect, router), not a path written as text.
+  // /_vercel/ is Vercel's own (Web Analytics), never redirected.
+  {
+    source: `/:path((?!${BASE_PATH.slice(1)}(?:/|$)|_vercel/).+)`,
+    destination: `${BASE_PATH}/:path`,
+    basePath: false as const,
+    permanent: true,
+  },
+];
+
 const nextConfig: NextConfig = {
+  basePath: BASE_PATH,
   // Pages read content/ at run time, so Vercel has to ship it.
   outputFileTracingIncludes: { "/**": ["./content/**"] },
   // Statistics became Guides on 2026-11-03, and each guide moved under its
@@ -31,6 +80,7 @@ const nextConfig: NextConfig = {
       group.pages.map((page) => page.slug),
     );
     return [
+      ...SECTION_REDIRECTS,
       { source: "/statistics", destination: "/guides", permanent: true },
       // The guide was Station upgrade modules until 2026-11-05.
       ...["statistics", "guides"].map((root) => ({
